@@ -1,0 +1,952 @@
+\providecommand{\Pageref}[1]{\hfill p.\pageref{#1}}
+ [**Question 1.1**](#Question-1)\Pageref{Question-1}
+
+ [**Question 1.2**](#Question-2)\Pageref{Question-2}
+
+ [**Question 1.3**](#Question-1.3)\Pageref{Question-1.3}
+
+ [**Question 1.4**](#Question-1.4)\Pageref{Question-1.4}
+
+ [**Conjecture 1.5**](#conj-line)\Pageref{conj-line}
+
+ [**Theorem 1.6**](#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](#proof-of-theorem): Proof of Theorem 1.6\Pageref{proof-of-theorem}
+
+ [**Remark 1.7**](#Remark-1.7)\Pageref{Remark-1.7}
+
+ [**Theorem 1.8**](#we-will-prove-this-in-the-future): We will prove this in the future\Pageref{we-will-prove-this-in-the-future}
+
+ [**Theorem 1.9**](#we-will-prove-this-in-the-future-1): We will prove this in the future\Pageref{we-will-prove-this-in-the-future-1}
+
+ [**Remark 2.1**](#Remark-2.1)\Pageref{Remark-2.1}
+
+ [**Example 2.2**](#Example-2.2)\Pageref{Example-2.2}
+
+ [**Example 2.3**](#Example-2.3)\Pageref{Example-2.3}
+
+ [**Example 2.4**](#Example-2.4)\Pageref{Example-2.4}
+
+ [**Example 2.5**](#Example-2.5)\Pageref{Example-2.5}
+
+ [**Example 2.6**](#Example-2.6)\Pageref{Example-2.6}
+
+ [**Proposition 2.7**](#Proposition-Equality-Sets)\Pageref{Proposition-Equality-Sets}
+
+ [**Proof**](#Proof*-2.1)\Pageref{Proof*-2.1}
+
+ [**Example 2.8**](#Example-2.8)\Pageref{Example-2.8}
+
+ [**Remark 2.9**](#Remark-2.9)\Pageref{Remark-2.9}
+
+ [**Example 2.10**](#Example-2.10)\Pageref{Example-2.10}
+
+ [**Proposition 2.11**](#de-morgans-laws): De Morgan’s Laws\Pageref{de-morgans-laws}
+
+ [**Remark 2.12**](#Remark-2.12)\Pageref{Remark-2.12}
+
+ [**Example 2.13**](#Example-2.13)\Pageref{Example-2.13}
+
+ [**Definition 2.14**](#equivalence-relation-1): Equivalence relation\Pageref{equivalence-relation-1}
+
+ [**Definition 2.15**](#equivalence-classes): Equivalence classes\Pageref{equivalence-classes}
+
+ [**Example 2.16**](#equality-is-an-equivalence-relation): Equality is an equivalence relation\Pageref{equality-is-an-equivalence-relation}
+
+ [**Example 2.17**](#Example-2.17)\Pageref{Example-2.17}
+
+ [**Definition 2.18**](#partial-order): Partial order\Pageref{partial-order}
+
+ [**Definition 2.19**](#total-order): Total order\Pageref{total-order}
+
+ [**Example 2.20**](#set-inclusion-is-a-partial-order): Set inclusion is a partial order\Pageref{set-inclusion-is-a-partial-order}
+
+ [**Example 2.21**](#inequality-is-a-total-order): Inequality is a total order\Pageref{inequality-is-a-total-order}
+
+ [**Notation 2.22**](#Notation-2.22)\Pageref{Notation-2.22}
+
+ [**Definition 2.23**](#Definition-2.23)\Pageref{Definition-2.23}
+
+ [**Definition 2.24**](#definition-function): Functions\Pageref{definition-function}
+
+ [**Warning**](#Warning*-2.2)\Pageref{Warning*-2.2}
+
+ [**Example 2.25**](#Example-2.25)\Pageref{Example-2.25}
+
+ [**Example 2.26**](#Example-2.26)\Pageref{Example-2.26}
+
+ [**Definition 2.27**](#absolute-value): Absolute value\Pageref{absolute-value}
+
+ [**Example 2.28**](#Example-2.28)\Pageref{Example-2.28}
+
+ [**Remark 2.29**](#Remark-2.29)\Pageref{Remark-2.29}
+
+ [**Remark 2.30**](#rmk-absolute-value-sym)\Pageref{rmk-absolute-value-sym}
+
+ [**Remark 2.31**](#geometric-interpretation-of-x): Geometric interpretation of $|x|$\Pageref{geometric-interpretation-of-x}
+
+ [**Remark 2.32**](#geometric-interpretation-of-x-y): Geometric interpretation of $|x-y|$\Pageref{geometric-interpretation-of-x-y}
+
+ [**Lemma 2.33**](#lemma-absolute-value)\Pageref{lemma-absolute-value}
+
+ [**Proof**](#proof-of-lemma): Proof of Lemma 2.33\Pageref{proof-of-lemma}
+
+ [**Lemma 2.34**](#Lemma-2.34)\Pageref{Lemma-2.34}
+
+ [**Theorem 2.35**](#theorem-triangle-inequality): Triangle inequality\Pageref{theorem-triangle-inequality}
+
+ [**Remark 2.36**](#geometric-meaning-of-triangle-inequality): Geometric meaning of triangle inequality\Pageref{geometric-meaning-of-triangle-inequality}
+
+ [**Proof**](#proof-of-theorem-1): Proof of Theorem 2.35\Pageref{proof-of-theorem-1}
+
+ [**Remark 2.37**](#Remark-2.37)\Pageref{Remark-2.37}
+
+ [**Proposition 2.38**](#proposition-easy)\Pageref{proposition-easy}
+
+ [**Proof**](#of-proposition): of Proposition 2.38\Pageref{of-proposition}
+
+ [**Axiom 2.39**](#principle-of-induction): Principle of Induction\Pageref{principle-of-induction}
+
+ [**Important**](#Important*-2.6)\Pageref{Important*-2.6}
+
+ [**Remark 2.40**](#Remark-2.40)\Pageref{Remark-2.40}
+
+ [**Corollary 2.41**](#principle-of-inducion---alternative-formulation): Principle of Inducion - Alternative formulation\Pageref{principle-of-inducion---alternative-formulation}
+
+ [**Proof**](#Proof*-2.7)\Pageref{Proof*-2.7}
+
+ [**Example 2.42**](#formula-for-summing-first-n-natural-numbers): Formula for summing first $n$ natural numbers\Pageref{formula-for-summing-first-n-natural-numbers}
+
+ [**Example 2.43**](#statements-about-sequences-of-numbers): Statements about sequences of numbers\Pageref{statements-about-sequences-of-numbers}
+
+ [**Definition 3.1**](#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 3.2**](#Notation-3.2)\Pageref{Notation-3.2}
+
+ [**Example 3.3**](#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 3.4**](#Definition-3.4)\Pageref{Definition-3.4}
+
+ [**Example 3.5**](#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 3.6**](#Example-3.6)\Pageref{Example-3.6}
+
+ [**Definition 3.7**](#field): Field\Pageref{field}
+
+ [**Example 3.8**](#Example-3.8)\Pageref{Example-3.8}
+
+ [**Definition 3.9**](#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 3.10**](#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](#Proof*-3.1)\Pageref{Proof*-3.1}
+
+ [**Proposition 3.11**](#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 3.12**](#Theorem-3.12)\Pageref{Theorem-3.12}
+
+ [**Definition 3.13**](#Definition-3.13)\Pageref{Definition-3.13}
+
+ [**Example 3.14**](#Example-3.14)\Pageref{Example-3.14}
+
+ [**Definition 3.15**](#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 3.16**](#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 3.17**](#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 3.18**](#Example-3.18)\Pageref{Example-3.18}
+
+ [**Question 3.19**](#Question-3.19)\Pageref{Question-3.19}
+
+ [**Theorem 3.20**](#theorem-Q-cut): $\mathbb{Q}$ does not have the cut property.\Pageref{theorem-Q-cut}
+
+ [**Remark 3.21**](#remark-idea-proof-cut): Ideas for the proof of Theorem 3.20\Pageref{remark-idea-proof-cut}
+
+ [**Proof**](#proof-of-theorem-2): Proof of Theorem 3.20\Pageref{proof-of-theorem-2}
+
+ [**Remark 3.22**](#Remark-3.22)\Pageref{Remark-3.22}
+
+ [**Example 3.23**](#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 3.24**](#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 3.25**](#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 3.26**](#Notation-3.26)\Pageref{Notation-3.26}
+
+ [**Remark 3.27**](#Remark-3.27)\Pageref{Remark-3.27}
+
+ [**Proposition 3.28**](#Proposition-3.28)\Pageref{Proposition-3.28}
+
+ [**Proof**](#Proof*-3.3)\Pageref{Proof*-3.3}
+
+ [**Warning**](#Warning*-3.4)\Pageref{Warning*-3.4}
+
+ [**Warning**](#Warning*-3.5)\Pageref{Warning*-3.5}
+
+ [**Definition 3.29**](#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 3.30**](#Proposition-3.30)\Pageref{Proposition-3.30}
+
+ [**Proof**](#Proof*-3.6)\Pageref{Proof*-3.6}
+
+ [**Warning**](#Warning*-3.7)\Pageref{Warning*-3.7}
+
+ [**Definition 3.31**](#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 3.32**](#Proposition-3.32)\Pageref{Proposition-3.32}
+
+ [**Warning**](#Warning*-3.8)\Pageref{Warning*-3.8}
+
+ [**Warning**](#Warning*-3.9)\Pageref{Warning*-3.9}
+
+ [**Warning**](#Warning*-3.10)\Pageref{Warning*-3.10}
+
+ [**Proposition 3.33**](#Proposition-3.33)\Pageref{Proposition-3.33}
+
+ [**Proposition 3.34**](#proposition-inf-sup): Relationship between sup and inf\Pageref{proposition-inf-sup}
+
+ [**Question 3.35**](#Question-3.35)\Pageref{Question-3.35}
+
+ [**Theorem 3.36**](#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](#Proof*-3.11)\Pageref{Proof*-3.11}
+
+ [**Question 3.37**](#Question-3.37)\Pageref{Question-3.37}
+
+ [**Definition 3.38**](#completeness-1): Completeness\Pageref{completeness-1}
+
+ [**Notation 3.39**](#Notation-3.39)\Pageref{Notation-3.39}
+
+ [**Proposition 3.40**](#Proposition-3.40)\Pageref{Proposition-3.40}
+
+ [**Proof**](#Proof*-3.12)\Pageref{Proof*-3.12}
+
+ [**Theorem 3.41**](#theorem-cut-complete): Equivalence of Cut Property and Completeness\Pageref{theorem-cut-complete}
+
+ [**Remark 3.42**](#ideas-for-proving-theorem): Ideas for proving Theorem 3.41\Pageref{ideas-for-proving-theorem}
+
+ [**Proof**](#proof-of-theorem-3): Proof of Theorem 3.41\Pageref{proof-of-theorem-3}
+
+ [**Definition 3.43**](#definition-R): System of Real Numbers $\mathbb{R}$\Pageref{definition-R}
+
+ [**Remark 3.44**](#Remark-3.44)\Pageref{Remark-3.44}
+
+ [**Notation 3.45**](#Notation-3.45)\Pageref{Notation-3.45}
+
+ [**Remark 3.46**](#Remark-3.46)\Pageref{Remark-3.46}
+
+ [**Important**](#Important*-3.14)\Pageref{Important*-3.14}
+
+ [**Question 3.47**](#Question-3.47)\Pageref{Question-3.47}
+
+ [**Definition 3.48**](#inductive-set): Inductive set\Pageref{inductive-set}
+
+ [**Example 3.49**](#Example-3.49)\Pageref{Example-3.49}
+
+ [**Proposition 3.50**](#Proposition-3.50)\Pageref{Proposition-3.50}
+
+ [**Proof**](#Proof*-3.15)\Pageref{Proof*-3.15}
+
+ [**Definition 3.51**](#definition-natural-numbers): Set of Natural Numbers\Pageref{definition-natural-numbers}
+
+ [**Proposition 3.52**](#proposition-smallest-inductive): ${\mathbb{N}}_{\mathbb{R}}$ is the smallest inductive subset of $\mathbb{R}$\Pageref{proposition-smallest-inductive}
+
+ [**Proof**](#Proof*-3.16)\Pageref{Proof*-3.16}
+
+ [**Theorem 3.53**](#theorem-n-1)\Pageref{theorem-n-1}
+
+ [**Proof**](#Proof*-3.17)\Pageref{Proof*-3.17}
+
+ [**Notation 3.54**](#Notation-3.54)\Pageref{Notation-3.54}
+
+ [**Theorem 3.55**](#theorem-induction-new): Principle of Induction\Pageref{theorem-induction-new}
+
+ [**Proof**](#Proof*-3.18)\Pageref{Proof*-3.18}
+
+ [**Theorem 3.56**](#theorem-N-closed)\Pageref{theorem-N-closed}
+
+ [**Proof**](#Proof*-3.19)\Pageref{Proof*-3.19}
+
+ [**Theorem 3.57**](#Theorem-3.57)\Pageref{Theorem-3.57}
+
+ [**Definition 3.58**](#set-of-integers): Set of Integers\Pageref{set-of-integers}
+
+ [**Theorem 3.59**](#theorem-equivalent-Z)\Pageref{theorem-equivalent-Z}
+
+ [**Proof**](#Proof*-3.20)\Pageref{Proof*-3.20}
+
+ [**Theorem 3.60**](#theorem-Z-closed)\Pageref{theorem-Z-closed}
+
+ [**Theorem 3.61**](#theorem-Z-axioms)\Pageref{theorem-Z-axioms}
+
+ [**Proof**](#Proof*-3.21)\Pageref{Proof*-3.21}
+
+ [**Remark 3.62**](#remark-Z-axioms)\Pageref{remark-Z-axioms}
+
+ [**Definition 3.63**](#set-of-rational-numbers): Set of Rational Numbers\Pageref{set-of-rational-numbers}
+
+ [**Theorem 3.64**](#Theorem-3.64)\Pageref{Theorem-3.64}
+
+ [**Proof**](#Proof*-3.22)\Pageref{Proof*-3.22}
+
+ [**Theorem 3.65**](#Theorem-3.65)\Pageref{Theorem-3.65}
+
+ [**Notation 3.66**](#Notation-3.66)\Pageref{Notation-3.66}
+
+ [**Remark 4.1**](#Remark-4.1)\Pageref{Remark-4.1}
+
+ [**Theorem 4.2**](#theorem-archimedean): Archimedean Property\Pageref{theorem-archimedean}
+
+ [**Proof**](#Proof*-4.1)\Pageref{Proof*-4.1}
+
+ [**Theorem 4.3**](#theorem-archimedean-alternative): Archimedean Property (Alternative formulation)\Pageref{theorem-archimedean-alternative}
+
+ [**Proof**](#Proof*-4.2)\Pageref{Proof*-4.2}
+
+ [**Question 4.4**](#Question-4.4)\Pageref{Question-4.4}
+
+ [**Theorem 4.5**](#theorem-nested): Nested Interval Property\Pageref{theorem-nested}
+
+ [**Proof**](#Proof*-4.3)\Pageref{Proof*-4.3}
+
+ [**Important**](#Important*-4.4)\Pageref{Important*-4.4}
+
+ [**Example 4.6**](#example-nested-open)\Pageref{example-nested-open}
+
+ [**Proposition 4.7**](#proposition-supremum-characterization): Characterization of Supremum\Pageref{proposition-supremum-characterization}
+
+ [**Proof**](#proof-of-proposition): Proof of Proposition 4.7\Pageref{proof-of-proposition}
+
+ [**Proposition 4.8**](#prop-supremum-infimum): Characterization of Infimum\Pageref{prop-supremum-infimum}
+
+ [**Proposition 4.9**](#proposition-interval-inf-sup)\Pageref{proposition-interval-inf-sup}
+
+ [**Proof**](#Proof*-4.6)\Pageref{Proof*-4.6}
+
+ [**Corollary 4.10**](#Corollary-4.10)\Pageref{Corollary-4.10}
+
+ [**Proof**](#Proof*-4.7)\Pageref{Proof*-4.7}
+
+ [**Corollary 4.11**](#Corollary-4.11)\Pageref{Corollary-4.11}
+
+ [**Proposition 4.12**](#Proposition-4.12)\Pageref{Proposition-4.12}
+
+ [**Proof**](#Proof*-4.8)\Pageref{Proof*-4.8}
+
+ [**Definition 4.13**](#dense-set): Dense set\Pageref{dense-set}
+
+ [**Remark 4.14**](#Remark-4.14)\Pageref{Remark-4.14}
+
+ [**Theorem 4.15**](#theorem-density): Density of $\mathbb{Q}$ in $\mathbb{R}$\Pageref{theorem-density}
+
+ [**Proof**](#Proof*-4.9)\Pageref{Proof*-4.9}
+
+ [**Definition 4.16**](#irrational-numbers): Irrational numbers\Pageref{irrational-numbers}
+
+ [**Question 4.17**](#Question-4.17)\Pageref{Question-4.17}
+
+ [**Corollary 4.18**](#Corollary-4.18)\Pageref{Corollary-4.18}
+
+ [**Proof**](#Proof*-4.10)\Pageref{Proof*-4.10}
+
+ [**Theorem 4.19**](#theorem_existence_root): Existence of $k$-th roots\Pageref{theorem_existence_root}
+
+ [**Proof**](#proof-of-theorem-4): Proof of Theorem 4.19\Pageref{proof-of-theorem-4}
+
+ [**Definition 4.20**](#k-th-root-of-a-number): $k$-th root of a number\Pageref{k-th-root-of-a-number}
+
+ [**Definition 4.21**](#bijective-function): Bijective function\Pageref{bijective-function}
+
+ [**Example 4.22**](#injectivity): Injectivity\Pageref{injectivity}
+
+ [**Example 4.23**](#surjectivity): Surjectivity\Pageref{surjectivity}
+
+ [**Example 4.24**](#bijectivity): Bijectivity\Pageref{bijectivity}
+
+ [**Definition 4.25**](#cardinality-finite-countable-uncountable): Cardinality, finite, countable, uncountable\Pageref{cardinality-finite-countable-uncountable}
+
+ [**Question 4.26**](#Question-4.26)\Pageref{Question-4.26}
+
+ [**Proposition 4.27**](#proposition-countable-subset)\Pageref{proposition-countable-subset}
+
+ [**Proof**](#Proof*-4.12)\Pageref{Proof*-4.12}
+
+ [**Example 4.28**](#Example-4.28)\Pageref{Example-4.28}
+
+ [**Proposition 4.29**](#proposition-countable-union)\Pageref{proposition-countable-union}
+
+ [**Proof**](#Proof*-4.13)\Pageref{Proof*-4.13}
+
+ [**Theorem 4.30**](#theorem-Q-countable): $\mathbb{Q}$ is countable\Pageref{theorem-Q-countable}
+
+ [**Proof**](#Proof*-4.14)\Pageref{Proof*-4.14}
+
+ [**Theorem 4.31**](#theorem-R-uncountable): $\mathbb{R}$ is uncountable\Pageref{theorem-R-uncountable}
+
+ [**Proof**](#Proof*-4.15)\Pageref{Proof*-4.15}
+
+ [**Theorem 4.32**](#Theorem-4.32)\Pageref{Theorem-4.32}
+
+ [**Proof**](#Proof*-4.16)\Pageref{Proof*-4.16}
+
+ [**Question 5.1**](#Question-5.1)\Pageref{Question-5.1}
+
+ [**Definition 5.2**](#complex-numbers-1): Complex Numbers\Pageref{complex-numbers-1}
+
+ [**Definition 5.3**](#Definition-5.3)\Pageref{Definition-5.3}
+
+ [**Definition 5.4**](#definition-addition-C): Addition in $\mathbb{C}$\Pageref{definition-addition-C}
+
+ [**Notation 5.5**](#Notation-5.5)\Pageref{Notation-5.5}
+
+ [**Remark 5.6**](#remark-formal-multiplication): Formal calculation for multiplication in $\mathbb{C}$\Pageref{remark-formal-multiplication}
+
+ [**Definition 5.7**](#definition-multiplication-C): Multiplication in $\mathbb{C}$\Pageref{definition-multiplication-C}
+
+ [**Remark 5.8**](#remark-complex-i)\Pageref{remark-complex-i}
+
+ [**Important**](#Important*-5.1)\Pageref{Important*-5.1}
+
+ [**Example 5.9**](#Example-5.9)\Pageref{Example-5.9}
+
+ [**Proposition 5.10**](#proposition-C-additive-inverse): Additive inverse in $\mathbb{C}$\Pageref{proposition-C-additive-inverse}
+
+ [**Remark 5.11**](#remark-formal-inverse): Formal calculation for multiplicative inverse\Pageref{remark-formal-inverse}
+
+ [**Proposition 5.12**](#proposition-C-multiplicative-inverse): Multiplicative inverse in $\mathbb{C}$\Pageref{proposition-C-multiplicative-inverse}
+
+ [**Proof**](#Proof*-5.2)\Pageref{Proof*-5.2}
+
+ [**Important**](#Important*-5.3)\Pageref{Important*-5.3}
+
+ [**Example 5.13**](#Example-5.13)\Pageref{Example-5.13}
+
+ [**Theorem 5.14**](#Theorem-5.14)\Pageref{Theorem-5.14}
+
+ [**Proof**](#Proof*-5.4)\Pageref{Proof*-5.4}
+
+ [**Example 5.15**](#Example-5.15)\Pageref{Example-5.15}
+
+ [**Theorem 5.16**](#theorem-C-order)\Pageref{theorem-C-order}
+
+ [**Proof**](#Proof*-5.5)\Pageref{Proof*-5.5}
+
+ [**Definition 5.17**](#complex-conjugate): Complex conjugate\Pageref{complex-conjugate}
+
+ [**Example 5.18**](#Example-5.18)\Pageref{Example-5.18}
+
+ [**Theorem 5.19**](#Theorem-5.19)\Pageref{Theorem-5.19}
+
+ [**Proof**](#Proof*-5.6)\Pageref{Proof*-5.6}
+
+ [**Example 5.20**](#Example-5.20)\Pageref{Example-5.20}
+
+ [**Definition 5.21**](#modulus): Modulus\Pageref{modulus}
+
+ [**Remark 5.22**](#modulus-of-real-numbers): Modulus of Real numbers\Pageref{modulus-of-real-numbers}
+
+ [**Definition 5.23**](#distance-in-mathbbc): Distance in $\mathbb{C}$\Pageref{distance-in-mathbbc}
+
+ [**Theorem 5.24**](#Theorem-5.24)\Pageref{Theorem-5.24}
+
+ [**Proof**](#Proof*-5.7)\Pageref{Proof*-5.7}
+
+ [**Example 5.25**](#Example-5.25)\Pageref{Example-5.25}
+
+ [**Theorem 5.26**](#Theorem-5.26)\Pageref{Theorem-5.26}
+
+ [**Proof**](#Proof*-5.8)\Pageref{Proof*-5.8}
+
+ [**Theorem 5.27**](#triangle-inequality-in-mathbbc): Triangle inequality in $\mathbb{C}$\Pageref{triangle-inequality-in-mathbbc}
+
+ [**Proof**](#Proof*-5.9)\Pageref{Proof*-5.9}
+
+ [**Remark 5.28**](#geometric-interpretation-of-triangle-inequality): Geometric interpretation of triangle inequality\Pageref{geometric-interpretation-of-triangle-inequality}
+
+ [**Definition 5.29**](#argument): Argument\Pageref{argument}
+
+ [**Warning**](#Warning*-5.10)\Pageref{Warning*-5.10}
+
+ [**Remark 5.30**](#principal-value): Principal Value\Pageref{principal-value}
+
+ [**Example 5.31**](#Example-5.31)\Pageref{Example-5.31}
+
+ [**Theorem 5.32**](#theorem-polar-coordinates): Polar coordinates\Pageref{theorem-polar-coordinates}
+
+ [**Definition 5.33**](#trigonometric-form): Trigonometric form\Pageref{trigonometric-form}
+
+ [**Example 5.34**](#example-trigonometric-form)\Pageref{example-trigonometric-form}
+
+ [**Corollary 5.35**](#corollary-arg): Computing $\arg(z)$\Pageref{corollary-arg}
+
+ [**Proof**](#Proof*-5.11)\Pageref{Proof*-5.11}
+
+ [**Example 5.36**](#Example-5.36)\Pageref{Example-5.36}
+
+ [**Theorem 5.37**](#theorem-euler-identity): Euler’s identity\Pageref{theorem-euler-identity}
+
+ [**Proof**](#Proof*-5.12)\Pageref{Proof*-5.12}
+
+ [**Theorem 5.38**](#Theorem-5.38)\Pageref{Theorem-5.38}
+
+ [**Proof**](#Proof*-5.13)\Pageref{Proof*-5.13}
+
+ [**Theorem 5.39**](#Theorem-5.39)\Pageref{Theorem-5.39}
+
+ [**Proof**](#Proof*-5.14)\Pageref{Proof*-5.14}
+
+ [**Definition 5.40**](#exponential-form-1): Exponential form\Pageref{exponential-form-1}
+
+ [**Example 5.41**](#example-exponential-form)\Pageref{example-exponential-form}
+
+ [**Remark 5.42**](#periodicity-of-exponential): Periodicity of exponential\Pageref{periodicity-of-exponential}
+
+ [**Proposition 5.43**](#proposition-complex-exponential)\Pageref{proposition-complex-exponential}
+
+ [**Example 5.44**](#Example-5.44)\Pageref{Example-5.44}
+
+ [**Example 5.45**](#Example-5.45)\Pageref{Example-5.45}
+
+ [**Question 5.46**](#Question-5.46)\Pageref{Question-5.46}
+
+ [**Theorem 5.47**](#theorem-fta): Fundamental theorem of algebra\Pageref{theorem-fta}
+
+ [**Example 5.48**](#Example-5.48)\Pageref{Example-5.48}
+
+ [**Example 5.49**](#example-degree-4)\Pageref{example-degree-4}
+
+ [**Definition 5.50**](#Definition-5.50)\Pageref{Definition-5.50}
+
+ [**Example 5.51**](#example-multiplicity)\Pageref{example-multiplicity}
+
+ [**Question 5.52**](#Question-5.52)\Pageref{Question-5.52}
+
+ [**Theorem 5.53**](#theorem-abel-ruffini): Abel-Ruffini\Pageref{theorem-abel-ruffini}
+
+ [**Proposition 5.54**](#proposition-quadratic-formula): Quadratic formula\Pageref{proposition-quadratic-formula}
+
+ [**Example 5.55**](#Example-5.55)\Pageref{Example-5.55}
+
+ [**Example 5.56**](#Example-5.56)\Pageref{Example-5.56}
+
+ [**Example 5.57**](#Example-5.57)\Pageref{Example-5.57}
+
+ [**Question 5.58**](#Question-5.58)\Pageref{Question-5.58}
+
+ [**Proposition 5.59**](#proposition-quadratic-formula-C): Generalization of quadratci formula\Pageref{proposition-quadratic-formula-C}
+
+ [**Remark 5.60**](#Remark-5.60)\Pageref{Remark-5.60}
+
+ [**Example 5.61**](#Example-5.61)\Pageref{Example-5.61}
+
+ [**Remark 5.62**](#polynomial-equations-of-order-n34): Polynomial equations of order $n=3,4$\Pageref{polynomial-equations-of-order-n34}
+
+ [**Example 5.63**](#Example-5.63)\Pageref{Example-5.63}
+
+ [**Example 5.64**](#Example-5.64)\Pageref{Example-5.64}
+
+ [**Problem**](#Problem*-5.15)\Pageref{Problem*-5.15}
+
+ [**Question 5.65**](#Question-5.65)\Pageref{Question-5.65}
+
+ [**Example 5.66**](#Example-5.66)\Pageref{Example-5.66}
+
+ [**Theorem 5.67**](#Theorem-5.67)\Pageref{Theorem-5.67}
+
+ [**Proof**](#Proof*-5.16)\Pageref{Proof*-5.16}
+
+ [**Definition 5.68**](#Definition-5.68)\Pageref{Definition-5.68}
+
+ [**Example 5.69**](#Example-5.69)\Pageref{Example-5.69}
+
+ [**Example 5.70**](#Example-5.70)\Pageref{Example-5.70}
+
+ [**Problem**](#Problem*-5.17)\Pageref{Problem*-5.17}
+
+ [**Theorem 5.71**](#Theorem-5.71)\Pageref{Theorem-5.71}
+
+ [**Proof**](#Proof*-5.18)\Pageref{Proof*-5.18}
+
+ [**Example 5.72**](#Example-5.72)\Pageref{Example-5.72}
+
+ [**Example 5.73**](#Example-5.73)\Pageref{Example-5.73}
+
+ [**Remark 6.1**](#Remark-6.1)\Pageref{Remark-6.1}
+
+ [**Definition 6.2**](#sequence-of-real-numbers): Sequence of Real numbers\Pageref{sequence-of-real-numbers}
+
+ [**Notation 6.3**](#Notation-6.3)\Pageref{Notation-6.3}
+
+ [**Example 6.4**](#Example-6.4)\Pageref{Example-6.4}
+
+ [**Definition 6.5**](#definition-convergent-sequence): Convergent sequence\Pageref{definition-convergent-sequence}
+
+ [**Notation 6.6**](#Notation-6.6)\Pageref{Notation-6.6}
+
+ [**Remark 6.7**](#Remark-6.7)\Pageref{Remark-6.7}
+
+ [**Theorem 6.8**](#theorem-one-over-n)\Pageref{theorem-one-over-n}
+
+ [**Proof**](#proof-of-theorem-long-version): Proof of Theorem 6.8 (Long version)\Pageref{proof-of-theorem-long-version}
+
+ [**Proof**](#proof-of-theorem-short-version): Proof of Theorem 6.8 (Short version)\Pageref{proof-of-theorem-short-version}
+
+ [**Theorem 6.9**](#theorem-one-over-np)\Pageref{theorem-one-over-np}
+
+ [**Proof**](#Proof*-6.3)\Pageref{Proof*-6.3}
+
+ [**Question 6.10**](#Question-6.10)\Pageref{Question-6.10}
+
+ [**Important**](#Important*-6.4)\Pageref{Important*-6.4}
+
+ [**Example 6.11**](#Example-6.11)\Pageref{Example-6.11}
+
+ [**Theorem 6.12**](#theorem-constant-sequence)\Pageref{theorem-constant-sequence}
+
+ [**Proof**](#Proof*-6.5)\Pageref{Proof*-6.5}
+
+ [**Definition 6.13**](#divergent-sequence): Divergent sequence\Pageref{divergent-sequence}
+
+ [**Remark 6.14**](#Remark-6.14)\Pageref{Remark-6.14}
+
+ [**Theorem 6.15**](#theorem-1-minus-n)\Pageref{theorem-1-minus-n}
+
+ [**Proof**](#Proof*-6.6)\Pageref{Proof*-6.6}
+
+ [**Theorem 6.16**](#theorem-uniqueness-limit): Uniqueness of limit\Pageref{theorem-uniqueness-limit}
+
+ [**Proof**](#Proof*-6.7)\Pageref{Proof*-6.7}
+
+ [**Example 6.17**](#Example-6.17)\Pageref{Example-6.17}
+
+ [**Definition 6.18**](#definition-bounded-sequence): Bounded sequence\Pageref{definition-bounded-sequence}
+
+ [**Theorem 6.19**](#theorem-convergent-bounded)\Pageref{theorem-convergent-bounded}
+
+ [**Proof**](#Proof*-6.8)\Pageref{Proof*-6.8}
+
+ [**Example 6.20**](#Example-6.20)\Pageref{Example-6.20}
+
+ [**Warning**](#Warning*-6.9)\Pageref{Warning*-6.9}
+
+ [**Example 6.21**](#Example-6.21)\Pageref{Example-6.21}
+
+ [**Corollary 6.22**](#corollary-convergent-bounded)\Pageref{corollary-convergent-bounded}
+
+ [**Remark 6.23**](#Remark-6.23)\Pageref{Remark-6.23}
+
+ [**Theorem 6.24**](#Theorem-6.24)\Pageref{Theorem-6.24}
+
+ [**Proof**](#Proof*-6.10)\Pageref{Proof*-6.10}
+
+ [**Theorem 6.25**](#Theorem-6.25)\Pageref{Theorem-6.25}
+
+ [**Proof**](#Proof*-6.11)\Pageref{Proof*-6.11}
+
+ [**Theorem 6.26**](#theorem-algebra-limits): Algebra of limits\Pageref{theorem-algebra-limits}
+
+ [**Proof**](#Proof*-6.12)\Pageref{Proof*-6.12}
+
+ [**Example 6.27**](#example-limit-ploynomial)\Pageref{example-limit-ploynomial}
+
+ [**Important**](#Important*-6.13)\Pageref{Important*-6.13}
+
+ [**Example 6.28**](#example-algebra-of-limits-2)\Pageref{example-algebra-of-limits-2}
+
+ [**Example 6.29**](#Example-6.29)\Pageref{Example-6.29}
+
+ [**Warning**](#Warning*-6.14)\Pageref{Warning*-6.14}
+
+ [**Example 6.30**](#Example-6.30)\Pageref{Example-6.30}
+
+ [**Example 6.31**](#Example-6.31)\Pageref{Example-6.31}
+
+ [**Theorem 6.32**](#theorem-square-root-limit)\Pageref{theorem-square-root-limit}
+
+ [**Proof**](#Proof*-6.15)\Pageref{Proof*-6.15}
+
+ [**Example 6.33**](#Example-6.33)\Pageref{Example-6.33}
+
+ [**Example 6.34**](#Example-6.34)\Pageref{Example-6.34}
+
+ [**Theorem 6.35**](#theorem-squeeze): Squeeze theorem\Pageref{theorem-squeeze}
+
+ [**Proof**](#Proof*-6.16)\Pageref{Proof*-6.16}
+
+ [**Example 6.36**](#Example-6.36)\Pageref{Example-6.36}
+
+ [**Example 6.37**](#example-squeeze)\Pageref{example-squeeze}
+
+ [**Warning**](#Warning*-6.17)\Pageref{Warning*-6.17}
+
+ [**Example 6.38**](#Example-6.38)\Pageref{Example-6.38}
+
+ [**Definition 6.39**](#Definition-6.39)\Pageref{Definition-6.39}
+
+ [**Theorem 6.40**](#theorem-geometric-sequence): Geometric Sequence Test\Pageref{theorem-geometric-sequence}
+
+ [**Warning**](#Warning*-6.18)\Pageref{Warning*-6.18}
+
+ [**Lemma 6.41**](#lemma-bernoulli): Bernoulli’s inequality\Pageref{lemma-bernoulli}
+
+ [**Proof**](#Proof*-6.19)\Pageref{Proof*-6.19}
+
+ [**Proof**](#proof-of-theorem-5): Proof of Theorem 6.40\Pageref{proof-of-theorem-5}
+
+ [**Example 6.42**](#Example-6.42)\Pageref{Example-6.42}
+
+ [**Theorem 6.43**](#theorem-ratio-test): Ratio Test\Pageref{theorem-ratio-test}
+
+ [**Proof**](#Proof*-6.21)\Pageref{Proof*-6.21}
+
+ [**Example 6.44**](#Example-6.44)\Pageref{Example-6.44}
+
+ [**Example 6.45**](#Example-6.45)\Pageref{Example-6.45}
+
+ [**Example 6.46**](#Example-6.46)\Pageref{Example-6.46}
+
+ [**Warning**](#Warning*-6.22)\Pageref{Warning*-6.22}
+
+ [**Remark 6.47**](#Remark-6.47)\Pageref{Remark-6.47}
+
+ [**Definition 6.48**](#monotone-sequence): Monotone sequence\Pageref{monotone-sequence}
+
+ [**Example 6.49**](#Example-6.49)\Pageref{Example-6.49}
+
+ [**Theorem 6.50**](#theorem-monotone-convergence): Monotone Convergence Theorem\Pageref{theorem-monotone-convergence}
+
+ [**Proof**](#Proof*-6.23)\Pageref{Proof*-6.23}
+
+ [**Theorem 6.51**](#theorem-euler-number)\Pageref{theorem-euler-number}
+
+ [**Proof**](#Proof*-6.24)\Pageref{Proof*-6.24}
+
+ [**Definition 6.52**](#eulers-number): Euler’s Number\Pageref{eulers-number}
+
+ [**Theorem 6.53**](#Theorem-6.53)\Pageref{Theorem-6.53}
+
+ [**Proof**](#Proof*-6.25)\Pageref{Proof*-6.25}
+
+ [**Theorem 6.54**](#theorem-important-limit-1)\Pageref{theorem-important-limit-1}
+
+ [**Proof**](#Proof*-6.26)\Pageref{Proof*-6.26}
+
+ [**Theorem 6.55**](#theorem-important-limit-2)\Pageref{theorem-important-limit-2}
+
+ [**Proof**](#Proof*-6.27)\Pageref{Proof*-6.27}
+
+ [**Warning**](#Warning*-6.28)\Pageref{Warning*-6.28}
+
+ [**Theorem 6.56**](#theorem-important-limit-3)\Pageref{theorem-important-limit-3}
+
+ [**Proof**](#Proof*-6.29)\Pageref{Proof*-6.29}
+
+ [**Example 6.57**](#Example-6.57)\Pageref{Example-6.57}
+
+ [**Definition 7.1**](#sequence-of-complex-numbers): Sequence of Complex numbers\Pageref{sequence-of-complex-numbers}
+
+ [**Definition 7.2**](#definition-convergent-sequence-C): Convergent sequence in $\mathbb{C}$\Pageref{definition-convergent-sequence-C}
+
+ [**Important**](#Important*-7.1)\Pageref{Important*-7.1}
+
+ [**Example 7.3**](#Example-7.3)\Pageref{Example-7.3}
+
+ [**Definition 7.4**](#bounded-sequence-in-mathbbc): Bounded sequence in $\mathbb{C}$\Pageref{bounded-sequence-in-mathbbc}
+
+ [**Theorem 7.5**](#theorem-convergent-bounded-C)\Pageref{theorem-convergent-bounded-C}
+
+ [**Definition 7.6**](#divergent-sequences-in-mathbbc): Divergent sequences in $\mathbb{C}$\Pageref{divergent-sequences-in-mathbbc}
+
+ [**Corollary 7.7**](#Corollary-7.7)\Pageref{Corollary-7.7}
+
+ [**Theorem 7.8**](#theorem-algebra-limits-C): Algebra of limits in $\mathbb{C}$\Pageref{theorem-algebra-limits-C}
+
+ [**Example 7.9**](#Example-7.9)\Pageref{Example-7.9}
+
+ [**Theorem 7.10**](#theorem-convergence-zero-C)\Pageref{theorem-convergence-zero-C}
+
+ [**Proof**](#Proof*-7.2)\Pageref{Proof*-7.2}
+
+ [**Example 7.11**](#Example-7.11)\Pageref{Example-7.11}
+
+ [**Example 7.12**](#Example-7.12)\Pageref{Example-7.12}
+
+ [**Theorem 7.13**](#geometric-sequence-test-in-mathbbc): Geometric sequence Test in $\mathbb{C}$\Pageref{geometric-sequence-test-in-mathbbc}
+
+ [**Example 7.14**](#Example-7.14)\Pageref{Example-7.14}
+
+ [**Theorem 7.15**](#theorem-ratop-test-C): Ratio Test in $\mathbb{C}$\Pageref{theorem-ratop-test-C}
+
+ [**Example 7.16**](#Example-7.16)\Pageref{Example-7.16}
+
+ [**Theorem 7.17**](#theorem-convergence-real-imaginary)\Pageref{theorem-convergence-real-imaginary}
+
+ [**Proof**](#Proof*-7.3)\Pageref{Proof*-7.3}
+
+ [**Example 7.18**](#Example-7.18)\Pageref{Example-7.18}
+
+ [**Definition 8.1**](#partial-sums): Partial sums\Pageref{partial-sums}
+
+ [**Definition 8.2**](#convergent-series-1): Convergent series\Pageref{convergent-series-1}
+
+ [**Definition 8.3**](#divergent-series): Divergent series\Pageref{divergent-series}
+
+ [**Example 8.4**](#Example-8.4)\Pageref{Example-8.4}
+
+ [**Example 8.5**](#Example-8.5)\Pageref{Example-8.5}
+
+ [**Theorem 8.6**](#theorem-series-necessary): Necessary Condition for Convergence\Pageref{theorem-series-necessary}
+
+ [**Proof**](#Proof*-8.1)\Pageref{Proof*-8.1}
+
+ [**Important**](#Important*-8.2)\Pageref{Important*-8.2}
+
+ [**Example 8.7**](#Example-8.7)\Pageref{Example-8.7}
+
+ [**Example 8.8**](#Example-8.8)\Pageref{Example-8.8}
+
+ [**Important**](#Important*-8.3)\Pageref{Important*-8.3}
+
+ [**Example 8.9**](#Example-8.9)\Pageref{Example-8.9}
+
+ [**Remark 8.10**](#Remark-8.10)\Pageref{Remark-8.10}
+
+ [**Example 8.11**](#Example-8.11)\Pageref{Example-8.11}
+
+ [**Definition 8.12**](#geometric-series-in-mathbbc): Geometric Series in $\mathbb{C}$\Pageref{geometric-series-in-mathbbc}
+
+ [**Theorem 8.13**](#theorem-geometric-series-test): Geometric Series Test\Pageref{theorem-geometric-series-test}
+
+ [**Important**](#Important*-8.4)\Pageref{Important*-8.4}
+
+ [**Proof**](#Proof*-8.5)\Pageref{Proof*-8.5}
+
+ [**Example 8.14**](#Example-8.14)\Pageref{Example-8.14}
+
+ [**Remark 8.15**](#Remark-8.15)\Pageref{Remark-8.15}
+
+ [**Example 8.16**](#Example-8.16)\Pageref{Example-8.16}
+
+ [**Example 8.17**](#Example-8.17)\Pageref{Example-8.17}
+
+ [**Theorem 8.18**](#theorem-algebra-limits-series): Algebra of Limits for Series\Pageref{theorem-algebra-limits-series}
+
+ [**Proof**](#Proof*-8.6)\Pageref{Proof*-8.6}
+
+ [**Example 8.19**](#Example-8.19)\Pageref{Example-8.19}
+
+ [**Important**](#Important*-8.7)\Pageref{Important*-8.7}
+
+ [**Example 8.20**](#Example-8.20)\Pageref{Example-8.20}
+
+ [**Definition 8.21**](#non-negative-series-1): Non-negative series\Pageref{non-negative-series-1}
+
+ [**Lemma 8.22**](#lemma-partial-sums-increasing)\Pageref{lemma-partial-sums-increasing}
+
+ [**Proof**](#Proof*-8.8)\Pageref{Proof*-8.8}
+
+ [**Question 8.23**](#Question-8.23)\Pageref{Question-8.23}
+
+ [**Theorem 8.24**](#Theorem-8.24)\Pageref{Theorem-8.24}
+
+ [**Proof**](#Proof*-8.9)\Pageref{Proof*-8.9}
+
+ [**Theorem 8.25**](#theorem-harmonic-series): Harmonic series\Pageref{theorem-harmonic-series}
+
+ [**Proof**](#Proof*-8.10)\Pageref{Proof*-8.10}
+
+ [**Theorem 8.26**](#theorem-cauchy-test): Cauchy Condensation Test\Pageref{theorem-cauchy-test}
+
+ [**Proof**](#Proof*-8.11)\Pageref{Proof*-8.11}
+
+ [**Theorem 8.27**](#theorem-p-series): Convergence of $p$-series\Pageref{theorem-p-series}
+
+ [**Proof**](#Proof*-8.12)\Pageref{Proof*-8.12}
+
+ [**Theorem 8.28**](#theorem-p-log-series)\Pageref{theorem-p-log-series}
+
+ [**Proof**](#Proof*-8.13)\Pageref{Proof*-8.13}
+
+ [**Theorem 8.29**](#theorem-comparison-test): Comparison test\Pageref{theorem-comparison-test}
+
+ [**Proof**](#Proof*-8.14)\Pageref{Proof*-8.14}
+
+ [**Example 8.30**](#Example-8.30)\Pageref{Example-8.30}
+
+ [**Theorem 8.31**](#theorem-limit-comparison-test): Limit Comparison Test\Pageref{theorem-limit-comparison-test}
+
+ [**Proof**](#Proof*-8.15)\Pageref{Proof*-8.15}
+
+ [**Important**](#Important*-8.16)\Pageref{Important*-8.16}
+
+ [**Example 8.32**](#Example-8.32)\Pageref{Example-8.32}
+
+ [**Example 8.33**](#Example-8.33)\Pageref{Example-8.33}
+
+ [**Example 8.34**](#Example-8.34)\Pageref{Example-8.34}
+
+ [**Example 8.35**](#Example-8.35)\Pageref{Example-8.35}
+
+ [**Theorem 8.36**](#theorem-ratio-test-series): Ratio Test for positive series\Pageref{theorem-ratio-test-series}
+
+ [**Proof**](#Proof*-8.17)\Pageref{Proof*-8.17}
+
+ [**Example 8.37**](#Example-8.37)\Pageref{Example-8.37}
+
+ [**Important**](#Important*-8.18)\Pageref{Important*-8.18}
+
+ [**Example 8.38**](#Example-8.38)\Pageref{Example-8.38}
+
+ [**Example 8.39**](#Example-8.39)\Pageref{Example-8.39}
+
+ [**Definition 8.40**](#absolute-convergence): Absolute convergence\Pageref{absolute-convergence}
+
+ [**Theorem 8.41**](#theorem-absolute-convergence-test): Absolute Convergence Test\Pageref{theorem-absolute-convergence-test}
+
+ [**Notation 8.42**](#positive-and-negative-part): Positive and negative part\Pageref{positive-and-negative-part}
+
+ [**Proof**](#proof-of-theorem-6): Proof of Theorem 8.41\Pageref{proof-of-theorem-6}
+
+ [**Example 8.43**](#Example-8.43)\Pageref{Example-8.43}
+
+ [**Example 8.44**](#Example-8.44)\Pageref{Example-8.44}
+
+ [**Theorem 8.45**](#theorem-ratio-test-general): Ratio Test for general series\Pageref{theorem-ratio-test-general}
+
+ [**Proof**](#Proof*-8.20)\Pageref{Proof*-8.20}
+
+ [**Example 8.46**](#Example-8.46)\Pageref{Example-8.46}
+
+ [**Theorem 8.47**](#exponential-series): Exponential series\Pageref{exponential-series}
+
+ [**Proof**](#Proof*-8.21)\Pageref{Proof*-8.21}
+
+ [**Definition 8.48**](#exponential-function): Exponential function\Pageref{exponential-function}
+
+ [**Remark 8.49**](#Remark-8.49)\Pageref{Remark-8.49}
+
+ [**Definition 8.50**](#conditional-convergence-1): Conditional convergence\Pageref{conditional-convergence-1}
+
+ [**Definition 8.51**](#rearrangement-of-a-series): Rearrangement of a series\Pageref{rearrangement-of-a-series}
+
+ [**Theorem 8.52**](#Theorem-8.52)\Pageref{Theorem-8.52}
+
+ [**Theorem 8.53**](#riemann-rearrangement-theorem): Riemann rearrangement Theorem\Pageref{riemann-rearrangement-theorem}
+
+ [**Theorem 8.54**](#dirichlet-test): Dirichlet Test\Pageref{dirichlet-test}
+
+ [**Proof**](#Proof*-8.22)\Pageref{Proof*-8.22}
+
+ [**Example 8.55**](#Example-8.55)\Pageref{Example-8.55}
+
+ [**Theorem 8.56**](#alternate-convergence-test): Alternate Convergence Test\Pageref{alternate-convergence-test}
+
+ [**Proof**](#Proof*-8.23)\Pageref{Proof*-8.23}
+
+ [**Example 8.57**](#example-alternating-series-test)\Pageref{example-alternating-series-test}
+
+ [**Theorem 8.58**](#abels-test-1): Abel’s Test\Pageref{abels-test-1}
+
+ [**Example 8.59**](#Example-8.59)\Pageref{Example-8.59}

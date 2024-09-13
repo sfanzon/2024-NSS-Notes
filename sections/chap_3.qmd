@@ -1,0 +1,2406 @@
+::: {.content-hidden}
+$
+{{< include macros.tex >}}
+$
+:::
+
+
+# Real Numbers
+
+
+In this chapter we introduce the system of Real Numbers $\R$ and study some of its properties. 
+
+
+## Fields
+
+In order to introduce $\R$, we need the concepts of **binary operation** and **field**. We proceed in a general setting, starting from a set $K$.
+
+
+::: Definition
+### Binary operation
+A binary operation on a set $K$ is a function 
+$$
+\circ \ \colon K \times K \to K
+$$
+which maps the ordered pair $(x,y)$ into $x \circ y$.
+:::
+
+
+::: Notation
+There are two main binary operations we are interested in:
+
+- **Addition**: denoted by $+$. The addition, or **sum** of $x,y \in K$ is denoted by 
+$$
+x + y \,.
+$$
+- **Multiplication**: denoted by $\cdot$. The multiplication, or **product** of $x,y \in K$ is denoted by 
+$$
+x \cdot y \,\, \mbox{ or } \,\, xy\,.
+$$
+:::
+
+
+::: Example
+### of binary operation  {#example-binary-operation}
+
+Let $K=\{0,1\}$. We can for example define operations of sum and product on $K$ according to the tables 
+$$
+\begin{array}{c|cc}
+ + & 0 & 1 \\ \hline
+ 0 & 0 & 1 \\
+ 1 & 1 & 0 \\
+\end{array}	
+\qquad \qquad
+\begin{array}{c|cc}
+\cdot & 0 & 1 \\ \hline
+    0 & 0 & 0 \\
+    1 & 0 & 1 \\
+\end{array}
+$$
+The above mean that 
+$$
+0+0 = 1+1 = 0 \,, \quad 0 + 1 = 1 + 0 = 1\,, 
+$$
+$$
+0 \cdot 0 = 0 \cdot 1 = 1 \cdot 0 = 0 \,, \quad 1 \cdot 1 = 1  \,.
+$$
+This is just one option. Note that we could not have defined 
+$$
+1 + 1  = 2\,,
+$$
+since $2 \notin K$.
+:::
+
+Binary operations take ordered pairs of elements of $K$ as input. Therefore the operation
+$$
+x \circ y \circ z
+$$
+does not make sense, since we do not know which one between
+$$
+x \circ y  \quad \mbox{ or } \quad y \circ z
+$$
+has to be performed first. Moreover the outcome of an operation depends on order:
+$$
+x \circ y \neq y \circ x \,.
+$$
+This motivates the following definition. 
+
+
+::: Definition
+Let $K$ be a set and $\circ \ \colon K \times K \to K$ be a binary operation on $K$. We say that:
+
+1. $\circ$ is **commutative** if 
+    $$
+    x \circ y = y \circ x \,, \quad \, \forall \, x,y \in K
+    $$
+2. $\circ$ is **associative** if 
+    $$
+    (x \circ y) \circ z = x \circ (y \circ z) \,, \quad \, \forall \, x,y,z \in K
+    $$
+3. An element $e \in K$ is called **neutral element** of $\circ$ if
+    $$ 
+    x \circ e = e \circ x = x \,, \quad \, \forall \, x \in K
+    $$
+4. Let $e$ be a neutral element of $\circ$ and let $x \in K$. An element $y \in K$ is called an **inverse** of $x$ with respect to $\circ$ if 
+$$
+x \circ y = y \circ x = e \,.
+$$
+:::
+
+
+::: {.Example #example-binary-operation-2}
+
+Let $K$ with $+$ and $\cdot$ be as in Example \ref{example-binary-operation}. The sum satisfies:
+
+- $+$ is commutative, since 
+$$
+0 + 1 = 1 + 0 = 0 \,.  
+$$
+- $+$ is associative, since for example 
+$$
+(0 + 1) + 1 = 1 + 1 = 0 \,, \quad 0 + (1 + 1) = 0 + 0 = 0 \,,  
+$$
+and therefore 
+$$
+(0 + 1) + 1 = 0 + (1 + 1) \,.
+$$
+In general one can show that $+$ is associative by checking all the other permutations. 
+- The neutral element of $+$ is $0$, since 
+$$
+0 + 0 = 0 \,, \quad 1 + 0 = 0 + 1 = 1 \,.
+$$
+- Every element has an inverse. Indeed, the inverse of $0$ is $0$, since 
+$$
+0 + 0 = 0\,,
+$$
+while the inverse of $1$ is $1$, since
+$$
+1 + 1 = 1 + 1 = 0 \,.
+$$
+
+The multiplication satisfies:
+
+- $\cdot$ is commutative, since 
+$$
+1 \cdot 0 = 0 \cdot 1 = 0 \,.
+$$
+- $\cdot$ is associative, since for example 
+$$
+(0 \cdot 1) \cdot 1 = 0 \cdot 1 = 0 \,, \quad 0 \cdot (1 \cdot 1) = 0 \cdot 1 = 0 \,,  
+$$
+and therefore 
+$$
+(0 \cdot 1) \cdot 1 = 0 \cdot (1 \cdot 1) \,.
+$$
+By checking all the other permutations one can show that $\cdot$ is associative.
+- The neutral element of $\cdot$ is $1$, since 
+$$
+0 \cdot 1 = 1 \cdot 0 = 0 \,, \quad 1 \cdot 1 =  1 \,.
+$$
+- The element $0$ has no inverse, since  
+$$
+0 \cdot 0 = 0 \cdot 1 = 1 \cdot 0 = 0\,,
+$$
+and thus we never obtain the neutral element $1$. The inverse of $1$ is given by $1$, since 
+$$
+1 \cdot 1 = 1 \,.
+$$
+:::
+
+
+::: Example
+Let $K=\{0,1\}$ be a set with binary relation $\circ$ defined by the table
+$$
+\begin{array}{c|cc}
+ \circ & 0 & 1 \\ \hline
+ 0     & 1 & 1 \\
+ 1     & 0 & 0 \\
+\end{array}	
+$$
+In this case $\circ$ is not commutative since 
+$$
+0 \circ 1 = 1 \, , \quad 1 \circ 0 = 0
+$$
+and therefore
+$$
+0 \circ 1 \neq 1 \circ 0 \,.
+$$
+Moreover $\circ$ is not associative, since 
+$$
+(0 \circ 1) \circ 1 = 1 \circ 1 = 0 \,,
+$$
+while 
+$$
+0 \circ (1 \circ 1) = 0 \circ 0 = 1 \,,
+$$
+so that 
+$$
+(0 \circ 1) \circ 1  \neq 0 \circ (1 \circ 1)\,.
+$$
+
+:::
+
+
+We are ready to define fields.
+
+
+
+
+
+::: Definition
+### Field
+
+Let $K$ be a set with binary operations of **addition** 
+$$
++\ \colon K \times K \to K \,, \quad (x,y) \mapsto x + y 
+$$
+and **multiplication** 
+$$
+\cdot\ \colon K \times K \to K \,, \quad (x,y) \mapsto x \cdot y  = xy \,. 
+$$ 
+We call the triple $(K, + , \cdot)$ a **field** if:
+
+1. The addition $+$ satisfies: $\,\forall \, x,y,z \in K$
+    - (A1) **Commutativity and Associativity**: 
+    $$
+    x+y = y+x 
+    $$
+    $$
+    (x+y)+z = x+(y+z) 
+    $$
+    - (A2) **Additive Identity**: There exists a **neutral element** in $K$ for $+$, which we call $0$. It holds:
+    $$ 
+    x + 0 = 0 + x = x 
+    $$
+    - (A3) **Additive Inverse**: There exists an **inverse** of $x$ with respect to $+$. We call this element the **additive inverse** of $x$ and denote it by $-x$. It holds
+    $$
+    x + (-x) = (-x) + x = 0 
+    $$
+
+2. The multiplication $\cdot$ satisifes: $\,\forall \, x,y,z \in K$
+    - (M1) **Commutativity and Associativity**: 
+    $$
+    x \cdot y = y \cdot x 
+    $$
+    $$
+    (x \cdot y) \cdot z = x \cdot (y \cdot z) 
+    $$
+    - (M2) **Multiplicative Identity**: There exists a **neutral element** in $K$ for $\cdot$, which we call $1$. It holds:
+    $$ 
+    x \cdot 1 = 1 \cdot x = x 
+    $$
+    - (M3) **Multiplicative Inverse**: If $x \neq 0$ there exists an **inverse** of $x$ with respect to $\cdot$. We call this element the **multiplicative inverse** of $x$ and denote it by $x^{-1}$. It holds
+    $$
+    x \cdot x^{-1} = x^{-1} \cdot x = 1 
+    $$
+
+3. The operations $+$ and $\cdot$ are related by 
+    - (AM) **Distributive Property**: $\,\forall \, x,y,z \in K$
+    $$
+    x \cdot (y + z) = (x \cdot y) + (y \cdot z) \,.
+    $$
+:::
+
+
+::: Example
+Let $K$ with $+$ and $\cdot$ be as in Example \ref{example-binary-operation}. We can show that $(K,+,\cdot)$ is a field. Indeed we have already shown in Example \ref{example-binary-operation-2} that: 
+
+- (A1) and (M1) hold, 
+- (A2) holds with neutral element $0$,
+- (M2) holds with neutral element $1$,
+- (A3) every element has an additive inverse, with
+$$
+-0 = 0 \,, \quad - 1 = 1 \,,
+$$
+- (M3) every element which is not $0$ a multiplicative inverse, with
+$$
+1^{-1} = 1\,.
+$$
+
+We are left to show the Distributive Property (AM). Indeed:
+
+- (AM) For all $y,z \in K$ we have
+$$
+0 \cdot (y + z) = 0 \,, \quad (0 \cdot y) + (0 \cdot z) = 0 + 0 = 0\,,
+$$
+and also
+$$
+1 \cdot (y + z) = y + z \,, \quad (1 \cdot y) + (1 \cdot z) = y + z \,.
+$$
+Thus (AM) holds.
+:::
+
+
+
+::: Definition
+### Subtraction and division
+Let $(K,+,\cdot)$ be a field. We define:
+
+- **Subtraction** as the operation $-$ defined by 
+$$
+x - y := x + (-y) \,, \quad \forall \, x , y \in K \,,
+$$
+where $-y$ is the additive inverse of $y$.
+- **Division** as the operation $/$ defined by
+$$
+x/y := x \cdot y^{-1}\,, \quad \forall \, x , y \in K \,, \,\, y \neq 0 \,,
+$$
+where $y^{-1}$ is the multiplicative inverse of $y$.
+:::
+
+
+
+::: Proposition
+### Uniqueness of neutral elements and inverses
+
+Let $(K,+,\cdot)$ be a field. Then
+
+1. There is a unique element in $K$ with the property of $0$,
+2. There is a unique element in $K$ with the property of $1$,
+3. For all $x \in K$ there is a unique additive inverse $-x$,
+4. For all $x \in K$, $x \neq 0$, there is a unique multiplicative inverse $x^{-1}$.
+:::
+
+::: Proof
+1. Suppose that $0 \in K$ and $\widetilde{0} \in K$ are both neutral element of $+$, that is, they both satisfy (A2). Then 
+$$
+0 + \widetilde{0} = 0
+$$
+since $\widetilde{0}$ is a neutral element for $+$. Moreover
+$$
+\widetilde{0} + 0 = \widetilde{0}
+$$
+since $0$ is a neutral element for $+$. By commutativity of $+$, see property (A1), we have
+$$
+0 = 0 + \widetilde{0} = \widetilde{0} + 0 = \widetilde{0} \,,
+$$
+showing that $0 = \widetilde{0}$. Hence the neutral element for $+$ is unique.
+2. Exercise.
+3. Let $x \in K$ and suppose that $y, \widetilde{y} \in K$ are both additive inverses of $x$, that is, they both satisfy (A3). Therefore
+$$
+x + y = 0
+$$
+since $y$ is an additive inverse of $x$ and
+$$
+x + \widetilde{y} = 0 
+$$
+since $\widetilde{y}$ is an additive inverse of $x$. Therefore we can use commutativity and associativity and of $+$, see property (A1), and the fact that $0$ is the neutral element of $+$, to infer
+\begin{align*}
+y & = y + 0 = y + (x + \widetilde{y}) \\ 
+  & = (y + x) + \widetilde{y} = (x + y) + \widetilde{y} \\
+  & = 0 + \widetilde{y} = \widetilde{y} \,,    
+\end{align*}
+concluding that $y = \widetilde{y}$. Thus there is a unique additive inverse of $x$, and 
+$$
+y = \widetilde{y} = -x \,,
+$$
+with $-x$ the element from property (A3).
+4. Exercise.
+:::
+
+
+
+Using the properties of field we can also show that the usual properties of sum, subtraction, multiplication and division still hold in any field. We list such properties in the following proposition.
+
+
+::: Proposition
+### Properties of field operations
+Let $(K,+,\cdot)$ be a field. Then for all $x,y,z \in K$,
+
+- $x + y = x + z \,\, \implies \,\, y = z$
+- $x \cdot y = x \cdot z \,$ and $\,x \neq 0 \,\, \implies \,\, y = z$
+- $- 0 = 0$
+- $1^{-1} = 1$
+- $x \cdot 0 = 0$
+- $-1 \cdot x = -x$
+- $-(-x) = x$
+- $(x^{-1})^{-1} = x \,$ if $\, x \neq 0$
+- $(x \cdot y)^{-1} = x^{-1} \cdot y^{-1}$ 
+:::
+
+
+
+
+The above properties can be all proven with elementary use of the field properties (A1)-(A3), (M1)-(M3) and (AM). This is an exercise in patience, and is left to the reader.
+
+
+
+Let us conclude with examining the sets of numbers introduced in @sec-chap-1. 
+
+::: Theorem
+Consider the sets $\N$, $\Z$, $\Q$ with the usual operations $+$ and $\cdot$. We have:
+
+- $(\N, + , \cdot)$ is **not a field**:  
+It satisfies properties (A1), (A2), (M1), (M2), (AM) of fields. It is missing properties (A3) and (M3), the additive and multiplicative inverse properties, respectively.
+- $(\Z, + , \cdot)$ is **not a field**:  
+It satisfies properties (A1), (A2), (A3), (M1), (M2), (AM) of fields. Thus it is only missing (M3), the multiplicative inverse property.
+- $(\Q, + , \cdot)$ **is a field**.
+
+
+:::
+
+The proof is omitted. 
+
+
+
+
+## Ordered fields
+
+::: Definition
+Let $K$ be a set with binary operations $+$ and $\cdot$, and with an order relation $\leq$. We call $(K,+,\cdot,\leq)$ an **ordered field** if:
+
+1. $(K,+,\cdot)$ is a field
+
+3. There $\leq$ is of **total order** on $K$:  $\, \forall \, x, y, z \in K$ 
+    - (O1) **Reflexivity**: 
+    $$
+    x \leq x
+    $$ 
+    - (O2) **Antisymmetry**: 
+    $$
+    x \leq y \, \mbox{ and } \, y \leq x \,\, \implies \,\, x = y 
+    $$
+    - (O3) **Transitivity**: 
+    $$
+    x \leq y \,\, \mbox{ and } \,\, y \leq z \,\, \implies \,\, x = z 
+    $$
+    - (O4) **Total order**:  
+    $$
+    x \leq y \,\, \mbox{ or } \,\, y \leq x 
+    $$
+
+4. The operations $+$ and $\cdot$, and the total order $\leq$, are related by the following properties: $\, \forall x, y, z \in K$
+    - (AM) **Distributive**: Relates addition and multiplication via
+    $$
+    x \cdot (y + z) = x \cdot y + x \cdot z 
+    $$
+    - (AO) Relates addition and order with the requirement:
+    $$
+    x \leq y \,\, \implies \,\, x + z \leq y + z
+    $$
+    - (MO) Relates multiplication and order with the requirement:
+    $$
+    x \geq 0, \, y \geq 0  \,\, \implies \,\, x \cdot y  \geq 0
+    $$
+:::
+
+
+::: Example 
+$(\Q,+,\cdot,\leq)$ is an **ordered field**.
+:::
+
+
+
+## Cut Property  
+
+We have just introduced the notion of **field**, and noted that the set of rational numbers with the usual operations
+$$
+(\Q, + , \cdot)
+$$
+is a **field**. 
+
+We now need to address the key issue we proved in @sec-chap-1, that is, that
+$$
+\sqrt{2} \notin \Q \,.
+$$
+This means that $\Q$ has **gaps**, and cannot be represented as a **continuous** line. The rigorous definition of **lack of gaps** needs the concept of **cut** of a set.
+
+
+
+::: Definition
+### Partition of a set
+
+Let $S$ be a non-empty set. The pair $(A,B)$ is a **partition** of $S$ if
+$$
+A , B \subseteq S\,, \quad  A \neq \emptyset\,, \quad B \neq \emptyset \,,
+$$
+and
+$$
+S = A \cup B \,, \quad 
+A \cap B = \emptyset \, . 
+$$
+:::
+
+
+
+![Schematic picture of a partition $(A,B)$ of the set $K$.](/images/partition.png){width=55%}
+
+
+::: Definition
+### Cut of a set
+
+Let $S$ be a non-empty set with a total order relation $\leq$. The pair $(A,B)$ is a **cut** of $S$ if 
+
+1. $(A,B)$ is a **partition** of $S$,
+2. We have
+$$
+a \leq b \,,  \quad \forall \, a \in A \,, \,\, \forall \, b \in B \,.
+$$
+:::
+
+The **cut** of a set is often called **Dedekind cut**, named after **Richard Dedekind**, who used cuts to give an explicit construction of the real numbers $\R$, see [Wikipedia page](https://en.wikipedia.org/wiki/Dedekind_cut).
+
+
+::: Definition 
+### Cut property
+Let $S$ be a non-empty set with a total order relation $\leq$. We say that $S$ has the **cut property** if for every cut $(A,B)$ of $S$ there exists some $s \in S$ such that 
+$$
+a \leq s \leq b \,, \quad \forall  \, a \in A\,, \,\, \forall  \, b \in B \,.
+$$
+We call $s$ the **separator** of the cut $(A,B)$.
+:::
+
+
+
+
+::: Example
+Let $S = \Q$ and consider the sets
+$$
+A = (-\infty,s] \cap \Q \,, \quad B = (s,\infty) \cap \Q \,. 
+$$
+for some $s \in \Q$. Then the pair $(A,B)$ is a cut of $\Q$, and $s$ is the separator.
+:::
+
+
+![$(A,B)$ is a cut of $\Q$ with separator $s$.](/images/cut.png){width=70%}
+
+
+::: Question
+Do all ordered fields have the Cut Property? Does $\Q$ have the Cut Property?
+:::
+
+
+The answer to the above question is **NO**. For example the pair
+$$
+A =  (-\infty,\sqrt{2}) \cap \Q \,, \quad B = (\sqrt{2},\infty) \cap \Q\,.
+$${#eq-cut-Q}
+is a cut of $\Q$, since $\sqrt{2} \notin \Q$. However what is the separator? It should be $s = \sqrt{2}$, given that clearly 
+$$
+a \leq \sqrt{2}  \leq b \,, \quad \forall \, a \in A\,, \,\, \forall \, b \in B \,.
+$$
+However $\sqrt{2} \notin \Q$, so we are **NOT ALLOWED** to take it as separator. Indeed, we can show that $(A,B)$ defined as in (@eq-cut-Q) has no separator.
+
+
+
+![$(A,B)$ is a cut of $\Q$ which has no separator](/images/cut_sqrt2.png){width=70%}
+
+
+
+
+
+
+
+::: Theorem
+### $\Q$ does not have the cut property.  {#theorem-Q-cut}
+
+$\Q$ does not have the cut property. More explicitly, there exist a cut $(A,B)$ of $\Q$ which has no separator.
+:::
+
+::: Remark
+### Ideas for the proof of Theorem \ref{theorem-Q-cut}    {#remark-idea-proof-cut}
+
+Before proceeding with the proof, let us summarize the ideas behind it:  
+We will consider the cut $(A,B)$ in (@eq-cut-Q). We then assume by contradiction that $(A,B)$ admits a separator $L \in \Q$, so that 
+$$
+a \leq L \leq b \,, \quad \forall \, a \in A\,, \,\, \forall \, b \in B \,. 
+$${#eq-theorem-Q-cut}
+Since $(A,B)$ is a partition of $\Q$, then either $L \in A$ or $L \in B$. These will both lead to a contradiction:
+
+- If $L \in A$, by definition of $A$ we have
+$$
+L < \sqrt{2} \,.
+$$
+We want to contradict the fact that $L$ is a separator for the cut $(A,B)$. 
+The idea is that $\sqrt{2} \notin \Q$, and therefore it is possible to find a rational 
+number $\widetilde{L}$ such that
+$$
+L < \widetilde{L} < \sqrt{2} \,.
+$$
+How do we find such $\widetilde{L}$ in practice? We look for a
+number $\widetilde{L}_n$ of the form
+$$
+\widetilde{L}_n = 1 + \frac{1}{n}
+$$
+for some $n \in \N$ to be suitably chosen later. Clearly $\widetilde{L}_n \in \Q$ and
+$$
+L < \widetilde{L}_n 
+$$
+for all $n \in \N$. We need to prove that we can find $n_0 \in \N$ such that 
+$$
+L < \widetilde{L}_{n_0} < \sqrt{2} \,.
+$${#eq-theorem-Q-cut-2}
+This is indeed possible: There exists $n_0 \in \N$ such that (@eq-theorem-Q-cut-2) holds. 
+From (@eq-theorem-Q-cut-2) we see that $\widetilde{L}_{n_0} \in A$. Since $L$ is 
+a separator, from (@eq-theorem-Q-cut) we obtain
+$$
+\widetilde{L}_{n_0} \leq L \,,
+$$
+which contradicts (@eq-theorem-Q-cut-2).
+
+- If $L \in B$, by definition of $B$ we have
+$$
+ \sqrt{2} < L \,.
+$$
+The idea is the same as above: Since $\sqrt{2} \notin \Q$, we can find $\widetilde{L} \in \Q$ such that 
+$$
+\sqrt{2} < \widetilde{L} < L \,.
+$$
+Since we want $\widetilde{L}$ to be a rational number smaller than $L$, we look
+for $\widetilde{L}$ of the form
+$$
+\widetilde{L}_n := L - \frac{1}{n} \,,
+$$
+for a suitable $n \in \N$. This satisfies $\widetilde{L}_n \in \Q$ and
+$$
+\widetilde{L}_n < L \,,
+$$
+for all $n \in \N$. We then find $n_0 \in \N$ such that
+$$
+\sqrt{2} < \widetilde{L}_{n_0} < L \,.
+$${#eq-theorem-Q-cut-3}
+The above shows that $\widetilde{L}_{n_0} \in B$. As $L$ is a separator, we find that
+$$
+L \leq \widetilde{L}_{n_0}  \,,
+$$
+which contradicts (@eq-theorem-Q-cut-3).
+
+
+Therefore, both cases $L \in A$ or $L \in B$ lead to a contradiction. Since these are 
+all the possibilities, we conclude that the cut $(A,B)$ has no separator in $\Q$.
+:::
+
+
+Time to make the ideas in the above remark rigorous. 
+
+
+::: Proof
+### Proof of Theorem \ref{theorem-Q-cut}
+Let $A$ and $B$ be the sets defined in (@eq-cut-Q). It is useful to rewrite $A$ and $B$ in the form
+$$
+A = A_1 \cup A_2 \,, 
+$$
+where 
+$$
+A_1 = \{ q \in \Q \divider q< 0  \}\,, 
+$$
+$$
+A_2 =\{ q \in \Q \divider q \geq 0\,, \,\, q^2 < 2  \} \,,
+$$
+and
+$$
+B = \{ q \in \Q \divider q > 0, \,\, q^2 > 2  \} \,.
+$$
+
+*Step 1. $(A,B)$ is a cut of $\Q$*:  
+We need to prove the following:
+
+1. $(A,B)$ is a partition of $\Q$. This is because $A , B \subseteq \Q$ with $A \neq \emptyset$ and $B \neq \emptyset$. Moreover 
+$A \cap B = \emptyset$ and
+$$
+A \cup B = \Q\,,
+$$ 
+given that $\sqrt{2} \notin \Q$, and so there is no element $q \in \Q$ such that $q^2 = 2$.
+2. It holds
+$$
+a \leq b \,, \quad \forall a \in A \,, \,\, \forall \, b \in B \,.
+$$
+Indeed, suppose that $a \in A$ and $b \in B$. We have two cases:
+    - $a \in A_1$: Therefore $a<0$. In particular
+    $$
+    a < 0 < b\,,
+    $$
+    given that $b > 0$ for all $b \in B$. Thus $a<b$.
+    - $a \in A_2$: Therefore $a \geq 0$ and $a^2 < 2$. In particular
+    $$
+    a^2 < 2 < b^2 \,,
+    $$
+    since $b^2>2$ for all $b \in B$. In particular 
+    $$
+    a^2 < b^2 \,.
+    $$
+    Since $b>0$ for all $b \in B$, from the above inequality we infer $a<b$, concluding.
+
+
+
+*Step 2. $(A,B)$ has no separator*:  
+Suppose by contradiction that $(A,B)$ admits a separator
+$$
+L \in \Q \,.
+$$
+By definition this means
+$$
+a \leq L \leq b \,, \quad \forall a \in A \,, \,\, \forall \, b \in B \,.
+$${#eq-separator-contradiction}
+Since
+$$
+L \in \Q \,, \quad \Q = A \cup B \,, \quad  A \cap B = \emptyset \,,
+$$
+then either $L \in A$ or $L \in B$. We will see that both these possibilities lead to a contradiction:
+
+*Case 1: $L \in A$.*  
+By (@eq-separator-contradiction) we know that 
+$$
+a \leq L \,, \quad \forall \, a \in A \,.
+$${#eq-separator-contradiction-hp-0}
+In particular the above implies 
+$$
+L \geq 0
+$${#eq-separator-contradiction-1}
+since $0 \in A$. Therefore we must have $L \in A_2$, that is, 
+$$
+L \geq 0 \,\, \mbox{ and } \,\, L^2 < 2 \,.
+$${#eq-separator-contradiction-hp-1}
+Set 
+$$
+\widetilde{L} := L + \frac1n
+$$
+for $n \in \N$, $n \neq 0$ to be chosen later. Clearly we have
+$$
+\widetilde{L} \in \Q   \,\,\, \mbox{ and } \,\,\, L < \widetilde{L}  \,. 
+$${#eq-separator-contradiction-2}
+From (@eq-separator-contradiction-1) and (@eq-separator-contradiction-2) we have also
+$$
+\widetilde{L}>0 \,.
+$${#eq-separator-contradiction-3}
+We now want to show that there is a choice of $n$ such that $\widetilde{L}^2 < 2$, which will lead to a contradiction. Indeed, we can estimate
+\begin{align*}
+\widetilde{L}^2 & = \left( L + \frac1n \right)^2 \\
+            & = L^2 + \frac{1}{n^2} + 2 \frac{L}{n} \\
+            & < L^2 + \frac{1}{n} + 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n}<\frac{1}{n^2}  \right) \\
+            & = L^2 + \frac{2L + 1}{n} \,. 
+\end{align*}
+If we now impose that 
+$$
+L^2 + \frac{2L + 1}{n} < 2 \,,
+$$
+we can rearrange the above and obtain
+$$
+n(2 - L^2) > 2L + 1 \,.
+$$
+Now note that $L^2 < 2$ by assumption (@eq-separator-contradiction-hp-1). Thus we can divived by $(2 - L^2)$ and obtain
+$$
+n >\frac{2L + 1}{2 - L^2} \,.
+$$
+Therefore we have just shown that 
+$$
+n >\frac{2L + 1}{2 - L^2}  \,\, \implies \,\, \widetilde{L}^2 < 2 \,.
+$$
+Together with (@eq-separator-contradiction-3) this implies $\widetilde{L} \in A$. Therefore we have
+$$
+\widetilde{L} \leq L
+$$
+by (@eq-separator-contradiction-hp-0). On the other hand it also holds 
+$$
+\widetilde{L} > L
+$$
+by (@eq-separator-contradiction-2), and therefore we have a contradiction. Thus $L \notin A$.
+
+*Case 2: $L \in B$.*  
+As $L \in B$, we have by definition
+$$
+L > 0 \,, \quad L^2 > 2 \,.
+$${#eq-separator-contradiction-5}
+Moreover since $L$ is a separator, see (@eq-separator-contradiction), in particular
+$$
+L \leq b \,,  \,\, \forall \, b \in B \,.
+$${#eq-separator-contradiction-6}
+Define now 
+$$
+\widetilde{L} := L - \frac1n
+$$
+with $n \in \N$, $n \neq 0$ to be chosen later. Clearly we have
+$$
+\widetilde{L} \in \Q \,, \quad \widetilde{L} < L \,.
+$${#eq-separator-contradiction-7}
+We now show that $n$ can be chosen so that $\widetilde{L} \in B$. Indeed
+\begin{align*}
+\widetilde{L}^2  & = \left(  L - \frac1n   \right)^2 \\
+             & = L^2 + \frac{1}{n^2} - 2 \frac{L}{n} \\
+             & > L^2 - \frac{1}{n^2} - 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n^2} > - \frac{1}{n^2}  \right) \\
+             & > L^2 - \frac{1}{n} - 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, -\frac{1}{n^2} > - \frac{1}{n}  \right) \\
+             & = L^2 - \frac{1 + 2L}{n} \,.
+\end{align*}
+Now we impose 
+$$
+L^2 - \frac{1 + 2L}{n} > 2 
+$$
+which is equivalent to 
+$$
+n(L^2 - 2) > 1 + 2L \,.
+$$
+Since we are assuming $L \in B$, then $L^2 > 2$, see (@eq-separator-contradiction-5). Therefore we can divide by $(L^2 -2)$ and get
+$$
+n > \frac{1+2L}{L^2 - 2} \,.
+$$
+In total, we have just shown that 
+$$
+ n > \frac{1+2L}{L^2 - 2} \quad \implies \quad \widetilde{L}^2 > 2\,,
+$$
+proving that $\widetilde{L} \in B$. Therefore by (@eq-separator-contradiction-6) we get
+$$
+L \leq \widetilde{L} \,.
+$$
+This contradicts (@eq-separator-contradiction-7).
+
+*Conclusion:*  
+We have seen that assuming that $(A,B)$ has a separator $L \in \Q$ leads to a contradiction. Thus the cut $(A,B)$ has no separator.
+:::
+
+
+::: Remark
+
+The above proof can be summarized by saying that the set
+$$
+A = (-\infty, \sqrt{2}) \cap \Q
+$$
+does not admit a **largest** element in $\Q$, and that the set
+$$
+B = (\sqrt{2}, \infty) \cap \Q
+$$
+does not admit a **lowest element** in $\Q$. We will clarify this remark in the next section.
+:::
+
+
+
+ 
+## Supremum and infimum
+
+
+A crucial definition in Analysis is the one of supremum or infimum of a set. This is also another way of studying the **gaps** of $\Q$.
+
+
+::: Example
+### Intuition about supremum and infimum
+Consider the set
+$$
+A = [0,1) \cap \Q \,.
+$$
+Intuitively, we understand that $A$ is bounded, i.e. not infinite. We also see that
+
+- $0$ is the lowest element of $A$
+- $1$ is the highest element of $A$
+
+However we see that $0 \in A$ while $1 \notin A$. We will see that 
+
+- $0$ can be defined as the **infimum** and **minimum** of $A$.
+- $1$ can be defined as the **supremum**, but not **maximum**, of $A$. 
+:::
+
+
+
+### Upper bound, supremum, maximum 
+
+We start by defining the supremum. First we need the notion of upper bound of a set.
+
+
+::: Definition
+### Upper bound and bounded above
+
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$:
+
+1. We say that $b \in K$ is an **upper bound** for $A$ if
+$$
+a \leq b \,, \quad \forall \, a \in A \,.
+$$
+2. We say that $A$ is **bounded above** if there exists and upper bound $b \in K$ for $A$.
+:::
+
+
+
+
+::: Definition 
+### Supremum
+
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. A number $s \in K$ is called **least upper bound** or **supremum** of $A$ if:
+
+i. $s$ is an upper bound for $A$,
+ii. $s$ is the smallest upper bound of $A$, that is, 
+    $$
+    \mbox{If } \, b \in K \, \mbox{ is upper bound for } \, A \, \mbox{ then } \, s \leq b \,.  
+    $$
+:::
+
+::: Notation
+We will almost always prefer the name supremum to least upper bound. For $A \subseteq K$ the supremum is denoted by
+$$
+s := \sup \ A \,.
+$$
+:::
+
+
+::: Remark
+Note that if a set $A \subseteq K$ in **NOT** bounded above, then the supremum does not exist, as there are no upper bounds of $A$. 
+:::
+
+
+::: Proposition
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. If 
+$$
+\sup A
+$$
+exists, then it is unique.  
+:::
+
+
+::: Proof
+Suppose there exist $s_1, s_2 \in K$ such that
+$$
+s_1 = \sup A,  \,\, s_2 = \sup A \,.
+$$
+Then:
+
+- Since $s_2 = \sup A$, in particular $s_2$ is an upper bound for $A$. Since $s_1 = \sup A$ then $s_1$ is the lowest upper bound. Thus we get
+$$
+s_1 \leq s_2 \,.
+$$
+- Exchanging the roles $s_1$ and $s_2$ in the above reasoning we also get
+$$
+s_2 \leq s_1 \,.
+$$
+
+This shows $s_1 = s_2$.
+:::
+
+
+
+
+::: Warning
+In general:
+
+- A set can have infinite upper bounds,
+- The supremum does not belong to the set.
+
+For example
+$$
+A = [0,1)  \cap \Q
+$$
+has for upper bounds all the numbers $b \in \Q$ with $b>1$. Moreover one can show that 
+$$
+\sup A = 1\,,
+$$
+and so 
+$$
+\sup A \notin A \,.
+$$
+:::
+
+::: Warning 
+The supremum does not exist in general. For example let
+$$
+A = [0,\sqrt{2})  \cap \Q \,.
+$$
+We will show that $\sup A$ does not exist in $\Q$. Indeed we will have that
+$$
+\sup A = \sqrt{2} \in \R \,.
+$$
+:::
+
+
+![Supremum and upper bounds of a set $A$ in the field $K$](/images/definition_supremum.png){width=70%}
+
+
+
+::: Definition 
+### Maximum
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. A number $M \in K$ is called the **maximum** of $A$ if:
+$$
+M \in A   \,\, \mbox{ and } \,\, a \leq M  \,, \, \forall a \in A \,.
+$$
+We denote the maximum by
+$$
+M = \max A \,.
+$$
+:::
+
+
+
+::: Proposition
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. If the maximum of $A$ exists, then also the supremum exists, and
+$$
+\sup A = \max A \,.
+$$
+:::
+
+::: Proof
+Let 
+$$
+M = \max A \,.
+$$ 
+Then:
+
+- By definition we have $M \in A$ and 
+$$
+a \leq M \,, \quad \forall \, a \in A \,.
+$$
+In particular the above tells us that $M$ is an upper bound of $A$. 
+- We claim that $M$ is the least upper bound. Indeed, suppose $b$ is an upper bound of $A$, that is,    
+$$
+a \leq b \,, \quad \forall \, a \in A \,.
+$$
+In particular, since $M \in A$, by the above condition we have
+$$
+M \leq b \,.
+$$
+
+Therefore $M$ is the least upper bound of $A$, meaning that $M = \sup A$.
+:::
+
+
+::: Warning
+The converse of the above statement is not true: In general the $\sup$ might exist while the $\max$ does not. For example
+$$
+A = [0,1) \cap \Q
+$$
+is such that 
+$$
+\sup A = 1
+$$
+but $\max A$ does not exist. Instead for the set
+$$
+B = [0,1] \cap \Q
+$$
+we have that 
+$$
+\max A = \sup A = 1 \,. 
+$$
+:::
+
+
+
+
+
+
+### Lower bound, infimum, minimum
+
+We now introduce the definitions of lower bound, infimum, minimum. These are the counterpart of upper bound, supremum and maximum, respectively.
+
+
+
+
+::: Definition
+### Upper bound, bounded below, infimum, minimum
+
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$:
+
+1. We say that $l \in K$ is a **lower bound** for $A$ if
+$$
+l \leq a \,, \quad \forall \, a \in A \,.
+$$
+2. We say that $A$ is **bounded below** if there exists a lower bound $l \in K$ for $A$.
+3. We say that $i \in K$ is the **greatest lower bound** or **infimum** of $A$ if:
+
+    - $i$ is a lower bound for $A$,
+    - $i$ is the largest lower bound of $A$, that is, 
+    $$
+    \mbox{If } \, l \in K \, \mbox{ is a lower bound for } \, A \, \mbox{ then } \, l \leq i \,.  
+    $$
+If it exists, the infimum is denoted by 
+$$
+i = \inf A \,.
+$$
+4. We say that $m \in K$ is the **minimum** of $A$ if:
+$$
+m \in A   \,\, \mbox{ and } \,\, m \leq a  \,, \, \forall a \in A \,.
+$$
+If it exists, we denote the minimum by
+$$
+m = \min A \,.
+$$
+:::
+
+
+
+![Infimum and lower bounds of a set $A$ in the field $K$](/images/definition_infimum.png){width=70%}
+
+
+
+
+::: Proposition
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$:
+
+1. If $\inf A$ exists, then it is unique.
+2. If the minimum of $A$ exists, then also the infimum exists, and
+$$
+\inf A = \min A \,.
+$$  
+
+:::
+
+The proof uses similar arguments to the one employed in the previous section, and is left to the reader as an exercise.
+
+
+
+
+::: Warning
+We have
+
+- A set can have infinite lower bounds,
+- The infimum does not belong to the set.
+
+For example
+$$
+A = (0,1)  \cap \Q
+$$
+has for lower bounds all the numbers $b \in \Q$ with $b<1$. Moreover we will show that
+$$
+\inf A = 0\,,
+$$
+and so 
+$$
+\inf A \notin A \,.
+$$
+:::
+
+::: Warning 
+The infimum does not exist in general. For example let
+$$
+A = (\sqrt{2},5]  \cap \Q \,.
+$$
+We will show that $\inf A$ does not exist in $\Q$. Indeed we will have that
+$$
+\inf A = \sqrt{2} \in \R \,.
+$$
+:::
+
+
+::: Warning
+In general the $\inf$ might exist while the $\min$ does not. For example
+$$
+A = (0,1) \cap \Q
+$$
+is such that 
+$$
+\inf A = 0
+$$
+but $\min A$ does not exist. Instead for the set
+$$
+B = [0,1] \cap \Q
+$$
+we have that 
+$$
+\inf A = \min A = 0 \,. 
+$$
+:::
+
+
+
+
+::: Proposition
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. If $\inf A$ and $\sup A$ exist, then
+$$
+\inf A \leq a \leq \sup A \,, \quad \forall a \in A \,.
+$$
+:::
+
+The proof is simple, and is left as an exercise. We now have a complete picture about supremum and infimum, see figure below.
+
+
+
+![Supremum, upper bounds, infimum and lower bounds of a set $A$ in $K$](/images/definition_sup_inf.png){width=70%}
+
+
+
+
+
+
+We conclude with another simple proposition. The proof is again left to the reader.
+
+
+::: Proposition
+### Relationship between sup and inf {#proposition-inf-sup}
+
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. 
+Define 
+$$
+- A := \{ - a \divider a \in A \} \,.
+$$
+It holds:
+
+- If $\sup A$ exists, then $\inf A$ exists and
+$$
+\inf(-A) = - \sup A \,.
+$$
+- If $\inf A$ exists, then $\sup A$ exists and
+$$
+\sup(-A) = - \inf A \,.
+$$
+:::
+
+
+
+
+
+## Completeness
+
+
+We have introduced the concepts of supremum and infimum on an ordered field $K$. 
+
+
+::: Question
+Suppose $(K,+,\cdot, \leq)$ is an ordered field, and that $A \subseteq K$ is non-empty and bounded above. Does
+$$
+\sup A 
+$$
+always exist?
+:::
+
+The answer to the above question is **NO**. Like we did with the Cut Property, the counterexample can be found in the set of rational numbers $\Q$. A set bounded above for which the supremum does nor exist is, for example, 
+$$
+A = [0, \sqrt{2}) \cap \Q \,.
+$${#eq-no-sup-in-Q}
+
+
+::: {.Theorem  #theorem-Q-not-complete}
+There exists a set $A \subseteq \Q$ such that 
+
+- $A$ is non-empty,
+- $A$ is bounded above,
+- $\sup A$ does not exist in $\Q$. 
+:::
+
+The proof uses the same ideas we used for showing that $\Q$ does not have the Cut Property.
+
+::: Proof
+Define the set $A$ as in (@eq-no-sup-in-Q). Equivalently, this can be written as
+$$
+A = \{ q \in \Q  \divider q \geq 0 \,, \,\, q^2 < 2 \} \,.
+$$
+
+*Step 1. $A$ is bounded above.*  
+Take $b:=9$. Then $b$ is an upper bound for $A$. Indeed by definition 
+$$
+q^2 < 2 \,, \,\, q \geq 0 \,, \,\,\, \forall q \in A \,.
+$$
+Therefore 
+$$
+q^2 < 2 < 9  \implies q^2 < 9 \implies q < 3 = b \, .
+$$
+
+*Step 2. $\sup A$ does not exist.*  
+Assume by contradiction that 
+$$
+s = \sup A \in \Q
+$$
+exists. By definition it holds
+$$
+s \geq q \,, \quad \forall \, q \in A
+$$ {#eq-sup-contradiction-1}
+$$
+b \geq q \,, \, \forall \, q \in A \,\, \implies \,\, 
+s \leq b 
+$$ {#eq-sup-contradiction-2}
+There are two possibilities: $s \in A$ or $s \notin A$:
+
+- *Case 1. $s \in A$*.  
+If $s \in A$ by definition
+$$
+s  \geq 0\,, \quad s^2 < 2 \,.
+$${#eq-sup-contradiction-3}
+Define 
+$$
+\widetilde{s} := s + \frac{1}{n}
+$$
+with $n \in \N$, $n \neq 0$ to be chosen later. Then
+\begin{align*}
+\widetilde{s}^2 & = \left( s + \frac1n \right)^2 \\
+            & = s^2 + \frac{1}{n^2} + 2 \frac{s}{n} \\
+            & < s^2 + \frac{1}{n} + 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n}<\frac{1}{n^2}  \right) \\
+            & = s^2 + \frac{2s + 1}{n} \,. 
+\end{align*}
+If we now impose that 
+$$
+s^2 + \frac{2s + 1}{n} < 2 \,,
+$$
+we can rearrange the above and obtain
+$$
+n(2 - s^2) > 2s + 1 \,.
+$$
+Now note that $s^2 < 2$ by assumption (@eq-sup-contradiction-3). Thus we can divide by $(2 - s^2)$ and obtain
+$$
+n >\frac{2s + 1}{2 - s^2} \,.
+$$
+To summarize, we have just shown that 
+$$
+n >\frac{2s + 1}{2 - s^2}  \,\, \implies \,\, \widetilde{s}^2 < 2 \,.
+$$
+Moreover $\widetilde{s} := (s + 1/n) \in \Q$. Therefore
+$$
+\widetilde{s} \in A \,.
+$$
+Since $s = \sup A$, we then have
+$$
+\widetilde{s} \leq s \,.
+$$
+However 
+$$
+\widetilde{s} := s + \frac{1}{n} > s \,,
+$$
+yielding a contradiction. Thus $s \in A$ is not possible. 
+
+- *Case 2. $s \notin A$*.  
+If $s \notin A$, by the fact that $s = \sup A$ and by definition of $A$ we get
+$$
+s > 0 \,, \quad s^2 > 2 \,.
+$${#eq-sup-contradiction-4}  
+Define 
+$$
+\widetilde{s} := s - \frac{1}{n} \,.
+$$
+We have
+\begin{align*}
+\widetilde{s}^2  & = \left(  s - \frac1n   \right)^2 \\
+             & = s^2 + \frac{1}{n^2} - 2 \frac{s}{n} \\
+             & > s^2 - \frac{1}{n^2} - 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n^2} > - \frac{1}{n^2}  \right) \\
+             & > s^2 - \frac{1}{n} - 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, -\frac{1}{n^2} > - \frac{1}{n}  \right) \\
+             & = s^2 - \frac{1 + 2s}{n} \,.
+\end{align*}
+Now we impose 
+$$
+s^2 - \frac{1 + 2s}{n} > 2 
+$$
+which is equivalent to 
+$$
+n(s^2 - 2) > 1 + 2s \,.
+$$
+By (@eq-sup-contradiction-4) we have $s^2 > 2$. Therefore we can divide by $(s^2 -2)$ and get
+$$
+n > \frac{1+2s}{s^2 - 2} \,.
+$$
+In total, we have just shown that 
+$$
+ n > \frac{1+2s}{s^2 - 2} \quad \implies \quad \widetilde{s}^2 > 2\,.
+$$
+Therefore $\widetilde{s} \notin A$, and by definition of $A$ we have
+$$
+\widetilde{s} \geq q \,, \quad \forall q \in A\,.
+$$
+Moreover $\widetilde{s} := (s - 1/n) \in \Q$. Therefore $\widetilde{s}$ is an upper bound of $A$ in $\Q$. Since $s=\sup A$ is the smallest upper bound, see (@eq-sup-contradiction-2), it follows
+$$
+s \leq \widetilde{s} \,.
+$$
+However 
+$$
+\widetilde{s} := s - \frac{1}{n} < s \,,
+$$
+obtaining a contradiction. Then $s \notin A$. 
+
+*Conclusion.*  
+We have assumed by contradiction that $s = \sup A$ exists in $\Q$. In this case either $s \in A$ or $s \notin A$. In both cases we found a contradiction. Therefore $\sup A$ does not exist.    
+:::
+
+The above theorem shows that the supremum does not necessarily exist. What about the infimum? 
+
+
+::: Question
+Suppose $(K,+,\cdot, \leq)$ is an ordered field, and that $A \subseteq K$ is non-empty and bounded below. Does
+$$
+\inf A 
+$$
+always exist?
+:::
+
+The answer to the above question is again **NO**. A set bounded below for which the infimum does nor exist is, for example, 
+$$
+A = (\sqrt{2}, 10] \cap \Q \,.
+$$
+The proof of this fact is, of course, very similar to the one of Theorem \ref{theorem-Q-not-complete}, and is therefore omitted.
+
+
+Thus infimum and supremum do not exist in general. The fields for which all the bounded sets admit supremum or infimum are called **complete**.
+
+
+::: Definition
+### Completeness
+
+Let $(K,+,\cdot,\leq)$ be an ordered field. We say that $K$ is **complete** if it holds the property:
+
+- (AC) For every $A \subseteq K$ non-empty and bounded above 
+$$
+\sup A \in K \,.
+$$
+
+:::
+
+
+::: Notation
+We have that:
+
+- Property (AC) is called **Axiom of Completeness**
+- If $K$ is an ordered field in which (AC) holds, then $K$ is called a **complete ordered field**
+:::
+
+
+Notice that if the **Axiom of Completeness** holds, then also the infimum exists. This is shown in the following proposition.
+
+
+::: Proposition
+Let $(K,+,\cdot,\leq)$ be a complete ordered field. Suppose that $A \subseteq K$ is non-empty and bounded below. Then 
+$$
+\inf A \in K\,.
+$$
+:::
+
+::: Proof
+Suppose that $A \subseteq K$ is non-empty and bounded below. Then 
+$$
+-A:= \{ -a \divider a \in A   \}
+$$
+is non-empty and bounded above. By completeness we have that $\sup(-A)$ exists in $K$. But then Proposition \ref{proposition-inf-sup} implies that $\inf A$ exists in $K$, with
+$$
+\inf A = - \sup (-A)\,. 
+$$
+:::
+
+
+
+
+## Equivalence of Completeness and Cut Property
+
+
+
+We can show that **Completeness** is equivalent to the **Cut Property**. Such result is not essential, but its proof is very instructive.
+
+
+::: Theorem 
+### Equivalence of Cut Property and Completeness  {#theorem-cut-complete}
+Let $(K,+,\cdot, \leq)$ be an ordered field. Then they are equivalent:
+
+1. $K$ has the **Cut Property**
+2. $K$ is **Complete**
+
+:::
+
+
+::: Remark
+### Ideas for proving Theorem \ref{theorem-cut-complete}
+
+The proof of Theorem \ref{theorem-cut-complete} is rather long, but the ideas are simple:
+
+*Step 1. Cut Property $\implies$ Completeness*. Suppose $K$ has the Cut Property. To prove that $K$ is Complete, we need to: 
+
+- Consider an arbitrary set $A \subseteq K$ such that $A \neq \emptyset$ and $A$ is bounded above.
+
+- Show that $A$ has a supremum.  
+
+To achieve this, consider the set
+$$
+B := \{ b \in K \divider b \geq a \,, \,\, \forall a \in A \} \,,
+$$
+which is the set of Upper Bounds of $A$. We can show that the pair
+$$
+(B^c,B)
+$$
+is a Cut of $K$. As $K$ has the Cut Property, then there exists
+$s \in K$ separator of $(B^c,B)$. We will show that the separator $s$ is the supremum of $A$ 
+$$
+s = \sup A \,.
+$$
+Thus $K$ is complete. See @fig-cut-complete-1 for a schematic picture of the above construction.
+
+
+*Step 2. Completeness $\implies$ Cut Property*.
+Conversely, suppose that $K$ is Complete. To prove that $K$ has the Cut Property, we need to:
+
+- Consider a cut $(A,B)$ of $K$.
+- Show that $(A,B)$ has a separator $s \in K$.
+
+This implication is easier. Indeed, since $A$ is non-empty and bounded above, by Completeness there exists
+$$
+\sup A \in K \,.
+$$
+We will show that
+$$
+s := \sup A 
+$$
+is a separator for the cut $(A,B)$. See @fig-cut-complete-2 for a schematic picture of the above construction.
+
+
+:::
+
+
+![Let $s$ be the separator of the cut $(B^c,B)$, with $B$ the set of upper bounds of $A$. Then $s = \sup A$.](/images/construction_cut_1.png){#fig-cut-complete-1 width=80%}
+
+
+![Let $(A,B)$ be a cut of $K$ and let $s = \sup A$. Then $s$ is the separator of the cut $(A,B)$.](/images/construction_cut_2.png){#fig-cut-complete-2 width=80%}
+
+
+Keeping the above ideas in mind, let us proceed with the proof.
+
+::: Proof 
+### Proof of Theorem \ref{theorem-cut-complete}
+
+*Step 1. Cut Property $\implies$ Completeness*.  
+We need to prove that $K$ is complete. To this end, consider $A \subseteq K$ non-empty and bounded above. Define the set of upper bounds of $A$:
+$$
+B := \{ b \in K \divider b \geq a \,, \,\, \forall a \in A \} \,.
+$$
+
+
+
+*Claim. The pair $(B^c,B)$ is a cut of $K$.*  
+
+
+*Proof of Claim*.  We have to prove two points:
+
+- $(B^c,B)$ forms a partition of $K$. 
+
+> Indeed, we have $B \neq \emptyset$, since $A$ is bounded above. Further, we have $B^c \neq \emptyset$, since $A$ is non-empty. Thus
+$$
+K = B^c \cup B \,, \quad B^c \cap B =  \emptyset \,.
+$$
+Then $(B^c,B)$ is a partition of $K$.
+
+- We have
+$$
+x \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.
+$${#eq-equiv-cut-complete-1}
+
+> To show the above, let $x \in B^c$ and $y \in B$. By definition of $B$ we have that elements of $B^c$ are not upper bounds of $A$. Therefore $x$ is not an upper bound. This means there exists $\widetilde{a} \in A$ which is larger than $x$, that is,
+$$
+x \leq \widetilde{a} \,.
+$$
+Since $y \in B$, then $y$ is an upper bound for $A$, so that 
+$$
+a \leq y \,, \,\, \forall a \in A\,.
+$$
+Therefore 
+$$
+x \leq \widetilde{a} \leq y \,,
+$$
+concluding (@eq-equiv-cut-complete-1).
+
+Thus $(B^c,B)$ is a cut of $K$ and the claim is proven.
+
+Since $(B^c,B)$ is a cut of $K$, by the Cut Property there exists a separator $s \in K$ such that 
+$$
+x \leq s \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.
+$${#eq-equiv-cut-complete-2}
+
+*Claim. $s$ is an upper bound for $A$.*  
+
+*Proof of Claim.*  
+Suppose by contradiction that $s$ is not an upper bound for $A$. Therefore by definition of upper bound, there exists $\widetilde{a} \in A$ such that 
+$$
+s < \widetilde{a} \,.
+$$
+Consider the mid-point between $s$ and $\widetilde{a}$, that is, 
+$$
+m:=\frac{s + \widetilde{a}}{2} \in K \,.
+$$
+Since $m$ is the mid-point between $s$ and $\widetilde{a}$, and $s < \widetilde{a}$, it holds
+$$
+s < m < \widetilde{a} \,.
+$$
+
+> Indeed, since $s < \widetilde{a}$ then
+$$
+s = \frac{2s}{2} < \frac{s + \widetilde{a}}{2} < \frac{2 \widetilde{a}}{2} = \widetilde{a} \,.
+$$
+
+In particular the above tells us that $m$ is not an upper bound for $A$, given that $\widetilde{a} \in A$ and $m < \widetilde{a}$. Therefore $m \in B^c$, by definition of $B^c$. Therefore(@eq-equiv-cut-complete-2) implies
+$$
+m \leq s \,,
+$$
+which contradicts $s < m$. Hence $s$ is an upper bound of $A$, concluding the proof of Claim.
+
+
+*Conclusion*. We have shown that $s$ is an upper bound of $A$. Condition  
+(@eq-equiv-cut-complete-2) tells us that 
+$$
+s \leq y \,, \,\, \forall y \in B \,.
+$$
+Recalling that $B$ is the set of upper bounds of $A$, this means that $s$ is the smallest upper bound of $A$, that is, 
+$$
+s = \sup A \in K \,.
+$$
+
+*Step 2. Completeness $\implies$ Cut Property*.  
+Suppose $K$ is complete. We need to show that $K$ has the Cut Property. Therefore assume $(A,B)$ is a cut of $K$, that is, 
+$$
+A \neq \emptyset\,, \quad B \neq \emptyset \,,
+$$
+$$
+K = A \cup B\,, \quad A \cap B = \emptyset \,,
+$$
+$$
+a \leq b \,, \quad \forall a \in A \,, \,\, \forall \, b \in B \,.
+$${#eq-equiv-cut-complete-3}
+Since $B \neq \emptyset$, from (@eq-equiv-cut-complete-3) it follows that $A$ is bounded above: indeed, every element of $B$ is an upper bound for $A$, thanks to (@eq-equiv-cut-complete-3). Since $A \neq \emptyset$, by the Axiom of Completeness we have
+$$
+s = \sup A \in K \,.
+$$
+In particular, by definition of supremum, we have 
+$$
+a \leq s \,, \,\, \forall \, a \in A \,. 
+$$
+Let now $b \in B$ be arbitrary. From (@eq-equiv-cut-complete-3) we have that 
+$$
+a \leq b \,, \,\, \forall \, a \in A \,.
+$${#eq-equiv-cut-complete-4}
+Therefore $b$ is an upper bound of $A$. Since $s = \sup A$, we have that $s$ is the smallest upper bound, and so 
+$$
+s \leq b \,.
+$$
+Given that $b \in B$ was arbitrary, it actually holds
+$$
+s \leq b \,, \,\, \forall \,  b \in B \,.
+$${#eq-equiv-cut-complete-5}
+From (@eq-equiv-cut-complete-4) and (@eq-equiv-cut-complete-5) we therefore have 
+$$
+a \leq s \leq b \,, \,\, \forall a \in A \,,  \, \forall \, b \in B \,,
+$$
+showing that $s$ is a separator of $(A,B)$. Thus $K$ has the Cut Property.
+:::
+
+
+
+
+## Axioms of Real Numbers
+
+We now have all the key elements to introduce the Real Numbers $\R$. These ingredients are:
+
+- Definition of **ordered field**,
+- The **Cut Property** or **Axiom of Completeness**.
+
+The definition of $\R$ is given in an axiomatic way.
+
+
+::: Definition
+### System of Real Numbers $\R$   {#definition-R}
+
+A system of Real Numbers is a set $\R$ satisfying the following properties:
+
+
+1. There is an operation $+$ of **addition** on $\R$ 
+$$
++\ \colon \R \times \R \to \R \,, \quad (x,y) \mapsto x + y 
+$$
+The addition satisifes: $\,\forall \, x,y,z \in \R$
+    - (A1) **Commutativity and Associativity**: 
+    $$
+    x+y = y+x 
+    $$
+    $$
+    (x+y)+z = x+(y+z) 
+    $$
+    - (A2) **Additive Identity**: $\,\exists \, 0 \in \R \st$
+    $$ 
+    x + 0 = 0 + x = x 
+    $$
+    - (A3) **Additive Inverse**: $\, \exists \, (-x) \in \R \st$
+    $$
+    x + (-x) = (-x) + x = 0 
+    $$
+
+2. There is an operation $\cdot$ of **multiplication** on $\R$
+$$
+\cdot\ \colon \R \times \R \to \R \,, \quad (x,y) \mapsto x \cdot y  = xy 
+$$ 
+The multiplication satisifes: $\, \forall \, x,y,z \in \R$
+    - (M1) **Commutativity and Associativity**: 
+    $$
+    x \cdot y = y \cdot x
+    $$
+    $$
+    (x \cdot y) \cdot z = x \cdot (y \cdot z) 
+    $$
+    - (M2) **Multiplicative Identity**: $\, \exists \, 1 \in \R \st$
+    $$ 
+    x \cdot 1 = 1 \cdot x = x 
+    $$
+    - (M3) **Multiplicative Inverse**: If $x \neq 0 \,, \,\, \exists \, x^{-1} \in \R \st$
+    $$
+    x \cdot x^{-1} = x^{-1} \cdot x = 1 
+    $$
+
+
+
+3. There is a relation $\leq$ of **total order** on $\R$. The order satisfies: $\, \forall \, x, y, z \in \R$ 
+    - (O1) **Reflexivity**: 
+    $$
+    x \leq x
+    $$ 
+    - (O2) **Antisymmetry**: 
+    $$
+    x \leq y \, \mbox{ and } \, y \leq x \,\, \implies \,\, x = y 
+    $$
+    - (O3) **Transitivity**: 
+    $$
+    x \leq y \,\, \mbox{ and } \,\, y \leq z \,\, \implies \,\, x = z 
+    $$
+    - (O4) **Total order**:  
+    $$
+    x \leq y \,\, \mbox{ or } \,\, y \leq x 
+    $$
+
+4. The operations $+$ and $\cdot$, and the total order $\leq$, are related by the following properties: $\, \forall x, y, z \in \R$
+    - (AM) **Distributive**: Relates addition and multiplication via
+    $$
+    x \cdot (y + z) = x \cdot y + x \cdot z 
+    $$
+    - (AO) Relates addition and order with the requirement:
+    $$
+    x \leq y \,\, \implies \,\, x + z \leq y + z
+    $$
+    - (MO) Relates multiplication and order with the requirement:
+    $$
+    x \geq 0, \, y \geq 0  \,\, \implies \,\, x \cdot y  \geq 0
+    $$
+
+5. **Cut Property** holds:
+    - (CP) Every cut $(A,B)$ of $\R$ admits a **separator** $s \in \R \, \st$
+    $$
+    a \leq s \leq b \,, \quad \forall \, a \in A \,, \,\forall \, b \in B 
+    $$  
+
+:::
+
+
+
+::: Remark
+Since **Cut Property** and **Axiom of Completeness** are equivalent by Theorem \ref{theorem-cut-complete}, one can replace the Cut Property in Definition \ref{definition-R} Point 5  with:  
+
+5. **Axiom of Completeness** holds:
+    - (AC) For every $A \subseteq \R$ non-empty and bounded above 
+    $$
+    \sup A \in \R
+    $$ 
+:::
+
+
+::: Notation
+For $x \in \R$, $x \neq 0$, the multiplicative inverse is also denoted by 
+$$
+x^{-1} = \frac{1}{x} \,.
+$$
+:::
+
+
+
+
+
+
+
+::: Remark
+
+Recall that
+
+- $(K,+,\cdot)$ satisfying
+$$
+\mbox{(A1)-(A3), (M1)-(M3), (AM)}
+$$ 
+is a **field** 
+- $(K,+,\cdot, \geq)$ satisfying 
+$$
+\mbox{(A1)-(A3), (M1)-(M3), (O1)-(O4) ,(AM), (AO), (MO)}
+$$ 
+is an **ordered field**
+
+In particular we have that
+$$
+(\R,+, \cdot,\leq)
+$$ 
+is a **complete ordered field**: that is, an ordered field in which the **Cut Property** (CP) or **Axiom of Completeness** (AC) hold
+:::
+
+
+
+::: Important
+It can be shown that $(\R,+, \cdot,\leq)$ is the **only** complete ordered field.   
+
+> The above has to be intended in the following sense: if $(K,+, \cdot,\geq)$ is another complete ordered field, then $K$ *looks like* $\R$. Mathematically this means that there exists an invertible map 
+$\Psi \ \colon \R \to K$, called isomorphism of fields, which preserves the operations $+$, $\cdot$ and the order $\leq$.
+
+:::
+
+
+
+
+::: Question
+We have only postulated the existence of $\R$. Does such complete ordered field actually exist? 
+:::
+
+The answer is **YES**. There are several equivalent models for the system $\R$. If time allows, we will look into one of these models at the end of the module.
+
+
+
+
+
+## Special subsets of $\R$
+
+
+In Definition \ref{definition-R} we have introduced $\R$ as a complete ordered field. This was done axiomatically and in a non 
+constructive way. What happens now to the sets $\N, \Z, \Q$? Are they well defined? 
+Does it still hold that
+$$
+\N \,, \Z \,, \Q \, \subseteq \R \,?
+$$
+The definitions that we gave in @sec-chap-1 for $\N, \Z$ and $\Q$ are 
+not related to the system of real numbers $\R$ we just introduced. To overcome this problem, we will have to define new sets
+$$
+{\N}_{\R}, \,\, {\Z}_{\R}\,, \,\, {\Q}_{\R}
+$$ 
+from scracth, starting from the axioms of $\R$. Note that we are using the subscript $\R$ to distinguish
+these new sets from the old ones.
+
+### Natural numbers 
+
+Let us start with the definition of ${\N}_{\R}$. We would like ${\N}_{\R}$ to be
+$$
+{\N}_{\R} = \{ \mathbf{1}, \mathbf{2} , \mathbf{3} , \ldots \} \,.
+$$
+Note that we are denoting the above numbers with bold symbols in order to distinguish them from the elements of $\R$. The key property that we would like ${\N}_{\R}$ to have is the following:
+$$
+\mbox{Every } \mathbf{n} \in {\N}_{\R}  \, \mbox{ has a successor } \, (\mathbf{n+1}) \in {\N}_{\R} \,.
+$$
+How do we ensure this property? We could start by defining
+$$
+\mathbf{1}:=1\,,
+$$
+with $1$ the neutral element of the multiplication in $\R$, which exists by the field axiom (M2) in Defintion \ref{definition-R}. We could then define $\mathbf{2}$ by setting
+$$
+\mathbf{2} := 1 + 1 \,.
+$$
+We need a formal definition to capture this idea. This is the concept of **inductive set**.
+
+
+::: Definition
+### Inductive set
+Let $S \subseteq \R$. We say that $S$ is an inductive set if they are satisfied:
+
+- $1 \in S$,
+- If $x \in S$, then $(x + 1) \in S$.
+
+:::
+
+
+Note that in the above definition we just used:
+
+- The existence of the neutral element $1$, given by axiom (M2). 
+- The operation of sum in $\R$, which is again given as an axiom.
+
+
+::: Example
+
+We have that
+
+- $\R$ is an inductive set.
+
+> Indeed we have $1 \in \R$ by axiom (M2). Moreover $(x + 1) \in \R$ for every $x \in \R$, by 
+definition of sum $+$.
+
+- The set $A=\{0,1\}$ is not an inductive set.
+
+> This is because $1 \in A$, but $(1 + 1) \notin A$, since $1 + 1 \neq 0$.
+:::
+
+
+Therefore $\R$ is an inductive set, showing that the definition of inductive set is not
+sufficient to fully describe our intuitive idea of ${\N}_{\R}$. The right way to define ${\N}_{\R}$ is as follows:
+$$
+{\N}_{\R} \mbox{ is the smallest inductive subset of } \R \,.
+$$
+To make the above definition formal we need a few observations.
+
+::: Proposition
+
+Let $\mathcal{M}$ be a collection of inductive subsets of $\R$. Then
+$$
+S := \bigcap_{M \in \mathcal{M}} \, M 
+$$
+is an inductive subset of $\R$.
+
+:::
+
+
+::: Proof
+
+We have to show that the two properties of inductive sets hold for $S$:
+
+- We have $1 \in M$ for every $M \in \mathcal{M}$, since these are inductive sets. Thus
+$$
+1 \in \bigcap_{M \in \mathcal{M}} \, M  = S \,.
+$$
+
+- Suppose that $x \in S$. By definition of $S$ this implies that $x \in M$ for all $M \in \mathcal{M}$. Since $M$ is an inductive set, then $(x + 1) \in M$. Therefore $(x+1) \in M$ for all $M \in \mathcal{M}$, showing that $(x+1) \in S$.
+
+Therefore $S$ is an inductive set.
+:::
+
+
+We are now ready to define the natural numbers ${\N}_{\R}$.
+
+::: Definition
+### Set of Natural Numbers  {#definition-natural-numbers}
+
+Let $\mathcal{M}$ be the collection of **all** inductive subsets of $\R$. 
+We define the set of natural numbers in $\R$ as 
+$$
+{\N}_{\R} := \bigcap_{M \in \mathcal{M}} \, M \,.
+$$
+
+:::
+
+Therefore ${\N}_{\R}$ is the intersection of all the inductive subsets of $\R$. From
+this definition it follows that ${\N}_{\R}$ is the smallest inductive subset of $\R$, as
+shown in the following proposition.
+
+
+::: Proposition  
+### ${\N}_{\R}$ is the smallest inductive subset of $\R$   {#proposition-smallest-inductive}
+
+Let $C \subseteq \R$ be an inductive subset. Then
+$$
+{\N}_{\R} \subseteq C \,.
+$$
+In other words, ${\N}_{\R}$ is the smallest inductive set in $\R$.
+:::
+
+
+::: Proof
+
+Let $\mathcal{M}$ be the collection of **all** inductive subsets of $\R$.
+By definition
+$$
+{\N}_{\R} = \bigcap_{M \in \mathcal{M}} \, M \,.
+$$
+Let $x \in {\N}_{\R}$, then $x \in M$ for all $M \in \mathcal{M}$. Since
+$C \in \mathcal{M}$ then $x \in C$. This shows ${\N}_{\R} \subseteq C$.
+
+:::
+
+
+The definition of ${\N}_{\R}$ guarantees that all numbers in ${\N}_{\R}$ are larger than $1$.
+
+
+::: {.Theorem   #theorem-n-1} 
+
+Let $x \in {\N}_{\R}$. Then
+$$
+x \geq 1 \,.
+$$
+
+:::
+
+
+::: Proof
+
+Define the set 
+$$
+C := \{ x \in \R \divider x \geq 1 \} \,.
+$$
+We have that $C$ is an inductive subset of $\R$.
+
+> By definition $1 \in C$. Suppose now that $x \in C$, so that $x \geq 1$. Since $1 \geq 0$ as a consequence of the field axioms, we deduce that 
+$$
+x + 1 \geq x + 0 = x \geq 1 \,,
+$$
+showing that $x + 1 \geq 1$. Thus $(x + 1) \in C$. 
+
+
+By Proposition \ref{proposition-smallest-inductive} we conclude that
+$$
+{\N}_{\R} \subseteq C \,,
+$$
+showing that $x \geq 1$ for all $x \in {\N}_{\R}$.
+
+:::
+
+
+::: Notation
+
+We have just shown that all the numebers $x \in {\N}_{\R}$ satisfy
+$$
+x \geq 1 \,.
+$$
+Moreover by the fact that ${\N}_{\R}$ is an inductive set, we know that 
+$$
+1 + 1 \in {\N}_{\R} \,,
+$$
+since $1 \in {\N}_{\R}$. We denote 
+$$
+2 := 1 + 1\,. 
+$$
+Similarly, we will have that 
+$$
+2 + 1 \in {\N}_{\R}\,,
+$$
+since $2 \in {\N}_{\R}$. We denote 
+$$
+3 := 2 + 1\,.
+$$
+In this way we give a name to all the numbers in ${\N}_{\R}$.
+
+:::
+
+
+
+
+### Principle of induction
+
+
+The Principle of Induction is a consequence of the definition of ${\N}_{\R}$, see Definition \ref{definition-natural-numbers}, and of the field axioms of $\R$ in Definition \ref{definition-R}. 
+
+
+::: Theorem
+### Principle of Induction   {#theorem-induction-new}
+
+Let $\alpha(n)$ be a statement depending on $n \in {\N}_{\R}$. Assume that 
+
+1. $\alpha(1)$ is true.
+2. If $\alpha(n)$ is true then also $\alpha(n+1)$ is true.
+
+Then $\alpha(n)$ is true for all $n \in {\N}_{\R}$.
+
+:::
+
+
+::: Proof
+
+Define the set 
+$$
+C:=\{  x \in {\N}_{\R} \divider \alpha(n) \mbox{ is true} \} \,. 
+$$
+We have that $C$ is an inductive subset of $\R$. 
+
+> Indeed:  
+>
+> - $1 \in C$ since $\alpha(1)$ is true by assumption.
+> - If $n \in C$ then $\alpha(n)$ is true. By assumption $\alpha(n+1)$ is true. Therefore $(n+1) \in C$.
+
+
+By Proposition \ref{proposition-smallest-inductive} we conclude that
+$$
+{\N}_{\R} \subseteq C\,.
+$$
+As by definition $C \subseteq {\N}_{\R}$, we have proven that 
+$$
+{\N}_{\R} = C \,,
+$$
+showing that $\alpha(n)$ is true for all $n \in {\N}_{\R}$.
+
+:::
+
+
+
+
+
+As a consequence of the principle of induction, we can prove that ${\N}_{\R}$ is closed 
+under the field operations of sum and multiplication. 
+
+
+::: {.Theorem #theorem-N-closed}
+
+
+For all $n,m \in {\N}_{\R}$ we have:
+
+1. ${\N}_{\R}$ is closed under addition, that is, 
+$$
+m + n \in {\N}_{\R} \,.
+$$
+
+2. ${\N}_{\R}$ is closed under multiplication, that is, 
+$$
+m \cdot n \in {\N}_{\R} \,,
+$$
+
+3. If $m > n$ there exists $k \in {\N}_{\R}$ such that
+$$
+m = n + k \,.
+$$
+
+:::
+
+
+::: Proof
+
+We only prove the first point, the other statements are left as an exercise. Fix $m \in {\N}_{\R}$. We prove that 
+$$
+m + n \in {\N}_{\R} \,, \quad  \forall \, n \in {\N}_{\R} \,,
+$${#eq-proof-sum-closed}
+by using induction.
+
+- Induction base: We have $m+1 \in {\N}_{\R}$, since $m \in {\N}_{\R}$ and ${\N}_{\R}$ is an inductive set.
+- Inductive hypothesis: Suppose $m+n \in {\N}_{\R}$. Since ${\N}_{\R}$ is an inductive set, we have $(m+n)+ 1 \in {\N}_{\R}$. By associativity of the sum, see axiom (A1), we get 
+$$
+m + (n + 1) = ( m + n ) + 1 \in {\N}_{\R} \,,
+$$
+which is the desired theis.
+
+By the Induction Principle of Theorem \ref{theorem-induction-new} we conclude (@eq-proof-sum-closed).
+
+
+:::
+
+
+As a consequence of the above theorem, we see that the restriction of the operations of sum and multiplication to ${\N}_{\R}$ are still binary operations: 
+$$
++ \, \colon {\N}_{\R} \times {\N}_{\R} \to {\N}_{\R} \,, \quad
+\cdot \, \colon {\N}_{\R} \times {\N}_{\R} \to {\N}_{\R} \,.
+$$
+
+Equipped with the above operations, ${\N}_{\R}$ satisfies the following properties.
+
+
+::: Theorem
+
+$({\N}_{\R}, + , \cdot, \leq )$ satisfies the following axioms from Definition \ref{definition-R}:
+
+- (A1).
+- (M1), (M2).
+- (O1)-(O4).
+- (AM), (AO), (MO).
+
+:::
+
+The proof is trivial, as it follows immediately from the inclusion of ${\N}_{\R}$ in $\R$.
+
+
+
+
+### Integers
+
+We have seen in Theorem \ref{theorem-N-closed} that ${\N}_{\R}$ is closed under addition.
+However ${\N}_{\R}$ is not closed under subtraction. We therefore define the set 
+of **integers** ${\Z}_{\R}$ in a way that we can perform subtraction of any two
+natural numbers. 
+
+
+::: Definition 
+### Set of Integers
+The set of integers in $\R$ is defined by
+$$
+{\Z}_{\R} := \{  m - n \divider n,m \in {\N}_{\R}   \} \,.
+$$
+:::
+
+
+In the definition of ${\Z}_{\R}$ we denote by $-n$ the inverse of $n$ in $\R$, which exists 
+by the field axiom (A3) in Definition \ref{definition-R}. The following characterization explains the relationship between ${\Z}_{\R}$ and ${\N}_{\R}$.
+
+::: {.Theorem  #theorem-equivalent-Z}
+
+It holds
+$$
+{\Z}_{\R} = \{  -n \divider n \in {\N}_{\R}   \}  \cup \{0\}  \cup  {\N}_{\R}  \,.
+$$
+
+:::
+
+::: Proof
+
+Define the set
+$$
+M:=  \{  -n \divider n \in {\N}_{\R}   \}  \cup \{0\}  \cup  {\N}_{\R}  \,.
+$$
+
+- $M \subseteq {\Z}_{\R}$:  Suppose $m \in M$. We have 3 cases:
+
+    - If $m \in \{ -n \divider n \in {\N}_{\R}\}$ then there exists $n \in {\N}_{\R}$ such that 
+    $m=-n$. Thus
+    $$
+    m = -n = 1 - (n+1) \in {\Z}_{\R} \,,
+    $$
+    since $1 \in {\N}_{\R}$ and $n+1 \in {\N}_{\R}$ because $n \in {\N}_{\R}$.
+    - If $m=0$ then 
+    $$
+    m = 0 = 1 - 1 \in {\Z}_{\R}\,,
+    $$
+    as $1 \in {\N}_{\R}$.
+    - If $m \in {\N}_{\R}$ then
+    $$
+    m =  (m + 1) - 1 \in {\Z}_{\R}  \,,
+    $$
+    since $1 \in {\N}_{\R}$ and $m+1 \in {\N}_{\R}$, given that $m \in {\N}_{\R}$.
+
+  In all 3 cases we have shown that $m \in {\Z}_{\R}$, proving that $M \subseteq {\Z}_{\R}$.
+
+- ${\Z}_{\R} \subseteq M$: Let $z \in {\Z}_{\R}$. Then $z = m - n$ for some $n,m \in {\N}_{\R}$. We have 3 cases:
+
+    - If $m=n$ then 
+    $$
+    z = m - n = m - m \stackrel{(A3)}{=} 0 \in M \,.
+    $$
+    - If $m>n$, by Theorem \ref{theorem-N-closed} there exists $k \in {\N}_{\R}$ such that
+    $m = k + n$. Therefore 
+    \begin{align*}
+    z & = m - n = (k + n) - n  \\
+      & \stackrel{(A1)}{=} k + (n-n) \stackrel{(A3)}{=} k + 0 \\
+      & \stackrel{(A2)}{=} k   \in M \,,
+    \end{align*}
+    since $k \in {\N}_{\R}$.
+    - If $m<n$, by Theorem \ref{theorem-N-closed} there exists $k \in {\N}_{\R}$ such that
+    $n = k + m$. Therefore 
+    $$
+    z = m - n = - k  \in M \,,
+    $$
+    since $k \in {\N}_{\R}$, where again we have used (implicitly) the field axioms (A1), (A2) and (A3).
+
+Therefore ${\Z}_{\R} = M$.
+:::
+
+
+Like we did with ${\N}_{\R}$, we can also show that ${\Z}_{\R}$ is closed under
+the operations of sum and multiplication. 
+
+
+::: {.Theorem #theorem-Z-closed}
+
+
+For all $n,m \in {\Z}_{\R}$ we have:
+
+1. ${\Z}_{\R}$ is closed under addition, that is, 
+$$
+m + n \in {\Z}_{\R} \,.
+$$
+
+2. ${\Z}_{\R}$ is closed under multiplication, that is, 
+$$
+m \cdot n \in {\Z}_{\R} \,,
+$$
+
+
+:::
+
+
+The proof is left as an exercise. As a consequence of Theorem \ref{theorem-Z-closed} we have that the restriction of the operations of sum and multiplication to ${\Z}_{\R}$ are still binary operations: 
+$$
++ \, \colon {\Z}_{\R} \times {\Z}_{\R} \to {\Z}_{\R} \,, \quad
+\cdot \, \colon {\Z}_{\R} \times {\Z}_{\R} \to {\Z}_{\R} \,.
+$$
+
+Equipped with the above operations, ${\Z}_{\R}$ satisfies the following properties.
+
+
+::: {.Theorem #theorem-Z-axioms}
+
+$({\Z}_{\R}, + , \cdot, \leq )$ satisfies the following axioms from Definition \ref{definition-R}:
+
+- (A1), (A2), (A3).
+- (M1), (M2).
+- (O1)-(O4).
+- (AM), (AO), (MO).
+
+:::
+
+
+::: Proof
+
+The fact that 
+$$
+\mbox{(A1), (A2), (M1), (M2), (O1)-(O4), (AM), (AO), (MO)}
+$$
+are satisfied descends immediately from the inclusion
+$$
+{\Z}_{\R} \subseteq \R \,.
+$$
+We are left to prove (A3). This is non-trivial because a priori the additive inverse $-z$ 
+of some $z \in {\Z}_{\R}$ belongs to $\R$. We need to check that $- z \in {\Z}_{\R}$. Indeed, since 
+$z \in {\Z}_{\R}$, there exist $n,m \in {\N}_{\R}$ such that $z = m - n$. Define $y:= n - m$. We have that $y \in {\Z}_{\R}$ and
+$$
+z + y = (m - n) + (n - m) = (m - m) + (n - n) = 0 \,.
+$$
+Therefore $y$ is the inverse of $z$ and $y \in {\Z}_{\R}$, proving that the sum in ${\Z}_{\R}$ 
+satisfies (A3).
+
+:::
+
+
+
+
+::: {.Remark #remark-Z-axioms}
+
+${\Z}_{\R}$ does not satisfy (M3).
+
+> For example, let us show that $2 \in {\Z}_{\R}$ has no inverse in ${\Z}_{\R}$. Indeed, let 
+$m \in {\Z}_{\R}$. By Theorem \ref{theorem-equivalent-Z} we have 3 cases:
+>
+>  - $m \in {\N}_{\R}$: Since $2 > 1$ we have
+>$$
+>2 \cdot m > 1 \cdot m  \geq 1
+>$$
+>where in the last inequality we used that $m \geq 1$ for all $m \in {\N}_{\R}$, as shown in 
+>Theorem \ref{theorem-n-1}. The above shows that 
+>$$
+>2 \cdot m > 1\,,
+>$$
+>and therefore $m$ cannot be the inverse of $2$.
+>
+>  - $m=0$: Then $2 \cdot m = 0$, so that $m$ cannot be the inverse of $2$.
+>   - $m = -n$ with $n \in {\N}_{\R}$. Then
+> $$
+> 2 \cdot m = 2 \cdot (-n) < 0 \,,
+> $$
+> so that $m$ cannot be the inverse of $2$.
+>
+> As we have exhausted all the possibilities, we conclude that $2$ does not have a
+> multiplicative inverse in ${\N}_{\R}$.
+
+
+:::
+
+
+
+
+### Rational numbers
+
+In Theorem \ref{theorem-Z-axioms} and \ref{remark-Z-axioms} we have seen that ${\Z}_{\R}$ satisfy
+all the field axiom, except for (M3). We therefore extend ${\Z}_{\R}$ in a way 
+that the extension contains multiplicative inverses. The extension is the set of 
+rational numbers ${\Q}_{\R}$.
+
+::: Definition
+### Set of Rational Numbers
+
+The set of rational numbers in $\R$ is
+$$
+{\Q}_{\R} := \left\{   \frac{m}{n} \divider m \in {\Z}_{\R}\,, \,\, n \in {\N}_{\R}     \right\} \,.
+$$
+
+:::
+
+Notice that in the above definition we are just using the field axiom (M3), with 
+$$
+\frac{m}{n} := m \cdot n^{-1} \,.
+$$
+The inverse of $n$ exists because we are assuming $n \in {\N}_{\R}$, and therefore 
+$n$ cannot be $0$, as a consequence of Theorem \ref{theorem-n-1}.
+
+
+
+The set ${\Q}_{\R}$ is closed under addition and multiplication (exercise). Therefore they
+are well defined the operations:
+$$
++ \, \colon {\Q}_{\R} \times {\Q}_{\R} \to {\Q}_{\R} \,, \quad
+\cdot \, \colon {\Q}_{\R} \times {\Q}_{\R} \to {\Q}_{\R} \,.
+$$
+
+
+::: Theorem 
+
+$({\Q}_{\R}, + , \cdot, \leq)$ is an ordered field.
+
+:::
+
+::: Proof
+
+All the field properties, except for (M3), follow from the inclusion
+$$
+{\Q}_{\R} \subseteq \R
+$$
+and from the field properties of $\R$. To check (M3), let $q \in {\Q}_{\R}$ with $q \neq 0$. Therefore
+$q = m/n$ for $m \in {\Z}_{\R}$, $n \in {\N}_{\R}$. As $q \neq 0$ and $n \neq 0$, see Theorem
+\ref{theorem-n-1}, we deduce that $m \neq 0$. We have two cases:
+
+- $m>0$: In this case $m \in {\N}_{\R}$ by Theorem \ref{theorem-equivalent-Z}. Therefore 
+$$
+p = \frac{n}{m} \in {\Q}_{\R} 
+$$
+by definition, since $n,m \in {\N}_{\R}$. By commutativity we have 
+$$
+q \cdot p = \frac{m}{n} \cdot \frac{n}{m} = 1 \,.
+$$
+- $m<0$: Then $m=-x$ with $x \in {\N}_{\R}$ by Theorem \ref{theorem-equivalent-Z}. Therefore 
+$$
+p = \frac{-n}{x} \in {\Q}_{\R} 
+$$
+by definition, since $-n \in {\Z}_{\R}$ and $x \in {\N}_{\R}$. By commutativity we have 
+$$
+q \cdot p = \frac{m}{n} \cdot \frac{-n}{x} = \frac{m}{n} \cdot \frac{-n}{-m} = 1 \,.
+$$
+
+Therefore $q$ always admits a multiplicative inverse $q^{-1}$ belonging to ${\Q}_{\R}$, 
+proving (M3).
+
+:::
+
+
+
+The set ${\Q}_{\R}$ does not have the Cut Property or the Axiom of Completeness. 
+
+
+::: Theorem
+
+${\Q}_{\R}$ is not complete.
+
+:::
+
+
+The proof of the above Theorem is a one to one copy of the proof of Theorem 
+\ref{theorem-Q-not-complete}: indeed the proof of Theorem 
+\ref{theorem-Q-not-complete} only makes use of field 
+axioms, and thus it applies to ${\Q}_{\R}$.
+
+
+
+::: Notation
+
+From now on we denote 
+$$
+\N := {\N}_{\R} \,,  \quad 
+\Z := {\Z}_{\R} \,,  \quad 
+\Q := {\Q}_{\R} \,,  \quad 
+$$
+dropping the subscript $\R$.
+
+:::

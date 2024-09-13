@@ -1,0 +1,1719 @@
+::: {.content-hidden}
+$
+{{< include macros.tex >}}
+$
+:::
+
+
+
+
+
+# Properties of $\mathbb{R}$
+
+Now that we established the axiomatic definition of the Real Numbers $\R$ as a **complete ordered field**, let us investigate some of the properties of $\R$. These will be consequence of the axioms of the real numbers, particulaly of the **Axiom of Completeness**.
+
+
+
+
+
+## Archimedean Property
+
+The Archimedean property is one of the most useful properties of $\R$, and it essentially states that the set of natural numbers $\N$ is not bounded above in $\R$. 
+
+
+More precisley, the Archimedean Property says two things:
+
+1. For any $x \in \R$ we can always find a natural number $n \in \N$ such that
+$$
+n > x \,.
+$$
+
+2. For any $x \in \R$ with $x>0$, we can always find a natural number $m \in \N$ such that 
+$$
+0< \frac1m < x  \,.
+$$
+
+The situation is depicted in @fig-archimedean.
+
+
+![For any $x>0$ we can find $n,m \in \N$ such that $1/m<x<n$.](/images/archimedean_original.png){#fig-archimedean width=80%}
+
+
+::: Remark
+The Archimedean property might sound trivial. However there are examples of ordered fields $K$ that satisfy:
+
+1. $\N \subseteq K$.
+2. $K$ does not have the Archimedean property.
+3. In particular, $\N$ is bounded above in $K$. 
+
+Of course such fields $K$ cannot be complete. 
+
+> If $K$ is complete, then $K$ is essentially $\R$, and we are going to prove the Archimedean
+Property holds in $\R$.
+:::
+
+
+Let us proceed with the precise statement of the Archimedean property in $\R$.
+
+
+::: Theorem
+### Archimedean Property   {#theorem-archimedean}
+
+Let $x \in \R$ be given. Then:
+
+1. There exists $n \in \N$ such that
+$$
+n > x \,.
+$$
+
+2. Suppose in addition that $x>0$. There exists $n \in \N$ such that
+$$
+\frac1n < x \,.
+$$
+
+
+:::
+
+
+
+
+::: Proof
+
+*Part 1.* Let $x \in \R$. Suppose by contradiction that there is no $n \in \N$ such that 
+$$
+n > x  \,.
+$$
+This means that 
+$$
+n \leq x \, \quad \forall n \in \N \,.
+$${#eq-archimedean-proof-2}
+The above is saying that the set $\N$ is bounded above. Since $\N$ is not empty, by the Axiom of Completeness there exists
+$$
+\alpha = \sup \N \,.
+$$
+
+*Claim: $(\alpha-1)$ is not an upper bound for $\N$.*
+
+*Proof of Claim.* Indeed, we have
+$$
+(\alpha - 1) < \alpha \,.
+$${#eq-archimedean-proof}
+Therefore $\alpha-1$ cannot be an upper bound for $\N$. Indeed, if by contradiction $\alpha - 1$ was an upper bound for $\N$, then we would have
+$$
+\alpha \leq (\alpha - 1)\,, 
+$$
+since $\alpha$ is the smallest upper bound for $\N$. This contradicts (@eq-archimedean-proof). Therefore $\alpha - 1$ is not an upper bound for $\N$. 
+
+*Conclusion.* Since $\alpha - 1$ is not an upper bound for $\N$, there exists $n_0 \in \N$ such that
+$$
+\alpha - 1 < n_0 \,.
+$$
+The above implies 
+$$
+\alpha < n_0 + 1 \,.
+$$
+Since 
+$$
+(n_0+1) \in \N \,,
+$$
+we have obtained a contradiction, given that $\alpha$ was the supremum of $\N$. Thus (@eq-archimedean-proof-2) is false, meaning that there exists $n \in \N$ such that 
+$$
+n > x \,.
+$$
+
+
+
+*Part 2.* Suppose $x \in \R$ with $x>0$. We can define
+$$
+y:=\frac1x \,.
+$$
+By Part 1 there exists $n \in \N$ such that
+$$
+n > y = \frac{1}{x} \,.
+$$
+Using that $x>0$, we can rearrange the above inequlaity to obtain
+$$
+\frac1n < x \,,
+$$
+which is the desired thesis.
+
+:::
+
+
+
+
+There is another formulation of the Archimedean Property which, depending on the situation, might
+be more useful. This formulation says the following: If $x,y \in \R$ are such that 
+$$
+0 < x < y \,,
+$$
+then there exists $n \in \N$ such that 
+$$
+nx > y \,.
+$$
+In other words, if one does $n$ steps of size $x$ in the positive numbers direction, then
+the resulting number $nx$ will be larger than $y$. The situation is depicted in @fig-archimedean. 
+
+
+
+
+![For $0<x<y$ there exists $n \in \N$ such that that $nx>y$. In the picture $n=3$.](/images/archimedean.png){#fig-archimedean width=80%}
+
+
+
+::: Theorem
+### Archimedean Property (Alternative formulation)  {#theorem-archimedean-alternative}
+
+Let $x,y \in \R$, with $0<x<y$. There exists $n \in \N$ such that 
+$$
+nx > y \,.
+$$
+
+:::
+
+
+::: Proof
+
+
+Suppose by contradiction that there does not exist some $n \in \N$ such that 
+$$
+nx > y \,.
+$$
+This means that
+$$
+nx \leq y \,, \quad \forall \, n \in \N \,.
+$${#eq-archimedean-proof-4}
+Define the set
+$$
+A := \{ nx \divider n \in \N \} \,.
+$$
+Condition (@eq-archimedean-proof-4) is saying that $A$ is bounded above by $y$. Morever $A$ is trivially non-empty. By the Axiom of Completeness there exists
+$$
+\alpha = \sup A \,.
+$$
+Since $\alpha$ is the supremum of $A$, by definition of supremum and of the set $A$, we have 
+$$
+nx \leq \alpha \,, \quad   \forall \, n \in \N \,.
+$${#eq-archimedean-proof-5}
+As (@eq-archimedean-proof-5) holds for every $n \in \N$, then it also holds for $(n+1)$, meaning that
+$$
+(n+1) x \leq \alpha \,.
+$$
+The above implies 
+$$
+nx \leq \alpha - x \,.
+$$
+As $n$ was arbitrary, we conclude that
+$$
+nx \leq \alpha - x \,, \quad   \forall \, n \in \N \,.
+$$
+The above is saying that $(\alpha - x)$ is an upper bound for $A$. Since $\alpha$ is the supremum of 
+$A$, in particular $\alpha$ is the smallest upper bound. Thus it must hold
+$$
+\alpha \leq \alpha - x \,.
+$$
+The above is equivalent to 
+$$
+x \leq 0 \,,
+$$
+which contradicts our assumption of $x>0$. Therefore (@eq-archimedean-proof-4) is false, and there exists $n \in \N$ such that
+$$
+nx > y \,,
+$$
+concluding the proof.
+:::
+
+
+
+
+
+
+
+## Nested Interval Property
+
+
+
+Another consequence of the axiom of completeness is the **Nested Interval Property**. This is yet another way of saying
+the same thing: $\R$ does not have **gaps**. 
+
+Let us look at a construction. Suppose given some closed intervals
+$$
+I_n := [a_n,b_n] = \{   x \in \R \divider  a_n \leq x \leq b_n   \} \,,
+$$
+where the end points are ordered in the following way:
+$$
+a_1 \leq a_2 \leq \ldots \leq a_n \leq \dots \leq b_n  \leq \ldots b_n \leq b_1 \,,
+$$
+as shown in @fig-nested. 
+
+![Nested intervals $I_n = [a_n,b_n]$.](/images/nested_interval_property.png){#fig-nested width=80%}
+
+
+The intervals $I_n$ are **nested**, meaning that 
+$$
+I_1 \supset I_2 \supset I_3 \supset \ldots I_n \supset \ldots
+$$
+For finite intersections we clearly have
+$$
+\bigcap_{n=1}^k  I_n = I_k \,, 
+$$
+that is, intersecting the first $k$ intervals yields $I_k$, the smallest interval in the sequence.
+
+::: Question
+
+Consider the infinite intersection
+
+$$
+\bigcap_{n=1}^\infty I_n := \{  x \in \R \divider x \in I_n \,, \forall \, n \in \N  \}  \,.
+$$
+
+What can we say about it? Is it empty? Is it not empty?
+:::
+
+The answer is that the infinite intersection is not empty, because $\R$ was constructed in a way that it does not have gaps.
+
+
+
+
+::: Theorem
+### Nested Interval Property  {#theorem-nested}
+
+
+For each $n \in \N$ assume given a closed interval
+$$
+I_n := [a_n,b_n] = \{   x \in \R \divider  a_n \leq x \leq b_n   \} \,.
+$$
+Suppose that the intervals are nested, that is,
+$$
+I_n \supset I_{n+1}\,, \quad \forall \, n \in \N \,.
+$$
+Then
+$$
+\bigcap_{n=1}^\infty I_n \neq \emptyset \,.
+$${#eq-theorem-nested-proof-0}
+:::
+
+
+::: Proof 
+
+By definition we have
+$$
+\bigcap_{n=1}^\infty I_n := \{  x \in \R \divider x \in I_n \,, \forall \, n \in \N  \}  \,.
+$$
+We want to prove (@eq-theorem-nested-proof-0). This means we need to find a real number $x$ such that
+$$
+x \in I_n \,, \quad  \forall \, n \in \N \,.
+$${#eq-theorem-nested-proof-1}
+
+> Idea of the Proof: Condition (@eq-theorem-nested-proof-1) is saying that it should hold
+$$
+x \geq a_n \,, \quad \forall \, n \in \N \,.
+$$
+We might be tempted to choose $x$ to be any of the $b_n$. This choice would indeed satisy 
+the above. However (@eq-theorem-nested-proof-1) also implies that
+$$
+x \leq b_n \,, \quad \forall \, n \in \N \,.
+$$
+Therefore $x$ has to be larger than all the $a_n$, but not too large. This suggests that 
+$x$ should be defined as a supremum. 
+
+Define the set
+$$
+A:= \{ a_n \divider n \in \N \} \,.
+$$
+The set $A$ is non-empty and is bounded above by any of the $b_n$. Therefore there exists 
+$$
+x = \sup \ A \,.
+$$
+By definition of supremum and definition of the set $A$, we have
+$$
+a_n \leq x \,, \quad \forall \, n \in \N \,.
+$$
+On the other hand, consider an arbitrary number $b_n$. By construction we have
+$$
+a_i \leq b_n \,, \quad \forall \, i \in \N \,.
+$$
+Therefore $b_n$ is an upper bound for $A$. Since the supremum is the smallest upper bound, 
+we conclude that
+$$
+x \leq b_n \,.
+$$
+The index $n$ was chosen arbitrarily, and therefore
+$$
+x \leq b_n \,, \quad \forall \, n \in \N \,.
+$$
+In total we have
+$$
+a_n \leq x \leq b_n \,, \quad \forall \, n \in \N \,,
+$$
+showing that $x$ satisfies (@eq-theorem-nested-proof-1). Therefore (@eq-theorem-nested-proof-0) holds and the proof is concluded.
+::::
+
+
+::: Important
+
+The assumption that $I_n$ is **closed** is crucial in Theorem \ref{theorem-nested}. 
+Without such assumption the thesis of Theorem \ref{theorem-nested} does not hold in general, as seen in Example \ref{example-nested-open} below.
+
+:::
+
+
+::: {.Example #example-nested-open}
+
+Consider the **open** intervals 
+$$
+I_n := \left( 0, \frac1n \right) \,.
+$$
+These are clearly nested
+$$
+I_n \supset I_{n+1}\,, \quad \forall \, n \in \N \,.
+$$
+For this choice of $I_n$ we have
+$$
+\bigcap_{n=1}^\infty I_n = \emptyset \,.
+$${#eq-example-nested-2}
+Indeed, suppose by contradiction that the intersection is non-empty. Then there exists $x \in \N$
+such that 
+$$
+x \in I_n \,, \quad \forall \, n \in \N \,.
+$$
+By definition of $I_n$ the above reads
+$$
+0 < x < \frac1n  \,, \quad \forall \, n \in \N \,.
+$${#eq-example-nested}
+Since $x>0$, by the Archimedean Property in Theorem \ref{theorem-archimedean} Point 2, there exists $n_0 \in \N$ such that
+$$
+0 < \frac{1}{n_0} < x \,.
+$$
+The above contradicts (@eq-example-nested). Therefore (@eq-example-nested-2) holds.
+:::
+
+
+
+
+
+## Revisiting Sup and inf 
+
+
+We now investigate some of the properties of supremum and infimum in $\R$. 
+The first property is an alternative characterization of the supremum, which we will often use. A sketch of such characterization is in @fig-alternative-sup below.
+
+::: Proposition 
+### Characterization of Supremum  {#proposition-supremum-characterization}
+
+Let $A \subseteq \R$ be a non-empty set. Suppose that $s \in \R$ is an upper bound for $A$. They 
+are equivalent:
+
+1. $s = \sup A$
+2. For every $\e > 0$ there exists $x \in A$ such that 
+$$
+s - \e < x \,.
+$$
+
+:::
+
+
+![Let $s = \sup A$. Then for every $\e>0$ there exist $x \in A$ such that $s-\e<x$.](/images/alternative_supremum.png){#fig-alternative-sup width=80%}
+
+
+::: Proof
+### Proof of Proposition \ref{proposition-supremum-characterization}
+
+*Step 1*. Assume that 
+$$
+s = \sup A \,.
+$$
+Let $\e>0$ be arbitrary. We clearly have that
+$$
+s - \e < s \,.
+$${#eq-proof-sup-alt-1}
+Therefore $(s-\e)$ cannot be an upper bound of $A$. Indeed, if by contradiction $(s-\e)$ was 
+an upper bound, then we would have
+$$
+s \leq (s - \e )\,,
+$$
+since $s$ is the smallest upper bound. The above contradicts (@eq-proof-sup-alt-1), and therefore
+$(s-\e)$ is not an upper bound for $A$. Hence there exists some $x \in A$ such that
+$$
+s - \e < x  \, ,
+$$
+concluding.
+
+*Step 2*. Assume that Point 2 in the statement of Proposition \ref{proposition-supremum-characterization} holds. By assumption we have that $s$ is an upper bound 
+for $A$. Suppose by contradiction that 
+$$
+s \neq \sup A \,.
+$$
+This is equivalent to the statement
+$$
+s \, \mbox{ is not the smallest upper bound of } \, A. 
+$${#eq-proof-sup-alt-2}
+Hence there exists an upper bound $b$ of $A$ such that
+$$
+b < s \,.
+$$
+Let
+$$
+\e := s - b \,.
+$$
+By assumption there exists $x \in A$ such that 
+$$
+s - \e < x \,.
+$$
+Substituting the definition of $\e$ we get
+$$
+s - s + b < x \quad \implies \quad b < x \,.
+$$
+Since $b$ is an upper bound for $A$ and $x \in A$, the above is a contradiction. Therefore 
+(@eq-proof-sup-alt-2) is false, and $s$ is the smallest upper bound of $A$. Thus $s = \sup A$.
+:::
+
+
+
+
+The analogue of Proposition \ref{proposition-supremum-characterization} is as follows. The proof is left as an exercise. 
+
+
+::: Proposition 
+### Characterization of Infimum  {#prop-supremum-infimum}
+
+Let $A \subseteq \R$ be a non-empty set. Suppose that $i \in \R$ is a lower bound for $A$. They 
+are equivalent:
+
+1. $i = \inf A$
+2. For every $\e \in \R$, with $\e > 0$, there exists $x \in A$ such that 
+$$
+x < i + \e  \,.
+$$
+
+:::
+
+
+A sketch of the characterization in Proposition \ref{prop-supremum-infimum} can be found in @fig-alternative-inf below.
+
+![Let $i = \inf A$. Then for every $\e>0$ there exist $x \in A$ such that $x<i+\e$.](/images/alternative_infimum.png){#fig-alternative-inf width=80%}
+
+
+
+With the above characterizations of supremum and infimum, it is now easier to
+prove that some candidate number is the supremum or infimum of some set.
+As an example, let us characterize supremum and infimum of an open interval of $\R$.
+
+
+::: {.Proposition  #proposition-interval-inf-sup}
+
+Let $a, b \in \R$ with $a<b$. Let
+$$
+A:= (a,b) = \{ x \in \R \divider a < x < b \}\,.
+$$
+Then
+$$
+\inf A = a \,, \quad \sup A = b \,.
+$$
+
+:::
+
+
+::: Proof
+
+We will only prove that 
+$$
+\inf A = a \,,
+$$
+since the proof of 
+$$
+\sup A = b
+$$ 
+is similar. 
+
+By definition of $A$, we have that 
+$$
+a < x \,, \quad \forall \, x \in A \,.
+$$
+The above says that $a$ is a lower bound for $A$. 
+
+*Claim. $a$ is the largest lower bound of $A$*. 
+
+*Proof of Claim.* Let $L$ be a lower bound for $A$, that is,
+$$
+L \leq x \,, \quad \forall \, x \in A \,.
+$$
+We have to prove that
+$$
+L \leq a \,.
+$${#eq-interval-inf-sup-proof}
+Indeed suppose by contradiction that (@eq-interval-inf-sup-proof) does not hold, namely that
+$$
+a < L \,.
+$$
+Since $a<b$ we have
+$$
+a = \frac{2a}{2} < \frac{a+b}{2} < \frac{2b}{b} = b \,,
+$$
+showing that the midpoint between $a$ and $b$ satisfies
+$$
+\frac{a+b}{2} \in A \,.
+$$
+Since $L$ is a lower bound for $A$ we have
+$$
+L \leq \frac{a+b}{2} < b \,.
+$${#eq-interval-inf-sup-proof-2}
+Consider the midpoint
+$$
+M := \frac{a + L}{2} \,. 
+$$
+We have that 
+$$
+M \in A \,.
+$$
+
+> Indeed, recalling that $a<L$, we have
+$$
+a = \frac{2a}{2} < \frac{a+L}{2} = M \,. 
+$$
+Moreover by (@eq-interval-inf-sup-proof-2) we have $L<b$. Thus
+$$
+M = \frac{a+L}{2} \leq \frac{a+b}{2} < b \,.
+$$
+This shows $M \in A$.
+
+
+Moreover 
+$$
+M < L \,.
+$$
+
+> This is because $a<L$, and therefore
+$$
+M = \frac{a + L}{2} < \frac{2L}{2} = L \,.
+$$
+
+
+This is a contradiction, since by assumption $L$ is a lower bound for $A$, and thus we should have 
+$$
+L \leq M \,.
+$$
+Therefore (@eq-interval-inf-sup-proof) holds, showing that $a$ is the largest lower bound of $A$. Thus $a = \inf A$.
+:::
+
+
+
+
+
+As a corollary of the above we have that the maximum and minimum of an open interval do not exist.
+
+
+
+
+::: Corollary
+
+Let $a, b \in \R$ with $a<b$. Let
+$$
+A:= (a,b) = \{ x \in \R \divider a < x < b \}\,.
+$$
+Then $\min A$ and $\max A$ do not exist.
+:::
+
+::: Proof
+
+Suppose by contradiction that $\min A$ exists. We have shown that if the minimum of a set exists, then it must be
+$$
+\min A = \inf A \,.
+$$
+Since 
+$$
+\inf A = a\,,
+$$
+by Proposition \ref{proposition-interval-inf-sup}, we would obtain that
+$$
+\min A = a \,.
+$$
+By definition $\min A \in A$, so that $a \in A$. This is contradiction. Then $\min A$ does not exist. 
+
+The proof that $\max A$ does not exist is similar, and is left as an exercise.
+:::
+
+
+We can also consider intervals for which one or both of the sides are closed.
+
+
+::: Corollary
+
+Let $a, b \in \R$ with $a<b$. Let
+$$
+A:= [a,b) = \{ x \in \R \divider a \leq x < b \}\,.
+$$
+Then 
+$$
+\min A = \inf A = a \,, \quad \sup A = b \,,
+$$ 
+$\max A$ does not exist.
+
+
+:::
+
+
+The proof is very similar to the ones above, and is left to the reader for exercise. Let us now compute supremum and infimum of 
+a set which is not an interval.
+
+
+::: Proposition
+
+Define the set
+$$
+A :=  \left\{ \frac1n \divider n \in \N   \right\} \,.
+$$
+Then
+$$
+\inf A = 0 \,, \quad \sup A = \max A = 1 \,.
+$$
+:::
+
+
+::: Proof
+
+*Part 1.* We have
+$$
+\frac1n \leq 1 \,, \quad \forall \, n \in \N \,.
+$$
+Therefore $1$ is an upper bound for $A$. Let us prove it is the least upper bound:
+let $b$ be an upper bound for $A$. Since $1 \in A$ and $b$ is an upper bound, we have
+$1 \leq b$. Hence $1$ is the least upper bound, and
+$$
+\sup A = \max A =  1 \,.
+$$
+
+
+
+*Part 2.* We have
+$$
+\frac1n > 0 \,, \quad \forall \, n \in \N \,,
+$$
+showing that $0$ is a lower bound for $A$. Suppose by contradiction that $0$ is not the infimum. Therefore $0$ is not the largest lower bound. Then there exists $\e \in \R$ such that:
+
+- $\e$ is a lower bound for $A$, that is,
+$$
+\e \leq \frac1n  \,, \quad \forall \, n \in \N \,,
+$${#eq-lower-bound-1-n}
+
+- $\e$ is larger than $0$:
+$$
+0 < \e \,.
+$$
+
+As $\e>0$, by the Archimedean Property there exists $n_0 \in \N$ such that
+$$
+0 < \frac{1}{n_0} < \e \,.
+$$
+This contradicts (@eq-lower-bound-1-n). Thus $0$ is the largest lower bound of $A$, that is, $0 = \inf A$.
+
+
+*Part 3.* We have that $\min A$ does not exist. Indeed suppose by contradiction that $\min A$ exists. Then 
+$$
+\min A = \inf A \,.
+$$
+As $\inf A = 0$ by Part 2, we conclude $\min A = 0$. As $\min A \in A$, we obtain $0 \in A$, which is a contradiction.
+:::
+
+
+
+
+
+
+
+
+
+
+## Density of $\Q$ in $\R$
+
+
+A set $S$ is dense in $\R$ if the elements of $S$ are arbitrarily close
+to the elements of $\R$. 
+
+::: Definition
+### Dense set
+
+Let $S \subseteq \R$. We say that $S$ is dense in $\R$ if for every $x \in \R$ and $\e \in \R$ with $\e>0$, there exist $q \in \Q$ such that 
+$$
+|x - q| < \e \,.
+$$
+
+:::
+
+
+In other words, the above definition is saying that $S$ and $\R$ are tightly knitted together. An equivalent definition of dense set is 
+given below.
+
+
+::: Remark
+Let $S \subseteq \R$. They are equivalent: 
+
+- $S$ is dense in $\R$.
+- For every pair of numbers $x,y \in \R$ with $x<y$, there exists $s \in S$ such that
+$$
+x < s < y \,.
+$$
+
+:::
+
+
+
+We now prove that $\Q$ is dense in $\R$. 
+
+
+
+
+::: Theorem 
+### Density of $\Q$ in $\R$    {#theorem-density}
+
+Let $x,y \in \R$, with $x<y$. There exists $q \in \Q$ such that
+$$
+x < q < y \,.
+$$
+
+:::
+
+
+
+![Let $n \in \N$ be such that $1/n< y-x$. Then take $m$ so that $m/n \in (x,y)$.](/images/density_proof.png){#fig-density-proof width=80%}
+
+
+
+::: Proof
+
+
+We need to find $q \in \Q$ such that 
+$$
+x < q < y \,.
+$${#eq-proof-density-1}
+By definition of $\Q$, we have that $q$ has to be $q=m/n$ for $m \in \Z$ and $n \in \N$. 
+Therefore (@eq-proof-density-1) is equivalent to finding $m \in \Z$ and $n \in \N$ such that
+$$
+x < \frac{m}{n} < y \,.
+$${#eq-proof-density-2}
+The idea is to proceed as in @fig-density-proof: We take $n$ such that $1/n$ is small enough
+so that we can make $m$ *jumps* of size $1/n$ and end up between $x$ and $y$.  
+To this end, let $n \in \N$ be such that
+$$
+\frac{1}{n} < y - x \,.
+$${#eq-proof-density-3}
+Such $n$ exists thanks to the Archimedean Property in Theorem \ref{theorem-archimedean} Point 2.
+Inequality (@eq-proof-density-2) is equivalent to 
+$$
+nx < m < ny \,.
+$$
+Take $m \in \Z$ such that
+$$
+m-1 \leq nx < m \,.
+$${#eq-proof-density-4}
+
+> Why does such $m$ exist? Because by Archimedean Property in Theorem \ref{theorem-archimedean} Point 1, there exists $m' \in \Z$ such that 
+$$
+m' > nx
+$$ 
+We can then choose $m$ to be the smallest element in $\Z$ such that $m >  nx$. Such $m$ satisfies (@eq-proof-density-4).  
+
+The second inequality in (@eq-proof-density-4) implies 
+$$
+x < \frac{m}{n} \,,
+$$
+which is the first inequality in (@eq-proof-density-2). Now note that (@eq-proof-density-3) is equivalent to $x < y - 1/n$. We can use the latter and the first inequality in (@eq-proof-density-4)
+to estimate
+\begin{align*}
+m & \leq 1 + nx \\
+  & < 1 + n \left(   y - \frac{1}{n}  \right ) \\
+  & = ny \,,
+\end{align*}
+which yields
+$$
+\frac{m}{n} < y \,.
+$$
+Therefore the second inequality in (@eq-proof-density-2) is proven, concluding the proof.
+
+:::
+
+
+We have constructed the real numbers $\R$ so that they would fill the **gaps** of $\Q$. Formally, these gaps are the numbers in $\R \smallsetminus \Q$. Let us give a name to this set.
+
+::: Definition
+### Irrational numbers
+
+The set of irrational numbers in $\R$ is
+$$
+\mathcal{I} := \R \smallsetminus \Q \,.
+$$
+
+:::
+
+
+::: Question
+
+How many gaps does $\Q$ have? In other words, how many irrational numbers are out there?
+
+:::
+
+The answer is quite surprising, and is a corollary of the density result of Theorem \ref{theorem-density}: The irrational numbers are dense in $\R$.
+
+
+
+::: Corollary
+
+Let $x,y \in \R$, with $x<y$. There exists $t \in \mathcal{I}$ such that
+$$
+x < t < y \,.
+$$
+
+:::
+
+
+::: Proof 
+
+Consider 
+$$
+\widetilde{x}:=x - \sqrt{2}\,, \quad \widetilde{y} :=y - \sqrt{2} \,.
+$$
+Since $x<y$, we have
+$$
+\widetilde{x} < \widetilde{y} \,.
+$$
+By Theorem \ref{theorem-density} there exists $q \in \Q$ such that
+$$
+\widetilde{x} < q < \widetilde{y} \,.
+$$
+Adding $\sqrt{2}$ to the above inequalities we get
+$$
+x < t < y \,, \quad t := q + \sqrt{2} \,.
+$${#eq-density-proof}
+We claim that $t \in \mathcal{I}$. Indeed, suppose by contradiction $t \in \Q$. Then 
+$$
+\sqrt{2} = t - q \in \Q\,,
+$$
+since $t,q \in \Q$, and $\Q$ is closed under summation. Since $\sqrt{2} \in \mathcal{I}$, we obtain a contradiction. Thus $t \in \mathcal{I}$ and
+(@eq-density-proof) is our thesis.
+:::
+
+
+
+
+
+
+
+## Existence of $k$-th Roots
+
+
+We have started our discussion by proving that
+$$
+\sqrt{2} \notin \Q \,.
+$${#eq-sqrt2-existence}
+We have shown that (@eq-sqrt2-existence) implies that the set 
+$$
+A := \{ q \in \Q \divider q^2 < 2 \} 
+$$
+does not have a supremum in $\Q$. We then introduced the Real Numbers $\R$ so that each 
+non-empty and bounded above set would have a supremum. As the set $A$ is non-empty and bounded above,
+there exists $\alpha \in \R$ such that
+$$
+\alpha = \sup A \,.
+$$
+We are going to prove that
+$$
+\alpha^2 = 2 \,,
+$$
+which means that in $\R$ we can take the square root of $2$. More in general, with the same
+fudamental idea, we can prove that for each $x \in \R$ with $x \geq 0$ and $k \in \N$, 
+there exists $\alpha \in \R$ such that
+$$
+\alpha^k = x \,.
+$$
+
+
+::: Theorem
+### Existence of $k$-th roots   {#theorem_existence_root}
+
+Let $x \in \R$ with $x \geq 0$ and $k \in \N$. There exists a unique $\alpha \in \R$ such that 
+$$
+\alpha^k = x \,.
+$$
+
+
+:::
+
+
+The proof of Theorem \ref{theorem_existence_root} rests on similar ideas to the ones 
+used to prove that $\Q$ does not have the cut property.
+
+::: Proof
+### Proof of Theorem \ref{theorem_existence_root}
+
+*Part 1: Uniqueness.* 
+
+Suppose $\alpha_1,\alpha_2 \in \R$ are such that
+$$
+\alpha_1^k = \alpha_2^k = x \,.
+$$
+If $\alpha_1 \neq \alpha_2$, then
+$$
+\alpha_1^k \neq \alpha_2^k \,,
+$$
+obtaining a contradiction. Therefore $\alpha_1 = \alpha_2$.
+
+
+*Part 2: Existence.*
+
+Let $x \in \R$ with $x \geq 0$. If $x = 0$ there is nothing to prove, as
+$$
+0^k = 0 \,,
+$$
+so that $\alpha = 0$. Therefore we can assume $x>0$. Define the subset of $\R$
+$$
+A := \{  t \in \R \divider  t^k < x  \} \,.
+$$
+Clearly $A$ is non-empty and bounded above. 
+
+> An upper bound is given, for example, by $b := x + 1$. Indeed, since we are assuming 
+$x \geq 0$, then $x+1 \geq 1$. In particular we have 
+$$
+(x+1)^k \geq x + 1 \,.
+$$
+Let $t \in A$. Then
+$$
+t^k < x < x + 1 < (x+1)^k ,
+$$
+showing that $t< x+1$. 
+
+
+By the Axiom of Completeness of $\R$, there exists $\alpha \in \R$ such that 
+$$
+\alpha = \sup A \,.
+$$
+We claim that 
+$$
+\alpha^k = x \,.
+$${#eq-existence-root-proof-1}
+Suppose by contradiction that (@eq-existence-root-proof-1) does not hold. 
+We will need the formula: For all $a,b \in \R$ it holds
+$$
+a^k-b^k = (a - b)( a^{k-1} + a^{k-2} b + a^{k-3}b^k + \ldots + a b^{k-2} + b^{k-1} ) \,.  
+$${#eq-existence-root-proof-2}
+Formula (@eq-existence-root-proof-2) can be easily proven by induction on $k$.
+Since we are assuming that (@eq-existence-root-proof-1) does not hold, we have two cases:
+
+- $\alpha^k < x$: We know that $\alpha$ is the supremum of $A$. We would like to violate this, by
+finding a number $L$ which is larger than $\alpha$, but still belongs to $A$. This means
+$L$ has to satisfy
+$$
+\alpha < L  \,, \quad L^k < x \,.
+$$
+We look for $L$ of the form
+$$
+L_n := \alpha + \frac{1}{n} 
+$$
+for $n \in \N$ to be chosen later. Clearly
+$$
+\alpha < L_n \,,
+$${#eq-existence-root-proof-3}
+for all $n \in \N$. We now search for $n_0 \in \N$ such that
+$$
+L_{n_0}^k < x \,.  
+$$
+Using formula (@eq-existence-root-proof-2) with  $a = \alpha$ and $b = L_{n_0}$ we obtain
+$$
+L_{n_0}^k - \alpha^k = \frac{1}{n_0}  \left(  L_{n_0}^{k-1} + L_{n_0}^{k-2} \alpha + 
+                        \ldots  + L_{n_0}\alpha^{k-2} + \alpha^{k-1} \right) \,.
+$${#eq-existence-root-proof-4}
+Now notice that (@eq-existence-root-proof-3) implies
+$$
+\alpha^j < L_{n_0}^j
+$$
+for all $j \in \N$. Using this estimate on all the terms $\alpha^j$ appearing 
+in the RHS of (@eq-existence-root-proof-4) we obtain
+\begin{align*}
+ L_{n_0}^k - \alpha^k & = \frac{1}{n_0}  \left(  L_{n_0}^{k-1} + L_{n_0}^{k-2} \alpha + 
+                        \ldots  + L_{n_0}\alpha^{k-2} + \alpha^{k-1} \right) \\ 
+                      & < \frac{1}{n_0} \left(  L_{n_0}^{k-1} + L_{n_0}^{k-2} L_{n_0} + 
+                      \ldots + L_{n_0} L_{n_0}^{k-2} + L_{n_0}^{k-1} \right) \\
+                      & = \frac{k}{n_0} \, L_{n_0}^{k-1} 
+\end{align*}
+Rearranging the above we get
+$$
+L_{n_0}^k < \frac{k}{n_0} \, L_{n_0}^{k-1}  + \alpha^k \,.
+$${#eq-existence-root-proof-5}
+Now note that 
+$$
+L_{n_0} = \alpha + \frac{1}{n_0} < \alpha + 1 \,.
+$$
+Therefore 
+$$
+L_{n_0}^{k-1} < (\alpha + 1)^{k-1} \,,
+$$
+and from (@eq-existence-root-proof-5) we obtain
+$$
+L_{n_0}^k < \frac{k}{n_0} \, (\alpha + 1)^{k-1} + \alpha^k \,.
+$$
+We wanted to find $n_0 \in \N$ so that $L_{n_0}^k < x$. Therefore we impose 
+$$
+\frac{k}{n_0} \, (\alpha + 1)^{k-1} + \alpha^k  < x \,,
+$$
+and find that the above is satisfied for
+$$
+n_0 > \frac{ k (\alpha + 1)^{k-1} }{ x - \alpha^k } \,.
+$${#eq-existence-root-proof-6}
+Notice that the RHS in (@eq-existence-root-proof-6) is a positive real number, since $\alpha^k < x$ by assumption. 
+Therefore, by the Archimedean Property of Theorem \ref{theorem-archimedean} Point 1,
+there exists $n_0 \in \N$ satisfying (@eq-existence-root-proof-6).  
+We have therefore shown the existence of $n_0 \in \N$ such that 
+$$
+\alpha < L_{n_0}  \,, \quad  L_{n_0}^k < x \,.
+$$
+The above says that $L_{n_0} \in A$ and that 
+$$
+L_{n_0} > \alpha = \sup A \,,
+$$
+which is a contradiction, as $\sup A$ is an upper bound for $A$.
+
+
+
+- $\alpha^k > x$: We know that $\alpha$ is the supremum of $A$. We would like to find a contradiction, by finding an upper bound $L$ for $A$ which is smaller than $\alpha$. This means
+$L$ has to satisfy
+$$
+L < \alpha   \,, \quad L^k > x \,.
+$$
+
+  > Such $L$ is an upper bound for $A$: If $t \in A$ then
+  >$$
+  >t^k < x < L^k \quad \implies \quad t < L \,.
+  >$$
+
+  We therefore look for $L$ of the form
+$$
+L_n := \alpha - \frac{1}{n} 
+$$
+for $n \in \N$ to be chosen later. In this way
+$$
+L_n  < \alpha \,,
+$${#eq-existence-root-proof-3bis}
+for all $n \in \N$. We now search for $n_0 \in \N$ such that
+$$
+L_{n_0}^k > x \,.  
+$$
+Using formula (@eq-existence-root-proof-2) with $a = L_{n_0}$ and $b = \alpha$ we obtain
+$$
+\alpha^k - L_{n_0}^k  = \frac{1}{n_0}  \left(  \alpha^{k-1} + \alpha^{k-2} L_{n_0} + 
+                        \ldots  + \alpha L_{n_0}^{k-2} + L_{n_0}^{k-1} \right) \,.
+$${#eq-existence-root-proof-4bis}
+Now notice that (@eq-existence-root-proof-3bis) implies
+$$
+L_{n_0}^j < \alpha^j 
+$$
+for all $j \in \N$. Using this estimate on all the terms $L_{n_0}^j$ appearing 
+in the RHS of (@eq-existence-root-proof-4bis) we obtain
+\begin{align*}
+\alpha^k - L_{n_0}^k  & = \frac{1}{n_0}  \left(  \alpha^{k-1} + \alpha^{k-2} L_{n_0} + 
+                        \ldots  + \alpha L_{n_0}^{k-2} + L_{n_0}^{k-1}  \right) \\ 
+                      & < \frac{1}{n_0} \left(  \alpha^{k-1} + \alpha^{k-2} \alpha + 
+                      \ldots + \alpha \alpha^{k-2} + \alpha^{k-1} \right) \\
+                      & = \frac{k}{n_0} \, \alpha^{k-1} 
+\end{align*}
+Rearranging the above we get
+$$
+L_{n_0}^k > \alpha^k - \frac{k}{n_0} \, \alpha^{k-1}  \,.
+$$
+We wanted to find $n_0 \in \N$ so that $L_{n_0}^k > x$. Therefore we impose 
+$$
+\alpha^k - \frac{k}{n_0} \, \alpha^{k-1} > x \,,
+$$
+and find that the above is satisfied for
+$$
+n_0 > \frac{ k \alpha^{k-1} }{ \alpha^k - x} \,.
+$${#eq-existence-root-proof-6bis}
+Notice that the RHS in (@eq-existence-root-proof-6bis) is a positive real number, since $\alpha^k > x$ by assumption. 
+Therefore, by the Archimedean Property of Theorem \ref{theorem-archimedean} Point 1,
+there exists $n_0 \in \N$ satisfying (@eq-existence-root-proof-6bis).  
+We have therefore shown the existence of $n_0 \in \N$ such that 
+$$
+L_{n_0} < \alpha \,, \quad  L_{n_0}^k > x \,.
+$$
+Condition $L_{n_0}^k > x$ says that $L_{n_0}$ is an upper bound for $A$. At the same
+time it holds
+$$
+L_{n_0} < \alpha = \sup A \,,
+$$
+which is a contradiction, as $\sup A$ is the smallest upper bound for $A$.
+
+
+
+
+Therefore, both cases $\alpha^k > x$ and $\alpha^k < x$ lead to a contradiction. Hence
+$\alpha^k =x$, concluding.
+
+:::
+
+
+
+::: Definition
+### $k$-th root of a number
+ 
+Let $x \in \R$ with $x \geq 0$ and $k \in \N$. The real number $\alpha$ such that
+$$
+\alpha^k = x 
+$$
+is called the **$k$-th root** of $x$, and is denoted by
+$$
+\sqrt[k]{x} := \alpha  \,.
+$$
+
+
+:::
+
+
+
+
+
+
+## Cardinality
+
+
+We have proven that the sets or rational numbers $\Q$ and irrational numbers $\mathcal{I}$ are 
+both dense in $\R$, with 
+$$
+\R = \Q \cup \mathcal{I} \,.
+$$
+From this result we might think that $\R$ is obtained by mixing $\Q$ and $\mathcal{I}$ in 
+equal proportions. This is however false. We will see that $\R$ has much more elements
+than $\Q$. Therefore also the set of irrational numbers $\mathcal{I}$ is much larger than $\Q$.
+
+
+To make the above discussion precise, we need to define what we mean by size of a set.
+For this, we need the concept of bijective function.
+
+
+::: Definition
+### Bijective function
+
+Let $X,Y$ be sets and $f \colon X \to Y$ be a function. We say that:
+
+- $f$ is **injective** if it holds:
+$$
+f(x)=f(y) \quad \implies \quad x = y \,.
+$$
+- $f$ is **surjective** if it holds:
+$$
+\forall y \in Y \,, \,\, \exists \, x \in X \st f(x) = y \,.
+$$
+- $f$ is **bijective** if it is both **injective** and **surjective**.
+
+:::
+
+
+
+In other words: A function $f \colon X \to Y$ is
+
+- injective if any two different elements in $X$ are mapped into two different elements in $Y$.
+- surjective if every element in $Y$ has at least one element in $X$ associated via $f$.
+- bijective if to each element in $X$ we associate one and only one element in $Y$ via $f$.
+
+
+
+::: Example
+### Injectivity
+
+Consider the sets
+$$
+X = \{ 1, 2, 3 \} \,, \quad  
+Y = \{ a,b,c,d,e\} \,.
+$$
+
+- The function $f \colon X \to Y$ defined by
+$$
+f(1)=c \,, \quad f(2) = a \,, \quad f(3) = e \,,
+$$
+is injective. 
+
+- The function $g \colon X \to Y$ defined by
+$$
+g(1)=c \,, \quad g(2) = a \,, \quad g(3) = c \,,
+$$
+is not injective, since 
+$$
+g(1) = g(3) = c \,, \quad 1 \neq 3 \,.
+$$
+
+- The function $h \colon \R \to \R$ defined by 
+$$
+h(x) = x^2
+$$
+is not injective, since 
+$$
+h(1) = h(-1) = 1 \,, \quad 1 \neq - 1 \,.
+$$
+
+- The function $l \colon \R \to \R$ defined by 
+$$
+l(x) = 2x
+$$
+is injective, since
+$$
+l(x) = l(y) \quad \implies \quad 2x = 2y \quad \implies \quad x = y \,.
+$$
+
+:::
+
+
+
+::: Example
+### Surjectivity
+
+
+Consider the sets
+$$
+X = \{ 1, 2, 3 ,4\} \,, \quad  
+Y = \{ a,b,c\} \,.
+$$
+
+- The function $f \colon X \to Y$ defined by
+$$
+f(1)=c \,, \quad f(2) = a \,, \quad f(3) = a \,, \quad f(4) = b \,,
+$$
+is surjective. 
+
+- The function $g \colon X \to Y$ defined by
+$$
+g(1)=a \,, \quad g(2) = a \,, \quad g(3) = c \,, \quad g(4) = a \,,
+$$
+is not surjective, since there is no element $x \in X$ such that 
+$$
+g(x) = b \,.
+$$
+
+- The function $h \colon \R \to \R$ defined by 
+$$
+h(x) = x^2
+$$
+is not surjective, since there is no $x \in \R$ such that 
+$$
+h(x) =  x^2 = -1  \,.
+$$
+
+- The function $l \colon \R \to [0 , \infty)$ defined by 
+$$
+l(x) = x^2
+$$
+is surjective, since for every $y \geq 0$ there exists $x \in \R$ such that
+$$
+l(x)= x^2 = y\,.
+$$
+This is true by Theorem \ref{theorem_existence_root}.
+
+:::
+
+
+
+::: Example
+### Bijectivity
+
+
+
+- Let $X = \{ 1, 2, 3 \}, Y = \{ a,b,c\}$. The function $f \colon X \to Y$ defined by
+$$
+f(1)=c \,, \quad f(2) = a \,, \quad f(3) = b \,,
+$$
+is bijective, since it is both injective and surjective. 
+
+- Let $X = \{ 1, 2, 3 \}, Y = \{ a,b\}$. The function $g \colon X \to Y$ defined by
+$$
+g(1)=a \,, \quad g(2) = b \,, \quad g(3) = b \,,
+$$
+is not bijective, since it is not injective: we have
+$$
+g(2) = g(3) = b \, \quad 2 \neq 3 \,.
+$$
+
+- Let $X = \{ 1, 2 \}, Y = \{ a,b,c\}$. The function $h \colon \R \to \R$ defined by 
+$$
+h(1) = a \,, \quad h(2) = c \,, 
+$$
+is not bijective, since it is not surjective: there is no $x \in X$ such that 
+$$
+h(x) =  b  \,.
+$$
+
+- Let $X = \{ 1, 2 , 3\}, Y = \{ a,b,c\}$. The function $l \colon \R \to [0 , \infty)$ defined by 
+$$
+l(1) = a \,, \quad l(2) = a \,, \quad l(3) = b \,,
+$$
+is not bijective, as it is neither injective nor surjective.
+
+:::
+
+
+
+We are ready to define the size of a set.
+
+
+::: Definition
+### Cardinality, finite, countable, uncountable
+
+Let $X$ be a set. The **cardinality** of $X$ is the number of elements in $X$. We denote
+the cardinality of $X$ by
+$$
+|X| := \# \, \mbox{ of elements in } \, X \,.
+$$
+Further, we say that:
+
+- $X$ is **finite** if there exists a natural number $n \in \N$ and a bijection
+$$
+f \colon X \to \{1,2,\ldots, n \} \,.
+$$
+In particular 
+$$
+|X| = n \,.
+$$
+
+- $X$ is **countable** if there exists a bijection
+$$
+f \colon X \to \N \,.
+$$
+In this case we denote the cardinality of $X$ by
+$$
+|X| = |\N| \,.
+$$
+
+- $X$ is **uncountable** if $X$ is neither finite, nor countable.
+
+:::
+
+
+In other words: A set $X$ is
+
+- finite, if $X$ can be listed as
+$$
+X = \{ x_1 , \ldots, x_n \}
+$$
+for some $n \in \N$.
+
+- countable, if $X$ can be listed as
+$$
+X = \{ x_n \divider n \in \N  \} \,.
+$$
+
+- uncountable, if $X$ cannot be listed.
+
+
+
+
+::: Question
+
+Is there an intermediate cardinality between finite and countable? 
+
+:::
+
+The answer is no, as shown in the next proposition.
+
+
+::: {.Proposition #proposition-countable-subset}
+
+Let $X$ be a countable set and $A \subseteq X$. Then either $A$ is finite or countable.
+
+:::
+
+::: Proof
+
+If $A$ is finite we are done. Therefore suppose $A$ is not finite.
+Since $X$ is countable there exists a bijection $f \colon \N \to X$.
+Let $n_1 \in \N$ be such that
+$$
+n_1 = \min \{ n \in \N \st f(n) \in A \} \,.
+$$
+Note that $n_1$ exists since $f$ is surjective.
+Define 
+$$
+g(1) := f(n_1) \,.
+$$
+Now let 
+$$
+n_2 = \min \{ n  \in \N \st n > n_1 \,, \,\, f(n) \in A \} \,.
+$$
+Notice that $n_2$ exists, since $f$ is surjective and $A$ is not finite. Set
+$$
+g(2):=f(n_2) \,.
+$$
+Iterating, we define
+$$
+n_k = \min \{ n \in \N \st n>n_{k-1} \,, \,\, f(n) \in A \}
+$$
+and 
+$$
+g(k) := f(n_k) \,.
+$$
+In this way we have defined a function $g \colon \N \to A$. We have:
+
+- $g$ is injective: This is because $g$ was defined thourgh $f$, and $f$ is injective.
+- $g$ is surjective: If $x \in A$, by surjectivity of $f$ there exists $\widetilde{n} \in \N$ such 
+that $f(\widetilde{n})=x$. Therefore
+$$
+\widetilde{n} \in  \{ n \in \N \st f(n) \in A \} \,,
+$$
+so that $n_k= \widetilde{n}$, for some $k \geq \widetilde{n}-1$.
+
+
+Hence $g$ is bijective, showing that $A$ is countable.
+
+:::
+
+
+
+
+::: Example
+
+
+1. Let $X = \{a,b,c\}$ and $Y=\{ 1,2,3\}$. The function $f \colon X \to Y$ defined by
+$$
+f(1)=a \,, \quad f(2) = b \,, \quad f(3) = c \,,
+$$
+is bijective. Therefore $X$ is finite, with $|X| = 3$.
+
+2. Let $X = \N$. The function $f \colon X \to \N$ defined by
+$$
+f(n):=n \,,
+$$
+is bijective. Therefore $X = \N$ is countable.
+
+3. Let $X$ be the set of even numbers
+$$
+X = \{ 2n \divider n \in \N \} \,.
+$$
+Define the map $f \colon X \to \N$ by
+$$
+f(m):= \frac{m}{2} \,.
+$$
+We have that:
+
+    - $f$ is injective: $f(m)=f(k)$ implies that $m/2=k/2$ which implies $m=k$.
+    - $f$ is surjective: If $n \in \N$, then $f(2n)=n$.
+    
+    Therefore $f$ is bijective, showing that $X$ is countable and $|X|=|\N|$.
+
+4. Let $X = \Z$ the set of integers. Define $f \colon \N \to \Z$ by 
+$$
+f(n):= 
+\begin{cases}
+\dfrac{n}{2}  & \,\, \mbox{ if } \, n \, \mbox{ even }  \\
+-\dfrac{n+1}{2}  & \,\, \mbox{ if } \, n \, \mbox{ odd }  
+\end{cases}
+$$
+For example
+\begin{align*}
+f(0) & = 0 \,, \quad f(1) = -1 \,, \quad f(2) = 1 \,, \quad f(3) = -2 \,, \\
+f(4) & = 2 \,, \quad f(5) = -3 \,, \quad f(6) = 3 \,, \quad f(7) = -4 \,.
+\end{align*}
+We have:
+
+    - $f$ is injective: Indeed, suppose that $m \neq n$. If $n$ and $m$ are both even or both odd we have, respectively
+    \begin{align*}
+    f(m) = \frac{m}{2} & \neq \frac{n}{2} = f(n)  \\
+    f(m) =  -\frac{m+1}{2} & \neq  - \frac{n+1}{2} = f(n) \,.
+    \end{align*}
+    If instead $m$ is even and $n$ is odd, we get
+    $$
+    f(m) = \frac{m}{2} \neq  - \frac{n+1}{2} = f(n)  \,,
+    $$
+    since the LHS is positive and the RHS is negative. The case when $m$ is odd and $n$ even is 
+    similar.  
+
+    - $f$ is surjective: Let $z \in \Z$. If $z \geq 0$, then $m:=2z$ belongs to $\N$, is even, and
+    $$
+    f(m) = f(2z) = z \,.
+    $$
+    If instead $z < 0$, then $m := -2z -1$ belongs to $\N$, is odd, and
+    $$
+    f(m) = f(-2z-1) = z \,.
+    $$
+    
+   Therefore $f$ is bijective, showing that $\Z$ is countable and
+   $$
+   |\Z| =| \N| \,. 
+   $$
+
+:::
+
+
+
+
+We have seen that the sets $\N$ and $\Z$ are countable. What about $\Q$?
+To study this case, we need the following result.
+
+
+
+
+:::  {.Proposition  #proposition-countable-union}
+
+Let the set $A_n$ be countable for all $n \in \N$. Define
+$$
+A = \bigcup_{n \in \N} \, A_n \, .
+$$
+Then $A$ is countable.
+
+:::
+
+::: Proof
+
+Since each $A_i$ is countable, we 
+can list their elements as
+$$
+A_i = \{ a_k^i \divider k \in \N  \} = \{   a_1^i , \, a_2^i , \, a_3^i , \, a_4^i , \, \ldots \} \,.
+$$
+The proof that $A$ is countable is based on a diagonal argument by
+Georg Cantor, see [Wikipedia page](https://en.wikipedia.org/wiki/Cantor's_diagonal_argument0). 
+The idea of th is that we can list the elements of the sets
+$A_i$ in an infinite square: In the first row we put the elements
+of $A_1$, in the second row the elements of $A_2$, and so on. Therefore
+the $i$-th row contains the elements of $A_i$. This procedure is 
+illustrated in @fig-diagonal-argument.
+Therefore this infinite square contains all the elements of $A$.
+We then list all the elements of the square by looking at the diagonals, as shown in @fig-diagonal-argument. This procedure 
+defines a function $f \colon \N \to A$. For example the first few terms
+of $f$ are
+$$
+f(1) = a_1^1 \,, \quad f(2) = a_2^1 \,, \quad f(3) = a_1^2 \,, \quad 
+f(4) = a_1^3 \,.
+$$
+Since $f$ is injective and surjective, we have that $A$ is countable.
+
+:::
+
+
+
+![The i-th row contains all the elements $a_1^i,a_2^i,a_3^i, \ldots$ of the countable set $A_i$. We define the function $f \colon \N \to A$ by going throgh the square diagonally.](/images/diagonal_argument.png){#fig-diagonal-argument width=70%}
+
+
+
+
+
+::: Theorem
+### $\Q$ is countable  {#theorem-Q-countable}
+
+The set of rational numbers $\Q$ is countable. 
+
+:::
+
+
+::: Proof
+
+For $i \in \N$ define the sets
+$$
+L_i := \left\{ \frac{m}{i}  \divider m \in \Z    \right\} \,.
+$$
+We have that $f \colon L_i \to \Z$ defined by 
+$$
+f \left(\frac{m}{i}\right) := m
+$$
+is a bijection. As $\Z$ is countable, we deduce that $L_i$ is 
+countable. Therefore the set $L$ defined by
+$$
+L:= \bigcup_{i \in \N} \, L_i
+$$
+is countable by Proposition \ref{proposition-countable-union}. Clearly
+we have
+$$
+\Q \subseteq L \,.
+$$
+Since $\Q$ is not finite, by Proposition \ref{proposition-countable-subset} we conclude that $\Q$ is countable.
+
+:::
+
+
+
+
+
+
+We have proven that the sets
+$$
+\N \,, \quad \Z \,, \quad \Q \,,
+$$
+are all countable. What about $\R$?
+
+
+::: Theorem
+### $\R$ is uncountable  {#theorem-R-uncountable}
+
+The set of Real Numbers $\R$ is **uncountable**.
+
+:::
+
+
+
+::: Proof
+
+Suppose by contradiction $\R$ is countable. Then there exists a bijection $f \colon \N \to \R$, meaning that we can list the elements of $\R$ as
+$$
+\R = \{ x_1 , x_2 , x_3 , x_4 , x_5 , \ldots \} \,.
+$$
+Let $I_1$ be a closed interval such that
+$$
+x_1 \notin I_1 \,.
+$$
+Let $I_2$ be another closed interval, contained in $I_1$, and such 
+that $x_2 \notin I_2$. Such interval exists, because $I_1$ contains
+two disjoint closed intervals: hence $x_2$ can be at most in one of these
+two intervals. To summarize, we have
+$$
+x_1 \notin I_1 \,, \quad x_2 \notin I_2 \,, \quad I_2 \subseteq I_1 \,.
+$$
+We can iterate this procedure, and construct a sequence of nested
+intervals $I_n$ such that
+$$
+I_{n+1} \subseteq I_n \,, \quad  x_n \notin I_n \,,
+$$
+for all $n \in \N$, see @fig-R-uncountable. Since $x_k \notin I_k$, we 
+conclude that
+$$
+x_k \notin \bigcap_{n =1}^\infty \, I_n \,, \quad \forall \, k \in \N \,.
+$$
+As the points $x_k$ are all the elements of $\R$, we conclude that
+$$
+\bigcap_{n =1}^\infty \, I_n = \emptyset \,.
+$$
+However the Nested Interval Property of Theorem \ref{theorem-nested} implies that 
+$$
+\bigcap_{n =1}^\infty \, I_n \neq \emptyset \,,
+$$
+yielding a contradiction. Therefore $\R$ is uncountable.
+
+
+:::
+
+
+
+![The intervals $I_n$ are nested, and can be chosen so that $x_n \notin I_n$.](/images/R_uncountable.png){#fig-R-uncountable width=80%}
+
+
+
+As a corollary we obtain that also the irrational numbers are 
+uncountable.
+
+
+::: Theorem
+
+The set of irrational numbers 
+$$
+\mathcal{I}:=\R \smallsetminus \Q
+$$
+is uncountable.
+
+:::
+
+
+::: Proof
+
+In Theorems \ref{theorem-Q-countable}, \ref{theorem-R-uncountable} we have shown that $\R$ in uncountable and $\Q$ is countable. Suppose by contradiction that $\mathcal{I}$ is countable. Then
+$$
+\Q \cup \mathcal{I} 
+$$
+is countable by Proposition \ref{proposition-countable-union}, being union of countable sets. Since by definition
+$$
+\R = \Q \cup \mathcal{I} \,,
+$$
+we conclude that $\R$ is countable. Contradiction.
+
+
+:::

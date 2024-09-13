@@ -1,0 +1,802 @@
+
+# Sequences in $\mathbb{C}$
+
+
+
+The theory for sequences in $\mathbb{C}$ is very similar to that of sequences in $\mathbb{R}$. In $\mathbb{R}$, we said that a sequence $(a_n)$ converges to some number $a \in \mathbb{R}$ if for all $\varepsilon>0$, it holds
+$$
+|a_n - a| < \varepsilon
+$$
+for all $n$ suffieciently large. The definition of convergence in $\mathbb{C}$ is essentially the same, with the absolute value replaced by the complex modulus.
+
+
+
+## Definition and convergence
+
+
+First of all, let us give the formal definition of sequence in $\mathbb{C}$.
+
+
+::: Definition 
+### Sequence of Complex numbers
+
+A sequence $a$ in $\mathbb{C}$ is a function
+$$
+a \colon \mathbb{N} \to \mathbb{C} \,.
+$$
+For $n \in \mathbb{N}$, we denote the $n$-th element of the sequence $a$ by 
+$$
+a_{n}=a(n)
+$$ 
+and write the sequence as 
+$$
+\left(a_{n}\right)_{n \in \mathbb{N}} \quad \mbox{ or } \quad 
+(a_n) \,.
+$$
+:::
+
+
+In the following we define convergent sequences in $\mathbb{C}$.
+
+
+::: Definition 
+### Convergent sequence in $\mathbb{C}$ {#definition-convergent-sequence-C}
+
+We say that a sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ in $\mathbb{C}$ **converges** to $a \in \mathbb{C}$, or equivalently has limit $a$, denoted by
+$$
+\lim_{n \rightarrow \infty} a_{n}=a  \quad \mbox{ or } \quad a_n \to a \,,
+$$
+if for all $\varepsilon \in \mathbb{R}$ with $\varepsilon>0$, there exists $N \in \mathbb{N}$ such that for all $n \in \mathbb{N}, n \geq N$ it holds that 
+$$
+\left|a_{n}-a\right| < \varepsilon \,.
+$$
+Using quantifiers, we can write this as
+$$
+\forall \, \varepsilon>0 , \, \exists \, N \in \mathbb{N} \, \mbox{ s.t. } \, \forall \, n \geq N \,, \,\left|a_{n}-a\right| < \varepsilon \,.
+$$
+
+If there exists $a \in \mathbb{C}$ such that $\lim _{n \rightarrow \infty} a_{n}=a$, then we say that the sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ is **convergent**.
+
+:::
+
+
+::: Important
+
+In Definition \ref{definition-convergent-sequence-C} we still take $\varepsilon$ to be real. This makes sense, since 
+$$
+|z| = \sqrt{ x^2 + y^2 } \in \mathbb{R} 
+$$
+for all $z = x + i y \in \mathbb{C}$.
+
+:::
+
+
+::: Example 
+
+Using Definition \ref{definition-convergent-sequence-C}, prove that
+$$
+\lim_{n \rightarrow \infty} \frac{(3+i) n-7 i}{n}=3+i \,.
+$$
+
+
+*Part 1. Rough Work.* Let $\varepsilon >0$. We would like to understand for which values of $n$ the following holds: 
+$$
+\left|\frac{(3+i) n-7 i}{n}-(3+i)\right| < \varepsilon \,.
+$$
+We have
+\begin{align*}
+\left|\frac{(3+i) n-7 i}{n}-(3+i)\right| & = \left|\frac{(3+i) n-7 i-(3+i) n}{n}\right| \\
+& = \frac{|-7 i|}{n} \\
+& = \frac{7}{n} \,.\\
+\end{align*}
+Therefore 
+$$
+ \frac{7}{n} < \varepsilon \quad \iff \quad n > \frac{7}{\varepsilon} \,.
+$$
+
+*Part 2. Formal Proof.*
+We want to prove that
+$$
+\forall \, \varepsilon>0 \,, \, \exists \, N \in \mathbb{N} \, \mbox{ s.t. } \, \forall \, n \geq N \,, \,\, \left|\frac{(3+i) n-7 i}{n}-(3+i)\right| < \varepsilon \,.
+$$
+Let $\varepsilon>0$. Choose $N \in \mathbb{N}$ such that
+$$
+N > \frac{7}{\varepsilon} \,.
+$$
+The above is equivalent to
+$$
+\frac{7}{N} < \varepsilon \,.
+$$
+For $n \geq N$ we have
+$$
+\left|\frac{(3+i) n-7 i}{n}-(3+i)\right| = \frac{7}{n} \leq \frac{7}{N}  < \varepsilon \,. 
+$$
+
+:::
+
+
+
+## Boundedness
+
+
+Boundedness plays an important role for complex sequences.
+
+::: Definition 
+### Bounded sequence in $\mathbb{C}$
+
+A sequence $\left(a_{n}\right)$ in $\mathbb{C}$ is called **bounded** if there exists a constant $M \in \mathbb{R}$, with $M>0$, such that
+$$
+\left|a_{n}\right| \leq M \,, \quad \forall \, n \in \mathbb{N} \,.
+$$
+
+:::
+
+
+As it happens in $\mathbb{R}$, we have that complex sequences which converge 
+are also bounded.
+
+
+::: {.Theorem  #theorem-convergent-bounded-C}
+
+If a sequence $\left(a_{n}\right)$ in $\mathbb{C}$ converges, then the sequence is bounded.
+
+:::
+
+The proof is identical to the one in $\mathbb{R}$, and is hence omitted.
+Similarly to real sequences, we can define divergent complex sequences.
+
+::: Definition
+### Divergent sequences in $\mathbb{C}$
+
+We say that a sequence $\left(a_{n}\right)$ in $\mathbb{C}$ is **divergent** if it is not convergent.
+
+:::
+
+
+As a corollary of Theorem \ref{theorem-convergent-bounded-C} we have
+the following.
+
+
+::: Corollary
+
+Let $\left(a_{n}\right)$ be a complex sequence. If $\left(a_{n}\right)$ is not bounded, then it is divergent.
+
+:::
+
+
+
+
+
+
+## Algebra of limits in $\mathbb{C}$
+
+Most of the results about limits that we have shown in $\mathbb{R}$ also hold in $\mathbb{C}$. The first result is the Algebra of Limits.
+
+::: Theorem 
+### Algebra of limits in $\mathbb{C}$ {#theorem-algebra-limits-C} 
+
+Let $\left(a_{n}\right)$ and $\left(b_{n}\right)$ be sequences in $\mathbb{C}$. Suppose that
+$$
+\lim_{n \rightarrow \infty} a_{n}=a \,, \quad  \lim_{n \rightarrow \infty} b_{n}=b \,,
+$$
+for some $a,b \in \mathbb{C}$. Then,
+
+1. Limit of sum is the sum of limits:
+$$
+\lim_{n \rightarrow \infty}\left(a_{n} \pm b_{n}\right)=a \pm b
+$$
+
+2. Limit of product is the product of limits: 
+$$
+\lim _{n \rightarrow \infty}\left(a_{n}  b_{n}\right) = a  b 
+$$
+
+3. If $b_{n} \neq 0$ for all $n \in \mathbb{N}$ and $b \neq 0$, then 
+$$
+\lim_{n \rightarrow \infty} \left(\frac{a_{n}}{b_{n}}\right)=\frac{a}{b} 
+$$
+
+:::
+
+
+The proof of Theorem \ref{theorem-algebra-limits-C} follows word by word the proof of the Algebra of Limits for sequences in $\mathbb{R}$: one just 
+needs to replace the absolute value by the complex modulus. 
+
+We can use the Algebra of Limits to compute limits of complex sequences.
+
+
+::: Example 
+Let $\left(a_{n}\right)$ be the sequence defined by
+$$
+a_{n}:=\frac{(2-i) n^{2}+6 i n-5-3 i}{(6+3 i) n^{2}+11 i} \,.
+$$
+The largest power of $n$ in the denominator is $n^{2}$. We hence divide by $n^{2}$ to obtain
+$$
+a_{n}=\frac{(2-i) n^{2}+6 i n-5-3 i}{(6+3 i) n^{2}+11 i}=
+\frac{(2-i)+\dfrac{6 i}{n}- \dfrac{5}{n^2}- \dfrac{3 i}{ n^{2}} }{(6+3 i)+\dfrac{11 i}{n^{2}}}
+$$
+By the Algebra of Limits the right hand side converges to
+$$
+\frac{(2-i)+0-0-0}{(6+3 i)+0}=\frac{2-i}{6+3 i}
+$$
+By performing the complex division, we can write the limit in the form
+$x + i y$:
+\begin{align*}
+\lim_{n \rightarrow \infty} a_{n} & =\frac{2-i}{6+3 i} \\
+& =\frac{(2-i)(6-3 i)}{(6+3 i)(6-3 i)} \\
+& =\frac{12-6 i-6 i+3 i^{2}}{36-9 i^{2}} \\
+& =\frac{9-12 i}{45} \\
+& =\frac{1}{5}-\frac{4}{15} i
+\end{align*}
+
+:::
+
+
+
+## Convergence to zero
+
+
+One of the results that cannot hold for complex sequences is
+the Squeeze Theorem. Indeed the chain of inequalities
+$$
+b_{n} \leq  a_{n} \leq c_{n}
+$$
+would not make sense in $\mathbb{C}$, since there is no order relation.
+
+We can however prove the following (weaker) result.
+
+
+::: {.Theorem #theorem-convergence-zero-C}
+
+Let $\left(a_{n}\right)$ be a sequence in $\mathbb{C}$ and suppose that 
+$$
+\lim_{n \rightarrow \infty}\left|a_{n}\right|=0 \,.
+$$
+Then 
+$$
+\lim_{n \rightarrow \infty} a_{n}=0 \,.
+$$
+
+:::
+
+
+::: Proof
+
+Assume that $|a_n| \to 0$. We need to show that
+$$
+\forall \, \varepsilon>0 \,, \, \exists \, N \in \mathbb{N} 
+\, \mbox{ s.t. } \, \forall \, n \geq N \,, \,\,  \left|a_{n}-0\right| < \varepsilon \,.
+$$
+Let $\varepsilon>0$. Since $\left|a_{n}\right| \rightarrow 0$, there exists $N \in \mathbb{N}$ such that
+$$
+\left||a_{n}|-0 \right| < \varepsilon \,, \quad \forall \, n \geq N \,.
+$$
+Let $n \geq N$. Then,
+\begin{align*}
+\left|a_{n}-0\right| & = \left|a_{n}\right| \\
+& = \left|a_{n}\right|-0 \\
+& = || a_{n}|-0| \\
+& < \varepsilon \,.
+\end{align*}
+
+:::
+
+
+Note that the sequence $|a_n|$ is real. Therefore the convergence of 
+$|a_n|$ can be studied using convergence results in $\mathbb{R}$.
+
+
+::: Example 
+
+Consider the complex sequence 
+$$
+a_{n}=\left(\frac{1}{2}+\frac{1}{3} i\right)^{n} \,.
+$$
+Prove that $a_n \to 0$.
+
+> *Proof.* We have
+\begin{align*}
+\left|a_{n}\right| & = \left|\left(\frac{1}{2}+\frac{1}{3} i\right)^{n}\right| \\
+& = \left|\frac{1}{2}+\frac{1}{3} i\right|^{n} \\
+& = \left(\sqrt{\left(\frac{1}{2}\right)^{2}+\left(\frac{1}{3}\right)^{2}}\right)^{n} \\
+& = \left(\sqrt{\frac{13}{36}}\right)^{n} \,.
+\end{align*}
+Since
+$$
+\left|\sqrt{\frac{13}{36}} \right| < 1 \,,
+$$ 
+by the Geometric Sequence Test for real sequences, we conclude that
+$$
+\left|a_{n}\right| \rightarrow 0 \,.
+$$
+Hence $a_n \to 0$ by Theorem \ref{theorem-convergence-zero-C}.
+
+:::
+
+
+Although the Squeeze Theorem cannot be used for complex sequences, sometimes it can be used to deal with real terms in a complex sequence.
+
+
+::: Example
+
+Consider the sequence
+$$
+a_{n}:=\frac{2 i \cos (3 n) n+(7-i) n^{2}}{3 n^{2}+2 i n+\sin (2 n)} \,.
+$$
+Prove that 
+$$
+\lim_{n \to \infty} a_n  = \frac{7}{3}-\frac{1}{3} i \,.
+$$
+
+> *Proof.* We divide by the largest power in the denominator, to get
+$$
+a_{n} = \frac{\dfrac{2 i \cos (3 n)}{ n} + (7-i) }{3+ \dfrac{2 i}{n} + \dfrac{\sin (2 n)}{n^{2}}} \,.
+$$
+Notice that
+$$
+- 1 \leq \cos (3 n) \leq 1 \,, \quad \forall \, n \in \mathbb{N} \,,
+$$
+and thus
+$$
+- \frac{2}{n} \leq \frac{2 \cos (3 n)}{n} \leq \frac{2}{n} \,, \quad \forall \, n \in \mathbb{N} \,.
+$$
+Since 
+$$
+-\frac{2}{n} \longrightarrow 0 \,, \quad 
+\frac{2}{n} \longrightarrow 0 \,,
+$$
+by the Squeeze Theorem we conclude that also
+$$
+\frac{2 \cos (3 n)}{n} \to 0 \,.
+$$
+In particular we have shown that
+$$
+\left| \dfrac{2 i \cos (3 n)}{ n} \right| =
+\left| \dfrac{2 \cos (3 n)}{ n} \right| \to 0 \,.
+$$
+Using Theorem \ref{theorem-convergence-zero-C} we infer
+$$
+\dfrac{2 i \cos (3 n)}{ n} \to 0 \,.
+$$
+Similarly, 
+$$
+- \frac{1}{n^{2}} \leq \frac{\sin (2 n)}{n^{2}} \leq - \frac{1}{n^{2}} \,, \quad \forall \, n \in \mathbb{N} \,.
+$$
+Since 
+$$
+- \frac{1}{n^{2}} \longrightarrow 0 \,, \quad
+\frac{1}{n^{2}} \longrightarrow 0  \,,
+$$
+by the Squeeze Theorem we conclude
+$$
+\frac{\sin (2 n)}{n^2}  \longrightarrow 0 \,.
+$$
+Finally, we have
+$$
+\left|  \frac{2i}{n}  \right| = \frac{2}{n} \longrightarrow 0 \,,
+$$
+and therefore 
+$$
+\frac{2i}{n} \longrightarrow 0 
+$$
+by Theorem \ref{theorem-convergence-zero-C}. Using the Algebra of Limits in 
+$\mathbb{C}$ we conclude
+$$
+a_{n} = \frac{\dfrac{2 i \cos (3 n)}{ n} + (7-i) }{3+ \dfrac{2 i}{n} + \dfrac{\sin (2 n)}{n^{2}}}
+\longrightarrow \frac{ 0+ (7-i) }{3+0+0}=\frac{7}{3}-\frac{1}{3} i \,.
+$$
+
+:::
+
+
+
+
+## Geometric sequence Test and Ratio Test in $\mathbb{C}$
+
+
+The Geometric Sequence Test and Ratio Test can be generalized to complex
+sequences.
+
+
+::: Theorem 
+### Geometric sequence Test in $\mathbb{C}$ 
+
+Let $x \in \mathbb{C}$ and let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be the geometric sequence in $\mathbb{C}$ defined by
+$$
+a_{n}:=x^{n} \,.
+$$
+We have:
+
+1. If $|x|<1$, then 
+$$
+\lim_{n \to \infty} a_{n} = 0 \,.
+$$
+
+2. If $|x|>1$, then sequence $\left(a_{n}\right)$ is unbounded, and hence divergent.
+
+:::
+
+The proof can be obtained as in the real case, replacing the absolute value by the modulus.
+
+::: Example 
+
+
+- Let 
+$$
+a_{n}=\frac{(-1+4 i)^{n}}{(7+3 i)^{n}} \,.
+$$
+We first rewrite
+$$
+a_{n}=\frac{(-1+4 i)^{n}}{(7+3 i)^{n}}=\left(\frac{-1+4 i}{7+3 i}\right)^{n}
+$$
+Then, we compute
+\begin{align*}
+\left|\frac{-1+4 i}{7+3 i}\right| & =\frac{|-1+4 i|}{|7+3 i|} \\
+& = \frac{\sqrt{(-1)^{2}+4^{2}}}{\sqrt{7^{2}+3^{2}}} \\
+& = \frac{\sqrt{17}}{\sqrt{58}} \\
+& = \sqrt{\frac{17}{58}} \\
+& < 1 \,
+\end{align*}
+By the Geometric Sequence Test $a_{n} \rightarrow 0$.
+
+- Let 
+$$
+b_{n}=\frac{(-5+12 i)^{n}}{(3-4 i)^{n}} \,.
+$$
+We first rewrite
+$$
+b_{n}=\frac{(-5+12 i)^{n}}{(3-4 i)^{n}}=\left(\frac{-5+12 i}{3-4 i}\right)^{n} \,.
+$$
+We compute
+\begin{align*}
+\left|\frac{-5+12 i}{3-4 i}\right| & = \frac{|-5+12 i|}{|3-4 i|} \\
+& = \frac{\sqrt{5^{2}+(-12)^{2}}}{\sqrt{3^{2}+(-4)^{2}}} \\
+& = \frac{13}{5} \\
+& > 1 \,.
+\end{align*}
+By the Geometric Sequence Test, the sequence $(b_{n})$ does not converge.
+
+- Let 
+$$
+c_{n}=e^{\frac{i \pi}{2} n} \,.
+$$
+We have
+$$
+\left|c_{n}\right|=\left|e^{\frac{i \pi}{2} n}\right|=1 \,,
+$$
+and hence the Geometric Sequence Test cannot be applied. However, we can see that 
+$$
+c_n = (i,-1,-i, 1, i,-1,-i, 1, \ldots ) \,,
+$$
+that is, $c_n$ assumes only the values $\{i,-1,-i,1\}$, and each of them
+is assumed infinitely many times. Thus $c_n$ is oscillating and it is 
+divergent.
+
+
+:::
+
+
+
+::: {.content-hidden}
+
+In particular, $c_n$ contains the 
+oscillating sequence
+$$
+d_n := c_{2n} = (-1)^{n+1} \,.
+$$
+Since $d_n$ di
+$$
+c_{n}=e^{\frac{i \pi}{2} n} = 
+\begin{cases}
+-1 & \, \mbox{ if } \, n \, \mbox{ even} \\
+i & \, \mbox{ if } \, n \, \mbox{ odd} \\ 
+\end{cases}
+$$
+Therefore $(c_{n})$ does not converge.
+
+> *Proof*. Suppose by contradiction that $c_n \to c$ for some $c \in \mathbb{c}$. Let $\varepsilon := 1/2$. By the convergence $c_n \to c$ there exists $N \in \mathbb{N}$ such that
+$$
+|c_n - c| < \varepsilon = \frac12 \,, \quad \forall \, n \geq N \,.
+$$
+Let $n=2N$, so that $n \geq N$. Then
+$$
+|c_{2N} - c| = |-1 - c| < \frac{1}{2} \,.
+$$
+Let $n=2N+1$, so that $n \geq N$. Then
+$$
+|c_{2N + 1} - c| = |i - c| < \frac{1}{2} \,.
+$$
+By triangle inequality we get
+\begin{align*}
+|-1 - i| & = | -1 - c + c - i  | \\
+         & \leq |-1 - c| + |c - i| \\
+         & < \frac{1}{2} + \frac{1}{2} \\
+         & = 1 \,.
+\end{align*}
+However,
+$$
+|-1 - i| = \sqrt{ (-1)^2 + (-1)^2 } = \sqrt{2} >  1 \,,
+$$
+which is a contradiction. Hence $(c_n)$ is divergent.
+
+:::
+
+
+We now provide the statement of the Ratio Test in $\mathbb{C}$.
+
+
+
+::: Theorem 
+### Ratio Test in $\mathbb{C}$ {#theorem-ratop-test-C}
+
+Let $\left(a_{n}\right)$ be a sequence in $\mathbb{C}$ such that
+$$
+a_{n} \neq 0 \,, \quad \forall \, n \in \mathbb{N} \,.
+$$ 
+
+
+1. Suppose that the following limit exists:
+$$
+L:=\lim_{n \to \infty}\left|\frac{a_{n+1}}{a_{n}}\right| \,.
+$$
+Then,
+
+    - If $L<1$ we have
+    $$
+    \lim_{n \to\infty} a_{n}=0 \,.
+    $$
+
+    - If $L>1$, the sequence $\left(a_{n}\right)$ is unbounded, and hence does not converge.
+
+2. Suppose that there exists $N \in N$ and $L>1$ such that
+$$
+\left|\frac{a_{n+1}}{a_{n}}\right| \geq L \,, \quad \forall \, n \geq N \,. 
+$$
+Then the sequence $\left(a_{n}\right)$ is unbounded, and hence does not converge.
+
+:::
+
+
+The proof of Theorem \ref{theorem-ratop-test-C} follows word by word the
+proof of the Ratio Test Theorem in $\mathbb{R}$, and only two minor 
+modifications are needed:
+
+
+- Replace the absolute value with the complex modulus,
+- Instead of the Squeeze Theorem, use Theorem \ref{theorem-convergence-zero-C}. 
+
+
+
+::: Example 
+
+Let 
+$$
+a_{n}=\frac{(4-3 i)^{n}}{(2 n) !} \,.
+$$
+Prove that $a_n \to 0$.
+
+> *Proof.* We compute
+\begin{align*}
+\left|\frac{a_{n+1}}{a_{n}}\right| & =\left|\frac{(4-3 i)^{n+1}}{(2(n+1)) !}  \frac{(2 n) !}{(4-3 i)^{n}}\right| \\
+& = \frac{|4-3 i|^{n+1}}{|4-3 i|^{n}} \cdot \frac{(2 n) !}{(2 n+2) !} \\
+& = \frac{|4 - 3i|}{(2 n+2)(2 n+1)} \\
+& =\frac{\sqrt{4^{2}+(-3)^{2}}}{(2 n+2)(2 n+1)} \\
+& = \frac{5}{(2 n+2)(2 n+1)} \\
+& = \frac{ \dfrac{5}{n^{2}}}{ \left(2+ \dfrac{2}{n} \right) \left(2+ \dfrac{1}{n} \right) } \longrightarrow L = 0 \,.
+\end{align*}
+Since $L=0 < 1$, by the Ratio Test in $\mathbb{C}$ we infer $a_{n} \to 0$. 
+
+:::
+
+
+
+
+## Convergence of real and imaginary part
+
+A complex number $z \in \mathbb{C}$ can be written as
+$$
+z=a+b i 
+$$
+for some $a, b \in \mathbb{R}$, where
+
+- $a$ is the real part of $z$,
+- $b$ the imaginary part of $z$.
+
+
+We can prove that a complex sequence converges if and only if both the real parts and the imaginary parts converge.
+
+::: {.Theorem  #theorem-convergence-real-imaginary}
+
+Let $\left(z_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{C}$. For $n \in \mathbb{N}$, let $a_{n}, b_{n} \in \mathbb{R}$ such that 
+$$
+z_{n}=a_{n}+b_{n} i \,.
+$$
+Let 
+$$
+z=a+b i
+$$ 
+with $a, b \in \mathbb{R}$. Then
+$$
+\lim_{n \rightarrow \infty} z_{n}=z \quad \iff \quad \lim_{n \rightarrow \infty} a_{n}=a \,, \quad \lim_{n \rightarrow \infty} b_{n}=b \text {. }
+$$
+
+:::
+
+
+:::Proof 
+
+*Part 1.*
+Suppose that 
+$$
+\lim_{n \rightarrow \infty} z_{n}=z \,.
+$$
+To prove that $a_{n} \to a$ we need to show that
+$$
+\forall \, \varepsilon>0 \,, \, \exists \, N \in \mathbb{N} \, \mbox{ s.t. } \, \forall \, n \geq N \,, \,\, \left|a_{n}-a\right| < \varepsilon \,.
+$$
+
+Let $\varepsilon>0$. Since $z_{n} \rightarrow z$, there exists $N \in \mathbb{N}$ such that
+$$
+\left|z_{n}-z\right| < \varepsilon \,, \quad \forall \, n \geq N \,. 
+$$
+Let $n \geq N$. Then
+\begin{align*}
+\left|a_{n}-a\right| & =\sqrt{\left(a_{n}-a\right)^{2}} \\
+                     & \leq \sqrt{\left(a_{n}-a\right)^{2}+\left(b_{n}-b\right)^{2}} \\
+                     & =\left|\left(a_{n}-a\right)+\left(b_{n}-b\right) i\right| \\
+                     & = \left|\left(a_{n}+b_{n} i\right)-(a+b i)\right| \\ 
+                     & = \left|z_{n}-z\right| \\
+                     & < \varepsilon \,.
+\end{align*}
+The proof for $b_{n} \to b$ is similar.
+
+*Part 2.* Suppose that 
+$$
+\lim_{n \rightarrow \infty} a_{n}=a \,, \quad \lim_{n \rightarrow \infty} b_{n}=b \,.
+$$ 
+To prove that $z_{n} \to z$ we need to show that
+$$
+\forall \, \varepsilon>0 \,, \, \exists \, N \in \mathbb{N} \, \mbox{ s.t. } \, \forall \, n \geq N \,, \,\, \left|z_{n}-z\right| < \varepsilon \,.
+$$
+Let $\varepsilon>0$. Since $a_{n} \rightarrow a$, there exists $N_1 \in \mathbb{N}$ such that
+$$
+\left|a_{n}-a\right| < \frac{\varepsilon}{2} \,, \quad \forall \, n \geq N_1 \,.
+$$
+Since $b_{n} \rightarrow b$, there exists $N_2 \in \mathbb{N}$ such that
+$$
+\left|b_{n}-b\right| < \frac{\varepsilon}{2} \,, \quad \forall \, n \geq N_2 \,.
+$$
+Let 
+$$
+N := \max \left\{ N_1, N_2 \right\} \,.
+$$
+Let $n \geq N$. By the triangle inequality,
+\begin{align*}
+\left|z_{n}-z\right| & =\left|\left(a_{n}+b_{n} i\right)-(a+b i)\right|\\
+& =\left|\left(a_{n}-a\right)+\left(b_{n}-b\right) i\right| \\
+& \leq\left|a_{n}-a\right|+\left|b_{n}-b\right| \cdot|i| \\
+& =\left|a_{n}-a\right|+\left|b_{n}-b\right| \\
+& < \frac{\varepsilon}{2}+\frac{\varepsilon}{2} \\ 
+& = \varepsilon \,.
+\end{align*}
+
+:::
+
+
+
+::: Example 
+
+Consider the complex sequence
+$$
+z_{n}:=\frac{\left(4 n+3 n^{2} i\right)\left(2 n^{2}+i\right)}{5 n^{4}}
+$$
+Show that
+$$
+\lim_{n \to \infty} z_n = \frac65 i \,.
+$$
+
+> *Proof.* Let us find the real and imaginary parts of $z_n$
+\begin{align*}
+z_n & = \frac{\left(4 n+3 n^{2} i\right)\left(2 n^{2}+i\right)}{5 n^{4}} \\
+& = \frac{8 n^{3}+4 n i + 6 n^{4} i + 3 n^{2}i^2}{5 n^{4}} \\
+& = \frac{8 n^{3}-3 n^{2}}{5 n^{4}} + \frac{6 n^{4}+4 n}{5 n^{4}} i \\
+& = a_n + b_n i \,.
+\end{align*}
+Using the Algebra of Limits for real sequences we have that
+$$
+a_n = \frac{8 n^{3}-3 n^{2}}{5 n^{4}}=\frac{ \dfrac{8}{n} - \dfrac{3}{n^2}  }{5} \longrightarrow \frac{0-0}{5}=0 \,,
+$$
+and
+$$
+b_n = \frac{6 n^{4}+4 n}{5 n^{4}}=\frac{6+ \dfrac{4}{n^3} }{5} \longrightarrow \frac{6+0}{5}=\frac{6}{5} \,.
+$$
+By Theorem \ref{theorem-convergence-real-imaginary} we conclude
+$$
+\lim _{n \rightarrow \infty} z_{n} = \lim_{n \to \infty} a_n  +  i \, \lim_{n \to \infty} b_n = 0+\frac{6}{5} i=\frac{6}{5} i \,.
+$$
+
+
+:::
+
+
+
+
+
+
+::: {.content-hidden}
+
+
+La roba sotto e' di Dommers. Sarebbe bene fare la dimostrazione di Cauchy in 
+R e ignorare quella in C (in cui va assunto che Cauchy implica convergente). In R bisogna fare bolzano Weierstrass per dimostrare che Cauchy implica convergente. E' sia sul marcellini sbordone pag 155, e ci sono anche
+discussioni su abbot, per dimostrare che cauchy implica convergente.
+
+
+
+\section{$2.6 *$ Cauchy sequences}
+
+To prove that a sequence converges using the $\varepsilon, n_{0}$ definition, we need to have a candidate for what the limit could be. If we want to prove that a sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ in $\mathbb{C}$ converges, we have to choose an $a \in \mathbb{C}$ and prove that $\lim _{n \rightarrow \infty} a_{n}=a$. However, it is not always clear what a potential limit is.
+
+To avoid having to know what the limit is, we can prove that a sequence converges by showing that it is a so-called Cauchy sequence. If you are able to prove that a sequence is a Cauchy sequence, it immediately follows that the sequence converges without knowing what the limit is. Cauchy sequences are defined as follows:
+
+Definition 2.6.1. Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{C}$. Then, $\left(a_{n}\right)_{n \in \mathbb{N}}$ is called a Cauchy sequence if
+
+$$
+\forall \varepsilon>0: \exists n_{0} \in \mathbb{N}: \forall m, n \geq n_{0}:\left|a_{m}-a_{n}\right| \leq \varepsilon
+$$
+
+Note that we only defined it for sequences in $\mathbb{C}$, but since we can interpret any real number as a complex number with zero imaginary part, this definition also holds for sequences in $\mathbb{R}$.
+
+The interpretation of this definition is that from a certain point onwards (i.e., from $n_{0}$ ) if you take to terms of the sequence $a_{m}$ and $a_{n}$, then $a_{m}$ and $a_{n}$ are arbitrarily close to each other (even if $n$ and $m$ are very far apart). If all these terms are very close to each other from a certain point onwards, they are also close to the limit, even though we don't have to know what the limit is.
+
+Example 2.6.2. Show that $\left(a_{n}\right)_{n \in \mathbb{N}}$ is a Cauchy sequence, with
+
+$$
+a_{n}:=\frac{3 n}{2 n+1} .
+$$
+
+We need to prove that
+
+$$
+\forall \varepsilon>0: \exists n_{0} \in \mathbb{N}: \forall m, n \geq n_{0}:\left|\frac{3 m}{2 m+1}-\frac{3 n}{2 n+1}\right| \leq \varepsilon
+$$
+
+Let $\varepsilon>0$. Choose $n_{0} \in \mathbb{N}$ such that $n_{0} \geq \frac{3}{2 \varepsilon}$. Let $m, n \geq n_{0}$. Then,
+
+$$
+\begin{aligned}
+\left|\frac{3 m}{2 m+1}-\frac{3 n}{2 n+1}\right| & =\left|\frac{3 m(2 n+1)-3 n(2 m+1)}{(2 m+1)(2 n+1)}\right|=\left|\frac{3 m-3 n}{4 m n+2 m+2 n+1}\right| \\
+& =\frac{3|m-n|}{4 m n+2 m+2 n+1} \stackrel{\text { TI }}{\leq} \frac{3(m+n)}{4 m n}=\frac{3}{4}\left(\frac{1}{n}+\frac{1}{m}\right) \\
+& \leq \frac{3}{4}\left(\frac{1}{n_{0}}+\frac{1}{n_{0}}\right)=\frac{3}{2 n_{0}} \leq \varepsilon .
+\end{aligned}
+$$
+
+Note that in this example we didn't have to guess what the limit of the sequence was first. We claimed that convergence follows from being a Cauchy sequence. The reverse is also true. We formalise this in the following theorem:
+
+Theorem 2.6.3. Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{C}$. Then, $\left(a_{n}\right)_{n \in \mathbb{N}}$ converges if and only if $\left(a_{n}\right)_{n \in \mathbb{N}}$ is a Cauchy sequence.
+
+Example 2.6.4. It immediately follows from this theorem and Example 2.6 .2 that the sequence $\left(\frac{3 n}{2 n+1}\right)_{n \in \mathbb{N}}$ converges. Note that this still doesn't tell us what the limit is, only that it exists.
+
+For the example it is easy to see what the limit is, but in many theoretical computations this is often not the case. In such instances, it is often easier to prove that something is a Cauchy sequence, than to prove that it converges using the definition of convergence directly.
+
+\subsection{1 * Completeness revisited}
+
+We did not present the proof of Theorem 2.6.3, but to prove that this result holds for sequences in $\mathbb{R}$ we need that $\mathbb{R}$ is a complete ordered field and construct some bounded set for which we know the supremum exists. So important, in fact, that in an ordered field the convergence of Cauchy sequences and the existence of the supremum for all bounded sets are equivalent:
+
+Theorem 2.6.5. Let $(K,+, \cdot, \mathcal{P})$ be an ordered field. Then the following two statements are equivalent:
+
+(a) If a sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ in $K$ is a Cauchy sequence, then $\left(a_{n}\right)_{n \in \mathbb{N}}$ converges;
+
+(b) If $A \subseteq K, A \neq \emptyset$ that has an upper bound in $K$, then also $\sup A \in K$.
+
+Note that the second statement was our definition of completeness in ordered fields. Hence, this theorem says that an ordered field is complete if and only if every Cauchy sequence converges. Hence, in stead of using Definition 1.9.12 as our definition of completeness, we can also use statement (a) in this theorem as our definition.
+
+Note that we stated Theorem 2.6.3 for sequences in $\mathbb{C}$. We obviously cannot use the supremum directly to prove this, since $\mathbb{C}$ is not ordered. However, we can use that a sequence in $\mathbb{C}$ converges
+if and only if the real and imaginary parts converge as we proved in Theorem 2.5.12, and then use our proof using suprema for the real and imaginary parts separately.
+
+Hence, also in $\mathbb{C}$ it holds that a sequence converges if and only if it is a Cauchy sequence. In ordered fields, we could use this as the definition of convergence. But since this result also holds in $\mathbb{C}$ which is not ordered, for $\mathbb{C}$ this definition of completeness also makes sense. Hence, we can also say that $\mathbb{C}$ is a complete field, even though it is not ordered.
+
+If we replace the absolute value in the definition of Cauchy sequences by a distance, then this definition of completeness can even be generalised to other fields.
+
+
+
+:::

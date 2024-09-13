@@ -1,0 +1,2623 @@
+::: {.content-hidden}
+$
+{{< include macros.tex >}}
+$
+:::
+
+
+
+
+
+# Series
+
+
+
+A series is the sum of all terms in a sequence:
+$$
+a_1 + a_2 + a_3 + \ldots + a_n + \ldots 
+$$
+Since we are dealing with an infinite amount of terms, we need to be careful.
+For example, consider the series
+$$
+\sum_{n=1}^\infty (-1)^n = -1 + 1 - 1 + 1 - 1 + 1 - \ldots 
+$${#eq-series-introduction}
+If we sum the terms in pairs, we obtain
+$$
+\sum_{n=1}^\infty (-1)^n = (-1 + 1) + (- 1 + 1) + ( - 1 + 1) + \ldots  = 0\,.
+$$
+If we reorder the terms, we obtain a different result
+\begin{align*}
+\sum_{k=1}^\infty (-1)^n & = (1 + 1) - 1 + (1 + 1) - 1 + \ldots  \\
+                         & = (2 - 1) + (2 - 1) + \ldots \\
+                         & = 1 + 1 + \ldots \\
+                         & = \infty \,. 
+\end{align*}
+Therefore commutativity of the sum does not hold when summing infinitely many terms. We need a good definition of convergence.
+
+
+## Convergent series
+
+We will develop the theory of series for sequences in $\mathbb{C}$. All the results for complex series will also hold for series in $\mathbb{R}$. Some results will only hold for series in $\R$: this will be the case for comparison tests
+in which the order relation of $\R$ is needed.
+
+
+We start by defining partial sums.
+
+::: Definition 
+### Partial sums
+
+Let $(a_{n})$ be a sequence in $\mathbb{C}$. The $k$-th partial sum of $(a_n)$ is
+$$
+s_{k} :=a_{1}+a_{2}+\ldots+a_{k} = \sum_{n=1}^{k} a_{n}
+$$
+This sequence $\left(s_{k}\right)_{k \in \mathbb{N}}$ is called the sequence of **partial sums**.
+
+:::
+
+
+We can use the sequence of partial sums to define convergence of a series.
+
+
+::: Definition 
+### Convergent series
+
+Let $(a_{n})$ be a sequence in $\mathbb{C}$. We denote the series of $\left(a_{n}\right)_{n \in \mathbb{N}}$ by
+$$
+\sum_{n=1}^{\infty} a_{n}
+$$
+We say that this series **converges** to $s \in \mathbb{C}$ if
+$$
+\lim_{k \rightarrow \infty} \sum_{n=1}^{k} a_{n} = 
+\lim_{k \rightarrow \infty} s_{k} = s \,.
+$$
+In this case we write
+$$
+\sum_{n=1}^{\infty} a_{n} = s \,.
+$$
+
+:::
+
+
+::: Definition 
+### Divergent series
+
+Let $(a_{n})$ be a sequence in $\mathbb{C}$. The series 
+$$
+\sum_{n=1}^\infty a_n 
+$$
+is **divergent** if the sequence of partial sums $(s_k)$ is divergent.
+
+:::
+
+
+::: Example 
+Consider the series
+$$
+\sum_{n=1}^{\infty} \frac{1}{n(n+1)} \,.
+$$
+Note that
+$$
+\frac{1}{n(n+1)}=\frac{1}{n}-\frac{1}{n+1} \,.
+$$
+Hence, we can compute the partial sums $s_{n}$ as follows:
+\begin{align*}
+s_{k} & =\sum_{n=1}^{k} \frac{1}{n(n+1)} \\
+& =\sum_{n=1}^{k}\left(\frac{1}{n}-\frac{1}{n+1}\right) \\
+& =\frac{1}{1}-\frac{1}{2}+\frac{1}{2}-\frac{1}{3}+\frac{1}{3}-\frac{1}{4}+\ldots+\frac{1}{k}-\frac{1}{k+1} \\
+& =1-\frac{1}{k+1} .
+\end{align*}
+Since,
+$$
+\lim_{k \rightarrow \infty} s_{k}=\lim _{k \rightarrow \infty}\left(1-\frac{1}{k+1}\right)=1 \,,
+$$
+the series converges to $1$, that is,
+$$
+\sum_{n=1}^{\infty} \frac{1}{n(n+1)}=1 \,.
+$$
+A series of this kind is called a **telescopic sum**, since we can *fold* the entire partial sum together, in such a way that only two terms remain.
+:::
+
+Let us go back to the series considered in (@eq-series-introduction).
+
+::: Example 
+
+Consider the series
+$$
+\sum_{n=1}^{\infty}(-1)^{n} \,.
+$$
+The partial sums $s_{k}$ are given by
+$$
+s_{k}=\sum_{n=1}^{k}(-1)^{n}= 
+\begin{cases}-1 & \text { if } \, n \, \text { is odd }  \, \\ 
+0 & \text { if } \, n  \, \text { is even. }\end{cases}
+$$
+Therefore $s_{k}$ diverges, so also the series diverges.
+
+:::
+
+
+In general, it is a difficult taks to compute the exact value of a series. Therefore, we will mainly focus our effort on determining whether a series converges or not. 
+
+The following theorem shows that if the terms in the sequence do not converge to $0$, then the series cannot converge.
+
+::: Theorem 
+### Necessary Condition for Convergence {#theorem-series-necessary}
+
+Let $(a_{n})$ be a sequence in $\mathbb{C}$. If the series 
+$$
+\sum_{n=1}^{\infty} a_{n} 
+$$ 
+converges, then 
+$$
+\lim_{n \rightarrow \infty} a_{n}=0 \,.
+$$
+
+:::
+
+::: Proof
+
+Suppose that 
+$$
+\sum_{n=1}^{\infty} a_{n}
+$$ 
+converges. By definition of convergent series there exists some $s \in \mathbb{C}$ such that
+$$
+\lim_{k \rightarrow \infty} s_{k}=\lim_{k \rightarrow \infty} \sum_{n=1}^{k} a_{n} = s \,.
+$$
+Then also
+$$
+\lim_{k \rightarrow \infty} s_{k+1} = s \,.
+$$
+Hence, by the Algebra of Limits in $\C$, we have that
+$$
+\lim_{k \rightarrow \infty}\left(s_{k+1}-s_{k}\right)=\lim _{k \rightarrow \infty} s_{k+1}-\lim_{k \rightarrow \infty} s_{k} = s - s = 0 \,.
+$$
+Noting that 
+$$
+s_{k+1} - s_{k} = a_{k+1}\,, \quad \forall \, k \in \N \,,
+$$ 
+we obtain
+$$
+\lim_{k \rightarrow \infty} a_{k}
+= \lim_{k \rightarrow \infty} a_{k+1}
+= \lim_{k \rightarrow \infty} \left( s_{k+1} - s_{k} \right) = 0 \, .
+$$
+
+:::
+
+
+
+::: Important 
+
+Theorem \ref{theorem-series-necessary} is saying that, if 
+$$
+\lim_{n \rightarrow \infty} a_{n} \neq 0 \,,
+$$
+then the series
+$$
+\sum_{n=1}^{\infty} a_{n}
+$$ 
+does not converge.
+
+:::
+
+
+
+
+::: Example 
+
+Consider the series
+$$
+\sum_{n=1}^\infty  (-1)^n \,.
+$${#eq-example-series-1}
+We have that
+$$
+\lim_{n \to \infty} a_n = \lim_{n \to \infty} (-1)^n  \neq 0 \,,
+$$
+being $(a_n)$ divergent. Therefore the series at (@eq-example-series-1) diverges
+by Theorem \ref{theorem-series-necessary}.
+
+:::
+
+
+::: Example 
+
+Consider the series
+$$
+\sum_{n=1}^{\infty} \frac{n}{5 n+11} \,.
+$$
+Then
+$$
+a_{n}:=\frac{n}{5 n+11}=\frac{1}{5 + \dfrac{11}{n} } \longrightarrow \frac{1}{5} \neq 0 \,.
+$$
+Hence, the series does not converge.
+
+:::
+ 
+
+::: Important
+
+Theorem \ref{theorem-series-necessary} says that if $\sum_{n=1}^\infty a_n$ converges, 
+then
+$$
+a_n \to 0 \,.
+$$
+The converse is false: In general the condition $a_n \to 0$ does not guarantee convergence of the 
+associated series, as shown in the example below.
+
+:::
+
+
+::: Example
+
+Consider the series
+$$
+\sum_{n=1}^\infty a_n \,, \quad a_n := \frac{1}{ \sqrt{n+1} + \sqrt{n} } \,.
+$$
+By the Algebra of Limits we have
+$$
+\lim_{n \to \infty} a_n = 0 \,.
+$$
+However the partial sums are given by
+$$
+s_k = \sum_{n=1}^k a_n = \sqrt{k+1} - 1 \,.
+$$
+Therefore $(s_k)$ is divergent and so the series is divergent.
+
+> Exercise: Prove by induction that 
+$$
+\sum_{n=1}^k a_n = \sqrt{k+1} - 1 \,.
+$$
+
+:::
+
+
+
+::: Remark
+
+It is customary to sum a series starting at $n=1$. However one could start
+the sum at any $n=N$ with $N \in \N$. This does not affect the convergence
+of the series, in the sense that
+$$
+\sum_{n=1}^\infty a_n \,\, \mbox{ converges \,} \iff \,\,
+\sum_{n=N}^\infty a_n \,\, \mbox{ converges.} 
+$$
+In case of convergence, we would of course have
+$$
+\sum_{n=N}^\infty a_n = \sum_{n=1}^\infty a_n - \left(  a_1 + \ldots + a_{N-1} \right) \,.
+$$
+
+:::
+
+
+::: Example 
+
+We have seen that 
+$$
+\sum_{n=1}^{\infty} \frac{1}{n(n+1)} = 1 \,.
+$$
+Hence also the series
+$$
+\sum_{n=7}^{\infty} \frac{1}{n(n+1)}
+$$
+converges. However, in this case, the partial sums are given by
+\begin{align*}
+s_{k} & =\sum_{n=7}^{k} \frac{1}{n(n+1)} \\
+      & =\sum_{n=7}^{k}\left(\frac{1}{n}-\frac{1}{n+1}\right) \\
+      & =\frac{1}{7}-\frac{1}{8}+\frac{1}{8}-\frac{1}{9}+\ldots+\frac{1}{k}-\frac{1}{k+1} \\
+      & =\frac{1}{7}-\frac{1}{k+1} \,.
+\end{align*}
+Therefore
+$$
+\sum_{n=7}^{\infty} \frac{1}{n(n+1)} = \lim_{k \rightarrow \infty} s_{k} = \frac{1}{7} \,.
+$$
+
+:::
+
+
+
+## Geometric series
+
+
+::: Definition
+### Geometric Series in $\C$
+
+Let $x \in \C$. The **geometric series** of ratio $x$ is the series
+$$
+\sum_{n=0}^{\infty} x^{n} \,.
+$$
+
+:::
+
+
+Geometric series are one of the few types of series that can be explicitly computed, as stated 
+in the following theorem.
+
+
+::: Theorem 
+### Geometric Series Test  {#theorem-geometric-series-test}
+
+Let $x \in \C$. We have: 
+
+1. If $|x|<1$, then the geometric series of ratio $x$ converges, with
+
+$$
+\sum_{n=0}^{\infty} x^{n}=\frac{1}{1-x} \,.
+$${#eq-geometric-series-sum}
+
+2. If $|x| \geq 1$, then the geometric series of ratio $x$ diverges.
+
+:::
+
+
+::: Important
+
+Recall that the Geometric Sequence Test does not cover the case $|x|=1$, since in general the sequence
+$$
+a_n = x^n
+$$
+could be convergent or divergent. However the Geometric Series
+Test covers the case $|x|=1$, in which case
+$$
+\sum_{n=0}^{\infty} x^{n}
+$$
+diverges.
+
+:::
+
+
+::: Proof
+
+*Part 1*. Suppose that $|x|<1$. By using induction we prove that
+$$
+s_{k} := \sum_{n=0}^{k} x^{n}=\frac{1-x^{k+1}}{1-x} \,, \quad \forall \, k \in \N \,.
+$${#eq-proof-geometric-series}
+
+- Base case: For $k=0$, we get that
+$$
+s_{0} = x^{0} = 1 = \frac{1-x^{1}}{1-x} \,.
+$$
+
+- Induction step: Let $k \in \N \cup \{0\}$ and suppose that 
+$$
+s_{k}=\frac{1-x^{k+1}}{1-x} \,.
+$$
+Then,
+\begin{align*}
+s_{k+1} & = s_{k}+x^{k+1} \\
+        & = \frac{1-x^{k+1}}{1-x}+x^{k+1} \\
+        & = \frac{1-x^{k+1}+(1-x) x^{k+1}}{1-x} \\
+        & = \frac{1-x^{k+1}+x^{k+1}-x^{k+2}}{1-x} \\
+        & = \frac{1-x^{k+2}}{1-x} \,,
+\end{align*}
+concluding the proof of the inductive step.
+
+
+By the Principle of Induction formula (@eq-proof-geometric-series) holds for all $k \in \N$.
+Since $|x|<1$, by the Geometric Sequence Test we infer 
+$$
+\lim_{k \to \infty} \, x^{k} = 0 \,.
+$$ 
+Hence
+\begin{align*}
+\sum_{n=0}^{\infty} x^{n} & = \lim_{k \to \infty } \, s_k \\
+                          & = \lim_{k \rightarrow \infty}  \, \frac{1-x^{k+1}}{1-x} \\
+                          & = \lim_{k \rightarrow \infty} \frac{1-x \cdot x^{k}}{1-x} \\
+                          & = \frac{1}{1-x} \,,
+\end{align*}
+where the last equality follows from the Algebra of Limits.
+
+
+*Part 2.* Suppose $|x| \geq 1$. Then
+$$
+\lim_{n \to \infty} \, x^n \neq 0 \,.
+$${#eq-proof-geometric-series-2}
+Indeed, suppose by contradiction that $x_n \to 0$. Hence, for $\e = 1/2$, there exists $N \in \N$ such that
+$$
+\left|x^{n}-0\right| < \e = \frac{1}{2}  \,, \quad \forall \, n \geq \N \,.
+$$
+However 
+$$
+\left|x^{n}-0\right| = |x^n| = |x|^n \geq 1 \,,
+$$
+which yields
+$$
+1 < \e = \frac12 \,, 
+$$
+contradiction. Then (@eq-proof-geometric-series-2) holds and the series 
+$$
+\sum_{n=0}^{\infty} x^{n}
+$$ 
+diverges by the Necessary Condition in Theorem \ref{theorem-series-necessary}.
+
+
+:::
+
+
+
+Let us show some applications of the Geometric Series Test of Theorem \ref{theorem-geometric-series-test}.
+
+
+::: Example 
+
+- Since $\left|\frac{1}{2}\right|<1$ we have
+$$
+\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}=\frac{1}{1-\dfrac{1}{2}}=2
+$$
+
+- Since $\left|\frac{-3}{2}\right|=\frac{3}{2}>1$
+the series 
+$$
+\sum_{n=0}^{\infty}\left(\frac{-3}{2}\right)^{n}
+$$ 
+does not converge.
+
+- Since $\left|\frac{-3}{4}\right|=\frac{3}{4}<1$, we have
+$$
+\sum_{n=0}^{\infty}\left(\frac{-3}{4}\right)^{n}=\frac{1}{1-\dfrac{-3}{4}}=\frac{1}{\dfrac{7}{4}}=\frac{4}{7}
+$$
+
+-  Since $|-1|=1$, the series 
+$$
+\sum_{n=0}^{\infty}(-1)^{n}
+$$ 
+does not converge.
+
+
+:::
+
+
+::: Remark
+
+If the sum of a Geometric Sries does not start at $n=0$, we need to tweak the summation formula 
+at (@eq-geometric-series-sum). For example, if $|x|<1$, and we start the series at $n=1$, we get
+$$
+\sum_{n=1}^\infty x^k = \frac{1}{1-x} - 1 = \frac{x}{1-x} \,.
+$$
+
+:::
+
+
+::: Example 
+
+We have that
+
+$$\sum_{n=1}^{\infty}\left(\frac{1}{2}\right)^{n}=   
+\frac{ \dfrac{1}{2}}{1- \dfrac{1}{2}} = 1 \,.
+$$
+
+:::
+
+
+The Geometric Series Test of Theorem \ref{theorem-geometric-series-test} can be applied to complex geometric series as well.
+
+
+::: Example 
+
+- Consider the series 
+$$
+\sum_{n=0}^{\infty} \frac{1}{(1+i)^{n}} \,.
+$$
+Since 
+$$
+\frac{1}{(1+i)^{n}}=\left(\frac{1}{1+i}\right)^{n}
+$$
+and 
+$$
+\left|\frac{1}{1+i}\right| = \frac{1}{\sqrt{1^{2}+1^{2}}} = \frac{1}{\sqrt{2}} < 1\,,
+$$
+Therefore the series converges by the Geometric Series Test, and
+\begin{align*}
+\sum_{n=0}^{\infty} \frac{1}{(1+i)^{n}} & = \frac{1}{1-\dfrac{1}{1+i}} \\
+                                        & = \frac{1}{\dfrac{1+i-1}{1+i}} \\
+                                        & = \frac{1+i}{i} \\
+                                        & = \frac{(1+i) i}{i^{2}} \\
+                                        & = \frac{i-1}{-1} \\
+                                        & = 1-i \,.
+\end{align*}
+
+
+
+- Consider the series 
+$$
+\sum_{n=0}^{\infty}\left(\frac{-5-5 i}{3+3 i}\right)^{n} \,.
+$$
+Since
+\begin{align*}
+\left|\frac{-5-5 i}{3+3 i}\right| & = \frac{|-5-5 i|}{|3+3 i|}  \\
+                                  & =\frac{\sqrt{(-5)^{2}+(-5)^{2}}}{\sqrt{3^{2}+3^{2}}} \\
+                                  & = \sqrt{\frac{50}{18}} \\
+                                  & =\frac{5}{3} > 1 \,,
+\end{align*}
+the above series does not converge.
+
+- Consider the series 
+$$
+\sum_{n=0}^{\infty}\left(\frac{2+i}{3-2 i}\right)^{n} \,.
+$$
+We have
+\begin{align*}
+\left|\frac{2+i}{3-2 i}\right| & = \frac{|2+i|}{|3-2 i|} \\
+                               & = \frac{\sqrt{2^{2}+1^{2}}}{\sqrt{3^{2}+(-2)^{2}}} \\
+                               & = \sqrt{\frac{5}{13}} < 1 \,.
+\end{align*}
+Therefore the series converges by the Geometric Series Test, and
+\begin{align*}
+\sum_{n=0}^{\infty}\left(\frac{2+i}{3-2 i}\right)^{n} & = \frac{1}{1-\dfrac{2+i}{3-2 i}} \\
+& = \frac{1}{\dfrac{3-2 i-(2+i)}{3-2 i}} \\
+& = \frac{3-2 i}{1-3 i} \\
+& = \frac{3-2 i}{1-3 i} \, \frac{1+3 i}{1+3 i} \\
+& = \frac{3-2 i+9 i-6 i^{2}}{1-9 i^{2}} \\
+& = \frac{9+7 i}{10} \\
+& = \frac{9}{10} + \frac{7}{10} i
+\end{align*}
+
+
+:::
+
+
+
+
+## Algebra of Limits for Series
+
+We have proven the Algebra of Limit Theorem for sequences in $\C$. A similar results holds
+for series as well.
+
+::: Theorem 
+### Algebra of Limits for Series   {#theorem-algebra-limits-series}
+
+
+Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ and $\left(b_{n}\right)_{n \in \mathbb{N}}$ be sequences in $\mathbb{C}$ and let $c \in \mathbb{C}$. Suppose that
+$$
+\sum_{n=1}^{\infty} a_{n}=a \,, \qquad \sum_{n=1}^{\infty} b_{n}=b \,.
+$$
+Then:
+
+1. The sum of series is the series of the sums:
+$$
+\sum_{n=1}^{\infty}\left(a_{n} \pm b_{n}\right) = a \pm b \,.
+$$
+
+2. The product of a series with a number obeys
+$$
+\sum_{n=1}^{\infty} c \cdot a_{n}= c \cdot a \,.
+$$
+
+
+:::
+
+
+
+::: Proof
+
+
+*Part 1.* We prove the formula with the $+$ sign, since in the other case the proof is the same. To this end, define the partial sums
+$$
+s_{k} := \sum_{n=1}^{k} a_{n} \,, \quad t_{k} := \sum_{n=1}^{k} b_{n} \,, \quad v_{k} := \sum_{n=1}^{k}\left(a_{n}+b_{n}\right) \,.
+$$
+We can write
+\begin{align*}
+v_k   & = \sum_{n=1}^{k} \left(a_{n}+b_{n}\right) \\
+      & = \left(a_{1}+b_{1}\right)+\ldots+\left(a_{k}+b_{k}\right) \\
+      & = \left(a_{1}+\ldots+a_{k}\right)+\left(b_{1}+\ldots+b_{k}\right) \\
+      & = s_{k} + t_{k} \,.
+\end{align*}
+By assumption $s_{k} \to a$ and $t_{k} \to b$. Hence, by the Algebra of Limits in $\C$, we infer
+\begin{align*}
+\sum_{n=1}^{\infty}\left(a_{n}+b_{n}\right) &  = \lim_{k \rightarrow \infty} v_{k} \\
+      & = \lim_{k \rightarrow \infty} \left(s_{k}+t_{k}\right) \\
+      & = \lim_{k \rightarrow \infty} \, s_{k} + \lim_{k \to \infty} \, t_{k}  \\
+      & = a + b \,.
+\end{align*}
+
+
+*Part 2.* Denote the partial sums by
+$$
+s_{k} := \sum_{n=1}^{k} a_{n} \, , \quad  t_{k} := \sum_{n=1}^{k} c \cdot a_{n} \,.
+$$
+We can write
+\begin{align*}
+t_k & = \sum_{n=1}^{k} c \cdot a_{k} \\
+    & = c \cdot a_{1} +c \cdot a_{2}+\ldots+c \cdot a_{k} \\
+    & = c \cdot \left(a_{1}+a_{2}+\ldots+a_{k}\right) = \\
+    & = c \cdot s_{k} \,.
+\end{align*}
+By assumption $s_{k} \to a$, so that the Algebra of Limits in $\C$ allows to conclude
+\begin{align*}
+\sum_{n=1}^{\infty} c \cdot a_{n} & = \lim_{k \rightarrow \infty} t_{k} \\
+                                  & = \lim_{k \rightarrow \infty} c \cdot s_{k} \\
+                                  & = c \cdot a \,.
+\end{align*}
+
+:::
+
+
+Let us apply the Algebra of Limits for Series to a concrete example. 
+
+::: Example 
+
+Consider the following series
+
+$$
+\sum_{n=0}^{\infty}\left(2\left(\frac{1}{3}\right)^{n}+\left(\frac{2}{3}\right)^{n}\right) \,.
+$$
+Note that
+$$
+\sum_{n=0}^{\infty}\left(\frac{1}{3}\right)^{n}=\frac{1}{1-\dfrac{1}{3}}=\frac{3}{2} \,, \quad 
+\sum_{n=0}^{\infty}\left(\frac{2}{3}\right)^{n}=\frac{1}{1-\dfrac{2}{3}}=3 \,,
+$$
+by the Geometric Series Test of Theorem \ref{theorem-geometric-series-test}.
+Therefore we can apply the Algebra of Limit for Series to conclude
+\begin{align*}
+\sum_{n=0}^{\infty}\left(2\left(\frac{1}{3}\right)^{n}+\left(\frac{2}{3}\right)^{n}\right) & 
+=
+2 \cdot \sum_{n=0}^{\infty} \left(\frac{1}{3}\right)^{k} 
++ \sum_{n=0}^{\infty} \left(\frac{2}{3}\right)^{k} \\ 
+& = 2 \cdot \frac{3}{2} + 3 = 6
+\end{align*}
+
+:::
+
+
+::: Important
+
+The Algebra of Limits Theorem \ref{theorem-algebra-limits-series} does not discuss product and quotient of series. The situation becomes more complicated in this case: Indeed, we have
+$$
+(a_1 + a_2) \cdot (a_2 + b_2) = a_1b_1 + a_2 b_2 + a_1 b_2 + a_2 b_1  \,.
+$$
+Therefore, in general, we can expect
+$$
+ \left( \sum_{n=0}^{\infty} a_n \right) \cdot \left( \sum_{n=0}^{\infty} b_n \right) \neq 
+ \sum_{n=0}^{\infty} a_n \cdot b_n \,.
+$${#eq-product-series}
+A way to compute
+$$
+\left( \sum_{n=0}^{\infty} a_n \right) \cdot \left( \sum_{n=0}^{\infty} b_n \right)
+$$
+is through the so-called **Cauchy Product** of two series. We do not cover the latter, and the interested reader 
+can refer to Page $82$ in [@abbott]. 
+
+Similarly, we expect that
+$$
+ \dfrac{ \displaystyle\sum_{n=0}^{\infty} a_n }{ \displaystyle\sum_{n=0}^{\infty} b_n } 
+ \neq \sum_{n=0}^{\infty} \frac{a_n}{b_n} \,.
+$${#eq-quotient-series}
+
+:::
+
+
+Let us give two examples to show that formulas (@eq-product-series) and (@eq-quotient-series) hold.
+
+
+::: Example 
+
+- We know that
+$$
+\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}=\frac{1}{1-\dfrac{1}{2}}=2 \,.
+$${#eq-product-series-2}
+Therefore
+$$
+\left(\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \right) \cdot 
+\left(\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \right)  
+= 2 \cdot 2 = 4 \,. 
+$$
+However
+$$
+\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \cdot\left(\frac{1}{2}\right)^{n}
+= \sum_{n=0}^{\infty}\left(\frac{1}{4}\right)^{n} 
+= \frac{1}{1-\dfrac{1}{4}} 
+= \frac{4}{3}  \,.
+$$
+Hence 
+$$
+\left(\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \right) \cdot 
+\left(\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \right)  = 4 \neq \frac{4}{3} = \sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \cdot\left(\frac{1}{2}\right)^{n} \,.
+$$
+
+- Using (@eq-product-series-2) we have
+$$
+\frac{\displaystyle\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}}{\displaystyle\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}} = \frac{2}{2} = 1 \,.
+$$
+On the other hand
+$$
+\sum_{n=0}^{\infty} \dfrac{\left(\dfrac{1}{2}\right)^{n}}{\left(\dfrac{1}{2}\right)^{n}} 
+=\sum_{n=0}^{\infty} 1 \,,
+$$
+which does not converge by the Necessary Condition, since $1$ does not converge to $0$.
+Therefore 
+$$
+\frac{\displaystyle\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}}{\displaystyle\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}} \neq 
+\sum_{n=0}^{\infty} \dfrac{\left(\dfrac{1}{2}\right)^{n}}{\left(\dfrac{1}{2}\right)^{n}}  \,.
+$$
+
+:::
+
+
+
+
+
+
+
+
+## Non-negative series
+
+
+We now investigate series of which all terms are non-negative. To be precise:
+
+::: Definition 
+### Non-negative series
+
+Let $(a_{n})$ be a sequence in $\mathbb{R}$. We call the series 
+$$
+\sum_{n=1}^{\infty} a_{n}
+$$ 
+a **non-negative series** if
+$$
+a_n \geq 0 \,, \quad  \forall \, n \in \N \,.
+$$
+
+:::
+
+
+The key remark for non-negative series is that the partial sums are increasing.
+
+
+:::{.Lemma #lemma-partial-sums-increasing}
+
+Let $(a_{n})$ be a sequence in $\mathbb{R}$ with 
+$$
+a_n \geq 0 \,, \quad  \forall \, n \in \N \,.
+$$
+Define the partial sums as
+$$
+s_k := \sum_{n=1}^k a_n \,.
+$$
+The sequence $(s_k)$ is increasing.
+
+:::
+
+
+::: Proof
+
+For all $k \in \N$ we have
+$$
+s_{k+1} = \sum_{n=1}^{k+1} a_n = s_k + a_{k+1} \geq s_k \,,
+$$
+where we used that $a_{k+1} \geq 0$. Therefore $(s_k)$ is increasing.
+
+:::
+
+
+
+Therefore, if we have a series with non-negative terms
+$$
+\sum_{n=1}^\infty a_n
+$$
+there are only $2$ options:
+
+- $\sum_{n=1}^\infty a_n$ converges,
+- $\sum_{n=1}^\infty a_n$ diverges to $+\infty$.
+
+This is because the partial sums $(s_k)$ are increasing. Therefore we have either:
+
+- $(s_k)$ is bounded above: Then $s_k$ converges by the Monotone Convergence Theorem
+- $(s_k)$ is not bounded above: Therefore $s_k$ diverges to $+\infty$.
+
+
+We present several tests for the convergence of non-negative series. 
+
+
+### Cauchy Condensation Test
+
+
+Let us start with the study of the two non-negative series:
+$$
+\sum_{n=1}^\infty \frac{1}{n^2} \,, \quad 
+\sum_{n=1}^\infty \frac{1}{n} \,.
+$$
+
+::: Question 
+
+Do the above series converge or diverge?
+
+:::
+
+
+The answer is that the first series converges, while the second diverges.
+We prove it in the next two theorems.
+
+
+
+::: Theorem 
+
+The following series converges
+$$
+\sum_{n=1}^\infty \frac{1}{n^2} \,.
+$$
+
+
+:::
+
+
+::: Proof
+
+For $k \in \N$ define the sequence of partial sums 
+$$
+s_{k} := \sum_{n=1}^k \frac{1}{n^2} \,.
+$$
+Note that 
+\begin{align*}
+s_k & = 1 + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \ldots + \frac{1}{k^2} \\
+    & = 1 + \frac{1}{2 \cdot 2} + \frac{1}{3 \cdot 3} + \frac{1}{4 \cdot 4} + \ldots + \frac{1}{k \cdot k} \\
+    & < 1 + \frac{1}{2 \cdot 1} + \frac{1}{3 \cdot 2} + \frac{1}{4 \cdot 3} + \ldots + \frac{1}{k \cdot (k-1)} \\
+    & = 1 + \left( \frac{1}{2} - \frac{1}{3}  \right) + \left( \frac{1}{3} - \frac{1}{4}  \right) + \ldots + \left( \frac{1}{k-1} - \frac{1}{k}  \right) \\
+    & = 1 + 1 - \frac{1}{k} \\
+    & = 2 - \frac{1}{k} \\
+    & < 2 \,,
+\end{align*}
+showing that $s_k$ is bounded above. Recall that $s_k$ is increasing, by 
+Lemma \ref{lemma-partial-sums-increasing}. Therefore, by the Monotone Convergence Theorem,
+we conclude that $s_k$ converges. Hence the series
+$$
+\sum_{n=1}^\infty \frac{1}{n^2}
+$$
+is convergent.
+
+:::
+
+
+
+
+::: Theorem 
+### Harmonic series  {#theorem-harmonic-series}
+
+The **harmonic series**
+$$
+\sum_{n=1}^\infty \frac{1}{n}
+$$
+is divergent.
+
+:::
+
+
+
+::: Proof
+
+For $k \in \N$ define the sequence of partial sums 
+$$
+s_{k} := \sum_{n=1}^k \frac{1}{n} \,.
+$$
+Note that 
+$$
+s_2 = 1 + \frac{1}{2}
+$$
+while
+\begin{align*}
+s_4 & = 1 + \frac{1}{2} + \left( \frac{1}{3} + \frac{1}{4} \right) \\
+    & > 1 + \frac{1}{2} + \left( \frac{1}{4} + \frac{1}{4} \right) \\
+    & = 1 + \frac{1}{2} + 2 \left( \frac{1}{4} \right) \\
+    & = 1 + \frac{1}{2} + \frac{1}{2} \\
+    & = 1 + 2 \left( \frac{1}{2} \right) \\
+\end{align*}
+Similarly
+\begin{align*}
+s_4 & = 1 + \frac{1}{2} + \left( \frac{1}{3} + \frac{1}{4} \right) + 
+        \left( \frac{1}{5} + \frac{1}{6} + \frac{1}{7} + \frac{1}{8} \right) \\
+    & > 1 + \frac{1}{2} + \left( \frac{1}{4} + \frac{1}{4} \right) + 
+        \left( \frac{1}{8} + \frac{1}{8} + \frac{1}{8} + \frac{1}{8} \right) \\
+    & = 1 + \frac{1}{2} + 2 \left( \frac{1}{4} \right) + 4 \left( \frac{1}{8} \right) \\
+    & = 1 + \frac{1}{2} + \frac{1}{2} + \frac{1}{2} \\
+    & = 1 + 3 \left( \frac{1}{2} \right) \\
+\end{align*}
+Proceeding in a similar way, for $k \in \N$ we have 
+\begin{align*}
+s_{2^k} & = 1 + \frac{1}{2} + \left( \frac{1}{3} + \frac{1}{4} \right) + 
+        \left( \frac{1}{5} + \frac{1}{6} + \frac{1}{7} + \frac{1}{8} \right) \\
+        & \qquad + \ldots + \left( \frac{1}{2^{k-1} + 1} + \ldots + \frac{1}{2^k} \right) \\
+    & > 1 + \frac{1}{2} + \left( \frac{1}{4} + \frac{1}{4} \right) + 
+        \left( \frac{1}{8} + \frac{1}{8} + \frac{1}{8} + \frac{1}{8} \right) \\
+        & \qquad + \ldots + \left( \frac{1}{2^k} + \ldots + \frac{1}{2^k} \right) \\
+    & = 1 + \frac{1}{2} + 2 \left( \frac{1}{4} \right) + 4 \left( \frac{1}{8} \right) + \ldots +
+            2^{k-1} \left( \frac{1}{2^k} \right)\\
+    & = 1 + \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \ldots + \frac{1}{2} \\
+    & = 1 + k \left( \frac{1}{2} \right) \\
+\end{align*}
+Hence
+$$
+s_{2^k} > 1 + k \left( \frac{1}{2} \right) \,, \quad \forall \, k \in \N \,,
+$$
+showing that $s_{2^k}$ is unbounded. Therefore $s_k$ is unbounded, and $s_k$ does not converge. Therefore the series
+$$
+\sum_{n=1}^\infty \frac1n
+$$
+is divergent.
+
+:::
+
+
+
+The proofs of the above theorems inspire the Cauchy Condensation Test.
+
+
+
+::: Theorem
+### Cauchy Condensation Test  {#theorem-cauchy-test}
+
+Let $(a_n)$ be a sequence in $\R$. Suppose that $(a_n)$ is non-negative and decreasing, that is,
+$$
+a_{n} \geq a_{n+1} \,, \quad \forall \, n \in \N \,. 
+$$
+They are equivalent:
+
+1. The series 
+$$
+\sum_{n=1}^\infty a_n
+$$ 
+converges.
+
+2. The series
+$$
+\sum_{n=0}^\infty 2^n a_{2^n} = a_1 + 2a_2 + 8a_8 + 16 a_{16} + \ldots 
+$$
+converges. 
+
+:::
+
+
+::: Proof
+
+For $k \in \N$ denote the partial sums by 
+$$
+s_k := \sum_{n=1}^k a_n \,, \quad t_k := \sum_{n=0}^k 2^n a_{2^n} \,.
+$$
+Since $a_n \geq 0$, it is immediate to check that the sequences $(s_k)$ and $(t_k)$ are increasing. 
+
+
+*Part 1.* Assume that the series
+$$
+\sum_{n=0}^\infty 2^n a_{2^n}
+$$
+diverges. Hence the sequence $(t_k)$ diverges and therefore $(t_k)$ is not bounded above.
+
+> Indeed, suppose $(t_k)$ was bounded above. Since $(t_k)$ is increasing,
+we would conclude that $(t_k)$ is convergent by the Monotone Convergence Theorem. Contradiction.
+
+We want to estimate $s_k$ from below. To this end, we notice that
+\begin{align*}
+s_2 & = a_1 + a_2  \\
+    & \geq \frac{1}{2} a_1 + a_2 \\
+    & = \frac{1}{2} \left(  a_1 + 2a_2  \right) \\
+    & = \frac{1}{2} \, t_1 \,,
+\end{align*}
+where we used that $a_n \geq 0$, and so $a_1 > a_1/2$. Moreover
+\begin{align*}
+s_4 & = a_1 + a_2 + (a_3 + a_4) \\
+    & \geq a_1 + a_2 + (a_4 + a_4) \\
+    & = a_1 + a_2 + 2a_4 \\
+    & \geq \frac{1}{2} \, a_1 + a_2 + 2 a_4 \\
+    & = \frac{1}{2} \left(  a_1 + 2a_2 + 4a_4 \right) \\
+    & = \frac{1}{2} \, t_2 \,,
+\end{align*}
+where we used also that $(a_n)$ is decreasing. Similar reasoning yields
+\begin{align*}
+s_8 & = a_1 + a_2 + (a_3 + a_4) + (a_5 + a_6 + a_7 + a_8) \\
+    & \geq a_1 + a_2 + (a_4 + a_4) + (a_8 + a_8 + a_8 + a_8) \\
+    & = a_1 + a_2 + 2 a_4 + 4 a_8 \\
+    & \geq \frac{1}{2} \, a_1 + a_2 + 2 a_4 + 4 a_8 \\
+    & = \frac{1}{2} \left(  a_1 + 2a_2 + 4a_4 + 8 a_8 \right) \\
+    & = \frac{1}{2} \, t_3 \,.
+\end{align*}
+where again we used that $(a_n)$ is decreasing, and $a_n \geq 0$. Iterating, we obtain that for all $k \in \N$ it holds:
+\begin{align*}
+s_{2^k} & = a_1 + a_2 + (a_3 + a_4) + (a_5 + a_6 + a_7 + a_8) \\
+        & \qquad + \ldots + (a_{2^{k-1}} + \ldots + a_{2^k}) \\
+    & \geq a_1 + a_2 + (a_4 + a_4) + (a_8 + a_8 + a_8 + a_8) \\
+    & \qquad + \ldots + (a_{2^k} + \ldots + a_{2^k}) \\
+    & = a_1 + a_2 + 2 a_4 + 4 a_8 + \ldots + 2^{k-1} a_{2^k}\\
+    & \geq \frac{1}{2} \, a_1 + a_2 + 2 a_4 + 4 a_8 + \ldots + 2^{k-1} a_{2^k} \\
+    & = \frac{1}{2} \left(  a_1 + 2a_2 + 4a_4 + 8 a_8 + \ldots + 2^k a_{2^k} \right) \\
+    & = \frac{1}{2} \, t_k \,.
+\end{align*}
+We have shown that 
+$$
+s_{2^k} \geq \frac{1}{2} \, t_k \,, \quad  \forall \, k \in \N \,.
+$$
+Since $(t_k)$ is not bounded above, we infer that $(s_{2^k})$ is not
+bounded above. In particular $(s_k)$ is not bounded, and hence divergent. Thus the series
+$$
+\sum_{n=1}^\infty a_n
+$$
+diverges.
+
+
+*Part2.* Suppose that the series
+$$
+\sum_{n=0}^\infty 2^n a_{2^n}
+$$
+converges. Hence the sequence $(t_k)$ converges, and therefore $(t_k)$ is bounded. This means that there exists $M > 0$ such that 
+$$
+|t_k| \leq M \,, \quad \forall \, n \in \N \,.
+$$
+Since $t_k \geq 0$, the above reads
+$$
+t_k \leq M \,, \quad \forall \, n \in \N \,.
+$$
+Fix $k \in \N$ and let $m \in \N$ be such that
+$$
+k \leq 2^{m+1} - 1 \,.
+$$
+In this way 
+$$
+s_k \leq s_{2^{m+1}-1} \,.
+$$
+We have
+\begin{align*}
+s_{2^{m+1}-1} & = a_1 + (a_2 + a_3) + (a_4 + a_5 + a_6 + a_7) \\
+              & \qquad + \ldots + (a_{2^m} + \ldots + a_{2^{m+1}-1}) \\
+              & \leq a_1 + (a_2 + a_2) + (a_4 + a_4 + a_4 + a_4) \\
+              & \qquad + \ldots + (a_{2^m} + \ldots + a_{2^m} ) \\
+              & = a_1 + 2a_2 + 4a_4 + \ldots + 2^m a_{2^m} \\
+              & = t_m \,,
+\end{align*}
+where we used that $(a_n)$ is decreasing. We have then shown
+$$
+s_k \leq s_{2^{m+1}-1} \leq t_m \leq M \,.
+$$
+Since $M$ does not depend on $k$, we conclude that 
+$$
+s_k \leq M \,, \quad \forall \, k \in \N \,.
+$$
+As $s_k \geq 0$, we conclude that $s_k$ is bounded. Recalling that $(s_k)$ is increasing, by the Monotone Convergence Theorem we infer that $(s_k)$ converges. This proves that the series
+$$
+\sum_{n=1}^\infty a_n
+$$
+is convergent, ending the proof.
+
+:::
+
+
+Thanks to the Cauchy Condensation Test of Theorem \ref{theorem-cauchy-test} we can prove
+the following result.
+
+
+::: Theorem 
+### Convergence of $p$-series  {#theorem-p-series}
+
+Let $p \in \mathbb{R}$. Consider the $p$-series 
+$$
+\sum_{n=1}^{\infty} \frac{1}{n^{p}} \,.
+$$ 
+We have:
+
+1. If $p>1$ the $p$-series converges.
+
+2. If $p \leq 1$ the $p$-series diverges.
+
+
+
+:::
+
+
+::: Proof
+
+The series in question is
+$$
+\sum_{n=1}^\infty a_n  \,, \quad  a_n := \frac{1}{n^p} \,.
+$$
+Note that $(a_n)$ is decreasing and non-negative. Hence, by the Cauchy Condensation Test of Theorem \ref{theorem-cauchy-test}, the $p$-series 
+converges if and only if 
+$$
+\sum_{n=0}^\infty 2^n a_{2^n} 
+$$
+converges. We have
+$$
+\sum_{n=0}^\infty 2^n a_{2^n}  = \sum_{n=0}^\infty 2^{n-np} = 
+\sum_{n=0}^\infty (2^{1-p})^{n} \,,
+$$
+and the latter is a Geometric Series of ratio
+$$
+x := 2^{1-p} \,.
+$$
+By the Geometric Series Test, we have convergence of 
+$$
+\sum_{n=0}^\infty (2^{1-p})^{n} 
+$$
+if and only if 
+$$
+|x| < 1 \,.
+$$
+The above is equivalent to
+$$
+2^{1-p} < 1 = 2^0 \quad \iff \quad
+1 - p < 0 \quad \iff \quad p > 1 \,.
+$$
+Therefore 
+$$
+\sum_{n=1}^\infty \frac{1}{n^p}
+$$
+converges if and only if $p>1$, ending the proof.
+
+:::
+
+
+The following is another notable application of the Cauchy Condensation Test.
+
+
+::: {.Theorem  #theorem-p-log-series}
+
+Let $p \in \R$. Consider the series 
+$$
+\sum_{n=2}^{\infty} \frac{1}{n \left( \log n \right)^p} \,.
+$$ 
+We have:
+
+1. If $p>1$ the series converges.
+
+2. If $p \leq 1$ the series diverges.
+
+:::
+
+
+::: Proof
+
+The series in question is
+$$
+\sum_{n=2}^{\infty} a_n \,, \quad a_n := \frac{1}{n \left( \log n \right)^p}  \,.
+$$
+Note that $(a_n)$ is non-negative and decreasing. Therefore we can apply
+the Cauchy Condensation Test to conclude that the above series is convergent
+if and only if the series
+$$
+\sum_{n=1}^\infty 2^n a_{2^n} 
+$$
+is convergent. We have
+$$
+2^n a_{2^n} = 2^n \, \frac{1}{2^n  \left(  \log 2^n \right)^p } = \frac{1}{n^p \, \log 2} 
+$$
+so that 
+$$
+\sum_{n=1}^\infty 2^n a_{2^n}  = \frac{1}{\log 2 } \, \sum_{n=1}^\infty \frac{1}{n^p} \,.
+$$
+The latter is a $p$-series, which by Theorem \ref{theorem-p-series} converges if and only if $p > 1$. Hence 
+$$
+\sum_{n=2}^{\infty} \frac{1}{n \left( \log n \right)^p} 
+$$ 
+converges if and only if $p > 1$, and the proof is concluded.
+
+:::
+
+
+
+
+
+
+### Comparison Test
+
+
+Another really useful result to study the convergence of non-negative
+series is the Comparison Test.
+
+
+::: Theorem 
+### Comparison test  {#theorem-comparison-test}
+
+Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ and $\left(b_{n}\right)_{n \in \mathbb{N}}$ be non-negative sequences. Suppose that there exists $N \in \mathbb{N}$ such that
+$$
+a_{n} \leq b_{n} \,, \quad \, \forall \, n \geq N \,.
+$$
+They hold:
+
+1. If $\sum_{n=1}^{\infty} b_{n}$ converges, then also $\sum_{n=1}^{\infty} a_{n}$ converges.
+
+2. If $\sum_{n=1}^{\infty} a_{n}$ diverges, then also $\sum_{n=1}^{\infty} b_{n}$ diverges.
+
+
+:::
+
+
+::: Proof
+
+*Part 1*. Define the partial sums starting at $n=N$
+$$
+s_k := \sum_{n=N}^k a_k \,, \quad 
+t_k := \sum_{n=N}^k b_k \,.
+$$
+Suppose that 
+$$
+\sum_{n=1}^{\infty} b_{n}
+$$
+converges. Hence also the series
+$$
+\sum_{n=N}^{\infty} b_{n}
+$$
+converges. Then $(t_k)$ is a convergent sequence, which implies that $(t_k)$ is bounded, and hence bounded above. We have that $s_k$ is bounded above: Indeed, using the assumption, we have
+\begin{align*}
+s_k & = a_N + a_{N+1} + \ldots + a_k \\
+    & \leq b_N + b_{N+1} + \ldots + b_k \\
+    & = t_k \,,
+\end{align*}
+which reads
+$$
+s_k \leq t_k \,, \quad  \forall \, k \geq N \,.
+$$
+Therefore $(s_k)$ is bounded above, being $(t_k)$ bounded above. Recall
+that $s_k$ is increasing, by Lemma \ref{lemma-partial-sums-increasing}. 
+By the Monotone Convergence Theorem we conclude that $s_k$ is convergent, showing
+that the series
+$$
+\sum_{n=N}^\infty a_n 
+$$
+converges. Hence also the series
+$$
+\sum_{n=1}^\infty a_n 
+$$
+converges, concluding the proof of Point 1.
+
+*Part 2.* Note that Point 2 is the contrapositive of Point 1, and hence it holds.
+
+:::
+
+
+Let us give two applications of the Comparison Test.
+
+
+::: Example 
+
+- Consider the series
+$$
+\sum_{n=1}^{\infty} \frac{1}{n^{2}+3 n-1} \,.
+$${#eq-comparison-example-1}
+Since $3 n-1 \geq 0$ for all $n \in \N$, we get
+$$
+\frac{1}{n^{2}+3 n-1} \leq \frac{1}{n^{2}} \,, \quad \forall \, n \in \N \,.
+$$
+By Theorem \ref{theorem-p-series} the $p$-series 
+$$
+\sum_{n=1}^{\infty} \frac{1}{n^{2}}
+$$ 
+converges. Therefore also the series at (@eq-comparison-example-1) converges by the Comparison Test in Theorem \ref{theorem-comparison-test}.
+
+
+- Consider the series
+$$
+\sum_{n=0}^{\infty} \frac{3^{n}+6 n+\dfrac{1}{n+1}}{2^{n}} \,.
+$${#eq-comparison-example-2}
+Note that
+$$
+\frac{3^{n}+6 n+\dfrac{1}{n+1}}{2^{n}} \geq \frac{3^{n}}{2^{n}}=\left(\frac{3}{2}\right)^{n} \,, \quad \forall \, n \in \N \,.
+$$
+Since $\left|\frac{3}{2}\right|=\frac{3}{2}>1$, the series 
+$$
+\sum_{n=0}^{\infty}\left(\frac{3}{2}\right)^{n}
+$$ 
+diverges by the Geometric Series Test in Theorem \ref{theorem-geometric-series-test}. Therefore, by the Comparison Test, also the series
+at (@eq-comparison-example-2) diverges.
+
+:::
+
+
+
+
+
+### Limit Comparison Test
+
+
+To apply the Comparison Test to the series
+$$
+\sum_{n=1}^\infty a_n \,, 
+$$
+one needs to find another sequence $(b_n)$ such that 
+$$
+a_n \leq b_n \,,\quad \forall \, n \geq N \,,
+$$
+or 
+$$
+b_n \leq a_n \,, \quad \forall \, n \geq N \,.
+$$
+This is not always possible. However, one might be able to show that 
+$$
+L = \lim_{n\to \infty} \frac{a_n}{b_n}
+$$
+for some $L \in \R$. In this case, the series of $(a_n)$ and $(b_n)$ can still be compared, 
+in the sense specified in the below theorem.
+
+
+
+::: Theorem 
+### Limit Comparison Test  {#theorem-limit-comparison-test}
+
+Let $(a_n)$ and $(b_n)$ be sequences such that
+$$
+a_n \geq 0 \,, \quad b_n > 0 \,, \quad \forall \, n \in  \N \,.
+$$
+Suppose there exists $L \in \R$ such that
+$$
+L = \lim _{n \rightarrow \infty} \frac{a_{n}}{b_{n}} \,.
+$$
+They hold:
+
+1. If $0<L<\infty$, then
+$$
+\sum_{n=1}^{\infty} a_{n} \,\, \text { converges } \Longleftrightarrow \quad \sum_{n=1}^{\infty} b_{n} \,\, \text { converges. }
+$$
+
+2. If $L=0$, then
+
+      - If $\sum_{n=1}^{\infty} b_{n}$ converges also $\sum_{n=1}^{\infty} a_{n}$ converges,
+
+      - If $\sum_{n=1}^{\infty} a_{n}$ diverges also $\sum_{n=1}^{\infty} b_{n}$ diverges.
+
+::: 
+
+
+
+::: Proof 
+
+*Part 1.* Suppose that $0<L<1$. Set
+$$
+\e := \frac{L}{2} \,.
+$$
+Since $\e>0$ and $a_n/b_n \to L$, there exists $N \in \N$ such that
+$$
+\left|\frac{a_{n}}{b_{n}} - L \right| < \e   \,, \quad \forall \, n \geq N \,.
+$$
+The above is equivalent to 
+$$
+L - \e < \frac{a_{n}}{b_{n}}  < \e + L  \,, \quad \forall \, n \geq N \,.
+$$
+Since $\e = L/2$, we get
+$$
+\frac{L}{2}  < \frac{a_{n}}{b_{n}}  < \frac{3L}{2}  \,, \quad \forall \, n \geq N \,,
+$$
+or equivalently,
+$$
+\frac{L}{2} \, b_n < a_n  < \frac{3L}{2} \, b_n  \,, \quad \forall \, n \geq N \,.
+$$
+We are now ready to prove the main claim:
+
+- Suppose that
+$$
+\sum_{n=1}^{\infty} a_{n}
+$$ 
+converges. Then also 
+$$
+\sum_{n=N}^{\infty} a_{n} \,,
+$$ 
+since we are only discarding a finite number of terms. As 
+$$
+\frac{L}{2} b_{n} \leq a_{n} \,, \quad \forall \, n \geq N \,,
+$$ 
+it follows from the Comparison Test in Theorem \ref{theorem-comparison-test} that the series
+$$
+\sum_{n=N}^{\infty} \frac{L}{2} b_{n} \,.
+$$ 
+converges. Since $L/2$ is a constant, we also conclude that 
+$$
+\sum_{n=1}^{\infty} b_{n} 
+$$
+converges.
+
+- Suppose that 
+$$
+\sum_{n=1}^{\infty} b_{n}
+$$ 
+converges. Then also 
+$$
+\sum_{n=N}^{\infty} \frac{3 L}{2} b_{n}
+$$ 
+converges. Since 
+$$
+a_{n} < \frac{3 L}{2} b_{n} \,, \quad \forall \, n \geq N \,,
+$$ 
+by the Comparison Test we infer that 
+$$
+\sum_{n=N}^{\infty} a_{n}
+$$ 
+converges. Therefore, also 
+$$
+\sum_{n=1}^{\infty} a_{n}
+$$ 
+converges.
+
+*Part 2.* Suppose that $L = 0$. Note that the second bullet point is the contrapositive of the first. Hence we only need to show the first bullet point. Let $\e = 1$. Since $a_n / b_n \to 0$, 
+there exists $N \in \N$ such that 
+$$
+\left|\frac{a_{n}}{b_{n}}-0\right| < \e = 1 \,, \quad \forall \, n \geq N \,. 
+$$ 
+Therefore
+$$
+a_{n} < b_{n} \,, \quad \forall \, n \geq N \,.
+$$
+The thesis follows immediately by the Comparison Test in Theorem \ref{theorem-comparison-test}.
+
+:::
+
+
+::: Important
+
+It might happen that
+$$
+\lim_{n \to \infty } \, \frac{a_{n}}{b_{n}} = \infty \,.
+$$
+In this case it can be helpful to interchange the roles of $a_{n}$ and $b_{n}$, since then 
+$$
+\lim_{n \to \infty } \, \frac{b_{n}}{a_{n}} = 0 \,.
+$$
+
+:::
+
+
+Let us give a few applications of the Limit Comparison Tets.
+
+
+::: Example 
+
+The following series converges
+$$
+\sum_{n=1}^{\infty} \frac{2 n^{3}+5 n+1}{7 n^{6}+2 n+5} \,.
+$$
+
+> *Proof*. Set
+$$
+a_n :=  \frac{2 n^{3}+5 n+1}{7 n^{6}+2 n+5}\,, \quad 
+b_n := \frac{1}{n^3} \,.
+$$
+We have
+\begin{align*}
+L & :=\lim_{n \rightarrow \infty}  \frac{a_n}{b_n} \\
+& = \lim_{n \to \infty} \frac{2 n^{3}+5 n+1}{7 n^{6}+2 n+5} \bigg/  \frac{1}{n^{3}} \\
+& = \lim_{n \rightarrow \infty} \frac{2 n^{6}+5 n^{4}+n^{3}}{7 n^{6}+2 n+5} \\
+& = \lim_{n \rightarrow \infty} \frac{2+ \dfrac{5}{n^{2}} + \dfrac{1}{n^{3}} }{7 + \dfrac{2}{n^{5}}+ \dfrac{5}{n^{6}} } 
+ = \frac{2}{7} \,.
+\end{align*}
+The series 
+$$
+\sum_{n=1}^{\infty} \frac{1}{n^{3}}
+$$ 
+converges, being a $p$-series with $p =3 > 1$. Since $L = \frac{2}{7}>0$, also the series of interest converges, by the Limit Comparison Test.
+
+:::
+
+
+
+::: Example 
+
+Prove that the following series diverges 
+$$
+\sum_{n=1}^{\infty} \frac{n+\cos (n)}{n^{2}} \,.
+$$
+
+> *Proof.* We expect the terms in the series to behave like $1/n$ for large $n$. Hence we set
+$$
+a_n := \frac{n+\cos (n)}{n^{2}} \,, \quad b_n = \frac{1}{n} \,.
+$$
+We compute
+\begin{align*}
+L & := \frac{a_n}{b_n} \\ 
+  & = \lim_{n \rightarrow \infty} \frac{n+\cos (n)}{n^{2}} \bigg/ \frac{1}{n} \\
+  &  = \lim_{n \rightarrow \infty} \frac{n^{2}+n \cos (n)}{n^{2}} \\
+  & = \lim_{n \rightarrow \infty} \left(1+\frac{\cos (n)}{n}\right)
+\end{align*}
+Since
+$$
+-1 \leq \cos (n) \leq 1 \,,
+$$
+we obtain
+$$
+-\frac{1}{n} \leq \frac{\cos (n)}{n} \leq \frac{1}{n} \,.
+$$
+As both $-\frac{1}{n} \rightarrow 0$ and $\frac{1}{n} \rightarrow 0$, by the Squeeze Theorem 
+$$
+\frac{\cos (n)}{n} \longrightarrow 0 \,.
+$$
+Hence 
+$$
+L = \lim_{n \rightarrow \infty} \left(1+\frac{\cos (n)}{n}\right) = 1 \,.
+$$
+The harmonic series
+$$
+\sum_{n=1}^{\infty} \frac{1}{n}
+$$ 
+does not converge. Since $L = 1 > 0$, the series of interest diverges by the Limit Comparison Test.
+
+:::
+
+
+
+::: Example
+
+Prove that the series 
+$$
+\sum_{n=1}^\infty \left( 1 - \cos\left( \frac{1}{n} \right) \right)
+$$
+converges.
+
+>*Solution.* Since 
+$$
+\cos \left( \frac{1}{n} \right) \leq 1 \,,
+$$
+the above is a non-negative series. Recall the limit
+$$
+\lim_{n \to \infty} \frac{1 - \cos(a_n)}{(a_n)^2} = \frac{1}{2} \,,
+$$
+where $(a_n)$ is a sequence in $\R$ such that $a_n \to 0$ and 
+$$
+a_n \neq 0 \quad \forall \, n \in \N \,.
+$$
+In particular, for $a_n = 1/n$, we obtain
+$$
+\lim_{n \to \infty} \, n^2 \, \left(1 - \cos \left( \frac{1}{n} \right) \right)  = \frac{1}{2} \,.
+$$
+Set
+$$
+b_n : =  1 - \cos\left( \frac{1}{n} \right)  \,, \quad
+c_n := \frac{1}{n^2} \,.
+$$
+We have
+\begin{align*}
+L & := \lim_{n \to \infty} \frac{b_n}{c_n} \\
+  & = \lim_{n \to \infty} n^2 \, \left(1 - \cos \left( \frac{1}{n} \right) \right) \\
+  & =  \frac{1}{2} \,.
+\end{align*}
+Note that the series
+$$
+\sum_{n=1}^\infty \frac{1}{n^2} 
+$$
+converges, being a $p$-series with $p>2$. Therefore, since $L = 1/2 >0$, also the series
+$$
+\sum_{n=1}^\infty \left( 1 - \cos\left( \frac{1}{n} \right) \right)
+$$
+converges, by the Limit Comparison Test.
+
+
+:::
+
+
+Sometimes the Limit Comparison Test fails, but the Comparison Test works.
+
+
+::: Example 
+
+Consider the series
+$$
+\sum_{n=1}^{\infty} \frac{1+\sin (n)}{n^{2}} \,.
+$$
+Since 
+$$
+\sin (n) \geq-1 \,,
+$$
+the above is a non-negative series. We expect this series to behave similar to 
+$$
+\sum_{n=1}^{\infty} \frac{1}{n^{2}} \,.
+$$ 
+However
+$$
+\frac{1+\sin (n)}{n^{2}} \bigg/ \frac{1}{n^{2}}=1+\sin (n)
+$$
+does not converge. Hence, we cannot use the Limit Comparison Test.
+In alternative, we note that
+$$
+\frac{1+\sin (n)}{n^{2}} \leq \frac{2}{n^{2}} \,, \quad \forall \, n \in \N \,.
+$$
+The series
+$$
+\sum_{n=1}^{\infty} \frac{2}{n^{2}}
+$$ 
+converges, being a $p$-series with $p=2>1$. Therefore also 
+$$
+\sum_{n=1}^{\infty} \frac{1+\sin (n)}{n^{2}}
+$$ 
+converges, by the Comparison Test of Theorem \ref{theorem-comparison-test}.
+
+
+:::
+
+
+
+
+
+### Ratio Test for positive series
+
+
+The Ratio Test can be generalized to series. Notice that in this case the terms of the series need
+to be positive.
+
+
+::: Theorem  
+### Ratio Test for positive series {#theorem-ratio-test-series}
+
+Let $\left(a_{n}\right)$ be a sequence in $\mathbb{R}$ such that
+$$
+a_{n}>0 \,, \quad \forall \, n \in \N \, .
+$$
+
+1. Suppose that the following limit exists:
+$$
+L:=\lim_{n \to \infty} \frac{a_{n+1}}{a_{n}} \,.
+$$
+They hold:
+
+    - If $L<1$ then $\sum_{n=1}^\infty a_n$ converges.
+
+    - If $L>1$ then $\sum_{n=1}^\infty a_n$ diverges.
+
+
+2. Suppose that there exists $N \in \N$ and $L>1$ such that
+$$
+\frac{a_{n+1}}{a_{n}} \geq L \,, \quad \forall \, n \geq N \,. 
+$$
+Then the series $\sum_{n=1}^\infty a_n$ diverges.
+
+:::
+
+::: Proof
+
+*Part 1.* Let 
+$$
+L:=\lim_{n \to \infty} \frac{a_{n+1}}{a_{n}} \,.
+$$
+
+- Suppose that $L<1$. Therefore there exists $r$ such that
+$$
+L < r < 1 \,.
+$$
+Define
+$$
+\e := r - L \,,
+$$
+so that $\e>0$. By the convergence $a_{n+1}/a_n \to L$ there exists $N \in \N$ such that
+$$
+\left|\frac{a_{n+1}}{a_{n}}-L\right| < \e = r - L \,, \quad \forall \, n \geq N \,.
+$$
+In particular 
+$$
+\frac{a_{n+1}}{a_{n}}-L  <  r - L \,, \quad \forall \, n \geq N \,,
+$$
+which implies 
+$$
+a_{n+1} <  r \, a_n  \,, \quad \forall \, n \geq N \,.
+$$
+Applying $n-N$ times the above estimate we get
+$$
+0 < a_{n} <  r  \, a_{n-1} < \ldots < r^{n-N} \, a_{N} \,, \quad \forall \, n \geq N \,.
+$${#eq-limit-comparison-1}
+Note that the series of $r^{n-N} \, a_{N}$ converges, since
+$$
+\sum_{n=N}^\infty r^{n-N} \, a_{N} = a_{N} \sum_{k=0}^\infty r^k = a_N \frac{1}{1-r} \,,
+$$
+where the last equality follows because $\sum_{k=0}^\infty r^k$ is a geometric series and $0<r<1$. Since (@eq-limit-comparison-1) holds, by
+the Comparison Test in Theorem \ref{theorem-comparison-test} we conclude that
+the series
+$$
+\sum_{n=N}^\infty a_n
+$$
+converges. Therefore also the series 
+$$
+\sum_{n=1}^\infty a_n 
+$$
+converges, ending the proof in the case $L<1$.
+
+- Suppose $L>1$: Then, by the Ratio Test for sequences, it follows that $a_n$ diverges. Therefore 
+$$
+\lim_{n \rightarrow \infty} a_{n} \neq 0 \,,
+$$ 
+and the series $\sum_{n=1}^\infty$ diverges by the Necessary Condition, see
+Theorem \ref{theorem-series-necessary}.
+
+*Part 2.* Suppose there exists $L>1$ and $N \in \N$ such that
+$$
+\frac{a_{n+1}}{a_n} \geq L \,, \quad \forall \, n \geq N \,.
+$$
+By the Ratio Test for sequences it follows that $a_n$ diverges. 
+Therefore $\sum_{n=1}^\infty$ diverges by the Necessary Condition.
+
+:::
+
+
+
+
+::: Example 
+Consider the series 
+$$
+\sum_{n=1}^{\infty} \frac{(n !)^{2}}{(2 n) !}
+$$
+Let 
+$$
+a_{n}=\frac{(n !)^{2}}{(2 n) !}
+$$ 
+and compute
+\begin{align*}
+\frac{a_{n+1}}{a_{n}} & =\frac{((n+1) !)^{2}}{(2(n+1)) !} \bigg/ \frac{(n !)^{2}}{(2 n) !} \\
+& = \frac{((n+1) !)^{2}}{(n !)^{2}} \frac{(2 n) !}{(2(n+1)) !} \\
+& = \left(\frac{(n+1) !}{n !}\right)^{2} \frac{(2 n) !}{(2 n+2) !} \\
+& = \frac{(n+1)^{2}}{(2 n+2)(2 n+1)} \\
+& = \frac{\left(1+\dfrac{1}{n}\right)^{2}}{\left(2+\dfrac{2}{n}\right)\left(2+\dfrac{1}{n}\right)} 
+\end{align*}
+Therefore 
+$$
+L = \lim_{n \to \infty} \frac{a_{n+1}}{a_n} = 
+\lim_{n \to \infty} \frac{\left(1+\dfrac{1}{n}\right)^{2}}{\left(2+\dfrac{2}{n}\right)\left(2+\dfrac{1}{n}\right)}  = \frac{1}{4} \,.
+$$
+Since $L = 1/4 <1$, be the Ratio Test for Series we conclude that the series of interest converges.
+
+:::
+
+
+
+
+::: Important
+
+Like with the Ratio Test for sequences, the case $L=1$ is not covered by Theorem \ref{theorem-ratio-test-series}. This is because, in this case, the series
+$$
+\sum_{n=1}^\infty a_n
+$$
+might be convergent or divergent, as shown in the next example.
+
+:::
+
+
+::: Example
+
+- Consider the series
+$$
+\sum_{n=1}^\infty \frac{1}{n} \,.
+$$
+Setting $a_n = 1/n$, we have
+\begin{align*}
+L & = \lim_{n\to \infty} \frac{a_{n+1}}{a_n} \\
+  & = \lim_{n \to \infty} \frac{1}{n+1} \bigg/ \frac{1}{n} \\
+  & = \lim_{n \to \infty} \frac{n}{n+1} = 1 \,.
+\end{align*}
+Therefore $L = 1$ and we cannot apply the Ratio Test. However the series in question diverges, being the harmonic series.
+
+
+- Consider the series
+$$
+\sum_{n=1}^\infty \frac{1}{n^2} \,.
+$$
+Setting $a_n = 1/n^2$, we have
+\begin{align*}
+L & = \lim_{n\to \infty} \frac{a_{n+1}}{a_n} \\
+  & = \lim_{n \to \infty} \frac{1}{(n+1)^2} \bigg/ \frac{1}{n^2} \\
+  & = \lim_{n \to \infty} \frac{n^2}{n^2 + 2n +1} = 1 \,.
+\end{align*}
+Therefore $L=1$ and we cannot apply the Ratio Test. However the series in question diverges, being
+a $p$-series with $p = 2 >1$.
+
+
+:::
+
+
+
+The Ratio Test can often be combined with other convergence tests, as seen in the 
+following example.
+
+
+::: Example
+
+Using the Cauchy Condensation Test and the Ratio Test, prove that the series below converges
+$$
+\sum_{n=1}^\infty \frac{\log (n)}{ n^{2} } \,.
+$$
+
+>*Solution.* With $a_{n}=\log n / n^{2}$, we have
+$$
+\sum_{n=0}^{\infty} 2^{n} a_{2^{n}}
+=\sum_{n=2}^{\infty} 2^{n} \frac{\log (2^{n})}{\left(2^{n}\right)^{2}}
+=\log (2) \, \sum_{n=2}^{\infty} \frac{n }{2^{n}}
+$$
+This converges according to the Ratio Test: With $b_{n}=n / 2^{n}$, we have
+$$
+\frac{b_{n+1}}{b_n} = \frac{n+1}{2^{n+1}} \bigg/ \frac{n}{2^n} = \frac{n+1}{2n} \longrightarrow \frac12 < 1 \,.
+$$
+Hence $\sum_{n=1}^{\infty} \frac{\log n}{n^{2}}$ converges by the Cauchy Condensation Test.
+
+
+:::
+
+
+
+## General series
+
+In the previous section we presented several tests for non-negative series. 
+For non-negative series we shows that the partial sums $(s_k)$ are increasing, see Lemma
+\ref{lemma-partial-sums-increasing}. This makes non-negative terms series relatively easy to study. 
+
+When a series contains both positive and negative terms, the partial sums
+$(s_k)$ might oscillate, making the series harder to study. 
+In this section we present some tests for general series in $\mathbb{C}$.
+
+
+### Absolute Convergence Test
+
+
+To study general series, we introduce a stronger notions of convergence,
+known as **absolute convergence**.
+
+
+::: Definition 
+### Absolute convergence
+
+Let $\left(a_{n}\right)$ be a sequence in $\mathbb{C}$. The series 
+$\sum_{n=1}^{\infty} a_{n}$ is said to **converge absolutely** if the non-negative series
+$$
+\sum_{n=1}^{\infty}\left|a_{n}\right|
+$$
+converges.
+
+:::
+
+
+Let us show that absolute convergence implies convergence.
+
+
+::: Theorem
+### Absolute Convergence Test    {#theorem-absolute-convergence-test}
+
+Let $\left(a_{n}\right)$ be a sequence in $\mathbb{C}$. If the series $\sum_{n=1}^{\infty} a_{n}$ converge absolutely, then the series converges.
+
+:::
+
+Before proceeding with the proof, we introduce some notation.
+
+::: Notation
+### Positive and negative part
+
+For a number $x \in \R$, we define
+$$
+x^{+}:=
+\begin{cases}
+x & \mbox{ if } \, x \geq 0 \\
+0 & \mbox{ if } \, x < 0 \\
+\end{cases}  \qquad 
+x^{-}:=
+\begin{cases}
+-x & \mbox{ if } \, x < 0 \\
+0 & \mbox{ if } \, x \geq 0 \\
+\end{cases} 
+$$ 
+These are called the **positive part** and **negative part** of $x$, respectively. Note that 
+$$
+x^+ \geq 0 \,, \quad x^{-} \geq 0 \,.
+$$
+Moreover they hold
+$$
+x = x^+ - x^- \,, \quad |x| = x^+ + x^- \,.
+$$
+The above relations are easy to check, and the proof is omitted. In particular, it holds that
+$$
+x^+ \leq |x| \,, \quad x^- \leq |x| \,.
+$$
+
+
+:::
+
+::: Proof
+### Proof of Theorem \ref{theorem-absolute-convergence-test}
+
+*Part 1.* Suppose first that $(a_n)$ is a sequence in $\R$ such that 
+$$
+\sum_{n=1}^\infty |a_n|
+$$
+converges. Since 
+$$
+0 \leq a_{n}^{+} \leq\left|a_{n}\right| \,, \quad \forall \, n \in \N \,,
+$$ 
+we can use the Comparison Test for non-negative series (Theorem \ref{theorem-comparison-test})
+and conclude that the series
+$$
+\sum_{n=1}^{\infty} a_{n}^{+} \,.
+$$
+converges. Similarly, we have
+$$
+0 \leq a_{n}^{-} \leq\left|a_{n}\right| \,, \quad \forall \, n \in \N \,.
+$$ 
+Therefore also the series
+$$
+\sum_{n=1}^{\infty} a_{n}^{-} 
+$$
+converges by the Comparison Test. Since 
+$$
+a_n = a_n^+ - a_n^- \,, \quad \forall \, n \in \N \,,
+$$
+we can use the Algebra of Limits for series (Theorem \ref{theorem-algebra-limits-series}) to 
+conclude that
+$$
+\sum_{n=1}^{\infty} a_{n} =\sum_{n=1}^{\infty}\left(a_{n}^{+}-a_{n}^{-}\right)=\sum_{n=1}^{\infty} a_{n}^{+}-\sum_{n=1}^{\infty} a_{n}^{-}
+$$
+converges.
+
+
+*Part 2.* Suppose now that $(a_n)$ is a sequence in $\C$ such that 
+$$
+\sum_{n=1}^\infty |a_n|
+$$
+converges. Let $x_n, y_n \in \R$ denote the real and imaginary part of $a_n$.
+Therefore
+$$
+|x_n| = \sqrt{x_n^2} \leq \sqrt{x_n^2 + y_n^2} = |a_n| \,, \quad \forall \, n \in \N \,.
+$$
+Therefore the series
+$$
+\sum_{n=1}^\infty |x_n|
+$$
+converges by the Comparison Test for non-negative series (Theorem \ref{theorem-comparison-test}). 
+Since $(x_n)$ is a real sequence, from Part 1 of the proof we have that the series
+$$
+\sum_{n=1}^\infty x_n 
+$$
+converges. Arguing in the same way for the imaginary part $y_n$ we conclude that also
+$$
+\sum_{n=1}^\infty y_n 
+$$
+converges. Finally, by the Algebra of Limits in $\C$, we get
+$$
+\sum_{n=1}^\infty a_n = \sum_{n=1}^\infty \left( x_n + i y_n  \right) = \sum_{n=1}^\infty x_n + i \sum_{n=1}^\infty y_n \,,   
+$$
+proving that $\sum_{n=1}^\infty a_n$ converges.
+
+:::
+
+
+
+
+
+
+::: Example 
+
+The series 
+$$
+\sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n}
+$$ 
+does not converge absolutely, since
+$$
+\sum_{n=1}^{\infty}\left|(-1)^{n} \frac{1}{n}\right|=\sum_{n=1}^{\infty} \frac{1}{n}
+$$
+doesn't converge, being the harmonic series.
+
+:::
+
+
+::: Example 
+
+Prove that the following series converges 
+$$
+\sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}} \,.
+$$
+
+> *Solution*. We have
+$$
+\left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|=\frac{\left|n^{2}-5 n+2\right|}{n^{4}} \leq \frac{n^{2}+5 n+2}{n^{4}}
+$$
+where we used the triangle inequality. Note that
+\begin{align*}
+\frac{n^{2}+5 n+2}{n^{4}} \bigg/ \frac{1}{n^{2}} & =\frac{n^{4}+5 n^{3}+2 n^{2}}{n^{4}} \\
+                                            & = 1+ \frac{5}{n} + \frac{2}{n^{2}} \longrightarrow 1
+\end{align*}
+The series
+$$
+\sum_{n=1}^{\infty} \frac{1}{n^{2}}
+$$ 
+converges, being a $p$-series with $p=2$. Hence, also 
+$$
+\sum_{n=1}^{\infty} \frac{n^{2}+5 n+2}{n^{4}}
+$$ 
+converges by the Limit Comparison Test for non-negative series (Theorem \ref{theorem-limit-comparison-test}). Since 
+\begin{align*}
+0 \leq \left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|  & = \frac{\left|n^{2}-5 n+2\right|}{n^{4}}  \\
+  & \leq \frac{n^{2}+5 n+2}{n^{4}} \,,
+\end{align*} 
+the series
+$$
+\sum_{n=1}^{\infty}\left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|
+$$
+converges by the Comparison Test for non-negative series (Theorem \ref{theorem-comparison-test}). 
+This shows the series
+$$
+\sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}
+$$
+converges by the Absolute Convergence Test.
+
+:::
+
+
+
+
+
+### Ratio Test for general series
+
+
+
+As an application of the Absolute Convergence Test we obtain the Ratio Test for general series.
+
+
+::: Theorem 
+### Ratio Test for general series  {#theorem-ratio-test-general}
+
+Let $\left(a_{n}\right)$ be a sequence in $\mathbb{C}$, such that
+$$
+a_{n} \neq 0 \, \quad \forall \, n \in \N \,.
+$$
+
+1. Suppose that the following limit exists:
+$$
+L:=\lim_{n \to \infty} \left|\frac{a_{n+1}}{a_{n}}\right| \,.
+$$
+They hold:
+
+    - If $L<1$ then $\sum_{n=1}^\infty a_n$ converges absolutely, and hence converges.
+
+    - If $L>1$ then $\sum_{n=1}^\infty a_n$ diverges.
+
+
+2. Suppose that there exists $N \in \N$ and $L>1$ such that
+$$
+\left| \frac{a_{n+1}}{a_{n}} \right| \geq L \,, \quad \forall \, n \geq N \,. 
+$$
+Then the series $\sum_{n=1}^\infty a_n$ diverges.
+
+:::
+
+
+::: Proof
+
+*Part 1.* Let
+$$
+b_{n} := \left|a_{n}\right| \,, 
+$$
+so that 
+$$
+L:= \lim_{n \to \infty} \left|\frac{a_{n+1}}{a_{n}}\right| 
+  = \lim_{n \to \infty} \frac{b_{n+1}}{b_{n}} \,. 
+$$
+
+- Suppose that $L<1$. Since $(b_n)$ is a sequence with non-negative terms, we have that 
+$$
+\sum_{n=1}^{\infty} b_{n}
+$$ 
+converges by the Ratio Test for non-negative series, see Theorem \ref{theorem-ratio-test-series}. Since, by definition
+$$
+\sum_{n=1}^{\infty} b_{n}=\sum_{n=1}^{\infty}\left|a_{n}\right|
+$$
+also the latter series converges, i.e., $\sum_{n=1}^{\infty} a_{n}$ converges absolutely. In particular $\sum_{n=1}^{\infty} a_{n}$ converges, by the Absolute Convergence Test in Theorem \ref{theorem-absolute-convergence-test}.
+
+- Suppose that $L>1$. Then the sequence $(a_n)$ diverges by the Ratio
+Test for sequences. Hence the series 
+$$
+\sum_{n=1}^\infty a_n
+$$
+diverges by the Necessary Condition in Theorem \ref{theorem-series-necessary}.
+
+
+*Part 2.* If there exists $N \in \N$ and $L>1$ such that
+$$
+\left| \frac{a_{n+1}}{a_{n}} \right| \geq L \,, \quad \forall \, n \geq N \,,
+$$
+then the sequence $(a_n)$ diverges by the Ratio
+Test for sequences, and we conclude as above.
+
+:::
+
+
+::: Example 
+
+Prove that the below series converges
+$$
+\sum_{n=1}^{\infty} \frac{(4-3 i)^{n}}{(n+1) !}
+$$
+
+> *Solution.* Set
+$$
+a_{n} := \frac{(4-3 i)^{n}}{(n+1) !} \,.
+$$
+Then
+\begin{align*}
+L & := \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| \\
+& = \left|\frac{a_{n+1}}{a_{n}}\right| \\
+& =\left|\frac{(4-3 i)^{n+1}}{((n+1)+1) !} \bigg/ \frac{(4-3 i)^{n}}{(n+1) !}\right| \\
+& = \frac{|4-3 i|^{n+1}}{|4-3 i|^{n}} \frac{(n+1) !}{(n+2) !} \\ 
+& = \frac{5}{n+2}  \\
+& = 0
+\end{align*}
+By the Ratio Test we conclude that the series $\sum_{n=1}^\infty a_n$
+converges absolutely, and hence converges.
+
+:::
+
+
+
+
+### Exponential function and Euler's Number
+
+We have already encountered the exponential function in the Euler's identity
+$$
+e^{i\theta} = \cos(\theta) + i \sin (\theta) \,, \quad \, \theta \in \R \,.
+$$
+Using the Ratio Test for general series, we can give a precise definition 
+for $e^z$ with $z \in \C$. We start by studying convergence of the exponential series.
+
+
+::: Theorem 
+### Exponential series
+
+Let $z \in \mathbb{C}$. The **exponential series**
+$$
+\sum_{n=0}^{\infty} \frac{z^{n}}{n !}
+$$
+converges absolutely.
+
+:::
+
+::: Proof
+
+Set 
+$$
+a_{n}=\frac{z^{n}}{n !} \,.
+$$
+Then
+\begin{align*}
+L & = \lim_{n \to \infty} \left|\frac{a_{n+1}}{a_{n}}\right| \\
+  & =  \lim_{n \to \infty} \left|\frac{z^{n+1}}{(n+1) !} \bigg/ \frac{z^{n}}{n !}\right| \\
+  & =  \lim_{n \to \infty} \frac{|z|^{n+1}}{|z|^{n}} \frac{n !}{(n+1) !} \\
+  & =  \lim_{n \to \infty} \frac{|z|}{n+1} \\
+  & =    |z| \cdot \lim_{n \to \infty} \frac{1}{n+1} = 0 \,.
+\end{align*}
+Therefore the series converges absolutely by the Ratio Test in Theorem \ref{theorem-ratio-test-general}.
+
+
+:::
+
+
+
+::: Definition 
+### Exponential function
+
+Define the exponential function 
+$$
+\exp \colon \C \to \C \,, \quad 
+\exp (z) := \sum_{n=0}^{\infty} \frac{z^{n}}{n !}
+$$
+for $z \in \mathbb{C}$. We denote 
+$$
+e^{z} := \exp(z) \,, \quad e:=e^{1} \,.
+$$
+
+:::
+
+
+::: Remark
+
+1. Using the definition of $e^z$, one can show the usual properties of exponentials, such that
+$$
+e^{x+y}=e^{x} e^{y} \,, \quad \frac{\mathrm{d}}{\mathrm{d} x} e^{x}=e^{x} \,.
+$$
+
+2. We had defined 
+$$
+e := \lim_{n \to \infty } \left( 1 + \frac1n  \right)^n \,.
+$$
+Using the binomial theorem one can prove that 
+$$
+\lim_{n \to \infty } \left( 1 + \frac1n  \right)^n = 
+\sum_{n=0}^{\infty} \frac{1}{n !} \,.
+$$
+
+:::
+
+
+
+
+
+
+
+### Conditional convergence
+
+Some series do not converge absolutely, but still converge. Such series are said to converge conditionally.
+
+::: Definition 
+### Conditional convergence
+
+Let $(a_n)$ be a sequence in $\C$. We say that the series
+$$
+\sum_{n=1}^{\infty} a_{n}
+$$ 
+converges **conditionally** if it converges, but it does not converge
+absolutely.
+
+:::
+
+
+In practice conditional convergence means that the convergence of the series depends on the order in which we perform the summation. Changing the
+order of summation of a series is called rearrangement.
+
+
+
+
+
+::: Definition
+### Rearrangement of a series
+
+Let $(a_n)$ be a sequence in $\C$. We define:
+
+- A **permutation** is a bijection $\sigma \colon \N \to \N$. 
+- A **rearrangement** of the series $\sum_{n=1}^\infty a_n$ is a series
+$$
+\sum_{n=1 }^\infty a_{\sigma(n)}
+$$
+for some permutation $\sigma$.
+
+:::
+
+
+If a series of complex numebers converges absolutely, 
+then all its rearrangements converge to the same limit.
+
+::: Theorem
+
+Let $(a_n)$ be a sequence in $\C$ such that 
+$$
+\sum_{n=1}^\infty |a_n|
+$$
+converges. For any permutation $\sigma$ we have
+$$
+\sum_{n=1}^\infty a_{\sigma(n)}  = \sum_{n=1}^\infty a_n  \, .
+$$
+
+:::
+
+For a proof, see Theorem 3.55 in [@rudin_introduction]. A very surprising result is the following: If a series of real numbers converges 
+conditionally, then the series can be rearranged to converge to
+any real number.
+
+
+::: Theorem
+### Riemann rearrangement Theorem
+
+Let $(a_n)$ be a real series such that
+$$
+\sum_{n=1}^\infty a_n
+$$
+converges conditionally. Let 
+$$ 
+L \in \R \,\, \mbox{ or } \,\, L = \pm \infty  \,.
+$$
+There exists a permutation $\sigma$ such that the corresponding rearrangement $\sum_{n=1}^\infty a_{\sigma(n)}$ converges
+conditionally to $L$, that is, 
+$$
+\sum_{n=1}^\infty a_{\sigma(n)}  = L  \, .
+$$
+
+:::
+
+
+For a proof, we refer the reader to Theorem 3.54 in [@rudin_introduction].
+
+
+
+
+### Dirichlet and Alternating Series Tests
+
+
+
+There are very few conditional convergence tests available. We present
+the Dirichlet Test and the Alternating Series Test.
+
+
+::: Theorem
+### Dirichlet Test
+
+Let $(c_n)$ be a sequence in $\C$ and $(q_n)$ a sequence in $\R$.
+Suppose that 
+
+- $q_n$ is decreasing, 
+- $q_n \to 0$,
+- $q_n \geq 0$ for all $n \in \N$. 
+- Suppose there exists $M > 0$ such that
+$$
+\left|  \sum_{n=1}^k c_n \right| \leq M \,, \quad \forall \, k \in \N \,.
+$$
+
+Then the following series converges
+$$
+\sum_{n=1}^\infty c_n q_n
+$$
+
+:::
+
+
+::: Proof 
+
+Define the partial sums
+$$
+s_k := \sum_{n=1}^k c_n \,, \quad \forall \, k \in \N \,.
+$$
+By assumption it holds
+$$
+|s_k| \leq M \,, \quad \forall \, k \in \N \,.
+$${#eq-dirichlet-test-proof}
+Note that 
+\begin{align*}
+c_1 & = s_1 \\ 
+c_2 & = s_2 - s_1 \\
+& \ldots  \ldots \\ 
+c_n & = s_{n} - s_{n-1} \,.
+\end{align*}
+Therefore
+\begin{align*}
+\sum_{n=1}^k c_k q_k & = c_1 q_1 + c_2 q_2 + \ldots + c_k q_k \\
+                     & = s_1 q_1 + (s_2 - s_1) q_2 + \ldots + (s_k - s_{k-1})q_k \\
+                     & = s_1 (q_1 - q_2) + s_2 (q_2 - q_3) + \ldots +
+                         s_{k-1} (q_{k-1} - q_k) + s_k q_k \\
+                     & = \left( \sum_{n=1}^{k-1} s_n (q_n - q_{n+1}) \right) + s_k q_k
+\end{align*}
+Since $(s_k)$ is bounded and $q_k \to 0$, we conclude that
+$$
+s_k q_k \to 0 \,.
+$$
+Further, notice that
+$$
+q_n - q_{n+1} \geq 0 \,,
+$$
+since $q_n$ is decreasing. Therefore, using (@eq-dirichlet-test-proof), we get
+\begin{align*}
+|s_n| |q_n -  q_{n+1}| & = |s_n| (q_n -  q_{n+1}) \\
+                       & \leq M (q_n -  q_{n+1})
+\end{align*}
+for all $n \in \N$. Note that
+$$
+\sum_{n=1}^{k-1} M (q_n -  q_{n+1}) = M (q_1 - q_{k}) \,.
+$$
+Since $q_k \to 0$ as $k \to \infty$, we conclude that
+$$
+\sum_{n=1}^{\infty} M (q_n -  q_{n+1}) = M q_1 \,.
+$$
+Hence, by the Comparison Test for non-negative series, we infer
+that 
+$$
+\sum_{n=1}^\infty  |s_n| |q_n -  q_{n+1}|  \,.
+$$
+In particular the series
+$$
+\sum_{n=1}^\infty  s_n (q_n -  q_{n+1})
+$$
+converges by the Absolute Convergence Test. Since we have shown
+$$
+\sum_{n=1}^k c_k q_k = \left( \sum_{n=1}^{k-1} s_n (q_n - q_{n+1}) \right) + s_k q_k
+$$
+and $s_k q_k \to 0$, we conclude that
+$$
+\sum_{n=1}^\infty c_k q_k  
+$$
+converges.
+
+::: 
+
+
+
+::: Example
+
+Let $\theta \in \R$, with 
+$$
+\theta \neq 2 k \pi \,, \quad \forall \, k \in \Z \,.
+$$
+Prove that the below series are conditionally convergent
+$$
+\sum_{n=1}^\infty \frac{e^{i \theta n}}{n} \,, \quad \sum_{n=1}^{\infty} \frac{\cos(\theta n)}{n} \,, \quad \sum_{n=1}^{\infty} \frac{\sin(\theta n)}{n} \,.
+$$
+
+> *Solution.* Clearly the series
+$$
+\sum_{n=1}^\infty \frac{e^{i \theta n}}{n}
+$$
+does not converge absolutely, since 
+$$
+\sum_{n=1}^\infty \left| \frac{e^{i \theta n}}{n} \right| 
+= \sum_{n=1}^\infty \frac{1}{n}
+$$
+diverges, being the Harmonic Series. Let us prove convergence of
+$\sum_{n=1}^\infty \frac{e^{i \theta n}}{n}$.
+Define the sequences
+$$
+c_n := e^{i\theta n} \,, \quad q_n := \frac{1}{n} \,.
+$$
+We have that $q_n$ is decreasing, $q_n \to 0$ and $q_n \geq 0$. 
+Let us prove that there exists $M>0$ such that
+$$
+\left| \sum_{n=1}^k  e^{i\theta n} \right| \leq M \,,\quad \forall \, k \in \N \,. 
+$${#eq-dirichlet-example}
+Note that
+$$
+1 - e^{i\theta} \neq 0 \,,
+$$
+since $\theta \neq 2k\pi$ for all $k \in \Z$. Therefore we can use the
+Geometric Series (truncated) summation formula to get
+\begin{align*}
+\sum_{n=1}^k  e^{i\theta n} & = \sum_{n=1}^k  e^{i\theta n} \\
+                            & = \frac{1- e^{i(k+1)\theta}}{1 - e^{i\theta}} - 1 \\
+                            & = e^{i\theta} \, 
+                            \frac{1- e^{ik\theta}}{1 - e^{i\theta}}
+\end{align*}
+Thus
+\begin{align*}
+\left| \sum_{n=1}^k  e^{i\theta n} \right| & = \left| e^{i\theta} \, 
+                            \frac{1- e^{ik\theta}}{1 - e^{i\theta}} \right| \\
+                            & = \left| e^{i \theta} \right|
+                            \left|\frac{1- e^{ik\theta}}{1 - e^{i\theta}} \right| \\
+                            & = \frac{ |1- e^{ik\theta}|}{|1 - e^{i\theta} |} \\
+                            & \leq \frac{ |1| + |e^{ik\theta}|}{|1 - e^{i\theta} |} \\
+                            & =  \frac{ |1| }{|1 - e^{i\theta} |}
+\end{align*}
+where we used the triangle inequality. Since the right hand side does not
+depend on $k$, we can set
+$$
+M := \frac{ |1| }{|1 - e^{i\theta} |} \,,
+$$
+so that (@eq-dirichlet-example) holds. Therefore 
+$$
+\sum_{n=1}^\infty \frac{e^{i \theta n}}{n}
+$$
+converges by the Dirichlet Test. Recalling the Euler's Identity
+$$
+e^{i\theta} = \cos(\theta) + i \sin(\theta) \,,
+$$
+we obtain that also the series 
+$$
+\sum_{n=1}^\infty \frac{\cos(n \theta)}{n} \,, \quad 
+\sum_{n=1}^\infty \frac{\sin(n \theta)}{n}
+$$
+converge. 
+
+:::
+
+
+As a corollary of the Dirichlet Test we obtain the Alternate Convergence
+Test.
+
+
+
+
+::: Theorem 
+### Alternate Convergence Test
+
+Let $(q_n)$ be a sequence in $\R$ such that 
+
+- $q_n$ is decreasing, 
+- $q_n \to 0$,
+- $q_n \geq 0$ for all $n \in \N$. 
+
+The following series converges
+$$
+\sum_{n=1}^\infty (-1)^n q_n
+$$
+
+:::
+
+
+::: Proof
+
+Define the sequence
+$$
+c_n := (-1)^n \,.
+$$
+Then 
+$$
+\sum_{n=1}^k c_n = 
+\begin{cases}
+0  &  \,\, \mbox{ if } \,\, k \, \mbox{ even} \\
+-1  &  \,\, \mbox{ if } \,\, k \, \mbox{ odd} \\
+\end{cases}
+$$
+Hence
+$$
+\left| \sum_{n=1}^k c_n \right| \leq 1 \,, \quad  \forall \, k \in \N \,.
+$$
+By the Dirichlet Test we have convergence of
+$$
+\sum_{n=1}^\infty c_n q_n = 
+\sum_{n=1}^\infty (-1)^n q_n  \,.
+$$
+
+:::
+
+
+
+::: {.Example  #example-alternating-series-test}
+
+Prove that the below series converges conditionally
+$$
+\sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n} \,.
+$$
+
+>*Solution.* The series does not converge absolutely, since
+$$
+\sum_{n=1}^{\infty} \left| (-1)^{n} \frac{1}{n} \right| =
+\sum_{n=1}^\infty \frac1n
+$$
+diverges, being the Harmonic Series. We need to show convergence of
+$$
+\sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n} \,.
+$$
+To this end, set 
+$$
+q_n := \frac1n \,.
+$$
+Clearly $q_n \geq 0$, $q_n \to 0$ and $q_n$ is decreasing. Hence the series
+converges by the Alternating Series Test.
+
+:::
+
+
+
+
+### Abel's Test
+
+
+Another conditional convergence test is the Abel Test. This looks similar
+to the Dirichlet Test, however notice that the Abel Test only deals 
+with real sequences.
+
+
+::: Theorem
+### Abel's Test
+
+Let $(a_n)$ and $(q_n)$ be sequences in $\R$.
+Suppose that 
+
+- $q_n$ is monotone, 
+- $q_n$ is bounded,
+- The series below converges
+$$
+\sum_{n=1}^\infty a_n \,.
+$$
+
+Then the following series converges
+$$
+\sum_{n=1}^\infty a_n q_n
+$$
+
+
+:::
+
+
+The proof is similar to the one of the Dirichlet Test. We decided to omit it.
+
+
+::: Example
+
+Prove that the series below converges conditionally
+$$
+\sum_{n=1}^\infty \ \frac{(-1)^n}{n} \left( 1 + \frac{1}{n} \right)^n \,.
+$$
+
+> *Solution.* Set 
+$$
+a_n:= \frac{(-1)^n}{n}\,, \quad q_n := \left( 1 + \frac{1}{n} \right)^n \,.
+$$
+We have seen that $q_n$ is monotone increasing and bounded. Moreover the
+series $\sum_{n=1}^\infty a_n$ converges by the Alternating Series Test, 
+as seen in Example \ref{example-alternating-series-test}. Hence the series $\sum_{n=1}^\infty a_n q_n$ converges by the Abel Test.
+>
+>However the series in question does not converge absolutely. Indeed, 
+$$
+\left|\frac{(-1)^n}{n} \left( 1 + \frac{1}{n} \right)^n \right| = 
+\frac{1}{n} q_n \geq  \frac{1}{n} q_1 \,,
+$$
+since $(q_n)$ is increasing. As the series 
+$$
+\sum_{n=1}^\infty \frac{1}{n} q_1
+$$
+diverges, by the Comparison Test we conclude that also 
+$$
+\sum_{n=1}^\infty \left|\frac{(-1)^n}{n} \left( 1 + \frac{1}{n} \right)^n \right|
+$$
+diverges, proving that the series in the example converges conditionally.
+
+
+:::
+
+
+
+
+
+
+

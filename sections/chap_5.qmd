@@ -1,0 +1,2036 @@
+::: {.content-hidden}
+$
+{{< include macros.tex >}}
+$
+:::
+
+
+
+
+
+# Complex Numbers
+
+
+We have seen that $\sqrt{x}$ exists in $\R$ for all for $x \geq 0$.
+We defined
+$$
+\sqrt{x}:= \alpha \,, \quad \alpha := \sup \{ t \in \R \divider t^2 < x  \}\,,
+$$
+and proved that
+$$
+\alpha^2 = x \,.
+$$
+This procedure was possible for $x \geq 0$.
+
+::: Question
+Is there a number $\alpha \in \R$ such that 
+$$
+\alpha^{2}=-1  \,\, ?
+$${#eq-complex-intro-1}
+:::
+
+The answer to the above question is no. This is because $\R$ is an ordered field, and from axiom (MO) it follows that:
+$$
+x^2 \geq 0 \,, \quad \forall \, x \in \R \,.
+$$
+However we would still like to solve equation (@eq-complex-intro-1) somehow. To do this, we introduce the **imaginary numbers** or **complex numbers**. We define $i$ to be that *number* such that
+$$
+i^{2}=-1 \,.
+$$
+Formally, we can also think of $i=\sqrt{-1}$. We can use this speacial number to define the square root of a negative number $x<0$:
+$$
+\sqrt{x}: = i \sqrt{-x} \,.
+$$
+Note that $\sqrt{-x}$ is properly defined in $\mathbb{R}$, because
+$-x>0$ if $x<0$. 
+
+
+## The field $\C$
+
+
+We would like to be able to do calculations with the newly introduced complex numbers, and investigate their properties. We can introduce them
+rigorously as a field, as we did for $\mathbb{R}$. 
+
+
+::: Definition
+### Complex Numbers
+
+The set of complex numbers $\C$ is defined as
+
+$$
+\C := \R \oplus i \R  := \{x \oplus i y  \divider x, y \in \R \} \,.
+$$
+
+:::
+
+In the above the symbol $\oplus$ is used to denote the pair
+$$
+x \oplus i y = (x,y)
+$$
+with $x,y \in \R$. This means that $x$ and $y$ play different *roles*.
+
+
+::: Definition
+
+For a complex number
+$$
+z = x \oplus i y  \in \C
+$$
+we say that
+
+- $x$ is the **real part** of $z$, and denote it by 
+$$
+x = \Re (z)
+$$
+- $y$ is the **imaginary part** of $z$, and denote it by 
+$$
+y = \Im (z)
+$$
+
+We say that
+
+- If $\Re z = 0$ then $z$ is a **purely imaginary** number.
+- If $\Im z = 0$ then $z$ is a **real** number.
+
+:::
+
+
+In order to make the set $\mathbb{C}$ into a field, we first have to define the two binary operations of addition $+$ and multiplication $\cdot$, 
+$$
++ , \cdot \,\, \colon \C \times \C \to \C \,.
+$$
+Then we need to prove that these operations satisfy all the field axioms.
+
+
+::: Definition
+### Addition in $\C$   {#definition-addition-C}
+
+Let $z_1,z_2 \in \C$, so that 
+$$
+z_1 = x_1 \oplus i y_1 \,\,, \quad z_2 = x_2 \oplus i  y_2 \,\, ,
+$$
+for some $x_1,x_2,y_1,y_2 \in \R$. We define the sum of $z_1$ and
+$z_2$ as
+$$
+z_1 + z_2 = \left( x_{1} \oplus i y_{1} \right)+ \left(x_{2} \oplus i y_{2} \right):=\left(x_{1}+x_{2}\right) \oplus i  \left(y_{1}+y_{2}\right) 
+$$
+where the $+$ symbol on the right hand side is the addition operator in $\mathbb{R}$. 
+
+:::
+
+Clearly, $z_1 + z_2$ as defined above is an element of $\C$. Therefore
+$+$ defines a binary operation over $\C$.
+
+
+::: Notation
+
+From the above definition, we have that, for all $x, y \in \mathbb{R}$, 
+
+$$
+(x \oplus i 0 )+(0 \oplus i y)= x \oplus i y .
+$$
+To simplify notation, we will write 
+$$
+x \oplus i 0 = x \,, \quad \,  0 \oplus i y  = i y 
+$$ 
+and 
+$$
+x \oplus i y = x + i y \,.
+$$
+We will also often swap $i$ and $y$, writing equivalently
+$$
+x + i y = x + y i \,.
+$$
+
+
+:::
+
+
+We now want to define multiplication between complex numbers. 
+
+
+::: Remark 
+### Formal calculation for multiplication in $\C$  {#remark-formal-multiplication}
+
+How to define multiplication in $\C$? Whatever the definition may be, 
+at least it has to give that
+that 
+$$
+i^{2}=i \cdot i=-1 \,.
+$$
+Keeping the above in mind, let us do some formal calculations: 
+For $z_1 = x_1 + i y_1, z_2 = x_2 + i y_2$ we have
+
+\begin{align*}
+z_1 \cdot z_2 & = \left(x_{1}+i y_{1}  \right) \cdot \left(x_{2}+ i y_{2} \right) \\
+& = x_{1} \cdot x_{2} + x_{1} \cdot i y_{2} + x_{2} \cdot i y_{1} + y_{1} \cdot i^2 y_{2}   \\
+& = \left(x_{1} \cdot x_{2} - y_{1} \cdot y_{2} \right) + i \left(x_{1} \cdot y_{2} + x_{2} \cdot y_{1} \right)  
+\end{align*}
+
+:::
+
+Remark \ref{remark-formal-multiplication} motivates the following definition of multiplication.
+
+
+::: Definition
+### Multiplication in $\C$   {#definition-multiplication-C}
+
+Let $z_1,z_2 \in \C$, so that 
+$$
+z_1 = x_1 \oplus i y_1 \,\,, \quad z_2 = x_2 \oplus i  y_2 \,\, ,
+$$
+for some $x_1,x_2,y_1,y_2 \in \R$. We define the multiplication of 
+$z_1$ and $z_2$ as 
+$$
+z_1 \cdot z_2 = \left(x_{1}+i y_{1} \right) \cdot\left(x_{2}+ i y_{2} \right) := \left(x_{1} \cdot x_{2} - y_{1} \cdot y_{2}\right) + i \left(x_{1} \cdot y_{2} + x_{2} \cdot y_{1} \right) \,,
+$$
+where the operations $+$ and $\cdot$ on the right hand side are the operations in $\R$.
+
+:::
+
+Clearly, $z_1 \cdot z_2$ as defined above is an element of $\C$. Therefore
+$\cdot$ defines a binary operation over $\C$.
+
+
+
+::: {.Remark #remark-complex-i}
+
+To check that we have given a good definition of product, we should
+have that
+$$
+i^2 = - 1\,,
+$$
+as expected. Indeed:
+
+\begin{align*}
+i^{2} & = (0+ 1 i) \cdot (0+ 1 i) \\
+      & = (0 \cdot 0 - 1 \cdot 1) + (0 \cdot 1 + 0 \cdot 1) i = - 1 \,.
+\end{align*}
+:::
+
+
+
+::: Important
+
+In view of Remark \ref{remark-complex-i}, we see that he formal calculations in Remark \ref{remark-formal-multiplication} are compatible with 
+the definition of multiplication of complex numbers. Therefore, it is not necessary to memorize the multiplication formula, but it suffices to carry out calculations as usual, and replace $i^{2}$ by $-1$.
+
+:::
+
+
+
+
+::: Example
+
+Suppose we want to multiply the complex numbers
+$$
+z =  -2+3 i \,, \quad w = 1- i \,.
+$$
+Using the definition we compute
+\begin{align*}
+z \cdot w & = (-2+3 i) \cdot (1 -  i) \\ 
+            & = (-2-(-3))+(2+3) i \\
+            & = 1 + 5 i \, .
+\end{align*}
+Alternatively, we can proceed formally as in Remark 
+\ref{remark-formal-multiplication}. We just need to recall that
+$i^2$ has to be replaced with $-1$:
+\begin{align*}
+z \cdot w & = (-2+3 i) \cdot (1 -  i) \\ 
+            & = - 2 + 2i + 3i - 3 i^2  \\
+            & = (-2  + 3 ) + (  2 + 3 ) i \\
+            & = 1 + 5 i \, .
+\end{align*}
+
+:::
+
+
+
+We now want to check that 
+$$
+(\C, + , \cdot)
+$$
+is a field. All the field axioms are trivial to check, except for
+the existence of additive and multiplicative inverses.
+
+
+::: Proposition
+### Additive inverse in $\C$  {#proposition-C-additive-inverse}
+
+The neutral element of addition in $\C$ is the number
+$$
+0 := 0 + 0 i \,.
+$$
+For any $z = x + i y \in \C$, the unique additive inverse is given by
+$$
+- z := -x - i y \,.
+$$
+
+
+:::
+
+
+The proof is immediate and is left as an exercise. The multiplication
+requires more care. 
+
+
+::: Remark
+### Formal calculation for multiplicative inverse  {#remark-formal-inverse}
+
+Let us first carry our some formal 
+calculations. Let 
+$$
+z = x+iy \in \C \,, \quad z \neq 0 \,.
+$$
+First, note that 
+$$
+z \cdot 1 = (x + iy) \cdot (1 + 0 i)  = x + iy = z \,,
+$$
+and therefore $1$ is the neutral element of multiplication.
+Thus, the inverse of $z$ should be a complex number $z^{-1} \in \C$ 
+such that
+$$
+z \cdot z^{-1} = 1 \,.
+$$
+We would like to define
+$$
+z^{-1} = \frac{1}{x + iy} \,.
+$$
+Such number does not belong to $\C$, as it is not of
+the form $a + ib$ for some $a,b \in \R$. However it is what 
+the inverse should look like. Proceeding formally:
+\begin{align*}
+\frac{1}{x+ i y} & = \frac{1}{x+ iy} \cdot 1 \\
+                & = \frac{1}{x+ i y} \cdot \frac{x- i y}{x - i y} \\
+                & =\frac{x - i y}{x^{2}-(iy)^{2}} \\
+                & =\frac{x- iy}{x^{2}+y^{2}} \\
+                & = \frac{x}{x^{2}+y^{2}}+i \, \frac{-y}{x^{2}+y^{2}} \,.
+\end{align*}
+The right hand side is an element of $\C$, and looks like a good candidate for $z^{-1}$.
+
+:::
+
+Motivated by the above remark, we define inverses in $\C$ in the following way.
+
+::: Proposition
+### Multiplicative inverse in $\C$  {#proposition-C-multiplicative-inverse}
+
+The neutral element of multiplication in $\C$ is the number
+$$
+1 := 1 + 0 i \,.
+$$
+For any $z = x + i y \in \C$, the unique multiplicative inverse is given by 
+$$
+z^{-1} := \frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}} \,.
+$$
+
+:::
+
+
+::: Proof
+It is immediate to check that $1$ is the neutral element of 
+multiplication in $\C$. For the remaining part of the statement, set
+$$
+w := \frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}} \,.
+$$
+We need to check that $z \cdot w = 1$
+\begin{align*}
+z \cdot w & = (x+i y) \cdot \left(\frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}} \right) \\
+& = \left(\frac{x^{2}}{x^{2}+y^{2}} - \frac{y \cdot(-y)}{x^{2}+y^{2}}\right) + i \, \left(\frac{x \cdot(-y)}{x^{2}+y^{2}}+\frac{x y}{x^{2}+y^{2}}\right) \\
+& =1 \,,
+\end{align*}
+so indeed $z^{-1}=w$.
+
+:::
+
+
+::: Important
+
+It is not necessary to memorize the formula for $z^{-1}$. Indeed one can just remember the trick of multiplying by 
+$$
+1 = \frac{x - iy }{x - iy} \,,
+$$
+and proceed formally, as done in Remark \ref{remark-formal-inverse}.
+
+:::
+
+::: Example
+Let $z = 3 + 2 i$. We want to compute $z^{-1}$. By the formula in Propostion \ref{proposition-C-multiplicative-inverse} we immediately get
+$$
+z^{-1} = \frac{3}{3^{2}+2^{2}} +  \, \frac{-2}{3^{2}+2^{2}} \, i = 
+\frac{3}{13}-\frac{2}{13} \, i  \,.
+$$
+Alternatively, we can proceed formally as in Remark \ref{remark-formal-inverse}
+\begin{align*}
+(3+2 i)^{-1} & = \frac{1}{3+2 i} \\ 
+             & = \frac{1}{3+2 i} \, \frac{3-2 i}{3-2 i} \\
+             & = \frac{3-2 i}{3^2+2^2} \\
+             & = \frac{3}{13}-\frac{2}{13} i  \,,
+\end{align*}
+and obtain the same result.
+:::
+
+
+
+We can now prove that $\C$ is a field.
+
+::: Theorem 
+
+$(\C,+, \cdot)$ is a field.
+
+:::
+
+
+::: Proof
+
+We need to check that all field axioms hold. For the addition we have
+
+- (A1) To show that $+$ is commutative, note that
+\begin{align*}
+(x+iy)+(a+ ib) & = (x+a)+ i (y+b) \\
+               & = (a + x)+ i (b+y) \\
+               & = (a + i b ) + (x + i y) \,,
+\end{align*}
+where we used Definition \ref{definition-addition-C} in the first and last equality, and the commutative property of the real numbers (which holds since by definition $\R$ is a field) in the second equality. Associativity can be checked in the same way.
+
+- (A2) The neutral element of addition is $0$, as stated in Proposition \ref{proposition-C-additive-inverse}.
+
+- (A3) Existence of additive inverses is given by Proposition \ref{proposition-C-additive-inverse}.
+
+
+For multiplication we have:
+
+- (M1) Commutativity and associativity of product in $\C$ can be checked
+using Definition \ref{definition-multiplication-C} and commutativity and associativity of sum and multiplication in $\R$.
+
+- (M2) The neutral element of multiplication is $1$, as stated in 
+Propostion \ref{proposition-C-multiplicative-inverse}.
+
+- (M3) Existence of multiplicative inverses is guaranteed by Proposition \ref{proposition-C-multiplicative-inverse}.
+
+Finally one should check the associative property (AM). This is left as
+an exercise.
+
+:::
+
+
+
+
+
+### Division in $\C$
+
+
+Suppose we want to divide two complex numbers $w,z \in \mathbb{C}, z \neq 0$, with
+$$
+z = x + i y \,, \quad w = a + ib \,.
+$$
+We have two options:
+
+1. Use the formula for the inverse from Proposition \ref{proposition-C-multiplicative-inverse} and compute
+$$
+z^{-1} := \frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}} \,.
+$$
+Then we use the multiplication formula of Definition \ref{definition-multiplication-C} to compute
+\begin{align*}
+\frac{w}{z} & = w \cdot z^{-1} \\
+            & = (a + i b) \, \cdot \left( \frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}}   \right) \\
+            & = \frac{ (ax + by) + i (bx - ay) }{ x^2 + y^2 }
+\end{align*}
+
+2. Proceed formally as in Remark \ref{remark-formal-inverse}, using the 
+multiplication by $1$ trick. We would have
+\begin{align*}
+\frac{w}{z} & = \frac{ a + i b }{ x + i y } \\
+            & = \frac{ a + i b }{ x + i y } \, \frac{ x - i y }{ x - i y } \\
+            & = \frac{ (ax + by) + i (bx - ay) }{ x^2 + y^2 }
+\end{align*}
+
+
+
+::: Example
+
+Let $w=1+i$ and $z=3-i$. We compute $\frac{w}{z}$ using the two options we have:
+
+1. Using the formula for the inverse from Proposition \ref{proposition-C-multiplicative-inverse} we compute
+\begin{align*}
+z^{-1} & = \frac{x}{x^{2}+y^{2}} + i \, \frac{-y}{x^{2}+y^{2}} \\
+       & = \frac{3}{3^2 + 1^2} - i \, \frac{-1}{3^2 + 1^2} \\
+       & = \frac{3}{10} + \frac{1}{10} \, i
+\end{align*}
+and therefore
+\begin{align*}
+\frac{w}{z} & = w \cdot z^{-1} \\
+            & = (1 + i) \, \left(  \frac{3}{10} + \frac{1}{10} \, i \right) \\
+            & = \left(\frac{3}{10}-\frac{1}{10}\right)+\left(\frac{1}{10}+\frac{3}{10}\right) i \\
+            & = \frac{2}{10}+\frac{4}{10} i \\
+            & = \frac{1}{5}+\frac{2}{5} i
+\end{align*}
+
+2. We proceed formally, using the 
+multiplication by $1$ trick. We have
+\begin{align*}
+\frac{w}{z} & = \frac{1+i}{3-i}  \\
+            & = \frac{1+i}{3-i} \frac{3+i}{3+i} \\
+            & = \frac{3-1+(3+1) i}{3^2+1^2} \\
+            & =\frac{2}{10}+\frac{4}{10} i \\
+            & = \frac{1}{5}+\frac{2}{5} i
+\end{align*}
+
+
+:::
+
+
+
+
+### $\C$ is not ordered
+
+We have seen that $(\C,+,\cdot)$ is a field. One might wonder whether $\C$ is also an ordered field. It turns out that this is not the case.
+
+::: {.Theorem #theorem-C-order}
+
+The field $(\C,+,\cdot)$ is not ordered.
+
+:::
+
+
+::: Proof
+Suppose that $\C$ is an ordered field, that is, there 
+exists an order relation $\leq$ on $\C$ compatible with 
+the operations $+$ and $\cdot$. By axiom (MO) it follows that for all elements $z \in \C, z \neq 0$, we have that $z^{2}>0$. But since $i^{2}=-1<0$, we get a contradiction.
+
+:::
+
+Hence, it is not possible to compare two complex numbers.
+
+
+
+### Completeness of $\C$
+
+One might also wonder whether $\C$ is complete. Our definition of completeness uses the notion of supremum, which only makes sense if the field is ordered. This is not the case for $\C$ as we have seen in Theorem \ref{theorem-C-order}.
+
+Still, it is possible to give a different definition of completeness using the notion of Cauchy sequence. In ordered fields, this new definition of completeness is equivalent to the definition which uses the supremum. 
+
+The new definition of completeness with Cauchy sequences also makes sense in non-ordered fields. We will see that $\C$ is a complete field, according to this new definition.
+
+
+
+
+
+## Complex conjugates
+
+
+When computing inverses, we used the trick to multiply by $1$:
+$$
+z^{-1} = \frac{1}{z} \cdot 1 = \frac{1}{x + i y}  \cdot \frac{x-iy}{x-iy} \,.
+$$
+The complex number $x-iy$ is obtained by changing the sign to the
+imaginary part of $z = x+iy$. We give a name to this operation.
+
+::: Definition 
+### Complex conjugate
+
+Let $z=x+iy$. We call the **complex conjugate** of $z$, denoted by $\bar{z}$, the complex number
+
+$$
+\bar{z}=x- i y \, .
+$$
+
+
+:::
+
+
+
+::: Example 
+
+We have the following conjugates:
+\begin{align*}
+&\overline{3+4 i}  = 3 - 4 i \, , & \quad & \overline{3-4 i} = 3+4 i\,, \\
+& \overline{-3+4 i}  = -3 - 4 i \,, & \quad & \overline{-3-4 i}=-3+4 i \,, \\ & \overline{3}  = 3 \, , & \quad & \overline{4 i}=-4 i \, .
+\end{align*}
+
+:::
+
+
+
+Complex conjugates have the following properties:
+
+
+::: Theorem 
+
+For all $z_1, z_2 \in \mathbb{C}$ it holds:
+
+- $\overline{z_1 +  z_2 }=\overline{z_1}+\overline{z_2}$
+
+- $\overline{z_1 \cdot z_2}=\overline{z_1} \cdot \overline{z_2}$ 
+
+:::
+
+
+::: Proof
+Let $z_{1}, z_{2} \in \C$. Then 
+$$
+z_{1}=x_{1}+i y_{1}  \,, \quad  z_{2} = x_{2} + i y_{2}  \,, 
+$$
+for some $x_{1}, y_{1}, x_{2}, y_{2} \in \R$.
+
+- Using the definition of addition in $\C$ and of conjugate,
+\begin{align*}
+\overline{z_{1}+z_{2}} & =\overline{\left(x_{1}+i y_{1} \right)+\left(x_{2}+ i y_{2} \right)} \\ 
+& =\overline{\left(x_{1}+x_{2}\right)+ i \left(y_{1}+y_{2}\right)} \\
+& =\left(x_{1}+x_{2}\right)- i \left(y_{1}+y_{2}\right) \\
+& =\left(x_{1}- i y_{1} \right) +  \left(x_{2}-i y_{2} \right) \\
+& =\overline{x_{1}+ i y_{1} } + \overline{x_{2}+i y_{2} } \\
+& =\overline{z_{1}}+\overline{z_{2}} \,.
+\end{align*}
+
+- Using the definition of multiplication in $\C$ and of conjugate,
+
+\begin{align*}
+\overline{z_{1} \cdot z_{2}} & = \overline{\left(x_{1}+i y_{1} \right) \cdot\left(x_{2}+ i y_{2} \right)} \\
+& = \overline{\left(x_{1} x_{2}-y_{1} y_{2}\right)+ i \left(x_{1} y_{2}+x_{2} y_{1}\right)} \\
+& = \left(x_{1} x_{2}-y_{1} y_{2}\right)- i \left(x_{1} y_{2}+x_{2} y_{1}\right)  \\
+& =\left(x_{1}-i y_{1} \right) \cdot\left(x_{2}- i y_{2} \right) \\
+& =\overline{z_{1}} \cdot \overline{z_{2}}
+\end{align*}
+
+:::
+
+
+
+
+::: Example
+Let $z_{1}=3-4 i$ and $z_{2}=-2+5 i$. Then
+
+- Let us check that
+$$
+\overline{z_{1}+z_{2}}=\overline{z_{1}}+\overline{z_{2}}
+$$
+Indeed, we have
+$$
+z_1 + z_2 = 1 + i  \quad \implies \quad \overline{z_1 + z_2} = 1 - i \, .
+$$
+On the other hand
+$$
+\overline{z_{1}} =  3 + 4i \,, \quad 
+\overline{z_{2}} = -2 -5i \quad \implies \quad
+\overline{z_{1}} + \overline{z_{2}}= 1-i \,.
+$$
+
+- Let us check that
+$$
+\overline{z_{1} \cdot z_{2}}=\overline{z_{1}} \cdot \overline{z_{2}}
+$$
+Indeed, 
+\begin{align*}
+z_{1} \cdot z_{2} & = (3+4i) \cdot (-2 + 5i) \\
+                  & = (- 6 + 20)+ (8 + 15 )i \\
+                  & = 14 + 23 i
+\end{align*}
+so that
+$$
+\overline{z_{1} \cdot z_{2}} = 14 - 23 i
+$$
+On the other hand:
+\begin{align*}
+\overline{z_{1}} \cdot \overline{z_{2}} & =(3+4 i) \cdot(-2-5 i) \\
+                                        & = (-6+20)+(-15-8) i \\
+                                        & = 14 - 23 i
+\end{align*}
+
+
+:::
+
+
+
+
+## The complex plane
+
+We can depict a real number $x$ as a point on the one-dimensional real line $\R$. The distance between two real numbers $x, y \in \R$ on the real line is given by $|x-y|$, see @fig-real-line. 
+
+![Two points $x$ and $y$ on the real line $\R$. Their distance is $|x-y|$.](/images/real_line.png){#fig-real-line width=70%}
+
+
+
+We would like to do something similar for the complex numbers, but the point
+$$
+z = x + iy \,, \quad x , \, y \in \R\,.
+$$
+We therefore depict $z= z + i y$ in the two-dimensional plane at the point with (Cartesian) coordinates $(x, y)$. This two-dimensional plane in which we can depict all complex numbers is called the **complex plane**. The 
+origin of such plane, with coordinates $(0,0)$, corresponds to the  complex number 
+$$
+0+0 i = 0 \,,
+$$
+see @fig-complex-plane. 
+
+![A point $z = x + iy \in \C$ can be represented on the complex plane by the point of coordinates $(x,y)$. The distance between $z$ and $0$ is given by $|z| = \sqrt{z^2 + y^2}$. ](/images/complex_plane.png){#fig-complex-plane width=60%}
+
+
+### Distance on $\C$
+
+The Cartesian representation allows us to introduce a distance between two complex numbers. Let us start with the distance between a complex number $z=x+i y$ and $0$. By Pythagoras Theorem this distance is given by 
+$$
+\sqrt{x^{2}+y^{2}} \,,
+$$
+see @fig-complex-plane. We give a name to this quantity.
+
+::: Definition
+### Modulus
+
+The **modulus** of a complex number $z=x+i y$ is defined by
+$$
+|z|: = \sqrt{x^{2}+y^{2}} \,.
+$$
+:::
+
+Note that the distance between $z$ and $0$ is always a non-negative number. 
+
+
+
+::: Remark
+### Modulus of Real numbers
+
+A real number $x \in \R$ can be written as 
+$$
+x = x+ 0 i \in \C \,.
+$$ 
+Hence the modulus of $x$ is given by 
+$$
+|x|=\sqrt{x^{2}+0^{2}}=\sqrt{x^{2}} \,.
+$$
+The above coincides with the absolute value of $x$. This explains why the notation for modulus in $\C$ is the same as the one for absolute value in $\R$.
+
+:::
+
+
+
+We can now define the distance between two complex numbers.
+
+::: Definition
+### Distance in $\C$
+
+Given $z_1,z_2 \in \C$, we define the **distance** between $z_1$ and 
+$z_2$ as the quantity
+$$
+|z_1 - z_2| \,.
+$$
+
+:::
+
+The geometric intuition of why the quantity $|z_1 - z_2|$ is defined as the distance between $z_1$ and $z_2$ is given in @fig-complex-plane-distance.
+
+![The difference $z_1 - z_2$ of the two points $z_1,z_2 \in \C$ is given by the magenta vector. We define $|z_1-z_2|$ as the distance between $z_1$ and $z_2$. ](/images/complex_plane_distance.png){#fig-complex-plane-distance width=60%}
+
+
+::: Theorem
+
+Given $z_1,z_2 \in \C$, we have
+$$
+|z_1 - z_2|  = \sqrt{ (x_1 - x_2)^2 + (y_1 - y_2)^2 }  \,.
+$$
+
+:::
+
+
+::: Proof
+
+
+We have
+$$
+z_1 - z_2 = (x_1 - x_2) + i (y_1 - y_2) \,.
+$$
+Therefore, by definition of modulus,
+$$
+|z_1 - z_2|  = \sqrt{ (x_1 - x_2)^2 + (y_1 - y_2)^2 } \,.
+$$
+
+:::
+
+
+
+::: Example
+
+The distance between 
+$$
+z = 2-4 i \,, \quad 
+w = -5+i
+$$ 
+is given by
+\begin{align*}
+|z- w|  & = |(2-4 i)-(-5+i)| \\
+        & = |7-5 i| \\
+        & =\sqrt{7^{2}+(-5)^{2}} \\
+        & =\sqrt{74}
+\end{align*}
+
+:::
+
+
+
+### Properties of modulus
+
+The modulus has the following properties.
+
+::: Theorem 
+
+Let $z, z_{1}, z_{2} \in \C$. Then
+
+1. $\left|z_1 \cdot z_2\right|=\left|z_{1}\right|\left|z_{2}\right|$
+
+2. $\left|z^{n}\right|=|z|^{n}$ for all $n \in \N$
+
+3. $z \cdot \bar{z}=|z|^{2}$
+
+:::
+
+::: Proof
+
+*Part 1.*
+We have
+\begin{align*}
+z_1 \cdot z_2 & = (x_1 + i y_1) \cdot (x_2 + i y_2) \\
+              & = (x_1 x_2 - y_1 y_2) + i (x_2 y_1 + x_1 y_2) 
+\end{align*}
+and therefore 
+\begin{align*}
+|z_1 \cdot z_2| & = \sqrt{ (x_1 x_2 - y_1 y_2)^2 + (x_2 y_1 + x_1 y_2)^2 }\\
+                & = \sqrt{ x_1^2 x_2^2 + y_1^2 y_2^2 + x_2^2 y_1^2 + x_1^2 y_2^2 } \,.
+\end{align*}
+On the other hand,
+$$
+|z_1| = \sqrt{x_1^2 + y_1^2} \,, \quad 
+|z_2| = \sqrt{x_2^2 + y_2^2}
+$$
+so that
+\begin{align*}
+|z_1| |z_2| & = \sqrt{x_1^2 + y_1^2} \sqrt{x_2^2 + y_2^2}  \\
+& = \sqrt{ x_1^2 x_2^2 + y_1^2 y_2^2 + x_2^2 y_1^2 + x_1^2 y_2^2 }
+\end{align*}
+proving that $\left|z_1 \cdot z_2\right|=\left|z_{1}\right|\left|z_{2}\right|$.
+
+*Part 2.* Exercise. It easily follows from Point 1 and induction.
+
+*Part 3.* Let $z=x+ i y$ for some $x, y \in \mathbb{R}$. Then,
+
+\begin{align*}
+z \cdot \bar{z} & = (x+i y)(x- i y) \\
+                & = x^{2}-(i y )^{2} \\
+                & = x^{2}+y^{2} \\
+                & =|z|^{2}
+\end{align*}
+
+:::
+
+
+The modulus in $\C$ satisfies the triangle inequality.
+
+
+::: Theorem 
+### Triangle inequality in $\C$ 
+
+For all $x, y, z \in \C$,
+
+1. $|x+y| \leq|x|+|y|$
+
+2. $|x-z| \leq|x-y|+|y-z|$
+
+:::
+
+
+::: Proof
+
+*Part 1.* Suppose that $x=a+ib$ and $y=c+ i d$ for $a, b, c, d \in \R$. Then,
+$$
+|x+y|=|(a+c)+i (b+d) |=\sqrt{(a+c)^{2}+(b+d)^{2}} \,.
+$$
+Therefore the inequality
+$$
+|x+y| \leq|x|+|y|
+$${#eq-triangle-complex-1}
+is equivalent to
+$$
+\sqrt{(a+c)^{2}+(b+d)^{2}} \leq \sqrt{a^2 + b^2} + \sqrt{c^2 + d^2}\,.
+$${#eq-triangle-complex-2}
+Now note that, for $A,B \in \R$, we have that
+$$
+A^2 \leq B^2 \quad \implies \quad  |A| \leq |B| \,.
+$${#eq-triangle-complex-4}
+In the two reverse implications $\impliedby$ below we will use (@eq-triangle-complex-4):
+\begin{align*}
+& \, \sqrt{(a+c)^{2}+(b+d)^{2}} \leq \sqrt{a^{2}+b^{2}}+\sqrt{c^{2}+d^{2}} \\
+\impliedby &  \, (a+c)^{2}+(b+d)^{2} \leq\left(\sqrt{a^{2}+b^{2}}+\sqrt{c^{2}+d^{2}}\right)^{2} \\
+\iff & \, a^{2}+2 a c+c^{2}+b^{2}+2 b d+d^{2} \leq a^{2}+b^{2}+2 \sqrt{a^{2}+b^{2}} \sqrt{c^{2}+d^{2}}+c^{2}+d^{2} \\
+\iff & \, a c+b d \leq \sqrt{a^{2}+b^{2}} \sqrt{c^{2}+d^{2}} \\
+\impliedby & \, (a c+b d)^{2} \leq\left(a^{2}+b^{2}\right)\left(c^{2}+d^{2}\right) \\
+\iff & \, a^{2} c^{2}+2 a b c d+b^{2} d^{2} \leq a^{2} c^{2}+a^{2} d^{2}+b^{2} c^{2}+b^{2} d^{2} \\
+\iff & \, a^{2} d^{2}+b^{2} c^{2}-2 a b c d \geq 0 \\
+\iff & \, (a d-b c)^{2} \geq 0 .
+\end{align*}
+
+This last statement is clearly true, since $a d-b c \in \R$. Therefore 
+(@eq-triangle-complex-2) holds, and so (@eq-triangle-complex-1) follows.
+
+
+
+
+*Part 2.* Using (@eq-triangle-complex-1) we estimate
+$$
+|x-z|=|x-y+y-z| \leq|x-y|+|y-z| .
+$$
+
+:::
+
+
+::: Remark
+### Geometric interpretation of triangle inequality
+
+We finally have a justification of why the inequality
+$$
+|x-z| \leq |x-y| + |y - z|
+$$
+is called **triangle inequality**: By drawing three points $x, y, z \in \C$ in the complex plane, the distance between $x$ and $z$ is shorter than the distance to go from $x$ to $z$ via the point $y$, see @fig-triangle-inequality-C.
+
+:::
+
+![Let $x,y,z \in \C$. The distance between $x$ and $z$ is shorter than the distance to go from $x$ to $z$ via the point $y$. ](/images/complex_plane_triangle.png){#fig-triangle-inequality-C width=60%}
+
+
+
+
+## Polar coordinates
+
+We have seen that we can identify a complex number $z=x+iy$ by a point in the complex plane with Cartesian coordinates $(x, y)$. We can also specify the point $(x,y)$ by using the so-called polar coordinates $(\rho, \theta)$, where
+
+- $\rho$ is the distance between $z$ and the origin
+$$
+\rho = |z| = \sqrt{x^2 + y^2} 
+$$
+
+- $\theta$ is the angle between the line connecting the origin and $z$ and the positive real axis, see @fig-polar-coordinates.
+
+
+![Polar coordinates $(\rho,\theta)$ for the complex number $z \in \C$. ](/images/polar_coordinates.png){#fig-polar-coordinates width=60%}
+
+
+We give such angle a name.
+
+::: Definition 
+### Argument
+
+Let $z \in \C$. The angle $\theta$ between the line connecting the origin and $z$ and the positive real axis is called the **argument** of $z$, and is denoted by
+$$
+\theta := \arg (z) \,.
+$$
+
+:::
+
+
+::: Warning
+
+We always use angles in radians, not degrees. Make sure your calculator is set to radians if you want to use it to compute angles.
+
+:::
+
+
+::: Remark
+### Principal Value
+
+The argument of a complex number is not uniquely defined. We can always add an integer number of times $2 \pi$ to the argument to specify the same point. We usually use the convention to choose the argument in the interval $(-\pi, \pi]$. This is called the **principal value** of the argument function. Therefore the complex numbers in the upper half plane have a positive argument, and in the lower half plane have a negative argument.
+
+:::
+
+
+
+::: Example 
+We have the following arguments:
+\begin{align*}
+& \arg (1) = 0  & \quad & \arg (i) = \frac{\pi}{2}  \\
+& \arg (-1) = \pi   & \quad & \arg (-i) = -\frac{\pi}{2}  \\
+& \arg (1+i)=\frac{1}{4} \pi & \quad &  \arg (-1-i)=-\frac{3}{4} \pi
+\end{align*}
+
+:::
+
+
+
+We can represent non-zero complex numbers in polar coordinates.
+
+
+::: Theorem  
+### Polar coordinates {#theorem-polar-coordinates}
+
+Let $z \in \C$ with $z = x + i y$ and $z \neq 0$. Then
+$$
+x = \rho \cos(\theta) \,, \quad y = \rho \sin(\theta) \,,
+$$
+where 
+$$
+\rho = \sqrt{x^2 + y^2} \,, \quad 
+\theta = \arg(z) \,.
+$$
+
+
+:::
+
+The proof of Theorem \ref{theorem-polar-coordinates} is trivial, and is based on basic trigonometry and definition of $\arg(z)$. Complex numbers in polar form can be useful. We give
+a name to such polar form.
+
+::: Definition 
+### Trigonometric form
+
+Let $z \in \mathbb{C}$. The trigonometric form of $z$ is
+$$
+z = |z| \left[ \cos (\theta)+i \sin (\theta) \right] \,,
+$$
+where $\theta = \arg(z)$.
+:::
+
+
+
+Let us make an example.
+
+
+::: {.Example   #example-trigonometric-form} 
+
+Suppose that we have polar coordinates
+$$
+\rho = \sqrt{8}\,, \quad   \theta = \frac{3}{4} \pi 
+$$ 
+We compute 
+\begin{gather*}
+x = \rho \cos (\theta) = \sqrt{8} \cos \left( \frac{3}{4} \pi \right) = - \frac{\sqrt{8}\sqrt{2}}{2} = -2 \\
+y = \rho \sin (\theta) = \sqrt{8} \sin \left( \frac{3}{4} \pi \right) =  \frac{\sqrt{8}\sqrt{2}}{2} = 2 \,.
+\end{gather*}
+The complex number $z$ corresponding to the polar coordinates
+$(\rho,\theta)$ is 
+$$
+z = x + i y = - 2 + 2 i \,.
+$$
+The trigonometric form of $z$ is
+$$
+z = \sqrt{8}  \left[ \cos \left( \frac{3}{4} \pi \right) + i \sin \left( \frac{3}{4} \pi \right)   \right] \,.
+$$
+:::
+
+
+As a consequence of Theorem \ref{theorem-polar-coordinates} we obtain a formula for computing the argument.
+
+
+
+::: Corollary
+### Computing $\arg(z)$   {#corollary-arg}
+
+Let $z \in \C$ with $z = x + i y$ and $z \neq 0$. Then
+$$
+\arg(z) = 
+\begin{cases}
+\arctan \left(  \dfrac{y}{x}   \right)  &  \,\, \mbox{ if }  x>0 \\
+\arctan \left(  \dfrac{y}{x}   \right) + \pi   &  \,\, \mbox{ if }  x<0\,\, \mbox{and} \,\, y \geq 0 \\
+\arctan \left(  \dfrac{y}{x}   \right) - \pi   &  \,\, \mbox{ if }  x<0\,\, \mbox{and} \,\, y < 0 \\
+\dfrac{\pi}{2}    &  \,\, \mbox{ if }  x=0\,\, \mbox{and} \,\, y > 0 \\
+-\dfrac{\pi}{2}    &  \,\, \mbox{ if }  x=0\,\, \mbox{and} \,\, y < 0 \\
+\end{cases}
+$$
+where $\arctan$ is the inverse of $\tan$.
+
+:::
+
+
+::: Proof
+
+Using the polar coordinates formulas from Theorem \ref{theorem-polar-coordinates} we have
+$$
+\frac{y}{x} = \frac{\rho \sin(\theta)}{\rho \cos(\theta)}  = \tan (\theta) \,.
+$$
+The thesis can be obtained by carefully inverting the tangent.
+:::
+
+
+
+::: Example 
+
+We want to compute the arguments of the complex numbers 
+$$
+3+4 i\,, \quad 3-4 i \,, \quad  -3+4 i \,, \quad -3-4 i \,.
+$$ 
+Using the formula for $\arg$ in Corollary \ref{corollary-arg} we have
+\begin{align*}
+\arg (3+4 i) & =\arctan \left(\frac{4}{3}\right) \\
+\arg (3-4 i) & =\arctan \left(-\frac{4}{3}\right) = -\arctan \left(\frac{4}{3}\right)  \\
+\arg (-3+4 i) & = \arctan \left(-\frac{4}{3}\right) + \pi = - \arctan \left(\frac{4}{3}\right) + \pi \\
+\arg (-3-4 i) & = \arctan \left(\frac{4}{3}\right) - \pi
+\end{align*}
+
+:::
+
+
+
+
+
+
+## Exponential form
+
+We have seen that we can represent complex numbers in 
+
+- Cartesian form
+- Trigonometric form
+
+We now introduce a third way of representing complex numbers: the exponential form. For this, we need Euler's identity:
+
+
+::: Theorem 
+### Euler's identity   {#theorem-euler-identity}
+
+For all $\theta \in \R$ it holds
+$$
+e^{i \theta}=\cos (\theta)+ i \sin (\theta) \,.
+$$
+
+:::
+
+
+::: Proof 
+The proof of this theorem uses Taylor power series. Note that we have not introduced what series are, yet, so we just assume that everything below makes sense and actually exists. We have the following Taylor series at $x_{0}=0$ that you might know from calculus:
+\begin{align*}
+e^{x} & =1+x+\frac{x^{2}}{2 !}+\frac{x^{3}}{3 !}+\frac{x^{4}}{4 !}+\frac{x^{5}}{5 !}+\frac{x^{6}}{6 !}+\frac{x^{7}}{7 !}+\ldots \\
+\sin (x) & =\frac{x}{1 !}-\frac{x^{3}}{3 !}+\frac{x^{5}}{5 !}-\frac{x^{7}}{7 !}+\ldots \\
+\cos (x) & =1-\frac{x^{2}}{2 !}+\frac{x^{4}}{4 !}-\frac{x^{6}}{6 !}+\ldots
+\end{align*}
+
+The above identities also holds for $x \in \C$. Hence we can substitute $x=i \theta$ in the series for $e^{x}$ to obtain
+\begin{align*}
+e^{i \theta} & =1+i \theta+\frac{(i \theta)^{2}}{2 !}+\frac{(i \theta)^{3}}{3 !}+\frac{(i \theta)^{4}}{4 !}+\frac{(i \theta)^{5}}{5 !}+\frac{(i \theta)^{6}}{6 !}+\frac{(i \theta)^{7}}{7 !} \ldots \\
+& =1+i \theta-\frac{\theta^{2}}{2 !}-i \frac{\theta^{3}}{3 !}+\frac{\theta^{4}}{4 !}+i \frac{\theta^{5}}{5 !}-\frac{\theta^{6}}{6 !}-i \frac{\theta^{7}}{7 !}+\ldots \\
+& =\cos (\theta)+i \sin (\theta),
+\end{align*}
+
+where we used that $i^{2}=-1$ in the second equality, and the third equality follows by observing that all terms with an even power of $\theta$ are exactly the terms in the expansion of $\cos (\theta)$ and all terms with an odd power of $\theta$ are exactly the terms in the expansion of $\sin (\theta)$ multiplied by $i$.
+
+:::
+
+
+
+::: Theorem 
+For all $\theta \in \R$ it holds
+$$
+\left|e^{i \theta}\right|=1 \,.
+$$
+
+:::
+
+::: Proof
+
+ From Euler's identity in Theorem \ref{theorem-euler-identity} we get
+$$
+\left|e^{i \theta}\right|=|\cos (\theta)+i \sin (\theta)|=\sqrt{\cos ^{2}(\theta)+\sin ^{2}(\theta)}=1 \,.
+$$
+
+:::
+
+
+
+
+::: Theorem
+
+Let $z \in \C$ with $z = x+iy$ and $z \neq 0$. Then
+$$
+z = \rho e^{i\theta}\,,
+$$
+where 
+$$
+\rho = \sqrt{x^2 + y^2} = |z| \,, \quad 
+\theta = \arg(z) \,.
+$$
+
+:::
+
+
+::: Proof
+
+By Theorem \ref{theorem-polar-coordinates} we have
+$$
+x = \rho \cos(\theta)\,, \quad y = \rho \sin(\theta) \,.
+$$
+Hence 
+\begin{align*}
+z & = x + i y \\
+  & = \rho \cos(\theta) + i \rho \sin(\theta) \\
+  & = \rho e^{i\theta} \,,
+\end{align*}
+where in the last line we used Euler's identity in Theorem \ref{theorem-euler-identity}.
+:::
+
+
+
+::: Definition 
+### Exponential form
+
+A complex number $z \in \C$ is in **exponential form** if 
+$$
+z= \rho e^{i\theta} = |z| \, e^{i \arg(z)}  \,.
+$$
+
+:::
+
+
+
+::: {.Example #example-exponential-form}
+
+From Example \ref{example-trigonometric-form} we know that 
+$$
+z=-2+2 i
+$$ 
+can be written in trigonometric form as
+$$
+z = \sqrt{8}  \left[ \cos \left( \frac{3}{4} \pi \right) + i \sin \left( \frac{3}{4} \pi \right)   \right] \,.
+$$
+By Euler's identity we hence obtain the exponential form
+$$
+z=\sqrt{8} e^{i \frac{3}{4} \pi} \,.
+$$
+:::
+
+
+::: Remark
+### Periodicity of exponential
+
+For all $k \in \Z$ we have
+$$
+e^{i \theta}=e^{i(\theta+2 \pi k)} \,.
+$${#eq-exponential-periodic}
+As we did for the principal value of the argument, also for the exponential form we select $\theta \in(-\pi, \pi]$. In particular equation
+(@eq-exponential-periodic) is saying that the complex exponential is
+$2\pi$-periodic.
+
+> Equation (@eq-exponential-periodic) follows immediately by Euler's identity and periodicity of $\cos$ and $\sin$, since 
+\begin{align*}
+e^{i(\theta+2 \pi k)} & = \cos(\theta+2 \pi k) + i \sin (\theta+2 \pi k)  \\
+& = \cos(\theta) + i \sin (\theta) = e^{i \theta} \,.
+\end{align*}  
+
+:::
+
+
+The exponential for is very useful for computing products and powers of 
+complex numbers.
+
+
+::: {.Proposition #proposition-complex-exponential}
+
+Let $z, z_1,z_2 \in \C$ and suppose that
+$$
+z= \rho e^{i \theta} \,, \quad 
+z_1 = \rho_1 e^{i \theta_1}\,, \quad 
+z_2 = \rho_2 e^{i \theta_2}\,.
+$$
+We have
+$$
+z_1 \cdot z_2 = \rho_1 \rho_2 e^{i (\theta_1 + \theta_2)}  \,, \quad 
+z^n = \rho^n  e^{i n \theta} \,,
+$$
+for all $n \in \N$.
+:::
+
+
+The proof follows immediately by the properties of the exponential. 
+Let us see some applications of Propostion \ref{proposition-complex-exponential}.
+
+
+::: Example 
+Suppose we want to compute $(-2+2 i)^{4}$. We could do this by means of the binomial theorem:
+\begin{align*}
+(-2+2 i)^{4} & =(-2)^{4}+\left(\begin{array}{l}
+4 \\
+1
+\end{array}\right)(-2)^{3} \cdot 2 i+\left(\begin{array}{l}
+4 \\
+2
+\end{array}\right)(-2)^{2} \cdot(2 i)^{2}+\left(\begin{array}{l}
+4 \\
+3
+\end{array}\right)(-2) \cdot(2 i)^{3}+(2 i)^{4} \\
+& =16-4 \cdot 8 \cdot 2 i-6 \cdot 4 \cdot 4+4 \cdot 2 \cdot 8 i+16 \\
+& =16-64 i-96+64 i+16=-64 \,.
+\end{align*}
+
+Using the exponential form simplifies this calculation. Indeed, we know
+that 
+$$
+-2+2 i = \sqrt{8} e^{i \frac{3}{4} \pi} 
+$$
+by Example \ref{example-exponential-form}. Hence
+$$
+(-2+2 i)^{4}=\left(\sqrt{8} e^{i \frac{3}{4} \pi}\right)^{4}=8^{2} e^{i 3 \pi}=-64 \,,
+$$
+where we used that 
+$$
+e^{i 3 \pi} = e^{i \pi} = \cos(\pi) + i \sin(\pi) = - 1
+$$
+by $2\pi$ periodicity of $e^z$ and Euler's identity. 
+:::
+
+
+
+::: Example 
+
+Suppose we want to compute 
+$$
+i^{i} \,.
+$$
+It is not even clear how to do this calculation in Cartesian form. However, we know that 
+$$
+|i| = 1 \,, \quad \arg(i) = \frac{\pi}{2} \,.
+$$
+Hence we can write $i$ in exponential form
+$$
+i= |i| e^{i\arg(i)} = e^{i \frac{\pi}{2}} \,.
+$$ 
+Therefore
+$$
+i^{i}=\left(e^{i \frac{\pi}{2}}\right)^{i}=e^{i^2\frac{\pi}{2}}=e^{-\frac{\pi}{2}} \,.
+$$
+
+:::
+
+
+
+## Fundamental Theorem of Algebra
+
+We started the introduction to complex numbers with the following question: 
+
+::: Question
+Is there a number $x \in \R$ such that
+$$
+x^{2}=-1 \,\, ?
+$${#eq-introduction-complex}
+:::
+
+The answer is no. For this reason we introduced the complex number $i$, which satisfies 
+$$
+i^{2}=-1 \,.
+$$
+Therefore (@eq-introduction-complex) has solution in $\C$, with $x = i$.
+We also have that 
+$$
+(-i)^{2}=(-1)^{2} i^{2}=-1 \,.
+$$
+Hence (@eq-introduction-complex) has two solutions in $\C$, given by
+$$
+x_1 = i \,, \quad x_2 = - i \,.
+$$
+
+It turns out that the set $\C$ is so large that we are not only able to solve (@eq-introduction-complex), but in fact any polynomial equation.
+
+
+::: Theorem 
+### Fundamental theorem of algebra   {#theorem-fta}
+
+Let $p_{n}(x)$ be a polynomial of degree $n$ with complex coefficients, i.e.,
+$$
+p_{n}(x)=a_{n} x^{n}+a_{n-1} x^{n-1}+\ldots+a_{1} x+a_{0},
+$$
+for some coefficients $a_{n}, \ldots, a_{0} \in \C$ with $a_{n} \neq 0$. Then there exist $z_{1}, \ldots, z_{n} \in \C$ such that
+$$
+p_{n}(x)=a_{n}\left(x-z_{1}\right)\left(x-z_{2}\right) \cdots\left(x-z_{n}\right) \,.
+$${#eq-fta-0}
+Hence, the polynomial equation
+$$
+a_{n} x^{n}+a_{n-1} x^{n-1}+\ldots+a_{1} x+a_{0}=0
+$${#eq-fta}
+has solutions $z_{1}, \ldots, z_{n}$.
+
+:::
+
+ Theorem \ref{theorem-fta} says that every polynomial of degree $n$ has $n$ zeros, sometimes also called roots, i.e., $n$ solutions to (@eq-fta). We call the expression (@eq-fta-0) a factorization of the 
+ polynomial $p_n$.
+ 
+
+Several proofs of Theorem \ref{theorem-fta} exist in the literature, 
+but they all use mathematical tools which are out of reach for now. Therefore we will not show a proof. For example one can prove Theorem \ref{theorem-fta} by
+
+- Liouville's theorem (complex analysis)
+- Homotopy arguments (general topology)
+- Fundamental Theorem of Galois Theory (algebra)
+
+
+::: Example 
+The equation 
+$$
+x^{2}=-1
+$${#eq-fta-example-1}
+is equivalent to 
+$$
+p(x) = 0 \,, \quad p(x):=x^{2}+1  \,.
+$$
+Since $p$ has degree $n=2$, the Fundamental Theorem of Algebra tells us that there are two solutions to (@eq-fta-example-1). We have already seen that these two solutions are $x=i$ and $x=-i$. Then
+$$
+p(x) = x^{2} + 1 = (x-i)(x+i) \,.
+$$
+:::
+
+
+::: {.Example   #example-degree-4}
+
+Suppose we want to solve 
+$$
+x^{4}-1=0 \,.
+$${#eq-fta-example-2}
+The associated polynomial equation is 
+$$
+p(x) = 0 \,, \quad p(x) := x^4 - 1 \,. 
+$$
+Since $p$ has degree $n=4$, the Fundamental Theorem of Algebra tells us that there are $4$ solutions to (@eq-fta-example-2).
+
+Let us find such solutions. We use the well known formula
+$$
+a^2-b^2 = (a+b)(a-b) \,, \quad \forall \, a,b \in \R \,,
+$$
+to factorize $p$. We get:
+$$
+p(x) = (x^4-1) = (x^2+1)(x^2-1) \,.
+$$
+We know that 
+$$
+x^2 + 1 = 0 
+$$
+has solutions $x = \pm i$. Instead  
+$$
+x^2 - 1 = 0 
+$$
+has solutions $x = \pm 1$. Hence, the four solutions of (@eq-fta-example-2) are given by $x=1,-1, i,-i$ and 
+$$
+p(x) = x^4 - 1 = (x-1)(x+1)(x-i)(x+i) \,.
+$$
+
+:::
+
+
+::: Definition
+
+Suppose that the polynomial $p_n$ factorizes as 
+$$
+p_n(x) = a_n (x-z_1)^{k_1} (x-z_2)^{k_2} \cdots (x-z_m)^{k_m} 
+$$
+with $a_n \neq 0$, $z_1,\ldots, z_m \in \C$ and $k_1, \ldots , k_m \in \N$, $k_i \geq 1$. In this case $p_n$ has degree
+$$
+n = k_1 + \ldots + k_m = \sum_{i=1}^m k_i \,.
+$$
+We have that $z_i$ is solves the equation
+$$
+p_n(x) = 0
+$$
+exactly $k_i$ times. We call $k_i$ the **multiplicity** of the solution $z_i$.
+:::
+
+::: {.Example  #example-multiplicity}
+
+The equation
+$$
+(x-1)(x-2)^{2}(x+i)^{3}=0
+$$
+has 6 solutions: 
+
+- $x=1$ with multiplicity $1$
+- $x=2$ with multiplicity $2$ 
+- $x=-i$ with multiplicity $3$
+
+:::
+
+
+
+
+## Solving polynomial equations
+
+The non-factorized version of the polynomial
+$$
+p(x) = (x-1)(x-2)^{2}(x+i)^{3}
+$$
+from Example \ref{example-multiplicity} is 
+\begin{align*}
+p(x) = & x^{6}-(5-3 i) x^{5}+(5-15 i) x^{4} \\ 
+& + (11+23 i) x^{3}-(24+7 i) x^{2}+(12-8 i) x+4 i
+\end{align*}
+We therefore have the following natural question.
+
+
+::: Question
+
+The Fundamental Theorem of Algebra states that 
+$$
+p_n(x) = 0
+$${#eq-abel-ruffini}
+has $n$ complex solutions. How do we find such solutions?
+
+:::
+
+
+The answer is that there is no general way to solve (@eq-abel-ruffini)
+when $n \geq 5$. This is the content of the Abel-Ruffini Theorem.
+
+::: Theorem
+### Abel-Ruffini    {#theorem-abel-ruffini}
+
+There is no elementary solution formula to the polynomial equation
+$$
+p_n(x) = 0 
+$$
+with $p_n$ polynomial of degree $n$, with $n \geq 5$.
+
+:::
+
+Similarly to the Fundamental Theorem of Algebra, the proof of the
+Abel-Ruffini Theorem is out of reach for our current mathematical
+knowledge. A proof can be carried out, for example, using Galois Theory.
+
+
+There are however explicit formulas for solving (@eq-abel-ruffini)
+when $p_n$ has degree $n=2,3,4$. For $n=2$ we can use the well-known quadratic formula. 
+
+::: Proposition
+### Quadratic formula    {#proposition-quadratic-formula}
+
+Let $a, b, c \in \R, a \neq 0$ and consider the equation
+$$
+a x^{2}+b x+c=0 \,.
+$${#eq-quadratic-formula}
+Define 
+$$
+\Delta := b^2 - 4 ac \,.
+$$
+The following hold:
+
+- If $\Delta > 0$ then (@eq-quadratic-formula) has two distinct real solutions given by
+$$
+x_1 = \frac{-b - \sqrt{\Delta}}{2 a} \,, 
+\quad 
+x_2 = \frac{-b + \sqrt{\Delta}}{2 a} \,.
+$$
+- If $\Delta = 0$ then (@eq-quadratic-formula) has one solution with multiplicity $2$. Such solution is given by
+$$
+x_1 = \frac{-b}{2 a} \,.
+$$
+- If $\Delta < 0$ then (@eq-quadratic-formula) has two distinct complex solutions given by 
+$$
+x_1 = \frac{-b - i\sqrt{-\Delta}}{2 a} \,, 
+\quad 
+x_2 = \frac{-b + i\sqrt{-\Delta}}{2 a} \,,
+$$
+where $\sqrt{-\Delta}$ is a real number, since $-\Delta>0$.
+
+
+Moreover, if $\Delta \neq 0$ we have
+$$
+a x^{2}+b x+c = a (x-x_1)(x-x_2) \,,
+$$
+while if $\Delta = 0$ then
+$$
+a x^{2}+b x+c = a (x-x_1)^2 \,.
+$$
+
+:::
+
+
+
+::: Example 
+
+Suppose we want to solve
+$$
+3 x^{2}-6 x+2 = 0 \,.
+$$ 
+We have that
+$$
+\Delta = (-6)^{2}-4 \cdot 3 \cdot 2 = 12 > 0
+$$
+Therefore the equation has two distinct real solutions, given by
+$$
+x=\frac{-(-6) \pm \sqrt{12}}{2 \cdot 3}=\frac{6 \pm \sqrt{12}}{6}=1 \pm \frac{\sqrt{3}}{3}
+$$
+In particular we have the factorization
+$$
+3 x^{2}-6 x+2  = 3 \left( x - 1 - \frac{\sqrt{3}}{3} \right) \left( x - 1 + \frac{\sqrt{3}}{3} \right) \,.
+$$
+:::
+
+
+::: Example 
+Suppose we want to solve
+$$
+4 x^{2}-8 x+4=0 \,.
+$$ 
+We have that 
+$$
+\Delta = (-8)^{2}-4 \cdot 4 \cdot 4 = 0 \,.
+$$
+Therefore there exists one solution with multiplicity $2$. This
+is given by
+$$
+x=\frac{-(-8)}{2 \cdot 4} = 1 \,.
+$$
+In particular we have the factorization
+$$
+4 x^{2}-8 x+4 = 4 (x-1)^2 \,.
+$$
+:::
+
+
+::: Example
+
+Consider 
+$$
+x^{2}+2 x+3=0 \,.
+$$ 
+We have
+$$
+\Delta = 2^{2}-4 \cdot 1 \cdot 3 = - 8 < 0 \,.
+$$
+Therefore there are two complex solutions given by
+$$
+x=\frac{-2 \pm i \sqrt{8}}{2 \cdot 1} = -1 \pm i \sqrt{2}  \,.
+$$
+In particular we have the factorization
+$$
+x^{2}+2 x+3 = (x + 1 - i \sqrt{2}) (x +1 + i\sqrt{2}) \,.
+$$
+:::
+
+
+So far we have considered the polynomial equation
+$$
+ax^2 + bx + c = 0 \,,
+$$
+for $a,b,c \in \R$ and $a \neq 0$. 
+
+
+::: Question
+
+What if $a,b,c \in \C$?
+
+:::
+
+If $a, b, c \in \C$ then we might have
+$$
+\Delta := b^{2}-4 a c \in \C \,.
+$$ 
+Therefore it is not clear how to compute
+$$
+\sqrt{\Delta} \,.
+$$
+However, we can still use the quadratic equation.
+
+
+::: Proposition   
+### Generalization of quadratci formula {#proposition-quadratic-formula-C}
+
+Let $a, b, c \in \C, a \neq 0$. The two solutions to 
+$$
+a x^{2}+b x+c=0
+$$ 
+are given by
+$$
+x_1 = \frac{-b + S_1}{2 a} \,, 
+\quad 
+x_2 = \frac{-b + S_2}{2 a} \,, 
+$$
+where $S_1$ and $S_2$ are the two solutions to
+$$
+z^2 = \Delta \,, \quad \Delta := b^2 - 4ac \,.
+$$
+:::
+
+::: Remark
+
+Suppose that $\Delta \in \R$. The equation
+$$
+z^2 = \Delta
+$$
+has the following solutions:
+
+- If $\Delta>0$ there are two real solutions
+$$
+S_1 =  -\sqrt{\Delta} \,, \quad S_2 = \sqrt{\Delta}
+$$
+- If $\Delta = 0$ then $0$ is the only solution with multiplicity $2$. Hence
+$$
+S_1 = S_2 = 0   
+$$
+- If $\Delta<0$ there are two complex solutions
+$$
+S_1 = - i  \sqrt{-\Delta} \,, \quad
+S_2 =  i  \sqrt{-\Delta} 
+$$
+
+Therefore the solutions 
+$$
+x_1 = \frac{-b + S_1}{2 a} \,, 
+\quad 
+x_2 = \frac{-b + S_2}{2 a} \,, 
+$$
+given in Proposition 
+\ref{proposition-quadratic-formula} coincide with the ones 
+given in Proposition \ref{proposition-quadratic-formula-C}.
+
+:::
+
+
+::: Example
+
+
+Let us see an application of Proposition \ref{proposition-quadratic-formula-C}. Consider the equation
+$$
+\frac{1}{2} x^{2}-(3+i) x+(4-i)=0 \,.
+$${#eq-example-complex-delta}
+We have
+\begin{align*}
+\Delta & = (-(3+i))^{2}-4 \cdot \frac{1}{2} \cdot(4-i) \\
+       & = 8+6 i-8+2 i \\
+       & =8 i \,.
+\end{align*}
+Therefore $\Delta \in \C$. We have to find solutions $S_1$ and $S_2$ to the equation
+$$
+z^2 = \Delta = 8i \,.
+$${#eq-example-complex-delta-2}
+We look for solutions of the form $z=x+ i y$. Then we must have that
+$$
+z^{2}=(a+ ib)^{2}=a^{2}-b^{2}+2 a b i = 8 i \,.
+$$
+Thus
+$$
+a^{2}-b^{2}=0 \,, \quad 2 a b = 8  \,.
+$$ 
+From the first equation we conclude that $|a|=|b|$. From the second equation we have that $ab=4$, and therefore $a$ and $b$ must have the same sign. Hence $a=b$, and 
+$$
+2 a b = 8 \quad \implies \quad a = b = \pm 2 \,.
+$$
+From this we conclude that the solutions to (@eq-example-complex-delta-2)
+are 
+$$
+S_{1} = 2+2 i \,, \quad  S_{2}=-2-2 i \,. 
+$$
+ Hence the solutions to (@eq-example-complex-delta) are
+\begin{align*}
+x_1 & = \frac{3+i+S_{1}}{2 \cdot \frac{1}{2}}  = 3 + i + S_{1} \\
+    & = 3 + i + 2 + 2i = 5 + 3i \,, 
+\end{align*}
+and 
+\begin{align*}
+x_2 & = \frac{3+i+S_{2}}{2 \cdot \frac{1}{2}}  = 3+i+S_{2} \\
+    & = 3+i -2 - 2i  = 1 - i \,. 
+\end{align*}
+
+:::
+
+
+
+In the above example it was a bit laborious to compute $S_{1}$ and $S_{2}$. In the next section we will see an easier way to solve problems of the form
+$z^2 = \Delta$.
+
+
+
+::: Remark 
+### Polynomial equations of order $n=3,4$
+
+For polynomial equations 
+$$
+p_n(x) = 0
+$$
+with $p_n$ of degree $n=3,4$ similar methods exist. However 
+the solution formulas for such equations are really complicated, 
+and we do not cover them here. 
+
+Still, it is sometimes possible to solve equations of degree higher than 2, in case it is obvious from inspection that a certain number is a solution, e.g., when $x=-1,0,1$ is a solution.
+
+:::
+
+
+::: Example 
+Consider the equation
+$$
+x^{3}-7 x^{2}+6 x=0 \,.
+$$ 
+It is clear that $x=0$ is a solution and that we can write 
+$$
+x^{3}-7 x^{2}+6 x=x\left(x^{2}-7 x+6\right) \,.
+$$
+We could now use the quadratic formula to find the remaining two roots, but we can also directly observe that also $x=1$ is a solution, so that $x-1$ divides $x^{2}-7 x+6$. Using polynomial long division, we find that
+$$
+\frac{x^{2}-7 x+6}{x-1}=x-6 \,,
+$$
+see @fig-polynomial.
+Therefore the last solution is $x=6$, and
+$$
+x^{3}-7 x^{2}+6 x=x(x-1)(x-6) \,.
+$$
+
+:::
+
+
+![Polynomial long division between $x^{2}-7 x+6$ and $x-1$.](/images/polynomial_1.png){#fig-polynomial width=70%}
+
+
+
+![Example of polynomial long division between $6x^3+5x^2-7$ and $3x^2-2x-1$.](/images/polynomial.png){width=70%}
+
+
+::: Example
+Suppose we want to solve 
+$$
+x^{3}-7 x+6=0 \,.
+$$ 
+It is easy to see $x=1$ is a solution. This means that $x-1$ divides $x^{3}-7 x+6$, so we can compute by using polynomial long division,
+
+$$
+\frac{x^{3}-7 x+6}{x-1}=x^{2}+x-6 \,,
+$$
+see @fig-polynomial-1. For the remaining two solutions, we can use the quadratic formula to obtain that also $x=2$ and $x=-3$ are solutions. Thus
+$$
+x^{3}-7 x+6 = (x-1)(x-2)(x+3) \,.
+$$
+
+:::
+
+
+![Polynomial long division between $x^{3}-7 x+6$ and $x-1$.](/images/polynomial_2.png){#fig-polynomial-1 width=70%}
+
+
+
+## Roots of unity
+
+
+::: Problem 
+
+Let $n \in \N$. We want to find all complex solutions to
+$$
+z^{n}=1 \,.
+$${#eq-root-unity}
+
+:::
+
+Note that $z=1$ is always a solution to (@eq-root-unity) if $n$ is even. In such case also $z=-1$ is a solution. If we were only looking for solutions
+in $\R$, these two would be the only solutions.
+
+However, the Fundamental Theorem of Algebra, see Theorem \ref{theorem-fta}, tells us that there are $n$ complex solutions to (@eq-root-unity). 
+
+
+::: Question
+
+Is there a way to find all $n$ solutions?
+
+:::
+
+
+::: Example 
+
+We have seen in Example \ref{example-degree-4} that the solutions to 
+$$
+x^{4}=1
+$$ 
+are $x=$ $-1,1, i,-i$. However we deduced this with a procedure which
+does not seem to generalize well to other exponents.
+
+:::
+
+The trick to find all $n$ solutions to (@eq-root-unity) is to use 
+the exponential form.
+
+
+::: Theorem
+
+Let $n \in \N$ and consider the equation
+$$
+z^{n}=1 \,.
+$${#eq-root-unity-1}
+All the $n$ solutions to (@eq-root-unity-1) are given by
+$$
+z_k = \exp \left(i \frac{2 \pi k}{n}\right) \,, \quad k = 0, \ldots, n-1 \,,
+$$
+where $\exp(x)$ denotes $e^x$.
+
+:::
+
+::: Proof
+
+Rewrite $1$ in exponential form:
+$$
+1=|1|e^{i \arg(1)} =e^{i 2 \pi k} \, , \quad k \in \Z \,.
+$$
+Therefore (@eq-root-unity-1) is equivalent to
+$$
+z^n = e^{i 2 \pi k} \,.
+$$
+By the properties of the exponential, we see that the above is solved by
+$$
+z_k = \exp \left(i \frac{2 \pi k}{n}\right), \quad k \in \Z \,.
+$$
+By choosing $k = 0, \ldots, n-1$ we obtain $n$ different solutions.
+
+
+:::
+
+
+::: Definition 
+
+The solutions to 
+$$
+z^{n}=1
+$$ 
+are called the **roots of unity**.
+
+:::
+
+
+::: Example 
+
+The solutions to 
+$$
+z^{4}=1
+$$ 
+are given by
+$$
+z_k = \exp \left(i \frac{2 \pi k}{4} \right) = \exp \left(i \frac{\pi k}{2} \right)  \,.
+$$
+By taking $k=0,1,2,3$, we obtain the four solutions
+\begin{align*}
+z_0 & = e^{i 0} = 1 \,, & \quad & z_1 = e^{i \frac{\pi}{2}}=i \,, \\ 
+z_2 & = e^{i \pi}=-1 \,, & \quad & z_3 = e^{i \frac{3 \pi}{2}}=-i \, .
+\end{align*}
+Note that for $k=4$ we would again get the solution $z=e^{i 2 \pi}=1$.
+
+:::
+
+
+::: Example 
+
+The solutions to 
+$$
+z^{3}=1
+$$ 
+are given by
+$$
+z_k = \exp \left( i \frac{2 \pi k}{3} \right) \,.
+$$
+By taking $k=0,1,2$, we obtain the three solutions
+$$
+z_0=e^{i 0}=1, \quad z_1=e^{i \frac{2 \pi}{3}}, \quad z_2=e^{i \frac{4 \pi}{3}} .
+$$
+We can also convert $z_1$ and $z_2$ to trigonometric form:
+$$
+z_1 = e^{i \frac{2 \pi}{3}}=\cos \left(\frac{2 \pi}{3}\right)+i \sin \left(\frac{2 \pi}{3}\right)=-\frac{1}{2}+\frac{\sqrt{3}}{2} i
+$$
+and
+$$
+z_2 = e^{i \frac{4 \pi}{3}}=\cos \left(\frac{4 \pi}{3}\right)+i \sin \left(\frac{4 \pi}{3}\right)=-\frac{1}{2}-\frac{\sqrt{3}}{2} i
+$$
+
+:::
+
+
+
+
+## Roots in $\C$
+
+
+::: Problem 
+
+Let $n \in \N$ and $c \in \C$. We want to find the $n$-th roots of $c$. This means we want to find all complex solutions to
+$$
+z^{n}=c \,.
+$$
+
+:::
+
+The Fundamental Theorem of Algebra ensures that the above has $n$ 
+complex solutions. To find these solutions, we pass to the exponential
+form.
+
+
+::: Theorem
+
+Let $n \in \N$, $c \in \C$ and consider the equation
+$$
+z^{n}=c \,.
+$${#eq-root-C}
+All the $n$ solutions to (@eq-root-C) are given by
+$$
+z_k = \sqrt[n]{|c|} \, \exp \left(i \, \frac{\theta + 2 \pi k}{n}\right) \,, \quad k = 0, \ldots, n-1 \,,
+$$
+where $\sqrt[n]{|c|}$ is the $n$-th root of the real number $|c|$, and $\theta = \arg(c)$.
+
+:::
+
+::: Proof
+
+Write $c$ in exponential form:
+$$
+c=|c|e^{i \theta} =|c| e^{i(\theta + 2 \pi k)} \, , \quad k \in \Z \,,
+$$
+where $\theta = \arg(c)$. Therefore (@eq-root-C) is equivalent to
+$$
+z^n = |c| e^{i(\theta + 2 \pi k)} \,.
+$$
+By the properties of the exponential, we see that the above is solved by
+$$
+z_k= \sqrt[n]{|c|} \exp \left(i \, \frac{\theta + 2 \pi k}{n}\right), \quad k \in \Z \,.
+$$
+By choosing $k = 0, \ldots, n-1$ we obtain $n$ different solutions.
+
+
+:::
+
+
+
+
+::: Example 
+We want to find all the $z \in \C$ such that
+$$
+z^{5}=-32 \,.
+$$
+Let $c = -32$. We have
+$$
+|c| = |-32|=32=2^{5}\,, \quad \theta = \arg (-32)=\pi \,.
+$$ 
+Hence, the solutions are given by
+$$
+z_k =  \left(2^{5}\right)^{\frac{1}{5}} \exp \left(i \pi \, \frac{1+2 k}{5} \right) \,, \quad k \in \Z \,.
+$$
+
+By taking $k=0,1,2,3,4$ we get the solutions
+\begin{align*}
+z_0 & = 2 e^{i \frac{\pi}{5}} \,  & \quad & z_1 = 2 e^{i \frac{3 \pi}{5}}  \\ 
+z_2 & = 2 e^{i \pi}=-2 \,  & \quad & z_3=2 e^{i \frac{7 \pi}{5}}  \\
+z_4 &= 2 e^{i \frac{9 \pi}{5}}  & \quad & 
+\end{align*}
+
+:::
+
+
+::: Example 
+We want to find all the $z \in \C$ such that
+$$
+z^{4}=9\left(\cos \left(\frac{\pi}{3}\right)+i \sin \left(\frac{\pi}{3}\right)\right) \,.
+$$
+Set 
+$$
+c:=9\left(\cos \left(\frac{\pi}{3}\right)+i \sin \left(\frac{\pi}{3}\right)\right) \,.
+$$
+The complex number $c$ is already in the trigonometric form, so that we can immediately obtain
+$$
+|c| = 9 \,, \quad \theta = \arg(c) = \frac{\pi}{3} \,.
+$$
+Hence the solutions are given by
+\begin{align*}
+z_k & = \sqrt[4]{9} \, \exp \left( i \,  \frac{ \pi/3 + 2 \pi k}{4} \right) \\
+& = \sqrt{3} \exp \left(  i \pi \, \frac{1+6 k}{12} \right) 
+\end{align*}
+for $k \in \Z$. Choosing $k=0,1,2,3$ gives the $4$ solutions
+\begin{align*}
+z_0 & = \sqrt{3} e^{i \pi \frac{1}{12}} & \quad & z_1 = \sqrt{3} e^{i \pi \frac{7}{12}} \\
+z_2 & = \sqrt{3} e^{i \pi \frac{13}{12}}  & \quad &  z_3 = \sqrt{3} e^{i \pi \frac{19}{12}} 
+\end{align*}
+
+:::
+
+
+
+
+
+
+

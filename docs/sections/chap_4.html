@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.542">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Numbers, Sequences and Series - 4&nbsp; Properties of \(\mathbb{R}\)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../sections/chap_5.html" rel="next">
+<link href="../sections/chap_3.html" rel="prev">
+<link href="../images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/quarto-contrib/foldbox/foldbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+</style>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Numbers, Sequences and Series</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools">
+    <a href="../Numbers,-Sequences-and-Series.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/chap_4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Properties of <span class="math inline">\(\mathbb{R}\)</span></span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/chap_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/chap_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preliminaries</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/chap_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Real Numbers</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/chap_4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Properties of <span class="math inline">\(\mathbb{R}\)</span></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/chap_5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Complex Numbers</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/chap_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sequences in <span class="math inline">\(\mathbb{R}\)</span></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/chap_7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Sequences in <span class="math inline">\(\mathbb{C}\)</span></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/chap_8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Series</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/license.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">License</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#archimedean-property" id="toc-archimedean-property" class="nav-link active" data-scroll-target="#archimedean-property"><span class="header-section-number">4.1</span> Archimedean Property</a></li>
+  <li><a href="#nested-interval-property" id="toc-nested-interval-property" class="nav-link" data-scroll-target="#nested-interval-property"><span class="header-section-number">4.2</span> Nested Interval Property</a></li>
+  <li><a href="#revisiting-sup-and-inf" id="toc-revisiting-sup-and-inf" class="nav-link" data-scroll-target="#revisiting-sup-and-inf"><span class="header-section-number">4.3</span> Revisiting Sup and inf</a></li>
+  <li><a href="#density-of-mathbbq-in-mathbbr" id="toc-density-of-mathbbq-in-mathbbr" class="nav-link" data-scroll-target="#density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></a></li>
+  <li><a href="#existence-of-k-th-roots" id="toc-existence-of-k-th-roots" class="nav-link" data-scroll-target="#existence-of-k-th-roots"><span class="header-section-number">4.5</span> Existence of <span class="math inline">\(k\)</span>-th Roots</a></li>
+  <li><a href="#cardinality" id="toc-cardinality" class="nav-link" data-scroll-target="#cardinality"><span class="header-section-number">4.6</span> Cardinality</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Properties of <span class="math inline">\(\mathbb{R}\)</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Now that we established the axiomatic definition of the Real Numbers <span class="math inline">\(\mathbb{R}\)</span> as a <strong>complete ordered field</strong>, let us investigate some of the properties of <span class="math inline">\(\mathbb{R}\)</span>. These will be consequence of the axioms of the real numbers, particulaly of the <strong>Axiom of Completeness</strong>.</p>
+<section id="archimedean-property" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="archimedean-property"><span class="header-section-number">4.1</span> Archimedean Property</h2>
+<p>The Archimedean property is one of the most useful properties of <span class="math inline">\(\mathbb{R}\)</span>, and it essentially states that the set of natural numbers <span class="math inline">\(\mathbb{N}\)</span> is not bounded above in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>More precisley, the Archimedean Property says two things:</p>
+<ol type="1">
+<li><p>For any <span class="math inline">\(x \in \mathbb{R}\)</span> we can always find a natural number <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+n &gt; x \,.
+\]</span></p></li>
+<li><p>For any <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x&gt;0\)</span>, we can always find a natural number <span class="math inline">\(m \in \mathbb{N}\)</span> such that <span class="math display">\[
+0&lt; \frac1m &lt; x  \,.
+\]</span></p></li>
+</ol>
+<p>The situation is depicted in <a href="#fig-archimedean" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>.</p>
+<div id="fig-archimedean" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-archimedean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/archimedean_original.png" class="img-fluid figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-archimedean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: For any <span class="math inline">\(x&gt;0\)</span> we can find <span class="math inline">\(n,m \in \mathbb{N}\)</span> such that <span class="math inline">\(1/m&lt;x&lt;n\)</span>.
+</figcaption>
+</figure>
+</div>
+<div id="Remark-1" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 1</strong></summary><div>
+<p>The Archimedean property might sound trivial. However there are examples of ordered fields <span class="math inline">\(K\)</span> that satisfy:</p>
+<ol type="1">
+<li><span class="math inline">\(\mathbb{N}\subseteq K\)</span>.</li>
+<li><span class="math inline">\(K\)</span> does not have the Archimedean property.</li>
+<li>In particular, <span class="math inline">\(\mathbb{N}\)</span> is bounded above in <span class="math inline">\(K\)</span>.</li>
+</ol>
+<p>Of course such fields <span class="math inline">\(K\)</span> cannot be complete.</p>
+<blockquote class="blockquote">
+<p>If <span class="math inline">\(K\)</span> is complete, then <span class="math inline">\(K\)</span> is essentially <span class="math inline">\(\mathbb{R}\)</span>, and we are going to prove the Archimedean Property holds in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</blockquote>
+</div></details>
+</div>
+<p>Let us proceed with the precise statement of the Archimedean property in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="theorem-archimedean" class="Theorem" title="Archimedean Property">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 2: </strong>Archimedean Property</summary><div>
+<p>Let <span class="math inline">\(x \in \mathbb{R}\)</span> be given. Then:</p>
+<ol type="1">
+<li><p>There exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+n &gt; x \,.
+\]</span></p></li>
+<li><p>Suppose in addition that <span class="math inline">\(x&gt;0\)</span>. There exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+\frac1n &lt; x \,.
+\]</span></p></li>
+</ol>
+</div></details>
+</div>
+<div id="Proof*-1" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> Let <span class="math inline">\(x \in \mathbb{R}\)</span>. Suppose by contradiction that there is no <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+n &gt; x  \,.
+\]</span> This means that <span id="eq-archimedean-proof-2"><span class="math display">\[
+n \leq x \, \quad \forall n \in \mathbb{N}\,.
+\tag{4.1}\]</span></span> The above is saying that the set <span class="math inline">\(\mathbb{N}\)</span> is bounded above. Since <span class="math inline">\(\mathbb{N}\)</span> is not empty, by the Axiom of Completeness there exists <span class="math display">\[
+\alpha = \sup \mathbb{N}\,.
+\]</span><p></p>
+<p><em>Claim: <span class="math inline">\((\alpha-1)\)</span> is not an upper bound for <span class="math inline">\(\mathbb{N}\)</span>.</em></p>
+<p><em>Proof of Claim.</em> Indeed, we have <span id="eq-archimedean-proof"><span class="math display">\[
+(\alpha - 1) &lt; \alpha \,.
+\tag{4.2}\]</span></span> Therefore <span class="math inline">\(\alpha-1\)</span> cannot be an upper bound for <span class="math inline">\(\mathbb{N}\)</span>. Indeed, if by contradiction <span class="math inline">\(\alpha - 1\)</span> was an upper bound for <span class="math inline">\(\mathbb{N}\)</span>, then we would have <span class="math display">\[
+\alpha \leq (\alpha - 1)\,,
+\]</span> since <span class="math inline">\(\alpha\)</span> is the smallest upper bound for <span class="math inline">\(\mathbb{N}\)</span>. This contradicts (<a href="#eq-archimedean-proof" class="quarto-xref"><span>4.2</span></a>). Therefore <span class="math inline">\(\alpha - 1\)</span> is not an upper bound for <span class="math inline">\(\mathbb{N}\)</span>.</p>
+<p><em>Conclusion.</em> Since <span class="math inline">\(\alpha - 1\)</span> is not an upper bound for <span class="math inline">\(\mathbb{N}\)</span>, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+\alpha - 1 &lt; n_0 \,.
+\]</span> The above implies <span class="math display">\[
+\alpha &lt; n_0 + 1 \,.
+\]</span> Since <span class="math display">\[
+(n_0+1) \in \mathbb{N}\,,
+\]</span> we have obtained a contradiction, given that <span class="math inline">\(\alpha\)</span> was the supremum of <span class="math inline">\(\mathbb{N}\)</span>. Thus (<a href="#eq-archimedean-proof-2" class="quarto-xref"><span>4.1</span></a>) is false, meaning that there exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+n &gt; x \,.
+\]</span></p>
+<p><em>Part 2.</em> Suppose <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x&gt;0\)</span>. We can define <span class="math display">\[
+y:=\frac1x \,.
+\]</span> By Part 1 there exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+n &gt; y = \frac{1}{x} \,.
+\]</span> Using that <span class="math inline">\(x&gt;0\)</span>, we can rearrange the above inequlaity to obtain <span class="math display">\[
+\frac1n &lt; x \,,
+\]</span> which is the desired thesis.</p>
+</div></details>
+</div>
+<p>There is another formulation of the Archimedean Property which, depending on the situation, might be more useful. This formulation says the following: If <span class="math inline">\(x,y \in \mathbb{R}\)</span> are such that <span class="math display">\[
+0 &lt; x &lt; y \,,
+\]</span> then there exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+nx &gt; y \,.
+\]</span> In other words, if one does <span class="math inline">\(n\)</span> steps of size <span class="math inline">\(x\)</span> in the positive numbers direction, then the resulting number <span class="math inline">\(nx\)</span> will be larger than <span class="math inline">\(y\)</span>. The situation is depicted in <a href="#fig-archimedean" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>.</p>
+<div id="fig-archimedean" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-archimedean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/archimedean.png" class="img-fluid figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-archimedean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2: For <span class="math inline">\(0&lt;x&lt;y\)</span> there exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that that <span class="math inline">\(nx&gt;y\)</span>. In the picture <span class="math inline">\(n=3\)</span>.
+</figcaption>
+</figure>
+</div>
+<div id="theorem-archimedean-alternative" class="Theorem" title="Archimedean Property (Alternative formulation)">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 3: </strong>Archimedean Property (Alternative formulation)</summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(0&lt;x&lt;y\)</span>. There exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+nx &gt; y \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-2" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose by contradiction that there does not exist some <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+nx &gt; y \,.
+\]</span> This means that <span id="eq-archimedean-proof-4"><span class="math display">\[
+nx \leq y \,, \quad \forall \, n \in \mathbb{N}\,.
+\tag{4.3}\]</span></span> Define the set <span class="math display">\[
+A := \{ nx \, \colon \,n \in \mathbb{N}\} \,.
+\]</span> Condition (<a href="#eq-archimedean-proof-4" class="quarto-xref"><span>4.3</span></a>) is saying that <span class="math inline">\(A\)</span> is bounded above by <span class="math inline">\(y\)</span>. Morever <span class="math inline">\(A\)</span> is trivially non-empty. By the Axiom of Completeness there exists <span class="math display">\[
+\alpha = \sup A \,.
+\]</span> Since <span class="math inline">\(\alpha\)</span> is the supremum of <span class="math inline">\(A\)</span>, by definition of supremum and of the set <span class="math inline">\(A\)</span>, we have <span id="eq-archimedean-proof-5"><span class="math display">\[
+nx \leq \alpha \,, \quad   \forall \, n \in \mathbb{N}\,.
+\tag{4.4}\]</span></span> As (<a href="#eq-archimedean-proof-5" class="quarto-xref"><span>4.4</span></a>) holds for every <span class="math inline">\(n \in \mathbb{N}\)</span>, then it also holds for <span class="math inline">\((n+1)\)</span>, meaning that <span class="math display">\[
+(n+1) x \leq \alpha \,.
+\]</span> The above implies <span class="math display">\[
+nx \leq \alpha - x \,.
+\]</span> As <span class="math inline">\(n\)</span> was arbitrary, we conclude that <span class="math display">\[
+nx \leq \alpha - x \,, \quad   \forall \, n \in \mathbb{N}\,.
+\]</span> The above is saying that <span class="math inline">\((\alpha - x)\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Since <span class="math inline">\(\alpha\)</span> is the supremum of <span class="math inline">\(A\)</span>, in particular <span class="math inline">\(\alpha\)</span> is the smallest upper bound. Thus it must hold <span class="math display">\[
+\alpha \leq \alpha - x \,.
+\]</span> The above is equivalent to <span class="math display">\[
+x \leq 0 \,,
+\]</span> which contradicts our assumption of <span class="math inline">\(x&gt;0\)</span>. Therefore (<a href="#eq-archimedean-proof-4" class="quarto-xref"><span>4.3</span></a>) is false, and there exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+nx &gt; y \,,
+\]</span> concluding the proof.<p></p>
+</div></details>
+</div>
+</section>
+<section id="nested-interval-property" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="nested-interval-property"><span class="header-section-number">4.2</span> Nested Interval Property</h2>
+<p>Another consequence of the axiom of completeness is the <strong>Nested Interval Property</strong>. This is yet another way of saying the same thing: <span class="math inline">\(\mathbb{R}\)</span> does not have <strong>gaps</strong>.</p>
+<p>Let us look at a construction. Suppose given some closed intervals <span class="math display">\[
+I_n := [a_n,b_n] = \{   x \in \mathbb{R}\, \colon \,a_n \leq x \leq b_n   \} \,,
+\]</span> where the end points are ordered in the following way: <span class="math display">\[
+a_1 \leq a_2 \leq \ldots \leq a_n \leq \dots \leq b_n  \leq \ldots b_n \leq b_1 \,,
+\]</span> as shown in <a href="#fig-nested" class="quarto-xref">Figure&nbsp;<span>4.3</span></a>.</p>
+<div id="fig-nested" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nested-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/nested_interval_property.png" class="img-fluid figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nested-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.3: Nested intervals <span class="math inline">\(I_n = [a_n,b_n]\)</span>.
+</figcaption>
+</figure>
+</div>
+<p>The intervals <span class="math inline">\(I_n\)</span> are <strong>nested</strong>, meaning that <span class="math display">\[
+I_1 \supset I_2 \supset I_3 \supset \ldots I_n \supset \ldots
+\]</span> For finite intersections we clearly have <span class="math display">\[
+\bigcap_{n=1}^k  I_n = I_k \,,
+\]</span> that is, intersecting the first <span class="math inline">\(k\)</span> intervals yields <span class="math inline">\(I_k\)</span>, the smallest interval in the sequence.</p>
+<div id="Question-4" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 4</strong></summary><div>Consider the infinite intersection<p></p>
+<p><span class="math display">\[
+\bigcap_{n=1}^\infty I_n := \{  x \in \mathbb{R}\, \colon \,x \in I_n \,, \forall \, n \in \mathbb{N}\}  \,.
+\]</span></p>
+<p>What can we say about it? Is it empty? Is it not empty?</p>
+</div></details>
+</div>
+<p>The answer is that the infinite intersection is not empty, because <span class="math inline">\(\mathbb{R}\)</span> was constructed in a way that it does not have gaps.</p>
+<div id="theorem-nested" class="Theorem" title="Nested Interval Property">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 5: </strong>Nested Interval Property</summary><div>For each <span class="math inline">\(n \in \mathbb{N}\)</span> assume given a closed interval <span class="math display">\[
+I_n := [a_n,b_n] = \{   x \in \mathbb{R}\, \colon \,a_n \leq x \leq b_n   \} \,.
+\]</span> Suppose that the intervals are nested, that is, <span class="math display">\[
+I_n \supset I_{n+1}\,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Then <span id="eq-theorem-nested-proof-0"><span class="math display">\[
+\bigcap_{n=1}^\infty I_n \neq \emptyset \,.
+\tag{4.5}\]</span></span><p></p>
+</div></details>
+</div>
+<div id="Proof*-3" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>By definition we have <span class="math display">\[
+\bigcap_{n=1}^\infty I_n := \{  x \in \mathbb{R}\, \colon \,x \in I_n \,, \forall \, n \in \mathbb{N}\}  \,.
+\]</span> We want to prove (<a href="#eq-theorem-nested-proof-0" class="quarto-xref"><span>4.5</span></a>). This means we need to find a real number <span class="math inline">\(x\)</span> such that <span id="eq-theorem-nested-proof-1"><span class="math display">\[
+x \in I_n \,, \quad  \forall \, n \in \mathbb{N}\,.
+\tag{4.6}\]</span></span><p></p>
+<blockquote class="blockquote">
+<p>Idea of the Proof: Condition (<a href="#eq-theorem-nested-proof-1" class="quarto-xref"><span>4.6</span></a>) is saying that it should hold <span class="math display">\[
+x \geq a_n \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> We might be tempted to choose <span class="math inline">\(x\)</span> to be any of the <span class="math inline">\(b_n\)</span>. This choice would indeed satisy the above. However (<a href="#eq-theorem-nested-proof-1" class="quarto-xref"><span>4.6</span></a>) also implies that <span class="math display">\[
+x \leq b_n \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Therefore <span class="math inline">\(x\)</span> has to be larger than all the <span class="math inline">\(a_n\)</span>, but not too large. This suggests that <span class="math inline">\(x\)</span> should be defined as a supremum.</p>
+</blockquote>
+<p>Define the set <span class="math display">\[
+A:= \{ a_n \, \colon \,n \in \mathbb{N}\} \,.
+\]</span> The set <span class="math inline">\(A\)</span> is non-empty and is bounded above by any of the <span class="math inline">\(b_n\)</span>. Therefore there exists <span class="math display">\[
+x = \sup \ A \,.
+\]</span> By definition of supremum and definition of the set <span class="math inline">\(A\)</span>, we have <span class="math display">\[
+a_n \leq x \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> On the other hand, consider an arbitrary number <span class="math inline">\(b_n\)</span>. By construction we have <span class="math display">\[
+a_i \leq b_n \,, \quad \forall \, i \in \mathbb{N}\,.
+\]</span> Therefore <span class="math inline">\(b_n\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Since the supremum is the smallest upper bound, we conclude that <span class="math display">\[
+x \leq b_n \,.
+\]</span> The index <span class="math inline">\(n\)</span> was chosen arbitrarily, and therefore <span class="math display">\[
+x \leq b_n \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> In total we have <span class="math display">\[
+a_n \leq x \leq b_n \,, \quad \forall \, n \in \mathbb{N}\,,
+\]</span> showing that <span class="math inline">\(x\)</span> satisfies (<a href="#eq-theorem-nested-proof-1" class="quarto-xref"><span>4.6</span></a>). Therefore (<a href="#eq-theorem-nested-proof-0" class="quarto-xref"><span>4.5</span></a>) holds and the proof is concluded.</p>
+</div></details>
+</div>
+<div id="Important*-4" class="Important">
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>The assumption that <span class="math inline">\(I_n\)</span> is <strong>closed</strong> is crucial in Theorem <a href="chap_4.html#theorem-nested">5</a>. Without such assumption the thesis of Theorem <a href="chap_4.html#theorem-nested">5</a> does not hold in general, as seen in Example <a href="chap_4.html#example-nested-open">6</a> below.<p></p>
+</div></details>
+</div>
+<div id="example-nested-open" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 6</strong></summary><div>Consider the <strong>open</strong> intervals <span class="math display">\[
+I_n := \left( 0, \frac1n \right) \,.
+\]</span> These are clearly nested <span class="math display">\[
+I_n \supset I_{n+1}\,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> For this choice of <span class="math inline">\(I_n\)</span> we have <span id="eq-example-nested-2"><span class="math display">\[
+\bigcap_{n=1}^\infty I_n = \emptyset \,.
+\tag{4.7}\]</span></span> Indeed, suppose by contradiction that the intersection is non-empty. Then there exists <span class="math inline">\(x \in \mathbb{N}\)</span> such that <span class="math display">\[
+x \in I_n \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> By definition of <span class="math inline">\(I_n\)</span> the above reads <span id="eq-example-nested"><span class="math display">\[
+0 &lt; x &lt; \frac1n  \,, \quad \forall \, n \in \mathbb{N}\,.
+\tag{4.8}\]</span></span> Since <span class="math inline">\(x&gt;0\)</span>, by the Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 2, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+0 &lt; \frac{1}{n_0} &lt; x \,.
+\]</span> The above contradicts (<a href="#eq-example-nested" class="quarto-xref"><span>4.8</span></a>). Therefore (<a href="#eq-example-nested-2" class="quarto-xref"><span>4.7</span></a>) holds.<p></p>
+</div></details>
+</div>
+</section>
+<section id="revisiting-sup-and-inf" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="revisiting-sup-and-inf"><span class="header-section-number">4.3</span> Revisiting Sup and inf</h2>
+<p>We now investigate some of the properties of supremum and infimum in <span class="math inline">\(\mathbb{R}\)</span>. The first property is an alternative characterization of the supremum, which we will often use. A sketch of such characterization is in <a href="#fig-alternative-sup" class="quarto-xref">Figure&nbsp;<span>4.4</span></a> below.</p>
+<div id="proposition-supremum-characterization" class="Proposition" title="Characterization of Supremum">
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 7: </strong>Characterization of Supremum</summary><div>
+<p>Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span> be a non-empty set. Suppose that <span class="math inline">\(s \in \mathbb{R}\)</span> is an upper bound for <span class="math inline">\(A\)</span>. They are equivalent:</p>
+<ol type="1">
+<li><span class="math inline">\(s = \sup A\)</span></li>
+<li>For every <span class="math inline">\(\varepsilon&gt; 0\)</span> there exists <span class="math inline">\(x \in A\)</span> such that <span class="math display">\[
+s - \varepsilon&lt; x \,.
+\]</span></li>
+</ol>
+</div></details>
+</div>
+<div id="fig-alternative-sup" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-alternative-sup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/alternative_supremum.png" class="img-fluid figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-alternative-sup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.4: Let <span class="math inline">\(s = \sup A\)</span>. Then for every <span class="math inline">\(\varepsilon&gt;0\)</span> there exist <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(s-\varepsilon&lt;x\)</span>.
+</figcaption>
+</figure>
+</div>
+<div id="proof-of-proposition" class="Proof" title="Proof of Proposition 7">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Proposition 7</summary><div><em>Step 1</em>. Assume that <span class="math display">\[
+s = \sup A \,.
+\]</span> Let <span class="math inline">\(\varepsilon&gt;0\)</span> be arbitrary. We clearly have that <span id="eq-proof-sup-alt-1"><span class="math display">\[
+s - \varepsilon&lt; s \,.
+\tag{4.9}\]</span></span> Therefore <span class="math inline">\((s-\varepsilon)\)</span> cannot be an upper bound of <span class="math inline">\(A\)</span>. Indeed, if by contradiction <span class="math inline">\((s-\varepsilon)\)</span> was an upper bound, then we would have <span class="math display">\[
+s \leq (s - \varepsilon)\,,
+\]</span> since <span class="math inline">\(s\)</span> is the smallest upper bound. The above contradicts (<a href="#eq-proof-sup-alt-1" class="quarto-xref"><span>4.9</span></a>), and therefore <span class="math inline">\((s-\varepsilon)\)</span> is not an upper bound for <span class="math inline">\(A\)</span>. Hence there exists some <span class="math inline">\(x \in A\)</span> such that <span class="math display">\[
+s - \varepsilon&lt; x  \, ,
+\]</span> concluding.<p></p>
+<p><em>Step 2</em>. Assume that Point 2 in the statement of Proposition <a href="chap_4.html#proposition-supremum-characterization">7</a> holds. By assumption we have that <span class="math inline">\(s\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Suppose by contradiction that <span class="math display">\[
+s \neq \sup A \,.
+\]</span> This is equivalent to the statement <span id="eq-proof-sup-alt-2"><span class="math display">\[
+s \, \mbox{ is not the smallest upper bound of } \, A.
+\tag{4.10}\]</span></span> Hence there exists an upper bound <span class="math inline">\(b\)</span> of <span class="math inline">\(A\)</span> such that <span class="math display">\[
+b &lt; s \,.
+\]</span> Let <span class="math display">\[
+\varepsilon:= s - b \,.
+\]</span> By assumption there exists <span class="math inline">\(x \in A\)</span> such that <span class="math display">\[
+s - \varepsilon&lt; x \,.
+\]</span> Substituting the definition of <span class="math inline">\(\varepsilon\)</span> we get <span class="math display">\[
+s - s + b &lt; x \quad \implies \quad b &lt; x \,.
+\]</span> Since <span class="math inline">\(b\)</span> is an upper bound for <span class="math inline">\(A\)</span> and <span class="math inline">\(x \in A\)</span>, the above is a contradiction. Therefore (<a href="#eq-proof-sup-alt-2" class="quarto-xref"><span>4.10</span></a>) is false, and <span class="math inline">\(s\)</span> is the smallest upper bound of <span class="math inline">\(A\)</span>. Thus <span class="math inline">\(s = \sup A\)</span>.</p>
+</div></details>
+</div>
+<p>The analogue of Proposition <a href="chap_4.html#proposition-supremum-characterization">7</a> is as follows. The proof is left as an exercise.</p>
+<div id="prop-supremum-infimum" class="Proposition" title="Characterization of Infimum">
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 8: </strong>Characterization of Infimum</summary><div>
+<p>Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span> be a non-empty set. Suppose that <span class="math inline">\(i \in \mathbb{R}\)</span> is a lower bound for <span class="math inline">\(A\)</span>. They are equivalent:</p>
+<ol type="1">
+<li><span class="math inline">\(i = \inf A\)</span></li>
+<li>For every <span class="math inline">\(\varepsilon\in \mathbb{R}\)</span>, with <span class="math inline">\(\varepsilon&gt; 0\)</span>, there exists <span class="math inline">\(x \in A\)</span> such that <span class="math display">\[
+x &lt; i + \varepsilon\,.
+\]</span></li>
+</ol>
+</div></details>
+</div>
+<p>A sketch of the characterization in Proposition <a href="chap_4.html#prop-supremum-infimum">8</a> can be found in <a href="#fig-alternative-inf" class="quarto-xref">Figure&nbsp;<span>4.5</span></a> below.</p>
+<div id="fig-alternative-inf" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-alternative-inf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/alternative_infimum.png" class="img-fluid figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-alternative-inf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.5: Let <span class="math inline">\(i = \inf A\)</span>. Then for every <span class="math inline">\(\varepsilon&gt;0\)</span> there exist <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(x&lt;i+\varepsilon\)</span>.
+</figcaption>
+</figure>
+</div>
+<p>With the above characterizations of supremum and infimum, it is now easier to prove that some candidate number is the supremum or infimum of some set. As an example, let us characterize supremum and infimum of an open interval of <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="proposition-interval-inf-sup" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 9</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
+A:= (a,b) = \{ x \in \mathbb{R}\, \colon \,a &lt; x &lt; b \}\,.
+\]</span> Then <span class="math display">\[
+\inf A = a \,, \quad \sup A = b \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-6" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We will only prove that <span class="math display">\[
+\inf A = a \,,
+\]</span> since the proof of <span class="math display">\[
+\sup A = b
+\]</span> is similar.<p></p>
+<p>By definition of <span class="math inline">\(A\)</span>, we have that <span class="math display">\[
+a &lt; x \,, \quad \forall \, x \in A \,.
+\]</span> The above says that <span class="math inline">\(a\)</span> is a lower bound for <span class="math inline">\(A\)</span>.</p>
+<p><em>Claim. <span class="math inline">\(a\)</span> is the largest lower bound of <span class="math inline">\(A\)</span></em>.</p>
+<p><em>Proof of Claim.</em> Let <span class="math inline">\(L\)</span> be a lower bound for <span class="math inline">\(A\)</span>, that is, <span class="math display">\[
+L \leq x \,, \quad \forall \, x \in A \,.
+\]</span> We have to prove that <span id="eq-interval-inf-sup-proof"><span class="math display">\[
+L \leq a \,.
+\tag{4.11}\]</span></span> Indeed suppose by contradiction that (<a href="#eq-interval-inf-sup-proof" class="quarto-xref"><span>4.11</span></a>) does not hold, namely that <span class="math display">\[
+a &lt; L \,.
+\]</span> Since <span class="math inline">\(a&lt;b\)</span> we have <span class="math display">\[
+a = \frac{2a}{2} &lt; \frac{a+b}{2} &lt; \frac{2b}{b} = b \,,
+\]</span> showing that the midpoint between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> satisfies <span class="math display">\[
+\frac{a+b}{2} \in A \,.
+\]</span> Since <span class="math inline">\(L\)</span> is a lower bound for <span class="math inline">\(A\)</span> we have <span id="eq-interval-inf-sup-proof-2"><span class="math display">\[
+L \leq \frac{a+b}{2} &lt; b \,.
+\tag{4.12}\]</span></span> Consider the midpoint <span class="math display">\[
+M := \frac{a + L}{2} \,.
+\]</span> We have that <span class="math display">\[
+M \in A \,.
+\]</span></p>
+<blockquote class="blockquote">
+<p>Indeed, recalling that <span class="math inline">\(a&lt;L\)</span>, we have <span class="math display">\[
+a = \frac{2a}{2} &lt; \frac{a+L}{2} = M \,.
+\]</span> Moreover by (<a href="#eq-interval-inf-sup-proof-2" class="quarto-xref"><span>4.12</span></a>) we have <span class="math inline">\(L&lt;b\)</span>. Thus <span class="math display">\[
+M = \frac{a+L}{2} \leq \frac{a+b}{2} &lt; b \,.
+\]</span> This shows <span class="math inline">\(M \in A\)</span>.</p>
+</blockquote>
+<p>Moreover <span class="math display">\[
+M &lt; L \,.
+\]</span></p>
+<blockquote class="blockquote">
+<p>This is because <span class="math inline">\(a&lt;L\)</span>, and therefore <span class="math display">\[
+M = \frac{a + L}{2} &lt; \frac{2L}{2} = L \,.
+\]</span></p>
+</blockquote>
+<p>This is a contradiction, since by assumption <span class="math inline">\(L\)</span> is a lower bound for <span class="math inline">\(A\)</span>, and thus we should have <span class="math display">\[
+L \leq M \,.
+\]</span> Therefore (<a href="#eq-interval-inf-sup-proof" class="quarto-xref"><span>4.11</span></a>) holds, showing that <span class="math inline">\(a\)</span> is the largest lower bound of <span class="math inline">\(A\)</span>. Thus <span class="math inline">\(a = \inf A\)</span>.</p>
+</div></details>
+</div>
+<p>As a corollary of the above we have that the maximum and minimum of an open interval do not exist.</p>
+<div id="Corollary-10" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 10</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
+A:= (a,b) = \{ x \in \mathbb{R}\, \colon \,a &lt; x &lt; b \}\,.
+\]</span> Then <span class="math inline">\(\min A\)</span> and <span class="math inline">\(\max A\)</span> do not exist.<p></p>
+</div></details>
+</div>
+<div id="Proof*-7" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose by contradiction that <span class="math inline">\(\min A\)</span> exists. We have shown that if the minimum of a set exists, then it must be <span class="math display">\[
+\min A = \inf A \,.
+\]</span> Since <span class="math display">\[
+\inf A = a\,,
+\]</span> by Proposition <a href="chap_4.html#proposition-interval-inf-sup">9</a>, we would obtain that <span class="math display">\[
+\min A = a \,.
+\]</span> By definition <span class="math inline">\(\min A \in A\)</span>, so that <span class="math inline">\(a \in A\)</span>. This is contradiction. Then <span class="math inline">\(\min A\)</span> does not exist.<p></p>
+<p>The proof that <span class="math inline">\(\max A\)</span> does not exist is similar, and is left as an exercise.</p>
+</div></details>
+</div>
+<p>We can also consider intervals for which one or both of the sides are closed.</p>
+<div id="Corollary-11" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 11</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
+A:= [a,b) = \{ x \in \mathbb{R}\, \colon \,a \leq x &lt; b \}\,.
+\]</span> Then <span class="math display">\[
+\min A = \inf A = a \,, \quad \sup A = b \,,
+\]</span> <span class="math inline">\(\max A\)</span> does not exist.<p></p>
+</div></details>
+</div>
+<p>The proof is very similar to the ones above, and is left to the reader for exercise. Let us now compute supremum and infimum of a set which is not an interval.</p>
+<div id="Proposition-12" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 12</strong></summary><div>Define the set <span class="math display">\[
+A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
+\]</span> Then <span class="math display">\[
+\inf A = 0 \,, \quad \sup A = \max A = 1 \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-8" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> We have <span class="math display">\[
+\frac1n \leq 1 \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Therefore <span class="math inline">\(1\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Let us prove it is the least upper bound: let <span class="math inline">\(b\)</span> be an upper bound for <span class="math inline">\(A\)</span>. Since <span class="math inline">\(1 \in A\)</span> and <span class="math inline">\(b\)</span> is an upper bound, we have <span class="math inline">\(1 \leq b\)</span>. Hence <span class="math inline">\(1\)</span> is the least upper bound, and <span class="math display">\[
+\sup A = \max A =  1 \,.
+\]</span><p></p>
+<p><em>Part 2.</em> We have <span class="math display">\[
+\frac1n &gt; 0 \,, \quad \forall \, n \in \mathbb{N}\,,
+\]</span> showing that <span class="math inline">\(0\)</span> is a lower bound for <span class="math inline">\(A\)</span>. Suppose by contradiction that <span class="math inline">\(0\)</span> is not the infimum. Therefore <span class="math inline">\(0\)</span> is not the largest lower bound. Then there exists <span class="math inline">\(\varepsilon\in \mathbb{R}\)</span> such that:</p>
+<ul>
+<li><p><span class="math inline">\(\varepsilon\)</span> is a lower bound for <span class="math inline">\(A\)</span>, that is, <span id="eq-lower-bound-1-n"><span class="math display">\[
+\varepsilon\leq \frac1n  \,, \quad \forall \, n \in \mathbb{N}\,,
+\tag{4.13}\]</span></span></p></li>
+<li><p><span class="math inline">\(\varepsilon\)</span> is larger than <span class="math inline">\(0\)</span>: <span class="math display">\[
+0 &lt; \varepsilon\,.
+\]</span></p></li>
+</ul>
+<p>As <span class="math inline">\(\varepsilon&gt;0\)</span>, by the Archimedean Property there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+0 &lt; \frac{1}{n_0} &lt; \varepsilon\,.
+\]</span> This contradicts (<a href="#eq-lower-bound-1-n" class="quarto-xref"><span>4.13</span></a>). Thus <span class="math inline">\(0\)</span> is the largest lower bound of <span class="math inline">\(A\)</span>, that is, <span class="math inline">\(0 = \inf A\)</span>.</p>
+<p><em>Part 3.</em> We have that <span class="math inline">\(\min A\)</span> does not exist. Indeed suppose by contradiction that <span class="math inline">\(\min A\)</span> exists. Then <span class="math display">\[
+\min A = \inf A \,.
+\]</span> As <span class="math inline">\(\inf A = 0\)</span> by Part 2, we conclude <span class="math inline">\(\min A = 0\)</span>. As <span class="math inline">\(\min A \in A\)</span>, we obtain <span class="math inline">\(0 \in A\)</span>, which is a contradiction.</p>
+</div></details>
+</div>
+</section>
+<section id="density-of-mathbbq-in-mathbbr" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></h2>
+<p>A set <span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span> if the elements of <span class="math inline">\(S\)</span> are arbitrarily close to the elements of <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="dense-set" class="Definition" title="Dense set">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 13: </strong>Dense set</summary><div>Let <span class="math inline">\(S \subseteq \mathbb{R}\)</span>. We say that <span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span> if for every <span class="math inline">\(x \in \mathbb{R}\)</span> and <span class="math inline">\(\varepsilon\in \mathbb{R}\)</span> with <span class="math inline">\(\varepsilon&gt;0\)</span>, there exist <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
+|x - q| &lt; \varepsilon\,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>In other words, the above definition is saying that <span class="math inline">\(S\)</span> and <span class="math inline">\(\mathbb{R}\)</span> are tightly knitted together. An equivalent definition of dense set is given below.</p>
+<div id="Remark-14" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 14</strong></summary><div>
+<p>Let <span class="math inline">\(S \subseteq \mathbb{R}\)</span>. They are equivalent:</p>
+<ul>
+<li><span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>.</li>
+<li>For every pair of numbers <span class="math inline">\(x,y \in \mathbb{R}\)</span> with <span class="math inline">\(x&lt;y\)</span>, there exists <span class="math inline">\(s \in S\)</span> such that <span class="math display">\[
+x &lt; s &lt; y \,.
+\]</span></li>
+</ul>
+</div></details>
+</div>
+<p>We now prove that <span class="math inline">\(\mathbb{Q}\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="theorem-density" class="Theorem" title="Density of \mathbb{Q} in \mathbb{R}">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 15: </strong>Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(x&lt;y\)</span>. There exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
+x &lt; q &lt; y \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="fig-density-proof" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-density-proof-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/density_proof.png" class="img-fluid figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-density-proof-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.6: Let <span class="math inline">\(n \in \mathbb{N}\)</span> be such that <span class="math inline">\(1/n&lt; y-x\)</span>. Then take <span class="math inline">\(m\)</span> so that <span class="math inline">\(m/n \in (x,y)\)</span>.
+</figcaption>
+</figure>
+</div>
+<div id="Proof*-9" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We need to find <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span id="eq-proof-density-1"><span class="math display">\[
+x &lt; q &lt; y \,.
+\tag{4.14}\]</span></span> By definition of <span class="math inline">\(\mathbb{Q}\)</span>, we have that <span class="math inline">\(q\)</span> has to be <span class="math inline">\(q=m/n\)</span> for <span class="math inline">\(m \in \mathbb{Z}\)</span> and <span class="math inline">\(n \in \mathbb{N}\)</span>. Therefore (<a href="#eq-proof-density-1" class="quarto-xref"><span>4.14</span></a>) is equivalent to finding <span class="math inline">\(m \in \mathbb{Z}\)</span> and <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span id="eq-proof-density-2"><span class="math display">\[
+x &lt; \frac{m}{n} &lt; y \,.
+\tag{4.15}\]</span></span> The idea is to proceed as in <a href="#fig-density-proof" class="quarto-xref">Figure&nbsp;<span>4.6</span></a>: We take <span class="math inline">\(n\)</span> such that <span class="math inline">\(1/n\)</span> is small enough so that we can make <span class="math inline">\(m\)</span> <em>jumps</em> of size <span class="math inline">\(1/n\)</span> and end up between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.<br>
+To this end, let <span class="math inline">\(n \in \mathbb{N}\)</span> be such that <span id="eq-proof-density-3"><span class="math display">\[
+\frac{1}{n} &lt; y - x \,.
+\tag{4.16}\]</span></span> Such <span class="math inline">\(n\)</span> exists thanks to the Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 2. Inequality (<a href="#eq-proof-density-2" class="quarto-xref"><span>4.15</span></a>) is equivalent to <span class="math display">\[
+nx &lt; m &lt; ny \,.
+\]</span> Take <span class="math inline">\(m \in \mathbb{Z}\)</span> such that <span id="eq-proof-density-4"><span class="math display">\[
+m-1 \leq nx &lt; m \,.
+\tag{4.17}\]</span></span><p></p>
+<blockquote class="blockquote">
+<p>Why does such <span class="math inline">\(m\)</span> exist? Because by Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(m' \in \mathbb{Z}\)</span> such that <span class="math display">\[
+m' &gt; nx
+\]</span> We can then choose <span class="math inline">\(m\)</span> to be the smallest element in <span class="math inline">\(\mathbb{Z}\)</span> such that <span class="math inline">\(m &gt;  nx\)</span>. Such <span class="math inline">\(m\)</span> satisfies (<a href="#eq-proof-density-4" class="quarto-xref"><span>4.17</span></a>).</p>
+</blockquote>
+<p>The second inequality in (<a href="#eq-proof-density-4" class="quarto-xref"><span>4.17</span></a>) implies <span class="math display">\[
+x &lt; \frac{m}{n} \,,
+\]</span> which is the first inequality in (<a href="#eq-proof-density-2" class="quarto-xref"><span>4.15</span></a>). Now note that (<a href="#eq-proof-density-3" class="quarto-xref"><span>4.16</span></a>) is equivalent to <span class="math inline">\(x &lt; y - 1/n\)</span>. We can use the latter and the first inequality in (<a href="#eq-proof-density-4" class="quarto-xref"><span>4.17</span></a>) to estimate <span class="math display">\[\begin{align*}
+m &amp; \leq 1 + nx \\
+  &amp; &lt; 1 + n \left(   y - \frac{1}{n}  \right ) \\
+  &amp; = ny \,,
+\end{align*}\]</span> which yields <span class="math display">\[
+\frac{m}{n} &lt; y \,.
+\]</span> Therefore the second inequality in (<a href="#eq-proof-density-2" class="quarto-xref"><span>4.15</span></a>) is proven, concluding the proof.</p>
+</div></details>
+</div>
+<p>We have constructed the real numbers <span class="math inline">\(\mathbb{R}\)</span> so that they would fill the <strong>gaps</strong> of <span class="math inline">\(\mathbb{Q}\)</span>. Formally, these gaps are the numbers in <span class="math inline">\(\mathbb{R}\smallsetminus \mathbb{Q}\)</span>. Let us give a name to this set.</p>
+<div id="irrational-numbers" class="Definition" title="Irrational numbers">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 16: </strong>Irrational numbers</summary><div>The set of irrational numbers in <span class="math inline">\(\mathbb{R}\)</span> is <span class="math display">\[
+\mathcal{I} := \mathbb{R}\smallsetminus \mathbb{Q}\,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Question-17" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 17</strong></summary><div>How many gaps does <span class="math inline">\(\mathbb{Q}\)</span> have? In other words, how many irrational numbers are out there?<p></p>
+</div></details>
+</div>
+<p>The answer is quite surprising, and is a corollary of the density result of Theorem <a href="chap_4.html#theorem-density">15</a>: The irrational numbers are dense in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="Corollary-18" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 18</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(x&lt;y\)</span>. There exists <span class="math inline">\(t \in \mathcal{I}\)</span> such that <span class="math display">\[
+x &lt; t &lt; y \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-10" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Consider <span class="math display">\[
+\widetilde{x}:=x - \sqrt{2}\,, \quad \widetilde{y} :=y - \sqrt{2} \,.
+\]</span> Since <span class="math inline">\(x&lt;y\)</span>, we have <span class="math display">\[
+\widetilde{x} &lt; \widetilde{y} \,.
+\]</span> By Theorem <a href="chap_4.html#theorem-density">15</a> there exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
+\widetilde{x} &lt; q &lt; \widetilde{y} \,.
+\]</span> Adding <span class="math inline">\(\sqrt{2}\)</span> to the above inequalities we get <span id="eq-density-proof"><span class="math display">\[
+x &lt; t &lt; y \,, \quad t := q + \sqrt{2} \,.
+\tag{4.18}\]</span></span> We claim that <span class="math inline">\(t \in \mathcal{I}\)</span>. Indeed, suppose by contradiction <span class="math inline">\(t \in \mathbb{Q}\)</span>. Then <span class="math display">\[
+\sqrt{2} = t - q \in \mathbb{Q}\,,
+\]</span> since <span class="math inline">\(t,q \in \mathbb{Q}\)</span>, and <span class="math inline">\(\mathbb{Q}\)</span> is closed under summation. Since <span class="math inline">\(\sqrt{2} \in \mathcal{I}\)</span>, we obtain a contradiction. Thus <span class="math inline">\(t \in \mathcal{I}\)</span> and (<a href="#eq-density-proof" class="quarto-xref"><span>4.18</span></a>) is our thesis.<p></p>
+</div></details>
+</div>
+</section>
+<section id="existence-of-k-th-roots" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="existence-of-k-th-roots"><span class="header-section-number">4.5</span> Existence of <span class="math inline">\(k\)</span>-th Roots</h2>
+<p>We have started our discussion by proving that <span id="eq-sqrt2-existence"><span class="math display">\[
+\sqrt{2} \notin \mathbb{Q}\,.
+\tag{4.19}\]</span></span> We have shown that (<a href="#eq-sqrt2-existence" class="quarto-xref"><span>4.19</span></a>) implies that the set <span class="math display">\[
+A := \{ q \in \mathbb{Q}\, \colon \,q^2 &lt; 2 \}
+\]</span> does not have a supremum in <span class="math inline">\(\mathbb{Q}\)</span>. We then introduced the Real Numbers <span class="math inline">\(\mathbb{R}\)</span> so that each non-empty and bounded above set would have a supremum. As the set <span class="math inline">\(A\)</span> is non-empty and bounded above, there exists <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
+\alpha = \sup A \,.
+\]</span> We are going to prove that <span class="math display">\[
+\alpha^2 = 2 \,,
+\]</span> which means that in <span class="math inline">\(\mathbb{R}\)</span> we can take the square root of <span class="math inline">\(2\)</span>. More in general, with the same fudamental idea, we can prove that for each <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>, there exists <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
+\alpha^k = x \,.
+\]</span></p>
+<div id="theorem_existence_root" class="Theorem" title="Existence of k-th roots">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 19: </strong>Existence of <span class="math inline">\(k\)</span>-th roots</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>. There exists a unique <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
+\alpha^k = x \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>The proof of Theorem <a href="chap_4.html#theorem_existence_root">19</a> rests on similar ideas to the ones used to prove that <span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property.</p>
+<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 19">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 19</summary><div><em>Part 1: Uniqueness.</em><p></p>
+<p>Suppose <span class="math inline">\(\alpha_1,\alpha_2 \in \mathbb{R}\)</span> are such that <span class="math display">\[
+\alpha_1^k = \alpha_2^k = x \,.
+\]</span> If <span class="math inline">\(\alpha_1 \neq \alpha_2\)</span>, then <span class="math display">\[
+\alpha_1^k \neq \alpha_2^k \,,
+\]</span> obtaining a contradiction. Therefore <span class="math inline">\(\alpha_1 = \alpha_2\)</span>.</p>
+<p><em>Part 2: Existence.</em></p>
+<p>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span>. If <span class="math inline">\(x = 0\)</span> there is nothing to prove, as <span class="math display">\[
+0^k = 0 \,,
+\]</span> so that <span class="math inline">\(\alpha = 0\)</span>. Therefore we can assume <span class="math inline">\(x&gt;0\)</span>. Define the subset of <span class="math inline">\(\mathbb{R}\)</span> <span class="math display">\[
+A := \{  t \in \mathbb{R}\, \colon \,t^k &lt; x  \} \,.
+\]</span> Clearly <span class="math inline">\(A\)</span> is non-empty and bounded above.</p>
+<blockquote class="blockquote">
+<p>An upper bound is given, for example, by <span class="math inline">\(b := x + 1\)</span>. Indeed, since we are assuming <span class="math inline">\(x \geq 0\)</span>, then <span class="math inline">\(x+1 \geq 1\)</span>. In particular we have <span class="math display">\[
+(x+1)^k \geq x + 1 \,.
+\]</span> Let <span class="math inline">\(t \in A\)</span>. Then <span class="math display">\[
+t^k &lt; x &lt; x + 1 &lt; (x+1)^k ,
+\]</span> showing that <span class="math inline">\(t&lt; x+1\)</span>.</p>
+</blockquote>
+<p>By the Axiom of Completeness of <span class="math inline">\(\mathbb{R}\)</span>, there exists <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
+\alpha = \sup A \,.
+\]</span> We claim that <span id="eq-existence-root-proof-1"><span class="math display">\[
+\alpha^k = x \,.
+\tag{4.20}\]</span></span> Suppose by contradiction that (<a href="#eq-existence-root-proof-1" class="quarto-xref"><span>4.20</span></a>) does not hold. We will need the formula: For all <span class="math inline">\(a,b \in \mathbb{R}\)</span> it holds <span id="eq-existence-root-proof-2"><span class="math display">\[
+a^k-b^k = (a - b)( a^{k-1} + a^{k-2} b + a^{k-3}b^k + \ldots + a b^{k-2} + b^{k-1} ) \,.  
+\tag{4.21}\]</span></span> Formula (<a href="#eq-existence-root-proof-2" class="quarto-xref"><span>4.21</span></a>) can be easily proven by induction on <span class="math inline">\(k\)</span>. Since we are assuming that (<a href="#eq-existence-root-proof-1" class="quarto-xref"><span>4.20</span></a>) does not hold, we have two cases:</p>
+<ul>
+<li><p><span class="math inline">\(\alpha^k &lt; x\)</span>: We know that <span class="math inline">\(\alpha\)</span> is the supremum of <span class="math inline">\(A\)</span>. We would like to violate this, by finding a number <span class="math inline">\(L\)</span> which is larger than <span class="math inline">\(\alpha\)</span>, but still belongs to <span class="math inline">\(A\)</span>. This means <span class="math inline">\(L\)</span> has to satisfy <span class="math display">\[
+\alpha &lt; L  \,, \quad L^k &lt; x \,.
+\]</span> We look for <span class="math inline">\(L\)</span> of the form <span class="math display">\[
+L_n := \alpha + \frac{1}{n}
+\]</span> for <span class="math inline">\(n \in \mathbb{N}\)</span> to be chosen later. Clearly <span id="eq-existence-root-proof-3"><span class="math display">\[
+\alpha &lt; L_n \,,
+\tag{4.22}\]</span></span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. We now search for <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+L_{n_0}^k &lt; x \,.  
+\]</span> Using formula (<a href="#eq-existence-root-proof-2" class="quarto-xref"><span>4.21</span></a>) with <span class="math inline">\(a = \alpha\)</span> and <span class="math inline">\(b = L_{n_0}\)</span> we obtain <span id="eq-existence-root-proof-4"><span class="math display">\[
+L_{n_0}^k - \alpha^k = \frac{1}{n_0}  \left(  L_{n_0}^{k-1} + L_{n_0}^{k-2} \alpha +
+                      \ldots  + L_{n_0}\alpha^{k-2} + \alpha^{k-1} \right) \,.
+\tag{4.23}\]</span></span> Now notice that (<a href="#eq-existence-root-proof-3" class="quarto-xref"><span>4.22</span></a>) implies <span class="math display">\[
+\alpha^j &lt; L_{n_0}^j
+\]</span> for all <span class="math inline">\(j \in \mathbb{N}\)</span>. Using this estimate on all the terms <span class="math inline">\(\alpha^j\)</span> appearing in the RHS of (<a href="#eq-existence-root-proof-4" class="quarto-xref"><span>4.23</span></a>) we obtain <span class="math display">\[\begin{align*}
+L_{n_0}^k - \alpha^k &amp; = \frac{1}{n_0}  \left(  L_{n_0}^{k-1} + L_{n_0}^{k-2} \alpha +
+                      \ldots  + L_{n_0}\alpha^{k-2} + \alpha^{k-1} \right) \\
+                    &amp; &lt; \frac{1}{n_0} \left(  L_{n_0}^{k-1} + L_{n_0}^{k-2} L_{n_0} +
+                    \ldots + L_{n_0} L_{n_0}^{k-2} + L_{n_0}^{k-1} \right) \\
+                    &amp; = \frac{k}{n_0} \, L_{n_0}^{k-1}
+\end{align*}\]</span> Rearranging the above we get <span id="eq-existence-root-proof-5"><span class="math display">\[
+L_{n_0}^k &lt; \frac{k}{n_0} \, L_{n_0}^{k-1}  + \alpha^k \,.
+\tag{4.24}\]</span></span> Now note that <span class="math display">\[
+L_{n_0} = \alpha + \frac{1}{n_0} &lt; \alpha + 1 \,.
+\]</span> Therefore <span class="math display">\[
+L_{n_0}^{k-1} &lt; (\alpha + 1)^{k-1} \,,
+\]</span> and from (<a href="#eq-existence-root-proof-5" class="quarto-xref"><span>4.24</span></a>) we obtain <span class="math display">\[
+L_{n_0}^k &lt; \frac{k}{n_0} \, (\alpha + 1)^{k-1} + \alpha^k \,.
+\]</span> We wanted to find <span class="math inline">\(n_0 \in \mathbb{N}\)</span> so that <span class="math inline">\(L_{n_0}^k &lt; x\)</span>. Therefore we impose <span class="math display">\[
+\frac{k}{n_0} \, (\alpha + 1)^{k-1} + \alpha^k  &lt; x \,,
+\]</span> and find that the above is satisfied for <span id="eq-existence-root-proof-6"><span class="math display">\[
+n_0 &gt; \frac{ k (\alpha + 1)^{k-1} }{ x - \alpha^k } \,.
+\tag{4.25}\]</span></span> Notice that the RHS in (<a href="#eq-existence-root-proof-6" class="quarto-xref"><span>4.25</span></a>) is a positive real number, since <span class="math inline">\(\alpha^k &lt; x\)</span> by assumption. Therefore, by the Archimedean Property of Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> satisfying (<a href="#eq-existence-root-proof-6" class="quarto-xref"><span>4.25</span></a>).<br>
+We have therefore shown the existence of <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+\alpha &lt; L_{n_0}  \,, \quad  L_{n_0}^k &lt; x \,.
+\]</span> The above says that <span class="math inline">\(L_{n_0} \in A\)</span> and that <span class="math display">\[
+L_{n_0} &gt; \alpha = \sup A \,,
+\]</span> which is a contradiction, as <span class="math inline">\(\sup A\)</span> is an upper bound for <span class="math inline">\(A\)</span>.</p></li>
+<li><p><span class="math inline">\(\alpha^k &gt; x\)</span>: We know that <span class="math inline">\(\alpha\)</span> is the supremum of <span class="math inline">\(A\)</span>. We would like to find a contradiction, by finding an upper bound <span class="math inline">\(L\)</span> for <span class="math inline">\(A\)</span> which is smaller than <span class="math inline">\(\alpha\)</span>. This means <span class="math inline">\(L\)</span> has to satisfy <span class="math display">\[
+L &lt; \alpha   \,, \quad L^k &gt; x \,.
+\]</span></p>
+<blockquote class="blockquote">
+<p>Such <span class="math inline">\(L\)</span> is an upper bound for <span class="math inline">\(A\)</span>: If <span class="math inline">\(t \in A\)</span> then <span class="math display">\[
+t^k &lt; x &lt; L^k \quad \implies \quad t &lt; L \,.
+\]</span></p>
+</blockquote>
+<p>We therefore look for <span class="math inline">\(L\)</span> of the form <span class="math display">\[
+L_n := \alpha - \frac{1}{n}
+\]</span> for <span class="math inline">\(n \in \mathbb{N}\)</span> to be chosen later. In this way <span id="eq-existence-root-proof-3bis"><span class="math display">\[
+L_n  &lt; \alpha \,,
+\tag{4.26}\]</span></span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. We now search for <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+L_{n_0}^k &gt; x \,.  
+\]</span> Using formula (<a href="#eq-existence-root-proof-2" class="quarto-xref"><span>4.21</span></a>) with <span class="math inline">\(a = L_{n_0}\)</span> and <span class="math inline">\(b = \alpha\)</span> we obtain <span id="eq-existence-root-proof-4bis"><span class="math display">\[
+\alpha^k - L_{n_0}^k  = \frac{1}{n_0}  \left(  \alpha^{k-1} + \alpha^{k-2} L_{n_0} +
+                      \ldots  + \alpha L_{n_0}^{k-2} + L_{n_0}^{k-1} \right) \,.
+\tag{4.27}\]</span></span> Now notice that (<a href="#eq-existence-root-proof-3bis" class="quarto-xref"><span>4.26</span></a>) implies <span class="math display">\[
+L_{n_0}^j &lt; \alpha^j
+\]</span> for all <span class="math inline">\(j \in \mathbb{N}\)</span>. Using this estimate on all the terms <span class="math inline">\(L_{n_0}^j\)</span> appearing in the RHS of (<a href="#eq-existence-root-proof-4bis" class="quarto-xref"><span>4.27</span></a>) we obtain <span class="math display">\[\begin{align*}
+\alpha^k - L_{n_0}^k  &amp; = \frac{1}{n_0}  \left(  \alpha^{k-1} + \alpha^{k-2} L_{n_0} +
+                      \ldots  + \alpha L_{n_0}^{k-2} + L_{n_0}^{k-1}  \right) \\
+                    &amp; &lt; \frac{1}{n_0} \left(  \alpha^{k-1} + \alpha^{k-2} \alpha +
+                    \ldots + \alpha \alpha^{k-2} + \alpha^{k-1} \right) \\
+                    &amp; = \frac{k}{n_0} \, \alpha^{k-1}
+\end{align*}\]</span> Rearranging the above we get <span class="math display">\[
+L_{n_0}^k &gt; \alpha^k - \frac{k}{n_0} \, \alpha^{k-1}  \,.
+\]</span> We wanted to find <span class="math inline">\(n_0 \in \mathbb{N}\)</span> so that <span class="math inline">\(L_{n_0}^k &gt; x\)</span>. Therefore we impose <span class="math display">\[
+\alpha^k - \frac{k}{n_0} \, \alpha^{k-1} &gt; x \,,
+\]</span> and find that the above is satisfied for <span id="eq-existence-root-proof-6bis"><span class="math display">\[
+n_0 &gt; \frac{ k \alpha^{k-1} }{ \alpha^k - x} \,.
+\tag{4.28}\]</span></span> Notice that the RHS in (<a href="#eq-existence-root-proof-6bis" class="quarto-xref"><span>4.28</span></a>) is a positive real number, since <span class="math inline">\(\alpha^k &gt; x\)</span> by assumption. Therefore, by the Archimedean Property of Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> satisfying (<a href="#eq-existence-root-proof-6bis" class="quarto-xref"><span>4.28</span></a>).<br>
+We have therefore shown the existence of <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+L_{n_0} &lt; \alpha \,, \quad  L_{n_0}^k &gt; x \,.
+\]</span> Condition <span class="math inline">\(L_{n_0}^k &gt; x\)</span> says that <span class="math inline">\(L_{n_0}\)</span> is an upper bound for <span class="math inline">\(A\)</span>. At the same time it holds <span class="math display">\[
+L_{n_0} &lt; \alpha = \sup A \,,
+\]</span> which is a contradiction, as <span class="math inline">\(\sup A\)</span> is the smallest upper bound for <span class="math inline">\(A\)</span>.</p></li>
+</ul>
+<p>Therefore, both cases <span class="math inline">\(\alpha^k &gt; x\)</span> and <span class="math inline">\(\alpha^k &lt; x\)</span> lead to a contradiction. Hence <span class="math inline">\(\alpha^k =x\)</span>, concluding.</p>
+</div></details>
+</div>
+<div id="k-th-root-of-a-number" class="Definition" title="k-th root of a number">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 20: </strong><span class="math inline">\(k\)</span>-th root of a number</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>. The real number <span class="math inline">\(\alpha\)</span> such that <span class="math display">\[
+\alpha^k = x
+\]</span> is called the <strong><span class="math inline">\(k\)</span>-th root</strong> of <span class="math inline">\(x\)</span>, and is denoted by <span class="math display">\[
+\sqrt[k]{x} := \alpha  \,.
+\]</span><p></p>
+</div></details>
+</div>
+</section>
+<section id="cardinality" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="cardinality"><span class="header-section-number">4.6</span> Cardinality</h2>
+<p>We have proven that the sets or rational numbers <span class="math inline">\(\mathbb{Q}\)</span> and irrational numbers <span class="math inline">\(\mathcal{I}\)</span> are both dense in <span class="math inline">\(\mathbb{R}\)</span>, with <span class="math display">\[
+\mathbb{R}= \mathbb{Q}\cup \mathcal{I} \,.
+\]</span> From this result we might think that <span class="math inline">\(\mathbb{R}\)</span> is obtained by mixing <span class="math inline">\(\mathbb{Q}\)</span> and <span class="math inline">\(\mathcal{I}\)</span> in equal proportions. This is however false. We will see that <span class="math inline">\(\mathbb{R}\)</span> has much more elements than <span class="math inline">\(\mathbb{Q}\)</span>. Therefore also the set of irrational numbers <span class="math inline">\(\mathcal{I}\)</span> is much larger than <span class="math inline">\(\mathbb{Q}\)</span>.</p>
+<p>To make the above discussion precise, we need to define what we mean by size of a set. For this, we need the concept of bijective function.</p>
+<div id="bijective-function" class="Definition" title="Bijective function">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 21: </strong>Bijective function</summary><div>
+<p>Let <span class="math inline">\(X,Y\)</span> be sets and <span class="math inline">\(f \colon X \to Y\)</span> be a function. We say that:</p>
+<ul>
+<li><span class="math inline">\(f\)</span> is <strong>injective</strong> if it holds: <span class="math display">\[
+f(x)=f(y) \quad \implies \quad x = y \,.
+\]</span></li>
+<li><span class="math inline">\(f\)</span> is <strong>surjective</strong> if it holds: <span class="math display">\[
+\forall y \in Y \,, \,\, \exists \, x \in X \, \text{ s.t. } \, f(x) = y \,.
+\]</span></li>
+<li><span class="math inline">\(f\)</span> is <strong>bijective</strong> if it is both <strong>injective</strong> and <strong>surjective</strong>.</li>
+</ul>
+</div></details>
+</div>
+<p>In other words: A function <span class="math inline">\(f \colon X \to Y\)</span> is</p>
+<ul>
+<li>injective if any two different elements in <span class="math inline">\(X\)</span> are mapped into two different elements in <span class="math inline">\(Y\)</span>.</li>
+<li>surjective if every element in <span class="math inline">\(Y\)</span> has at least one element in <span class="math inline">\(X\)</span> associated via <span class="math inline">\(f\)</span>.</li>
+<li>bijective if to each element in <span class="math inline">\(X\)</span> we associate one and only one element in <span class="math inline">\(Y\)</span> via <span class="math inline">\(f\)</span>.</li>
+</ul>
+<div id="injectivity" class="Example" title="Injectivity">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 22: </strong>Injectivity</summary><div>
+<p>Consider the sets <span class="math display">\[
+X = \{ 1, 2, 3 \} \,, \quad  
+Y = \{ a,b,c,d,e\} \,.
+\]</span></p>
+<ul>
+<li><p>The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
+f(1)=c \,, \quad f(2) = a \,, \quad f(3) = e \,,
+\]</span> is injective.</p></li>
+<li><p>The function <span class="math inline">\(g \colon X \to Y\)</span> defined by <span class="math display">\[
+g(1)=c \,, \quad g(2) = a \,, \quad g(3) = c \,,
+\]</span> is not injective, since <span class="math display">\[
+g(1) = g(3) = c \,, \quad 1 \neq 3 \,.
+\]</span></p></li>
+<li><p>The function <span class="math inline">\(h \colon \mathbb{R}\to \mathbb{R}\)</span> defined by <span class="math display">\[
+h(x) = x^2
+\]</span> is not injective, since <span class="math display">\[
+h(1) = h(-1) = 1 \,, \quad 1 \neq - 1 \,.
+\]</span></p></li>
+<li><p>The function <span class="math inline">\(l \colon \mathbb{R}\to \mathbb{R}\)</span> defined by <span class="math display">\[
+l(x) = 2x
+\]</span> is injective, since <span class="math display">\[
+l(x) = l(y) \quad \implies \quad 2x = 2y \quad \implies \quad x = y \,.
+\]</span></p></li>
+</ul>
+</div></details>
+</div>
+<div id="surjectivity" class="Example" title="Surjectivity">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 23: </strong>Surjectivity</summary><div>
+<p>Consider the sets <span class="math display">\[
+X = \{ 1, 2, 3 ,4\} \,, \quad  
+Y = \{ a,b,c\} \,.
+\]</span></p>
+<ul>
+<li><p>The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
+f(1)=c \,, \quad f(2) = a \,, \quad f(3) = a \,, \quad f(4) = b \,,
+\]</span> is surjective.</p></li>
+<li><p>The function <span class="math inline">\(g \colon X \to Y\)</span> defined by <span class="math display">\[
+g(1)=a \,, \quad g(2) = a \,, \quad g(3) = c \,, \quad g(4) = a \,,
+\]</span> is not surjective, since there is no element <span class="math inline">\(x \in X\)</span> such that <span class="math display">\[
+g(x) = b \,.
+\]</span></p></li>
+<li><p>The function <span class="math inline">\(h \colon \mathbb{R}\to \mathbb{R}\)</span> defined by <span class="math display">\[
+h(x) = x^2
+\]</span> is not surjective, since there is no <span class="math inline">\(x \in \mathbb{R}\)</span> such that <span class="math display">\[
+h(x) =  x^2 = -1  \,.
+\]</span></p></li>
+<li><p>The function <span class="math inline">\(l \colon \mathbb{R}\to [0 , \infty)\)</span> defined by <span class="math display">\[
+l(x) = x^2
+\]</span> is surjective, since for every <span class="math inline">\(y \geq 0\)</span> there exists <span class="math inline">\(x \in \mathbb{R}\)</span> such that <span class="math display">\[
+l(x)= x^2 = y\,.
+\]</span> This is true by Theorem <a href="chap_4.html#theorem_existence_root">19</a>.</p></li>
+</ul>
+</div></details>
+</div>
+<div id="bijectivity" class="Example" title="Bijectivity">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 24: </strong>Bijectivity</summary><div>
+<ul>
+<li><p>Let <span class="math inline">\(X = \{ 1, 2, 3 \}, Y = \{ a,b,c\}\)</span>. The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
+f(1)=c \,, \quad f(2) = a \,, \quad f(3) = b \,,
+\]</span> is bijective, since it is both injective and surjective.</p></li>
+<li><p>Let <span class="math inline">\(X = \{ 1, 2, 3 \}, Y = \{ a,b\}\)</span>. The function <span class="math inline">\(g \colon X \to Y\)</span> defined by <span class="math display">\[
+g(1)=a \,, \quad g(2) = b \,, \quad g(3) = b \,,
+\]</span> is not bijective, since it is not injective: we have <span class="math display">\[
+g(2) = g(3) = b \, \quad 2 \neq 3 \,.
+\]</span></p></li>
+<li><p>Let <span class="math inline">\(X = \{ 1, 2 \}, Y = \{ a,b,c\}\)</span>. The function <span class="math inline">\(h \colon \mathbb{R}\to \mathbb{R}\)</span> defined by <span class="math display">\[
+h(1) = a \,, \quad h(2) = c \,,
+\]</span> is not bijective, since it is not surjective: there is no <span class="math inline">\(x \in X\)</span> such that <span class="math display">\[
+h(x) =  b  \,.
+\]</span></p></li>
+<li><p>Let <span class="math inline">\(X = \{ 1, 2 , 3\}, Y = \{ a,b,c\}\)</span>. The function <span class="math inline">\(l \colon \mathbb{R}\to [0 , \infty)\)</span> defined by <span class="math display">\[
+l(1) = a \,, \quad l(2) = a \,, \quad l(3) = b \,,
+\]</span> is not bijective, as it is neither injective nor surjective.</p></li>
+</ul>
+</div></details>
+</div>
+<p>We are ready to define the size of a set.</p>
+<div id="cardinality-finite-countable-uncountable" class="Definition" title="Cardinality, finite, countable, uncountable">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 25: </strong>Cardinality, finite, countable, uncountable</summary><div>
+<p>Let <span class="math inline">\(X\)</span> be a set. The <strong>cardinality</strong> of <span class="math inline">\(X\)</span> is the number of elements in <span class="math inline">\(X\)</span>. We denote the cardinality of <span class="math inline">\(X\)</span> by <span class="math display">\[
+|X| := \# \, \mbox{ of elements in } \, X \,.
+\]</span> Further, we say that:</p>
+<ul>
+<li><p><span class="math inline">\(X\)</span> is <strong>finite</strong> if there exists a natural number <span class="math inline">\(n \in \mathbb{N}\)</span> and a bijection <span class="math display">\[
+f \colon X \to \{1,2,\ldots, n \} \,.
+\]</span> In particular <span class="math display">\[
+|X| = n \,.
+\]</span></p></li>
+<li><p><span class="math inline">\(X\)</span> is <strong>countable</strong> if there exists a bijection <span class="math display">\[
+f \colon X \to \mathbb{N}\,.
+\]</span> In this case we denote the cardinality of <span class="math inline">\(X\)</span> by <span class="math display">\[
+|X| = |\mathbb{N}| \,.
+\]</span></p></li>
+<li><p><span class="math inline">\(X\)</span> is <strong>uncountable</strong> if <span class="math inline">\(X\)</span> is neither finite, nor countable.</p></li>
+</ul>
+</div></details>
+</div>
+<p>In other words: A set <span class="math inline">\(X\)</span> is</p>
+<ul>
+<li><p>finite, if <span class="math inline">\(X\)</span> can be listed as <span class="math display">\[
+X = \{ x_1 , \ldots, x_n \}
+\]</span> for some <span class="math inline">\(n \in \mathbb{N}\)</span>.</p></li>
+<li><p>countable, if <span class="math inline">\(X\)</span> can be listed as <span class="math display">\[
+X = \{ x_n \, \colon \,n \in \mathbb{N}\} \,.
+\]</span></p></li>
+<li><p>uncountable, if <span class="math inline">\(X\)</span> cannot be listed.</p></li>
+</ul>
+<div id="Question-26" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 26</strong></summary><div>Is there an intermediate cardinality between finite and countable?<p></p>
+</div></details>
+</div>
+<p>The answer is no, as shown in the next proposition.</p>
+<div id="proposition-countable-subset" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 27</strong></summary><div>Let <span class="math inline">\(X\)</span> be a countable set and <span class="math inline">\(A \subseteq X\)</span>. Then either <span class="math inline">\(A\)</span> is finite or countable.<p></p>
+</div></details>
+</div>
+<div id="Proof*-12" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>If <span class="math inline">\(A\)</span> is finite we are done. Therefore suppose <span class="math inline">\(A\)</span> is not finite. Since <span class="math inline">\(X\)</span> is countable there exists a bijection <span class="math inline">\(f \colon \mathbb{N}\to X\)</span>. Let <span class="math inline">\(n_1 \in \mathbb{N}\)</span> be such that <span class="math display">\[
+n_1 = \min \{ n \in \mathbb{N}\, \text{ s.t. } \, f(n) \in A \} \,.
+\]</span> Note that <span class="math inline">\(n_1\)</span> exists since <span class="math inline">\(f\)</span> is surjective. Define <span class="math display">\[
+g(1) := f(n_1) \,.
+\]</span> Now let <span class="math display">\[
+n_2 = \min \{ n  \in \mathbb{N}\, \text{ s.t. } \, n &gt; n_1 \,, \,\, f(n) \in A \} \,.
+\]</span> Notice that <span class="math inline">\(n_2\)</span> exists, since <span class="math inline">\(f\)</span> is surjective and <span class="math inline">\(A\)</span> is not finite. Set <span class="math display">\[
+g(2):=f(n_2) \,.
+\]</span> Iterating, we define <span class="math display">\[
+n_k = \min \{ n \in \mathbb{N}\, \text{ s.t. } \, n&gt;n_{k-1} \,, \,\, f(n) \in A \}
+\]</span> and <span class="math display">\[
+g(k) := f(n_k) \,.
+\]</span> In this way we have defined a function <span class="math inline">\(g \colon \mathbb{N}\to A\)</span>. We have:<p></p>
+<ul>
+<li><span class="math inline">\(g\)</span> is injective: This is because <span class="math inline">\(g\)</span> was defined thourgh <span class="math inline">\(f\)</span>, and <span class="math inline">\(f\)</span> is injective.</li>
+<li><span class="math inline">\(g\)</span> is surjective: If <span class="math inline">\(x \in A\)</span>, by surjectivity of <span class="math inline">\(f\)</span> there exists <span class="math inline">\(\widetilde{n} \in \mathbb{N}\)</span> such that <span class="math inline">\(f(\widetilde{n})=x\)</span>. Therefore <span class="math display">\[
+\widetilde{n} \in  \{ n \in \mathbb{N}\, \text{ s.t. } \, f(n) \in A \} \,,
+\]</span> so that <span class="math inline">\(n_k= \widetilde{n}\)</span>, for some <span class="math inline">\(k \geq \widetilde{n}-1\)</span>.</li>
+</ul>
+<p>Hence <span class="math inline">\(g\)</span> is bijective, showing that <span class="math inline">\(A\)</span> is countable.</p>
+</div></details>
+</div>
+<div id="Example-28" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 28</strong></summary><div>
+<ol type="1">
+<li><p>Let <span class="math inline">\(X = \{a,b,c\}\)</span> and <span class="math inline">\(Y=\{ 1,2,3\}\)</span>. The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
+f(1)=a \,, \quad f(2) = b \,, \quad f(3) = c \,,
+\]</span> is bijective. Therefore <span class="math inline">\(X\)</span> is finite, with <span class="math inline">\(|X| = 3\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(X = \mathbb{N}\)</span>. The function <span class="math inline">\(f \colon X \to \mathbb{N}\)</span> defined by <span class="math display">\[
+f(n):=n \,,
+\]</span> is bijective. Therefore <span class="math inline">\(X = \mathbb{N}\)</span> is countable.</p></li>
+<li><p>Let <span class="math inline">\(X\)</span> be the set of even numbers <span class="math display">\[
+X = \{ 2n \, \colon \,n \in \mathbb{N}\} \,.
+\]</span> Define the map <span class="math inline">\(f \colon X \to \mathbb{N}\)</span> by <span class="math display">\[
+f(m):= \frac{m}{2} \,.
+\]</span> We have that:</p>
+<ul>
+<li><span class="math inline">\(f\)</span> is injective: <span class="math inline">\(f(m)=f(k)\)</span> implies that <span class="math inline">\(m/2=k/2\)</span> which implies <span class="math inline">\(m=k\)</span>.</li>
+<li><span class="math inline">\(f\)</span> is surjective: If <span class="math inline">\(n \in \mathbb{N}\)</span>, then <span class="math inline">\(f(2n)=n\)</span>.</li>
+</ul>
+<p>Therefore <span class="math inline">\(f\)</span> is bijective, showing that <span class="math inline">\(X\)</span> is countable and <span class="math inline">\(|X|=|\mathbb{N}|\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(X = \mathbb{Z}\)</span> the set of integers. Define <span class="math inline">\(f \colon \mathbb{N}\to \mathbb{Z}\)</span> by <span class="math display">\[
+f(n):=
+\begin{cases}
+\dfrac{n}{2}  &amp; \,\, \mbox{ if } \, n \, \mbox{ even }  \\
+-\dfrac{n+1}{2}  &amp; \,\, \mbox{ if } \, n \, \mbox{ odd }  
+\end{cases}
+\]</span> For example <span class="math display">\[\begin{align*}
+f(0) &amp; = 0 \,, \quad f(1) = -1 \,, \quad f(2) = 1 \,, \quad f(3) = -2 \,, \\
+f(4) &amp; = 2 \,, \quad f(5) = -3 \,, \quad f(6) = 3 \,, \quad f(7) = -4 \,.
+\end{align*}\]</span> We have:</p>
+<ul>
+<li><p><span class="math inline">\(f\)</span> is injective: Indeed, suppose that <span class="math inline">\(m \neq n\)</span>. If <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> are both even or both odd we have, respectively <span class="math display">\[\begin{align*}
+f(m) = \frac{m}{2} &amp; \neq \frac{n}{2} = f(n)  \\
+f(m) =  -\frac{m+1}{2} &amp; \neq  - \frac{n+1}{2} = f(n) \,.
+\end{align*}\]</span> If instead <span class="math inline">\(m\)</span> is even and <span class="math inline">\(n\)</span> is odd, we get <span class="math display">\[
+f(m) = \frac{m}{2} \neq  - \frac{n+1}{2} = f(n)  \,,
+\]</span> since the LHS is positive and the RHS is negative. The case when <span class="math inline">\(m\)</span> is odd and <span class="math inline">\(n\)</span> even is similar.</p></li>
+<li><p><span class="math inline">\(f\)</span> is surjective: Let <span class="math inline">\(z \in \mathbb{Z}\)</span>. If <span class="math inline">\(z \geq 0\)</span>, then <span class="math inline">\(m:=2z\)</span> belongs to <span class="math inline">\(\mathbb{N}\)</span>, is even, and <span class="math display">\[
+f(m) = f(2z) = z \,.
+\]</span> If instead <span class="math inline">\(z &lt; 0\)</span>, then <span class="math inline">\(m := -2z -1\)</span> belongs to <span class="math inline">\(\mathbb{N}\)</span>, is odd, and <span class="math display">\[
+f(m) = f(-2z-1) = z \,.
+\]</span></p></li>
+</ul>
+<p>Therefore <span class="math inline">\(f\)</span> is bijective, showing that <span class="math inline">\(\mathbb{Z}\)</span> is countable and <span class="math display">\[
+|\mathbb{Z}| =| \mathbb{N}| \,.
+\]</span></p></li>
+</ol>
+</div></details>
+</div>
+<p>We have seen that the sets <span class="math inline">\(\mathbb{N}\)</span> and <span class="math inline">\(\mathbb{Z}\)</span> are countable. What about <span class="math inline">\(\mathbb{Q}\)</span>? To study this case, we need the following result.</p>
+<div id="proposition-countable-union" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 29</strong></summary><div>Let the set <span class="math inline">\(A_n\)</span> be countable for all <span class="math inline">\(n \in \mathbb{N}\)</span>. Define <span class="math display">\[
+A = \bigcup_{n \in \mathbb{N}} \, A_n \, .
+\]</span> Then <span class="math inline">\(A\)</span> is countable.<p></p>
+</div></details>
+</div>
+<div id="Proof*-13" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Since each <span class="math inline">\(A_i\)</span> is countable, we can list their elements as <span class="math display">\[
+A_i = \{ a_k^i \, \colon \,k \in \mathbb{N}\} = \{   a_1^i , \, a_2^i , \, a_3^i , \, a_4^i , \, \ldots \} \,.
+\]</span> The proof that <span class="math inline">\(A\)</span> is countable is based on a diagonal argument by Georg Cantor, see <a href="https://en.wikipedia.org/wiki/Cantor's_diagonal_argument0">Wikipedia page</a>. The idea of th is that we can list the elements of the sets <span class="math inline">\(A_i\)</span> in an infinite square: In the first row we put the elements of <span class="math inline">\(A_1\)</span>, in the second row the elements of <span class="math inline">\(A_2\)</span>, and so on. Therefore the <span class="math inline">\(i\)</span>-th row contains the elements of <span class="math inline">\(A_i\)</span>. This procedure is illustrated in <a href="#fig-diagonal-argument" class="quarto-xref">Figure&nbsp;<span>4.7</span></a>. Therefore this infinite square contains all the elements of <span class="math inline">\(A\)</span>. We then list all the elements of the square by looking at the diagonals, as shown in <a href="#fig-diagonal-argument" class="quarto-xref">Figure&nbsp;<span>4.7</span></a>. This procedure defines a function <span class="math inline">\(f \colon \mathbb{N}\to A\)</span>. For example the first few terms of <span class="math inline">\(f\)</span> are <span class="math display">\[
+f(1) = a_1^1 \,, \quad f(2) = a_2^1 \,, \quad f(3) = a_1^2 \,, \quad
+f(4) = a_1^3 \,.
+\]</span> Since <span class="math inline">\(f\)</span> is injective and surjective, we have that <span class="math inline">\(A\)</span> is countable.<p></p>
+</div></details>
+</div>
+<div id="fig-diagonal-argument" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diagonal-argument-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/diagonal_argument.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diagonal-argument-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.7: The i-th row contains all the elements <span class="math inline">\(a_1^i,a_2^i,a_3^i, \ldots\)</span> of the countable set <span class="math inline">\(A_i\)</span>. We define the function <span class="math inline">\(f \colon \mathbb{N}\to A\)</span> by going throgh the square diagonally.
+</figcaption>
+</figure>
+</div>
+<div id="theorem-Q-countable" class="Theorem" title="\mathbb{Q} is countable">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 30: </strong><span class="math inline">\(\mathbb{Q}\)</span> is countable</summary><div>The set of rational numbers <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
+</div></details>
+</div>
+<div id="Proof*-14" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>For <span class="math inline">\(i \in \mathbb{N}\)</span> define the sets <span class="math display">\[
+L_i := \left\{ \frac{m}{i}  \, \colon \,m \in \mathbb{Z}\right\} \,.
+\]</span> We have that <span class="math inline">\(f \colon L_i \to \mathbb{Z}\)</span> defined by <span class="math display">\[
+f \left(\frac{m}{i}\right) := m
+\]</span> is a bijection. As <span class="math inline">\(\mathbb{Z}\)</span> is countable, we deduce that <span class="math inline">\(L_i\)</span> is countable. Therefore the set <span class="math inline">\(L\)</span> defined by <span class="math display">\[
+L:= \bigcup_{i \in \mathbb{N}} \, L_i
+\]</span> is countable by Proposition <a href="chap_4.html#proposition-countable-union">29</a>. Clearly we have <span class="math display">\[
+\mathbb{Q}\subseteq L \,.
+\]</span> Since <span class="math inline">\(\mathbb{Q}\)</span> is not finite, by Proposition <a href="chap_4.html#proposition-countable-subset">27</a> we conclude that <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
+</div></details>
+</div>
+<p>We have proven that the sets <span class="math display">\[
+\mathbb{N}\,, \quad \mathbb{Z}\,, \quad \mathbb{Q}\,,
+\]</span> are all countable. What about <span class="math inline">\(\mathbb{R}\)</span>?</p>
+<div id="theorem-R-uncountable" class="Theorem" title="\mathbb{R} is uncountable">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 31: </strong><span class="math inline">\(\mathbb{R}\)</span> is uncountable</summary><div>The set of Real Numbers <span class="math inline">\(\mathbb{R}\)</span> is <strong>uncountable</strong>.<p></p>
+</div></details>
+</div>
+<div id="Proof*-15" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose by contradiction <span class="math inline">\(\mathbb{R}\)</span> is countable. Then there exists a bijection <span class="math inline">\(f \colon \mathbb{N}\to \mathbb{R}\)</span>, meaning that we can list the elements of <span class="math inline">\(\mathbb{R}\)</span> as <span class="math display">\[
+\mathbb{R}= \{ x_1 , x_2 , x_3 , x_4 , x_5 , \ldots \} \,.
+\]</span> Let <span class="math inline">\(I_1\)</span> be a closed interval such that <span class="math display">\[
+x_1 \notin I_1 \,.
+\]</span> Let <span class="math inline">\(I_2\)</span> be another closed interval, contained in <span class="math inline">\(I_1\)</span>, and such that <span class="math inline">\(x_2 \notin I_2\)</span>. Such interval exists, because <span class="math inline">\(I_1\)</span> contains two disjoint closed intervals: hence <span class="math inline">\(x_2\)</span> can be at most in one of these two intervals. To summarize, we have <span class="math display">\[
+x_1 \notin I_1 \,, \quad x_2 \notin I_2 \,, \quad I_2 \subseteq I_1 \,.
+\]</span> We can iterate this procedure, and construct a sequence of nested intervals <span class="math inline">\(I_n\)</span> such that <span class="math display">\[
+I_{n+1} \subseteq I_n \,, \quad  x_n \notin I_n \,,
+\]</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>, see <a href="#fig-R-uncountable" class="quarto-xref">Figure&nbsp;<span>4.8</span></a>. Since <span class="math inline">\(x_k \notin I_k\)</span>, we conclude that <span class="math display">\[
+x_k \notin \bigcap_{n =1}^\infty \, I_n \,, \quad \forall \, k \in \mathbb{N}\,.
+\]</span> As the points <span class="math inline">\(x_k\)</span> are all the elements of <span class="math inline">\(\mathbb{R}\)</span>, we conclude that <span class="math display">\[
+\bigcap_{n =1}^\infty \, I_n = \emptyset \,.
+\]</span> However the Nested Interval Property of Theorem <a href="chap_4.html#theorem-nested">5</a> implies that <span class="math display">\[
+\bigcap_{n =1}^\infty \, I_n \neq \emptyset \,,
+\]</span> yielding a contradiction. Therefore <span class="math inline">\(\mathbb{R}\)</span> is uncountable.<p></p>
+</div></details>
+</div>
+<div id="fig-R-uncountable" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-R-uncountable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/R_uncountable.png" class="img-fluid figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-R-uncountable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.8: The intervals <span class="math inline">\(I_n\)</span> are nested, and can be chosen so that <span class="math inline">\(x_n \notin I_n\)</span>.
+</figcaption>
+</figure>
+</div>
+<p>As a corollary we obtain that also the irrational numbers are uncountable.</p>
+<div id="Theorem-32" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 32</strong></summary><div>The set of irrational numbers <span class="math display">\[
+\mathcal{I}:=\mathbb{R}\smallsetminus \mathbb{Q}
+\]</span> is uncountable.<p></p>
+</div></details>
+</div>
+<div id="Proof*-16" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>In Theorems <a href="chap_4.html#theorem-Q-countable">30</a>, <a href="chap_4.html#theorem-R-uncountable">31</a> we have shown that <span class="math inline">\(\mathbb{R}\)</span> in uncountable and <span class="math inline">\(\mathbb{Q}\)</span> is countable. Suppose by contradiction that <span class="math inline">\(\mathcal{I}\)</span> is countable. Then <span class="math display">\[
+\mathbb{Q}\cup \mathcal{I}
+\]</span> is countable by Proposition <a href="chap_4.html#proposition-countable-union">29</a>, being union of countable sets. Since by definition <span class="math display">\[
+\mathbb{R}= \mathbb{Q}\cup \mathcal{I} \,,
+\]</span> we conclude that <span class="math inline">\(\mathbb{R}\)</span> is countable. Contradiction.<p></p>
+</div></details>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../sections/chap_3.html" class="pagination-link  aria-label=" &lt;span="" numbers&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Real Numbers</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../sections/chap_5.html" class="pagination-link" aria-label="<span class='chapter-number'>5</span>&nbsp; <span class='chapter-title'>Complex Numbers</span>">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Complex Numbers</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link active" href="../sections/license.html" aria-current="page">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.silviofanzon.com/contact">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
