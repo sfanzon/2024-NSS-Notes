@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Numbers, Sequences and Series",
     "section": "",
-    "text": "Welcome\nThese are the Lecture Notes of Numbers, Sequences and Series 400297 for T1 2023/24 at the University of Hull. I will follow these lecture notes during the course. If you have any question or find any typo, please email me at\nUp to date information about the course, Tutorials and Homework will be published on the University of Hull Canvas Website\nand on the Course Webpage hosted on my website",
+    "text": "Welcome\nThese are the Lecture Notes of Numbers, Sequences and Series 400297 for 2024/25 at the University of Hull. I will use this material during lectures. If you have any question or find any typo, please email me at\nUp to date information about the course, Tutorials and Homework will be published on the University of Hull Canvas Website",
     "crumbs": [
       "Welcome"
     ]
@@ -24,7 +24,7 @@
     "href": "index.html#readings",
     "title": "Numbers, Sequences and Series",
     "section": "Readings",
-    "text": "Readings\nWe will study the set of real numbers \\(\\mathbb{R}\\), and then sequences and series in \\(\\mathbb{R}\\). I will follow mainly the textbook by Bartle and Sherbert (Bartle, Robert G. and Sherbert, Donald R. 2011). Another good reading is the book by Abbott (Abbott 2015). I also point out the classic book by Rudin (Rudin 1976), although this is more difficult to understand.\n\n\n\n\n\n\nImportant\n\n\n\nYou are not expected to purchase any of the above books. These lecture notes will cover 100% of the topics you are expected to known in order to excel in the final exam.\n\n\n\n\n\n\nAbbott, Sthephen. 2015. Understanding Analysis. Second Edition. Springer.\n\n\nBartle, Robert G., and Sherbert, Donald R. 2011. Introduction to Real Analysis. Fourth Edition. Wiley.\n\n\nRudin, Walter. 1976. Principles of Mathematical Analysis. Third Edition. McGraw Hill.",
+    "text": "Readings\nWe will study the set of real numbers \\(\\mathbb{R}\\), and then sequences and series in \\(\\mathbb{R}\\). I will follow mainly the textbook by Bartle and Sherbert (Bartle, Robert G. and Sherbert, Donald R. 2011). Another good reading is the book by Abbott (Abbott 2015). I also point out the classic book by Rudin (Rudin 1976), although this is a more difficult read.\n\n\n\n\n\n\nImportant\n\n\n\nYou are not expected to purchase any of the above books. These lecture notes will cover 100% of the topics you are expected to known in order to excel in the Homework and Final Exam.\n\n\n\n\n\n\nAbbott, Sthephen. 2015. Understanding Analysis. Second Edition. Springer.\n\n\nBartle, Robert G., and Sherbert, Donald R. 2011. Introduction to Real Analysis. Fourth Edition. Wiley.\n\n\nRudin, Walter. 1976. Principles of Mathematical Analysis. Third Edition. McGraw Hill.",
     "crumbs": [
       "Welcome"
     ]
@@ -664,7 +664,7 @@
     "href": "sections/license.html",
     "title": "License",
     "section": "",
-    "text": "Reuse\nThis work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License",
+    "text": "Reuse\nThis work is licensed under\nCC-BY-NC-ND",
     "crumbs": [
       "License"
     ]
@@ -674,7 +674,7 @@
     "href": "sections/license.html#citation",
     "title": "License",
     "section": "Citation",
-    "text": "Citation\nFor attribution, please cite this work as:\n\nFanzon, Silvio. (2023). Lecture Notes on Numbers, Sequences and Series.\nhttps://www.silviofanzon.com/2023-NSS-Notes/\n\nBibTex citation:\n@electronic{Fanzon-NSS-2023,\n    author = {Fanzon, Silvio},\n    title = {Lecture Notes on Numbers, Sequences and Series},\n    url = {https://www.silviofanzon.com/2023-NSS-Notes/},\n    year = {2023}}",
+    "text": "Citation\nFor attribution, please cite this work as:\n\nFanzon, Silvio. (2024). Lecture Notes on Numbers, Sequences and Series.\nhttps://www.silviofanzon.com/2024-NSS-Notes/\n\nBibTex citation:\n@electronic{Fanzon-NSS-2024,\n    author = {Fanzon, Silvio},\n    title = {Lecture Notes on Numbers, Sequences and Series},\n    url = {https://www.silviofanzon.com/2024-NSS-Notes/},\n    year = {2024}}",
     "crumbs": [
       "License"
     ]

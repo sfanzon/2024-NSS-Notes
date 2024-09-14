@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dr.&nbsp;Silvio Fanzon">
-<meta name="dcterms.date" content="2024-09-13">
+<meta name="dcterms.date" content="2024-09-14">
 
 <title>Numbers, Sequences and Series</title>
 <style>
@@ -93,27 +93,7 @@ div.csl-indent {
   }
 }</script>
 <style>
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
+.Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
@@ -121,27 +101,15 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 .Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -149,17 +117,49 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
-.Remark {
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Example {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -344,7 +344,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">13 Sep 2024</p>
+      <p class="date">14 Sep 2024</p>
     </div>
   </div>
   
@@ -358,17 +358,13 @@ window.Quarto = {
 
 <section id="welcome" class="level1 unnumbered">
 <h1 class="unnumbered">Welcome</h1>
-<p>These are the Lecture Notes of <strong>Numbers, Sequences and Series 400297</strong> for T1 2023/24 at the University of Hull. I will follow these lecture notes during the course. If you have any question or find any typo, please email me at</p>
+<p>These are the Lecture Notes of <strong>Numbers, Sequences and Series 400297</strong> for 2024/25 at the University of Hull. I will use this material during lectures. If you have any question or find any typo, please email me at</p>
 <div style="text-align: center;">
 <p><strong><a href="mailto:%20S.Fanzon@hull.ac.uk">S.Fanzon@hull.ac.uk</a></strong></p>
 </div>
 <p>Up to date information about the course, Tutorials and Homework will be published on the University of Hull <strong>Canvas Website</strong></p>
 <div style="text-align: center;">
 <p><strong><a href="https://canvas.hull.ac.uk/courses/67551">canvas.hull.ac.uk/courses/67551</a></strong></p>
-</div>
-<p>and on the <strong>Course Webpage</strong> hosted on my website</p>
-<div style="text-align: center;">
-<p><strong><a href="https://www.silviofanzon.com/blog/2023/NSS/">silviofanzon.com/blog/2023/NSS</a></strong></p>
 </div>
 <section id="digital-notes" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="digital-notes">Digital Notes</h2>
@@ -382,7 +378,7 @@ window.Quarto = {
 </section>
 <section id="readings" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="readings">Readings</h2>
-<p>We will study the set of real numbers <span class="math inline">\(\mathbb{R}\)</span>, and then sequences and series in <span class="math inline">\(\mathbb{R}\)</span>. I will follow mainly the textbook by Bartle and Sherbert <span class="citation" data-cites="bartle">(<a href="sections/references.html#ref-bartle" role="doc-biblioref">Bartle, Robert G. and Sherbert, Donald R. 2011</a>)</span>. Another good reading is the book by Abbott <span class="citation" data-cites="abbott">(<a href="sections/references.html#ref-abbott" role="doc-biblioref">Abbott 2015</a>)</span>. I also point out the classic book by Rudin <span class="citation" data-cites="rudin_introduction">(<a href="sections/references.html#ref-rudin_introduction" role="doc-biblioref">Rudin 1976</a>)</span>, although this is more difficult to understand.</p>
+<p>We will study the set of real numbers <span class="math inline">\(\mathbb{R}\)</span>, and then sequences and series in <span class="math inline">\(\mathbb{R}\)</span>. I will follow mainly the textbook by Bartle and Sherbert <span class="citation" data-cites="bartle">(<a href="sections/references.html#ref-bartle" role="doc-biblioref">Bartle, Robert G. and Sherbert, Donald R. 2011</a>)</span>. Another good reading is the book by Abbott <span class="citation" data-cites="abbott">(<a href="sections/references.html#ref-abbott" role="doc-biblioref">Abbott 2015</a>)</span>. I also point out the classic book by Rudin <span class="citation" data-cites="rudin_introduction">(<a href="sections/references.html#ref-rudin_introduction" role="doc-biblioref">Rudin 1976</a>)</span>, although this is a more difficult read.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -393,7 +389,7 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You are not expected to purchase any of the above books. These lecture notes will cover 100% of the topics you are expected to known in order to excel in the final exam.</p>
+<p>You are not expected to purchase any of the above books. These lecture notes will cover 100% of the topics you are expected to known in order to excel in the Homework and Final Exam.</p>
 </div>
 </div>
 
