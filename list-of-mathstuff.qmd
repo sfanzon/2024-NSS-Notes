@@ -97,7 +97,7 @@
 
  [**Remark 2.36**](#geometric-meaning-of-triangle-inequality): Geometric meaning of triangle inequality\Pageref{geometric-meaning-of-triangle-inequality}
 
- [**Proof**](#proof-of-theorem-1): Proof of Theorem 2.35\Pageref{proof-of-theorem-1}
+ [**Proof**](#proof-of-theorem-1): Proof of Theorem 0.44\Pageref{proof-of-theorem-1}
 
  [**Remark 2.37**](#Remark-2.37)\Pageref{Remark-2.37}
 
@@ -161,9 +161,9 @@
 
  [**Theorem 3.20**](#theorem-Q-cut): $\mathbb{Q}$ does not have the cut property.\Pageref{theorem-Q-cut}
 
- [**Remark 3.21**](#remark-idea-proof-cut): Ideas for the proof of Theorem 3.20\Pageref{remark-idea-proof-cut}
+ [**Remark 3.21**](#remark-idea-proof-cut): Ideas for the proof of Theorem 0.72\Pageref{remark-idea-proof-cut}
 
- [**Proof**](#proof-of-theorem-2): Proof of Theorem 3.20\Pageref{proof-of-theorem-2}
+ [**Proof**](#proof-of-theorem-2): Proof of Theorem 0.72\Pageref{proof-of-theorem-2}
 
  [**Remark 3.22**](#Remark-3.22)\Pageref{Remark-3.22}
 
@@ -225,9 +225,9 @@
 
  [**Theorem 3.41**](#theorem-cut-complete): Equivalence of Cut Property and Completeness\Pageref{theorem-cut-complete}
 
- [**Remark 3.42**](#ideas-for-proving-theorem): Ideas for proving Theorem 3.41\Pageref{ideas-for-proving-theorem}
+ [**Remark 3.42**](#ideas-for-proving-theorem): Ideas for proving Theorem 0.93\Pageref{ideas-for-proving-theorem}
 
- [**Proof**](#proof-of-theorem-3): Proof of Theorem 3.41\Pageref{proof-of-theorem-3}
+ [**Proof**](#proof-of-theorem-3): Proof of Theorem 0.93\Pageref{proof-of-theorem-3}
 
  [**Definition 3.43**](#definition-R): System of Real Numbers $\mathbb{R}$\Pageref{definition-R}
 
@@ -317,7 +317,7 @@
 
  [**Proposition 4.7**](#proposition-supremum-characterization): Characterization of Supremum\Pageref{proposition-supremum-characterization}
 
- [**Proof**](#proof-of-proposition): Proof of Proposition 4.7\Pageref{proof-of-proposition}
+ [**Proof**](#proof-of-proposition): Proof of Proposition 0.125\Pageref{proof-of-proposition}
 
  [**Proposition 4.8**](#prop-supremum-infimum): Characterization of Infimum\Pageref{prop-supremum-infimum}
 
@@ -353,7 +353,7 @@
 
  [**Theorem 4.19**](#theorem_existence_root): Existence of $k$-th roots\Pageref{theorem_existence_root}
 
- [**Proof**](#proof-of-theorem-4): Proof of Theorem 4.19\Pageref{proof-of-theorem-4}
+ [**Proof**](#proof-of-theorem-4): Proof of Theorem 0.137\Pageref{proof-of-theorem-4}
 
  [**Definition 4.20**](#k-th-root-of-a-number): $k$-th root of a number\Pageref{k-th-root-of-a-number}
 
@@ -693,7 +693,7 @@
 
  [**Proof**](#Proof*-6.19)\Pageref{Proof*-6.19}
 
- [**Proof**](#proof-of-theorem-5): Proof of Theorem 6.40\Pageref{proof-of-theorem-5}
+ [**Proof**](#proof-of-theorem-5): Proof of Theorem 0.263\Pageref{proof-of-theorem-5}
 
  [**Example 6.42**](#Example-6.42)\Pageref{Example-6.42}
 
@@ -907,7 +907,7 @@
 
  [**Notation 8.42**](#positive-and-negative-part): Positive and negative part\Pageref{positive-and-negative-part}
 
- [**Proof**](#proof-of-theorem-6): Proof of Theorem 8.41\Pageref{proof-of-theorem-6}
+ [**Proof**](#proof-of-theorem-6): Proof of Theorem 0.339\Pageref{proof-of-theorem-6}
 
  [**Example 8.43**](#Example-8.43)\Pageref{Example-8.43}
 
