@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.542">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Numbers, Sequences and Series - 4&nbsp; Properties of \(\mathbb{R}\)</title>
+<title>4&nbsp; Properties of \mathbb{R} – Numbers, Sequences and Series</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,11 +72,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Notation {
+.Definition {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
@@ -84,31 +80,11 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
+.Example {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
+.Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
@@ -116,7 +92,15 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Important {
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -124,15 +108,15 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
-.Warning {
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Lemma {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -140,9 +124,25 @@ ul.task-list li input[type="checkbox"] {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 </style>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -185,7 +185,7 @@ window.Quarto = {
     <span class="navbar-title">Numbers, Sequences and Series</span>
     </a>
   </div>
-        <div class="quarto-navbar-tools">
+        <div class="quarto-navbar-tools tools-end">
     <a href="../Numbers,-Sequences-and-Series.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
@@ -194,11 +194,11 @@ window.Quarto = {
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/chap_4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Properties of <span class="math inline">\(\mathbb{R}\)</span></span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -330,7 +330,7 @@ n &gt; x \,.
 \]</span></p></li>
 </ol>
 <p>The situation is depicted in <a href="#fig-archimedean" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>.</p>
-<div id="fig-archimedean" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-archimedean" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-archimedean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/archimedean_original.png" class="img-fluid figure-img" style="width:80.0%">
@@ -405,7 +405,7 @@ n &gt; y = \frac{1}{x} \,.
 \]</span> then there exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
 nx &gt; y \,.
 \]</span> In other words, if one does <span class="math inline">\(n\)</span> steps of size <span class="math inline">\(x\)</span> in the positive numbers direction, then the resulting number <span class="math inline">\(nx\)</span> will be larger than <span class="math inline">\(y\)</span>. The situation is depicted in <a href="#fig-archimedean" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>.</p>
-<div id="fig-archimedean" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-archimedean" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-archimedean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/archimedean.png" class="img-fluid figure-img" style="width:80.0%">
@@ -456,7 +456,7 @@ I_n := [a_n,b_n] = \{   x \in \mathbb{R}\, \colon \,a_n \leq x \leq b_n   \} \,,
 \]</span> where the end points are ordered in the following way: <span class="math display">\[
 a_1 \leq a_2 \leq \ldots \leq a_n \leq \dots \leq b_n  \leq \ldots b_n \leq b_1 \,,
 \]</span> as shown in <a href="#fig-nested" class="quarto-xref">Figure&nbsp;<span>4.3</span></a>.</p>
-<div id="fig-nested" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-nested" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-nested-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/nested_interval_property.png" class="img-fluid figure-img" style="width:80.0%">
@@ -555,7 +555,7 @@ s - \varepsilon&lt; x \,.
 </ol>
 </div></details>
 </div>
-<div id="fig-alternative-sup" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-alternative-sup" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-alternative-sup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/alternative_supremum.png" class="img-fluid figure-img" style="width:80.0%">
@@ -603,7 +603,7 @@ x &lt; i + \varepsilon\,.
 </div></details>
 </div>
 <p>A sketch of the characterization in Proposition <a href="chap_4.html#prop-supremum-infimum">8</a> can be found in <a href="#fig-alternative-inf" class="quarto-xref">Figure&nbsp;<span>4.5</span></a> below.</p>
-<div id="fig-alternative-inf" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-alternative-inf" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-alternative-inf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/alternative_infimum.png" class="img-fluid figure-img" style="width:80.0%">
@@ -759,7 +759,7 @@ x &lt; q &lt; y \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="fig-density-proof" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-density-proof" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-density-proof-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/density_proof.png" class="img-fluid figure-img" style="width:80.0%">
@@ -1197,7 +1197,7 @@ f(4) = a_1^3 \,.
 \]</span> Since <span class="math inline">\(f\)</span> is injective and surjective, we have that <span class="math inline">\(A\)</span> is countable.<p></p>
 </div></details>
 </div>
-<div id="fig-diagonal-argument" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-diagonal-argument" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-diagonal-argument-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/diagonal_argument.png" class="img-fluid figure-img" style="width:70.0%">
@@ -1248,7 +1248,7 @@ x_k \notin \bigcap_{n =1}^\infty \, I_n \,, \quad \forall \, k \in \mathbb{N}\,.
 \]</span> yielding a contradiction. Therefore <span class="math inline">\(\mathbb{R}\)</span> is uncountable.<p></p>
 </div></details>
 </div>
-<div id="fig-R-uncountable" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-R-uncountable" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-R-uncountable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/R_uncountable.png" class="img-fluid figure-img" style="width:80.0%">
@@ -1457,18 +1457,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1500,7 +1489,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1508,10 +1519,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // default icon
           link.classList.add("external");
       }
@@ -1550,7 +1566,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1598,7 +1618,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1821,12 +1846,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sections/chap_3.html" class="pagination-link  aria-label=" &lt;span="" numbers&lt;="" span&gt;"="">
+      <a href="../sections/chap_3.html" class="pagination-link" aria-label="Real Numbers">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Real Numbers</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sections/chap_5.html" class="pagination-link" aria-label="<span class='chapter-number'>5</span>&nbsp; <span class='chapter-title'>Complex Numbers</span>">
+      <a href="../sections/chap_5.html" class="pagination-link" aria-label="Complex Numbers">
         <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Complex Numbers</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
