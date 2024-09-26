@@ -9,7 +9,7 @@ $
 
 # Introduction {#sec-chap-1}
 
-The first aim of this lecture notes is to rigorously introduce the set of **real numbers**, which is denoted by $\R$. But what do we mean by real numbers? To start our discussion, introduce the set of natural numbers (or non-negative integers)
+The first aim of this lecture notes is to rigorously introduce the set of **Real Numbers**, which is denoted by $\R$. But what do we mean by real numbers? To start our discussion, introduce the set of natural numbers (or non-negative integers)
 $$
 \N = \{0,1,2,3,4,5,\dots\}
 $$
@@ -61,13 +61,17 @@ $$
 n + m = 0 \,.
 $$
 
-Can we characterize $m$ explicitly? Of course! Seeing the definition at (@eq-def-sum-negative), we simply have
+Can we characterize $m$ explicitly? Yes; Seeing the definition at (@eq-def-sum-negative), we simply have
 $$
 m = - n \,.
 $$
 
-On the set $\Z$ we can also define the operation of **multiplication**, in the usual way we learnt in school. For 
-$n,m \in \Z$, we denote the multiplication by $nm$ or $n \cdot m$. For example $7 \cdot 2 = 14$ and $1 \cdot (-1) = -1$.
+On the set $\Z$ we can also define the operation of **multiplication** in the usual way. For 
+$n,m \in \Z$, we denote the multiplication of $n$ times $m$ by
+$$
+nm \quad \text{or} \quad n \cdot m \,.
+$$
+For example $7 \cdot 2 = 14$ and $1 \cdot (-1) = -1$.
 
 
 ::: {.Question #Question-2}
@@ -108,7 +112,7 @@ Moreover **sum** and **product** are **invertible** in $\Q$. Now we are happy ri
 
 ::: Question
 
-Can we draw the set $\Q$?
+Can we represent the set $\Q$ with a drawing?
 
 :::
 
@@ -137,13 +141,13 @@ Such numbers get arbitrarily close to $0$, as depicted below.
 
 ![Fractions $\frac{1}{n}$ can get arbitrarily close to $0$](/images/integers_ratio.png){width=70%}
 
-Maybe if we do the same reasoning with other progressively smaller rational numbers, we manage to fill out the interval $[0,1]$. In other words, we might conjecture the following. 
+Maybe if we do the same reasoning with other progressively smaller rational numbers, we manage to fill up the interval $[0,1]$. In other words, we might conjecture the following. 
 
 ::: {.Conjecture #conj-line}
 Maybe $\Q$ can be represented by a continuous line.
 :::
 
-Do you think the above conjecture is true? If it was, mathematics would be quite boring. Indeed Conjecture \ref{conj-line} is **false**, as shown by the Theorem below.
+Do you think the above conjecture is true? Conjecture \ref{conj-line} is **false**, as shown by the Theorem below.
 
 ::: {.Theorem #theorem-root-2}
 The number $\sqrt{2}$ does not belong to $\Q$.
@@ -174,13 +178,13 @@ Wait, what does this mean? Proving the claim by contradiction means assuming tha
 $$
 \sqrt{2} \in \Q \,.
 $$ {#eq-contradiction-root-2-false}
-From this assumption we then start deducing other statements, hoping to encounter a statement which is **`FALSE`**. But if (@eq-contradiction-root-2-false) leads to a false statement, then it must be that (@eq-contradiction-root-2-false) is **`FALSE`**. Thus the contrary of  (@eq-contradiction-root-2-false) must hold, meaning that 
+From this assumption we then start deducing other statements, hoping to encounter a statement which is **`FALSE`**. But if (@eq-contradiction-root-2-false) leads to a false statement, then it must be that (@eq-contradiction-root-2-false) was **`FALSE`** to begin with. Thus the contrary of  (@eq-contradiction-root-2-false) must hold, meaning that 
 $$
 \sqrt{2} \notin \Q 
 $$ 
 as we wanted to show. This would conclude the proof.
 
-Now we need to actually show that (@eq-contradiction-root-2-false) will lead to a contradiction. Since this is our first proof, let us take it slowly, step-by-step.
+Now we need to actually show that assuming (@eq-contradiction-root-2-false) will lead to a contradiction. Since this is our first proof, let us take it slowly, step-by-step.
 
 1. Assuming (@eq-contradiction-root-2-false) just means that there exists $q \in \Q$ such that 
 $$
@@ -201,12 +205,12 @@ $$
 $$ {#eq-contradiction-root-2-2}
 5. **Withouth loss of generality**, we can **assume** that $m$ and $n$ have no common factors.
     
-    > Wait. What does Step 5 mean? You will encounter the sentence *withouth loss of generality* many times in mathematics. It is often abbreviated in **`WLOG`**. WLOG means that the assumption that follows is chosen arbitrarily, but does not affect the validity of the proof in general.  
+    > Wait. What does Step 5 mean? You will encounter the sentence *withouth loss of generality* many times in mathematics. It is often abbreviated in **`WLOG`**. WLOG means that we can make some extra assumption which does not affect the validity of the proof in general.  
     For example in our case we can assume that $m$ and $n$ have no common factor. This is because if $m$ and $n$ had common factors, then it would mean
     $$
     m = a \tilde{m} \,, \quad n = a \tilde{n}
     $$
-    for some $a \in \N$ with $a \neq 0$. Then 
+    for some factor $a \in \N$ with $a \neq 0$. Then 
     $$
     \frac{m}{n} = \frac{ a \tilde{m} }{ a \tilde{n} } = 
     \frac{ \tilde{m} }{ \tilde{n} } \,.
@@ -215,7 +219,8 @@ $$ {#eq-contradiction-root-2-2}
     $$
     \frac{ \tilde{m}^2 }{ \tilde{n}^2 } = 2 \,.
     $$
-    The proof can now proceed in the same way we would have proceeded from Step 4, but in addition we have the hypothesis that $\tilde{m}$ and $\tilde{n}$ have no common factors. 
+    and this time $\tilde{m}$ and $\tilde{n}$ have no common factors by construction.
+    The proof can now proceed in the same way it would have proceeded from Step 4, but in addition we have the hypothesis that $\tilde{m}$ and $\tilde{n}$ have no common factors. 
 6.  Equation (@eq-contradiction-root-2-2) implies 
 $$
 m^2 = 2 n^2 \,.
@@ -247,12 +252,12 @@ Therefore the integer $m^2$ is an even number.
     52 = 2 \cdot 26 + 1 \,.
     $$ 
 
-7. Thus $m$ is an even number, and so there exists $p \in \N$ such that 
+7. Since $m^2$ is an even number, it follows that also $m$ is an even number. Then there exists $p \in \N$ such that 
 $$
 m = 2p \,.
 $$ {#eq-contradiction-root-2-4}
 
-    > Why is (@eq-contradiction-root-2-4) true? Let us see what happens if we take the square of an even number $m = 2p$
+    > Why is $m$ even if $m^2$ is even? Let us see what happens if we take the square of an even number $m = 2p$
     $$
     m^2 = (2p)^2 = 4p^2 = 2 (2p^2) = 2 q \,.
     $$
@@ -261,7 +266,7 @@ $$ {#eq-contradiction-root-2-4}
     m^2 = (2p + 1 )^2 = 4p^2 + 4p + 1 = 2(2 p^2 + 2p) + 1 
     $$
     showing that also $m^2$ is odd.  
-    This justifies Step 7: Indeed we know that $m^2$ is an even number from Step 6. If $m$ was odd, then $m^2$ would be odd. Hence $m$ must be even as well.
+    This proves Step 7: Indeed we know that $m^2$ is an even number from Step 6. If $m$ was odd, then $m^2$ would be odd. Hence $m$ must be even as well.
 
 8. If we substitute (@eq-contradiction-root-2-4) in    (@eq-contradiction-root-2-3) we get
 $$
@@ -272,17 +277,14 @@ $$
 n^2 = 2p^2\,. 
 $${#eq-contradiction-root-2-5}
 9. We now make a series of observations:
-    * Equation (@eq-contradiction-root-2-5) says that $n^2$ is even. 
-    * Step 6 says that $m^2$ is even.
-    * Therefore $n$ and $m$ are also even.  
+    * Equation (@eq-contradiction-root-2-5) says that $n^2$ is even.
+    * The same argument in Step 7 guarantees that also $n$ is even.
+    * We have already seen that $m$ is even.
+    * Therefore $n$ and $m$ are both even.  
     * Hence $n$ and $m$ have $2$ as common factor.
     * But Step 5 says that $n$ and $m$ have no common factors.
     * **`CONTRADICTION`**
-10. Our reasoning has run into a **contradiction**, starting from assumption (@eq-contradiction-root-2-false), which says that
-$$
-\sqrt{2} \in \Q \,.
-$$
-Hence the above must be **FALSE**, and so 
+10. Our reasoning has run into a **contradiction**, stemming  from assumption (@eq-contradiction-root-2-false). Therefore (@eq-contradiction-root-2-false) is **FALSE**, and so 
 $$
 \sqrt{2} \notin \Q \,
 $$
@@ -303,6 +305,9 @@ $$
 \sqrt{2} + \sqrt{3} , \, \pi , \, \pi + \sqrt{2} \notin \tilde{\Q} \,.
 $$
 
+**``Conclusion:``** It is now intuitive to think that there is no straightforward way to fill the gaps of $\Q$ by adding numbers by hand.
+
+
 ::: Remark
 
 Proving that 
@@ -313,18 +318,27 @@ is relatively easy, and will be left as an **exercise**. Instead, proving that
 $$
 \pi \notin \Q
 $$ 
-is way more complicated. There are several proof of the fact, all requiring mathematics which is more advanced of the one presented in this course. For some proofs, see this [Wikipedia page](https://en.wikipedia.org/wiki/Proof_that_π_is_irrational).
+is way more complicated. There are several proofs of the fact, all requiring mathematics which is more advanced than the one presented in this course. For some proofs, see this [Wikipedia page](https://en.wikipedia.org/wiki/Proof_that_π_is_irrational).
 :::
 
 
-The reality of things is that to **complete** $\Q$ and make it into a **continuous line** we have to add a lot of points. Indeed, we need to add way more points than the ones already contained in $\Q$. Such extension of $\Q$ will be called $\R$, the set of **real numbers**. The inclusions will therefore be 
+The reality of things is that to **complete** $\Q$ and make it into a **continuous line** we have to add a lot of points. Indeed, we need to add way more points than the ones already contained in $\Q$. 
+
+::: Definition
+
+Such extension of $\Q$ will be called $\R$, the set of **real numbers**.
+
+::: 
+
+The inclusions will therefore be 
 $$
 \N \subset \Z \subset \Q \subset \R \,.
 $$
-The set $\R$ is not at all trivial to construct. In fact, at first we will not construct it, but just do the following:
+The set $\R$ is not at all trivial to construct. In fact, explicit constructions are so involved and technical, that
+they are best left for future reading. It is customary instead to proceed as follows:
  
-* We will assume that $\R$ **exists** and satisfies some basic **axioms**.
-* One of the axioms is that $\R$ fills **all** the **gaps** that $\Q$ has. Therefore $\R$ can be thought as a **continuous** line.
+* We will **``assume``** that $\R$ **``exists``** and satisfies a set of  **``axioms``**.
+* One of the axioms states that $\R$ fills **all the gaps** that $\Q$ has. Therefore $\R$ can be thought as a **continuous** line.
 * We will study the **properties** of $\R$ which descend from such **axioms**. 
 
 For example one of the properties of $\R$ will be the following:
@@ -338,20 +352,24 @@ $$
 $$
 :::
 
-At the end of this chapter we will provide a concrete **model** for the real numbers $\R$, to prove once and for all that such set indeed exists.
+
+
+A concrete **model** for the real numbers $\R$ can be constructed using **Dedekind cuts**. The interested reader can refer to the Appendix in Chapter 1 of [@rudin_introduction], or to the beautifully written Chapter 8.6 in [@abbott]. Such model of $\R$ can be used to prove the following Theorem:
 
 ::: Theorem
-### We will prove this in the future
+### Existence of the Real Numbers
 
-There exists a set $\R$, called the set of real numbers, which has the following properties:
+There exists a set $\R$, called the set of Real Numbers, which has the following properties:
 
 * $\R$ extends $\Q$, that is,
 $$
 \Q \subset \R \,.
 $$
-* $\R$ satisfies certain **axioms**.
-* $\R$ fills **all** the **gaps** that $\Q$ has. In particular $\R$ can be represented by a **continuous** line.
+* $\R$ satisfies a certain set of **axioms**.
+* $\R$ fills **all the gaps** that $\Q$ has. In particular $\R$ can be represented by a **continuous** line.
 
 :::
+
+
 
 

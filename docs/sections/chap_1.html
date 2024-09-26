@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -72,23 +92,31 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Axiom {
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
 .Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -96,19 +124,7 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Question {
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -116,15 +132,11 @@ ul.task-list li input[type="checkbox"] {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Proposition {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -132,7 +144,15 @@ ul.task-list li input[type="checkbox"] {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Theorem {
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -305,7 +325,7 @@ window.Quarto = {
 </header>
 
 
-<p>The first aim of this lecture notes is to rigorously introduce the set of <strong>real numbers</strong>, which is denoted by <span class="math inline">\(\mathbb{R}\)</span>. But what do we mean by real numbers? To start our discussion, introduce the set of natural numbers (or non-negative integers) <span class="math display">\[
+<p>The first aim of this lecture notes is to rigorously introduce the set of <strong>Real Numbers</strong>, which is denoted by <span class="math inline">\(\mathbb{R}\)</span>. But what do we mean by real numbers? To start our discussion, introduce the set of natural numbers (or non-negative integers) <span class="math display">\[
 \mathbb{N}= \{0,1,2,3,4,5,\dots\}
 \]</span></p>
 <p>On this set we have a notion of <strong>sum</strong> of two numbers, denoted as usual by <span class="math display">\[
@@ -336,10 +356,12 @@ x = m - n \,.
 <p>for all <span class="math inline">\(m,n \in \mathbb{N}\)</span>. Now every element of <span class="math inline">\(\mathbb{Z}\)</span> possesses an <strong>inverse</strong>, that is, for each <span class="math inline">\(n \in \mathbb{Z}\)</span>, there exists <span class="math inline">\(m \in \mathbb{Z}\)</span>, such that <span class="math display">\[
 n + m = 0 \,.
 \]</span></p>
-<p>Can we characterize <span class="math inline">\(m\)</span> explicitly? Of course! Seeing the definition at (<a href="#eq-def-sum-negative" class="quarto-xref"><span>1.2</span></a>), we simply have <span class="math display">\[
+<p>Can we characterize <span class="math inline">\(m\)</span> explicitly? Yes; Seeing the definition at (<a href="#eq-def-sum-negative" class="quarto-xref"><span>1.2</span></a>), we simply have <span class="math display">\[
 m = - n \,.
 \]</span></p>
-<p>On the set <span class="math inline">\(\mathbb{Z}\)</span> we can also define the operation of <strong>multiplication</strong>, in the usual way we learnt in school. For <span class="math inline">\(n,m \in \mathbb{Z}\)</span>, we denote the multiplication by <span class="math inline">\(nm\)</span> or <span class="math inline">\(n \cdot m\)</span>. For example <span class="math inline">\(7 \cdot 2 = 14\)</span> and <span class="math inline">\(1 \cdot (-1) = -1\)</span>.</p>
+<p>On the set <span class="math inline">\(\mathbb{Z}\)</span> we can also define the operation of <strong>multiplication</strong> in the usual way. For <span class="math inline">\(n,m \in \mathbb{Z}\)</span>, we denote the multiplication of <span class="math inline">\(n\)</span> times <span class="math inline">\(m\)</span> by <span class="math display">\[
+nm \quad \text{or} \quad n \cdot m \,.
+\]</span> For example <span class="math inline">\(7 \cdot 2 = 14\)</span> and <span class="math inline">\(1 \cdot (-1) = -1\)</span>.</p>
 <div id="Question-2" class="Question">
 <p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 2</strong></summary><div>Can the multiplication in <span class="math inline">\(\mathbb{Z}\)</span> be inverted? That is, given any <span class="math inline">\(n,m \in \mathbb{Z}\)</span>, can you always find <span class="math inline">\(x \in \mathbb{Z}\)</span> such that <span id="eq-multiplication"><span class="math display">\[
 nx = m \,?
@@ -360,7 +382,7 @@ x = \frac{m}{n} \,.
 \mathbb{N}\subset \mathbb{Z}\subset \mathbb{Q}\,.
 \]</span> Moreover <strong>sum</strong> and <strong>product</strong> are <strong>invertible</strong> in <span class="math inline">\(\mathbb{Q}\)</span>. Now we are happy right? So and so.</p>
 <div id="Question-3" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 3</strong></summary><div>Can we draw the set <span class="math inline">\(\mathbb{Q}\)</span>?<p></p>
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 3</strong></summary><div>Can we represent the set <span class="math inline">\(\mathbb{Q}\)</span> with a drawing?<p></p>
 </div></details>
 </div>
 <p>It is clear how to draw <span class="math inline">\(\mathbb{Z}\)</span>, as seen below.</p>
@@ -390,12 +412,12 @@ Figure&nbsp;1.1: Representation of integers <span class="math inline">\(\mathbb{
 <figcaption>Fractions <span class="math inline">\(\frac{1}{n}\)</span> can get arbitrarily close to <span class="math inline">\(0\)</span></figcaption>
 </figure>
 </div>
-<p>Maybe if we do the same reasoning with other progressively smaller rational numbers, we manage to fill out the interval <span class="math inline">\([0,1]\)</span>. In other words, we might conjecture the following.</p>
+<p>Maybe if we do the same reasoning with other progressively smaller rational numbers, we manage to fill up the interval <span class="math inline">\([0,1]\)</span>. In other words, we might conjecture the following.</p>
 <div id="conj-line" class="Conjecture">
 <p></p><details class="Conjecture fbx-simplebox fbx-default" open=""><summary><strong>Conjecture 5</strong></summary><div>Maybe <span class="math inline">\(\mathbb{Q}\)</span> can be represented by a continuous line.<p></p>
 </div></details>
 </div>
-<p>Do you think the above conjecture is true? If it was, mathematics would be quite boring. Indeed Conjecture <a href="chap_1.html#conj-line">5</a> is <strong>false</strong>, as shown by the Theorem below.</p>
+<p>Do you think the above conjecture is true? Conjecture <a href="chap_1.html#conj-line">5</a> is <strong>false</strong>, as shown by the Theorem below.</p>
 <div id="theorem-root-2" class="Theorem">
 <p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 6</strong></summary><div>The number <span class="math inline">\(\sqrt{2}\)</span> does not belong to <span class="math inline">\(\mathbb{Q}\)</span>.<p></p>
 </div></details>
@@ -417,10 +439,10 @@ Figure&nbsp;1.1: Representation of integers <span class="math inline">\(\mathbb{
 \]</span> by <strong>contradiction</strong>.</p>
 <p>Wait, what does this mean? Proving the claim by contradiction means assuming that the claim is <strong>false</strong>. This means we <strong>assume</strong> that <span id="eq-contradiction-root-2-false"><span class="math display">\[
 \sqrt{2} \in \mathbb{Q}\,.
-\tag{1.4}\]</span></span> From this assumption we then start deducing other statements, hoping to encounter a statement which is <strong><code>FALSE</code></strong>. But if (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>) leads to a false statement, then it must be that (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>) is <strong><code>FALSE</code></strong>. Thus the contrary of (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>) must hold, meaning that <span class="math display">\[
+\tag{1.4}\]</span></span> From this assumption we then start deducing other statements, hoping to encounter a statement which is <strong><code>FALSE</code></strong>. But if (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>) leads to a false statement, then it must be that (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>) was <strong><code>FALSE</code></strong> to begin with. Thus the contrary of (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>) must hold, meaning that <span class="math display">\[
 \sqrt{2} \notin \mathbb{Q}
 \]</span> as we wanted to show. This would conclude the proof.</p>
-<p>Now we need to actually show that (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>) will lead to a contradiction. Since this is our first proof, let us take it slowly, step-by-step.</p>
+<p>Now we need to actually show that assuming (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>) will lead to a contradiction. Since this is our first proof, let us take it slowly, step-by-step.</p>
 <ol type="1">
 <li><p>Assuming (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>) just means that there exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span id="eq-contradiction-root-2"><span class="math display">\[
 q = \sqrt{2} \, .
@@ -436,15 +458,15 @@ q = \frac{m}{n}
 \tag{1.6}\]</span></span></p></li>
 <li><p><strong>Withouth loss of generality</strong>, we can <strong>assume</strong> that <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> have no common factors.</p>
 <blockquote class="blockquote">
-<p>Wait. What does Step 5 mean? You will encounter the sentence <em>withouth loss of generality</em> many times in mathematics. It is often abbreviated in <strong><code>WLOG</code></strong>. WLOG means that the assumption that follows is chosen arbitrarily, but does not affect the validity of the proof in general.<br>
+<p>Wait. What does Step 5 mean? You will encounter the sentence <em>withouth loss of generality</em> many times in mathematics. It is often abbreviated in <strong><code>WLOG</code></strong>. WLOG means that we can make some extra assumption which does not affect the validity of the proof in general.<br>
 For example in our case we can assume that <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> have no common factor. This is because if <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> had common factors, then it would mean <span class="math display">\[
 m = a \tilde{m} \,, \quad n = a \tilde{n}
-\]</span> for some <span class="math inline">\(a \in \mathbb{N}\)</span> with <span class="math inline">\(a \neq 0\)</span>. Then <span class="math display">\[
+\]</span> for some factor <span class="math inline">\(a \in \mathbb{N}\)</span> with <span class="math inline">\(a \neq 0\)</span>. Then <span class="math display">\[
 \frac{m}{n} = \frac{ a \tilde{m} }{ a \tilde{n} } =
 \frac{ \tilde{m} }{ \tilde{n} } \,.
 \]</span> Therefore by (<a href="#eq-contradiction-root-2-2" class="quarto-xref"><span>1.6</span></a>) <span class="math display">\[
 \frac{ \tilde{m}^2 }{ \tilde{n}^2 } = 2 \,.
-\]</span> The proof can now proceed in the same way we would have proceeded from Step 4, but in addition we have the hypothesis that <span class="math inline">\(\tilde{m}\)</span> and <span class="math inline">\(\tilde{n}\)</span> have no common factors.</p>
+\]</span> and this time <span class="math inline">\(\tilde{m}\)</span> and <span class="math inline">\(\tilde{n}\)</span> have no common factors by construction. The proof can now proceed in the same way it would have proceeded from Step 4, but in addition we have the hypothesis that <span class="math inline">\(\tilde{m}\)</span> and <span class="math inline">\(\tilde{n}\)</span> have no common factors.</p>
 </blockquote></li>
 <li><p>Equation (<a href="#eq-contradiction-root-2-2" class="quarto-xref"><span>1.6</span></a>) implies <span id="eq-contradiction-root-2-3"><span class="math display">\[
 m^2 = 2 n^2 \,.
@@ -464,16 +486,16 @@ m^2 = 2 n^2 \,.
 52 = 2 \cdot 26 + 1 \,.
 \]</span></p>
 </blockquote></li>
-<li><p>Thus <span class="math inline">\(m\)</span> is an even number, and so there exists <span class="math inline">\(p \in \mathbb{N}\)</span> such that <span id="eq-contradiction-root-2-4"><span class="math display">\[
+<li><p>Since <span class="math inline">\(m^2\)</span> is an even number, it follows that also <span class="math inline">\(m\)</span> is an even number. Then there exists <span class="math inline">\(p \in \mathbb{N}\)</span> such that <span id="eq-contradiction-root-2-4"><span class="math display">\[
 m = 2p \,.
 \tag{1.8}\]</span></span></p>
 <blockquote class="blockquote">
-<p>Why is (<a href="#eq-contradiction-root-2-4" class="quarto-xref"><span>1.8</span></a>) true? Let us see what happens if we take the square of an even number <span class="math inline">\(m = 2p\)</span> <span class="math display">\[
+<p>Why is <span class="math inline">\(m\)</span> even if <span class="math inline">\(m^2\)</span> is even? Let us see what happens if we take the square of an even number <span class="math inline">\(m = 2p\)</span> <span class="math display">\[
 m^2 = (2p)^2 = 4p^2 = 2 (2p^2) = 2 q \,.
 \]</span> Thus <span class="math inline">\(m^2 = 2 q\)</span> for some <span class="math inline">\(q\in \mathbb{N}\)</span>, and so <span class="math inline">\(m^2\)</span> is an even number. If instead <span class="math inline">\(m\)</span> is odd, then <span class="math inline">\(m = 2p + 1\)</span> and <span class="math display">\[
 m^2 = (2p + 1 )^2 = 4p^2 + 4p + 1 = 2(2 p^2 + 2p) + 1
 \]</span> showing that also <span class="math inline">\(m^2\)</span> is odd.<br>
-This justifies Step 7: Indeed we know that <span class="math inline">\(m^2\)</span> is an even number from Step 6. If <span class="math inline">\(m\)</span> was odd, then <span class="math inline">\(m^2\)</span> would be odd. Hence <span class="math inline">\(m\)</span> must be even as well.</p>
+This proves Step 7: Indeed we know that <span class="math inline">\(m^2\)</span> is an even number from Step 6. If <span class="math inline">\(m\)</span> was odd, then <span class="math inline">\(m^2\)</span> would be odd. Hence <span class="math inline">\(m\)</span> must be even as well.</p>
 </blockquote></li>
 <li><p>If we substitute (<a href="#eq-contradiction-root-2-4" class="quarto-xref"><span>1.8</span></a>) in (<a href="#eq-contradiction-root-2-3" class="quarto-xref"><span>1.7</span></a>) we get <span class="math display">\[
 m^2 = 2n^2 \, \implies \,  (2p)^2 = 2n^2 \, \implies \,  4 p^2 = 2 n^2
@@ -483,16 +505,15 @@ n^2 = 2p^2\,.
 <li><p>We now make a series of observations:</p>
 <ul>
 <li>Equation (<a href="#eq-contradiction-root-2-5" class="quarto-xref"><span>1.9</span></a>) says that <span class="math inline">\(n^2\)</span> is even.</li>
-<li>Step 6 says that <span class="math inline">\(m^2\)</span> is even.</li>
-<li>Therefore <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> are also even.<br>
+<li>The same argument in Step 7 guarantees that also <span class="math inline">\(n\)</span> is even.</li>
+<li>We have already seen that <span class="math inline">\(m\)</span> is even.</li>
+<li>Therefore <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> are both even.<br>
 </li>
 <li>Hence <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> have <span class="math inline">\(2\)</span> as common factor.</li>
 <li>But Step 5 says that <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> have no common factors.</li>
 <li><strong><code>CONTRADICTION</code></strong></li>
 </ul></li>
-<li><p>Our reasoning has run into a <strong>contradiction</strong>, starting from assumption (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>), which says that <span class="math display">\[
-\sqrt{2} \in \mathbb{Q}\,.
-\]</span> Hence the above must be <strong>FALSE</strong>, and so <span class="math display">\[
+<li><p>Our reasoning has run into a <strong>contradiction</strong>, stemming from assumption (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>). Therefore (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>) is <strong>FALSE</strong>, and so <span class="math display">\[
 \sqrt{2} \notin \mathbb{Q}\,
 \]</span> ending the proof.</p></li>
 </ol>
@@ -505,44 +526,58 @@ n^2 = 2p^2\,.
 \]</span> However even this is not enough, as we would still have numbers which are not contained in <span class="math inline">\(\tilde{Q}\)</span>, for example <span class="math display">\[
 \sqrt{2} + \sqrt{3} , \, \pi , \, \pi + \sqrt{2} \notin \tilde{\mathbb{Q}} \,.
 \]</span></p>
+<p><strong><code>Conclusion:</code></strong> It is now intuitive to think that there is no straightforward way to fill the gaps of <span class="math inline">\(\mathbb{Q}\)</span> by adding numbers by hand.</p>
 <div id="Remark-7" class="Remark">
 <p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 7</strong></summary><div>Proving that <span class="math display">\[
 \sqrt{2} + \sqrt{3} \notin \mathbb{Q}
 \]</span> is relatively easy, and will be left as an <strong>exercise</strong>. Instead, proving that <span class="math display">\[
 \pi \notin \mathbb{Q}
-\]</span> is way more complicated. There are several proof of the fact, all requiring mathematics which is more advanced of the one presented in this course. For some proofs, see this <a href="https://en.wikipedia.org/wiki/Proof_that_π_is_irrational">Wikipedia page</a>.<p></p>
+\]</span> is way more complicated. There are several proofs of the fact, all requiring mathematics which is more advanced than the one presented in this course. For some proofs, see this <a href="https://en.wikipedia.org/wiki/Proof_that_π_is_irrational">Wikipedia page</a>.<p></p>
 </div></details>
 </div>
-<p>The reality of things is that to <strong>complete</strong> <span class="math inline">\(\mathbb{Q}\)</span> and make it into a <strong>continuous line</strong> we have to add a lot of points. Indeed, we need to add way more points than the ones already contained in <span class="math inline">\(\mathbb{Q}\)</span>. Such extension of <span class="math inline">\(\mathbb{Q}\)</span> will be called <span class="math inline">\(\mathbb{R}\)</span>, the set of <strong>real numbers</strong>. The inclusions will therefore be <span class="math display">\[
+<p>The reality of things is that to <strong>complete</strong> <span class="math inline">\(\mathbb{Q}\)</span> and make it into a <strong>continuous line</strong> we have to add a lot of points. Indeed, we need to add way more points than the ones already contained in <span class="math inline">\(\mathbb{Q}\)</span>.</p>
+<div id="Definition-8" class="Definition">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 8</strong></summary><div>Such extension of <span class="math inline">\(\mathbb{Q}\)</span> will be called <span class="math inline">\(\mathbb{R}\)</span>, the set of <strong>real numbers</strong>.<p></p>
+</div></details>
+</div>
+<p>The inclusions will therefore be <span class="math display">\[
 \mathbb{N}\subset \mathbb{Z}\subset \mathbb{Q}\subset \mathbb{R}\,.
-\]</span> The set <span class="math inline">\(\mathbb{R}\)</span> is not at all trivial to construct. In fact, at first we will not construct it, but just do the following:</p>
+\]</span> The set <span class="math inline">\(\mathbb{R}\)</span> is not at all trivial to construct. In fact, explicit constructions are so involved and technical, that they are best left for future reading. It is customary instead to proceed as follows:</p>
 <ul>
-<li>We will assume that <span class="math inline">\(\mathbb{R}\)</span> <strong>exists</strong> and satisfies some basic <strong>axioms</strong>.</li>
-<li>One of the axioms is that <span class="math inline">\(\mathbb{R}\)</span> fills <strong>all</strong> the <strong>gaps</strong> that <span class="math inline">\(\mathbb{Q}\)</span> has. Therefore <span class="math inline">\(\mathbb{R}\)</span> can be thought as a <strong>continuous</strong> line.</li>
+<li>We will <strong><code>assume</code></strong> that <span class="math inline">\(\mathbb{R}\)</span> <strong><code>exists</code></strong> and satisfies a set of <strong><code>axioms</code></strong>.</li>
+<li>One of the axioms states that <span class="math inline">\(\mathbb{R}\)</span> fills <strong>all the gaps</strong> that <span class="math inline">\(\mathbb{Q}\)</span> has. Therefore <span class="math inline">\(\mathbb{R}\)</span> can be thought as a <strong>continuous</strong> line.</li>
 <li>We will study the <strong>properties</strong> of <span class="math inline">\(\mathbb{R}\)</span> which descend from such <strong>axioms</strong>.</li>
 </ul>
 <p>For example one of the properties of <span class="math inline">\(\mathbb{R}\)</span> will be the following:</p>
 <div id="we-will-prove-this-in-the-future" class="Theorem" title="We will prove this in the future">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 8: </strong>We will prove this in the future</summary><div><span class="math inline">\(\mathbb{R}\)</span> contains all the square roots. This means that for every <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span>, we have <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 9: </strong>We will prove this in the future</summary><div><span class="math inline">\(\mathbb{R}\)</span> contains all the square roots. This means that for every <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span>, we have <span class="math display">\[
 \sqrt{x} \in \mathbb{R}\,.
 \]</span><p></p>
 </div></details>
 </div>
-<p>At the end of this chapter we will provide a concrete <strong>model</strong> for the real numbers <span class="math inline">\(\mathbb{R}\)</span>, to prove once and for all that such set indeed exists.</p>
-<div id="we-will-prove-this-in-the-future-1" class="Theorem" title="We will prove this in the future">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 9: </strong>We will prove this in the future</summary><div>
-<p>There exists a set <span class="math inline">\(\mathbb{R}\)</span>, called the set of real numbers, which has the following properties:</p>
+<p>A concrete <strong>model</strong> for the real numbers <span class="math inline">\(\mathbb{R}\)</span> can be constructed using <strong>Dedekind cuts</strong>. The interested reader can refer to the Appendix in Chapter 1 of <span class="citation" data-cites="rudin_introduction">(<a href="references.html#ref-rudin_introduction" role="doc-biblioref">Rudin 1976</a>)</span>, or to the beautifully written Chapter 8.6 in <span class="citation" data-cites="abbott">(<a href="references.html#ref-abbott" role="doc-biblioref">Abbott 2015</a>)</span>. Such model of <span class="math inline">\(\mathbb{R}\)</span> can be used to prove the following Theorem:</p>
+<div id="existence-of-the-real-numbers" class="Theorem" title="Existence of the Real Numbers">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 10: </strong>Existence of the Real Numbers</summary><div>
+<p>There exists a set <span class="math inline">\(\mathbb{R}\)</span>, called the set of Real Numbers, which has the following properties:</p>
 <ul>
 <li><span class="math inline">\(\mathbb{R}\)</span> extends <span class="math inline">\(\mathbb{Q}\)</span>, that is, <span class="math display">\[
 \mathbb{Q}\subset \mathbb{R}\,.
 \]</span></li>
-<li><span class="math inline">\(\mathbb{R}\)</span> satisfies certain <strong>axioms</strong>.</li>
-<li><span class="math inline">\(\mathbb{R}\)</span> fills <strong>all</strong> the <strong>gaps</strong> that <span class="math inline">\(\mathbb{Q}\)</span> has. In particular <span class="math inline">\(\mathbb{R}\)</span> can be represented by a <strong>continuous</strong> line.</li>
+<li><span class="math inline">\(\mathbb{R}\)</span> satisfies a certain set of <strong>axioms</strong>.</li>
+<li><span class="math inline">\(\mathbb{R}\)</span> fills <strong>all the gaps</strong> that <span class="math inline">\(\mathbb{Q}\)</span> has. In particular <span class="math inline">\(\mathbb{R}\)</span> can be represented by a <strong>continuous</strong> line.</li>
 </ul>
 </div></details>
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-abbott" class="csl-entry" role="listitem">
+Abbott, Sthephen. 2015. <em>Understanding Analysis</em>. Second Edition. Springer.
+</div>
+<div id="ref-rudin_introduction" class="csl-entry" role="listitem">
+Rudin, Walter. 1976. <em>Principles of Mathematical Analysis</em>. Third Edition. McGraw Hill.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
