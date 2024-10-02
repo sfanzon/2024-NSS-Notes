@@ -72,13 +72,41 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 .Example {
   --color1: #bce5de;
@@ -88,13 +116,21 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Warning {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .TODO {
   --color1: #e7b1b4;
@@ -103,42 +139,6 @@ ul.task-list li input[type="checkbox"] {
 .Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
 }
 </style>
 
@@ -332,7 +332,7 @@ window.Quarto = {
 <p>Before introducing <span class="math inline">\(\mathbb{R}\)</span> we want to make sure that we cover all the basics needed for the task.</p>
 <section id="sets" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="sets"><span class="header-section-number">2.1</span> Sets</h2>
-<p>A sets is a <strong>collection</strong> of objects. These objects are called <strong>elements</strong> of the set. For example in the previous section we mentioned the following sets:</p>
+<p>A set is a <strong>collection</strong> of objects. These objects are called <strong>elements</strong> of the set. For example in the previous section we mentioned the following sets:</p>
 <ul>
 <li><span class="math inline">\(\mathbb{N}\)</span> the set of natural numbers</li>
 <li><span class="math inline">\(\mathbb{Z}\)</span> the set of integers</li>
@@ -603,7 +603,9 @@ A \cup B, \quad  A \cap B ,\quad A^c , \quad B \smallsetminus A
 \Omega = \{x_1, \ldots, x_m\}
 \]</span> for some <span class="math inline">\(m \in \mathbb{N}\)</span>. Then <span class="math inline">\(\mathcal{P}(\Omega)\)</span> contains <span class="math inline">\(2^m\)</span> elements.</p>
 <blockquote class="blockquote">
-<p>This is because for each <span class="math inline">\(x_i \in \Omega\)</span> we have just two choices: either include <span class="math inline">\(x_i\)</span> in a subset, or do not include <span class="math inline">\(x_i\)</span> in a subset.</p>
+<p>Indeed, suppose that we want to define a subset <span class="math inline">\(A \subset \Omega\)</span>. Then for each element <span class="math inline">\(x_i \in \Omega\)</span> there are two choices: either we include <span class="math inline">\(x_i \in A\)</span>, or we do not include <span class="math inline">\(x_i \in A\)</span>. Therefore there are <span class="math display">\[
+\underbrace{2 \cdot 2 \cdot \ldots \cdot 2 }_{m \, \text{times}} = 2^m
+\]</span> ways of constructing <span class="math inline">\(A\)</span>. It follows that <span class="math inline">\(\Omega\)</span> possesses exactly <span class="math inline">\(2^m\)</span> subsets, so that <span class="math inline">\(\mathcal{P}(\Omega)\)</span> contains <span class="math inline">\(2^m\)</span> elements.</p>
 </blockquote></li>
 </ol>
 </div></details>
@@ -680,7 +682,7 @@ A / R \, :=  \,\{ [x] \, \colon \, x \in A \} \,.
 \]</span><p></p>
 </div></details>
 </div>
-<p>Let us immediately clarify the above definitions by considering the prototypical example of equivalence relation: the <strong>equality</strong>.</p>
+<p>Let us immediately clarify the above definitions by considering the prototypical (and trivial) example of equivalence relation: the <strong>equality</strong>.</p>
 <div id="equality-is-an-equivalence-relation" class="Example" title="Equality is an equivalence relation">
 <p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 16: </strong>Equality is an equivalence relation</summary><div>Consider the set of natural numbers <span class="math inline">\(\mathbb{N}\)</span>. The equality defines a <strong>binary relation</strong> on <span class="math inline">\(\mathbb{N}\times \mathbb{N}\)</span>, via <span class="math display">\[
 R:=\{ (x,y) \in \mathbb{N}\times \mathbb{N}\, \colon \, x=y  \} \,.
@@ -697,10 +699,14 @@ R:=\{ (x,y) \in \mathbb{N}\times \mathbb{N}\, \colon \, x=y  \} \,.
 \]</span></p>
 </div></details>
 </div>
+<p>A more interesting example is given below.</p>
 <div id="Example-17" class="Example">
 <p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 17</strong></summary><div>Suppose that <span class="math inline">\(R\)</span> is a binary relation on the set <span class="math inline">\(\mathbb{Q}\)</span> of rational numbers defined by <span class="math display">\[
 x \sim y  \iff x-y \in \mathbb{Z}\,.
-\]</span> Then <span class="math inline">\(R\)</span> is an equivalence relation on <span class="math inline">\(\mathbb{Q}\)</span>. Indeed:<p></p>
+\]</span> In other words, we have that <span class="math display">\[
+x \sim y  \iff y = n + x \, \text{ for some } \, n \in \mathbb{Z}\,,
+\]</span> which means that <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are equivalent iff <span class="math inline">\(y\)</span> is a translation of <span class="math inline">\(x\)</span> by some integer <span class="math inline">\(n\)</span>.<p></p>
+<p>We claim that <span class="math inline">\(R\)</span> is an equivalence relation on <span class="math inline">\(\mathbb{Q}\)</span>. Indeed:</p>
 <ol type="1">
 <li>Reflexive: Let <span class="math inline">\(x \in \mathbb{Q}\)</span>. Then <span class="math inline">\(x-x = 0\)</span> and <span class="math inline">\(0 \in \mathbb{Z}\)</span>. Thus <span class="math inline">\(x \sim x\)</span>.</li>
 <li>Symmetric: If <span class="math inline">\(x \sim y\)</span> then <span class="math inline">\(x-y \in \mathbb{Z}\)</span>. But then also<br>

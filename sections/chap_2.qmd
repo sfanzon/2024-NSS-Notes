@@ -16,7 +16,7 @@ Before introducing $\R$ we want to make sure that we cover all the basics needed
 
 ## Sets
 
-A sets is a **collection** of objects. These objects are called **elements** of the set. For example in the previous section we mentioned the following sets:
+A set is a **collection** of objects. These objects are called **elements** of the set. For example in the previous section we mentioned the following sets:
 
 - $\N$ the set of natural numbers
 - $\Z$ the set of integers
@@ -425,7 +425,12 @@ $$
 $$
 for some $m \in \N$. Then $\mathcal{P}(\Omega)$ contains $2^m$ elements. 
     
-    >This is because for each $x_i \in \Omega$ we have just two choices: either include $x_i$ in a subset, or do not include $x_i$ in a subset.
+    >Indeed, suppose that we want to define a subset $A \subset \Omega$. Then for each element $x_i \in \Omega$ there are two choices: either we include $x_i \in A$, or we do not include $x_i \in A$. Therefore there are
+    $$
+    \underbrace{2 \cdot 2 \cdot \ldots \cdot 2 }_{m \, \text{times}} = 2^m
+    $$
+    ways of constructing $A$. It follows that $\Omega$ possesses exactly $2^m$ subsets, so that $\mathcal{P}(\Omega)$ contains $2^m$ elements.
+
 :::
 
 
@@ -533,7 +538,7 @@ $$
 :::
 
 
-Let us immediately clarify the above definitions by considering the prototypical example of equivalence relation: the **equality**.
+Let us immediately clarify the above definitions by considering the prototypical (and trivial) example of equivalence relation: the **equality**.
 
 
 ::: Example
@@ -562,14 +567,20 @@ $$
 :::
 
 
-
+A more interesting example is given below.
 
 ::: Example
 Suppose that $R$ is a binary relation on the set $\Q$ of rational numbers defined by
 $$
 x \sim y  \iff x-y \in \Z \,.
 $$
-Then $R$ is an equivalence relation on $\Q$. Indeed:
+In other words, we have that 
+$$
+x \sim y  \iff y = n + x \, \text{ for some } \, n \in \Z \,,
+$$
+which means that $x$ and $y$ are equivalent iff $y$ is a translation of $x$ by some integer $n$.
+
+We claim that $R$ is an equivalence relation on $\Q$. Indeed:
 
 1. Reflexive: Let $x \in \Q$. Then $x-x = 0$ and $0 \in \Z$. Thus $x \sim x$.
 2. Symmetric: If $x \sim y$ then $x-y \in \Z$. But then also  
