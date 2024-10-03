@@ -510,12 +510,17 @@ $$
 
     > If $x$ is related to $y$, and $y$ is related to $z$, then $x$ must be related to $z$
 
+:::
+
+
+::: Notation
 
 If $(x,y) \in R$ we write
 $$
 x \sim y 
 $$
 and we say that $x$ and $y$ are **equivalent**.
+
 :::
 
 
@@ -531,43 +536,152 @@ $$
 $$
 The set of equivalence classes of elements of $A$ with respect to the equivalence relation $R$ is denoted by 
 $$
-A / R \, :=  \,\{ [x] \, \colon \, x \in A \} \,.
+A / R \, := A / \!\sim \, :=  \,\{ [x] \, \colon \, x \in A \} \,.
 $$
 
 
 :::
 
 
-Let us immediately clarify the above definitions by considering the prototypical (and trivial) example of equivalence relation: the **equality**.
+In order for the definition of $[x]$ to be *well-posed* we need to check that:
+
+1. $[x]$ is non-empty.
+2. $[x]$ does not depend on the representative $x$: we need to check that
+$$
+x \sim y \quad \iff \quad  [x] = [y] 
+$$
+
+
+This is shown in the following proposition.
+
+
+::: Proposition
+
+Let $\sim$ be an equivalence relation on $A$. Then
+
+1. For each $x \in A$ we have
+$$
+[x] \neq \emptyset
+$$
+
+2. For all $x,y \in A$ it holds
+$$
+x \sim y \quad \iff \quad  [x] = [y] \,.
+$$
+
+:::
+
+
+::: Proof
+
+
+*Proof of Point 1:* By the *reflexive property* we have $x \sim x$. By definition of
+equivalence class we conclude that $x \in [x]$. This shows 
+$$
+[x] \neq \emptyset
+$$
+
+*Proof of Point 2:* We need to prove a double implication. It is convenient to divide the proof into two parts.
+
+
+*Part 1: $\,\, x \sim y \implies  [x] = [y]$*.
+
+
+Assume $x \sim y$. By the definition of an equivalence class
+$$
+[x] = \{z \in A \mid z \sim x\}
+$$ 
+is the set of all elements in $A$ that are related to $x$. Similarly, 
+$$
+[y] = \{z \in A \mid z \sim y \} \,.
+$$
+We need to show that 
+$$
+[x] = [y] \,,
+$$
+meaning that every element in $[x]$ is also in $[y]$, and vice versa.
+
+1. First, take an arbitrary element $z \in [x]$. 
+    - By definition, $z \sim x$.
+    - Since $\sim$ is an equivalence relation, it satisfies the *transitive property*.
+    - Therefore, from $z \sim x$ and $x \sim y$, we can conclude that $z \sim y$
+    - Hence, $z \in [y]$.
+    - This shows that $[x] \subseteq [y]$.
+
+2. Now, take an arbitrary element $z \in [y]$.
+   - By definition, $z \sim y$.
+   - Since $\sim$ is an equivalence relation, it satisfies the *symmetric property*.
+   - Therefore, from $x \sim y$, we also have $y \sim x$.
+   - By the *transitive property*, from $z \sim y$ and $y \sim x$, we can conclude that $z \sim x$. 
+   - Hence, $z \in [x]$.
+   - This shows that $[y] \subseteq [x]$.
+
+
+Since $[x] \subseteq [y]$ and $[y] \subseteq [x]$, it follows that $[x] = [y]$, as required. Thus, we have shown that $x \sim y \implies [x] = [y]$.
+
+
+
+
+*Part 2: $\,\, [x] = [y] \implies x \sim y$*.
+
+Assume $[x] = [y]$. This means that the equivalence classes of $x$ and $y$ are the same.
+
+- By point (i) in the Proposition, we have $x \in [x]$ and $y \in [y]$.
+- Since $[x] = [y]$, we have $x \in [y]$. 
+- By the definition of $[y]$, this means $x \sim y$.
+
+
+Thus, we have shown that $[x] = [y] \implies x \sim y$.
+
+
+*Conclusion:* Since we have proven both directions:
+
+- $x \sim y \implies [x] = [y]$
+- $[x] = [y] \implies x \sim y$
+
+we conclude that 
+$$
+x \sim y \iff [x] = [y] \,.
+$$
+This completes the proof.
+
+:::
+
+
+
+The prototypical (and trivial) example of equivalence relation is the **equality**
+over $\Q$.
 
 
 ::: Example
 ### Equality is an equivalence relation
 
-Consider the set of natural numbers $\N$. The equality defines a **binary relation** on $\N \times \N$, via
+Consider the set of rational numbers $\Q$. The equality defines a **binary relation** on $\Q \times \Q$, via
 $$
-R:=\{ (x,y) \in \N \times \N \, \colon \, x=y  \} \,.
+R:=\{ (x,y) \in \Q \times \Q \, \colon \, x=y  \} \,.
 $$
 Let us check that $R$ is an **equivalence relation**:
 
-1. Reflexive: It holds, since $x=x$ for all $x \in \N$,
+1. Reflexive: It holds, since $x=x$ for all $x \in \Q$,
 
 2. Symmetric: Again $x = y$ if and only if $y = x$,
 
 3. Transitive: If $x = y$ and $y = z$ then $x = z$.
 
-The class of equivalence of $x \in \N$ is given by
+The class of equivalence of $x \in \Q$ is given by
 $$
 [x] = \{ x \}\,,
 $$
-that is, this relation is quite trivial, given that each element of $\N$ can only be related to itself. The quotient space is then 
+that is, this relation is quite trivial, given that each element of $\Q$ can only be related to itself. The quotient space is then 
 $$
-\N / R = \{ [x] \divider x \in \N \} = \{  \{ x\} \divider x \in \N \}  \,.
+\Q / R = \{ [x] \divider x \in \Q \} = \{  \{ x\} \divider x \in \Q \}  \,.
 $$
+
 :::
 
 
-A more interesting example is given below.
+We now give an example of a non-trivial equivalence relation over $\Q$.
+
 
 ::: Example
 Suppose that $R$ is a binary relation on the set $\Q$ of rational numbers defined by
@@ -596,14 +710,17 @@ Thus we have
 $$
 x-z = (x-y) + (y-z) \in \Z
 $$
-showing that $x \sim z$. This shows that $R$ is an equivalence relation on $\Q$.
+showing that $x \sim z$. 
 
+We have shown that $R$ is an equivalence relation on $\Q$.
 
-Now note that 
+*Question:* Can we characterize the equivalence class $[x]$?
+
+Yes. Note that
 $$
-y \sim x \iff y -x \in \Z 
+y -x \in \Z 
 $$
-and the above is equivalent to
+is equivalent to
 $$
 \exists \, n \in \Z \, \text{ s.t. } \, y - x = n
 $$
@@ -611,19 +728,29 @@ which again is equivalent to
 $$
 \exists \, n \in \Z \, \text{ s.t. } \, y = x + n \,.
 $$
-Therefore all the elements of $\Q$ related to $x$ by $R$ are of the form 
+In summary we have
 $$
-x + n \,, \, \forall \, n \in \Z \,.
+x \sim y \quad \iff \quad \exists \, n \in \Z \, \text{ s.t. } \, y = x + n \,.
 $$
-The equivalence classes with respect to $R$ are then
+Therefore the equivalence classes with respect to $\sim$ are
 $$
  [x] = \{  x + n \ \colon \ n \in \Z  \}  \,.
 $$
 Each equivalence class has exactly one element in $[0,1) \cap \Q$, meaning that:
 $$
 \forall x \in \Q \,, \,\, \exists! \, q \in \Q \st  0 \leq q < 1 \, \text{ and } \, q \in [x]\,.
+$${#eq-equivalence-rel}
+Condition (@eq-equivalence-rel) is illustrated in @fig-equivalence-class. Indeed: 
+take $x \in \Q$ arbitrary. Then $x \in [n,n+1)$ for some 
+$n \in \Z$. Setting $q:=x-n$ we obtain that
 $$
-Therefore 
+x = q + n \,, \qquad q \in [0,1) \,,
+$$
+proving (@eq-equivalence-rel). In particular (@eq-equivalence-rel) implies that for each $x \in \Q$ there exists $q \in [0,1) \cap \Q$ such that
+$$
+[x] = [q] \,.
+$$
+This allows to conclude that
 $$
 \Q / R = \{ [x] \divider x \in \Q \} = \{ q \in \Q \divider 0 \leq q <1  \} \,.
 $$
@@ -631,11 +758,15 @@ $$
 
 
 
+![For each $x \in \Q$ there exist unique $q \in [0,1) \cap \Q$ such that $x = q + n$. In particular $[x] = [q]$.](/images/equivalence_class.png){#fig-equivalence-class width=70%}
+
+
 
 
 ## Order relation
 
-Similarly, we define **order relations**.
+**Order relations** are defined similarly to **equivalence relations**. However notice that *symmetry* is replaced by
+*antisymmetry*.
 
 
 ::: Definition
@@ -648,18 +779,17 @@ $$
 (x,x) \in R \,, 
 $$
 
-2. **Transitive**: We have
-$$
-(x,y) \in R \,, \,\, (y,z) \in R  \implies (x,z) \in R 
-$$
-
-
-3. **Antisymmetric**: We have
+2. **Antisymmetric**: We have
 $$
 (x,y) \in R \,  \text{ and } \, (y,x) \in R \implies x = y 
 $$
 
     > This is the only new condition with respect to the definition of equivalence relation, and it replaces symmetry.
+
+3. **Transitive**: We have
+$$
+(x,y) \in R \,, \,\, (y,z) \in R  \implies (x,z) \in R 
+$$
 :::
 
 
@@ -681,13 +811,14 @@ $$
 
 
 
+The operation of **set inclusion** is a partial order
+on $P(\Omega)$ but **not** a total order.
 
-An example of partial order is the operation of **set inclusion**.
 
 ::: Example
-### Set inclusion is a partial order
+### Set inclusion is a partial order but not total order
 
-Consider an arbitrary non-empty set $\Omega$ and consider its **power set**
+Consider an arbitrary non-empty set $\Omega$ and its **power set**
 $$
 \mathcal{P}(\Omega) = \{ A \divider A \subseteq \Omega  \}\,.
 $$
@@ -703,7 +834,9 @@ Let us check that $R$ is an **order relation**:
 
 3. Antisymmetric: If $A \subseteq B$ and $B \subseteq A$, then $A=B$ by Proposition \ref{Proposition-Equality-Sets}.
 
-Therefore $R$ is a **partial order** on $\mathcal{P}(\Omega)$. Note that in general $R$ is **not** a total order. For example if we consider
+Therefore $R$ is a **partial order** on $\mathcal{P}(\Omega)$. 
+
+In general $R$ is **not** a total order. For example if we consider
 $$
 \Omega = \{x, y\}\,.
 $$
@@ -719,12 +852,7 @@ showing that $R$ is not a total order.
 :::
 
 
-
-
-
-
-
-A very important example of total order is the **inequality** on $\Q$.
+The **inequality** on $\Q$ is an example of total order.
 
 
 ::: Example
@@ -752,7 +880,7 @@ $$
 
 
 ::: Notation
-If $\Omega$ is a set and $R$ is a total order on $\Omega$, we write
+If $A$ is a set and $R$ is a total order on $A$, we write
 $$
 (x,y) \in R  \, \iff \, x \leq y \,. 
 $$
@@ -828,9 +956,9 @@ $$
 In addition:
 
 - The set $A$ is called the **domain** of $f$,
-- The **range** of $f$ is the set
+- The **range** or **image** of $f$ is the set
 $$
-\{ y \in B \divider y = f(x) \, \mbox{ for some }\, x \in A \} \subseteq B \,.
+f(A) := \{ y \in B \divider y = f(x) \, \mbox{ for some }\, x \in A \} \subseteq B \,.
 $$
 :::
 
@@ -849,7 +977,7 @@ A = \{ a_1,a_2 \} \,, \quad B=\{b_1,b_2,b_3\} \,.
 $$
 Let us see a few examples:
 
-- Define $f \ \colon A \to B$ by setting 
+1. Define $f \ \colon A \to B$ by setting 
 $$
 f(a_1) = b_1 \,, \quad f(a_2) = b_1 \,.
 $$
@@ -857,12 +985,14 @@ In this way $f$ is a function, with domain $A$ and range
 $$
 f(A) = \{ b_1 \} \subseteq B \,.
 $$
-- Define $g \ \colon A \to B$ by setting 
+
+2. Define $g \ \colon A \to B$ by setting 
 $$
 g(a_1) = b_2 \,, \quad g(a_1) = b_3 \,, \quad g(a_2) = b_3 
 $$
 Then $g$ is **NOT** a function, since the element $a_1$ has two elements associated. 
-- Define $h \ \colon A \to B$ by setting 
+
+3. Define $h \ \colon A \to B$ by setting 
 $$
 h(a_1) = b_1 \,. 
 $$
@@ -879,7 +1009,7 @@ Then $g$ is **NOT** a function, since the element $a_2$ has no element associate
 ::: Example
 Let us make two examples of functions on $\R$:
 
-- Define $f \ \colon \R \to \R$ by
+1. Define $f \ \colon \R \to \R$ by
 $$
 f(x)=x^2 \,.
 $$
@@ -887,7 +1017,8 @@ Note that the domain of $f$ is given by $\R$, while the range is
 $$
 f(\R) = [0,\infty)\,.
 $$
-- Define $g \ \colon \R \to \R$ as the logarithm:
+
+2. Define $g \ \colon \R \to \R$ as the logarithm:
 $$
 g(x) = \log (x) \,.
 $$
@@ -931,10 +1062,10 @@ $$
 :::
 
 
-Let us also make the following basic remark, whose proof will be left as an exercise.
+Let us also make the following basic Remark. The proof will be left as an exercise.
 
 ::: Remark
-For all $x \in \R$ one has 
+For all $x \in \R$
 $$
 |x| \geq 0 \,.
 $$
@@ -1077,7 +1208,7 @@ $$
 With the same arguments, just replacing $\leq$ with $<$, one can also show the following.
 
 
-::: Lemma
+::: Corollary
 Let $x,y \in \R$. Then
 $$
 |x| < y  \iff -y < x < y \,.
@@ -1205,12 +1336,15 @@ An immediate consequence of the triangle inequality are the following inequaliti
 For any $x,y \in \R$ it holds
 $$
 ||x|-|y|| \leq |x-y| \leq |x|+|y|\,.
-$$
+$${#eq-triangle-inequality-bis}
 Moreover for any  $x,y,z \in \R$ it holds
 $$
 |x-y| \leq |x-z| + |z-y| \,.
 $$
 :::
+
+Notice that the inequality in (@eq-triangle-inequality-bis) differs from the triangle inequality (@eq-triangle-inequality)
+by a sign. Indeed it can be shown tha (@eq-triangle-inequality) and (@eq-triangle-inequality-bis) are equivalent.
 
 
 

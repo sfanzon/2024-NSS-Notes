@@ -51,75 +51,81 @@
 
  [**Definition 2.14**](#equivalence-relation-1): Equivalence relation\Pageref{equivalence-relation-1}
 
- [**Definition 2.15**](#equivalence-classes): Equivalence classes\Pageref{equivalence-classes}
+ [**Notation 2.15**](#Notation-2.15)\Pageref{Notation-2.15}
 
- [**Example 2.16**](#equality-is-an-equivalence-relation): Equality is an equivalence relation\Pageref{equality-is-an-equivalence-relation}
+ [**Definition 2.16**](#equivalence-classes): Equivalence classes\Pageref{equivalence-classes}
 
- [**Example 2.17**](#Example-2.17)\Pageref{Example-2.17}
+ [**Proposition 2.17**](#Proposition-2.17)\Pageref{Proposition-2.17}
 
- [**Definition 2.18**](#partial-order): Partial order\Pageref{partial-order}
+ [**Proof**](#Proof*-2.2)\Pageref{Proof*-2.2}
 
- [**Definition 2.19**](#total-order): Total order\Pageref{total-order}
+ [**Example 2.18**](#equality-is-an-equivalence-relation): Equality is an equivalence relation\Pageref{equality-is-an-equivalence-relation}
 
- [**Example 2.20**](#set-inclusion-is-a-partial-order): Set inclusion is a partial order\Pageref{set-inclusion-is-a-partial-order}
+ [**Example 2.19**](#Example-2.19)\Pageref{Example-2.19}
 
- [**Example 2.21**](#inequality-is-a-total-order): Inequality is a total order\Pageref{inequality-is-a-total-order}
+ [**Definition 2.20**](#partial-order): Partial order\Pageref{partial-order}
 
- [**Notation 2.22**](#Notation-2.22)\Pageref{Notation-2.22}
+ [**Definition 2.21**](#total-order): Total order\Pageref{total-order}
 
- [**Definition 2.23**](#Definition-2.23)\Pageref{Definition-2.23}
+ [**Example 2.22**](#set-inclusion-is-a-partial-order-but-not-total-order): Set inclusion is a partial order but not total order\Pageref{set-inclusion-is-a-partial-order-but-not-total-order}
 
- [**Definition 2.24**](#definition-function): Functions\Pageref{definition-function}
+ [**Example 2.23**](#inequality-is-a-total-order): Inequality is a total order\Pageref{inequality-is-a-total-order}
 
- [**Warning**](#Warning*-2.2)\Pageref{Warning*-2.2}
+ [**Notation 2.24**](#Notation-2.24)\Pageref{Notation-2.24}
 
- [**Example 2.25**](#Example-2.25)\Pageref{Example-2.25}
+ [**Definition 2.25**](#Definition-2.25)\Pageref{Definition-2.25}
 
- [**Example 2.26**](#Example-2.26)\Pageref{Example-2.26}
+ [**Definition 2.26**](#definition-function): Functions\Pageref{definition-function}
 
- [**Definition 2.27**](#absolute-value): Absolute value\Pageref{absolute-value}
+ [**Warning**](#Warning*-2.3)\Pageref{Warning*-2.3}
+
+ [**Example 2.27**](#Example-2.27)\Pageref{Example-2.27}
 
  [**Example 2.28**](#Example-2.28)\Pageref{Example-2.28}
 
- [**Remark 2.29**](#Remark-2.29)\Pageref{Remark-2.29}
+ [**Definition 2.29**](#absolute-value): Absolute value\Pageref{absolute-value}
 
- [**Remark 2.30**](#rmk-absolute-value-sym)\Pageref{rmk-absolute-value-sym}
+ [**Example 2.30**](#Example-2.30)\Pageref{Example-2.30}
 
- [**Remark 2.31**](#geometric-interpretation-of-x): Geometric interpretation of $|x|$\Pageref{geometric-interpretation-of-x}
+ [**Remark 2.31**](#Remark-2.31)\Pageref{Remark-2.31}
 
- [**Remark 2.32**](#geometric-interpretation-of-x-y): Geometric interpretation of $|x-y|$\Pageref{geometric-interpretation-of-x-y}
+ [**Remark 2.32**](#rmk-absolute-value-sym)\Pageref{rmk-absolute-value-sym}
 
- [**Lemma 2.33**](#lemma-absolute-value)\Pageref{lemma-absolute-value}
+ [**Remark 2.33**](#geometric-interpretation-of-x): Geometric interpretation of $|x|$\Pageref{geometric-interpretation-of-x}
 
- [**Proof**](#proof-of-lemma): Proof of Lemma 2.33\Pageref{proof-of-lemma}
+ [**Remark 2.34**](#geometric-interpretation-of-x-y): Geometric interpretation of $|x-y|$\Pageref{geometric-interpretation-of-x-y}
 
- [**Lemma 2.34**](#Lemma-2.34)\Pageref{Lemma-2.34}
+ [**Lemma 2.35**](#lemma-absolute-value)\Pageref{lemma-absolute-value}
 
- [**Theorem 2.35**](#theorem-triangle-inequality): Triangle inequality\Pageref{theorem-triangle-inequality}
+ [**Proof**](#proof-of-lemma): Proof of Lemma 2.35\Pageref{proof-of-lemma}
 
- [**Remark 2.36**](#geometric-meaning-of-triangle-inequality): Geometric meaning of triangle inequality\Pageref{geometric-meaning-of-triangle-inequality}
+ [**Corollary 2.36**](#Corollary-2.36)\Pageref{Corollary-2.36}
 
- [**Proof**](#proof-of-theorem-1): Proof of Theorem 0.44\Pageref{proof-of-theorem-1}
+ [**Theorem 2.37**](#theorem-triangle-inequality): Triangle inequality\Pageref{theorem-triangle-inequality}
 
- [**Remark 2.37**](#Remark-2.37)\Pageref{Remark-2.37}
+ [**Remark 2.38**](#geometric-meaning-of-triangle-inequality): Geometric meaning of triangle inequality\Pageref{geometric-meaning-of-triangle-inequality}
 
- [**Proposition 2.38**](#proposition-easy)\Pageref{proposition-easy}
+ [**Proof**](#proof-of-theorem-1): Proof of Theorem 2.37\Pageref{proof-of-theorem-1}
 
- [**Proof**](#of-proposition): of Proposition 2.38\Pageref{of-proposition}
+ [**Remark 2.39**](#Remark-2.39)\Pageref{Remark-2.39}
 
- [**Axiom 2.39**](#principle-of-induction): Principle of Induction\Pageref{principle-of-induction}
+ [**Proposition 2.40**](#proposition-easy)\Pageref{proposition-easy}
 
- [**Important**](#Important*-2.6)\Pageref{Important*-2.6}
+ [**Proof**](#of-proposition): of Proposition 2.40\Pageref{of-proposition}
 
- [**Remark 2.40**](#Remark-2.40)\Pageref{Remark-2.40}
+ [**Axiom 2.41**](#principle-of-induction): Principle of Induction\Pageref{principle-of-induction}
 
- [**Corollary 2.41**](#principle-of-inducion---alternative-formulation): Principle of Inducion - Alternative formulation\Pageref{principle-of-inducion---alternative-formulation}
+ [**Important**](#Important*-2.7)\Pageref{Important*-2.7}
 
- [**Proof**](#Proof*-2.7)\Pageref{Proof*-2.7}
+ [**Remark 2.42**](#Remark-2.42)\Pageref{Remark-2.42}
 
- [**Example 2.42**](#formula-for-summing-first-n-natural-numbers): Formula for summing first $n$ natural numbers\Pageref{formula-for-summing-first-n-natural-numbers}
+ [**Corollary 2.43**](#principle-of-inducion---alternative-formulation): Principle of Inducion - Alternative formulation\Pageref{principle-of-inducion---alternative-formulation}
 
- [**Example 2.43**](#statements-about-sequences-of-numbers): Statements about sequences of numbers\Pageref{statements-about-sequences-of-numbers}
+ [**Proof**](#Proof*-2.8)\Pageref{Proof*-2.8}
+
+ [**Example 2.44**](#formula-for-summing-first-n-natural-numbers): Formula for summing first $n$ natural numbers\Pageref{formula-for-summing-first-n-natural-numbers}
+
+ [**Example 2.45**](#statements-about-sequences-of-numbers): Statements about sequences of numbers\Pageref{statements-about-sequences-of-numbers}
 
  [**Definition 3.1**](#binary-operation): Binary operation\Pageref{binary-operation}
 
