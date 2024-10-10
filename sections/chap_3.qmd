@@ -571,37 +571,36 @@ $$
 L < \sqrt{2} \,.
 $$
 We want to contradict the fact that $L$ is a separator for the cut $(A,B)$. 
-The idea is that $\sqrt{2} \notin \Q$, and therefore it is possible to find a rational 
-number $\widetilde{L}$ such that
+The idea is that, since $\sqrt{2} \notin \Q$, it is possible to squeeze a rational number $\widetilde{L} \in \Q$ in between $L$ and $\sqrt{2}$, i.e.
 $$
 L < \widetilde{L} < \sqrt{2} \,.
 $$
 How do we find such $\widetilde{L}$ in practice? We look for a
 number $\widetilde{L}_n$ of the form
 $$
-\widetilde{L}_n = 1 + \frac{1}{n}
+\widetilde{L}_n = L + \frac{1}{n}
 $$
 for some $n \in \N$ to be suitably chosen later. Clearly $\widetilde{L}_n \in \Q$ and
 $$
 L < \widetilde{L}_n 
 $$
-for all $n \in \N$. We need to prove that we can find $n_0 \in \N$ such that 
+for all $n \in \N$. We will then be able to find $n_0 \in \N$ such that 
 $$
 L < \widetilde{L}_{n_0} < \sqrt{2} \,.
-$${#eq-theorem-Q-cut-2}
-This is indeed possible: There exists $n_0 \in \N$ such that (@eq-theorem-Q-cut-2) holds. 
-From (@eq-theorem-Q-cut-2) we see that $\widetilde{L}_{n_0} \in A$. Since $L$ is 
-a separator, from (@eq-theorem-Q-cut) we obtain
+$${#eq-theorem-Q-cut-2} 
+Now comes the contradiction: From (@eq-theorem-Q-cut-2) we see that $\widetilde{L}_{n_0} \in A$. However $L$ is 
+a separator, and so from (@eq-theorem-Q-cut) we have
 $$
 \widetilde{L}_{n_0} \leq L \,,
 $$
 which contradicts (@eq-theorem-Q-cut-2).
 
+
 - If $L \in B$, by definition of $B$ we have
 $$
  \sqrt{2} < L \,.
 $$
-The idea is the same as above: Since $\sqrt{2} \notin \Q$, we can find $\widetilde{L} \in \Q$ such that 
+The idea is the same as above: Since $\sqrt{2} \notin \Q$, we can squeeze a rational number $\widetilde{L} \in \Q$ between $\sqrt{2}$ and $L$, i.e.,
 $$
 \sqrt{2} < \widetilde{L} < L \,.
 $$
@@ -610,27 +609,39 @@ for $\widetilde{L}$ of the form
 $$
 \widetilde{L}_n := L - \frac{1}{n} \,,
 $$
-for a suitable $n \in \N$. This satisfies $\widetilde{L}_n \in \Q$ and
+for a suitable $n \in \N$. Clearly $\widetilde{L}_n \in \Q$ and
 $$
 \widetilde{L}_n < L \,,
 $$
-for all $n \in \N$. We then find $n_0 \in \N$ such that
+for all $n \in \N$. We will be able to find $n_0 \in \N$ such that
 $$
 \sqrt{2} < \widetilde{L}_{n_0} < L \,.
 $${#eq-theorem-Q-cut-3}
-The above shows that $\widetilde{L}_{n_0} \in B$. As $L$ is a separator, we find that
+Therefore $\widetilde{L}_{n_0} \in B$. Again, contradiction: $L$ is a separator and so
 $$
 L \leq \widetilde{L}_{n_0}  \,,
 $$
 which contradicts (@eq-theorem-Q-cut-3).
 
 
-Therefore, both cases $L \in A$ or $L \in B$ lead to a contradiction. Since these are 
-all the possibilities, we conclude that the cut $(A,B)$ has no separator in $\Q$.
+Both cases $L \in A$ or $L \in B$ lead to a contradiction. Since these are all the possibilities, we conclude that the cut $(A,B)$ has no separator in $\Q$.
 :::
 
 
-Time to make the ideas in the above remark rigorous. 
+Time to make the ideas in the above remark rigorous. Two main issues need fixing:
+
+1. $\sqrt{2}$ is just a symbol for a number $x$ such that $x^2 = 2$. We have seen that $x \notin \Q$, which leads to the question: what is the meaning of the expression
+$$
+a \leq \sqrt{2} \leq b 
+$$
+when $a,b \in \Q$? We only know how to compare rational numbers, so the above makes no sense. We need a more clever way to write down the sets $A$ and $B$ so that they make sense as objects in $\Q$.
+
+2. We said it is possible to find $n_0 \in \N$ such that
+$$
+L < \widetilde{L}_{n_0} < \sqrt{2} \quad \text{ or } \quad \sqrt{2} < \widetilde{L}_{n_0} < L 
+$$
+We need to prove it!
+
 
 
 ::: Proof

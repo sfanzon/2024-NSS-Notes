@@ -72,47 +72,27 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 .Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -120,7 +100,23 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Lemma {
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -128,17 +124,21 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Problem {
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 </style>
 
@@ -738,35 +738,43 @@ a \leq L \leq b \,, \quad \forall \, a \in A\,, \,\, \forall \, b \in B \,.
 <ul>
 <li><p>If <span class="math inline">\(L \in A\)</span>, by definition of <span class="math inline">\(A\)</span> we have <span class="math display">\[
 L &lt; \sqrt{2} \,.
-\]</span> We want to contradict the fact that <span class="math inline">\(L\)</span> is a separator for the cut <span class="math inline">\((A,B)\)</span>. The idea is that <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, and therefore it is possible to find a rational number <span class="math inline">\(\widetilde{L}\)</span> such that <span class="math display">\[
+\]</span> We want to contradict the fact that <span class="math inline">\(L\)</span> is a separator for the cut <span class="math inline">\((A,B)\)</span>. The idea is that, since <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, it is possible to squeeze a rational number <span class="math inline">\(\widetilde{L} \in \mathbb{Q}\)</span> in between <span class="math inline">\(L\)</span> and <span class="math inline">\(\sqrt{2}\)</span>, i.e. <span class="math display">\[
 L &lt; \widetilde{L} &lt; \sqrt{2} \,.
 \]</span> How do we find such <span class="math inline">\(\widetilde{L}\)</span> in practice? We look for a number <span class="math inline">\(\widetilde{L}_n\)</span> of the form <span class="math display">\[
-\widetilde{L}_n = 1 + \frac{1}{n}
+\widetilde{L}_n = L + \frac{1}{n}
 \]</span> for some <span class="math inline">\(n \in \mathbb{N}\)</span> to be suitably chosen later. Clearly <span class="math inline">\(\widetilde{L}_n \in \mathbb{Q}\)</span> and <span class="math display">\[
 L &lt; \widetilde{L}_n
-\]</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. We need to prove that we can find <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span id="eq-theorem-Q-cut-2"><span class="math display">\[
+\]</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. We will then be able to find <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span id="eq-theorem-Q-cut-2"><span class="math display">\[
 L &lt; \widetilde{L}_{n_0} &lt; \sqrt{2} \,.
-\tag{3.3}\]</span></span> This is indeed possible: There exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that (<a href="#eq-theorem-Q-cut-2" class="quarto-xref"><span>3.3</span></a>) holds. From (<a href="#eq-theorem-Q-cut-2" class="quarto-xref"><span>3.3</span></a>) we see that <span class="math inline">\(\widetilde{L}_{n_0} \in A\)</span>. Since <span class="math inline">\(L\)</span> is a separator, from (<a href="#eq-theorem-Q-cut" class="quarto-xref"><span>3.2</span></a>) we obtain <span class="math display">\[
+\tag{3.3}\]</span></span> Now comes the contradiction: From (<a href="#eq-theorem-Q-cut-2" class="quarto-xref"><span>3.3</span></a>) we see that <span class="math inline">\(\widetilde{L}_{n_0} \in A\)</span>. However <span class="math inline">\(L\)</span> is a separator, and so from (<a href="#eq-theorem-Q-cut" class="quarto-xref"><span>3.2</span></a>) we have <span class="math display">\[
 \widetilde{L}_{n_0} \leq L \,,
 \]</span> which contradicts (<a href="#eq-theorem-Q-cut-2" class="quarto-xref"><span>3.3</span></a>).</p></li>
 <li><p>If <span class="math inline">\(L \in B\)</span>, by definition of <span class="math inline">\(B\)</span> we have <span class="math display">\[
 \sqrt{2} &lt; L \,.
-\]</span> The idea is the same as above: Since <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, we can find <span class="math inline">\(\widetilde{L} \in \mathbb{Q}\)</span> such that <span class="math display">\[
+\]</span> The idea is the same as above: Since <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, we can squeeze a rational number <span class="math inline">\(\widetilde{L} \in \mathbb{Q}\)</span> between <span class="math inline">\(\sqrt{2}\)</span> and <span class="math inline">\(L\)</span>, i.e., <span class="math display">\[
 \sqrt{2} &lt; \widetilde{L} &lt; L \,.
 \]</span> Since we want <span class="math inline">\(\widetilde{L}\)</span> to be a rational number smaller than <span class="math inline">\(L\)</span>, we look for <span class="math inline">\(\widetilde{L}\)</span> of the form <span class="math display">\[
 \widetilde{L}_n := L - \frac{1}{n} \,,
-\]</span> for a suitable <span class="math inline">\(n \in \mathbb{N}\)</span>. This satisfies <span class="math inline">\(\widetilde{L}_n \in \mathbb{Q}\)</span> and <span class="math display">\[
+\]</span> for a suitable <span class="math inline">\(n \in \mathbb{N}\)</span>. Clearly <span class="math inline">\(\widetilde{L}_n \in \mathbb{Q}\)</span> and <span class="math display">\[
 \widetilde{L}_n &lt; L \,,
-\]</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. We then find <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span id="eq-theorem-Q-cut-3"><span class="math display">\[
+\]</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. We will be able to find <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span id="eq-theorem-Q-cut-3"><span class="math display">\[
 \sqrt{2} &lt; \widetilde{L}_{n_0} &lt; L \,.
-\tag{3.4}\]</span></span> The above shows that <span class="math inline">\(\widetilde{L}_{n_0} \in B\)</span>. As <span class="math inline">\(L\)</span> is a separator, we find that <span class="math display">\[
+\tag{3.4}\]</span></span> Therefore <span class="math inline">\(\widetilde{L}_{n_0} \in B\)</span>. Again, contradiction: <span class="math inline">\(L\)</span> is a separator and so <span class="math display">\[
 L \leq \widetilde{L}_{n_0}  \,,
 \]</span> which contradicts (<a href="#eq-theorem-Q-cut-3" class="quarto-xref"><span>3.4</span></a>).</p></li>
 </ul>
-<p>Therefore, both cases <span class="math inline">\(L \in A\)</span> or <span class="math inline">\(L \in B\)</span> lead to a contradiction. Since these are all the possibilities, we conclude that the cut <span class="math inline">\((A,B)\)</span> has no separator in <span class="math inline">\(\mathbb{Q}\)</span>.</p>
+<p>Both cases <span class="math inline">\(L \in A\)</span> or <span class="math inline">\(L \in B\)</span> lead to a contradiction. Since these are all the possibilities, we conclude that the cut <span class="math inline">\((A,B)\)</span> has no separator in <span class="math inline">\(\mathbb{Q}\)</span>.</p>
 </div></details>
 </div>
-<p>Time to make the ideas in the above remark rigorous.</p>
+<p>Time to make the ideas in the above remark rigorous. Two main issues need fixing:</p>
+<ol type="1">
+<li><p><span class="math inline">\(\sqrt{2}\)</span> is just a symbol for a number <span class="math inline">\(x\)</span> such that <span class="math inline">\(x^2 = 2\)</span>. We have seen that <span class="math inline">\(x \notin \mathbb{Q}\)</span>, which leads to the question: what is the meaning of the expression <span class="math display">\[
+a \leq \sqrt{2} \leq b
+\]</span> when <span class="math inline">\(a,b \in \mathbb{Q}\)</span>? We only know how to compare rational numbers, so the above makes no sense. We need a more clever way to write down the sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> so that they make sense as objects in <span class="math inline">\(\mathbb{Q}\)</span>.</p></li>
+<li><p>We said it is possible to find <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+L &lt; \widetilde{L}_{n_0} &lt; \sqrt{2} \quad \text{ or } \quad \sqrt{2} &lt; \widetilde{L}_{n_0} &lt; L
+\]</span> We need to prove it!</p></li>
+</ol>
 <div id="proof-of-theorem" class="Proof" title="Proof of Theorem 20">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 20</summary><div>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be the sets defined in (<a href="#eq-cut-Q" class="quarto-xref"><span>3.1</span></a>). It is useful to rewrite <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> in the form <span class="math display">\[
 A = A_1 \cup A_2 \,,

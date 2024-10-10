@@ -1562,17 +1562,17 @@ In order to apply induction, we need to show that
 Let us proceed:
 
 1. It is immediate to check that (@eq-formula-sum-naturals) holds for $n=1$.
-2. Suppose (@eq-formula-sum-naturals) holds for $n$. Then
+2. Suppose (@eq-formula-sum-naturals) holds for $n = k$. Then
 \begin{align}
-1 + \ldots +  n + (n+1) & =   \frac{n(n+1)}{2}  + (n+1) \\
-& = \frac{ n(n+1) + 2(n+1) }{2} \\
-& = \frac{(n+1)(n+2)}{n}
+1 + \ldots +  k + (k+1) & =   \frac{k(k+1)}{2}  + (k+1) \\
+& = \frac{ k(k+1) + 2(k+1) }{2} \\
+& = \frac{(k+1)(k+2)}{k}
 \end{align}
-where in the first equality we used that (@eq-formula-sum-naturals) holds for $n$. We then have
+where in the first equality we used that (@eq-formula-sum-naturals) holds for $n=k$. We then have
 $$
-1 +   \ldots + n + (n+1) = \frac{(n+1)(n+2)}{n}\,,
+1 +   \ldots + k + (k+1) = \frac{(k+1)(k+2)}{k}\,,
 $$
-which shows that (@eq-formula-sum-naturals) holds for $n+1$.
+which shows that (@eq-formula-sum-naturals) holds for $n = k+1$.
 
 By the Principle of Induction we then conclude that $\alpha(n)$ is true for all $n \in \N$, which means that (@eq-formula-sum-naturals) holds for all $n \in \N$.
 :::
