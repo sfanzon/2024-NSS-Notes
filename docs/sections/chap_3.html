@@ -72,39 +72,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Important {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -112,31 +80,63 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 .Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Theorem {
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -328,7 +328,8 @@ window.Quarto = {
 </header>
 
 
-<p>In this chapter we introduce the system of Real Numbers <span class="math inline">\(\mathbb{R}\)</span> and study some of its properties. We will take quite an abstract approach, which needs the definition of field.</p>
+<p>In this chapter we introduce the system of Real Numbers <span class="math inline">\(\mathbb{R}\)</span> and study some of its properties. We will follow quite an abstract approach, which requires the definition of ordered field. The fact that <span class="math inline">\(\mathbb{R}\)</span> is a continuum with no gaps (unlike <span class="math inline">\(\mathbb{Q}\)</span>) will be consequence of the Axiom of Completeness.</p>
+<p>Therefore <span class="math inline">\(\mathbb{R}\)</span> will be defined as an ordered field in which the Axiom of Completeness holds.</p>
 <section id="fields" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="fields"><span class="header-section-number">3.1</span> Fields</h2>
 <p>In order to introduce <span class="math inline">\(\mathbb{R}\)</span>, we need the concepts of <strong>binary operation</strong> and <strong>field</strong>. We proceed in a general setting, starting from a set <span class="math inline">\(K\)</span>. We will assume that there is an <strong>equivalence relation</strong> on <span class="math inline">\(K\)</span> denoted by <span class="math inline">\(=\)</span>.</p>
@@ -1501,7 +1502,12 @@ a \leq s \leq b \,, \,\, \forall a \in A \,,  \, \forall \, b \in B \,,
 <p>The definition of <span class="math inline">\(\mathbb{R}\)</span> is given in an axiomatic way.</p>
 <div id="definition-R" class="Definition" title="System of Real Numbers \mathbb{R}">
 <details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 46: </strong>System of Real Numbers <span class="math inline">\(\mathbb{R}\)</span></summary><div>
-<p>A system of Real Numbers is a set <span class="math inline">\(\mathbb{R}\)</span> satisfying the following properties:</p>
+<p>A system of Real Numbers is a set <span class="math inline">\(\mathbb{R}\)</span> with two operations <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span>, and an order relation <span class="math inline">\(\leq\)</span>, such that</p>
+<ul>
+<li><p><span class="math inline">\((\mathbb{R},+,\cdot, \leq)\)</span> is an ordered field</p></li>
+<li><p><span class="math inline">\(\mathbb{R}\)</span> sastisfies the Axiom of Completeness</p></li>
+</ul>
+<p>For reader’s convenience we explicitly state the above mentioned properties.</p>
 <ol type="1">
 <li>There is an operation <span class="math inline">\(+\)</span> of <strong>addition</strong> on <span class="math inline">\(\mathbb{R}\)</span> <span class="math display">\[
 +\ \colon \mathbb{R}\times \mathbb{R}\to \mathbb{R}\,, \quad (x,y) \mapsto x + y
@@ -1563,10 +1569,10 @@ x \leq y \,\, \implies \,\, x + z \leq y + z
 x \geq 0, \, y \geq 0  \,\, \implies \,\, x \cdot y  \geq 0
 \]</span></li>
 </ul></li>
-<li><strong>Cut Property</strong> holds:
+<li><strong>Axiom of Completeness</strong> holds:
 <ul>
-<li>(CP) Every cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(\mathbb{R}\)</span> admits a <strong>separator</strong> <span class="math inline">\(s \in \mathbb{R}\, \, \text{ s.t. } \, \)</span> <span class="math display">\[
-a \leq s \leq b \,, \quad \forall \, a \in A \,, \,\forall \, b \in B
+<li>(AC) For every <span class="math inline">\(A \subseteq \mathbb{R}\)</span> non-empty and bounded above <span class="math display">\[
+\sup A \in \mathbb{R}
 \]</span></li>
 </ul></li>
 </ol>
@@ -1574,12 +1580,12 @@ a \leq s \leq b \,, \quad \forall \, a \in A \,, \,\forall \, b \in B
 </div>
 <div id="Remark-47" class="Remark">
 <details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 47</strong></summary><div>
-<p>Since <strong>Cut Property</strong> and <strong>Axiom of Completeness</strong> are equivalent by Theorem <a href="chap_3.html#theorem-cut-complete">44</a>, one can replace the Cut Property in Definition <a href="chap_3.html#definition-R">46</a> Point 5 with:</p>
+<p>Since <strong>Axiom of Completeness</strong> and <strong>Cut Property</strong> are equivalent by Theorem <a href="chap_3.html#theorem-cut-complete">44</a>, one can replace the Axiom of Completeness in Definition <a href="chap_3.html#definition-R">46</a> Point 5 with:</p>
 <ol start="5" type="1">
-<li><strong>Axiom of Completeness</strong> holds:
+<li><strong>Cut Property</strong> holds:
 <ul>
-<li>(AC) For every <span class="math inline">\(A \subseteq \mathbb{R}\)</span> non-empty and bounded above <span class="math display">\[
-\sup A \in \mathbb{R}
+<li>(CP) Every cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(\mathbb{R}\)</span> admits a <strong>separator</strong> <span class="math inline">\(s \in \mathbb{R}\, \, \text{ s.t. } \, \)</span> <span class="math display">\[
+a \leq s \leq b \,, \quad \forall \, a \in A \,, \,\forall \, b \in B
 \]</span></li>
 </ul></li>
 </ol>
@@ -1631,7 +1637,7 @@ x^{-1} = \frac{1}{x} \,.
 <h3 data-number="3.8.1" class="anchored" data-anchor-id="natural-numbers"><span class="header-section-number">3.8.1</span> Natural numbers</h3>
 <p>Let us start with the definition of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span>. We would like <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> to be <span class="math display">\[
 {\mathbb{N}}_{\mathbb{R}} = \{ \mathbf{1}, \mathbf{2} , \mathbf{3} , \ldots \} \,.
-\]</span> Note that we are denoting the above numbers with bold symbols in order to distinguish them from the elements of <span class="math inline">\(\mathbb{R}\)</span>. The key property that we would like <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> to have is the following: <span class="math display">\[
+\]</span> We are denoting the above numbers with bold symbols in order to distinguish them from the elements of <span class="math inline">\(\mathbb{R}\)</span>. The key property that we would like <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> to have is the following: <span class="math display">\[
 \mbox{Every } \mathbf{n} \in {\mathbb{N}}_{\mathbb{R}}  \, \mbox{ has a successor } \, (\mathbf{n+1}) \in {\mathbb{N}}_{\mathbb{R}} \,.
 \]</span> How do we ensure this property? We could start by defining <span class="math display">\[
 \mathbf{1}:=1\,,
@@ -1980,7 +1986,7 @@ q \cdot p = \frac{m}{n} \cdot \frac{-n}{x} = \frac{m}{n} \cdot \frac{-n}{-m} = 1
 <p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 68</strong></summary><div><span class="math inline">\({\mathbb{Q}}_{\mathbb{R}}\)</span> is not complete.<p></p>
 </div></details>
 </div>
-<p>The proof of the above Theorem is a one to one copy of the proof of Theorem <a href="chap_3.html#theorem-Q-not-complete">39</a>: indeed the proof of Theorem <a href="chap_3.html#theorem-Q-not-complete">39</a> only makes use of field axioms, and thus it applies to <span class="math inline">\({\mathbb{Q}}_{\mathbb{R}}\)</span>.</p>
+<p>The proof of the above Theorem replicates exactly the proof of Theorem <a href="chap_3.html#theorem-Q-not-complete">39</a>: This is because the proof of Theorem <a href="chap_3.html#theorem-Q-not-complete">39</a> only makes use of field axioms, and thus it applies to <span class="math inline">\({\mathbb{Q}}_{\mathbb{R}}\)</span>.</p>
 <div id="Notation-69" class="Notation">
 <p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 69</strong></summary><div>From now on we denote <span class="math display">\[
 \mathbb{N}:= {\mathbb{N}}_{\mathbb{R}} \,,  \quad

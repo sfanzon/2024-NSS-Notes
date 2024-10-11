@@ -8,8 +8,10 @@ $
 # Real Numbers
 
 
-In this chapter we introduce the system of Real Numbers $\R$ and study some of its properties. We will take quite an abstract approach, which needs the
-definition of field.
+In this chapter we introduce the system of Real Numbers $\R$ and study some of its properties. We will follow quite an abstract approach, which requires the
+definition of ordered field. The fact that $\R$ is a continuum with no gaps (unlike $\Q$) will be consequence of the Axiom of Completeness. 
+
+Therefore $\R$ will be defined as an ordered field in which the Axiom of Completeness holds.
 
 
 ## Fields
@@ -1741,7 +1743,15 @@ The definition of $\R$ is given in an axiomatic way.
 ::: Definition
 ### System of Real Numbers $\R$   {#definition-R}
 
-A system of Real Numbers is a set $\R$ satisfying the following properties:
+A system of Real Numbers is a set $\R$ with two operations $+$ and $\cdot$, and
+an order relation $\leq$, such that
+
+
+- $(\R,+,\cdot, \leq)$ is an ordered field
+
+- $\R$ sastisfies the Axiom of Completeness
+
+For reader's convenience we explicitly state the above mentioned properties.
 
 
 1. There is an operation $+$ of **addition** on $\R$ 
@@ -1820,24 +1830,25 @@ The multiplication satisifes: $\, \forall \, x,y,z \in \R$
     x \geq 0, \, y \geq 0  \,\, \implies \,\, x \cdot y  \geq 0
     $$
 
-5. **Cut Property** holds:
-    - (CP) Every cut $(A,B)$ of $\R$ admits a **separator** $s \in \R \, \st$
+5. **Axiom of Completeness** holds:
+    - (AC) For every $A \subseteq \R$ non-empty and bounded above 
     $$
-    a \leq s \leq b \,, \quad \forall \, a \in A \,, \,\forall \, b \in B 
-    $$  
+    \sup A \in \R
+    $$   
 
 :::
 
 
 
 ::: Remark
-Since **Cut Property** and **Axiom of Completeness** are equivalent by Theorem \ref{theorem-cut-complete}, one can replace the Cut Property in Definition \ref{definition-R} Point 5  with:  
+Since **Axiom of Completeness** and **Cut Property** are equivalent by Theorem \ref{theorem-cut-complete}, one can replace the Axiom of Completeness in Definition \ref{definition-R} Point 5  with:  
 
-5. **Axiom of Completeness** holds:
-    - (AC) For every $A \subseteq \R$ non-empty and bounded above 
+5. **Cut Property** holds:
+    - (CP) Every cut $(A,B)$ of $\R$ admits a **separator** $s \in \R \, \st$
     $$
-    \sup A \in \R
-    $$ 
+    a \leq s \leq b \,, \quad \forall \, a \in A \,, \,\forall \, b \in B 
+    $$
+
 :::
 
 
@@ -1922,7 +1933,7 @@ Let us start with the definition of ${\N}_{\R}$. We would like ${\N}_{\R}$ to be
 $$
 {\N}_{\R} = \{ \mathbf{1}, \mathbf{2} , \mathbf{3} , \ldots \} \,.
 $$
-Note that we are denoting the above numbers with bold symbols in order to distinguish them from the elements of $\R$. The key property that we would like ${\N}_{\R}$ to have is the following:
+We are denoting the above numbers with bold symbols in order to distinguish them from the elements of $\R$. The key property that we would like ${\N}_{\R}$ to have is the following:
 $$
 \mbox{Every } \mathbf{n} \in {\N}_{\R}  \, \mbox{ has a successor } \, (\mathbf{n+1}) \in {\N}_{\R} \,.
 $$
@@ -2499,8 +2510,8 @@ ${\Q}_{\R}$ is not complete.
 :::
 
 
-The proof of the above Theorem is a one to one copy of the proof of Theorem 
-\ref{theorem-Q-not-complete}: indeed the proof of Theorem 
+The proof of the above Theorem replicates exactly the proof of Theorem 
+\ref{theorem-Q-not-complete}: This is because the proof of Theorem 
 \ref{theorem-Q-not-complete} only makes use of field 
 axioms, and thus it applies to ${\Q}_{\R}$.
 
