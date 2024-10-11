@@ -72,11 +72,19 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Axiom {
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Conjecture {
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -84,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Lemma {
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -92,7 +100,35 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
 .Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -100,45 +136,9 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Definition {
   --color1: #c6e6ed;
   --color2: #1995ad;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
 }
 </style>
 
@@ -1466,29 +1466,29 @@ S=\mathbb{N}\,.
 &amp; x_1  := 1 \\
 &amp; x_{n+1}  := \frac{x_n}{2} + 1 \,.
 \end{align}\]</span> A sequence defined as above is called <strong>recurrence sequence</strong>. Using the above rule we can compute all the terms of <span class="math inline">\(x_n\)</span>.<p></p>
-<blockquote class="blockquote">
-<p>For example <span class="math display">\[\begin{align}
-x_2 &amp; = \frac{x_1}{2} + 1 = \frac12 + 1 =\frac{3}{2} \\
-x_3 &amp; = \frac{x_2}{2} + 1 =  \frac34 + 1 = \frac74 \,.
-\end{align}\]</span></p>
-</blockquote>
-<p>By computing these terms, we suspect that the sequence might be increasing, meaning that <span id="eq-induction-increasing"><span class="math display">\[
-x_{n+1} \geq x_n
-\tag{2.19}\]</span></span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+<p>Let us compute the first 4 elements: <span class="math display">\[\begin{align}
+x_1 &amp; = 1 \\
+x_2 &amp; = \frac{x_1}{2} + 1 = 1 + \frac12 = x_1 + \frac{1}{2} \\
+x_3 &amp; = \frac{x_2}{2} + 1 = 1 + \frac12 + \frac{1}{4} = x_2 + \frac{1}{4} \\
+x_4 &amp; = \frac{x_3}{2} + 1 = 1 + \frac12 + \frac{1}{4} + \frac{1}{8} =  x_3 + \frac{1}{8}\\
+\end{align}\]</span> We see a pattern: The successive term is obtained by adding a power of <span class="math inline">\(1/2\)</span> to the previous term. We therefore conjecture that <span id="eq-induction-increasing"><span class="math display">\[
+x_{n+1} = x_n + \frac{1}{2^n}
+\tag{2.19}\]</span></span></p>
+<p>We want to prove our conjecture rigorously, i.e.&nbsp;using induction.</p>
 <p><em>Claim. (<a href="#eq-induction-increasing" class="quarto-xref"><span>2.19</span></a>) holds for all <span class="math inline">\(n \in \mathbb{N}\)</span></em>.</p>
-<p><em>Proof of Claim.</em><br>
-We argue by induction:</p>
+<p><em>Proof of Claim.</em> We argue by induction:</p>
 <ol type="1">
-<li>We have seen that <span class="math inline">\(x_1 = 1\)</span> and <span class="math inline">\(x_2 = 3/2\)</span>. Thus <span class="math display">\[
-x_2 \geq x_1 \,.
-\]</span></li>
-<li>Suppose now that <span id="eq-induction-increasing-1"><span class="math display">\[
-x_{n+1} \geq x_{n} \,.
-\tag{2.20}\]</span></span> We need to prove that <span id="eq-induction-increasing-2"><span class="math display">\[
-x_{n+2} \geq x_{n+1} \,.
-\tag{2.21}\]</span></span> Indeed, we can multiply the inequality (<a href="#eq-induction-increasing-1" class="quarto-xref"><span>2.20</span></a>) by <span class="math inline">\(1/2\)</span> and add <span class="math inline">\(1\)</span> to get <span class="math display">\[
-\frac{x_{n+1}}{2} + 1 \geq \frac{x_{n}}{2} + 1   \,.
-\]</span> The above is equivalent, by definition, to (<a href="#eq-induction-increasing-2" class="quarto-xref"><span>2.21</span></a>).</li>
+<li><p>We see that <span class="math display">\[
+x_2 = 1 + \frac{1}{2} = x_1 + \frac{1}{2}
+\]</span> proving (<a href="#eq-induction-increasing" class="quarto-xref"><span>2.19</span></a>) for <span class="math inline">\(n = 1\)</span>.</p></li>
+<li><p>Suppose now that (<a href="#eq-induction-increasing" class="quarto-xref"><span>2.19</span></a>) holds for <span class="math inline">\(n=k\)</span>. We need to prove that (<a href="#eq-induction-increasing" class="quarto-xref"><span>2.19</span></a>) holds for <span class="math inline">\(n=k+1\)</span>, that is, <span id="eq-induction-increasing-2"><span class="math display">\[
+x_{k+2} = x_{k+1} + \frac{1}{2^{k+1}} \,.
+\tag{2.20}\]</span></span> Starting with the definition of <span class="math inline">\(x_{k+2}\)</span> we see that <span class="math display">\[\begin{align*}
+x_{k+2} &amp; = \frac{x_{k+1}}{2} + 1  &amp; (\text{definition of } x_{k+2} )  \\
+     &amp; = \frac{x_k + \frac{1}{2^k}}{2} + 1   &amp; (\text{inductive hypothesis} ) \\
+     &amp; = \frac{x_k}{2} + 1 + \frac{1}{2^{k+1}} &amp; (\text{just calculations} ) \\
+     &amp; = x_{k+1} + \frac{1}{2^{k+1}}  &amp; (\text{definition of } x_{k+1}  ) \\
+\end{align*}\]</span> which proves (<a href="#eq-induction-increasing-2" class="quarto-xref"><span>2.20</span></a>).</p></li>
 </ol>
 <p>Therefore the assumptions of the Induction Principle are satisfied, and (<a href="#eq-induction-increasing" class="quarto-xref"><span>2.19</span></a>) follows.</p>
 </div></details>

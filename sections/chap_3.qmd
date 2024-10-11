@@ -8,12 +8,13 @@ $
 # Real Numbers
 
 
-In this chapter we introduce the system of Real Numbers $\R$ and study some of its properties. 
+In this chapter we introduce the system of Real Numbers $\R$ and study some of its properties. We will take quite an abstract approach, which needs the
+definition of field.
 
 
 ## Fields
 
-In order to introduce $\R$, we need the concepts of **binary operation** and **field**. We proceed in a general setting, starting from a set $K$.
+In order to introduce $\R$, we need the concepts of **binary operation** and **field**. We proceed in a general setting, starting from a set $K$. We will assume that there is an **equivalence relation** on $K$ denoted by $=$. 
 
 
 ::: Definition
@@ -27,16 +28,27 @@ which maps the ordered pair $(x,y)$ into $x \circ y$.
 
 
 ::: Notation
-There are two main binary operations we are interested in:
+We use the special symbols of $+$ and $\cdot$ to refer to addition and multiplication.
 
-- **Addition**: denoted by $+$. The addition, or **sum** of $x,y \in K$ is denoted by 
+- **Addition**: The addition, or **sum** of $x,y \in K$ is denoted by 
 $$
-x + y \,.
+x + y 
 $$
-- **Multiplication**: denoted by $\cdot$. The multiplication, or **product** of $x,y \in K$ is denoted by 
+- **Multiplication**: The multiplication, or **product** of $x,y \in K$ is denoted by 
 $$
-x \cdot y \,\, \mbox{ or } \,\, xy\,.
+x \cdot y \,\, \mbox{ or } \,\, xy
 $$
+:::
+
+
+::: Warning
+
+When we talk about $+$ and $\cdot$ in a set $K$ we are **not necessarily** thinking
+about the usual sum and multiplication in $\Q$. This is the case in the next Example, where we define 
+$$
+1 + 1 = 0
+$$
+
 :::
 
 
@@ -59,16 +71,46 @@ $$
 $$
 The above mean that 
 $$
-0+0 = 1+1 = 0 \,, \quad 0 + 1 = 1 + 0 = 1\,, 
-$$
-$$
+\begin{gathered}
+0+0 = 1+1 = 0 \,, \quad 0 + 1 = 1 + 0 = 1\,, \\
 0 \cdot 0 = 0 \cdot 1 = 1 \cdot 0 = 0 \,, \quad 1 \cdot 1 = 1  \,.
+\end{gathered}
+$${#eq-ktwo}
+
+Note that we have defined (rather controversially!)
 $$
-This is just one option. Note that we could not have defined 
+1+1 = 0 
 $$
-1 + 1  = 2\,,
+The other option would have been to define
 $$
-since $2 \notin K$.
+1 + 1 = 1
+$$
+This would have been absolutely fine. However we could not have defined 
+$$
+1 + 1  = 2
+$$
+because $2 \notin K$.
+
+**Note:** The operations in (@eq-ktwo) look more natural if you identify $0$ with the even numbers and $1$ with the odd numbers. In that case $1+1 = 0$ reads
+$$
+\mathrm{Odd} + \mathrm{Odd} = \mathrm{Even}
+$$
+Indeed all the definitions given in (@eq-ktwo) agree with such identification, see tables below:
+$$
+\begin{array}{c|cc}
+ + & \mathrm{Even} & \mathrm{Odd} \\ \hline
+ \mathrm{Even} & \mathrm{Even} & \mathrm{Odd} \\
+ \mathrm{Odd} & \mathrm{Odd} & \mathrm{Even} \\
+\end{array}	
+\qquad \qquad
+\begin{array}{c|cc}
+\cdot & \mathrm{Even} & \mathrm{Odd} \\ \hline
+    \mathrm{Even} & \mathrm{Even} & \mathrm{Even} \\
+    \mathrm{Odd} & \mathrm{Even} & \mathrm{Odd} \\
+\end{array}
+$$
+
+
 :::
 
 Binary operations take ordered pairs of elements of $K$ as input. Therefore the operation
@@ -106,6 +148,25 @@ $$
 x \circ y = y \circ x = e \,.
 $$
 :::
+
+
+
+::: Example
+
+Consider $\Q$ with the usual operations of sum and multiplication
+
+- We already know that $+$ and $\cdot$ are commutative and associative
+
+- The neutral element of the sum is $e = 0$
+
+- The neutral element of the product is $e = 1$
+
+- The additive inverse of $x$ is $-x$
+
+- The multiplicative inverse of $x \neq 0$ is $1/x$.
+
+:::
+
 
 
 ::: {.Example #example-binary-operation-2}
@@ -262,6 +323,33 @@ We call the triple $(K, + , \cdot)$ a **field** if:
 :::
 
 
+
+
+::: Example
+
+$(\Q,+,\cdot)$ is a field, where $+$ and $\cdot$ are the usual operations of addition and multiplication. This is trivially true, as the field axioms clearly encode properties that $\Q$ already has.
+
+:::
+
+::: Remark 
+
+Since fields are an abstract model for $\Q$, we have chosen to denote the two field operations with $+$ and $\cdot$. We could have denoted them with other symbols, e.g. $\clubsuit$ and $\heartsuit$. In this case (AM) would read
+$$
+x \, \clubsuit \, (y \, \heartsuit \, z) = (x \, \clubsuit \, y ) \,\heartsuit \, (y \, \clubsuit \, z )
+$$
+This would of course still make sense. It would just be a lot harder to write calculations and to remember which operation is which!
+
+:::
+
+
+::: Warning
+
+It might be tempting to dismiss the definition of field, and to think that all fields look like $\Q$. This is not the case, as seen in the following Example.
+
+:::
+
+
+
 ::: Example
 Let $K$ with $+$ and $\cdot$ be as in Example \ref{example-binary-operation}. We can show that $(K,+,\cdot)$ is a field. Indeed we have already shown in Example \ref{example-binary-operation-2} that: 
 
@@ -309,6 +397,13 @@ where $y^{-1}$ is the multiplicative inverse of $y$.
 :::
 
 
+::: Warning
+
+One might wonder why we are defining subtraction and division. Are they not already defined in $\Q$? Yes they are. But they make no sense in a general field $(K,+,\cdot)$, unless we define them explicitly. 
+
+:::
+
+Using the field axioms we can prove the following properties.
 
 ::: Proposition
 ### Uniqueness of neutral elements and inverses
@@ -453,17 +548,17 @@ $(\Q,+,\cdot,\leq)$ is an **ordered field**.
 
 ## Cut Property  
 
-We have just introduced the notion of **field**, and noted that the set of rational numbers with the usual operations
+We have just introduced the notion of **fields** and **ordered fields**. We noted that the set of rational numbers with the usual operations of sum and multiplication
 $$
 (\Q, + , \cdot)
 $$
-is a **field**. 
+is a field. Moreover it is an ordered field with the usual order $\leq$.
 
-We now need to address the key issue we proved in @sec-chap-1, that is, that
+We now need to address the key issue we proved in @sec-chap-1, namely, the fact that
 $$
 \sqrt{2} \notin \Q \,.
 $$
-This means that $\Q$ has **gaps**, and cannot be represented as a **continuous** line. The rigorous definition of **lack of gaps** needs the concept of **cut** of a set.
+Intuitively, this means that $\Q$ has **gaps**, and cannot be represented as a **continuous** line. The rigorous definition of **lack of gaps** needs the concept of **cut** of a set. This, in turn, needs the concept of **partition**.
 
 
 
@@ -630,11 +725,11 @@ Both cases $L \in A$ or $L \in B$ lead to a contradiction. Since these are all t
 
 Time to make the ideas in the above remark rigorous. Two main issues need fixing:
 
-1. $\sqrt{2}$ is just a symbol for a number $x$ such that $x^2 = 2$. We have seen that $x \notin \Q$, which leads to the question: what is the meaning of the expression
+1. $\sqrt{2}$ is just a symbol for a number $x$ such that $x^2 = 2$. As $\sqrt{2} \notin \Q$, what is the meaning of the expression
 $$
-a \leq \sqrt{2} \leq b 
+a < \sqrt{2} < b 
 $$
-when $a,b \in \Q$? We only know how to compare rational numbers, so the above makes no sense. We need a more clever way to write down the sets $A$ and $B$ so that they make sense as objects in $\Q$.
+when $a,b \in \Q$? We can only compare rational numbers with rational numbers, so the above inequalities are meaningless.  We need a more clever way to write down the sets $A$ and $B$ so that they make sense as objects in $\Q$.
 
 2. We said it is possible to find $n_0 \in \N$ such that
 $$
@@ -820,15 +915,22 @@ We have seen that assuming that $(A,B)$ has a separator $L \in \Q$ leads to a co
 
 ::: Remark
 
-The above proof can be summarized by saying that the set
+The above proof is also suggesting the following observations: 
+
+- The set
 $$
 A = (-\infty, \sqrt{2}) \cap \Q
 $$
-does not admit a **largest** element in $\Q$, and that the set
+does not admit a **largest** element in $\Q$
+
+- The set
 $$
 B = (\sqrt{2}, \infty) \cap \Q
 $$
-does not admit a **lowest element** in $\Q$. We will clarify this remark in the next section.
+does not admit a **lowest element** in $\Q$. 
+
+
+It turns out that the **largest** and **lowest** element play a crucial role in analysis. We will give precise definitions in the next section.
 :::
 
 

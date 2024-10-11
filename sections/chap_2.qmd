@@ -1592,41 +1592,43 @@ Such collection of numbers is called **sequence**. Assume that
 \end{align}
 A sequence defined as above is called **recurrence sequence**. Using the above rule we can compute all the terms of $x_n$. 
 
->For example
+Let us compute the first 4 elements:
 \begin{align}
-x_2 & = \frac{x_1}{2} + 1 = \frac12 + 1 =\frac{3}{2} \\
-x_3 & = \frac{x_2}{2} + 1 =  \frac34 + 1 = \frac74 \,.
+x_1 & = 1 \\
+x_2 & = \frac{x_1}{2} + 1 = 1 + \frac12 = x_1 + \frac{1}{2} \\
+x_3 & = \frac{x_2}{2} + 1 = 1 + \frac12 + \frac{1}{4} = x_2 + \frac{1}{4} \\
+x_4 & = \frac{x_3}{2} + 1 = 1 + \frac12 + \frac{1}{4} + \frac{1}{8} =  x_3 + \frac{1}{8}\\
 \end{align}
-
-By computing these terms, we suspect that the sequence might be increasing, meaning that 
+We see a pattern: The successive term is obtained by adding a power of $1/2$ to the previous term. We therefore conjecture that
 $$
-x_{n+1} \geq x_n
-$$ {#eq-induction-increasing}
-for all $n \in \N$. 
+x_{n+1} = x_n + \frac{1}{2^n}
+$${#eq-induction-increasing}
 
+We want to prove our conjecture rigorously, i.e. using induction.
 
 *Claim. (@eq-induction-increasing) holds for all $n \in \N$*.
 
-*Proof of Claim.*  
-We argue by induction:
+*Proof of Claim.*  We argue by induction:
 
-1. We have seen that $x_1 = 1$ and $x_2 = 3/2$. Thus
+1. We see that
 $$
-x_2 \geq x_1 \,.
+x_2 = 1 + \frac{1}{2} = x_1 + \frac{1}{2} 
 $$
-2. Suppose now that 
+proving (@eq-induction-increasing) for $n = 1$.
+
+2. Suppose now that (@eq-induction-increasing) holds for $n=k$.
+We need to prove that (@eq-induction-increasing) holds for $n=k+1$, that is,
 $$
-x_{n+1} \geq x_{n} \,. 
-$$ {#eq-induction-increasing-1}
-We need to prove that
-$$
-x_{n+2} \geq x_{n+1} \,.
+x_{k+2} = x_{k+1} + \frac{1}{2^{k+1}} \,.
 $${#eq-induction-increasing-2}
-Indeed, we can multiply the inequality (@eq-induction-increasing-1) by $1/2$ and add $1$ to get
-$$
-\frac{x_{n+1}}{2} + 1 \geq \frac{x_{n}}{2} + 1   \,.
-$$
-The above is equivalent, by definition, to (@eq-induction-increasing-2).
+Starting with the definition of $x_{k+2}$ we see that
+\begin{align*}
+x_{k+2} & = \frac{x_{k+1}}{2} + 1  & (\text{definition of } x_{k+2} )  \\
+        & = \frac{x_k + \frac{1}{2^k}}{2} + 1   & (\text{inductive hypothesis} ) \\
+        & = \frac{x_k}{2} + 1 + \frac{1}{2^{k+1}} & (\text{just calculations} ) \\
+        & = x_{k+1} + \frac{1}{2^{k+1}}  & (\text{definition of } x_{k+1}  ) \\
+\end{align*}
+which proves (@eq-induction-increasing-2).
 
 Therefore the assumptions of the Induction Principle are satisfied, and (@eq-induction-increasing) follows.
 :::

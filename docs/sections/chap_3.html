@@ -72,13 +72,61 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Notation {
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
 .TODO {
   --color1: #e7b1b4;
   --color2: #8c3236;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Lemma {
   --color1: #f4cce0;
@@ -88,57 +136,9 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
 }
 </style>
 
@@ -328,10 +328,10 @@ window.Quarto = {
 </header>
 
 
-<p>In this chapter we introduce the system of Real Numbers <span class="math inline">\(\mathbb{R}\)</span> and study some of its properties.</p>
+<p>In this chapter we introduce the system of Real Numbers <span class="math inline">\(\mathbb{R}\)</span> and study some of its properties. We will take quite an abstract approach, which needs the definition of field.</p>
 <section id="fields" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="fields"><span class="header-section-number">3.1</span> Fields</h2>
-<p>In order to introduce <span class="math inline">\(\mathbb{R}\)</span>, we need the concepts of <strong>binary operation</strong> and <strong>field</strong>. We proceed in a general setting, starting from a set <span class="math inline">\(K\)</span>.</p>
+<p>In order to introduce <span class="math inline">\(\mathbb{R}\)</span>, we need the concepts of <strong>binary operation</strong> and <strong>field</strong>. We proceed in a general setting, starting from a set <span class="math inline">\(K\)</span>. We will assume that there is an <strong>equivalence relation</strong> on <span class="math inline">\(K\)</span> denoted by <span class="math inline">\(=\)</span>.</p>
 <div id="binary-operation" class="Definition" title="Binary operation">
 <p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 1: </strong>Binary operation</summary><div>A binary operation on a set <span class="math inline">\(K\)</span> is a function <span class="math display">\[
 \circ \ \colon K \times K \to K
@@ -340,15 +340,21 @@ window.Quarto = {
 </div>
 <div id="Notation-2" class="Notation">
 <details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 2</strong></summary><div>
-<p>There are two main binary operations we are interested in:</p>
+<p>We use the special symbols of <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> to refer to addition and multiplication.</p>
 <ul>
-<li><strong>Addition</strong>: denoted by <span class="math inline">\(+\)</span>. The addition, or <strong>sum</strong> of <span class="math inline">\(x,y \in K\)</span> is denoted by <span class="math display">\[
-x + y \,.
+<li><strong>Addition</strong>: The addition, or <strong>sum</strong> of <span class="math inline">\(x,y \in K\)</span> is denoted by <span class="math display">\[
+x + y
 \]</span></li>
-<li><strong>Multiplication</strong>: denoted by <span class="math inline">\(\cdot\)</span>. The multiplication, or <strong>product</strong> of <span class="math inline">\(x,y \in K\)</span> is denoted by <span class="math display">\[
-x \cdot y \,\, \mbox{ or } \,\, xy\,.
+<li><strong>Multiplication</strong>: The multiplication, or <strong>product</strong> of <span class="math inline">\(x,y \in K\)</span> is denoted by <span class="math display">\[
+x \cdot y \,\, \mbox{ or } \,\, xy
 \]</span></li>
 </ul>
+</div></details>
+</div>
+<div id="Warning*-1" class="Warning">
+<p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>When we talk about <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> in a set <span class="math inline">\(K\)</span> we are <strong>not necessarily</strong> thinking about the usual sum and multiplication in <span class="math inline">\(\mathbb{Q}\)</span>. This is the case in the next Example, where we define <span class="math display">\[
+1 + 1 = 0
+\]</span><p></p>
 </div></details>
 </div>
 <div id="example-binary-operation" class="Example" title="of binary operation">
@@ -364,13 +370,34 @@ x \cdot y \,\, \mbox{ or } \,\, xy\,.
     0 &amp; 0 &amp; 0 \\
     1 &amp; 0 &amp; 1 \\
 \end{array}
-\]</span> The above mean that <span class="math display">\[
-0+0 = 1+1 = 0 \,, \quad 0 + 1 = 1 + 0 = 1\,,
-\]</span> <span class="math display">\[
+\]</span> The above mean that <span id="eq-ktwo"><span class="math display">\[
+\begin{gathered}
+0+0 = 1+1 = 0 \,, \quad 0 + 1 = 1 + 0 = 1\,, \\
 0 \cdot 0 = 0 \cdot 1 = 1 \cdot 0 = 0 \,, \quad 1 \cdot 1 = 1  \,.
-\]</span> This is just one option. Note that we could not have defined <span class="math display">\[
-1 + 1  = 2\,,
-\]</span> since <span class="math inline">\(2 \notin K\)</span>.<p></p>
+\end{gathered}
+\tag{3.1}\]</span></span><p></p>
+<p>Note that we have defined (rather controversially!) <span class="math display">\[
+1+1 = 0
+\]</span> The other option would have been to define <span class="math display">\[
+1 + 1 = 1
+\]</span> This would have been absolutely fine. However we could not have defined <span class="math display">\[
+1 + 1  = 2
+\]</span> because <span class="math inline">\(2 \notin K\)</span>.</p>
+<p><strong>Note:</strong> The operations in (<a href="#eq-ktwo" class="quarto-xref"><span>3.1</span></a>) look more natural if you identify <span class="math inline">\(0\)</span> with the even numbers and <span class="math inline">\(1\)</span> with the odd numbers. In that case <span class="math inline">\(1+1 = 0\)</span> reads <span class="math display">\[
+\mathrm{Odd} + \mathrm{Odd} = \mathrm{Even}
+\]</span> Indeed all the definitions given in (<a href="#eq-ktwo" class="quarto-xref"><span>3.1</span></a>) agree with such identification, see tables below: <span class="math display">\[
+\begin{array}{c|cc}
++ &amp; \mathrm{Even} &amp; \mathrm{Odd} \\ \hline
+\mathrm{Even} &amp; \mathrm{Even} &amp; \mathrm{Odd} \\
+\mathrm{Odd} &amp; \mathrm{Odd} &amp; \mathrm{Even} \\
+\end{array}
+\qquad \qquad
+\begin{array}{c|cc}
+\cdot &amp; \mathrm{Even} &amp; \mathrm{Odd} \\ \hline
+    \mathrm{Even} &amp; \mathrm{Even} &amp; \mathrm{Even} \\
+    \mathrm{Odd} &amp; \mathrm{Even} &amp; \mathrm{Odd} \\
+\end{array}
+\]</span></p>
 </div></details>
 </div>
 <p>Binary operations take ordered pairs of elements of <span class="math inline">\(K\)</span> as input. Therefore the operation <span class="math display">\[
@@ -399,8 +426,20 @@ x \circ y = y \circ x = e \,.
 </ol>
 </div></details>
 </div>
-<div id="example-binary-operation-2" class="Example">
+<div id="Example-5" class="Example">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 5</strong></summary><div>
+<p>Consider <span class="math inline">\(\mathbb{Q}\)</span> with the usual operations of sum and multiplication</p>
+<ul>
+<li><p>We already know that <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> are commutative and associative</p></li>
+<li><p>The neutral element of the sum is <span class="math inline">\(e = 0\)</span></p></li>
+<li><p>The neutral element of the product is <span class="math inline">\(e = 1\)</span></p></li>
+<li><p>The additive inverse of <span class="math inline">\(x\)</span> is <span class="math inline">\(-x\)</span></p></li>
+<li><p>The multiplicative inverse of <span class="math inline">\(x \neq 0\)</span> is <span class="math inline">\(1/x\)</span>.</p></li>
+</ul>
+</div></details>
+</div>
+<div id="example-binary-operation-2" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 6</strong></summary><div>
 <p>Let <span class="math inline">\(K\)</span> with <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> be as in Example <a href="chap_3.html#example-binary-operation">3</a>. The sum satisfies:</p>
 <ul>
 <li><span class="math inline">\(+\)</span> is commutative, since <span class="math display">\[
@@ -442,8 +481,8 @@ x \circ y = y \circ x = e \,.
 </ul>
 </div></details>
 </div>
-<div id="Example-6" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 6</strong></summary><div>Let <span class="math inline">\(K=\{0,1\}\)</span> be a set with binary relation <span class="math inline">\(\circ\)</span> defined by the table <span class="math display">\[
+<div id="Example-7" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 7</strong></summary><div>Let <span class="math inline">\(K=\{0,1\}\)</span> be a set with binary relation <span class="math inline">\(\circ\)</span> defined by the table <span class="math display">\[
 \begin{array}{c|cc}
 \circ &amp; 0 &amp; 1 \\ \hline
 0     &amp; 1 &amp; 1 \\
@@ -464,7 +503,7 @@ x \circ y = y \circ x = e \,.
 </div>
 <p>We are ready to define fields.</p>
 <div id="field" class="Definition" title="Field">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 7: </strong>Field</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 8: </strong>Field</summary><div>
 <p>Let <span class="math inline">\(K\)</span> be a set with binary operations of <strong>addition</strong> <span class="math display">\[
 +\ \colon K \times K \to K \,, \quad (x,y) \mapsto x + y
 \]</span> and <strong>multiplication</strong> <span class="math display">\[
@@ -508,9 +547,23 @@ x \cdot (y + z) = (x \cdot y) + (y \cdot z) \,.
 </ol>
 </div></details>
 </div>
-<div id="Example-8" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 8</strong></summary><div>
-<p>Let <span class="math inline">\(K\)</span> with <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> be as in Example <a href="chap_3.html#example-binary-operation">3</a>. We can show that <span class="math inline">\((K,+,\cdot)\)</span> is a field. Indeed we have already shown in Example <a href="chap_3.html#example-binary-operation-2">5</a> that:</p>
+<div id="Example-9" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 9</strong></summary><div><span class="math inline">\((\mathbb{Q},+,\cdot)\)</span> is a field, where <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> are the usual operations of addition and multiplication. This is trivially true, as the field axioms clearly encode properties that <span class="math inline">\(\mathbb{Q}\)</span> already has.<p></p>
+</div></details>
+</div>
+<div id="Remark-10" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 10</strong></summary><div>Since fields are an abstract model for <span class="math inline">\(\mathbb{Q}\)</span>, we have chosen to denote the two field operations with <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span>. We could have denoted them with other symbols, e.g.&nbsp;<span class="math inline">\(\clubsuit\)</span> and <span class="math inline">\(\heartsuit\)</span>. In this case (AM) would read <span class="math display">\[
+x \, \clubsuit \, (y \, \heartsuit \, z) = (x \, \clubsuit \, y ) \,\heartsuit \, (y \, \clubsuit \, z )
+\]</span> This would of course still make sense. It would just be a lot harder to write calculations and to remember which operation is which!<p></p>
+</div></details>
+</div>
+<div id="Warning*-2" class="Warning">
+<p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>It might be tempting to dismiss the definition of field, and to think that all fields look like <span class="math inline">\(\mathbb{Q}\)</span>. This is not the case, as seen in the following Example.<p></p>
+</div></details>
+</div>
+<div id="Example-11" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 11</strong></summary><div>
+<p>Let <span class="math inline">\(K\)</span> with <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> be as in Example <a href="chap_3.html#example-binary-operation">3</a>. We can show that <span class="math inline">\((K,+,\cdot)\)</span> is a field. Indeed we have already shown in Example <a href="chap_3.html#example-binary-operation-2">6</a> that:</p>
 <ul>
 <li>(A1) and (M1) hold,</li>
 <li>(A2) holds with neutral element <span class="math inline">\(0\)</span>,</li>
@@ -533,7 +586,7 @@ x \cdot (y + z) = (x \cdot y) + (y \cdot z) \,.
 </div></details>
 </div>
 <div id="subtraction-and-division" class="Definition" title="Subtraction and division">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 9: </strong>Subtraction and division</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 12: </strong>Subtraction and division</summary><div>
 <p>Let <span class="math inline">\((K,+,\cdot)\)</span> be a field. We define:</p>
 <ul>
 <li><strong>Subtraction</strong> as the operation <span class="math inline">\(-\)</span> defined by <span class="math display">\[
@@ -545,8 +598,13 @@ x/y := x \cdot y^{-1}\,, \quad \forall \, x , y \in K \,, \,\, y \neq 0 \,,
 </ul>
 </div></details>
 </div>
+<div id="Warning*-3" class="Warning">
+<p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>One might wonder why we are defining subtraction and division. Are they not already defined in <span class="math inline">\(\mathbb{Q}\)</span>? Yes they are. But they make no sense in a general field <span class="math inline">\((K,+,\cdot)\)</span>, unless we define them explicitly.<p></p>
+</div></details>
+</div>
+<p>Using the field axioms we can prove the following properties.</p>
 <div id="uniqueness-of-neutral-elements-and-inverses" class="Proposition" title="Uniqueness of neutral elements and inverses">
-<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 10: </strong>Uniqueness of neutral elements and inverses</summary><div>
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 13: </strong>Uniqueness of neutral elements and inverses</summary><div>
 <p>Let <span class="math inline">\((K,+,\cdot)\)</span> be a field. Then</p>
 <ol type="1">
 <li>There is a unique element in <span class="math inline">\(K\)</span> with the property of <span class="math inline">\(0\)</span>,</li>
@@ -556,7 +614,7 @@ x/y := x \cdot y^{-1}\,, \quad \forall \, x , y \in K \,, \,\, y \neq 0 \,,
 </ol>
 </div></details>
 </div>
-<div id="Proof*-1" class="Proof">
+<div id="Proof*-4" class="Proof">
 <details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>
 <ol type="1">
 <li>Suppose that <span class="math inline">\(0 \in K\)</span> and <span class="math inline">\(\widetilde{0} \in K\)</span> are both neutral element of <span class="math inline">\(+\)</span>, that is, they both satisfy (A2). Then <span class="math display">\[
@@ -584,7 +642,7 @@ y = \widetilde{y} = -x \,,
 </div>
 <p>Using the properties of field we can also show that the usual properties of sum, subtraction, multiplication and division still hold in any field. We list such properties in the following proposition.</p>
 <div id="properties-of-field-operations" class="Proposition" title="Properties of field operations">
-<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 11: </strong>Properties of field operations</summary><div>
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 14: </strong>Properties of field operations</summary><div>
 <p>Let <span class="math inline">\((K,+,\cdot)\)</span> be a field. Then for all <span class="math inline">\(x,y,z \in K\)</span>,</p>
 <ul>
 <li><span class="math inline">\(x + y = x + z \,\, \implies \,\, y = z\)</span></li>
@@ -601,8 +659,8 @@ y = \widetilde{y} = -x \,,
 </div>
 <p>The above properties can be all proven with elementary use of the field properties (A1)-(A3), (M1)-(M3) and (AM). This is an exercise in patience, and is left to the reader.</p>
 <p>Let us conclude with examining the sets of numbers introduced in <a href="chap_1.html" class="quarto-xref"><span>Chapter 1</span></a>.</p>
-<div id="Theorem-12" class="Theorem">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 12</strong></summary><div>
+<div id="Theorem-15" class="Theorem">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 15</strong></summary><div>
 <p>Consider the sets <span class="math inline">\(\mathbb{N}\)</span>, <span class="math inline">\(\mathbb{Z}\)</span>, <span class="math inline">\(\mathbb{Q}\)</span> with the usual operations <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span>. We have:</p>
 <ul>
 <li><span class="math inline">\((\mathbb{N}, + , \cdot)\)</span> is <strong>not a field</strong>:<br>
@@ -617,8 +675,8 @@ It satisfies properties (A1), (A2), (A3), (M1), (M2), (AM) of fields. Thus it is
 </section>
 <section id="ordered-fields" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="ordered-fields"><span class="header-section-number">3.2</span> Ordered fields</h2>
-<div id="Definition-13" class="Definition">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 13</strong></summary><div>
+<div id="Definition-16" class="Definition">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 16</strong></summary><div>
 <p>Let <span class="math inline">\(K\)</span> be a set with binary operations <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span>, and with an order relation <span class="math inline">\(\leq\)</span>. We call <span class="math inline">\((K,+,\cdot,\leq)\)</span> an <strong>ordered field</strong> if:</p>
 <ol type="1">
 <li><p><span class="math inline">\((K,+,\cdot)\)</span> is a field</p></li>
@@ -653,21 +711,21 @@ x \geq 0, \, y \geq 0  \,\, \implies \,\, x \cdot y  \geq 0
 </ol>
 </div></details>
 </div>
-<div id="Example-14" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 14</strong></summary><div><span class="math inline">\((\mathbb{Q},+,\cdot,\leq)\)</span> is an <strong>ordered field</strong>.<p></p>
+<div id="Example-17" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 17</strong></summary><div><span class="math inline">\((\mathbb{Q},+,\cdot,\leq)\)</span> is an <strong>ordered field</strong>.<p></p>
 </div></details>
 </div>
 </section>
 <section id="cut-property" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="cut-property"><span class="header-section-number">3.3</span> Cut Property</h2>
-<p>We have just introduced the notion of <strong>field</strong>, and noted that the set of rational numbers with the usual operations <span class="math display">\[
+<p>We have just introduced the notion of <strong>fields</strong> and <strong>ordered fields</strong>. We noted that the set of rational numbers with the usual operations of sum and multiplication <span class="math display">\[
 (\mathbb{Q}, + , \cdot)
-\]</span> is a <strong>field</strong>.</p>
-<p>We now need to address the key issue we proved in <a href="chap_1.html" class="quarto-xref"><span>Chapter 1</span></a>, that is, that <span class="math display">\[
+\]</span> is a field. Moreover it is an ordered field with the usual order <span class="math inline">\(\leq\)</span>.</p>
+<p>We now need to address the key issue we proved in <a href="chap_1.html" class="quarto-xref"><span>Chapter 1</span></a>, namely, the fact that <span class="math display">\[
 \sqrt{2} \notin \mathbb{Q}\,.
-\]</span> This means that <span class="math inline">\(\mathbb{Q}\)</span> has <strong>gaps</strong>, and cannot be represented as a <strong>continuous</strong> line. The rigorous definition of <strong>lack of gaps</strong> needs the concept of <strong>cut</strong> of a set.</p>
+\]</span> Intuitively, this means that <span class="math inline">\(\mathbb{Q}\)</span> has <strong>gaps</strong>, and cannot be represented as a <strong>continuous</strong> line. The rigorous definition of <strong>lack of gaps</strong> needs the concept of <strong>cut</strong> of a set. This, in turn, needs the concept of <strong>partition</strong>.</p>
 <div id="partition-of-a-set" class="Definition" title="Partition of a set">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 15: </strong>Partition of a set</summary><div>Let <span class="math inline">\(S\)</span> be a non-empty set. The pair <span class="math inline">\((A,B)\)</span> is a <strong>partition</strong> of <span class="math inline">\(S\)</span> if <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 18: </strong>Partition of a set</summary><div>Let <span class="math inline">\(S\)</span> be a non-empty set. The pair <span class="math inline">\((A,B)\)</span> is a <strong>partition</strong> of <span class="math inline">\(S\)</span> if <span class="math display">\[
 A , B \subseteq S\,, \quad  A \neq \emptyset\,, \quad B \neq \emptyset \,,
 \]</span> and <span class="math display">\[
 S = A \cup B \,, \quad
@@ -682,7 +740,7 @@ A \cap B = \emptyset \, .
 </figure>
 </div>
 <div id="cut-of-a-set" class="Definition" title="Cut of a set">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 16: </strong>Cut of a set</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 19: </strong>Cut of a set</summary><div>
 <p>Let <span class="math inline">\(S\)</span> be a non-empty set with a total order relation <span class="math inline">\(\leq\)</span>. The pair <span class="math inline">\((A,B)\)</span> is a <strong>cut</strong> of <span class="math inline">\(S\)</span> if</p>
 <ol type="1">
 <li><span class="math inline">\((A,B)\)</span> is a <strong>partition</strong> of <span class="math inline">\(S\)</span>,</li>
@@ -694,13 +752,13 @@ a \leq b \,,  \quad \forall \, a \in A \,, \,\, \forall \, b \in B \,.
 </div>
 <p>The <strong>cut</strong> of a set is often called <strong>Dedekind cut</strong>, named after <strong>Richard Dedekind</strong>, who used cuts to give an explicit construction of the real numbers <span class="math inline">\(\mathbb{R}\)</span>, see <a href="https://en.wikipedia.org/wiki/Dedekind_cut">Wikipedia page</a>.</p>
 <div id="cut-property-1" class="Definition" title="Cut property">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 17: </strong>Cut property</summary><div>Let <span class="math inline">\(S\)</span> be a non-empty set with a total order relation <span class="math inline">\(\leq\)</span>. We say that <span class="math inline">\(S\)</span> has the <strong>cut property</strong> if for every cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(S\)</span> there exists some <span class="math inline">\(s \in S\)</span> such that <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 20: </strong>Cut property</summary><div>Let <span class="math inline">\(S\)</span> be a non-empty set with a total order relation <span class="math inline">\(\leq\)</span>. We say that <span class="math inline">\(S\)</span> has the <strong>cut property</strong> if for every cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(S\)</span> there exists some <span class="math inline">\(s \in S\)</span> such that <span class="math display">\[
 a \leq s \leq b \,, \quad \forall  \, a \in A\,, \,\, \forall  \, b \in B \,.
 \]</span> We call <span class="math inline">\(s\)</span> the <strong>separator</strong> of the cut <span class="math inline">\((A,B)\)</span>.<p></p>
 </div></details>
 </div>
-<div id="Example-18" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 18</strong></summary><div>Let <span class="math inline">\(S = \mathbb{Q}\)</span> and consider the sets <span class="math display">\[
+<div id="Example-21" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 21</strong></summary><div>Let <span class="math inline">\(S = \mathbb{Q}\)</span> and consider the sets <span class="math display">\[
 A = (-\infty,s] \cap \mathbb{Q}\,, \quad B = (s,\infty) \cap \mathbb{Q}\,.
 \]</span> for some <span class="math inline">\(s \in \mathbb{Q}\)</span>. Then the pair <span class="math inline">\((A,B)\)</span> is a cut of <span class="math inline">\(\mathbb{Q}\)</span>, and <span class="math inline">\(s\)</span> is the separator.<p></p>
 </div></details>
@@ -711,15 +769,15 @@ A = (-\infty,s] \cap \mathbb{Q}\,, \quad B = (s,\infty) \cap \mathbb{Q}\,.
 <figcaption><span class="math inline">\((A,B)\)</span> is a cut of <span class="math inline">\(\mathbb{Q}\)</span> with separator <span class="math inline">\(s\)</span>.</figcaption>
 </figure>
 </div>
-<div id="Question-19" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 19</strong></summary><div>Do all ordered fields have the Cut Property? Does <span class="math inline">\(\mathbb{Q}\)</span> have the Cut Property?<p></p>
+<div id="Question-22" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 22</strong></summary><div>Do all ordered fields have the Cut Property? Does <span class="math inline">\(\mathbb{Q}\)</span> have the Cut Property?<p></p>
 </div></details>
 </div>
 <p>The answer to the above question is <strong>NO</strong>. For example the pair <span id="eq-cut-Q"><span class="math display">\[
 A =  (-\infty,\sqrt{2}) \cap \mathbb{Q}\,, \quad B = (\sqrt{2},\infty) \cap \mathbb{Q}\,.
-\tag{3.1}\]</span></span> is a cut of <span class="math inline">\(\mathbb{Q}\)</span>, since <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>. However what is the separator? It should be <span class="math inline">\(s = \sqrt{2}\)</span>, given that clearly <span class="math display">\[
+\tag{3.2}\]</span></span> is a cut of <span class="math inline">\(\mathbb{Q}\)</span>, since <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>. However what is the separator? It should be <span class="math inline">\(s = \sqrt{2}\)</span>, given that clearly <span class="math display">\[
 a \leq \sqrt{2}  \leq b \,, \quad \forall \, a \in A\,, \,\, \forall \, b \in B \,.
-\]</span> However <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, so we are <strong>NOT ALLOWED</strong> to take it as separator. Indeed, we can show that <span class="math inline">\((A,B)\)</span> defined as in (<a href="#eq-cut-Q" class="quarto-xref"><span>3.1</span></a>) has no separator.</p>
+\]</span> However <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, so we are <strong>NOT ALLOWED</strong> to take it as separator. Indeed, we can show that <span class="math inline">\((A,B)\)</span> defined as in (<a href="#eq-cut-Q" class="quarto-xref"><span>3.2</span></a>) has no separator.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../images/cut_sqrt2.png" class="img-fluid figure-img" style="width:70.0%"></p>
@@ -727,14 +785,14 @@ a \leq \sqrt{2}  \leq b \,, \quad \forall \, a \in A\,, \,\, \forall \, b \in B 
 </figure>
 </div>
 <div id="theorem-Q-cut" class="Theorem" title="\mathbb{Q} does not have the cut property.">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 20: </strong><span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property.</summary><div><span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property. More explicitly, there exist a cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(\mathbb{Q}\)</span> which has no separator.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 23: </strong><span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property.</summary><div><span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property. More explicitly, there exist a cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(\mathbb{Q}\)</span> which has no separator.<p></p>
 </div></details>
 </div>
-<div id="remark-idea-proof-cut" class="Remark" title="Ideas for the proof of Theorem 20">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 21: </strong>Ideas for the proof of Theorem 20</summary><div>Before proceeding with the proof, let us summarize the ideas behind it:<br>
-We will consider the cut <span class="math inline">\((A,B)\)</span> in (<a href="#eq-cut-Q" class="quarto-xref"><span>3.1</span></a>). We then assume by contradiction that <span class="math inline">\((A,B)\)</span> admits a separator <span class="math inline">\(L \in \mathbb{Q}\)</span>, so that <span id="eq-theorem-Q-cut"><span class="math display">\[
+<div id="remark-idea-proof-cut" class="Remark" title="Ideas for the proof of Theorem 23">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 24: </strong>Ideas for the proof of Theorem 23</summary><div>Before proceeding with the proof, let us summarize the ideas behind it:<br>
+We will consider the cut <span class="math inline">\((A,B)\)</span> in (<a href="#eq-cut-Q" class="quarto-xref"><span>3.2</span></a>). We then assume by contradiction that <span class="math inline">\((A,B)\)</span> admits a separator <span class="math inline">\(L \in \mathbb{Q}\)</span>, so that <span id="eq-theorem-Q-cut"><span class="math display">\[
 a \leq L \leq b \,, \quad \forall \, a \in A\,, \,\, \forall \, b \in B \,.
-\tag{3.2}\]</span></span> Since <span class="math inline">\((A,B)\)</span> is a partition of <span class="math inline">\(\mathbb{Q}\)</span>, then either <span class="math inline">\(L \in A\)</span> or <span class="math inline">\(L \in B\)</span>. These will both lead to a contradiction:<p></p>
+\tag{3.3}\]</span></span> Since <span class="math inline">\((A,B)\)</span> is a partition of <span class="math inline">\(\mathbb{Q}\)</span>, then either <span class="math inline">\(L \in A\)</span> or <span class="math inline">\(L \in B\)</span>. These will both lead to a contradiction:<p></p>
 <ul>
 <li><p>If <span class="math inline">\(L \in A\)</span>, by definition of <span class="math inline">\(A\)</span> we have <span class="math display">\[
 L &lt; \sqrt{2} \,.
@@ -746,9 +804,9 @@ L &lt; \widetilde{L} &lt; \sqrt{2} \,.
 L &lt; \widetilde{L}_n
 \]</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. We will then be able to find <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span id="eq-theorem-Q-cut-2"><span class="math display">\[
 L &lt; \widetilde{L}_{n_0} &lt; \sqrt{2} \,.
-\tag{3.3}\]</span></span> Now comes the contradiction: From (<a href="#eq-theorem-Q-cut-2" class="quarto-xref"><span>3.3</span></a>) we see that <span class="math inline">\(\widetilde{L}_{n_0} \in A\)</span>. However <span class="math inline">\(L\)</span> is a separator, and so from (<a href="#eq-theorem-Q-cut" class="quarto-xref"><span>3.2</span></a>) we have <span class="math display">\[
+\tag{3.4}\]</span></span> Now comes the contradiction: From (<a href="#eq-theorem-Q-cut-2" class="quarto-xref"><span>3.4</span></a>) we see that <span class="math inline">\(\widetilde{L}_{n_0} \in A\)</span>. However <span class="math inline">\(L\)</span> is a separator, and so from (<a href="#eq-theorem-Q-cut" class="quarto-xref"><span>3.3</span></a>) we have <span class="math display">\[
 \widetilde{L}_{n_0} \leq L \,,
-\]</span> which contradicts (<a href="#eq-theorem-Q-cut-2" class="quarto-xref"><span>3.3</span></a>).</p></li>
+\]</span> which contradicts (<a href="#eq-theorem-Q-cut-2" class="quarto-xref"><span>3.4</span></a>).</p></li>
 <li><p>If <span class="math inline">\(L \in B\)</span>, by definition of <span class="math inline">\(B\)</span> we have <span class="math display">\[
 \sqrt{2} &lt; L \,.
 \]</span> The idea is the same as above: Since <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, we can squeeze a rational number <span class="math inline">\(\widetilde{L} \in \mathbb{Q}\)</span> between <span class="math inline">\(\sqrt{2}\)</span> and <span class="math inline">\(L\)</span>, i.e., <span class="math display">\[
@@ -759,24 +817,24 @@ L &lt; \widetilde{L}_{n_0} &lt; \sqrt{2} \,.
 \widetilde{L}_n &lt; L \,,
 \]</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. We will be able to find <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span id="eq-theorem-Q-cut-3"><span class="math display">\[
 \sqrt{2} &lt; \widetilde{L}_{n_0} &lt; L \,.
-\tag{3.4}\]</span></span> Therefore <span class="math inline">\(\widetilde{L}_{n_0} \in B\)</span>. Again, contradiction: <span class="math inline">\(L\)</span> is a separator and so <span class="math display">\[
+\tag{3.5}\]</span></span> Therefore <span class="math inline">\(\widetilde{L}_{n_0} \in B\)</span>. Again, contradiction: <span class="math inline">\(L\)</span> is a separator and so <span class="math display">\[
 L \leq \widetilde{L}_{n_0}  \,,
-\]</span> which contradicts (<a href="#eq-theorem-Q-cut-3" class="quarto-xref"><span>3.4</span></a>).</p></li>
+\]</span> which contradicts (<a href="#eq-theorem-Q-cut-3" class="quarto-xref"><span>3.5</span></a>).</p></li>
 </ul>
 <p>Both cases <span class="math inline">\(L \in A\)</span> or <span class="math inline">\(L \in B\)</span> lead to a contradiction. Since these are all the possibilities, we conclude that the cut <span class="math inline">\((A,B)\)</span> has no separator in <span class="math inline">\(\mathbb{Q}\)</span>.</p>
 </div></details>
 </div>
 <p>Time to make the ideas in the above remark rigorous. Two main issues need fixing:</p>
 <ol type="1">
-<li><p><span class="math inline">\(\sqrt{2}\)</span> is just a symbol for a number <span class="math inline">\(x\)</span> such that <span class="math inline">\(x^2 = 2\)</span>. We have seen that <span class="math inline">\(x \notin \mathbb{Q}\)</span>, which leads to the question: what is the meaning of the expression <span class="math display">\[
-a \leq \sqrt{2} \leq b
-\]</span> when <span class="math inline">\(a,b \in \mathbb{Q}\)</span>? We only know how to compare rational numbers, so the above makes no sense. We need a more clever way to write down the sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> so that they make sense as objects in <span class="math inline">\(\mathbb{Q}\)</span>.</p></li>
+<li><p><span class="math inline">\(\sqrt{2}\)</span> is just a symbol for a number <span class="math inline">\(x\)</span> such that <span class="math inline">\(x^2 = 2\)</span>. As <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, what is the meaning of the expression <span class="math display">\[
+a &lt; \sqrt{2} &lt; b
+\]</span> when <span class="math inline">\(a,b \in \mathbb{Q}\)</span>? We can only compare rational numbers with rational numbers, so the above inequalities are meaningless. We need a more clever way to write down the sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> so that they make sense as objects in <span class="math inline">\(\mathbb{Q}\)</span>.</p></li>
 <li><p>We said it is possible to find <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
 L &lt; \widetilde{L}_{n_0} &lt; \sqrt{2} \quad \text{ or } \quad \sqrt{2} &lt; \widetilde{L}_{n_0} &lt; L
 \]</span> We need to prove it!</p></li>
 </ol>
-<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 20">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 20</summary><div>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be the sets defined in (<a href="#eq-cut-Q" class="quarto-xref"><span>3.1</span></a>). It is useful to rewrite <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> in the form <span class="math display">\[
+<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 23">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 23</summary><div>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be the sets defined in (<a href="#eq-cut-Q" class="quarto-xref"><span>3.2</span></a>). It is useful to rewrite <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> in the form <span class="math display">\[
 A = A_1 \cup A_2 \,,
 \]</span> where <span class="math display">\[
 A_1 = \{ q \in \mathbb{Q}\, \colon \,q&lt; 0  \}\,,
@@ -810,23 +868,23 @@ Suppose by contradiction that <span class="math inline">\((A,B)\)</span> admits 
 L \in \mathbb{Q}\,.
 \]</span> By definition this means <span id="eq-separator-contradiction"><span class="math display">\[
 a \leq L \leq b \,, \quad \forall a \in A \,, \,\, \forall \, b \in B \,.
-\tag{3.5}\]</span></span> Since <span class="math display">\[
+\tag{3.6}\]</span></span> Since <span class="math display">\[
 L \in \mathbb{Q}\,, \quad \mathbb{Q}= A \cup B \,, \quad  A \cap B = \emptyset \,,
 \]</span> then either <span class="math inline">\(L \in A\)</span> or <span class="math inline">\(L \in B\)</span>. We will see that both these possibilities lead to a contradiction:</p>
 <p><em>Case 1: <span class="math inline">\(L \in A\)</span>.</em><br>
-By (<a href="#eq-separator-contradiction" class="quarto-xref"><span>3.5</span></a>) we know that <span id="eq-separator-contradiction-hp-0"><span class="math display">\[
+By (<a href="#eq-separator-contradiction" class="quarto-xref"><span>3.6</span></a>) we know that <span id="eq-separator-contradiction-hp-0"><span class="math display">\[
 a \leq L \,, \quad \forall \, a \in A \,.
-\tag{3.6}\]</span></span> In particular the above implies <span id="eq-separator-contradiction-1"><span class="math display">\[
+\tag{3.7}\]</span></span> In particular the above implies <span id="eq-separator-contradiction-1"><span class="math display">\[
 L \geq 0
-\tag{3.7}\]</span></span> since <span class="math inline">\(0 \in A\)</span>. Therefore we must have <span class="math inline">\(L \in A_2\)</span>, that is, <span id="eq-separator-contradiction-hp-1"><span class="math display">\[
+\tag{3.8}\]</span></span> since <span class="math inline">\(0 \in A\)</span>. Therefore we must have <span class="math inline">\(L \in A_2\)</span>, that is, <span id="eq-separator-contradiction-hp-1"><span class="math display">\[
 L \geq 0 \,\, \mbox{ and } \,\, L^2 &lt; 2 \,.
-\tag{3.8}\]</span></span> Set <span class="math display">\[
+\tag{3.9}\]</span></span> Set <span class="math display">\[
 \widetilde{L} := L + \frac1n
 \]</span> for <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(n \neq 0\)</span> to be chosen later. Clearly we have <span id="eq-separator-contradiction-2"><span class="math display">\[
 \widetilde{L} \in \mathbb{Q}\,\,\, \mbox{ and } \,\,\, L &lt; \widetilde{L}  \,.
-\tag{3.9}\]</span></span> From (<a href="#eq-separator-contradiction-1" class="quarto-xref"><span>3.7</span></a>) and (<a href="#eq-separator-contradiction-2" class="quarto-xref"><span>3.9</span></a>) we have also <span id="eq-separator-contradiction-3"><span class="math display">\[
+\tag{3.10}\]</span></span> From (<a href="#eq-separator-contradiction-1" class="quarto-xref"><span>3.8</span></a>) and (<a href="#eq-separator-contradiction-2" class="quarto-xref"><span>3.10</span></a>) we have also <span id="eq-separator-contradiction-3"><span class="math display">\[
 \widetilde{L}&gt;0 \,.
-\tag{3.10}\]</span></span> We now want to show that there is a choice of <span class="math inline">\(n\)</span> such that <span class="math inline">\(\widetilde{L}^2 &lt; 2\)</span>, which will lead to a contradiction. Indeed, we can estimate <span class="math display">\[\begin{align*}
+\tag{3.11}\]</span></span> We now want to show that there is a choice of <span class="math inline">\(n\)</span> such that <span class="math inline">\(\widetilde{L}^2 &lt; 2\)</span>, which will lead to a contradiction. Indeed, we can estimate <span class="math display">\[\begin{align*}
 \widetilde{L}^2 &amp; = \left( L + \frac1n \right)^2 \\
             &amp; = L^2 + \frac{1}{n^2} + 2 \frac{L}{n} \\
             &amp; &lt; L^2 + \frac{1}{n} + 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n}&lt;\frac{1}{n^2}  \right) \\
@@ -835,25 +893,25 @@ L \geq 0 \,\, \mbox{ and } \,\, L^2 &lt; 2 \,.
 L^2 + \frac{2L + 1}{n} &lt; 2 \,,
 \]</span> we can rearrange the above and obtain <span class="math display">\[
 n(2 - L^2) &gt; 2L + 1 \,.
-\]</span> Now note that <span class="math inline">\(L^2 &lt; 2\)</span> by assumption (<a href="#eq-separator-contradiction-hp-1" class="quarto-xref"><span>3.8</span></a>). Thus we can divived by <span class="math inline">\((2 - L^2)\)</span> and obtain <span class="math display">\[
+\]</span> Now note that <span class="math inline">\(L^2 &lt; 2\)</span> by assumption (<a href="#eq-separator-contradiction-hp-1" class="quarto-xref"><span>3.9</span></a>). Thus we can divived by <span class="math inline">\((2 - L^2)\)</span> and obtain <span class="math display">\[
 n &gt;\frac{2L + 1}{2 - L^2} \,.
 \]</span> Therefore we have just shown that <span class="math display">\[
 n &gt;\frac{2L + 1}{2 - L^2}  \,\, \implies \,\, \widetilde{L}^2 &lt; 2 \,.
-\]</span> Together with (<a href="#eq-separator-contradiction-3" class="quarto-xref"><span>3.10</span></a>) this implies <span class="math inline">\(\widetilde{L} \in A\)</span>. Therefore we have <span class="math display">\[
+\]</span> Together with (<a href="#eq-separator-contradiction-3" class="quarto-xref"><span>3.11</span></a>) this implies <span class="math inline">\(\widetilde{L} \in A\)</span>. Therefore we have <span class="math display">\[
 \widetilde{L} \leq L
-\]</span> by (<a href="#eq-separator-contradiction-hp-0" class="quarto-xref"><span>3.6</span></a>). On the other hand it also holds <span class="math display">\[
+\]</span> by (<a href="#eq-separator-contradiction-hp-0" class="quarto-xref"><span>3.7</span></a>). On the other hand it also holds <span class="math display">\[
 \widetilde{L} &gt; L
-\]</span> by (<a href="#eq-separator-contradiction-2" class="quarto-xref"><span>3.9</span></a>), and therefore we have a contradiction. Thus <span class="math inline">\(L \notin A\)</span>.</p>
+\]</span> by (<a href="#eq-separator-contradiction-2" class="quarto-xref"><span>3.10</span></a>), and therefore we have a contradiction. Thus <span class="math inline">\(L \notin A\)</span>.</p>
 <p><em>Case 2: <span class="math inline">\(L \in B\)</span>.</em><br>
 As <span class="math inline">\(L \in B\)</span>, we have by definition <span id="eq-separator-contradiction-5"><span class="math display">\[
 L &gt; 0 \,, \quad L^2 &gt; 2 \,.
-\tag{3.11}\]</span></span> Moreover since <span class="math inline">\(L\)</span> is a separator, see (<a href="#eq-separator-contradiction" class="quarto-xref"><span>3.5</span></a>), in particular <span id="eq-separator-contradiction-6"><span class="math display">\[
+\tag{3.12}\]</span></span> Moreover since <span class="math inline">\(L\)</span> is a separator, see (<a href="#eq-separator-contradiction" class="quarto-xref"><span>3.6</span></a>), in particular <span id="eq-separator-contradiction-6"><span class="math display">\[
 L \leq b \,,  \,\, \forall \, b \in B \,.
-\tag{3.12}\]</span></span> Define now <span class="math display">\[
+\tag{3.13}\]</span></span> Define now <span class="math display">\[
 \widetilde{L} := L - \frac1n
 \]</span> with <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(n \neq 0\)</span> to be chosen later. Clearly we have <span id="eq-separator-contradiction-7"><span class="math display">\[
 \widetilde{L} \in \mathbb{Q}\,, \quad \widetilde{L} &lt; L \,.
-\tag{3.13}\]</span></span> We now show that <span class="math inline">\(n\)</span> can be chosen so that <span class="math inline">\(\widetilde{L} \in B\)</span>. Indeed <span class="math display">\[\begin{align*}
+\tag{3.14}\]</span></span> We now show that <span class="math inline">\(n\)</span> can be chosen so that <span class="math inline">\(\widetilde{L} \in B\)</span>. Indeed <span class="math display">\[\begin{align*}
 \widetilde{L}^2  &amp; = \left(  L - \frac1n   \right)^2 \\
              &amp; = L^2 + \frac{1}{n^2} - 2 \frac{L}{n} \\
              &amp; &gt; L^2 - \frac{1}{n^2} - 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n^2} &gt; - \frac{1}{n^2}  \right) \\
@@ -863,23 +921,28 @@ L \leq b \,,  \,\, \forall \, b \in B \,.
 L^2 - \frac{1 + 2L}{n} &gt; 2
 \]</span> which is equivalent to <span class="math display">\[
 n(L^2 - 2) &gt; 1 + 2L \,.
-\]</span> Since we are assuming <span class="math inline">\(L \in B\)</span>, then <span class="math inline">\(L^2 &gt; 2\)</span>, see (<a href="#eq-separator-contradiction-5" class="quarto-xref"><span>3.11</span></a>). Therefore we can divide by <span class="math inline">\((L^2 -2)\)</span> and get <span class="math display">\[
+\]</span> Since we are assuming <span class="math inline">\(L \in B\)</span>, then <span class="math inline">\(L^2 &gt; 2\)</span>, see (<a href="#eq-separator-contradiction-5" class="quarto-xref"><span>3.12</span></a>). Therefore we can divide by <span class="math inline">\((L^2 -2)\)</span> and get <span class="math display">\[
 n &gt; \frac{1+2L}{L^2 - 2} \,.
 \]</span> In total, we have just shown that <span class="math display">\[
 n &gt; \frac{1+2L}{L^2 - 2} \quad \implies \quad \widetilde{L}^2 &gt; 2\,,
-\]</span> proving that <span class="math inline">\(\widetilde{L} \in B\)</span>. Therefore by (<a href="#eq-separator-contradiction-6" class="quarto-xref"><span>3.12</span></a>) we get <span class="math display">\[
+\]</span> proving that <span class="math inline">\(\widetilde{L} \in B\)</span>. Therefore by (<a href="#eq-separator-contradiction-6" class="quarto-xref"><span>3.13</span></a>) we get <span class="math display">\[
 L \leq \widetilde{L} \,.
-\]</span> This contradicts (<a href="#eq-separator-contradiction-7" class="quarto-xref"><span>3.13</span></a>).</p>
+\]</span> This contradicts (<a href="#eq-separator-contradiction-7" class="quarto-xref"><span>3.14</span></a>).</p>
 <p><em>Conclusion:</em><br>
 We have seen that assuming that <span class="math inline">\((A,B)\)</span> has a separator <span class="math inline">\(L \in \mathbb{Q}\)</span> leads to a contradiction. Thus the cut <span class="math inline">\((A,B)\)</span> has no separator.</p>
 </div></details>
 </div>
-<div id="Remark-22" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 22</strong></summary><div>The above proof can be summarized by saying that the set <span class="math display">\[
+<div id="Remark-25" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 25</strong></summary><div>The above proof is also suggesting the following observations:<p></p>
+<ul>
+<li><p>The set <span class="math display">\[
 A = (-\infty, \sqrt{2}) \cap \mathbb{Q}
-\]</span> does not admit a <strong>largest</strong> element in <span class="math inline">\(\mathbb{Q}\)</span>, and that the set <span class="math display">\[
+\]</span> does not admit a <strong>largest</strong> element in <span class="math inline">\(\mathbb{Q}\)</span></p></li>
+<li><p>The set <span class="math display">\[
 B = (\sqrt{2}, \infty) \cap \mathbb{Q}
-\]</span> does not admit a <strong>lowest element</strong> in <span class="math inline">\(\mathbb{Q}\)</span>. We will clarify this remark in the next section.<p></p>
+\]</span> does not admit a <strong>lowest element</strong> in <span class="math inline">\(\mathbb{Q}\)</span>.</p></li>
+</ul>
+<p>It turns out that the <strong>largest</strong> and <strong>lowest</strong> element play a crucial role in analysis. We will give precise definitions in the next section.</p>
 </div></details>
 </div>
 </section>
@@ -887,7 +950,7 @@ B = (\sqrt{2}, \infty) \cap \mathbb{Q}
 <h2 data-number="3.4" class="anchored" data-anchor-id="supremum-and-infimum"><span class="header-section-number">3.4</span> Supremum and infimum</h2>
 <p>A crucial definition in Analysis is the one of supremum or infimum of a set. This is also another way of studying the <strong>gaps</strong> of <span class="math inline">\(\mathbb{Q}\)</span>.</p>
 <div id="intuition-about-supremum-and-infimum" class="Example" title="Intuition about supremum and infimum">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 23: </strong>Intuition about supremum and infimum</summary><div>
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 26: </strong>Intuition about supremum and infimum</summary><div>
 <p>Consider the set <span class="math display">\[
 A = [0,1) \cap \mathbb{Q}\,.
 \]</span> Intuitively, we understand that <span class="math inline">\(A\)</span> is bounded, i.e.&nbsp;not infinite. We also see that</p>
@@ -906,7 +969,7 @@ A = [0,1) \cap \mathbb{Q}\,.
 <h3 data-number="3.4.1" class="anchored" data-anchor-id="upper-bound-supremum-maximum"><span class="header-section-number">3.4.1</span> Upper bound, supremum, maximum</h3>
 <p>We start by defining the supremum. First we need the notion of upper bound of a set.</p>
 <div id="upper-bound-and-bounded-above" class="Definition" title="Upper bound and bounded above">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 24: </strong>Upper bound and bounded above</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 27: </strong>Upper bound and bounded above</summary><div>
 <p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>:</p>
 <ol type="1">
 <li>We say that <span class="math inline">\(b \in K\)</span> is an <strong>upper bound</strong> for <span class="math inline">\(A\)</span> if <span class="math display">\[
@@ -917,7 +980,7 @@ a \leq b \,, \quad \forall \, a \in A \,.
 </div></details>
 </div>
 <div id="supremum" class="Definition" title="Supremum">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 25: </strong>Supremum</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 28: </strong>Supremum</summary><div>
 <p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>. A number <span class="math inline">\(s \in K\)</span> is called <strong>least upper bound</strong> or <strong>supremum</strong> of <span class="math inline">\(A\)</span> if:</p>
 <ol type="i">
 <li><span class="math inline">\(s\)</span> is an upper bound for <span class="math inline">\(A\)</span>,</li>
@@ -927,23 +990,23 @@ a \leq b \,, \quad \forall \, a \in A \,.
 </ol>
 </div></details>
 </div>
-<div id="Notation-26" class="Notation">
-<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 26</strong></summary><div>We will almost always prefer the name supremum to least upper bound. For <span class="math inline">\(A \subseteq K\)</span> the supremum is denoted by <span class="math display">\[
+<div id="Notation-29" class="Notation">
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 29</strong></summary><div>We will almost always prefer the name supremum to least upper bound. For <span class="math inline">\(A \subseteq K\)</span> the supremum is denoted by <span class="math display">\[
 s := \sup \ A \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Remark-27" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 27</strong></summary><div>Note that if a set <span class="math inline">\(A \subseteq K\)</span> in <strong>NOT</strong> bounded above, then the supremum does not exist, as there are no upper bounds of <span class="math inline">\(A\)</span>.<p></p>
+<div id="Remark-30" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 30</strong></summary><div>Note that if a set <span class="math inline">\(A \subseteq K\)</span> in <strong>NOT</strong> bounded above, then the supremum does not exist, as there are no upper bounds of <span class="math inline">\(A\)</span>.<p></p>
 </div></details>
 </div>
-<div id="Proposition-28" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 28</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>. If <span class="math display">\[
+<div id="Proposition-31" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 31</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>. If <span class="math display">\[
 \sup A
 \]</span> exists, then it is unique.<p></p>
 </div></details>
 </div>
-<div id="Proof*-3" class="Proof">
+<div id="Proof*-6" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose there exist <span class="math inline">\(s_1, s_2 \in K\)</span> such that <span class="math display">\[
 s_1 = \sup A,  \,\, s_2 = \sup A \,.
 \]</span> Then:<p></p>
@@ -958,7 +1021,7 @@ s_2 \leq s_1 \,.
 <p>This shows <span class="math inline">\(s_1 = s_2\)</span>.</p>
 </div></details>
 </div>
-<div id="Warning*-4" class="Warning">
+<div id="Warning*-7" class="Warning">
 <p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>In general:<p></p>
 <ul>
 <li>A set can have infinite upper bounds,</li>
@@ -973,7 +1036,7 @@ A = [0,1)  \cap \mathbb{Q}
 \]</span></p>
 </div></details>
 </div>
-<div id="Warning*-5" class="Warning">
+<div id="Warning*-8" class="Warning">
 <p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>The supremum does not exist in general. For example let <span class="math display">\[
 A = [0,\sqrt{2})  \cap \mathbb{Q}\,.
 \]</span> We will show that <span class="math inline">\(\sup A\)</span> does not exist in <span class="math inline">\(\mathbb{Q}\)</span>. Indeed we will have that <span class="math display">\[
@@ -988,20 +1051,20 @@ A = [0,\sqrt{2})  \cap \mathbb{Q}\,.
 </figure>
 </div>
 <div id="maximum" class="Definition" title="Maximum">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 29: </strong>Maximum</summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>. A number <span class="math inline">\(M \in K\)</span> is called the <strong>maximum</strong> of <span class="math inline">\(A\)</span> if: <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 32: </strong>Maximum</summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>. A number <span class="math inline">\(M \in K\)</span> is called the <strong>maximum</strong> of <span class="math inline">\(A\)</span> if: <span class="math display">\[
 M \in A   \,\, \mbox{ and } \,\, a \leq M  \,, \, \forall a \in A \,.
 \]</span> We denote the maximum by <span class="math display">\[
 M = \max A \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proposition-30" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 30</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>. If the maximum of <span class="math inline">\(A\)</span> exists, then also the supremum exists, and <span class="math display">\[
+<div id="Proposition-33" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 33</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>. If the maximum of <span class="math inline">\(A\)</span> exists, then also the supremum exists, and <span class="math display">\[
 \sup A = \max A \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proof*-6" class="Proof">
+<div id="Proof*-9" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Let <span class="math display">\[
 M = \max A \,.
 \]</span> Then:<p></p>
@@ -1019,7 +1082,7 @@ M \leq b \,.
 <p>Therefore <span class="math inline">\(M\)</span> is the least upper bound of <span class="math inline">\(A\)</span>, meaning that <span class="math inline">\(M = \sup A\)</span>.</p>
 </div></details>
 </div>
-<div id="Warning*-7" class="Warning">
+<div id="Warning*-10" class="Warning">
 <p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>The converse of the above statement is not true: In general the <span class="math inline">\(\sup\)</span> might exist while the <span class="math inline">\(\max\)</span> does not. For example <span class="math display">\[
 A = [0,1) \cap \mathbb{Q}
 \]</span> is such that <span class="math display">\[
@@ -1036,7 +1099,7 @@ B = [0,1] \cap \mathbb{Q}
 <h3 data-number="3.4.2" class="anchored" data-anchor-id="lower-bound-infimum-minimum"><span class="header-section-number">3.4.2</span> Lower bound, infimum, minimum</h3>
 <p>We now introduce the definitions of lower bound, infimum, minimum. These are the counterpart of upper bound, supremum and maximum, respectively.</p>
 <div id="upper-bound-bounded-below-infimum-minimum" class="Definition" title="Upper bound, bounded below, infimum, minimum">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 31: </strong>Upper bound, bounded below, infimum, minimum</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 34: </strong>Upper bound, bounded below, infimum, minimum</summary><div>
 <p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>:</p>
 <ol type="1">
 <li><p>We say that <span class="math inline">\(l \in K\)</span> is a <strong>lower bound</strong> for <span class="math inline">\(A\)</span> if <span class="math display">\[
@@ -1066,8 +1129,8 @@ m = \min A \,.
 <figcaption>Infimum and lower bounds of a set <span class="math inline">\(A\)</span> in the field <span class="math inline">\(K\)</span></figcaption>
 </figure>
 </div>
-<div id="Proposition-32" class="Proposition">
-<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 32</strong></summary><div>
+<div id="Proposition-35" class="Proposition">
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 35</strong></summary><div>
 <p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>:</p>
 <ol type="1">
 <li>If <span class="math inline">\(\inf A\)</span> exists, then it is unique.</li>
@@ -1078,7 +1141,7 @@ m = \min A \,.
 </div></details>
 </div>
 <p>The proof uses similar arguments to the one employed in the previous section, and is left to the reader as an exercise.</p>
-<div id="Warning*-8" class="Warning">
+<div id="Warning*-11" class="Warning">
 <p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>We have<p></p>
 <ul>
 <li>A set can have infinite lower bounds,</li>
@@ -1093,7 +1156,7 @@ A = (0,1)  \cap \mathbb{Q}
 \]</span></p>
 </div></details>
 </div>
-<div id="Warning*-9" class="Warning">
+<div id="Warning*-12" class="Warning">
 <p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>The infimum does not exist in general. For example let <span class="math display">\[
 A = (\sqrt{2},5]  \cap \mathbb{Q}\,.
 \]</span> We will show that <span class="math inline">\(\inf A\)</span> does not exist in <span class="math inline">\(\mathbb{Q}\)</span>. Indeed we will have that <span class="math display">\[
@@ -1101,7 +1164,7 @@ A = (\sqrt{2},5]  \cap \mathbb{Q}\,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Warning*-10" class="Warning">
+<div id="Warning*-13" class="Warning">
 <p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>In general the <span class="math inline">\(\inf\)</span> might exist while the <span class="math inline">\(\min\)</span> does not. For example <span class="math display">\[
 A = (0,1) \cap \mathbb{Q}
 \]</span> is such that <span class="math display">\[
@@ -1113,8 +1176,8 @@ B = [0,1] \cap \mathbb{Q}
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proposition-33" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 33</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>. If <span class="math inline">\(\inf A\)</span> and <span class="math inline">\(\sup A\)</span> exist, then <span class="math display">\[
+<div id="Proposition-36" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 36</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>. If <span class="math inline">\(\inf A\)</span> and <span class="math inline">\(\sup A\)</span> exist, then <span class="math display">\[
 \inf A \leq a \leq \sup A \,, \quad \forall a \in A \,.
 \]</span><p></p>
 </div></details>
@@ -1128,7 +1191,7 @@ B = [0,1] \cap \mathbb{Q}
 </div>
 <p>We conclude with another simple proposition. The proof is again left to the reader.</p>
 <div id="proposition-inf-sup" class="Proposition" title="Relationship between sup and inf">
-<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 34: </strong>Relationship between sup and inf</summary><div>
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 37: </strong>Relationship between sup and inf</summary><div>
 <p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>. Define <span class="math display">\[
 - A := \{ - a \, \colon \,a \in A \} \,.
 \]</span> It holds:</p>
@@ -1147,17 +1210,17 @@ B = [0,1] \cap \mathbb{Q}
 <section id="completeness" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="completeness"><span class="header-section-number">3.5</span> Completeness</h2>
 <p>We have introduced the concepts of supremum and infimum on an ordered field <span class="math inline">\(K\)</span>.</p>
-<div id="Question-35" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 35</strong></summary><div>Suppose <span class="math inline">\((K,+,\cdot, \leq)\)</span> is an ordered field, and that <span class="math inline">\(A \subseteq K\)</span> is non-empty and bounded above. Does <span class="math display">\[
+<div id="Question-38" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 38</strong></summary><div>Suppose <span class="math inline">\((K,+,\cdot, \leq)\)</span> is an ordered field, and that <span class="math inline">\(A \subseteq K\)</span> is non-empty and bounded above. Does <span class="math display">\[
 \sup A
 \]</span> always exist?<p></p>
 </div></details>
 </div>
 <p>The answer to the above question is <strong>NO</strong>. Like we did with the Cut Property, the counterexample can be found in the set of rational numbers <span class="math inline">\(\mathbb{Q}\)</span>. A set bounded above for which the supremum does nor exist is, for example, <span id="eq-no-sup-in-Q"><span class="math display">\[
 A = [0, \sqrt{2}) \cap \mathbb{Q}\,.
-\tag{3.14}\]</span></span></p>
+\tag{3.15}\]</span></span></p>
 <div id="theorem-Q-not-complete" class="Theorem">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 36</strong></summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 39</strong></summary><div>
 <p>There exists a set <span class="math inline">\(A \subseteq \mathbb{Q}\)</span> such that</p>
 <ul>
 <li><span class="math inline">\(A\)</span> is non-empty,</li>
@@ -1167,8 +1230,8 @@ A = [0, \sqrt{2}) \cap \mathbb{Q}\,.
 </div></details>
 </div>
 <p>The proof uses the same ideas we used for showing that <span class="math inline">\(\mathbb{Q}\)</span> does not have the Cut Property.</p>
-<div id="Proof*-11" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Define the set <span class="math inline">\(A\)</span> as in (<a href="#eq-no-sup-in-Q" class="quarto-xref"><span>3.14</span></a>). Equivalently, this can be written as <span class="math display">\[
+<div id="Proof*-14" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Define the set <span class="math inline">\(A\)</span> as in (<a href="#eq-no-sup-in-Q" class="quarto-xref"><span>3.15</span></a>). Equivalently, this can be written as <span class="math display">\[
 A = \{ q \in \mathbb{Q}\, \colon \,q \geq 0 \,, \,\, q^2 &lt; 2 \} \,.
 \]</span><p></p>
 <p><em>Step 1. <span class="math inline">\(A\)</span> is bounded above.</em><br>
@@ -1182,15 +1245,15 @@ Assume by contradiction that <span class="math display">\[
 s = \sup A \in \mathbb{Q}
 \]</span> exists. By definition it holds <span id="eq-sup-contradiction-1"><span class="math display">\[
 s \geq q \,, \quad \forall \, q \in A
-\tag{3.15}\]</span></span> <span id="eq-sup-contradiction-2"><span class="math display">\[
+\tag{3.16}\]</span></span> <span id="eq-sup-contradiction-2"><span class="math display">\[
 b \geq q \,, \, \forall \, q \in A \,\, \implies \,\,
 s \leq b
-\tag{3.16}\]</span></span> There are two possibilities: <span class="math inline">\(s \in A\)</span> or <span class="math inline">\(s \notin A\)</span>:</p>
+\tag{3.17}\]</span></span> There are two possibilities: <span class="math inline">\(s \in A\)</span> or <span class="math inline">\(s \notin A\)</span>:</p>
 <ul>
 <li><p><em>Case 1. <span class="math inline">\(s \in A\)</span></em>.<br>
 If <span class="math inline">\(s \in A\)</span> by definition <span id="eq-sup-contradiction-3"><span class="math display">\[
 s  \geq 0\,, \quad s^2 &lt; 2 \,.
-\tag{3.17}\]</span></span> Define <span class="math display">\[
+\tag{3.18}\]</span></span> Define <span class="math display">\[
 \widetilde{s} := s + \frac{1}{n}
 \]</span> with <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(n \neq 0\)</span> to be chosen later. Then <span class="math display">\[\begin{align*}
 \widetilde{s}^2 &amp; = \left( s + \frac1n \right)^2 \\
@@ -1201,7 +1264,7 @@ s  \geq 0\,, \quad s^2 &lt; 2 \,.
 s^2 + \frac{2s + 1}{n} &lt; 2 \,,
 \]</span> we can rearrange the above and obtain <span class="math display">\[
 n(2 - s^2) &gt; 2s + 1 \,.
-\]</span> Now note that <span class="math inline">\(s^2 &lt; 2\)</span> by assumption (<a href="#eq-sup-contradiction-3" class="quarto-xref"><span>3.17</span></a>). Thus we can divide by <span class="math inline">\((2 - s^2)\)</span> and obtain <span class="math display">\[
+\]</span> Now note that <span class="math inline">\(s^2 &lt; 2\)</span> by assumption (<a href="#eq-sup-contradiction-3" class="quarto-xref"><span>3.18</span></a>). Thus we can divide by <span class="math inline">\((2 - s^2)\)</span> and obtain <span class="math display">\[
 n &gt;\frac{2s + 1}{2 - s^2} \,.
 \]</span> To summarize, we have just shown that <span class="math display">\[
 n &gt;\frac{2s + 1}{2 - s^2}  \,\, \implies \,\, \widetilde{s}^2 &lt; 2 \,.
@@ -1215,7 +1278,7 @@ n &gt;\frac{2s + 1}{2 - s^2}  \,\, \implies \,\, \widetilde{s}^2 &lt; 2 \,.
 <li><p><em>Case 2. <span class="math inline">\(s \notin A\)</span></em>.<br>
 If <span class="math inline">\(s \notin A\)</span>, by the fact that <span class="math inline">\(s = \sup A\)</span> and by definition of <span class="math inline">\(A\)</span> we get <span id="eq-sup-contradiction-4"><span class="math display">\[
 s &gt; 0 \,, \quad s^2 &gt; 2 \,.
-\tag{3.18}\]</span></span><br>
+\tag{3.19}\]</span></span><br>
 Define <span class="math display">\[
 \widetilde{s} := s - \frac{1}{n} \,.
 \]</span> We have <span class="math display">\[\begin{align*}
@@ -1228,13 +1291,13 @@ Define <span class="math display">\[
 s^2 - \frac{1 + 2s}{n} &gt; 2
 \]</span> which is equivalent to <span class="math display">\[
 n(s^2 - 2) &gt; 1 + 2s \,.
-\]</span> By (<a href="#eq-sup-contradiction-4" class="quarto-xref"><span>3.18</span></a>) we have <span class="math inline">\(s^2 &gt; 2\)</span>. Therefore we can divide by <span class="math inline">\((s^2 -2)\)</span> and get <span class="math display">\[
+\]</span> By (<a href="#eq-sup-contradiction-4" class="quarto-xref"><span>3.19</span></a>) we have <span class="math inline">\(s^2 &gt; 2\)</span>. Therefore we can divide by <span class="math inline">\((s^2 -2)\)</span> and get <span class="math display">\[
 n &gt; \frac{1+2s}{s^2 - 2} \,.
 \]</span> In total, we have just shown that <span class="math display">\[
 n &gt; \frac{1+2s}{s^2 - 2} \quad \implies \quad \widetilde{s}^2 &gt; 2\,.
 \]</span> Therefore <span class="math inline">\(\widetilde{s} \notin A\)</span>, and by definition of <span class="math inline">\(A\)</span> we have <span class="math display">\[
 \widetilde{s} \geq q \,, \quad \forall q \in A\,.
-\]</span> Moreover <span class="math inline">\(\widetilde{s} := (s - 1/n) \in \mathbb{Q}\)</span>. Therefore <span class="math inline">\(\widetilde{s}\)</span> is an upper bound of <span class="math inline">\(A\)</span> in <span class="math inline">\(\mathbb{Q}\)</span>. Since <span class="math inline">\(s=\sup A\)</span> is the smallest upper bound, see (<a href="#eq-sup-contradiction-2" class="quarto-xref"><span>3.16</span></a>), it follows <span class="math display">\[
+\]</span> Moreover <span class="math inline">\(\widetilde{s} := (s - 1/n) \in \mathbb{Q}\)</span>. Therefore <span class="math inline">\(\widetilde{s}\)</span> is an upper bound of <span class="math inline">\(A\)</span> in <span class="math inline">\(\mathbb{Q}\)</span>. Since <span class="math inline">\(s=\sup A\)</span> is the smallest upper bound, see (<a href="#eq-sup-contradiction-2" class="quarto-xref"><span>3.17</span></a>), it follows <span class="math display">\[
 s \leq \widetilde{s} \,.
 \]</span> However <span class="math display">\[
 \widetilde{s} := s - \frac{1}{n} &lt; s \,,
@@ -1245,18 +1308,18 @@ We have assumed by contradiction that <span class="math inline">\(s = \sup A\)</
 </div></details>
 </div>
 <p>The above theorem shows that the supremum does not necessarily exist. What about the infimum?</p>
-<div id="Question-37" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 37</strong></summary><div>Suppose <span class="math inline">\((K,+,\cdot, \leq)\)</span> is an ordered field, and that <span class="math inline">\(A \subseteq K\)</span> is non-empty and bounded below. Does <span class="math display">\[
+<div id="Question-40" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 40</strong></summary><div>Suppose <span class="math inline">\((K,+,\cdot, \leq)\)</span> is an ordered field, and that <span class="math inline">\(A \subseteq K\)</span> is non-empty and bounded below. Does <span class="math display">\[
 \inf A
 \]</span> always exist?<p></p>
 </div></details>
 </div>
 <p>The answer to the above question is again <strong>NO</strong>. A set bounded below for which the infimum does nor exist is, for example, <span class="math display">\[
 A = (\sqrt{2}, 10] \cap \mathbb{Q}\,.
-\]</span> The proof of this fact is, of course, very similar to the one of Theorem <a href="chap_3.html#theorem-Q-not-complete">36</a>, and is therefore omitted.</p>
+\]</span> The proof of this fact is, of course, very similar to the one of Theorem <a href="chap_3.html#theorem-Q-not-complete">39</a>, and is therefore omitted.</p>
 <p>Thus infimum and supremum do not exist in general. The fields for which all the bounded sets admit supremum or infimum are called <strong>complete</strong>.</p>
 <div id="completeness-1" class="Definition" title="Completeness">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 38: </strong>Completeness</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 41: </strong>Completeness</summary><div>
 <p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field. We say that <span class="math inline">\(K\)</span> is <strong>complete</strong> if it holds the property:</p>
 <ul>
 <li>(AC) For every <span class="math inline">\(A \subseteq K\)</span> non-empty and bounded above <span class="math display">\[
@@ -1265,8 +1328,8 @@ A = (\sqrt{2}, 10] \cap \mathbb{Q}\,.
 </ul>
 </div></details>
 </div>
-<div id="Notation-39" class="Notation">
-<details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 39</strong></summary><div>
+<div id="Notation-42" class="Notation">
+<details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 42</strong></summary><div>
 <p>We have that:</p>
 <ul>
 <li>Property (AC) is called <strong>Axiom of Completeness</strong></li>
@@ -1275,16 +1338,16 @@ A = (\sqrt{2}, 10] \cap \mathbb{Q}\,.
 </div></details>
 </div>
 <p>Notice that if the <strong>Axiom of Completeness</strong> holds, then also the infimum exists. This is shown in the following proposition.</p>
-<div id="Proposition-40" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 40</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be a complete ordered field. Suppose that <span class="math inline">\(A \subseteq K\)</span> is non-empty and bounded below. Then <span class="math display">\[
+<div id="Proposition-43" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 43</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be a complete ordered field. Suppose that <span class="math inline">\(A \subseteq K\)</span> is non-empty and bounded below. Then <span class="math display">\[
 \inf A \in K\,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proof*-12" class="Proof">
+<div id="Proof*-15" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose that <span class="math inline">\(A \subseteq K\)</span> is non-empty and bounded below. Then <span class="math display">\[
 -A:= \{ -a \, \colon \,a \in A   \}
-\]</span> is non-empty and bounded above. By completeness we have that <span class="math inline">\(\sup(-A)\)</span> exists in <span class="math inline">\(K\)</span>. But then Proposition <a href="chap_3.html#proposition-inf-sup">34</a> implies that <span class="math inline">\(\inf A\)</span> exists in <span class="math inline">\(K\)</span>, with <span class="math display">\[
+\]</span> is non-empty and bounded above. By completeness we have that <span class="math inline">\(\sup(-A)\)</span> exists in <span class="math inline">\(K\)</span>. But then Proposition <a href="chap_3.html#proposition-inf-sup">37</a> implies that <span class="math inline">\(\inf A\)</span> exists in <span class="math inline">\(K\)</span>, with <span class="math display">\[
 \inf A = - \sup (-A)\,.
 \]</span><p></p>
 </div></details>
@@ -1294,7 +1357,7 @@ A = (\sqrt{2}, 10] \cap \mathbb{Q}\,.
 <h2 data-number="3.6" class="anchored" data-anchor-id="equivalence-of-completeness-and-cut-property"><span class="header-section-number">3.6</span> Equivalence of Completeness and Cut Property</h2>
 <p>We can show that <strong>Completeness</strong> is equivalent to the <strong>Cut Property</strong>. Such result is not essential, but its proof is very instructive.</p>
 <div id="theorem-cut-complete" class="Theorem" title="Equivalence of Cut Property and Completeness">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 41: </strong>Equivalence of Cut Property and Completeness</summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 44: </strong>Equivalence of Cut Property and Completeness</summary><div>
 <p>Let <span class="math inline">\((K,+,\cdot, \leq)\)</span> be an ordered field. Then they are equivalent:</p>
 <ol type="1">
 <li><span class="math inline">\(K\)</span> has the <strong>Cut Property</strong></li>
@@ -1302,8 +1365,8 @@ A = (\sqrt{2}, 10] \cap \mathbb{Q}\,.
 </ol>
 </div></details>
 </div>
-<div id="ideas-for-proving-theorem" class="Remark" title="Ideas for proving Theorem 41">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 42: </strong>Ideas for proving Theorem 41</summary><div>The proof of Theorem <a href="chap_3.html#theorem-cut-complete">41</a> is rather long, but the ideas are simple:<p></p>
+<div id="ideas-for-proving-theorem" class="Remark" title="Ideas for proving Theorem 44">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 45: </strong>Ideas for proving Theorem 44</summary><div>The proof of Theorem <a href="chap_3.html#theorem-cut-complete">44</a> is rather long, but the ideas are simple:<p></p>
 <p><em>Step 1. Cut Property <span class="math inline">\(\implies\)</span> Completeness</em>. Suppose <span class="math inline">\(K\)</span> has the Cut Property. To prove that <span class="math inline">\(K\)</span> is Complete, we need to:</p>
 <ul>
 <li><p>Consider an arbitrary set <span class="math inline">\(A \subseteq K\)</span> such that <span class="math inline">\(A \neq \emptyset\)</span> and <span class="math inline">\(A\)</span> is bounded above.</p></li>
@@ -1349,8 +1412,8 @@ Figure&nbsp;3.2: Let <span class="math inline">\((A,B)\)</span> be a cut of <spa
 </figure>
 </div>
 <p>Keeping the above ideas in mind, let us proceed with the proof.</p>
-<div id="proof-of-theorem-1" class="Proof" title="Proof of Theorem 41">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 41</summary><div><em>Step 1. Cut Property <span class="math inline">\(\implies\)</span> Completeness</em>.<br>
+<div id="proof-of-theorem-1" class="Proof" title="Proof of Theorem 44">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 44</summary><div><em>Step 1. Cut Property <span class="math inline">\(\implies\)</span> Completeness</em>.<br>
 We need to prove that <span class="math inline">\(K\)</span> is complete. To this end, consider <span class="math inline">\(A \subseteq K\)</span> non-empty and bounded above. Define the set of upper bounds of <span class="math inline">\(A\)</span>: <span class="math display">\[
 B := \{ b \in K \, \colon \,b \geq a \,, \,\, \forall a \in A \} \,.
 \]</span><p></p>
@@ -1367,7 +1430,7 @@ K = B^c \cup B \,, \quad B^c \cap B =  \emptyset \,.
 <ul>
 <li>We have <span id="eq-equiv-cut-complete-1"><span class="math display">\[
 x \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.
-\tag{3.19}\]</span></span></li>
+\tag{3.20}\]</span></span></li>
 </ul>
 <blockquote class="blockquote">
 <p>To show the above, let <span class="math inline">\(x \in B^c\)</span> and <span class="math inline">\(y \in B\)</span>. By definition of <span class="math inline">\(B\)</span> we have that elements of <span class="math inline">\(B^c\)</span> are not upper bounds of <span class="math inline">\(A\)</span>. Therefore <span class="math inline">\(x\)</span> is not an upper bound. This means there exists <span class="math inline">\(\widetilde{a} \in A\)</span> which is larger than <span class="math inline">\(x\)</span>, that is, <span class="math display">\[
@@ -1376,12 +1439,12 @@ x \leq \widetilde{a} \,.
 a \leq y \,, \,\, \forall a \in A\,.
 \]</span> Therefore <span class="math display">\[
 x \leq \widetilde{a} \leq y \,,
-\]</span> concluding (<a href="#eq-equiv-cut-complete-1" class="quarto-xref"><span>3.19</span></a>).</p>
+\]</span> concluding (<a href="#eq-equiv-cut-complete-1" class="quarto-xref"><span>3.20</span></a>).</p>
 </blockquote>
 <p>Thus <span class="math inline">\((B^c,B)\)</span> is a cut of <span class="math inline">\(K\)</span> and the claim is proven.</p>
 <p>Since <span class="math inline">\((B^c,B)\)</span> is a cut of <span class="math inline">\(K\)</span>, by the Cut Property there exists a separator <span class="math inline">\(s \in K\)</span> such that <span id="eq-equiv-cut-complete-2"><span class="math display">\[
 x \leq s \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.
-\tag{3.20}\]</span></span></p>
+\tag{3.21}\]</span></span></p>
 <p><em>Claim. <span class="math inline">\(s\)</span> is an upper bound for <span class="math inline">\(A\)</span>.</em></p>
 <p><em>Proof of Claim.</em><br>
 Suppose by contradiction that <span class="math inline">\(s\)</span> is not an upper bound for <span class="math inline">\(A\)</span>. Therefore by definition of upper bound, there exists <span class="math inline">\(\widetilde{a} \in A\)</span> such that <span class="math display">\[
@@ -1396,11 +1459,11 @@ s &lt; m &lt; \widetilde{a} \,.
 s = \frac{2s}{2} &lt; \frac{s + \widetilde{a}}{2} &lt; \frac{2 \widetilde{a}}{2} = \widetilde{a} \,.
 \]</span></p>
 </blockquote>
-<p>In particular the above tells us that <span class="math inline">\(m\)</span> is not an upper bound for <span class="math inline">\(A\)</span>, given that <span class="math inline">\(\widetilde{a} \in A\)</span> and <span class="math inline">\(m &lt; \widetilde{a}\)</span>. Therefore <span class="math inline">\(m \in B^c\)</span>, by definition of <span class="math inline">\(B^c\)</span>. Therefore(<a href="#eq-equiv-cut-complete-2" class="quarto-xref"><span>3.20</span></a>) implies <span class="math display">\[
+<p>In particular the above tells us that <span class="math inline">\(m\)</span> is not an upper bound for <span class="math inline">\(A\)</span>, given that <span class="math inline">\(\widetilde{a} \in A\)</span> and <span class="math inline">\(m &lt; \widetilde{a}\)</span>. Therefore <span class="math inline">\(m \in B^c\)</span>, by definition of <span class="math inline">\(B^c\)</span>. Therefore(<a href="#eq-equiv-cut-complete-2" class="quarto-xref"><span>3.21</span></a>) implies <span class="math display">\[
 m \leq s \,,
 \]</span> which contradicts <span class="math inline">\(s &lt; m\)</span>. Hence <span class="math inline">\(s\)</span> is an upper bound of <span class="math inline">\(A\)</span>, concluding the proof of Claim.</p>
 <p><em>Conclusion</em>. We have shown that <span class="math inline">\(s\)</span> is an upper bound of <span class="math inline">\(A\)</span>. Condition<br>
-(<a href="#eq-equiv-cut-complete-2" class="quarto-xref"><span>3.20</span></a>) tells us that <span class="math display">\[
+(<a href="#eq-equiv-cut-complete-2" class="quarto-xref"><span>3.21</span></a>) tells us that <span class="math display">\[
 s \leq y \,, \,\, \forall y \in B \,.
 \]</span> Recalling that <span class="math inline">\(B\)</span> is the set of upper bounds of <span class="math inline">\(A\)</span>, this means that <span class="math inline">\(s\)</span> is the smallest upper bound of <span class="math inline">\(A\)</span>, that is, <span class="math display">\[
 s = \sup A \in K \,.
@@ -1412,17 +1475,17 @@ A \neq \emptyset\,, \quad B \neq \emptyset \,,
 K = A \cup B\,, \quad A \cap B = \emptyset \,,
 \]</span> <span id="eq-equiv-cut-complete-3"><span class="math display">\[
 a \leq b \,, \quad \forall a \in A \,, \,\, \forall \, b \in B \,.
-\tag{3.21}\]</span></span> Since <span class="math inline">\(B \neq \emptyset\)</span>, from (<a href="#eq-equiv-cut-complete-3" class="quarto-xref"><span>3.21</span></a>) it follows that <span class="math inline">\(A\)</span> is bounded above: indeed, every element of <span class="math inline">\(B\)</span> is an upper bound for <span class="math inline">\(A\)</span>, thanks to (<a href="#eq-equiv-cut-complete-3" class="quarto-xref"><span>3.21</span></a>). Since <span class="math inline">\(A \neq \emptyset\)</span>, by the Axiom of Completeness we have <span class="math display">\[
+\tag{3.22}\]</span></span> Since <span class="math inline">\(B \neq \emptyset\)</span>, from (<a href="#eq-equiv-cut-complete-3" class="quarto-xref"><span>3.22</span></a>) it follows that <span class="math inline">\(A\)</span> is bounded above: indeed, every element of <span class="math inline">\(B\)</span> is an upper bound for <span class="math inline">\(A\)</span>, thanks to (<a href="#eq-equiv-cut-complete-3" class="quarto-xref"><span>3.22</span></a>). Since <span class="math inline">\(A \neq \emptyset\)</span>, by the Axiom of Completeness we have <span class="math display">\[
 s = \sup A \in K \,.
 \]</span> In particular, by definition of supremum, we have <span class="math display">\[
 a \leq s \,, \,\, \forall \, a \in A \,.
-\]</span> Let now <span class="math inline">\(b \in B\)</span> be arbitrary. From (<a href="#eq-equiv-cut-complete-3" class="quarto-xref"><span>3.21</span></a>) we have that <span id="eq-equiv-cut-complete-4"><span class="math display">\[
+\]</span> Let now <span class="math inline">\(b \in B\)</span> be arbitrary. From (<a href="#eq-equiv-cut-complete-3" class="quarto-xref"><span>3.22</span></a>) we have that <span id="eq-equiv-cut-complete-4"><span class="math display">\[
 a \leq b \,, \,\, \forall \, a \in A \,.
-\tag{3.22}\]</span></span> Therefore <span class="math inline">\(b\)</span> is an upper bound of <span class="math inline">\(A\)</span>. Since <span class="math inline">\(s = \sup A\)</span>, we have that <span class="math inline">\(s\)</span> is the smallest upper bound, and so <span class="math display">\[
+\tag{3.23}\]</span></span> Therefore <span class="math inline">\(b\)</span> is an upper bound of <span class="math inline">\(A\)</span>. Since <span class="math inline">\(s = \sup A\)</span>, we have that <span class="math inline">\(s\)</span> is the smallest upper bound, and so <span class="math display">\[
 s \leq b \,.
 \]</span> Given that <span class="math inline">\(b \in B\)</span> was arbitrary, it actually holds <span id="eq-equiv-cut-complete-5"><span class="math display">\[
 s \leq b \,, \,\, \forall \,  b \in B \,.
-\tag{3.23}\]</span></span> From (<a href="#eq-equiv-cut-complete-4" class="quarto-xref"><span>3.22</span></a>) and (<a href="#eq-equiv-cut-complete-5" class="quarto-xref"><span>3.23</span></a>) we therefore have <span class="math display">\[
+\tag{3.24}\]</span></span> From (<a href="#eq-equiv-cut-complete-4" class="quarto-xref"><span>3.23</span></a>) and (<a href="#eq-equiv-cut-complete-5" class="quarto-xref"><span>3.24</span></a>) we therefore have <span class="math display">\[
 a \leq s \leq b \,, \,\, \forall a \in A \,,  \, \forall \, b \in B \,,
 \]</span> showing that <span class="math inline">\(s\)</span> is a separator of <span class="math inline">\((A,B)\)</span>. Thus <span class="math inline">\(K\)</span> has the Cut Property.</p>
 </div></details>
@@ -1437,7 +1500,7 @@ a \leq s \leq b \,, \,\, \forall a \in A \,,  \, \forall \, b \in B \,,
 </ul>
 <p>The definition of <span class="math inline">\(\mathbb{R}\)</span> is given in an axiomatic way.</p>
 <div id="definition-R" class="Definition" title="System of Real Numbers \mathbb{R}">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 43: </strong>System of Real Numbers <span class="math inline">\(\mathbb{R}\)</span></summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 46: </strong>System of Real Numbers <span class="math inline">\(\mathbb{R}\)</span></summary><div>
 <p>A system of Real Numbers is a set <span class="math inline">\(\mathbb{R}\)</span> satisfying the following properties:</p>
 <ol type="1">
 <li>There is an operation <span class="math inline">\(+\)</span> of <strong>addition</strong> on <span class="math inline">\(\mathbb{R}\)</span> <span class="math display">\[
@@ -1509,9 +1572,9 @@ a \leq s \leq b \,, \quad \forall \, a \in A \,, \,\forall \, b \in B
 </ol>
 </div></details>
 </div>
-<div id="Remark-44" class="Remark">
-<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 44</strong></summary><div>
-<p>Since <strong>Cut Property</strong> and <strong>Axiom of Completeness</strong> are equivalent by Theorem <a href="chap_3.html#theorem-cut-complete">41</a>, one can replace the Cut Property in Definition <a href="chap_3.html#definition-R">43</a> Point 5 with:</p>
+<div id="Remark-47" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 47</strong></summary><div>
+<p>Since <strong>Cut Property</strong> and <strong>Axiom of Completeness</strong> are equivalent by Theorem <a href="chap_3.html#theorem-cut-complete">44</a>, one can replace the Cut Property in Definition <a href="chap_3.html#definition-R">46</a> Point 5 with:</p>
 <ol start="5" type="1">
 <li><strong>Axiom of Completeness</strong> holds:
 <ul>
@@ -1522,14 +1585,14 @@ a \leq s \leq b \,, \quad \forall \, a \in A \,, \,\forall \, b \in B
 </ol>
 </div></details>
 </div>
-<div id="Notation-45" class="Notation">
-<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 45</strong></summary><div>For <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x \neq 0\)</span>, the multiplicative inverse is also denoted by <span class="math display">\[
+<div id="Notation-48" class="Notation">
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 48</strong></summary><div>For <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x \neq 0\)</span>, the multiplicative inverse is also denoted by <span class="math display">\[
 x^{-1} = \frac{1}{x} \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Remark-46" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 46</strong></summary><div>Recall that<p></p>
+<div id="Remark-49" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 49</strong></summary><div>Recall that<p></p>
 <ul>
 <li><span class="math inline">\((K,+,\cdot)\)</span> satisfying <span class="math display">\[
 \mbox{(A1)-(A3), (M1)-(M3), (AM)}
@@ -1543,7 +1606,7 @@ x^{-1} = \frac{1}{x} \,.
 \]</span> is a <strong>complete ordered field</strong>: that is, an ordered field in which the <strong>Cut Property</strong> (CP) or <strong>Axiom of Completeness</strong> (AC) hold</p>
 </div></details>
 </div>
-<div id="Important*-14" class="Important">
+<div id="Important*-17" class="Important">
 <details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>
 <p>It can be shown that <span class="math inline">\((\mathbb{R},+, \cdot,\leq)\)</span> is the <strong>only</strong> complete ordered field.</p>
 <blockquote class="blockquote">
@@ -1551,15 +1614,15 @@ x^{-1} = \frac{1}{x} \,.
 </blockquote>
 </div></details>
 </div>
-<div id="Question-47" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 47</strong></summary><div>We have only postulated the existence of <span class="math inline">\(\mathbb{R}\)</span>. Does such complete ordered field actually exist?<p></p>
+<div id="Question-50" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 50</strong></summary><div>We have only postulated the existence of <span class="math inline">\(\mathbb{R}\)</span>. Does such complete ordered field actually exist?<p></p>
 </div></details>
 </div>
 <p>The answer is <strong>YES</strong>. There are several equivalent models for the system <span class="math inline">\(\mathbb{R}\)</span>. If time allows, we will look into one of these models at the end of the module.</p>
 </section>
 <section id="special-subsets-of-mathbbr" class="level2" data-number="3.8">
 <h2 data-number="3.8" class="anchored" data-anchor-id="special-subsets-of-mathbbr"><span class="header-section-number">3.8</span> Special subsets of <span class="math inline">\(\mathbb{R}\)</span></h2>
-<p>In Definition <a href="chap_3.html#definition-R">43</a> we have introduced <span class="math inline">\(\mathbb{R}\)</span> as a complete ordered field. This was done axiomatically and in a non constructive way. What happens now to the sets <span class="math inline">\(\mathbb{N}, \mathbb{Z}, \mathbb{Q}\)</span>? Are they well defined? Does it still hold that <span class="math display">\[
+<p>In Definition <a href="chap_3.html#definition-R">46</a> we have introduced <span class="math inline">\(\mathbb{R}\)</span> as a complete ordered field. This was done axiomatically and in a non constructive way. What happens now to the sets <span class="math inline">\(\mathbb{N}, \mathbb{Z}, \mathbb{Q}\)</span>? Are they well defined? Does it still hold that <span class="math display">\[
 \mathbb{N}\,, \mathbb{Z}\,, \mathbb{Q}\, \subseteq \mathbb{R}\,?
 \]</span> The definitions that we gave in <a href="chap_1.html" class="quarto-xref"><span>Chapter 1</span></a> for <span class="math inline">\(\mathbb{N}, \mathbb{Z}\)</span> and <span class="math inline">\(\mathbb{Q}\)</span> are not related to the system of real numbers <span class="math inline">\(\mathbb{R}\)</span> we just introduced. To overcome this problem, we will have to define new sets <span class="math display">\[
 {\mathbb{N}}_{\mathbb{R}}, \,\, {\mathbb{Z}}_{\mathbb{R}}\,, \,\, {\mathbb{Q}}_{\mathbb{R}}
@@ -1572,11 +1635,11 @@ x^{-1} = \frac{1}{x} \,.
 \mbox{Every } \mathbf{n} \in {\mathbb{N}}_{\mathbb{R}}  \, \mbox{ has a successor } \, (\mathbf{n+1}) \in {\mathbb{N}}_{\mathbb{R}} \,.
 \]</span> How do we ensure this property? We could start by defining <span class="math display">\[
 \mathbf{1}:=1\,,
-\]</span> with <span class="math inline">\(1\)</span> the neutral element of the multiplication in <span class="math inline">\(\mathbb{R}\)</span>, which exists by the field axiom (M2) in Defintion <a href="chap_3.html#definition-R">43</a>. We could then define <span class="math inline">\(\mathbf{2}\)</span> by setting <span class="math display">\[
+\]</span> with <span class="math inline">\(1\)</span> the neutral element of the multiplication in <span class="math inline">\(\mathbb{R}\)</span>, which exists by the field axiom (M2) in Defintion <a href="chap_3.html#definition-R">46</a>. We could then define <span class="math inline">\(\mathbf{2}\)</span> by setting <span class="math display">\[
 \mathbf{2} := 1 + 1 \,.
 \]</span> We need a formal definition to capture this idea. This is the concept of <strong>inductive set</strong>.</p>
 <div id="inductive-set" class="Definition" title="Inductive set">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 48: </strong>Inductive set</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 51: </strong>Inductive set</summary><div>
 <p>Let <span class="math inline">\(S \subseteq \mathbb{R}\)</span>. We say that <span class="math inline">\(S\)</span> is an inductive set if they are satisfied:</p>
 <ul>
 <li><span class="math inline">\(1 \in S\)</span>,</li>
@@ -1589,8 +1652,8 @@ x^{-1} = \frac{1}{x} \,.
 <li>The existence of the neutral element <span class="math inline">\(1\)</span>, given by axiom (M2).</li>
 <li>The operation of sum in <span class="math inline">\(\mathbb{R}\)</span>, which is again given as an axiom.</li>
 </ul>
-<div id="Example-49" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 49</strong></summary><div>
+<div id="Example-52" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 52</strong></summary><div>
 <p>We have that</p>
 <ul>
 <li><span class="math inline">\(\mathbb{R}\)</span> is an inductive set.</li>
@@ -1609,13 +1672,13 @@ x^{-1} = \frac{1}{x} \,.
 <p>Therefore <span class="math inline">\(\mathbb{R}\)</span> is an inductive set, showing that the definition of inductive set is not sufficient to fully describe our intuitive idea of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span>. The right way to define <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is as follows: <span class="math display">\[
 {\mathbb{N}}_{\mathbb{R}} \mbox{ is the smallest inductive subset of } \mathbb{R}\,.
 \]</span> To make the above definition formal we need a few observations.</p>
-<div id="Proposition-50" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 50</strong></summary><div>Let <span class="math inline">\(\mathcal{M}\)</span> be a collection of inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. Then <span class="math display">\[
+<div id="Proposition-53" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 53</strong></summary><div>Let <span class="math inline">\(\mathcal{M}\)</span> be a collection of inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. Then <span class="math display">\[
 S := \bigcap_{M \in \mathcal{M}} \, M
 \]</span> is an inductive subset of <span class="math inline">\(\mathbb{R}\)</span>.<p></p>
 </div></details>
 </div>
-<div id="Proof*-15" class="Proof">
+<div id="Proof*-18" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We have to show that the two properties of inductive sets hold for <span class="math inline">\(S\)</span>:<p></p>
 <ul>
 <li><p>We have <span class="math inline">\(1 \in M\)</span> for every <span class="math inline">\(M \in \mathcal{M}\)</span>, since these are inductive sets. Thus <span class="math display">\[
@@ -1628,19 +1691,19 @@ S := \bigcap_{M \in \mathcal{M}} \, M
 </div>
 <p>We are now ready to define the natural numbers <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span>.</p>
 <div id="definition-natural-numbers" class="Definition" title="Set of Natural Numbers">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 51: </strong>Set of Natural Numbers</summary><div>Let <span class="math inline">\(\mathcal{M}\)</span> be the collection of <strong>all</strong> inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. We define the set of natural numbers in <span class="math inline">\(\mathbb{R}\)</span> as <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 54: </strong>Set of Natural Numbers</summary><div>Let <span class="math inline">\(\mathcal{M}\)</span> be the collection of <strong>all</strong> inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. We define the set of natural numbers in <span class="math inline">\(\mathbb{R}\)</span> as <span class="math display">\[
 {\mathbb{N}}_{\mathbb{R}} := \bigcap_{M \in \mathcal{M}} \, M \,.
 \]</span><p></p>
 </div></details>
 </div>
 <p>Therefore <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the intersection of all the inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. From this definition it follows that <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the smallest inductive subset of <span class="math inline">\(\mathbb{R}\)</span>, as shown in the following proposition.</p>
 <div id="proposition-smallest-inductive" class="Proposition" title="{\mathbb{N}}_{\mathbb{R}} is the smallest inductive subset of \mathbb{R}">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 52: </strong><span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the smallest inductive subset of <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(C \subseteq \mathbb{R}\)</span> be an inductive subset. Then <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 55: </strong><span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the smallest inductive subset of <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(C \subseteq \mathbb{R}\)</span> be an inductive subset. Then <span class="math display">\[
 {\mathbb{N}}_{\mathbb{R}} \subseteq C \,.
 \]</span> In other words, <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the smallest inductive set in <span class="math inline">\(\mathbb{R}\)</span>.<p></p>
 </div></details>
 </div>
-<div id="Proof*-16" class="Proof">
+<div id="Proof*-19" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Let <span class="math inline">\(\mathcal{M}\)</span> be the collection of <strong>all</strong> inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. By definition <span class="math display">\[
 {\mathbb{N}}_{\mathbb{R}} = \bigcap_{M \in \mathcal{M}} \, M \,.
 \]</span> Let <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span>, then <span class="math inline">\(x \in M\)</span> for all <span class="math inline">\(M \in \mathcal{M}\)</span>. Since <span class="math inline">\(C \in \mathcal{M}\)</span> then <span class="math inline">\(x \in C\)</span>. This shows <span class="math inline">\({\mathbb{N}}_{\mathbb{R}} \subseteq C\)</span>.<p></p>
@@ -1648,12 +1711,12 @@ S := \bigcap_{M \in \mathcal{M}} \, M
 </div>
 <p>The definition of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> guarantees that all numbers in <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> are larger than <span class="math inline">\(1\)</span>.</p>
 <div id="theorem-n-1" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 53</strong></summary><div>Let <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span>. Then <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 56</strong></summary><div>Let <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span>. Then <span class="math display">\[
 x \geq 1 \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proof*-17" class="Proof">
+<div id="Proof*-20" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Define the set <span class="math display">\[
 C := \{ x \in \mathbb{R}\, \colon \,x \geq 1 \} \,.
 \]</span> We have that <span class="math inline">\(C\)</span> is an inductive subset of <span class="math inline">\(\mathbb{R}\)</span>.<p></p>
@@ -1662,13 +1725,13 @@ C := \{ x \in \mathbb{R}\, \colon \,x \geq 1 \} \,.
 x + 1 \geq x + 0 = x \geq 1 \,,
 \]</span> showing that <span class="math inline">\(x + 1 \geq 1\)</span>. Thus <span class="math inline">\((x + 1) \in C\)</span>.</p>
 </blockquote>
-<p>By Proposition <a href="chap_3.html#proposition-smallest-inductive">52</a> we conclude that <span class="math display">\[
+<p>By Proposition <a href="chap_3.html#proposition-smallest-inductive">55</a> we conclude that <span class="math display">\[
 {\mathbb{N}}_{\mathbb{R}} \subseteq C \,,
 \]</span> showing that <span class="math inline">\(x \geq 1\)</span> for all <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span>.</p>
 </div></details>
 </div>
-<div id="Notation-54" class="Notation">
-<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 54</strong></summary><div>We have just shown that all the numebers <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span> satisfy <span class="math display">\[
+<div id="Notation-57" class="Notation">
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 57</strong></summary><div>We have just shown that all the numebers <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span> satisfy <span class="math display">\[
 x \geq 1 \,.
 \]</span> Moreover by the fact that <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is an inductive set, we know that <span class="math display">\[
 1 + 1 \in {\mathbb{N}}_{\mathbb{R}} \,,
@@ -1684,9 +1747,9 @@ x \geq 1 \,.
 </section>
 <section id="principle-of-induction" class="level3" data-number="3.8.2">
 <h3 data-number="3.8.2" class="anchored" data-anchor-id="principle-of-induction"><span class="header-section-number">3.8.2</span> Principle of induction</h3>
-<p>The Principle of Induction is a consequence of the definition of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span>, see Definition <a href="chap_3.html#definition-natural-numbers">51</a>, and of the field axioms of <span class="math inline">\(\mathbb{R}\)</span> in Definition <a href="chap_3.html#definition-R">43</a>.</p>
+<p>The Principle of Induction is a consequence of the definition of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span>, see Definition <a href="chap_3.html#definition-natural-numbers">54</a>, and of the field axioms of <span class="math inline">\(\mathbb{R}\)</span> in Definition <a href="chap_3.html#definition-R">46</a>.</p>
 <div id="theorem-induction-new" class="Theorem" title="Principle of Induction">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 55: </strong>Principle of Induction</summary><div>Let <span class="math inline">\(\alpha(n)\)</span> be a statement depending on <span class="math inline">\(n \in {\mathbb{N}}_{\mathbb{R}}\)</span>. Assume that<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 58: </strong>Principle of Induction</summary><div>Let <span class="math inline">\(\alpha(n)\)</span> be a statement depending on <span class="math inline">\(n \in {\mathbb{N}}_{\mathbb{R}}\)</span>. Assume that<p></p>
 <ol type="1">
 <li><span class="math inline">\(\alpha(1)\)</span> is true.</li>
 <li>If <span class="math inline">\(\alpha(n)\)</span> is true then also <span class="math inline">\(\alpha(n+1)\)</span> is true.</li>
@@ -1694,7 +1757,7 @@ x \geq 1 \,.
 <p>Then <span class="math inline">\(\alpha(n)\)</span> is true for all <span class="math inline">\(n \in {\mathbb{N}}_{\mathbb{R}}\)</span>.</p>
 </div></details>
 </div>
-<div id="Proof*-18" class="Proof">
+<div id="Proof*-21" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Define the set <span class="math display">\[
 C:=\{  x \in {\mathbb{N}}_{\mathbb{R}} \, \colon \,\alpha(n) \mbox{ is true} \} \,.
 \]</span> We have that <span class="math inline">\(C\)</span> is an inductive subset of <span class="math inline">\(\mathbb{R}\)</span>.<p></p>
@@ -1705,7 +1768,7 @@ C:=\{  x \in {\mathbb{N}}_{\mathbb{R}} \, \colon \,\alpha(n) \mbox{ is true} \} 
 <li>If <span class="math inline">\(n \in C\)</span> then <span class="math inline">\(\alpha(n)\)</span> is true. By assumption <span class="math inline">\(\alpha(n+1)\)</span> is true. Therefore <span class="math inline">\((n+1) \in C\)</span>.</li>
 </ul>
 </blockquote>
-<p>By Proposition <a href="chap_3.html#proposition-smallest-inductive">52</a> we conclude that <span class="math display">\[
+<p>By Proposition <a href="chap_3.html#proposition-smallest-inductive">55</a> we conclude that <span class="math display">\[
 {\mathbb{N}}_{\mathbb{R}} \subseteq C\,.
 \]</span> As by definition <span class="math inline">\(C \subseteq {\mathbb{N}}_{\mathbb{R}}\)</span>, we have proven that <span class="math display">\[
 {\mathbb{N}}_{\mathbb{R}} = C \,,
@@ -1714,7 +1777,7 @@ C:=\{  x \in {\mathbb{N}}_{\mathbb{R}} \, \colon \,\alpha(n) \mbox{ is true} \} 
 </div>
 <p>As a consequence of the principle of induction, we can prove that <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is closed under the field operations of sum and multiplication.</p>
 <div id="theorem-N-closed" class="Theorem">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 56</strong></summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 59</strong></summary><div>
 <p>For all <span class="math inline">\(n,m \in {\mathbb{N}}_{\mathbb{R}}\)</span> we have:</p>
 <ol type="1">
 <li><p><span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is closed under addition, that is, <span class="math display">\[
@@ -1729,17 +1792,17 @@ m = n + k \,.
 </ol>
 </div></details>
 </div>
-<div id="Proof*-19" class="Proof">
+<div id="Proof*-22" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We only prove the first point, the other statements are left as an exercise. Fix <span class="math inline">\(m \in {\mathbb{N}}_{\mathbb{R}}\)</span>. We prove that <span id="eq-proof-sum-closed"><span class="math display">\[
 m + n \in {\mathbb{N}}_{\mathbb{R}} \,, \quad  \forall \, n \in {\mathbb{N}}_{\mathbb{R}} \,,
-\tag{3.24}\]</span></span> by using induction.<p></p>
+\tag{3.25}\]</span></span> by using induction.<p></p>
 <ul>
 <li>Induction base: We have <span class="math inline">\(m+1 \in {\mathbb{N}}_{\mathbb{R}}\)</span>, since <span class="math inline">\(m \in {\mathbb{N}}_{\mathbb{R}}\)</span> and <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is an inductive set.</li>
 <li>Inductive hypothesis: Suppose <span class="math inline">\(m+n \in {\mathbb{N}}_{\mathbb{R}}\)</span>. Since <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is an inductive set, we have <span class="math inline">\((m+n)+ 1 \in {\mathbb{N}}_{\mathbb{R}}\)</span>. By associativity of the sum, see axiom (A1), we get <span class="math display">\[
 m + (n + 1) = ( m + n ) + 1 \in {\mathbb{N}}_{\mathbb{R}} \,,
 \]</span> which is the desired theis.</li>
 </ul>
-<p>By the Induction Principle of Theorem <a href="chap_3.html#theorem-induction-new">55</a> we conclude (<a href="#eq-proof-sum-closed" class="quarto-xref"><span>3.24</span></a>).</p>
+<p>By the Induction Principle of Theorem <a href="chap_3.html#theorem-induction-new">58</a> we conclude (<a href="#eq-proof-sum-closed" class="quarto-xref"><span>3.25</span></a>).</p>
 </div></details>
 </div>
 <p>As a consequence of the above theorem, we see that the restriction of the operations of sum and multiplication to <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> are still binary operations: <span class="math display">\[
@@ -1747,9 +1810,9 @@ m + (n + 1) = ( m + n ) + 1 \in {\mathbb{N}}_{\mathbb{R}} \,,
 \cdot \, \colon {\mathbb{N}}_{\mathbb{R}} \times {\mathbb{N}}_{\mathbb{R}} \to {\mathbb{N}}_{\mathbb{R}} \,.
 \]</span></p>
 <p>Equipped with the above operations, <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> satisfies the following properties.</p>
-<div id="Theorem-57" class="Theorem">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 57</strong></summary><div>
-<p><span class="math inline">\(({\mathbb{N}}_{\mathbb{R}}, + , \cdot, \leq )\)</span> satisfies the following axioms from Definition <a href="chap_3.html#definition-R">43</a>:</p>
+<div id="Theorem-60" class="Theorem">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 60</strong></summary><div>
+<p><span class="math inline">\(({\mathbb{N}}_{\mathbb{R}}, + , \cdot, \leq )\)</span> satisfies the following axioms from Definition <a href="chap_3.html#definition-R">46</a>:</p>
 <ul>
 <li>(A1).</li>
 <li>(M1), (M2).</li>
@@ -1762,21 +1825,21 @@ m + (n + 1) = ( m + n ) + 1 \in {\mathbb{N}}_{\mathbb{R}} \,,
 </section>
 <section id="integers" class="level3" data-number="3.8.3">
 <h3 data-number="3.8.3" class="anchored" data-anchor-id="integers"><span class="header-section-number">3.8.3</span> Integers</h3>
-<p>We have seen in Theorem <a href="chap_3.html#theorem-N-closed">56</a> that <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is closed under addition. However <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is not closed under subtraction. We therefore define the set of <strong>integers</strong> <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> in a way that we can perform subtraction of any two natural numbers.</p>
+<p>We have seen in Theorem <a href="chap_3.html#theorem-N-closed">59</a> that <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is closed under addition. However <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is not closed under subtraction. We therefore define the set of <strong>integers</strong> <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> in a way that we can perform subtraction of any two natural numbers.</p>
 <div id="set-of-integers" class="Definition" title="Set of Integers">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 58: </strong>Set of Integers</summary><div>The set of integers in <span class="math inline">\(\mathbb{R}\)</span> is defined by <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 61: </strong>Set of Integers</summary><div>The set of integers in <span class="math inline">\(\mathbb{R}\)</span> is defined by <span class="math display">\[
 {\mathbb{Z}}_{\mathbb{R}} := \{  m - n \, \colon \,n,m \in {\mathbb{N}}_{\mathbb{R}}   \} \,.
 \]</span><p></p>
 </div></details>
 </div>
-<p>In the definition of <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> we denote by <span class="math inline">\(-n\)</span> the inverse of <span class="math inline">\(n\)</span> in <span class="math inline">\(\mathbb{R}\)</span>, which exists by the field axiom (A3) in Definition <a href="chap_3.html#definition-R">43</a>. The following characterization explains the relationship between <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> and <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span>.</p>
+<p>In the definition of <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> we denote by <span class="math inline">\(-n\)</span> the inverse of <span class="math inline">\(n\)</span> in <span class="math inline">\(\mathbb{R}\)</span>, which exists by the field axiom (A3) in Definition <a href="chap_3.html#definition-R">46</a>. The following characterization explains the relationship between <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> and <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span>.</p>
 <div id="theorem-equivalent-Z" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 59</strong></summary><div>It holds <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 62</strong></summary><div>It holds <span class="math display">\[
 {\mathbb{Z}}_{\mathbb{R}} = \{  -n \, \colon \,n \in {\mathbb{N}}_{\mathbb{R}}   \}  \cup \{0\}  \cup  {\mathbb{N}}_{\mathbb{R}}  \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proof*-20" class="Proof">
+<div id="Proof*-23" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Define the set <span class="math display">\[
 M:=  \{  -n \, \colon \,n \in {\mathbb{N}}_{\mathbb{R}}   \}  \cup \{0\}  \cup  {\mathbb{N}}_{\mathbb{R}}  \,.
 \]</span><p></p>
@@ -1799,12 +1862,12 @@ M:=  \{  -n \, \colon \,n \in {\mathbb{N}}_{\mathbb{R}}   \}  \cup \{0\}  \cup  
 <li>If <span class="math inline">\(m=n\)</span> then <span class="math display">\[
   z = m - n = m - m \stackrel{(A3)}{=} 0 \in M \,.
   \]</span></li>
-<li>If <span class="math inline">\(m&gt;n\)</span>, by Theorem <a href="chap_3.html#theorem-N-closed">56</a> there exists <span class="math inline">\(k \in {\mathbb{N}}_{\mathbb{R}}\)</span> such that <span class="math inline">\(m = k + n\)</span>. Therefore <span class="math display">\[\begin{align*}
+<li>If <span class="math inline">\(m&gt;n\)</span>, by Theorem <a href="chap_3.html#theorem-N-closed">59</a> there exists <span class="math inline">\(k \in {\mathbb{N}}_{\mathbb{R}}\)</span> such that <span class="math inline">\(m = k + n\)</span>. Therefore <span class="math display">\[\begin{align*}
   z &amp; = m - n = (k + n) - n  \\
 &amp; \stackrel{(A1)}{=} k + (n-n) \stackrel{(A3)}{=} k + 0 \\
 &amp; \stackrel{(A2)}{=} k   \in M \,,
   \end{align*}\]</span> since <span class="math inline">\(k \in {\mathbb{N}}_{\mathbb{R}}\)</span>.</li>
-<li>If <span class="math inline">\(m&lt;n\)</span>, by Theorem <a href="chap_3.html#theorem-N-closed">56</a> there exists <span class="math inline">\(k \in {\mathbb{N}}_{\mathbb{R}}\)</span> such that <span class="math inline">\(n = k + m\)</span>. Therefore <span class="math display">\[
+<li>If <span class="math inline">\(m&lt;n\)</span>, by Theorem <a href="chap_3.html#theorem-N-closed">59</a> there exists <span class="math inline">\(k \in {\mathbb{N}}_{\mathbb{R}}\)</span> such that <span class="math inline">\(n = k + m\)</span>. Therefore <span class="math display">\[
   z = m - n = - k  \in M \,,
   \]</span> since <span class="math inline">\(k \in {\mathbb{N}}_{\mathbb{R}}\)</span>, where again we have used (implicitly) the field axioms (A1), (A2) and (A3).</li>
 </ul></li>
@@ -1814,7 +1877,7 @@ M:=  \{  -n \, \colon \,n \in {\mathbb{N}}_{\mathbb{R}}   \}  \cup \{0\}  \cup  
 </div>
 <p>Like we did with <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span>, we can also show that <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> is closed under the operations of sum and multiplication.</p>
 <div id="theorem-Z-closed" class="Theorem">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 60</strong></summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 63</strong></summary><div>
 <p>For all <span class="math inline">\(n,m \in {\mathbb{Z}}_{\mathbb{R}}\)</span> we have:</p>
 <ol type="1">
 <li><p><span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> is closed under addition, that is, <span class="math display">\[
@@ -1826,14 +1889,14 @@ m \cdot n \in {\mathbb{Z}}_{\mathbb{R}} \,,
 </ol>
 </div></details>
 </div>
-<p>The proof is left as an exercise. As a consequence of Theorem <a href="chap_3.html#theorem-Z-closed">60</a> we have that the restriction of the operations of sum and multiplication to <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> are still binary operations: <span class="math display">\[
+<p>The proof is left as an exercise. As a consequence of Theorem <a href="chap_3.html#theorem-Z-closed">63</a> we have that the restriction of the operations of sum and multiplication to <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> are still binary operations: <span class="math display">\[
 + \, \colon {\mathbb{Z}}_{\mathbb{R}} \times {\mathbb{Z}}_{\mathbb{R}} \to {\mathbb{Z}}_{\mathbb{R}} \,, \quad
 \cdot \, \colon {\mathbb{Z}}_{\mathbb{R}} \times {\mathbb{Z}}_{\mathbb{R}} \to {\mathbb{Z}}_{\mathbb{R}} \,.
 \]</span></p>
 <p>Equipped with the above operations, <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> satisfies the following properties.</p>
 <div id="theorem-Z-axioms" class="Theorem">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 61</strong></summary><div>
-<p><span class="math inline">\(({\mathbb{Z}}_{\mathbb{R}}, + , \cdot, \leq )\)</span> satisfies the following axioms from Definition <a href="chap_3.html#definition-R">43</a>:</p>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 64</strong></summary><div>
+<p><span class="math inline">\(({\mathbb{Z}}_{\mathbb{R}}, + , \cdot, \leq )\)</span> satisfies the following axioms from Definition <a href="chap_3.html#definition-R">46</a>:</p>
 <ul>
 <li>(A1), (A2), (A3).</li>
 <li>(M1), (M2).</li>
@@ -1842,7 +1905,7 @@ m \cdot n \in {\mathbb{Z}}_{\mathbb{R}} \,,
 </ul>
 </div></details>
 </div>
-<div id="Proof*-21" class="Proof">
+<div id="Proof*-24" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>The fact that <span class="math display">\[
 \mbox{(A1), (A2), (M1), (M2), (O1)-(O4), (AM), (AO), (MO)}
 \]</span> are satisfied descends immediately from the inclusion <span class="math display">\[
@@ -1853,14 +1916,14 @@ z + y = (m - n) + (n - m) = (m - m) + (n - n) = 0 \,.
 </div></details>
 </div>
 <div id="remark-Z-axioms" class="Remark">
-<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 62</strong></summary><div>
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 65</strong></summary><div>
 <p><span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> does not satisfy (M3).</p>
 <blockquote class="blockquote">
-<p>For example, let us show that <span class="math inline">\(2 \in {\mathbb{Z}}_{\mathbb{R}}\)</span> has no inverse in <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span>. Indeed, let <span class="math inline">\(m \in {\mathbb{Z}}_{\mathbb{R}}\)</span>. By Theorem <a href="chap_3.html#theorem-equivalent-Z">59</a> we have 3 cases:</p>
+<p>For example, let us show that <span class="math inline">\(2 \in {\mathbb{Z}}_{\mathbb{R}}\)</span> has no inverse in <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span>. Indeed, let <span class="math inline">\(m \in {\mathbb{Z}}_{\mathbb{R}}\)</span>. By Theorem <a href="chap_3.html#theorem-equivalent-Z">62</a> we have 3 cases:</p>
 <ul>
 <li><p><span class="math inline">\(m \in {\mathbb{N}}_{\mathbb{R}}\)</span>: Since <span class="math inline">\(2 &gt; 1\)</span> we have <span class="math display">\[
 2 \cdot m &gt; 1 \cdot m  \geq 1
-\]</span> where in the last inequality we used that <span class="math inline">\(m \geq 1\)</span> for all <span class="math inline">\(m \in {\mathbb{N}}_{\mathbb{R}}\)</span>, as shown in Theorem <a href="chap_3.html#theorem-n-1">53</a>. The above shows that <span class="math display">\[
+\]</span> where in the last inequality we used that <span class="math inline">\(m \geq 1\)</span> for all <span class="math inline">\(m \in {\mathbb{N}}_{\mathbb{R}}\)</span>, as shown in Theorem <a href="chap_3.html#theorem-n-1">56</a>. The above shows that <span class="math display">\[
 2 \cdot m &gt; 1\,,
 \]</span> and therefore <span class="math inline">\(m\)</span> cannot be the inverse of <span class="math inline">\(2\)</span>.</p></li>
 <li><p><span class="math inline">\(m=0\)</span>: Then <span class="math inline">\(2 \cdot m = 0\)</span>, so that <span class="math inline">\(m\)</span> cannot be the inverse of <span class="math inline">\(2\)</span>.</p></li>
@@ -1875,35 +1938,35 @@ z + y = (m - n) + (n - m) = (m - m) + (n - n) = 0 \,.
 </section>
 <section id="rational-numbers" class="level3" data-number="3.8.4">
 <h3 data-number="3.8.4" class="anchored" data-anchor-id="rational-numbers"><span class="header-section-number">3.8.4</span> Rational numbers</h3>
-<p>In Theorem <a href="chap_3.html#theorem-Z-axioms">61</a> and <a href="chap_3.html#remark-Z-axioms">62</a> we have seen that <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> satisfy all the field axiom, except for (M3). We therefore extend <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> in a way that the extension contains multiplicative inverses. The extension is the set of rational numbers <span class="math inline">\({\mathbb{Q}}_{\mathbb{R}}\)</span>.</p>
+<p>In Theorem <a href="chap_3.html#theorem-Z-axioms">64</a> and <a href="chap_3.html#remark-Z-axioms">65</a> we have seen that <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> satisfy all the field axiom, except for (M3). We therefore extend <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> in a way that the extension contains multiplicative inverses. The extension is the set of rational numbers <span class="math inline">\({\mathbb{Q}}_{\mathbb{R}}\)</span>.</p>
 <div id="set-of-rational-numbers" class="Definition" title="Set of Rational Numbers">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 63: </strong>Set of Rational Numbers</summary><div>The set of rational numbers in <span class="math inline">\(\mathbb{R}\)</span> is <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 66: </strong>Set of Rational Numbers</summary><div>The set of rational numbers in <span class="math inline">\(\mathbb{R}\)</span> is <span class="math display">\[
 {\mathbb{Q}}_{\mathbb{R}} := \left\{   \frac{m}{n} \, \colon \,m \in {\mathbb{Z}}_{\mathbb{R}}\,, \,\, n \in {\mathbb{N}}_{\mathbb{R}}     \right\} \,.
 \]</span><p></p>
 </div></details>
 </div>
 <p>Notice that in the above definition we are just using the field axiom (M3), with <span class="math display">\[
 \frac{m}{n} := m \cdot n^{-1} \,.
-\]</span> The inverse of <span class="math inline">\(n\)</span> exists because we are assuming <span class="math inline">\(n \in {\mathbb{N}}_{\mathbb{R}}\)</span>, and therefore <span class="math inline">\(n\)</span> cannot be <span class="math inline">\(0\)</span>, as a consequence of Theorem <a href="chap_3.html#theorem-n-1">53</a>.</p>
+\]</span> The inverse of <span class="math inline">\(n\)</span> exists because we are assuming <span class="math inline">\(n \in {\mathbb{N}}_{\mathbb{R}}\)</span>, and therefore <span class="math inline">\(n\)</span> cannot be <span class="math inline">\(0\)</span>, as a consequence of Theorem <a href="chap_3.html#theorem-n-1">56</a>.</p>
 <p>The set <span class="math inline">\({\mathbb{Q}}_{\mathbb{R}}\)</span> is closed under addition and multiplication (exercise). Therefore they are well defined the operations: <span class="math display">\[
 + \, \colon {\mathbb{Q}}_{\mathbb{R}} \times {\mathbb{Q}}_{\mathbb{R}} \to {\mathbb{Q}}_{\mathbb{R}} \,, \quad
 \cdot \, \colon {\mathbb{Q}}_{\mathbb{R}} \times {\mathbb{Q}}_{\mathbb{R}} \to {\mathbb{Q}}_{\mathbb{R}} \,.
 \]</span></p>
-<div id="Theorem-64" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 64</strong></summary><div><span class="math inline">\(({\mathbb{Q}}_{\mathbb{R}}, + , \cdot, \leq)\)</span> is an ordered field.<p></p>
+<div id="Theorem-67" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 67</strong></summary><div><span class="math inline">\(({\mathbb{Q}}_{\mathbb{R}}, + , \cdot, \leq)\)</span> is an ordered field.<p></p>
 </div></details>
 </div>
-<div id="Proof*-22" class="Proof">
+<div id="Proof*-25" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>All the field properties, except for (M3), follow from the inclusion <span class="math display">\[
 {\mathbb{Q}}_{\mathbb{R}} \subseteq \mathbb{R}
-\]</span> and from the field properties of <span class="math inline">\(\mathbb{R}\)</span>. To check (M3), let <span class="math inline">\(q \in {\mathbb{Q}}_{\mathbb{R}}\)</span> with <span class="math inline">\(q \neq 0\)</span>. Therefore <span class="math inline">\(q = m/n\)</span> for <span class="math inline">\(m \in {\mathbb{Z}}_{\mathbb{R}}\)</span>, <span class="math inline">\(n \in {\mathbb{N}}_{\mathbb{R}}\)</span>. As <span class="math inline">\(q \neq 0\)</span> and <span class="math inline">\(n \neq 0\)</span>, see Theorem <a href="chap_3.html#theorem-n-1">53</a>, we deduce that <span class="math inline">\(m \neq 0\)</span>. We have two cases:<p></p>
+\]</span> and from the field properties of <span class="math inline">\(\mathbb{R}\)</span>. To check (M3), let <span class="math inline">\(q \in {\mathbb{Q}}_{\mathbb{R}}\)</span> with <span class="math inline">\(q \neq 0\)</span>. Therefore <span class="math inline">\(q = m/n\)</span> for <span class="math inline">\(m \in {\mathbb{Z}}_{\mathbb{R}}\)</span>, <span class="math inline">\(n \in {\mathbb{N}}_{\mathbb{R}}\)</span>. As <span class="math inline">\(q \neq 0\)</span> and <span class="math inline">\(n \neq 0\)</span>, see Theorem <a href="chap_3.html#theorem-n-1">56</a>, we deduce that <span class="math inline">\(m \neq 0\)</span>. We have two cases:<p></p>
 <ul>
-<li><span class="math inline">\(m&gt;0\)</span>: In this case <span class="math inline">\(m \in {\mathbb{N}}_{\mathbb{R}}\)</span> by Theorem <a href="chap_3.html#theorem-equivalent-Z">59</a>. Therefore <span class="math display">\[
+<li><span class="math inline">\(m&gt;0\)</span>: In this case <span class="math inline">\(m \in {\mathbb{N}}_{\mathbb{R}}\)</span> by Theorem <a href="chap_3.html#theorem-equivalent-Z">62</a>. Therefore <span class="math display">\[
 p = \frac{n}{m} \in {\mathbb{Q}}_{\mathbb{R}}
 \]</span> by definition, since <span class="math inline">\(n,m \in {\mathbb{N}}_{\mathbb{R}}\)</span>. By commutativity we have <span class="math display">\[
 q \cdot p = \frac{m}{n} \cdot \frac{n}{m} = 1 \,.
 \]</span></li>
-<li><span class="math inline">\(m&lt;0\)</span>: Then <span class="math inline">\(m=-x\)</span> with <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span> by Theorem <a href="chap_3.html#theorem-equivalent-Z">59</a>. Therefore <span class="math display">\[
+<li><span class="math inline">\(m&lt;0\)</span>: Then <span class="math inline">\(m=-x\)</span> with <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span> by Theorem <a href="chap_3.html#theorem-equivalent-Z">62</a>. Therefore <span class="math display">\[
 p = \frac{-n}{x} \in {\mathbb{Q}}_{\mathbb{R}}
 \]</span> by definition, since <span class="math inline">\(-n \in {\mathbb{Z}}_{\mathbb{R}}\)</span> and <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span>. By commutativity we have <span class="math display">\[
 q \cdot p = \frac{m}{n} \cdot \frac{-n}{x} = \frac{m}{n} \cdot \frac{-n}{-m} = 1 \,.
@@ -1913,13 +1976,13 @@ q \cdot p = \frac{m}{n} \cdot \frac{-n}{x} = \frac{m}{n} \cdot \frac{-n}{-m} = 1
 </div></details>
 </div>
 <p>The set <span class="math inline">\({\mathbb{Q}}_{\mathbb{R}}\)</span> does not have the Cut Property or the Axiom of Completeness.</p>
-<div id="Theorem-65" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 65</strong></summary><div><span class="math inline">\({\mathbb{Q}}_{\mathbb{R}}\)</span> is not complete.<p></p>
+<div id="Theorem-68" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 68</strong></summary><div><span class="math inline">\({\mathbb{Q}}_{\mathbb{R}}\)</span> is not complete.<p></p>
 </div></details>
 </div>
-<p>The proof of the above Theorem is a one to one copy of the proof of Theorem <a href="chap_3.html#theorem-Q-not-complete">36</a>: indeed the proof of Theorem <a href="chap_3.html#theorem-Q-not-complete">36</a> only makes use of field axioms, and thus it applies to <span class="math inline">\({\mathbb{Q}}_{\mathbb{R}}\)</span>.</p>
-<div id="Notation-66" class="Notation">
-<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 66</strong></summary><div>From now on we denote <span class="math display">\[
+<p>The proof of the above Theorem is a one to one copy of the proof of Theorem <a href="chap_3.html#theorem-Q-not-complete">39</a>: indeed the proof of Theorem <a href="chap_3.html#theorem-Q-not-complete">39</a> only makes use of field axioms, and thus it applies to <span class="math inline">\({\mathbb{Q}}_{\mathbb{R}}\)</span>.</p>
+<div id="Notation-69" class="Notation">
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 69</strong></summary><div>From now on we denote <span class="math display">\[
 \mathbb{N}:= {\mathbb{N}}_{\mathbb{R}} \,,  \quad
 \mathbb{Z}:= {\mathbb{Z}}_{\mathbb{R}} \,,  \quad
 \mathbb{Q}:= {\mathbb{Q}}_{\mathbb{R}} \,,  \quad
