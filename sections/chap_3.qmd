@@ -965,13 +965,13 @@ However we see that $0 \in A$ while $1 \notin A$. We will see that
 
 ### Upper bound, supremum, maximum 
 
-We start by defining the supremum. First we need the notion of upper bound of a set.
+We start by defining the supremum. First we need the notion of upper bound of a set. In the following we assume that $(K,+,\cdot,\leq)$ is an ordered field.
 
 
 ::: Definition
 ### Upper bound and bounded above
 
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$:
+Let $A \subseteq K$:
 
 1. We say that $b \in K$ is an **upper bound** for $A$ if
 $$
@@ -986,7 +986,7 @@ $$
 ::: Definition 
 ### Supremum
 
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. A number $s \in K$ is called **least upper bound** or **supremum** of $A$ if:
+Let $A \subseteq K$. A number $s \in K$ is called **least upper bound** or **supremum** of $A$ if:
 
 i. $s$ is an upper bound for $A$,
 ii. $s$ is the smallest upper bound of $A$, that is, 
@@ -1009,7 +1009,9 @@ Note that if a set $A \subseteq K$ in **NOT** bounded above, then the supremum d
 
 
 ::: Proposition
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. If 
+### Uniqueness of sup {#proposition-sup-unique}
+
+Let $A \subseteq K$. If 
 $$
 \sup A
 $$
@@ -1040,7 +1042,7 @@ This shows $s_1 = s_2$.
 
 
 ::: Warning
-In general:
+It could happen that:
 
 - A set can have infinite upper bounds,
 - The supremum does not belong to the set.
@@ -1077,7 +1079,7 @@ $$
 
 ::: Definition 
 ### Maximum
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. A number $M \in K$ is called the **maximum** of $A$ if:
+Let $A \subseteq K$. A number $M \in K$ is called the **maximum** of $A$ if:
 $$
 M \in A   \,\, \mbox{ and } \,\, a \leq M  \,, \, \forall a \in A \,.
 $$
@@ -1089,8 +1091,10 @@ $$
 
 
 
-::: Proposition
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. If the maximum of $A$ exists, then also the supremum exists, and
+::: Proposition 
+### Relationship between Max and Sup {#proposition-max-sup}
+
+Let $A \subseteq K$. If the maximum of $A$ exists, then also the supremum exists, and
 $$
 \sup A = \max A \,.
 $$
@@ -1122,7 +1126,7 @@ Therefore $M$ is the least upper bound of $A$, meaning that $M = \sup A$.
 
 
 ::: Warning
-The converse of the above statement is not true: In general the $\sup$ might exist while the $\max$ does not. For example
+The converse of the above statement is false: In general the $\sup$ might exist while the $\max$ does not. For example
 $$
 A = [0,1) \cap \Q
 $$
@@ -1147,7 +1151,7 @@ $$
 
 ### Lower bound, infimum, minimum
 
-We now introduce the definitions of lower bound, infimum, minimum. These are the counterpart of upper bound, supremum and maximum, respectively.
+We now introduce the definitions of lower bound, infimum, minimum. These are the counterpart of upper bound, supremum and maximum, respectively. In the following $(K,+,\cdot,\leq)$ is an ordered field. 
 
 
 
@@ -1155,7 +1159,7 @@ We now introduce the definitions of lower bound, infimum, minimum. These are the
 ::: Definition
 ### Upper bound, bounded below, infimum, minimum
 
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$:
+Let $A \subseteq K$:
 
 1. We say that $l \in K$ is a **lower bound** for $A$ if
 $$
@@ -1191,7 +1195,7 @@ $$
 
 
 ::: Proposition
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$:
+Let $A \subseteq K$:
 
 1. If $\inf A$ exists, then it is unique.
 2. If the minimum of $A$ exists, then also the infimum exists, and
@@ -1201,15 +1205,13 @@ $$
 
 :::
 
-The proof uses similar arguments to the one employed in the previous section, and is left to the reader as an exercise.
-
-
+The proof is similar to the ones of Propositions \ref{proposition-sup-unique} and \ref{proposition-max-sup}, and is left to the reader as an exercise.
 
 
 ::: Warning
-We have
+It could happen that:
 
-- A set can have infinite lower bounds,
+- A set has infinite lower bounds,
 - The infimum does not belong to the set.
 
 For example
@@ -1261,41 +1263,37 @@ $$
 
 
 ::: Proposition
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. If $\inf A$ and $\sup A$ exist, then
+Let $A \subseteq K$. If $\inf A$ and $\sup A$ exist, then
 $$
-\inf A \leq a \leq \sup A \,, \quad \forall a \in A \,.
+\inf A \leq a \leq \sup A \,, \quad \forall \, a \in A \,.
 $$
 :::
 
-The proof is simple, and is left as an exercise. We now have a complete picture about supremum and infimum, see figure below.
+The proof is trivial, and is left as an exercise. We now have a complete picture about supremum and infimum, see @fig-inf-sup.
 
 
 
-![Supremum, upper bounds, infimum and lower bounds of a set $A$ in $K$](/images/definition_sup_inf.png){width=70%}
+![Supremum, upper bounds, infimum and lower bounds of a set $A$ in $K$](/images/definition_sup_inf.png){#fig-inf-sup width=70%}
 
 
 
-
-
-
-We conclude with another simple proposition. The proof is again left to the reader.
+We conclude with another simple, but useful proposition. The proof is again left to the reader.
 
 
 ::: Proposition
 ### Relationship between sup and inf {#proposition-inf-sup}
 
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. 
-Define 
+Let $A \subseteq K$. Define 
 $$
 - A := \{ - a \divider a \in A \} \,.
 $$
-It holds:
+They holds
 
-- If $\sup A$ exists, then $\inf A$ exists and
+1. If $\sup A$ exists, then $\inf A$ exists and
 $$
 \inf(-A) = - \sup A \,.
 $$
-- If $\inf A$ exists, then $\sup A$ exists and
+2. If $\inf A$ exists, then $\sup A$ exists and
 $$
 \sup(-A) = - \inf A \,.
 $$
@@ -1307,12 +1305,10 @@ $$
 
 ## Completeness
 
-
-We have introduced the concepts of supremum and infimum on an ordered field $K$. 
-
+In this section $(K,+,\cdot, \leq)$ denotes an ordered field.
 
 ::: Question
-Suppose $(K,+,\cdot, \leq)$ is an ordered field, and that $A \subseteq K$ is non-empty and bounded above. Does
+Let $A \subseteq K$ be non-empty and bounded above. Does
 $$
 \sup A 
 $$
@@ -1333,41 +1329,42 @@ There exists a set $A \subseteq \Q$ such that
 - $\sup A$ does not exist in $\Q$. 
 :::
 
-The proof uses the same ideas we used for showing that $\Q$ does not have the Cut Property.
+The proof uses similar ideas we used for showing that $\Q$ does not have the Cut Property, see Theorem \ref{theorem-Q-cut}.
 
 ::: Proof
-Define the set $A$ as in (@eq-no-sup-in-Q). Equivalently, this can be written as
+Define the set
 $$
 A = \{ q \in \Q  \divider q \geq 0 \,, \,\, q^2 < 2 \} \,.
 $$
+Notice that $A$ formally coincides with the set in (@eq-no-sup-in-Q).
 
 *Step 1. $A$ is bounded above.*  
-Take $b:=9$. Then $b$ is an upper bound for $A$. Indeed by definition 
+Take $b:=3$. Then $b$ is an upper bound for $A$. Indeed by definition 
 $$
-q^2 < 2 \,, \,\, q \geq 0 \,, \,\,\, \forall q \in A \,.
+q^2 < 2 \,, \,\, q \geq 0 \,, \,\,\, \forall \, q \in A \,.
 $$
 Therefore 
 $$
-q^2 < 2 < 9  \implies q^2 < 9 \implies q < 3 = b \, .
+q^2 < 2 < 9  \implies q^2 < 9 \implies q < 3 = b
 $$
+for each $q \in A$, showing that $b=3$ is an upper bound for $A$.
 
-*Step 2. $\sup A$ does not exist.*  
-Assume by contradiction that 
+*Step 2. The supremum of $A$ does not exist in $\Q$.*  
+Assume by contradiction that there exists
 $$
 s = \sup A \in \Q
 $$
-exists. By definition it holds
+By definition it holds
 $$
-s \geq q \,, \quad \forall \, q \in A
+q \leq s \,, \quad \forall \, q \in A
 $$ {#eq-sup-contradiction-1}
 $$
-b \geq q \,, \, \forall \, q \in A \,\, \implies \,\, 
+q \leq b  \,, \, \forall \, q \in A \,\, \implies \,\, 
 s \leq b 
 $$ {#eq-sup-contradiction-2}
-There are two possibilities: $s \in A$ or $s \notin A$:
+There are two possibilities: $s \in A$ or $s \notin A$.
 
-- *Case 1. $s \in A$*.  
-If $s \in A$ by definition
+*Case 1*.  If $s \in A$, by definition of $A$ we have
 $$
 s  \geq 0\,, \quad s^2 < 2 \,.
 $${#eq-sup-contradiction-3}
@@ -1398,7 +1395,11 @@ To summarize, we have just shown that
 $$
 n >\frac{2s + 1}{2 - s^2}  \,\, \implies \,\, \widetilde{s}^2 < 2 \,.
 $$
-Moreover $\widetilde{s} := (s + 1/n) \in \Q$. Therefore
+Moreover $\widetilde{s} := (s + 1/n) \in \Q$ and
+$$
+\tilde{s} > s \geq 0 \,,
+$$
+showing that
 $$
 \widetilde{s} \in A \,.
 $$
@@ -1412,10 +1413,13 @@ $$
 $$
 yielding a contradiction. Thus $s \in A$ is not possible. 
 
-- *Case 2. $s \notin A$*.  
-If $s \notin A$, by the fact that $s = \sup A$ and by definition of $A$ we get
+*Case 2.* Assume $s \notin A$. Since $s = \sup A$ and $0 \in A$, we deduce that
 $$
-s > 0 \,, \quad s^2 > 2 \,.
+s>0 \,.
+$$
+In particular $s \notin A$ implies that
+$$
+s^2 > 2 \,.
 $${#eq-sup-contradiction-4}  
 Define 
 $$
@@ -1441,15 +1445,30 @@ By (@eq-sup-contradiction-4) we have $s^2 > 2$. Therefore we can divide by $(s^2
 $$
 n > \frac{1+2s}{s^2 - 2} \,.
 $$
-In total, we have just shown that 
+In summary, we have just shown that 
 $$
  n > \frac{1+2s}{s^2 - 2} \quad \implies \quad \widetilde{s}^2 > 2\,.
 $$
-Therefore $\widetilde{s} \notin A$, and by definition of $A$ we have
+We also want to choose $n$ in such a way that
 $$
-\widetilde{s} \geq q \,, \quad \forall q \in A\,.
+\widetilde{s} > 0
 $$
-Moreover $\widetilde{s} := (s - 1/n) \in \Q$. Therefore $\widetilde{s}$ is an upper bound of $A$ in $\Q$. Since $s=\sup A$ is the smallest upper bound, see (@eq-sup-contradiction-2), it follows
+This means
+$$
+0 < \widetilde{s} = s - \frac1n \quad \iff \quad n > \frac{1}{s}
+$$
+Therefore 
+$$
+n > \min \left\{ \frac{1+2s}{s^2 - 2}, \frac1s  \right\} \quad \implies \quad \widetilde{s} > 0\,, \quad \widetilde{s}^2 > 2 
+$$
+In particular $\widetilde{s} \notin A$, and by definition of $A$ we have
+$$
+\widetilde{s} \geq q \,, \quad \forall \, q \in A\,.
+$$
+
+>Indeed, assume $\widetilde{s} < q$ for some $q \in A$. Since $\widetilde{s}>0$, we can take the squares and deduce that $\widetilde{s}^2<q^2<2$, which is a contradiction.
+
+By definition we have $\widetilde{s} = (s - 1/n) \in \Q$. Therefore $\widetilde{s}$ is an upper bound for $A$ in $\Q$. Since $s=\sup A$ is the smallest upper bound, see (@eq-sup-contradiction-2), it follows that
 $$
 s \leq \widetilde{s} \,.
 $$
@@ -1459,15 +1478,14 @@ $$
 $$
 obtaining a contradiction. Then $s \notin A$. 
 
-*Conclusion.*  
-We have assumed by contradiction that $s = \sup A$ exists in $\Q$. In this case either $s \in A$ or $s \notin A$. In both cases we found a contradiction. Therefore $\sup A$ does not exist.    
+*Conclusion.*  We have assumed by contradiction that $s = \sup A$ exists in $\Q$. In this case either $s \in A$ or $s \notin A$. In both instances we found a contradiction. Therefore $\sup A$ does not exist in $\Q$.    
 :::
 
 The above theorem shows that the supremum does not necessarily exist. What about the infimum? 
 
 
 ::: Question
-Suppose $(K,+,\cdot, \leq)$ is an ordered field, and that $A \subseteq K$ is non-empty and bounded below. Does
+Let $A \subseteq K$ be non-empty and bounded below. Does
 $$
 \inf A 
 $$
@@ -1481,7 +1499,7 @@ $$
 The proof of this fact is, of course, very similar to the one of Theorem \ref{theorem-Q-not-complete}, and is therefore omitted.
 
 
-Thus infimum and supremum do not exist in general. The fields for which all the bounded sets admit supremum or infimum are called **complete**.
+In conclusion, infimum and supremum do not exist in general. The fields for which all bounded sets admit supremum or infimum are called **complete**.
 
 
 ::: Definition
@@ -1498,10 +1516,11 @@ $$
 
 
 ::: Notation
-We have that:
 
-- Property (AC) is called **Axiom of Completeness**
-- If $K$ is an ordered field in which (AC) holds, then $K$ is called a **complete ordered field**
+1. Property (AC) is called **Axiom of Completeness**
+
+2. If $K$ is an ordered field in which (AC) holds, then $K$ is called a **complete ordered field**
+
 :::
 
 
@@ -1520,7 +1539,7 @@ Suppose that $A \subseteq K$ is non-empty and bounded below. Then
 $$
 -A:= \{ -a \divider a \in A   \}
 $$
-is non-empty and bounded above. By completeness we have that $\sup(-A)$ exists in $K$. But then Proposition \ref{proposition-inf-sup} implies that $\inf A$ exists in $K$, with
+is non-empty and bounded above. By completeness we have that $\sup(-A)$ exists in $K$. From Proposition \ref{proposition-inf-sup} we deduce that $\inf A$ exists in $K$, with
 $$
 \inf A = - \sup (-A)\,. 
 $$
@@ -1533,12 +1552,12 @@ $$
 
 
 
-We can show that **Completeness** is equivalent to the **Cut Property**. Such result is not essential, but its proof is very instructive.
+We can show that **Completeness** is equivalent to the **Cut Property**.
 
 
 ::: Theorem 
 ### Equivalence of Cut Property and Completeness  {#theorem-cut-complete}
-Let $(K,+,\cdot, \leq)$ be an ordered field. Then they are equivalent:
+Let $(K,+,\cdot, \leq)$ be an ordered field. They are equivalent:
 
 1. $K$ has the **Cut Property**
 2. $K$ is **Complete**
@@ -1551,43 +1570,42 @@ Let $(K,+,\cdot, \leq)$ be an ordered field. Then they are equivalent:
 
 The proof of Theorem \ref{theorem-cut-complete} is rather long, but the ideas are simple:
 
-*Step 1. Cut Property $\implies$ Completeness*. Suppose $K$ has the Cut Property. To prove that $K$ is Complete, we need to: 
+*Step 1. Cut Property $\implies$ Completeness*. 
 
-- Consider an arbitrary set $A \subseteq K$ such that $A \neq \emptyset$ and $A$ is bounded above.
+Suppose $K$ has the Cut Property. To prove that $K$ is Complete, we need to: 
 
-- Show that $A$ has a supremum.  
+1. Consider an arbitrary set $A \subseteq K$ such that $A \neq \emptyset$ and $A$ is bounded above.
 
-To achieve this, consider the set
+2. Show that $A$ has a supremum.  
+
+To achieve this, consider the set of upper bounds of $A$
 $$
 B := \{ b \in K \divider b \geq a \,, \,\, \forall a \in A \} \,,
 $$
-which is the set of Upper Bounds of $A$. We can show that the pair
+We can show that the pair
 $$
 (B^c,B)
 $$
 is a Cut of $K$. As $K$ has the Cut Property, then there exists
-$s \in K$ separator of $(B^c,B)$. We will show that the separator $s$ is the supremum of $A$ 
+$s \in K$ separator of $(B^c,B)$. We will show that such separator $s$ is the supremum of $A$, i.e., 
 $$
 s = \sup A \,.
 $$
-Thus $K$ is complete. See @fig-cut-complete-1 for a schematic picture of the above construction.
+This proves completeness of $K$. See @fig-cut-complete-1 for a schematic picture of the above construction.
 
 
 *Step 2. Completeness $\implies$ Cut Property*.
+
 Conversely, suppose that $K$ is Complete. To prove that $K$ has the Cut Property, we need to:
 
-- Consider a cut $(A,B)$ of $K$.
-- Show that $(A,B)$ has a separator $s \in K$.
+1. Consider a cut $(A,B)$ of $K$.
+2. Show that $(A,B)$ has a separator $s \in K$.
 
-This implication is easier. Indeed, since $A$ is non-empty and bounded above, by Completeness there exists
+This implication is easier. Indeed, since $A$ is non-empty and bounded above (by the elements of $B$), by Completeness there exists
 $$
-\sup A \in K \,.
+s:=\sup A \in K \,.
 $$
-We will show that
-$$
-s := \sup A 
-$$
-is a separator for the cut $(A,B)$. See @fig-cut-complete-2 for a schematic picture of the above construction.
+We will show that $s$ is a separator for the cut $(A,B)$, and therefore $K$ has the Cut Property. See @fig-cut-complete-2 for a schematic picture of the above construction.
 
 
 :::
@@ -1744,7 +1762,7 @@ The definition of $\R$ is given in an axiomatic way.
 ### System of Real Numbers $\R$   {#definition-R}
 
 A system of Real Numbers is a set $\R$ with two operations $+$ and $\cdot$, and
-an order relation $\leq$, such that
+a total order relation $\leq$, such that
 
 
 - $(\R,+,\cdot, \leq)$ is an ordered field
@@ -1830,8 +1848,8 @@ The multiplication satisifes: $\, \forall \, x,y,z \in \R$
     x \geq 0, \, y \geq 0  \,\, \implies \,\, x \cdot y  \geq 0
     $$
 
-5. **Axiom of Completeness** holds:
-    - (AC) For every $A \subseteq \R$ non-empty and bounded above 
+5. **Axiom of Completeness**:
+    - (AC) For every $A \subseteq \R$ non-empty and bounded above, there exists 
     $$
     \sup A \in \R
     $$   
@@ -1855,7 +1873,7 @@ Since **Axiom of Completeness** and **Cut Property** are equivalent by Theorem \
 ::: Notation
 For $x \in \R$, $x \neq 0$, the multiplicative inverse is also denoted by 
 $$
-x^{-1} = \frac{1}{x} \,.
+x^{-1} := \frac{1}{x} \,.
 $$
 :::
 
@@ -1869,22 +1887,21 @@ $$
 
 Recall that
 
-- $(K,+,\cdot)$ satisfying
+- $(K,+,\cdot)$ is a **field** if they hold:
 $$
 \mbox{(A1)-(A3), (M1)-(M3), (AM)}
 $$ 
-is a **field** 
-- $(K,+,\cdot, \geq)$ satisfying 
+
+- $(K,+,\cdot, \geq)$ is an **ordered field** if they hold 
 $$
 \mbox{(A1)-(A3), (M1)-(M3), (O1)-(O4) ,(AM), (AO), (MO)}
 $$ 
-is an **ordered field**
 
 In particular we have that
 $$
 (\R,+, \cdot,\leq)
 $$ 
-is a **complete ordered field**: that is, an ordered field in which the **Cut Property** (CP) or **Axiom of Completeness** (AC) hold
+is a **complete ordered field**: that is, an ordered field in which the **Cut Property** (CP) or **Axiom of Completeness** (AC) hold.
 :::
 
 
@@ -1892,7 +1909,7 @@ is a **complete ordered field**: that is, an ordered field in which the **Cut Pr
 ::: Important
 It can be shown that $(\R,+, \cdot,\leq)$ is the **only** complete ordered field.   
 
-> The above has to be intended in the following sense: if $(K,+, \cdot,\geq)$ is another complete ordered field, then $K$ *looks like* $\R$. Mathematically this means that there exists an invertible map 
+> The above has to be intended in the following sense: if $(K,+, \cdot,\leq)$ is another complete ordered field, then $K$ *looks like* $\R$. Mathematically this means that there exists an invertible map 
 $\Psi \ \colon \R \to K$, called isomorphism of fields, which preserves the operations $+$, $\cdot$ and the order $\leq$.
 
 :::
@@ -1904,7 +1921,18 @@ $\Psi \ \colon \R \to K$, called isomorphism of fields, which preserves the oper
 We have only postulated the existence of $\R$. Does such complete ordered field actually exist? 
 :::
 
-The answer is **YES**. There are several equivalent models for the system $\R$. If time allows, we will look into one of these models at the end of the module.
+The answer is **YES**. There are several equivalent methods for explicitly constructing the system $\R$. One such method uses **Dedekind cuts**. The interested reader can refer to the Appendix in Chapter 1 of [@rudin_introduction], or Chapter 8.6 in [@abbott]. The existence of such model of $\R$ implies the following Theorem.
+
+::: Theorem
+### Existence of the Real Numbers
+
+There exists a complete ordered field $(\R,+,\cdot, \leq)$ called the System of Real Numbers. Moreover $\R$ is unique, up to isomorphism of fields.
+
+:::
+
+
+
+
 
 
 

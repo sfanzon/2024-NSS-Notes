@@ -72,15 +72,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -88,27 +80,7 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Corollary {
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -116,7 +88,43 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
 .Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -124,21 +132,13 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
 }
 </style>
 
@@ -833,7 +833,7 @@ x &lt; t &lt; y \,, \quad t := q + \sqrt{2} \,.
 </section>
 <section id="existence-of-k-th-roots" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="existence-of-k-th-roots"><span class="header-section-number">4.5</span> Existence of <span class="math inline">\(k\)</span>-th Roots</h2>
-<p>We have started our discussion by proving that <span id="eq-sqrt2-existence"><span class="math display">\[
+<p>We have started our discussion in <a href="chap_1.html" class="quarto-xref"><span>Chapter 1</span></a> by proving that <span id="eq-sqrt2-existence"><span class="math display">\[
 \sqrt{2} \notin \mathbb{Q}\,.
 \tag{4.19}\]</span></span> We have shown that (<a href="#eq-sqrt2-existence" class="quarto-xref"><span>4.19</span></a>) implies that the set <span class="math display">\[
 A := \{ q \in \mathbb{Q}\, \colon \,q^2 &lt; 2 \}
@@ -841,9 +841,14 @@ A := \{ q \in \mathbb{Q}\, \colon \,q^2 &lt; 2 \}
 \alpha = \sup A \,.
 \]</span> We are going to prove that <span class="math display">\[
 \alpha^2 = 2 \,,
-\]</span> which means that in <span class="math inline">\(\mathbb{R}\)</span> we can take the square root of <span class="math inline">\(2\)</span>. More in general, with the same fudamental idea, we can prove that for each <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>, there exists <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
-\alpha^k = x \,.
-\]</span></p>
+\]</span> which means that <span class="math inline">\(\alpha\)</span> is the square root of <span class="math inline">\(2\)</span>.</p>
+<p>More in general, let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>. Define the set <span class="math display">\[
+A := \{ t \in \mathbb{R}\, \colon \,t^k &lt; x \}
+\]</span> We will see that <span class="math inline">\(A\)</span> is non-empty and bounded above. By the axiom of completeness there exists <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
+\alpha = \sup A
+\]</span> In the following Theorem we will prove that <span class="math display">\[
+\alpha^k = x \,,
+\]</span> meaning that <span class="math inline">\(\alpha\)</span> is the <span class="math inline">\(k\)</span>-th root of <span class="math inline">\(x\)</span>.</p>
 <div id="theorem_existence_root" class="Theorem" title="Existence of k-th roots">
 <p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 19: </strong>Existence of <span class="math inline">\(k\)</span>-th roots</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>. There exists a unique <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
 \alpha^k = x \,.

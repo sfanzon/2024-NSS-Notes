@@ -901,7 +901,7 @@ since $t,q \in \Q$, and $\Q$ is closed under summation. Since $\sqrt{2} \in \mat
 ## Existence of $k$-th Roots
 
 
-We have started our discussion by proving that
+We have started our discussion in @sec-chap-1 by proving that
 $$
 \sqrt{2} \notin \Q \,.
 $${#eq-sqrt2-existence}
@@ -919,12 +919,22 @@ We are going to prove that
 $$
 \alpha^2 = 2 \,,
 $$
-which means that in $\R$ we can take the square root of $2$. More in general, with the same
-fudamental idea, we can prove that for each $x \in \R$ with $x \geq 0$ and $k \in \N$, 
-there exists $\alpha \in \R$ such that
+which means that $\alpha$ is the square root of $2$. 
+
+More in general, let $x \in \R$ with $x \geq 0$ and $k \in \N$. Define the set
 $$
-\alpha^k = x \,.
+A := \{ t \in \R \divider t^k < x \} 
 $$
+We will see that $A$ is non-empty and bounded above. By the axiom of completeness there exists $\alpha \in \R$ such that
+$$
+\alpha = \sup A 
+$$
+In the following Theorem we will prove that
+$$
+\alpha^k = x \,,
+$$
+meaning that $\alpha$ is the $k$-th root of $x$.
+
 
 
 ::: Theorem
