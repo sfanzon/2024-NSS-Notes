@@ -92,39 +92,19 @@ div.csl-indent {
   }
 }</script>
 <style>
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Conjecture {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
 }
 .Definition {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Lemma {
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -132,19 +112,39 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Corollary {
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
-.Warning {
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -152,13 +152,13 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proposition {
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
 </style>
 
@@ -1670,11 +1670,11 @@ x^{-1} := \frac{1}{x} \,.
 </section>
 <section id="special-subsets-of-mathbbr" class="level2" data-number="3.8">
 <h2 data-number="3.8" class="anchored" data-anchor-id="special-subsets-of-mathbbr"><span class="header-section-number">3.8</span> Special subsets of <span class="math inline">\(\mathbb{R}\)</span></h2>
-<p>In Definition <a href="chap_3.html#definition-R">47</a> we have introduced <span class="math inline">\(\mathbb{R}\)</span> as a complete ordered field. This was done axiomatically and in a non constructive way. What happens now to the sets <span class="math inline">\(\mathbb{N}, \mathbb{Z}, \mathbb{Q}\)</span>? Are they well defined? Does it still hold that <span class="math display">\[
+<p>In Definition <a href="chap_3.html#definition-R">47</a>, we introduced <span class="math inline">\(\mathbb{R}\)</span> as a complete ordered field, doing so axiomatically and in a non-constructive manner. But what about the sets <span class="math inline">\(\mathbb{N}\)</span>, <span class="math inline">\(\mathbb{Z}\)</span>, <span class="math inline">\(\mathbb{Q}\)</span> now? Are they still well-defined? Specifically, can we say that <span class="math display">\[
 \mathbb{N}\,, \mathbb{Z}\,, \mathbb{Q}\, \subseteq \mathbb{R}\,?
-\]</span> The definitions that we gave in <a href="chap_1.html" class="quarto-xref"><span>Chapter 1</span></a> for <span class="math inline">\(\mathbb{N}, \mathbb{Z}\)</span> and <span class="math inline">\(\mathbb{Q}\)</span> are not related to the system of real numbers <span class="math inline">\(\mathbb{R}\)</span> we just introduced. To overcome this problem, we will have to define new sets <span class="math display">\[
-{\mathbb{N}}_{\mathbb{R}}, \,\, {\mathbb{Z}}_{\mathbb{R}}\,, \,\, {\mathbb{Q}}_{\mathbb{R}}
-\]</span> from scracth, starting from the axioms of <span class="math inline">\(\mathbb{R}\)</span>. Note that we are using the subscript <span class="math inline">\(\mathbb{R}\)</span> to distinguish these new sets from the old ones.</p>
+\]</span> The definitions we provided in <a href="chap_1.html" class="quarto-xref"><span>Chapter 1</span></a> for <span class="math inline">\(\mathbb{N}\)</span>, <span class="math inline">\(\mathbb{Z}\)</span>, and <span class="math inline">\(\mathbb{Q}\)</span> are not directly linked to the real number system <span class="math inline">\(\mathbb{R}\)</span> we just introduced. To address this issue, we will need to define new sets <span class="math display">\[
+\mathbb{N}_{\mathbb{R}}, \,\, \mathbb{Z}_{\mathbb{R}}\,, \,\, \mathbb{Q}_{\mathbb{R}}
+\]</span> from scratch, relying solely on the axioms of <span class="math inline">\(\mathbb{R}\)</span>. The subscript <span class="math inline">\(\mathbb{R}\)</span> is used here to clearly distinguish these new sets from the original ones.</p>
 <section id="natural-numbers" class="level3" data-number="3.8.1">
 <h3 data-number="3.8.1" class="anchored" data-anchor-id="natural-numbers"><span class="header-section-number">3.8.1</span> Natural numbers</h3>
 <p>Let us start with the definition of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span>. We would like <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> to be <span class="math display">\[
@@ -1685,7 +1685,7 @@ x^{-1} := \frac{1}{x} \,.
 \mathbf{1}:=1\,,
 \]</span> with <span class="math inline">\(1\)</span> the neutral element of the multiplication in <span class="math inline">\(\mathbb{R}\)</span>, which exists by the field axiom (M2) in Defintion <a href="chap_3.html#definition-R">47</a>. We could then define <span class="math inline">\(\mathbf{2}\)</span> by setting <span class="math display">\[
 \mathbf{2} := 1 + 1 \,.
-\]</span> We need a formal definition to capture this idea. This is the concept of <strong>inductive set</strong>.</p>
+\]</span> We need a formal definition to capture this idea.</p>
 <div id="inductive-set" class="Definition" title="Inductive set">
 <details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 53: </strong>Inductive set</summary><div>
 <p>Let <span class="math inline">\(S \subseteq \mathbb{R}\)</span>. We say that <span class="math inline">\(S\)</span> is an inductive set if they are satisfied:</p>
@@ -1702,24 +1702,21 @@ x^{-1} := \frac{1}{x} \,.
 </ul>
 <div id="Example-54" class="Example">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 54</strong></summary><div>
-<p>We have that</p>
-<ul>
-<li><span class="math inline">\(\mathbb{R}\)</span> is an inductive set.</li>
-</ul>
+<ol type="1">
+<li><p><span class="math inline">\(\mathbb{R}\)</span> is an inductive set.</p>
 <blockquote class="blockquote">
-<p>Indeed we have <span class="math inline">\(1 \in \mathbb{R}\)</span> by axiom (M2). Moreover <span class="math inline">\((x + 1) \in \mathbb{R}\)</span> for every <span class="math inline">\(x \in \mathbb{R}\)</span>, by definition of sum <span class="math inline">\(+\)</span>.</p>
-</blockquote>
-<ul>
-<li>The set <span class="math inline">\(A=\{0,1\}\)</span> is not an inductive set.</li>
-</ul>
+<p>Indeed, we have <span class="math inline">\(1 \in \mathbb{R}\)</span> by axiom (M2). Moreover <span class="math inline">\((x + 1) \in \mathbb{R}\)</span> for every <span class="math inline">\(x \in \mathbb{R}\)</span>, by definition of sum <span class="math inline">\(+\)</span>.</p>
+</blockquote></li>
+<li><p>The set <span class="math inline">\(A=\{0,1\}\)</span> is not an inductive set.</p>
 <blockquote class="blockquote">
 <p>This is because <span class="math inline">\(1 \in A\)</span>, but <span class="math inline">\((1 + 1) \notin A\)</span>, since <span class="math inline">\(1 + 1 \neq 0\)</span>.</p>
-</blockquote>
+</blockquote></li>
+</ol>
 </div></details>
 </div>
-<p>Therefore <span class="math inline">\(\mathbb{R}\)</span> is an inductive set, showing that the definition of inductive set is not sufficient to fully describe our intuitive idea of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span>. The right way to define <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is as follows: <span class="math display">\[
+<p>Since <span class="math inline">\(\mathbb{R}\)</span> is itself an inductive set, it is clear that the definition of inductive set is not sufficient to fully describe our intuitive idea of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span>. The right way to define <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is as follows: <span class="math display">\[
 {\mathbb{N}}_{\mathbb{R}} \mbox{ is the smallest inductive subset of } \mathbb{R}\,.
-\]</span> To make the above definition formal we need a few observations.</p>
+\]</span> To make the above definition precise, we first need a Proposition.</p>
 <div id="Proposition-55" class="Proposition">
 <p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 55</strong></summary><div>Let <span class="math inline">\(\mathcal{M}\)</span> be a collection of inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. Then <span class="math display">\[
 S := \bigcap_{M \in \mathcal{M}} \, M
@@ -1728,12 +1725,12 @@ S := \bigcap_{M \in \mathcal{M}} \, M
 </div>
 <div id="Proof*-17" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We have to show that the two properties of inductive sets hold for <span class="math inline">\(S\)</span>:<p></p>
-<ul>
+<ol type="1">
 <li><p>We have <span class="math inline">\(1 \in M\)</span> for every <span class="math inline">\(M \in \mathcal{M}\)</span>, since these are inductive sets. Thus <span class="math display">\[
 1 \in \bigcap_{M \in \mathcal{M}} \, M  = S \,.
 \]</span></p></li>
 <li><p>Suppose that <span class="math inline">\(x \in S\)</span>. By definition of <span class="math inline">\(S\)</span> this implies that <span class="math inline">\(x \in M\)</span> for all <span class="math inline">\(M \in \mathcal{M}\)</span>. Since <span class="math inline">\(M\)</span> is an inductive set, then <span class="math inline">\((x + 1) \in M\)</span>. Therefore <span class="math inline">\((x+1) \in M\)</span> for all <span class="math inline">\(M \in \mathcal{M}\)</span>, showing that <span class="math inline">\((x+1) \in S\)</span>.</p></li>
-</ul>
+</ol>
 <p>Therefore <span class="math inline">\(S\)</span> is an inductive set.</p>
 </div></details>
 </div>
@@ -1744,7 +1741,7 @@ S := \bigcap_{M \in \mathcal{M}} \, M
 \]</span><p></p>
 </div></details>
 </div>
-<p>Therefore <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the intersection of all the inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. From this definition it follows that <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the smallest inductive subset of <span class="math inline">\(\mathbb{R}\)</span>, as shown in the following proposition.</p>
+<p>Therefore <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the intersection of all the inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. From this definition it follows that <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the smallest inductive subset of <span class="math inline">\(\mathbb{R}\)</span>, as shown in the following Proposition.</p>
 <div id="proposition-smallest-inductive" class="Proposition" title="{\mathbb{N}}_{\mathbb{R}} is the smallest inductive subset of \mathbb{R}">
 <p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 57: </strong><span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the smallest inductive subset of <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(C \subseteq \mathbb{R}\)</span> be an inductive subset. Then <span class="math display">\[
 {\mathbb{N}}_{\mathbb{R}} \subseteq C \,.

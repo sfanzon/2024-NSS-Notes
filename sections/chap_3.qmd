@@ -1953,19 +1953,16 @@ There exists a complete ordered field $(\R,+,\cdot, \leq)$ called the System of 
 ## Special subsets of $\R$
 
 
-In Definition \ref{definition-R} we have introduced $\R$ as a complete ordered field. This was done axiomatically and in a non 
-constructive way. What happens now to the sets $\N, \Z, \Q$? Are they well defined? 
-Does it still hold that
+In Definition \ref{definition-R}, we introduced $\R$ as a complete ordered field, doing so axiomatically and in a non-constructive manner. But what about the sets $\N$, $\Z$, $\Q$ now? Are they still well-defined? Specifically, can we say that
 $$
 \N \,, \Z \,, \Q \, \subseteq \R \,?
 $$
-The definitions that we gave in @sec-chap-1 for $\N, \Z$ and $\Q$ are 
-not related to the system of real numbers $\R$ we just introduced. To overcome this problem, we will have to define new sets
+The definitions we provided in @sec-chap-1 for $\N$, $\Z$, and $\Q$ are not directly linked to the real number system $\R$ we just introduced. To address this issue, we will need to define new sets
 $$
-{\N}_{\R}, \,\, {\Z}_{\R}\,, \,\, {\Q}_{\R}
-$$ 
-from scracth, starting from the axioms of $\R$. Note that we are using the subscript $\R$ to distinguish
-these new sets from the old ones.
+\N_{\R}, \,\, \Z_{\R}\,, \,\, \Q_{\R}
+$$
+from scratch, relying solely on the axioms of $\R$. The subscript $\R$ is used here to clearly distinguish these new sets from the original ones.
+
 
 ### Natural numbers 
 
@@ -1985,7 +1982,7 @@ with $1$ the neutral element of the multiplication in $\R$, which exists by the 
 $$
 \mathbf{2} := 1 + 1 \,.
 $$
-We need a formal definition to capture this idea. This is the concept of **inductive set**.
+We need a formal definition to capture this idea.
 
 
 ::: Definition
@@ -2006,25 +2003,23 @@ Note that in the above definition we just used:
 
 ::: Example
 
-We have that
 
-- $\R$ is an inductive set.
+1. $\R$ is an inductive set.  
+    
+    > Indeed, we have $1 \in \R$ by axiom (M2). Moreover $(x + 1) \in \R$ for every $x \in \R$, by definition of sum $+$.
 
-> Indeed we have $1 \in \R$ by axiom (M2). Moreover $(x + 1) \in \R$ for every $x \in \R$, by 
-definition of sum $+$.
-
-- The set $A=\{0,1\}$ is not an inductive set.
-
-> This is because $1 \in A$, but $(1 + 1) \notin A$, since $1 + 1 \neq 0$.
+2. The set $A=\{0,1\}$ is not an inductive set.  
+    
+    > This is because $1 \in A$, but $(1 + 1) \notin A$, since $1 + 1 \neq 0$.
 :::
 
 
-Therefore $\R$ is an inductive set, showing that the definition of inductive set is not
+Since $\R$ is itself an inductive set, it is clear that the definition of inductive set is not
 sufficient to fully describe our intuitive idea of ${\N}_{\R}$. The right way to define ${\N}_{\R}$ is as follows:
 $$
 {\N}_{\R} \mbox{ is the smallest inductive subset of } \R \,.
 $$
-To make the above definition formal we need a few observations.
+To make the above definition precise, we first need a Proposition.
 
 ::: Proposition
 
@@ -2041,12 +2036,12 @@ is an inductive subset of $\R$.
 
 We have to show that the two properties of inductive sets hold for $S$:
 
-- We have $1 \in M$ for every $M \in \mathcal{M}$, since these are inductive sets. Thus
+1. We have $1 \in M$ for every $M \in \mathcal{M}$, since these are inductive sets. Thus
 $$
 1 \in \bigcap_{M \in \mathcal{M}} \, M  = S \,.
 $$
 
-- Suppose that $x \in S$. By definition of $S$ this implies that $x \in M$ for all $M \in \mathcal{M}$. Since $M$ is an inductive set, then $(x + 1) \in M$. Therefore $(x+1) \in M$ for all $M \in \mathcal{M}$, showing that $(x+1) \in S$.
+2. Suppose that $x \in S$. By definition of $S$ this implies that $x \in M$ for all $M \in \mathcal{M}$. Since $M$ is an inductive set, then $(x + 1) \in M$. Therefore $(x+1) \in M$ for all $M \in \mathcal{M}$, showing that $(x+1) \in S$.
 
 Therefore $S$ is an inductive set.
 :::
@@ -2067,7 +2062,7 @@ $$
 
 Therefore ${\N}_{\R}$ is the intersection of all the inductive subsets of $\R$. From
 this definition it follows that ${\N}_{\R}$ is the smallest inductive subset of $\R$, as
-shown in the following proposition.
+shown in the following Proposition.
 
 
 ::: Proposition  
