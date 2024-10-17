@@ -92,27 +92,7 @@ div.csl-indent {
   }
 }</script>
 <style>
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -120,35 +100,11 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Proof {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -156,9 +112,53 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .TODO {
   --color1: #e7b1b4;
   --color2: #8c3236;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -1751,7 +1751,7 @@ S := \bigcap_{M \in \mathcal{M}} \, M
 <div id="Proof*-18" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Let <span class="math inline">\(\mathcal{M}\)</span> be the collection of <strong>all</strong> inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. By definition <span class="math display">\[
 {\mathbb{N}}_{\mathbb{R}} = \bigcap_{M \in \mathcal{M}} \, M \,.
-\]</span> Let <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span>, then <span class="math inline">\(x \in M\)</span> for all <span class="math inline">\(M \in \mathcal{M}\)</span>. Since <span class="math inline">\(C \in \mathcal{M}\)</span> then <span class="math inline">\(x \in C\)</span>. This shows <span class="math inline">\({\mathbb{N}}_{\mathbb{R}} \subseteq C\)</span>.<p></p>
+\]</span> Let <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span>. Then <span class="math inline">\(x \in M\)</span> for all <span class="math inline">\(M \in \mathcal{M}\)</span>. Since <span class="math inline">\(C \in \mathcal{M}\)</span> then <span class="math inline">\(x \in C\)</span>. This shows <span class="math inline">\({\mathbb{N}}_{\mathbb{R}} \subseteq C\)</span>.<p></p>
 </div></details>
 </div>
 <p>The definition of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> guarantees that all numbers in <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> are larger than <span class="math inline">\(1\)</span>.</p>
@@ -1778,7 +1778,7 @@ x + 1 \geq x + 0 = x \geq 1 \,,
 <div id="Notation-59" class="Notation">
 <p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 59</strong></summary><div>We have just shown that all the numebers <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span> satisfy <span class="math display">\[
 x \geq 1 \,.
-\]</span> Moreover by the fact that <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is an inductive set, we know that <span class="math display">\[
+\]</span> Moreover, by the fact that <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is an inductive set, we know that <span class="math display">\[
 1 + 1 \in {\mathbb{N}}_{\mathbb{R}} \,,
 \]</span> since <span class="math inline">\(1 \in {\mathbb{N}}_{\mathbb{R}}\)</span>. We denote <span class="math display">\[
 2 := 1 + 1\,.

@@ -2083,7 +2083,7 @@ By definition
 $$
 {\N}_{\R} = \bigcap_{M \in \mathcal{M}} \, M \,.
 $$
-Let $x \in {\N}_{\R}$, then $x \in M$ for all $M \in \mathcal{M}$. Since
+Let $x \in {\N}_{\R}$. Then $x \in M$ for all $M \in \mathcal{M}$. Since
 $C \in \mathcal{M}$ then $x \in C$. This shows ${\N}_{\R} \subseteq C$.
 
 :::
@@ -2132,7 +2132,7 @@ We have just shown that all the numebers $x \in {\N}_{\R}$ satisfy
 $$
 x \geq 1 \,.
 $$
-Moreover by the fact that ${\N}_{\R}$ is an inductive set, we know that 
+Moreover, by the fact that ${\N}_{\R}$ is an inductive set, we know that 
 $$
 1 + 1 \in {\N}_{\R} \,,
 $$
