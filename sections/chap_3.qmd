@@ -1329,7 +1329,7 @@ There exists a set $A \subseteq \Q$ such that
 - $\sup A$ does not exist in $\Q$. 
 :::
 
-The proof uses similar ideas we used for showing that $\Q$ does not have the Cut Property, see Theorem \ref{theorem-Q-cut}.
+The proof uses similar ideas to those employed in demonstrating that $\Q$ does not satisfy the Cut Property, see the proof of Theorem \ref{theorem-Q-cut}.
 
 ::: Proof
 Define the set
@@ -1543,6 +1543,14 @@ is non-empty and bounded above. By completeness we have that $\sup(-A)$ exists i
 $$
 \inf A = - \sup (-A)\,. 
 $$
+:::
+
+
+
+::: Example
+
+We have seen that $(\Q, +, \cdot , \leq)$ is an ordered field. However $\Q$ is **not complete**, as proven in Theorem \ref{theorem-Q-not-complete}.
+
 :::
 
 
@@ -1892,7 +1900,7 @@ $$
 \mbox{(A1)-(A3), (M1)-(M3), (AM)}
 $$ 
 
-- $(K,+,\cdot, \geq)$ is an **ordered field** if they hold 
+- $(K,+,\cdot, \leq)$ is an **ordered field** if they hold 
 $$
 \mbox{(A1)-(A3), (M1)-(M3), (O1)-(O4) ,(AM), (AO), (MO)}
 $$ 
@@ -1906,22 +1914,28 @@ is a **complete ordered field**: that is, an ordered field in which the **Cut Pr
 
 
 
-::: Important
-It can be shown that $(\R,+, \cdot,\leq)$ is the **only** complete ordered field.   
-
-> The above has to be intended in the following sense: if $(K,+, \cdot,\leq)$ is another complete ordered field, then $K$ *looks like* $\R$. Mathematically this means that there exists an invertible map 
-$\Psi \ \colon \R \to K$, called isomorphism of fields, which preserves the operations $+$, $\cdot$ and the order $\leq$.
-
-:::
-
-
-
 
 ::: Question
-We have only postulated the existence of $\R$. Does such complete ordered field actually exist? 
+
+There are two main questions here:
+
+1. We have only postulated the existence of $\R$. Does such complete ordered field actually exist?
+
+2. Is $\R$ the only complete ordered field?
+
 :::
 
-The answer is **YES**. There are several equivalent methods for explicitly constructing the system $\R$. One such method uses **Dedekind cuts**. The interested reader can refer to the Appendix in Chapter 1 of [@rudin_introduction], or Chapter 8.6 in [@abbott]. The existence of such model of $\R$ implies the following Theorem.
+The answer to both questions is **YES**: 
+
+
+1. There are several equivalent methods for explicitly constructing the system $\R$. One such method uses **Dedekind cuts**. The interested reader can refer to the Appendix in Chapter 1 of [@rudin_introduction], or Chapter 8.6 in [@abbott]. 
+
+2. It can be shown that $(\R,+, \cdot,\leq)$ is the **only** complete ordered field. Uniqueness is intended in the following sense: if $(K,+, \cdot,\leq)$ is another complete ordered field, then $K$ *looks like* $\R$. Mathematically this means that there exists an invertible map 
+$\Psi \ \colon \R \to K$, called isomorphism of fields, which preserves the operations $+$, $\cdot$ and the order $\leq$.
+
+
+
+In particular the following Theorem can be proven.
 
 ::: Theorem
 ### Existence of the Real Numbers
@@ -1929,8 +1943,6 @@ The answer is **YES**. There are several equivalent methods for explicitly const
 There exists a complete ordered field $(\R,+,\cdot, \leq)$ called the System of Real Numbers. Moreover $\R$ is unique, up to isomorphism of fields.
 
 :::
-
-
 
 
 

@@ -243,79 +243,79 @@
 
  [**Proof**](#Proof*-3.15)\Pageref{Proof*-3.15}
 
- [**Theorem 3.44**](#theorem-cut-complete): Equivalence of Cut Property and Completeness\Pageref{theorem-cut-complete}
+ [**Example 3.44**](#Example-3.44)\Pageref{Example-3.44}
 
- [**Remark 3.45**](#ideas-for-proving-theorem): Ideas for proving Theorem 3.44\Pageref{ideas-for-proving-theorem}
+ [**Theorem 3.45**](#theorem-cut-complete): Equivalence of Cut Property and Completeness\Pageref{theorem-cut-complete}
 
- [**Proof**](#proof-of-theorem-3): Proof of Theorem 3.44\Pageref{proof-of-theorem-3}
+ [**Remark 3.46**](#ideas-for-proving-theorem): Ideas for proving Theorem 3.45\Pageref{ideas-for-proving-theorem}
 
- [**Definition 3.46**](#definition-R): System of Real Numbers $\mathbb{R}$\Pageref{definition-R}
+ [**Proof**](#proof-of-theorem-3): Proof of Theorem 3.45\Pageref{proof-of-theorem-3}
 
- [**Remark 3.47**](#Remark-3.47)\Pageref{Remark-3.47}
+ [**Definition 3.47**](#definition-R): System of Real Numbers $\mathbb{R}$\Pageref{definition-R}
 
- [**Notation 3.48**](#Notation-3.48)\Pageref{Notation-3.48}
+ [**Remark 3.48**](#Remark-3.48)\Pageref{Remark-3.48}
 
- [**Remark 3.49**](#Remark-3.49)\Pageref{Remark-3.49}
+ [**Notation 3.49**](#Notation-3.49)\Pageref{Notation-3.49}
 
- [**Important**](#Important*-3.17)\Pageref{Important*-3.17}
+ [**Remark 3.50**](#Remark-3.50)\Pageref{Remark-3.50}
 
- [**Question 3.50**](#Question-3.50)\Pageref{Question-3.50}
+ [**Question 3.51**](#Question-3.51)\Pageref{Question-3.51}
 
- [**Theorem 3.51**](#existence-of-the-real-numbers-1): Existence of the Real Numbers\Pageref{existence-of-the-real-numbers-1}
+ [**Theorem 3.52**](#existence-of-the-real-numbers-1): Existence of the Real Numbers\Pageref{existence-of-the-real-numbers-1}
 
- [**Definition 3.52**](#inductive-set): Inductive set\Pageref{inductive-set}
+ [**Definition 3.53**](#inductive-set): Inductive set\Pageref{inductive-set}
 
- [**Example 3.53**](#Example-3.53)\Pageref{Example-3.53}
+ [**Example 3.54**](#Example-3.54)\Pageref{Example-3.54}
 
- [**Proposition 3.54**](#Proposition-3.54)\Pageref{Proposition-3.54}
+ [**Proposition 3.55**](#Proposition-3.55)\Pageref{Proposition-3.55}
+
+ [**Proof**](#Proof*-3.17)\Pageref{Proof*-3.17}
+
+ [**Definition 3.56**](#definition-natural-numbers): Set of Natural Numbers\Pageref{definition-natural-numbers}
+
+ [**Proposition 3.57**](#proposition-smallest-inductive): ${\mathbb{N}}_{\mathbb{R}}$ is the smallest inductive subset of $\mathbb{R}$\Pageref{proposition-smallest-inductive}
 
  [**Proof**](#Proof*-3.18)\Pageref{Proof*-3.18}
 
- [**Definition 3.55**](#definition-natural-numbers): Set of Natural Numbers\Pageref{definition-natural-numbers}
-
- [**Proposition 3.56**](#proposition-smallest-inductive): ${\mathbb{N}}_{\mathbb{R}}$ is the smallest inductive subset of $\mathbb{R}$\Pageref{proposition-smallest-inductive}
+ [**Theorem 3.58**](#theorem-n-1)\Pageref{theorem-n-1}
 
  [**Proof**](#Proof*-3.19)\Pageref{Proof*-3.19}
 
- [**Theorem 3.57**](#theorem-n-1)\Pageref{theorem-n-1}
+ [**Notation 3.59**](#Notation-3.59)\Pageref{Notation-3.59}
+
+ [**Theorem 3.60**](#theorem-induction-new): Principle of Induction\Pageref{theorem-induction-new}
 
  [**Proof**](#Proof*-3.20)\Pageref{Proof*-3.20}
 
- [**Notation 3.58**](#Notation-3.58)\Pageref{Notation-3.58}
-
- [**Theorem 3.59**](#theorem-induction-new): Principle of Induction\Pageref{theorem-induction-new}
+ [**Theorem 3.61**](#theorem-N-closed)\Pageref{theorem-N-closed}
 
  [**Proof**](#Proof*-3.21)\Pageref{Proof*-3.21}
 
- [**Theorem 3.60**](#theorem-N-closed)\Pageref{theorem-N-closed}
+ [**Theorem 3.62**](#Theorem-3.62)\Pageref{Theorem-3.62}
+
+ [**Definition 3.63**](#set-of-integers): Set of Integers\Pageref{set-of-integers}
+
+ [**Theorem 3.64**](#theorem-equivalent-Z)\Pageref{theorem-equivalent-Z}
 
  [**Proof**](#Proof*-3.22)\Pageref{Proof*-3.22}
 
- [**Theorem 3.61**](#Theorem-3.61)\Pageref{Theorem-3.61}
+ [**Theorem 3.65**](#theorem-Z-closed)\Pageref{theorem-Z-closed}
 
- [**Definition 3.62**](#set-of-integers): Set of Integers\Pageref{set-of-integers}
-
- [**Theorem 3.63**](#theorem-equivalent-Z)\Pageref{theorem-equivalent-Z}
+ [**Theorem 3.66**](#theorem-Z-axioms)\Pageref{theorem-Z-axioms}
 
  [**Proof**](#Proof*-3.23)\Pageref{Proof*-3.23}
 
- [**Theorem 3.64**](#theorem-Z-closed)\Pageref{theorem-Z-closed}
+ [**Remark 3.67**](#remark-Z-axioms)\Pageref{remark-Z-axioms}
 
- [**Theorem 3.65**](#theorem-Z-axioms)\Pageref{theorem-Z-axioms}
-
- [**Proof**](#Proof*-3.24)\Pageref{Proof*-3.24}
-
- [**Remark 3.66**](#remark-Z-axioms)\Pageref{remark-Z-axioms}
-
- [**Definition 3.67**](#set-of-rational-numbers): Set of Rational Numbers\Pageref{set-of-rational-numbers}
-
- [**Theorem 3.68**](#Theorem-3.68)\Pageref{Theorem-3.68}
-
- [**Proof**](#Proof*-3.25)\Pageref{Proof*-3.25}
+ [**Definition 3.68**](#set-of-rational-numbers): Set of Rational Numbers\Pageref{set-of-rational-numbers}
 
  [**Theorem 3.69**](#Theorem-3.69)\Pageref{Theorem-3.69}
 
- [**Notation 3.70**](#Notation-3.70)\Pageref{Notation-3.70}
+ [**Proof**](#Proof*-3.24)\Pageref{Proof*-3.24}
+
+ [**Theorem 3.70**](#Theorem-3.70)\Pageref{Theorem-3.70}
+
+ [**Notation 3.71**](#Notation-3.71)\Pageref{Notation-3.71}
 
  [**Remark 4.1**](#Remark-4.1)\Pageref{Remark-4.1}
 
