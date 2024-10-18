@@ -72,51 +72,15 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Proof {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.Example {
+.Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Question {
+.Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -124,11 +88,35 @@ ul.task-list li input[type="checkbox"] {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Example {
   --color1: #bce5de;
   --color2: #21aa93;
 }
@@ -136,9 +124,21 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Definition {
   --color1: #c6e6ed;
   --color2: #1995ad;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -498,10 +498,8 @@ x \in I_n \,, \quad  \forall \, n \in \mathbb{N}\,.
 \tag{4.6}\]</span></span><p></p>
 <blockquote class="blockquote">
 <p>Idea of the Proof: Condition (<a href="#eq-theorem-nested-proof-1" class="quarto-xref"><span>4.6</span></a>) is saying that it should hold <span class="math display">\[
-x \geq a_n \,, \quad \forall \, n \in \mathbb{N}\,.
-\]</span> We might be tempted to choose <span class="math inline">\(x\)</span> to be any of the <span class="math inline">\(b_n\)</span>. This choice would indeed satisy the above. However (<a href="#eq-theorem-nested-proof-1" class="quarto-xref"><span>4.6</span></a>) also implies that <span class="math display">\[
-x \leq b_n \,, \quad \forall \, n \in \mathbb{N}\,.
-\]</span> Therefore <span class="math inline">\(x\)</span> has to be larger than all the <span class="math inline">\(a_n\)</span>, but not too large. This suggests that <span class="math inline">\(x\)</span> should be defined as a supremum.</p>
+a_n \leq x \leq b_n \ \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Since <span class="math inline">\(a_n\)</span> is increasing and <span class="math inline">\(b_n\)</span> is decreasing, the point <span class="math inline">\(x\)</span> is being squeezed between these two sequences. This suggests <span class="math inline">\(x\)</span> should be the largest (i.e.&nbsp;the supremum) of all <span class="math inline">\(a_ns\)</span> and smallest (i.e.&nbsp;the infimum) of all the <span class="math inline">\(b_ns\)</span>.</p>
 </blockquote>
 <p>Define the set <span class="math display">\[
 A:= \{ a_n \, \colon \,n \in \mathbb{N}\} \,.

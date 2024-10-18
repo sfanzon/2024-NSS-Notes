@@ -307,15 +307,9 @@ $${#eq-theorem-nested-proof-1}
 
 > Idea of the Proof: Condition (@eq-theorem-nested-proof-1) is saying that it should hold
 $$
-x \geq a_n \,, \quad \forall \, n \in \N \,.
+a_n \leq x \leq b_n \ \,, \quad \forall \, n \in \N \,.
 $$
-We might be tempted to choose $x$ to be any of the $b_n$. This choice would indeed satisy 
-the above. However (@eq-theorem-nested-proof-1) also implies that
-$$
-x \leq b_n \,, \quad \forall \, n \in \N \,.
-$$
-Therefore $x$ has to be larger than all the $a_n$, but not too large. This suggests that 
-$x$ should be defined as a supremum. 
+Since $a_n$ is increasing and $b_n$ is decreasing, the point $x$ is being squeezed between these two sequences. This suggests $x$ should be the largest (i.e. the supremum) of all $a_ns$ and smallest (i.e. the infimum) of all the $b_ns$.
 
 Define the set
 $$
