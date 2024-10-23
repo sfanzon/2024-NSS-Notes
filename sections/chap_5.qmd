@@ -11,16 +11,15 @@ $
 # Complex Numbers
 
 
-We have seen that $\sqrt{x}$ exists in $\R$ for all for $x \geq 0$.
-We defined
+We have seen that $\sqrt{x}$ exists in $\R$ for all for $x \geq 0$. The number $\sqrt{x}$ was defined as
 $$
-\sqrt{x}:= \alpha \,, \quad \alpha := \sup \{ t \in \R \divider t^2 < x  \}\,,
+\sqrt{x}:= \alpha \,, \quad \alpha := \sup \{ t \in \R \divider t^2 < x  \}\,
 $$
-and proved that
+We then proved that
 $$
 \alpha^2 = x \,.
 $$
-This procedure was possible for $x \geq 0$.
+This procedure is possible for any $x \geq 0$.
 
 ::: Question
 Is there a number $\alpha \in \R$ such that 
@@ -37,12 +36,15 @@ However we would still like to solve equation (@eq-complex-intro-1) somehow. To 
 $$
 i^{2}=-1 \,.
 $$
-Formally, we can also think of $i=\sqrt{-1}$. We can use this speacial number to define the square root of a negative number $x<0$:
+Formally, we can also think of $i$ as 
+$$
+i =\sqrt{-1} \,.
+$$ 
+We can use this speacial number to define the square root of a negative real number $x<0$:
 $$
 \sqrt{x}: = i \sqrt{-x} \,.
 $$
-Note that $\sqrt{-x}$ is properly defined in $\mathbb{R}$, because
-$-x>0$ if $x<0$. 
+Note that $\sqrt{-x}$ is properly defined in $\mathbb{R}$, because $-x$ is positive when $x$ is negative.
 
 
 ## The field $\C$

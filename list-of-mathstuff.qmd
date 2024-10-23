@@ -357,27 +357,27 @@
 
  [**Proof**](#Proof*-4.8)\Pageref{Proof*-4.8}
 
- [**Definition 4.13**](#dense-set): Dense set\Pageref{dense-set}
+ [**Theorem 4.13**](#theorem_existence_root): Existence of $k$-th roots\Pageref{theorem_existence_root}
 
- [**Remark 4.14**](#Remark-4.14)\Pageref{Remark-4.14}
+ [**Proof**](#proof-of-theorem-4): Proof of Theorem 4.13\Pageref{proof-of-theorem-4}
 
- [**Theorem 4.15**](#theorem-density): Density of $\mathbb{Q}$ in $\mathbb{R}$\Pageref{theorem-density}
+ [**Definition 4.14**](#k-th-root-of-a-number): $k$-th root of a number\Pageref{k-th-root-of-a-number}
 
- [**Proof**](#Proof*-4.9)\Pageref{Proof*-4.9}
+ [**Definition 4.15**](#dense-set): Dense set\Pageref{dense-set}
 
- [**Definition 4.16**](#irrational-numbers): Irrational numbers\Pageref{irrational-numbers}
+ [**Remark 4.16**](#Remark-4.16)\Pageref{Remark-4.16}
 
- [**Question 4.17**](#Question-4.17)\Pageref{Question-4.17}
-
- [**Corollary 4.18**](#Corollary-4.18)\Pageref{Corollary-4.18}
+ [**Theorem 4.17**](#theorem-density): Density of $\mathbb{Q}$ in $\mathbb{R}$\Pageref{theorem-density}
 
  [**Proof**](#Proof*-4.10)\Pageref{Proof*-4.10}
 
- [**Theorem 4.19**](#theorem_existence_root): Existence of $k$-th roots\Pageref{theorem_existence_root}
+ [**Definition 4.18**](#irrational-numbers): Irrational numbers\Pageref{irrational-numbers}
 
- [**Proof**](#proof-of-theorem-4): Proof of Theorem 0.137\Pageref{proof-of-theorem-4}
+ [**Question 4.19**](#Question-4.19)\Pageref{Question-4.19}
 
- [**Definition 4.20**](#k-th-root-of-a-number): $k$-th root of a number\Pageref{k-th-root-of-a-number}
+ [**Corollary 4.20**](#Corollary-4.20)\Pageref{Corollary-4.20}
+
+ [**Proof**](#Proof*-4.11)\Pageref{Proof*-4.11}
 
  [**Definition 4.21**](#bijective-function): Bijective function\Pageref{bijective-function}
 
@@ -387,7 +387,7 @@
 
  [**Example 4.24**](#bijectivity): Bijectivity\Pageref{bijectivity}
 
- [**Definition 4.25**](#cardinality-finite-countable-uncountable): Cardinality, finite, countable, uncountable\Pageref{cardinality-finite-countable-uncountable}
+ [**Definition 4.25**](#cardinality-finite-countable-uncountable): Cardinality, Finite, Countable, Uncountable\Pageref{cardinality-finite-countable-uncountable}
 
  [**Question 4.26**](#Question-4.26)\Pageref{Question-4.26}
 

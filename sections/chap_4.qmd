@@ -489,9 +489,8 @@ A sketch of the characterization in Proposition \ref{prop-supremum-infimum} can 
 
 
 
-With the above characterizations of supremum and infimum, it is now easier to
-prove that some candidate number is the supremum or infimum of some set.
-As an example, let us characterize supremum and infimum of an open interval of $\R$.
+With the above characterizations of supremum and infimum, it will be easier, in some cases, to compute infimum and supremum.
+We now characterize infimum and supremum of an open interval of $\R$.
 
 
 ::: {.Proposition  #proposition-interval-inf-sup}
@@ -536,7 +535,7 @@ We have to prove that
 $$
 L \leq a \,.
 $${#eq-interval-inf-sup-proof}
-Indeed suppose by contradiction that (@eq-interval-inf-sup-proof) does not hold, namely that
+Suppose by contradiction that (@eq-interval-inf-sup-proof) does not hold, namely that
 $$
 a < L \,.
 $$
@@ -548,28 +547,29 @@ showing that the midpoint between $a$ and $b$ satisfies
 $$
 \frac{a+b}{2} \in A \,.
 $$
-Since $L$ is a lower bound for $A$ we have
+Since $L$ is a lower bound for $A$, we have
 $$
 L \leq \frac{a+b}{2} < b \,.
 $${#eq-interval-inf-sup-proof-2}
-Consider the midpoint
+In particular we have proven that $a < L <b$, which means that $L \in A$.
+Consider now the midpoint between $a$ and $L$, that is, 
 $$
 M := \frac{a + L}{2} \,. 
 $$
-We have that 
+Since $a < L <b$, we have that
 $$
 M \in A \,.
 $$
 
-> Indeed, recalling that $a<L$, we have
+> Indeed, using that $a<L$, we have
 $$
-a = \frac{2a}{2} < \frac{a+L}{2} = M \,. 
+a = \frac{2a}{2} < \frac{a+L}{2} = M  \leq \frac{a+b}{2} \,. 
 $$
-Moreover by (@eq-interval-inf-sup-proof-2) we have $L<b$. Thus
+Using that $L<b$, we have
 $$
 M = \frac{a+L}{2} \leq \frac{a+b}{2} < b \,.
 $$
-This shows $M \in A$.
+Thus $a < M < b$, showing that $M \in A$.
 
 
 Moreover 
@@ -583,19 +583,13 @@ M = \frac{a + L}{2} < \frac{2L}{2} = L \,.
 $$
 
 
-This is a contradiction, since by assumption $L$ is a lower bound for $A$, and thus we should have 
-$$
-L \leq M \,.
-$$
-Therefore (@eq-interval-inf-sup-proof) holds, showing that $a$ is the largest lower bound of $A$. Thus $a = \inf A$.
+This is a contradiction, since $L$ is a lower bound for $A$ and $M \in A$. 
+Therefore (@eq-interval-inf-sup-proof) holds, showing that $a$ is the largest lower bound of $A$. 
+We conclude that $a = \inf A$.
 :::
 
 
-
-
-
 As a corollary of the above we have that the maximum and minimum of an open interval do not exist.
-
 
 
 
@@ -622,7 +616,7 @@ by Proposition \ref{proposition-interval-inf-sup}, we would obtain that
 $$
 \min A = a \,.
 $$
-By definition $\min A \in A$, so that $a \in A$. This is contradiction. Then $\min A$ does not exist. 
+As $\min A \in A$ by definition, we infer $a \in A$. This is contradiction. Then $\min A$ does not exist. 
 
 The proof that $\max A$ does not exist is similar, and is left as an exercise.
 :::
@@ -647,7 +641,7 @@ $\max A$ does not exist.
 :::
 
 
-The proof is very similar to the ones above, and is left to the reader for exercise. Let us now compute supremum and infimum of 
+The proof is very simple, and is left as an exercise. Let us now compute supremum and infimum of 
 a set which is not an interval.
 
 
@@ -670,9 +664,11 @@ $$
 $$
 \frac1n \leq 1 \,, \quad \forall \, n \in \N \,.
 $$
-Therefore $1$ is an upper bound for $A$. Let us prove it is the least upper bound:
-let $b$ be an upper bound for $A$. Since $1 \in A$ and $b$ is an upper bound, we have
-$1 \leq b$. Hence $1$ is the least upper bound, and
+Therefore $1$ is an upper bound for $A$. Since $1 \in A$, by definition of maximum we conclude that 
+$$
+\max A = 1 \,.
+$$
+Since the maximum exists, we conclude that also the supremum exists, and
 $$
 \sup A = \max A =  1 \,.
 $$
@@ -712,188 +708,7 @@ As $\inf A = 0$ by Part 2, we conclude $\min A = 0$. As $\min A \in A$, we obtai
 
 
 
-
-
-
-
-
-
-## Density of $\Q$ in $\R$
-
-
-A set $S$ is dense in $\R$ if the elements of $S$ are arbitrarily close
-to the elements of $\R$. 
-
-::: Definition
-### Dense set
-
-Let $S \subseteq \R$. We say that $S$ is dense in $\R$ if for every $x \in \R$ and $\e \in \R$ with $\e>0$, there exist $q \in \Q$ such that 
-$$
-|x - q| < \e \,.
-$$
-
-:::
-
-
-In other words, the above definition is saying that $S$ and $\R$ are tightly knitted together. An equivalent definition of dense set is 
-given below.
-
-
-::: Remark
-Let $S \subseteq \R$. They are equivalent: 
-
-- $S$ is dense in $\R$.
-- For every pair of numbers $x,y \in \R$ with $x<y$, there exists $s \in S$ such that
-$$
-x < s < y \,.
-$$
-
-:::
-
-
-
-We now prove that $\Q$ is dense in $\R$. 
-
-
-
-
-::: Theorem 
-### Density of $\Q$ in $\R$    {#theorem-density}
-
-Let $x,y \in \R$, with $x<y$. There exists $q \in \Q$ such that
-$$
-x < q < y \,.
-$$
-
-:::
-
-
-
-![Let $n \in \N$ be such that $1/n< y-x$. Then take $m$ so that $m/n \in (x,y)$.](/images/density_proof.png){#fig-density-proof width=80%}
-
-
-
-::: Proof
-
-
-We need to find $q \in \Q$ such that 
-$$
-x < q < y \,.
-$${#eq-proof-density-1}
-By definition of $\Q$, we have that $q$ has to be $q=m/n$ for $m \in \Z$ and $n \in \N$. 
-Therefore (@eq-proof-density-1) is equivalent to finding $m \in \Z$ and $n \in \N$ such that
-$$
-x < \frac{m}{n} < y \,.
-$${#eq-proof-density-2}
-The idea is to proceed as in @fig-density-proof: We take $n$ such that $1/n$ is small enough
-so that we can make $m$ *jumps* of size $1/n$ and end up between $x$ and $y$.  
-To this end, let $n \in \N$ be such that
-$$
-\frac{1}{n} < y - x \,.
-$${#eq-proof-density-3}
-Such $n$ exists thanks to the Archimedean Property in Theorem \ref{theorem-archimedean} Point 2.
-Inequality (@eq-proof-density-2) is equivalent to 
-$$
-nx < m < ny \,.
-$$
-Take $m \in \Z$ such that
-$$
-m-1 \leq nx < m \,.
-$${#eq-proof-density-4}
-
-> Why does such $m$ exist? Because by Archimedean Property in Theorem \ref{theorem-archimedean} Point 1, there exists $m' \in \Z$ such that 
-$$
-m' > nx
-$$ 
-We can then choose $m$ to be the smallest element in $\Z$ such that $m >  nx$. Such $m$ satisfies (@eq-proof-density-4).  
-
-The second inequality in (@eq-proof-density-4) implies 
-$$
-x < \frac{m}{n} \,,
-$$
-which is the first inequality in (@eq-proof-density-2). Now note that (@eq-proof-density-3) is equivalent to $x < y - 1/n$. We can use the latter and the first inequality in (@eq-proof-density-4)
-to estimate
-\begin{align*}
-m & \leq 1 + nx \\
-  & < 1 + n \left(   y - \frac{1}{n}  \right ) \\
-  & = ny \,,
-\end{align*}
-which yields
-$$
-\frac{m}{n} < y \,.
-$$
-Therefore the second inequality in (@eq-proof-density-2) is proven, concluding the proof.
-
-:::
-
-
-We have constructed the real numbers $\R$ so that they would fill the **gaps** of $\Q$. Formally, these gaps are the numbers in $\R \smallsetminus \Q$. Let us give a name to this set.
-
-::: Definition
-### Irrational numbers
-
-The set of irrational numbers in $\R$ is
-$$
-\mathcal{I} := \R \smallsetminus \Q \,.
-$$
-
-:::
-
-
-::: Question
-
-How many gaps does $\Q$ have? In other words, how many irrational numbers are out there?
-
-:::
-
-The answer is quite surprising, and is a corollary of the density result of Theorem \ref{theorem-density}: The irrational numbers are dense in $\R$.
-
-
-
-::: Corollary
-
-Let $x,y \in \R$, with $x<y$. There exists $t \in \mathcal{I}$ such that
-$$
-x < t < y \,.
-$$
-
-:::
-
-
-::: Proof 
-
-Consider 
-$$
-\widetilde{x}:=x - \sqrt{2}\,, \quad \widetilde{y} :=y - \sqrt{2} \,.
-$$
-Since $x<y$, we have
-$$
-\widetilde{x} < \widetilde{y} \,.
-$$
-By Theorem \ref{theorem-density} there exists $q \in \Q$ such that
-$$
-\widetilde{x} < q < \widetilde{y} \,.
-$$
-Adding $\sqrt{2}$ to the above inequalities we get
-$$
-x < t < y \,, \quad t := q + \sqrt{2} \,.
-$${#eq-density-proof}
-We claim that $t \in \mathcal{I}$. Indeed, suppose by contradiction $t \in \Q$. Then 
-$$
-\sqrt{2} = t - q \in \Q\,,
-$$
-since $t,q \in \Q$, and $\Q$ is closed under summation. Since $\sqrt{2} \in \mathcal{I}$, we obtain a contradiction. Thus $t \in \mathcal{I}$ and
-(@eq-density-proof) is our thesis.
-:::
-
-
-
-
-
-
-
 ## Existence of $k$-th Roots
-
 
 We have started our discussion in @sec-chap-1 by proving that
 $$
@@ -934,11 +749,18 @@ meaning that $\alpha$ is the $k$-th root of $x$.
 ::: Theorem
 ### Existence of $k$-th roots   {#theorem_existence_root}
 
-Let $x \in \R$ with $x \geq 0$ and $k \in \N$. There exists a unique $\alpha \in \R$ such that 
+Let $x \in \R$ with $x \geq 0$ and $k \in \N$. Define the set
+$$
+A = \{ t \in \R \divider t^k < x \} \,.
+$$
+There exists $\alpha \in \R$ such that
+$$
+\alpha = \sup A \,.
+$$
+Moreover it holds that
 $$
 \alpha^k = x \,.
 $$
-
 
 :::
 
@@ -1173,6 +995,186 @@ $$
 
 
 
+## Density of $\Q$ in $\R$
+
+
+A set $S$ is dense in $\R$ if the elements of $S$ are arbitrarily close
+to the elements of $\R$. 
+
+::: Definition
+### Dense set
+
+Let $S \subseteq \R$. We say that $S$ is dense in $\R$ if for every $x \in \R$ and $\e>0$, there exist $s \in S$ such that 
+$$
+|x - s| < \e \,.
+$$
+
+:::
+
+
+In other words, the above definition is saying that $S$ and $\R$ are tightly knitted together. An equivalent definition of dense set is 
+given below.
+
+
+::: Remark
+Let $S \subseteq \R$. They are equivalent: 
+
+- $S$ is dense in $\R$.
+- For every pair of numbers $x,y \in \R$ with $x<y$, there exists $s \in S$ such that
+$$
+x < s < y \,.
+$$
+
+:::
+
+
+
+We now prove that $\Q$ is dense in $\R$. 
+
+
+
+::: Theorem 
+### Density of $\Q$ in $\R$    {#theorem-density}
+
+Let $x,y \in \R$, with $x<y$. There exists $q \in \Q$ such that
+$$
+x < q < y \,.
+$$
+
+:::
+
+
+
+![Let $n \in \N$ be such that $1/n< y-x$. Then take $m$ so that $m/n \in (x,y)$.](/images/density_proof.png){#fig-density-proof width=80%}
+
+
+
+::: Proof
+
+
+We need to find $q \in \Q$ such that 
+$$
+x < q < y \,.
+$${#eq-proof-density-1}
+By definition of $\Q$, we have that $q$ has to be of the form $q=m/n$ for $m \in \Z$ and $n \in \N$. 
+Therefore (@eq-proof-density-1) is equivalent to finding $m \in \Z$ and $n \in \N$ such that
+$$
+x < \frac{m}{n} < y \,.
+$${#eq-proof-density-2}
+The idea is to proceed as in @fig-density-proof: We take $n$ such that $1/n$ is small enough,
+so that we can make $m$ *jumps* of size $1/n$ and end up between $x$ and $y$.  
+To this end, note that $y - x >0$ by assumption. By the Archimedean Property in Theorem \ref{theorem-archimedean} Point 2, there exists $n \in \N$ be such that
+$$
+\frac{1}{n} < y - x \,.
+$${#eq-proof-density-3}
+Take $m \in \Z$ such that
+$$
+m-1 \leq nx < m \,.
+$${#eq-proof-density-4}
+
+> Why does such $m$ exist? As $nx>0$, by Archimedean Property in Theorem \ref{theorem-archimedean} Point 1, there exists $m' \in \Z$ such that 
+$$
+nx < m'
+$$ 
+We can then choose $m$ to be the smallest element in $\Z$ such that 
+$$
+nx < m \,.
+$${#eq-proof-density-4-bis}
+It then follows that
+$$
+m-1 < nx < m \,.
+$$
+Indeed, if by contradiction 
+$$
+m - 1 \geq nx \,,
+$$
+then $m-1$ would be another integer such that (@eq-proof-density-4-bis) holds. Since $m-1<m$, this contradicts minimality of $m$.
+
+The second inequality in (@eq-proof-density-4) implies 
+$$
+x < \frac{m}{n} \,,
+$$
+which is the first inequality in (@eq-proof-density-2). Now note that (@eq-proof-density-3) is equivalent to 
+$$
+x < y - \frac{1}{n} \,.
+$$ 
+We can use the above, and the first inequality in (@eq-proof-density-4)
+to estimate
+\begin{align*}
+m & \leq 1 + nx \\
+  & < 1 + n \left(   y - \frac{1}{n}  \right ) \\
+  & = ny \,,
+\end{align*}
+which yields
+$$
+\frac{m}{n} < y \,.
+$$
+Therefore the second inequality in (@eq-proof-density-2) is proven, concluding the proof.
+
+:::
+
+
+We have constructed the real numbers $\R$ so that they would fill the **gaps** of $\Q$. Formally, these gaps are the numbers in $\R \smallsetminus \Q$. Let us give a name to this set.
+
+::: Definition
+### Irrational numbers
+
+The set of **irrational numbers** in $\R$ is
+$$
+\mathcal{I} := \R \smallsetminus \Q \,.
+$$
+
+:::
+
+
+::: Question
+
+How many gaps does $\Q$ have? In other words, how many irrational numbers are out there?
+
+:::
+
+The answer is quite surprising, and is a corollary of the density result of Theorem \ref{theorem-density}: The irrational numbers are dense in $\R$.
+
+
+
+::: Corollary
+
+Let $x,y \in \R$, with $x<y$. There exists $t \in \mathcal{I}$ such that
+$$
+x < t < y \,.
+$$
+
+:::
+
+
+::: Proof 
+
+Consider 
+$$
+\widetilde{x}:=x - \sqrt{2}\,, \quad \widetilde{y} :=y - \sqrt{2} \,.
+$$
+Since $x<y$, we have
+$$
+\widetilde{x} < \widetilde{y} \,.
+$$
+By Theorem \ref{theorem-density} there exists $q \in \Q$ such that
+$$
+\widetilde{x} < q < \widetilde{y} \,.
+$$
+Adding $\sqrt{2}$ to the above inequalities we get
+$$
+x < t < y \,, \quad t := q + \sqrt{2} \,.
+$${#eq-density-proof}
+We claim that $t \in \mathcal{I}$. Indeed, suppose by contradiction $t \in \Q$. Then 
+$$
+\sqrt{2} = t - q \in \Q\,,
+$$
+since $t,q \in \Q$, and $\Q$ is closed under summation. Since $\sqrt{2} \in \mathcal{I}$, we obtain a contradiction. Thus $t \in \mathcal{I}$ and
+(@eq-density-proof) is our thesis.
+:::
+
+
+
 
 ## Cardinality
 
@@ -1187,8 +1189,7 @@ equal proportions. This is however false. We will see that $\R$ has much more el
 than $\Q$. Therefore also the set of irrational numbers $\mathcal{I}$ is much larger than $\Q$.
 
 
-To make the above discussion precise, we need to define what we mean by size of a set.
-For this, we need the concept of bijective function.
+To make the above discussion precise, we need to introduce the *size* of a set. For this, we need the concept of bijective function.
 
 
 ::: Definition
@@ -1196,25 +1197,27 @@ For this, we need the concept of bijective function.
 
 Let $X,Y$ be sets and $f \colon X \to Y$ be a function. We say that:
 
-- $f$ is **injective** if it holds:
+1. $f$ is **injective** if it holds:
 $$
 f(x)=f(y) \quad \implies \quad x = y \,.
 $$
-- $f$ is **surjective** if it holds:
+
+2. $f$ is **surjective** if it holds:
 $$
-\forall y \in Y \,, \,\, \exists \, x \in X \st f(x) = y \,.
+\forall \, y \in Y \,, \,\, \exists \, x \in X \st f(x) = y \,.
 $$
-- $f$ is **bijective** if it is both **injective** and **surjective**.
+
+3. $f$ is **bijective** if it is both **injective** and **surjective**.
 
 :::
 
 
 
-In other words: A function $f \colon X \to Y$ is
+In other words: A function $f \colon X \to Y$ is:
 
-- injective if any two different elements in $X$ are mapped into two different elements in $Y$.
-- surjective if every element in $Y$ has at least one element in $X$ associated via $f$.
-- bijective if to each element in $X$ we associate one and only one element in $Y$ via $f$.
+1. Injective if any two different elements in $X$ are mapped into two different elements in $Y$.
+2. Surjective if every element in $Y$ has at least one element in $X$ associated via $f$.
+3. Bijective if to each element in $X$ we associate one and only one element in $Y$ via $f$.
 
 
 
@@ -1227,13 +1230,13 @@ X = \{ 1, 2, 3 \} \,, \quad
 Y = \{ a,b,c,d,e\} \,.
 $$
 
-- The function $f \colon X \to Y$ defined by
+1. The function $f \colon X \to Y$ defined by
 $$
 f(1)=c \,, \quad f(2) = a \,, \quad f(3) = e \,,
 $$
 is injective. 
 
-- The function $g \colon X \to Y$ defined by
+2. The function $g \colon X \to Y$ defined by
 $$
 g(1)=c \,, \quad g(2) = a \,, \quad g(3) = c \,,
 $$
@@ -1242,7 +1245,7 @@ $$
 g(1) = g(3) = c \,, \quad 1 \neq 3 \,.
 $$
 
-- The function $h \colon \R \to \R$ defined by 
+3. The function $h \colon \R \to \R$ defined by 
 $$
 h(x) = x^2
 $$
@@ -1251,7 +1254,7 @@ $$
 h(1) = h(-1) = 1 \,, \quad 1 \neq - 1 \,.
 $$
 
-- The function $l \colon \R \to \R$ defined by 
+4. The function $l \colon \R \to \R$ defined by 
 $$
 l(x) = 2x
 $$
@@ -1267,20 +1270,19 @@ $$
 ::: Example
 ### Surjectivity
 
-
 Consider the sets
 $$
 X = \{ 1, 2, 3 ,4\} \,, \quad  
 Y = \{ a,b,c\} \,.
 $$
 
-- The function $f \colon X \to Y$ defined by
+1. The function $f \colon X \to Y$ defined by
 $$
 f(1)=c \,, \quad f(2) = a \,, \quad f(3) = a \,, \quad f(4) = b \,,
 $$
 is surjective. 
 
-- The function $g \colon X \to Y$ defined by
+2. The function $g \colon X \to Y$ defined by
 $$
 g(1)=a \,, \quad g(2) = a \,, \quad g(3) = c \,, \quad g(4) = a \,,
 $$
@@ -1289,7 +1291,7 @@ $$
 g(x) = b \,.
 $$
 
-- The function $h \colon \R \to \R$ defined by 
+3. The function $h \colon \R \to \R$ defined by 
 $$
 h(x) = x^2
 $$
@@ -1298,7 +1300,7 @@ $$
 h(x) =  x^2 = -1  \,.
 $$
 
-- The function $l \colon \R \to [0 , \infty)$ defined by 
+4. The function $l \colon \R \to [0 , \infty)$ defined by 
 $$
 l(x) = x^2
 $$
@@ -1317,13 +1319,13 @@ This is true by Theorem \ref{theorem_existence_root}.
 
 
 
-- Let $X = \{ 1, 2, 3 \}, Y = \{ a,b,c\}$. The function $f \colon X \to Y$ defined by
+1. Let $X = \{ 1, 2, 3 \}, Y = \{ a,b,c\}$. The function $f \colon X \to Y$ defined by
 $$
 f(1)=c \,, \quad f(2) = a \,, \quad f(3) = b \,,
 $$
 is bijective, since it is both injective and surjective. 
 
-- Let $X = \{ 1, 2, 3 \}, Y = \{ a,b\}$. The function $g \colon X \to Y$ defined by
+2. Let $X = \{ 1, 2, 3 \}, Y = \{ a,b\}$. The function $g \colon X \to Y$ defined by
 $$
 g(1)=a \,, \quad g(2) = b \,, \quad g(3) = b \,,
 $$
@@ -1332,7 +1334,7 @@ $$
 g(2) = g(3) = b \, \quad 2 \neq 3 \,.
 $$
 
-- Let $X = \{ 1, 2 \}, Y = \{ a,b,c\}$. The function $h \colon \R \to \R$ defined by 
+3. Let $X = \{ 1, 2 \}, Y = \{ a,b,c\}$. The function $h \colon \R \to \R$ defined by 
 $$
 h(1) = a \,, \quad h(2) = c \,, 
 $$
@@ -1341,7 +1343,7 @@ $$
 h(x) =  b  \,.
 $$
 
-- Let $X = \{ 1, 2 , 3\}, Y = \{ a,b,c\}$. The function $l \colon \R \to [0 , \infty)$ defined by 
+4. Let $X = \{ 1, 2 , 3\}, Y = \{ a,b,c\}$. The function $l \colon \R \to [0 , \infty)$ defined by 
 $$
 l(1) = a \,, \quad l(2) = a \,, \quad l(3) = b \,,
 $$
@@ -1351,11 +1353,11 @@ is not bijective, as it is neither injective nor surjective.
 
 
 
-We are ready to define the size of a set.
+We are ready to define the *size* of a set.
 
 
 ::: Definition
-### Cardinality, finite, countable, uncountable
+### Cardinality, Finite, Countable, Uncountable
 
 Let $X$ be a set. The **cardinality** of $X$ is the number of elements in $X$. We denote
 the cardinality of $X$ by
@@ -1364,7 +1366,7 @@ $$
 $$
 Further, we say that:
 
-- $X$ is **finite** if there exists a natural number $n \in \N$ and a bijection
+1. $X$ is **finite** if there exists a natural number $n \in \N$ and a bijection
 $$
 f \colon X \to \{1,2,\ldots, n \} \,.
 $$
@@ -1373,7 +1375,7 @@ $$
 |X| = n \,.
 $$
 
-- $X$ is **countable** if there exists a bijection
+2. $X$ is **countable** if there exists a bijection
 $$
 f \colon X \to \N \,.
 $$
@@ -1382,25 +1384,25 @@ $$
 |X| = |\N| \,.
 $$
 
-- $X$ is **uncountable** if $X$ is neither finite, nor countable.
+3. $X$ is **uncountable** if $X$ is neither finite, nor countable.
 
 :::
 
 
-In other words: A set $X$ is
+In other words, A set $X$ is:
 
-- finite, if $X$ can be listed as
+1. Finite, if $X$ can be listed as
 $$
 X = \{ x_1 , \ldots, x_n \}
 $$
 for some $n \in \N$.
 
-- countable, if $X$ can be listed as
+2. Countable, if $X$ can be listed as
 $$
 X = \{ x_n \divider n \in \N  \} \,.
 $$
 
-- uncountable, if $X$ cannot be listed.
+3. Uncountable, if $X$ cannot be listed.
 
 
 
@@ -1422,7 +1424,7 @@ Let $X$ be a countable set and $A \subseteq X$. Then either $A$ is finite or cou
 
 ::: Proof
 
-If $A$ is finite we are done. Therefore suppose $A$ is not finite.
+If $A$ is finite, there is nothing to prove. Therefore suppose $A$ is not finite.
 Since $X$ is countable there exists a bijection $f \colon \N \to X$.
 Let $n_1 \in \N$ be such that
 $$
@@ -1568,7 +1570,7 @@ A_i = \{ a_k^i \divider k \in \N  \} = \{   a_1^i , \, a_2^i , \, a_3^i , \, a_4
 $$
 The proof that $A$ is countable is based on a diagonal argument by
 Georg Cantor, see [Wikipedia page](https://en.wikipedia.org/wiki/Cantor's_diagonal_argument0). 
-The idea of th is that we can list the elements of the sets
+The idea is that we can list the elements of the sets
 $A_i$ in an infinite square: In the first row we put the elements
 of $A_1$, in the second row the elements of $A_2$, and so on. Therefore
 the $i$-th row contains the elements of $A_i$. This procedure is 

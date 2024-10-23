@@ -72,59 +72,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
 .Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Problem {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -136,7 +88,55 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -288,8 +288,8 @@ window.Quarto = {
   <li><a href="#archimedean-property" id="toc-archimedean-property" class="nav-link active" data-scroll-target="#archimedean-property"><span class="header-section-number">4.1</span> Archimedean Property</a></li>
   <li><a href="#nested-interval-property" id="toc-nested-interval-property" class="nav-link" data-scroll-target="#nested-interval-property"><span class="header-section-number">4.2</span> Nested Interval Property</a></li>
   <li><a href="#revisiting-sup-and-inf" id="toc-revisiting-sup-and-inf" class="nav-link" data-scroll-target="#revisiting-sup-and-inf"><span class="header-section-number">4.3</span> Revisiting Sup and inf</a></li>
-  <li><a href="#density-of-mathbbq-in-mathbbr" id="toc-density-of-mathbbq-in-mathbbr" class="nav-link" data-scroll-target="#density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></a></li>
-  <li><a href="#existence-of-k-th-roots" id="toc-existence-of-k-th-roots" class="nav-link" data-scroll-target="#existence-of-k-th-roots"><span class="header-section-number">4.5</span> Existence of <span class="math inline">\(k\)</span>-th Roots</a></li>
+  <li><a href="#existence-of-k-th-roots" id="toc-existence-of-k-th-roots" class="nav-link" data-scroll-target="#existence-of-k-th-roots"><span class="header-section-number">4.4</span> Existence of <span class="math inline">\(k\)</span>-th Roots</a></li>
+  <li><a href="#density-of-mathbbq-in-mathbbr" id="toc-density-of-mathbbq-in-mathbbr" class="nav-link" data-scroll-target="#density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.5</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></a></li>
   <li><a href="#cardinality" id="toc-cardinality" class="nav-link" data-scroll-target="#cardinality"><span class="header-section-number">4.6</span> Cardinality</a></li>
   </ul>
 </nav>
@@ -611,7 +611,7 @@ Figure&nbsp;4.5: Let <span class="math inline">\(i = \inf A\)</span>. Then for e
 </figcaption>
 </figure>
 </div>
-<p>With the above characterizations of supremum and infimum, it is now easier to prove that some candidate number is the supremum or infimum of some set. As an example, let us characterize supremum and infimum of an open interval of <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>With the above characterizations of supremum and infimum, it will be easier, in some cases, to compute infimum and supremum. We now characterize infimum and supremum of an open interval of <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <div id="proposition-interval-inf-sup" class="Proposition">
 <p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 9</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
 A:= (a,b) = \{ x \in \mathbb{R}\, \colon \,a &lt; x &lt; b \}\,.
@@ -634,25 +634,25 @@ a &lt; x \,, \quad \forall \, x \in A \,.
 L \leq x \,, \quad \forall \, x \in A \,.
 \]</span> We have to prove that <span id="eq-interval-inf-sup-proof"><span class="math display">\[
 L \leq a \,.
-\tag{4.11}\]</span></span> Indeed suppose by contradiction that (<a href="#eq-interval-inf-sup-proof" class="quarto-xref"><span>4.11</span></a>) does not hold, namely that <span class="math display">\[
+\tag{4.11}\]</span></span> Suppose by contradiction that (<a href="#eq-interval-inf-sup-proof" class="quarto-xref"><span>4.11</span></a>) does not hold, namely that <span class="math display">\[
 a &lt; L \,.
 \]</span> Since <span class="math inline">\(a&lt;b\)</span> we have <span class="math display">\[
 a = \frac{2a}{2} &lt; \frac{a+b}{2} &lt; \frac{2b}{b} = b \,,
 \]</span> showing that the midpoint between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> satisfies <span class="math display">\[
 \frac{a+b}{2} \in A \,.
-\]</span> Since <span class="math inline">\(L\)</span> is a lower bound for <span class="math inline">\(A\)</span> we have <span id="eq-interval-inf-sup-proof-2"><span class="math display">\[
+\]</span> Since <span class="math inline">\(L\)</span> is a lower bound for <span class="math inline">\(A\)</span>, we have <span id="eq-interval-inf-sup-proof-2"><span class="math display">\[
 L \leq \frac{a+b}{2} &lt; b \,.
-\tag{4.12}\]</span></span> Consider the midpoint <span class="math display">\[
+\tag{4.12}\]</span></span> In particular we have proven that <span class="math inline">\(a &lt; L &lt;b\)</span>, which means that <span class="math inline">\(L \in A\)</span>. Consider now the midpoint between <span class="math inline">\(a\)</span> and <span class="math inline">\(L\)</span>, that is, <span class="math display">\[
 M := \frac{a + L}{2} \,.
-\]</span> We have that <span class="math display">\[
+\]</span> Since <span class="math inline">\(a &lt; L &lt;b\)</span>, we have that <span class="math display">\[
 M \in A \,.
 \]</span></p>
 <blockquote class="blockquote">
-<p>Indeed, recalling that <span class="math inline">\(a&lt;L\)</span>, we have <span class="math display">\[
-a = \frac{2a}{2} &lt; \frac{a+L}{2} = M \,.
-\]</span> Moreover by (<a href="#eq-interval-inf-sup-proof-2" class="quarto-xref"><span>4.12</span></a>) we have <span class="math inline">\(L&lt;b\)</span>. Thus <span class="math display">\[
+<p>Indeed, using that <span class="math inline">\(a&lt;L\)</span>, we have <span class="math display">\[
+a = \frac{2a}{2} &lt; \frac{a+L}{2} = M  \leq \frac{a+b}{2} \,.
+\]</span> Using that <span class="math inline">\(L&lt;b\)</span>, we have <span class="math display">\[
 M = \frac{a+L}{2} \leq \frac{a+b}{2} &lt; b \,.
-\]</span> This shows <span class="math inline">\(M \in A\)</span>.</p>
+\]</span> Thus <span class="math inline">\(a &lt; M &lt; b\)</span>, showing that <span class="math inline">\(M \in A\)</span>.</p>
 </blockquote>
 <p>Moreover <span class="math display">\[
 M &lt; L \,.
@@ -662,9 +662,7 @@ M &lt; L \,.
 M = \frac{a + L}{2} &lt; \frac{2L}{2} = L \,.
 \]</span></p>
 </blockquote>
-<p>This is a contradiction, since by assumption <span class="math inline">\(L\)</span> is a lower bound for <span class="math inline">\(A\)</span>, and thus we should have <span class="math display">\[
-L \leq M \,.
-\]</span> Therefore (<a href="#eq-interval-inf-sup-proof" class="quarto-xref"><span>4.11</span></a>) holds, showing that <span class="math inline">\(a\)</span> is the largest lower bound of <span class="math inline">\(A\)</span>. Thus <span class="math inline">\(a = \inf A\)</span>.</p>
+<p>This is a contradiction, since <span class="math inline">\(L\)</span> is a lower bound for <span class="math inline">\(A\)</span> and <span class="math inline">\(M \in A\)</span>. Therefore (<a href="#eq-interval-inf-sup-proof" class="quarto-xref"><span>4.11</span></a>) holds, showing that <span class="math inline">\(a\)</span> is the largest lower bound of <span class="math inline">\(A\)</span>. We conclude that <span class="math inline">\(a = \inf A\)</span>.</p>
 </div></details>
 </div>
 <p>As a corollary of the above we have that the maximum and minimum of an open interval do not exist.</p>
@@ -681,7 +679,7 @@ A:= (a,b) = \{ x \in \mathbb{R}\, \colon \,a &lt; x &lt; b \}\,.
 \inf A = a\,,
 \]</span> by Proposition <a href="chap_4.html#proposition-interval-inf-sup">9</a>, we would obtain that <span class="math display">\[
 \min A = a \,.
-\]</span> By definition <span class="math inline">\(\min A \in A\)</span>, so that <span class="math inline">\(a \in A\)</span>. This is contradiction. Then <span class="math inline">\(\min A\)</span> does not exist.<p></p>
+\]</span> As <span class="math inline">\(\min A \in A\)</span> by definition, we infer <span class="math inline">\(a \in A\)</span>. This is contradiction. Then <span class="math inline">\(\min A\)</span> does not exist.<p></p>
 <p>The proof that <span class="math inline">\(\max A\)</span> does not exist is similar, and is left as an exercise.</p>
 </div></details>
 </div>
@@ -694,7 +692,7 @@ A:= [a,b) = \{ x \in \mathbb{R}\, \colon \,a \leq x &lt; b \}\,.
 \]</span> <span class="math inline">\(\max A\)</span> does not exist.<p></p>
 </div></details>
 </div>
-<p>The proof is very similar to the ones above, and is left to the reader for exercise. Let us now compute supremum and infimum of a set which is not an interval.</p>
+<p>The proof is very simple, and is left as an exercise. Let us now compute supremum and infimum of a set which is not an interval.</p>
 <div id="Proposition-12" class="Proposition">
 <p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 12</strong></summary><div>Define the set <span class="math display">\[
 A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
@@ -706,7 +704,9 @@ A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
 <div id="Proof*-8" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> We have <span class="math display">\[
 \frac1n \leq 1 \,, \quad \forall \, n \in \mathbb{N}\,.
-\]</span> Therefore <span class="math inline">\(1\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Let us prove it is the least upper bound: let <span class="math inline">\(b\)</span> be an upper bound for <span class="math inline">\(A\)</span>. Since <span class="math inline">\(1 \in A\)</span> and <span class="math inline">\(b\)</span> is an upper bound, we have <span class="math inline">\(1 \leq b\)</span>. Hence <span class="math inline">\(1\)</span> is the least upper bound, and <span class="math display">\[
+\]</span> Therefore <span class="math inline">\(1\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Since <span class="math inline">\(1 \in A\)</span>, by definition of maximum we conclude that <span class="math display">\[
+\max A = 1 \,.
+\]</span> Since the maximum exists, we conclude that also the supremum exists, and <span class="math display">\[
 \sup A = \max A =  1 \,.
 \]</span><p></p>
 <p><em>Part 2.</em> We have <span class="math display">\[
@@ -729,111 +729,11 @@ A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
 </div></details>
 </div>
 </section>
-<section id="density-of-mathbbq-in-mathbbr" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></h2>
-<p>A set <span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span> if the elements of <span class="math inline">\(S\)</span> are arbitrarily close to the elements of <span class="math inline">\(\mathbb{R}\)</span>.</p>
-<div id="dense-set" class="Definition" title="Dense set">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 13: </strong>Dense set</summary><div>Let <span class="math inline">\(S \subseteq \mathbb{R}\)</span>. We say that <span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span> if for every <span class="math inline">\(x \in \mathbb{R}\)</span> and <span class="math inline">\(\varepsilon\in \mathbb{R}\)</span> with <span class="math inline">\(\varepsilon&gt;0\)</span>, there exist <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
-|x - q| &lt; \varepsilon\,.
-\]</span><p></p>
-</div></details>
-</div>
-<p>In other words, the above definition is saying that <span class="math inline">\(S\)</span> and <span class="math inline">\(\mathbb{R}\)</span> are tightly knitted together. An equivalent definition of dense set is given below.</p>
-<div id="Remark-14" class="Remark">
-<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 14</strong></summary><div>
-<p>Let <span class="math inline">\(S \subseteq \mathbb{R}\)</span>. They are equivalent:</p>
-<ul>
-<li><span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>.</li>
-<li>For every pair of numbers <span class="math inline">\(x,y \in \mathbb{R}\)</span> with <span class="math inline">\(x&lt;y\)</span>, there exists <span class="math inline">\(s \in S\)</span> such that <span class="math display">\[
-x &lt; s &lt; y \,.
-\]</span></li>
-</ul>
-</div></details>
-</div>
-<p>We now prove that <span class="math inline">\(\mathbb{Q}\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>.</p>
-<div id="theorem-density" class="Theorem" title="Density of \mathbb{Q} in \mathbb{R}">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 15: </strong>Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(x&lt;y\)</span>. There exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
-x &lt; q &lt; y \,.
-\]</span><p></p>
-</div></details>
-</div>
-<div id="fig-density-proof" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-density-proof-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/density_proof.png" class="img-fluid figure-img" style="width:80.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-density-proof-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.6: Let <span class="math inline">\(n \in \mathbb{N}\)</span> be such that <span class="math inline">\(1/n&lt; y-x\)</span>. Then take <span class="math inline">\(m\)</span> so that <span class="math inline">\(m/n \in (x,y)\)</span>.
-</figcaption>
-</figure>
-</div>
-<div id="Proof*-9" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We need to find <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span id="eq-proof-density-1"><span class="math display">\[
-x &lt; q &lt; y \,.
-\tag{4.14}\]</span></span> By definition of <span class="math inline">\(\mathbb{Q}\)</span>, we have that <span class="math inline">\(q\)</span> has to be <span class="math inline">\(q=m/n\)</span> for <span class="math inline">\(m \in \mathbb{Z}\)</span> and <span class="math inline">\(n \in \mathbb{N}\)</span>. Therefore (<a href="#eq-proof-density-1" class="quarto-xref"><span>4.14</span></a>) is equivalent to finding <span class="math inline">\(m \in \mathbb{Z}\)</span> and <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span id="eq-proof-density-2"><span class="math display">\[
-x &lt; \frac{m}{n} &lt; y \,.
-\tag{4.15}\]</span></span> The idea is to proceed as in <a href="#fig-density-proof" class="quarto-xref">Figure&nbsp;<span>4.6</span></a>: We take <span class="math inline">\(n\)</span> such that <span class="math inline">\(1/n\)</span> is small enough so that we can make <span class="math inline">\(m\)</span> <em>jumps</em> of size <span class="math inline">\(1/n\)</span> and end up between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.<br>
-To this end, let <span class="math inline">\(n \in \mathbb{N}\)</span> be such that <span id="eq-proof-density-3"><span class="math display">\[
-\frac{1}{n} &lt; y - x \,.
-\tag{4.16}\]</span></span> Such <span class="math inline">\(n\)</span> exists thanks to the Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 2. Inequality (<a href="#eq-proof-density-2" class="quarto-xref"><span>4.15</span></a>) is equivalent to <span class="math display">\[
-nx &lt; m &lt; ny \,.
-\]</span> Take <span class="math inline">\(m \in \mathbb{Z}\)</span> such that <span id="eq-proof-density-4"><span class="math display">\[
-m-1 \leq nx &lt; m \,.
-\tag{4.17}\]</span></span><p></p>
-<blockquote class="blockquote">
-<p>Why does such <span class="math inline">\(m\)</span> exist? Because by Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(m' \in \mathbb{Z}\)</span> such that <span class="math display">\[
-m' &gt; nx
-\]</span> We can then choose <span class="math inline">\(m\)</span> to be the smallest element in <span class="math inline">\(\mathbb{Z}\)</span> such that <span class="math inline">\(m &gt;  nx\)</span>. Such <span class="math inline">\(m\)</span> satisfies (<a href="#eq-proof-density-4" class="quarto-xref"><span>4.17</span></a>).</p>
-</blockquote>
-<p>The second inequality in (<a href="#eq-proof-density-4" class="quarto-xref"><span>4.17</span></a>) implies <span class="math display">\[
-x &lt; \frac{m}{n} \,,
-\]</span> which is the first inequality in (<a href="#eq-proof-density-2" class="quarto-xref"><span>4.15</span></a>). Now note that (<a href="#eq-proof-density-3" class="quarto-xref"><span>4.16</span></a>) is equivalent to <span class="math inline">\(x &lt; y - 1/n\)</span>. We can use the latter and the first inequality in (<a href="#eq-proof-density-4" class="quarto-xref"><span>4.17</span></a>) to estimate <span class="math display">\[\begin{align*}
-m &amp; \leq 1 + nx \\
-  &amp; &lt; 1 + n \left(   y - \frac{1}{n}  \right ) \\
-  &amp; = ny \,,
-\end{align*}\]</span> which yields <span class="math display">\[
-\frac{m}{n} &lt; y \,.
-\]</span> Therefore the second inequality in (<a href="#eq-proof-density-2" class="quarto-xref"><span>4.15</span></a>) is proven, concluding the proof.</p>
-</div></details>
-</div>
-<p>We have constructed the real numbers <span class="math inline">\(\mathbb{R}\)</span> so that they would fill the <strong>gaps</strong> of <span class="math inline">\(\mathbb{Q}\)</span>. Formally, these gaps are the numbers in <span class="math inline">\(\mathbb{R}\smallsetminus \mathbb{Q}\)</span>. Let us give a name to this set.</p>
-<div id="irrational-numbers" class="Definition" title="Irrational numbers">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 16: </strong>Irrational numbers</summary><div>The set of irrational numbers in <span class="math inline">\(\mathbb{R}\)</span> is <span class="math display">\[
-\mathcal{I} := \mathbb{R}\smallsetminus \mathbb{Q}\,.
-\]</span><p></p>
-</div></details>
-</div>
-<div id="Question-17" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 17</strong></summary><div>How many gaps does <span class="math inline">\(\mathbb{Q}\)</span> have? In other words, how many irrational numbers are out there?<p></p>
-</div></details>
-</div>
-<p>The answer is quite surprising, and is a corollary of the density result of Theorem <a href="chap_4.html#theorem-density">15</a>: The irrational numbers are dense in <span class="math inline">\(\mathbb{R}\)</span>.</p>
-<div id="Corollary-18" class="Corollary">
-<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 18</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(x&lt;y\)</span>. There exists <span class="math inline">\(t \in \mathcal{I}\)</span> such that <span class="math display">\[
-x &lt; t &lt; y \,.
-\]</span><p></p>
-</div></details>
-</div>
-<div id="Proof*-10" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Consider <span class="math display">\[
-\widetilde{x}:=x - \sqrt{2}\,, \quad \widetilde{y} :=y - \sqrt{2} \,.
-\]</span> Since <span class="math inline">\(x&lt;y\)</span>, we have <span class="math display">\[
-\widetilde{x} &lt; \widetilde{y} \,.
-\]</span> By Theorem <a href="chap_4.html#theorem-density">15</a> there exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
-\widetilde{x} &lt; q &lt; \widetilde{y} \,.
-\]</span> Adding <span class="math inline">\(\sqrt{2}\)</span> to the above inequalities we get <span id="eq-density-proof"><span class="math display">\[
-x &lt; t &lt; y \,, \quad t := q + \sqrt{2} \,.
-\tag{4.18}\]</span></span> We claim that <span class="math inline">\(t \in \mathcal{I}\)</span>. Indeed, suppose by contradiction <span class="math inline">\(t \in \mathbb{Q}\)</span>. Then <span class="math display">\[
-\sqrt{2} = t - q \in \mathbb{Q}\,,
-\]</span> since <span class="math inline">\(t,q \in \mathbb{Q}\)</span>, and <span class="math inline">\(\mathbb{Q}\)</span> is closed under summation. Since <span class="math inline">\(\sqrt{2} \in \mathcal{I}\)</span>, we obtain a contradiction. Thus <span class="math inline">\(t \in \mathcal{I}\)</span> and (<a href="#eq-density-proof" class="quarto-xref"><span>4.18</span></a>) is our thesis.<p></p>
-</div></details>
-</div>
-</section>
-<section id="existence-of-k-th-roots" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="existence-of-k-th-roots"><span class="header-section-number">4.5</span> Existence of <span class="math inline">\(k\)</span>-th Roots</h2>
+<section id="existence-of-k-th-roots" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="existence-of-k-th-roots"><span class="header-section-number">4.4</span> Existence of <span class="math inline">\(k\)</span>-th Roots</h2>
 <p>We have started our discussion in <a href="chap_1.html" class="quarto-xref"><span>Chapter 1</span></a> by proving that <span id="eq-sqrt2-existence"><span class="math display">\[
 \sqrt{2} \notin \mathbb{Q}\,.
-\tag{4.19}\]</span></span> We have shown that (<a href="#eq-sqrt2-existence" class="quarto-xref"><span>4.19</span></a>) implies that the set <span class="math display">\[
+\tag{4.14}\]</span></span> We have shown that (<a href="#eq-sqrt2-existence" class="quarto-xref"><span>4.14</span></a>) implies that the set <span class="math display">\[
 A := \{ q \in \mathbb{Q}\, \colon \,q^2 &lt; 2 \}
 \]</span> does not have a supremum in <span class="math inline">\(\mathbb{Q}\)</span>. We then introduced the Real Numbers <span class="math inline">\(\mathbb{R}\)</span> so that each non-empty and bounded above set would have a supremum. As the set <span class="math inline">\(A\)</span> is non-empty and bounded above, there exists <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
 \alpha = \sup A \,.
@@ -848,14 +748,18 @@ A := \{ t \in \mathbb{R}\, \colon \,t^k &lt; x \}
 \alpha^k = x \,,
 \]</span> meaning that <span class="math inline">\(\alpha\)</span> is the <span class="math inline">\(k\)</span>-th root of <span class="math inline">\(x\)</span>.</p>
 <div id="theorem_existence_root" class="Theorem" title="Existence of k-th roots">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 19: </strong>Existence of <span class="math inline">\(k\)</span>-th roots</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>. There exists a unique <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 13: </strong>Existence of <span class="math inline">\(k\)</span>-th roots</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>. Define the set <span class="math display">\[
+A = \{ t \in \mathbb{R}\, \colon \,t^k &lt; x \} \,.
+\]</span> There exists <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
+\alpha = \sup A \,.
+\]</span> Moreover it holds that <span class="math display">\[
 \alpha^k = x \,.
 \]</span><p></p>
 </div></details>
 </div>
-<p>The proof of Theorem <a href="chap_4.html#theorem_existence_root">19</a> rests on similar ideas to the ones used to prove that <span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property.</p>
-<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 19">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 19</summary><div><em>Part 1: Uniqueness.</em><p></p>
+<p>The proof of Theorem <a href="chap_4.html#theorem_existence_root">13</a> rests on similar ideas to the ones used to prove that <span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property.</p>
+<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 13">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 13</summary><div><em>Part 1: Uniqueness.</em><p></p>
 <p>Suppose <span class="math inline">\(\alpha_1,\alpha_2 \in \mathbb{R}\)</span> are such that <span class="math display">\[
 \alpha_1^k = \alpha_2^k = x \,.
 \]</span> If <span class="math inline">\(\alpha_1 \neq \alpha_2\)</span>, then <span class="math display">\[
@@ -878,9 +782,9 @@ t^k &lt; x &lt; x + 1 &lt; (x+1)^k ,
 \alpha = \sup A \,.
 \]</span> We claim that <span id="eq-existence-root-proof-1"><span class="math display">\[
 \alpha^k = x \,.
-\tag{4.20}\]</span></span> Suppose by contradiction that (<a href="#eq-existence-root-proof-1" class="quarto-xref"><span>4.20</span></a>) does not hold. We will need the formula: For all <span class="math inline">\(a,b \in \mathbb{R}\)</span> it holds <span id="eq-existence-root-proof-2"><span class="math display">\[
+\tag{4.15}\]</span></span> Suppose by contradiction that (<a href="#eq-existence-root-proof-1" class="quarto-xref"><span>4.15</span></a>) does not hold. We will need the formula: For all <span class="math inline">\(a,b \in \mathbb{R}\)</span> it holds <span id="eq-existence-root-proof-2"><span class="math display">\[
 a^k-b^k = (a - b)( a^{k-1} + a^{k-2} b + a^{k-3}b^k + \ldots + a b^{k-2} + b^{k-1} ) \,.  
-\tag{4.21}\]</span></span> Formula (<a href="#eq-existence-root-proof-2" class="quarto-xref"><span>4.21</span></a>) can be easily proven by induction on <span class="math inline">\(k\)</span>. Since we are assuming that (<a href="#eq-existence-root-proof-1" class="quarto-xref"><span>4.20</span></a>) does not hold, we have two cases:</p>
+\tag{4.16}\]</span></span> Formula (<a href="#eq-existence-root-proof-2" class="quarto-xref"><span>4.16</span></a>) can be easily proven by induction on <span class="math inline">\(k\)</span>. Since we are assuming that (<a href="#eq-existence-root-proof-1" class="quarto-xref"><span>4.15</span></a>) does not hold, we have two cases:</p>
 <ul>
 <li><p><span class="math inline">\(\alpha^k &lt; x\)</span>: We know that <span class="math inline">\(\alpha\)</span> is the supremum of <span class="math inline">\(A\)</span>. We would like to violate this, by finding a number <span class="math inline">\(L\)</span> which is larger than <span class="math inline">\(\alpha\)</span>, but still belongs to <span class="math inline">\(A\)</span>. This means <span class="math inline">\(L\)</span> has to satisfy <span class="math display">\[
 \alpha &lt; L  \,, \quad L^k &lt; x \,.
@@ -888,14 +792,14 @@ a^k-b^k = (a - b)( a^{k-1} + a^{k-2} b + a^{k-3}b^k + \ldots + a b^{k-2} + b^{k-
 L_n := \alpha + \frac{1}{n}
 \]</span> for <span class="math inline">\(n \in \mathbb{N}\)</span> to be chosen later. Clearly <span id="eq-existence-root-proof-3"><span class="math display">\[
 \alpha &lt; L_n \,,
-\tag{4.22}\]</span></span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. We now search for <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+\tag{4.17}\]</span></span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. We now search for <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
 L_{n_0}^k &lt; x \,.  
-\]</span> Using formula (<a href="#eq-existence-root-proof-2" class="quarto-xref"><span>4.21</span></a>) with <span class="math inline">\(a = \alpha\)</span> and <span class="math inline">\(b = L_{n_0}\)</span> we obtain <span id="eq-existence-root-proof-4"><span class="math display">\[
+\]</span> Using formula (<a href="#eq-existence-root-proof-2" class="quarto-xref"><span>4.16</span></a>) with <span class="math inline">\(a = \alpha\)</span> and <span class="math inline">\(b = L_{n_0}\)</span> we obtain <span id="eq-existence-root-proof-4"><span class="math display">\[
 L_{n_0}^k - \alpha^k = \frac{1}{n_0}  \left(  L_{n_0}^{k-1} + L_{n_0}^{k-2} \alpha +
                       \ldots  + L_{n_0}\alpha^{k-2} + \alpha^{k-1} \right) \,.
-\tag{4.23}\]</span></span> Now notice that (<a href="#eq-existence-root-proof-3" class="quarto-xref"><span>4.22</span></a>) implies <span class="math display">\[
+\tag{4.18}\]</span></span> Now notice that (<a href="#eq-existence-root-proof-3" class="quarto-xref"><span>4.17</span></a>) implies <span class="math display">\[
 \alpha^j &lt; L_{n_0}^j
-\]</span> for all <span class="math inline">\(j \in \mathbb{N}\)</span>. Using this estimate on all the terms <span class="math inline">\(\alpha^j\)</span> appearing in the RHS of (<a href="#eq-existence-root-proof-4" class="quarto-xref"><span>4.23</span></a>) we obtain <span class="math display">\[\begin{align*}
+\]</span> for all <span class="math inline">\(j \in \mathbb{N}\)</span>. Using this estimate on all the terms <span class="math inline">\(\alpha^j\)</span> appearing in the RHS of (<a href="#eq-existence-root-proof-4" class="quarto-xref"><span>4.18</span></a>) we obtain <span class="math display">\[\begin{align*}
 L_{n_0}^k - \alpha^k &amp; = \frac{1}{n_0}  \left(  L_{n_0}^{k-1} + L_{n_0}^{k-2} \alpha +
                       \ldots  + L_{n_0}\alpha^{k-2} + \alpha^{k-1} \right) \\
                     &amp; &lt; \frac{1}{n_0} \left(  L_{n_0}^{k-1} + L_{n_0}^{k-2} L_{n_0} +
@@ -903,17 +807,17 @@ L_{n_0}^k - \alpha^k &amp; = \frac{1}{n_0}  \left(  L_{n_0}^{k-1} + L_{n_0}^{k-2
                     &amp; = \frac{k}{n_0} \, L_{n_0}^{k-1}
 \end{align*}\]</span> Rearranging the above we get <span id="eq-existence-root-proof-5"><span class="math display">\[
 L_{n_0}^k &lt; \frac{k}{n_0} \, L_{n_0}^{k-1}  + \alpha^k \,.
-\tag{4.24}\]</span></span> Now note that <span class="math display">\[
+\tag{4.19}\]</span></span> Now note that <span class="math display">\[
 L_{n_0} = \alpha + \frac{1}{n_0} &lt; \alpha + 1 \,.
 \]</span> Therefore <span class="math display">\[
 L_{n_0}^{k-1} &lt; (\alpha + 1)^{k-1} \,,
-\]</span> and from (<a href="#eq-existence-root-proof-5" class="quarto-xref"><span>4.24</span></a>) we obtain <span class="math display">\[
+\]</span> and from (<a href="#eq-existence-root-proof-5" class="quarto-xref"><span>4.19</span></a>) we obtain <span class="math display">\[
 L_{n_0}^k &lt; \frac{k}{n_0} \, (\alpha + 1)^{k-1} + \alpha^k \,.
 \]</span> We wanted to find <span class="math inline">\(n_0 \in \mathbb{N}\)</span> so that <span class="math inline">\(L_{n_0}^k &lt; x\)</span>. Therefore we impose <span class="math display">\[
 \frac{k}{n_0} \, (\alpha + 1)^{k-1} + \alpha^k  &lt; x \,,
 \]</span> and find that the above is satisfied for <span id="eq-existence-root-proof-6"><span class="math display">\[
 n_0 &gt; \frac{ k (\alpha + 1)^{k-1} }{ x - \alpha^k } \,.
-\tag{4.25}\]</span></span> Notice that the RHS in (<a href="#eq-existence-root-proof-6" class="quarto-xref"><span>4.25</span></a>) is a positive real number, since <span class="math inline">\(\alpha^k &lt; x\)</span> by assumption. Therefore, by the Archimedean Property of Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> satisfying (<a href="#eq-existence-root-proof-6" class="quarto-xref"><span>4.25</span></a>).<br>
+\tag{4.20}\]</span></span> Notice that the RHS in (<a href="#eq-existence-root-proof-6" class="quarto-xref"><span>4.20</span></a>) is a positive real number, since <span class="math inline">\(\alpha^k &lt; x\)</span> by assumption. Therefore, by the Archimedean Property of Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> satisfying (<a href="#eq-existence-root-proof-6" class="quarto-xref"><span>4.20</span></a>).<br>
 We have therefore shown the existence of <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
 \alpha &lt; L_{n_0}  \,, \quad  L_{n_0}^k &lt; x \,.
 \]</span> The above says that <span class="math inline">\(L_{n_0} \in A\)</span> and that <span class="math display">\[
@@ -931,14 +835,14 @@ t^k &lt; x &lt; L^k \quad \implies \quad t &lt; L \,.
 L_n := \alpha - \frac{1}{n}
 \]</span> for <span class="math inline">\(n \in \mathbb{N}\)</span> to be chosen later. In this way <span id="eq-existence-root-proof-3bis"><span class="math display">\[
 L_n  &lt; \alpha \,,
-\tag{4.26}\]</span></span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. We now search for <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+\tag{4.21}\]</span></span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. We now search for <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
 L_{n_0}^k &gt; x \,.  
-\]</span> Using formula (<a href="#eq-existence-root-proof-2" class="quarto-xref"><span>4.21</span></a>) with <span class="math inline">\(a = L_{n_0}\)</span> and <span class="math inline">\(b = \alpha\)</span> we obtain <span id="eq-existence-root-proof-4bis"><span class="math display">\[
+\]</span> Using formula (<a href="#eq-existence-root-proof-2" class="quarto-xref"><span>4.16</span></a>) with <span class="math inline">\(a = L_{n_0}\)</span> and <span class="math inline">\(b = \alpha\)</span> we obtain <span id="eq-existence-root-proof-4bis"><span class="math display">\[
 \alpha^k - L_{n_0}^k  = \frac{1}{n_0}  \left(  \alpha^{k-1} + \alpha^{k-2} L_{n_0} +
                       \ldots  + \alpha L_{n_0}^{k-2} + L_{n_0}^{k-1} \right) \,.
-\tag{4.27}\]</span></span> Now notice that (<a href="#eq-existence-root-proof-3bis" class="quarto-xref"><span>4.26</span></a>) implies <span class="math display">\[
+\tag{4.22}\]</span></span> Now notice that (<a href="#eq-existence-root-proof-3bis" class="quarto-xref"><span>4.21</span></a>) implies <span class="math display">\[
 L_{n_0}^j &lt; \alpha^j
-\]</span> for all <span class="math inline">\(j \in \mathbb{N}\)</span>. Using this estimate on all the terms <span class="math inline">\(L_{n_0}^j\)</span> appearing in the RHS of (<a href="#eq-existence-root-proof-4bis" class="quarto-xref"><span>4.27</span></a>) we obtain <span class="math display">\[\begin{align*}
+\]</span> for all <span class="math inline">\(j \in \mathbb{N}\)</span>. Using this estimate on all the terms <span class="math inline">\(L_{n_0}^j\)</span> appearing in the RHS of (<a href="#eq-existence-root-proof-4bis" class="quarto-xref"><span>4.22</span></a>) we obtain <span class="math display">\[\begin{align*}
 \alpha^k - L_{n_0}^k  &amp; = \frac{1}{n_0}  \left(  \alpha^{k-1} + \alpha^{k-2} L_{n_0} +
                       \ldots  + \alpha L_{n_0}^{k-2} + L_{n_0}^{k-1}  \right) \\
                     &amp; &lt; \frac{1}{n_0} \left(  \alpha^{k-1} + \alpha^{k-2} \alpha +
@@ -950,7 +854,7 @@ L_{n_0}^k &gt; \alpha^k - \frac{k}{n_0} \, \alpha^{k-1}  \,.
 \alpha^k - \frac{k}{n_0} \, \alpha^{k-1} &gt; x \,,
 \]</span> and find that the above is satisfied for <span id="eq-existence-root-proof-6bis"><span class="math display">\[
 n_0 &gt; \frac{ k \alpha^{k-1} }{ \alpha^k - x} \,.
-\tag{4.28}\]</span></span> Notice that the RHS in (<a href="#eq-existence-root-proof-6bis" class="quarto-xref"><span>4.28</span></a>) is a positive real number, since <span class="math inline">\(\alpha^k &gt; x\)</span> by assumption. Therefore, by the Archimedean Property of Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> satisfying (<a href="#eq-existence-root-proof-6bis" class="quarto-xref"><span>4.28</span></a>).<br>
+\tag{4.23}\]</span></span> Notice that the RHS in (<a href="#eq-existence-root-proof-6bis" class="quarto-xref"><span>4.23</span></a>) is a positive real number, since <span class="math inline">\(\alpha^k &gt; x\)</span> by assumption. Therefore, by the Archimedean Property of Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> satisfying (<a href="#eq-existence-root-proof-6bis" class="quarto-xref"><span>4.23</span></a>).<br>
 We have therefore shown the existence of <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
 L_{n_0} &lt; \alpha \,, \quad  L_{n_0}^k &gt; x \,.
 \]</span> Condition <span class="math inline">\(L_{n_0}^k &gt; x\)</span> says that <span class="math inline">\(L_{n_0}\)</span> is an upper bound for <span class="math inline">\(A\)</span>. At the same time it holds <span class="math display">\[
@@ -961,11 +865,117 @@ L_{n_0} &lt; \alpha = \sup A \,,
 </div></details>
 </div>
 <div id="k-th-root-of-a-number" class="Definition" title="k-th root of a number">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 20: </strong><span class="math inline">\(k\)</span>-th root of a number</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>. The real number <span class="math inline">\(\alpha\)</span> such that <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 14: </strong><span class="math inline">\(k\)</span>-th root of a number</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>. The real number <span class="math inline">\(\alpha\)</span> such that <span class="math display">\[
 \alpha^k = x
 \]</span> is called the <strong><span class="math inline">\(k\)</span>-th root</strong> of <span class="math inline">\(x\)</span>, and is denoted by <span class="math display">\[
 \sqrt[k]{x} := \alpha  \,.
 \]</span><p></p>
+</div></details>
+</div>
+</section>
+<section id="density-of-mathbbq-in-mathbbr" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.5</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></h2>
+<p>A set <span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span> if the elements of <span class="math inline">\(S\)</span> are arbitrarily close to the elements of <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="dense-set" class="Definition" title="Dense set">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 15: </strong>Dense set</summary><div>Let <span class="math inline">\(S \subseteq \mathbb{R}\)</span>. We say that <span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span> if for every <span class="math inline">\(x \in \mathbb{R}\)</span> and <span class="math inline">\(\varepsilon&gt;0\)</span>, there exist <span class="math inline">\(s \in S\)</span> such that <span class="math display">\[
+|x - s| &lt; \varepsilon\,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>In other words, the above definition is saying that <span class="math inline">\(S\)</span> and <span class="math inline">\(\mathbb{R}\)</span> are tightly knitted together. An equivalent definition of dense set is given below.</p>
+<div id="Remark-16" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 16</strong></summary><div>
+<p>Let <span class="math inline">\(S \subseteq \mathbb{R}\)</span>. They are equivalent:</p>
+<ul>
+<li><span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>.</li>
+<li>For every pair of numbers <span class="math inline">\(x,y \in \mathbb{R}\)</span> with <span class="math inline">\(x&lt;y\)</span>, there exists <span class="math inline">\(s \in S\)</span> such that <span class="math display">\[
+x &lt; s &lt; y \,.
+\]</span></li>
+</ul>
+</div></details>
+</div>
+<p>We now prove that <span class="math inline">\(\mathbb{Q}\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="theorem-density" class="Theorem" title="Density of \mathbb{Q} in \mathbb{R}">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 17: </strong>Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(x&lt;y\)</span>. There exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
+x &lt; q &lt; y \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="fig-density-proof" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-density-proof-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/density_proof.png" class="img-fluid figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-density-proof-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.6: Let <span class="math inline">\(n \in \mathbb{N}\)</span> be such that <span class="math inline">\(1/n&lt; y-x\)</span>. Then take <span class="math inline">\(m\)</span> so that <span class="math inline">\(m/n \in (x,y)\)</span>.
+</figcaption>
+</figure>
+</div>
+<div id="Proof*-10" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We need to find <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span id="eq-proof-density-1"><span class="math display">\[
+x &lt; q &lt; y \,.
+\tag{4.24}\]</span></span> By definition of <span class="math inline">\(\mathbb{Q}\)</span>, we have that <span class="math inline">\(q\)</span> has to be of the form <span class="math inline">\(q=m/n\)</span> for <span class="math inline">\(m \in \mathbb{Z}\)</span> and <span class="math inline">\(n \in \mathbb{N}\)</span>. Therefore (<a href="#eq-proof-density-1" class="quarto-xref"><span>4.24</span></a>) is equivalent to finding <span class="math inline">\(m \in \mathbb{Z}\)</span> and <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span id="eq-proof-density-2"><span class="math display">\[
+x &lt; \frac{m}{n} &lt; y \,.
+\tag{4.25}\]</span></span> The idea is to proceed as in <a href="#fig-density-proof" class="quarto-xref">Figure&nbsp;<span>4.6</span></a>: We take <span class="math inline">\(n\)</span> such that <span class="math inline">\(1/n\)</span> is small enough, so that we can make <span class="math inline">\(m\)</span> <em>jumps</em> of size <span class="math inline">\(1/n\)</span> and end up between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.<br>
+To this end, note that <span class="math inline">\(y - x &gt;0\)</span> by assumption. By the Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 2, there exists <span class="math inline">\(n \in \mathbb{N}\)</span> be such that <span id="eq-proof-density-3"><span class="math display">\[
+\frac{1}{n} &lt; y - x \,.
+\tag{4.26}\]</span></span> Take <span class="math inline">\(m \in \mathbb{Z}\)</span> such that <span id="eq-proof-density-4"><span class="math display">\[
+m-1 \leq nx &lt; m \,.
+\tag{4.27}\]</span></span><p></p>
+<blockquote class="blockquote">
+<p>Why does such <span class="math inline">\(m\)</span> exist? As <span class="math inline">\(nx&gt;0\)</span>, by Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(m' \in \mathbb{Z}\)</span> such that <span class="math display">\[
+nx &lt; m'
+\]</span> We can then choose <span class="math inline">\(m\)</span> to be the smallest element in <span class="math inline">\(\mathbb{Z}\)</span> such that <span id="eq-proof-density-4-bis"><span class="math display">\[
+nx &lt; m \,.
+\tag{4.28}\]</span></span> It then follows that <span class="math display">\[
+m-1 &lt; nx &lt; m \,.
+\]</span> Indeed, if by contradiction <span class="math display">\[
+m - 1 \geq nx \,,
+\]</span> then <span class="math inline">\(m-1\)</span> would be another integer such that (<a href="#eq-proof-density-4-bis" class="quarto-xref"><span>4.28</span></a>) holds. Since <span class="math inline">\(m-1&lt;m\)</span>, this contradicts minimality of <span class="math inline">\(m\)</span>.</p>
+</blockquote>
+<p>The second inequality in (<a href="#eq-proof-density-4" class="quarto-xref"><span>4.27</span></a>) implies <span class="math display">\[
+x &lt; \frac{m}{n} \,,
+\]</span> which is the first inequality in (<a href="#eq-proof-density-2" class="quarto-xref"><span>4.25</span></a>). Now note that (<a href="#eq-proof-density-3" class="quarto-xref"><span>4.26</span></a>) is equivalent to <span class="math display">\[
+x &lt; y - \frac{1}{n} \,.
+\]</span> We can use the above, and the first inequality in (<a href="#eq-proof-density-4" class="quarto-xref"><span>4.27</span></a>) to estimate <span class="math display">\[\begin{align*}
+m &amp; \leq 1 + nx \\
+  &amp; &lt; 1 + n \left(   y - \frac{1}{n}  \right ) \\
+  &amp; = ny \,,
+\end{align*}\]</span> which yields <span class="math display">\[
+\frac{m}{n} &lt; y \,.
+\]</span> Therefore the second inequality in (<a href="#eq-proof-density-2" class="quarto-xref"><span>4.25</span></a>) is proven, concluding the proof.</p>
+</div></details>
+</div>
+<p>We have constructed the real numbers <span class="math inline">\(\mathbb{R}\)</span> so that they would fill the <strong>gaps</strong> of <span class="math inline">\(\mathbb{Q}\)</span>. Formally, these gaps are the numbers in <span class="math inline">\(\mathbb{R}\smallsetminus \mathbb{Q}\)</span>. Let us give a name to this set.</p>
+<div id="irrational-numbers" class="Definition" title="Irrational numbers">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 18: </strong>Irrational numbers</summary><div>The set of <strong>irrational numbers</strong> in <span class="math inline">\(\mathbb{R}\)</span> is <span class="math display">\[
+\mathcal{I} := \mathbb{R}\smallsetminus \mathbb{Q}\,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Question-19" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 19</strong></summary><div>How many gaps does <span class="math inline">\(\mathbb{Q}\)</span> have? In other words, how many irrational numbers are out there?<p></p>
+</div></details>
+</div>
+<p>The answer is quite surprising, and is a corollary of the density result of Theorem <a href="chap_4.html#theorem-density">17</a>: The irrational numbers are dense in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="Corollary-20" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 20</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(x&lt;y\)</span>. There exists <span class="math inline">\(t \in \mathcal{I}\)</span> such that <span class="math display">\[
+x &lt; t &lt; y \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-11" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Consider <span class="math display">\[
+\widetilde{x}:=x - \sqrt{2}\,, \quad \widetilde{y} :=y - \sqrt{2} \,.
+\]</span> Since <span class="math inline">\(x&lt;y\)</span>, we have <span class="math display">\[
+\widetilde{x} &lt; \widetilde{y} \,.
+\]</span> By Theorem <a href="chap_4.html#theorem-density">17</a> there exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
+\widetilde{x} &lt; q &lt; \widetilde{y} \,.
+\]</span> Adding <span class="math inline">\(\sqrt{2}\)</span> to the above inequalities we get <span id="eq-density-proof"><span class="math display">\[
+x &lt; t &lt; y \,, \quad t := q + \sqrt{2} \,.
+\tag{4.29}\]</span></span> We claim that <span class="math inline">\(t \in \mathcal{I}\)</span>. Indeed, suppose by contradiction <span class="math inline">\(t \in \mathbb{Q}\)</span>. Then <span class="math display">\[
+\sqrt{2} = t - q \in \mathbb{Q}\,,
+\]</span> since <span class="math inline">\(t,q \in \mathbb{Q}\)</span>, and <span class="math inline">\(\mathbb{Q}\)</span> is closed under summation. Since <span class="math inline">\(\sqrt{2} \in \mathcal{I}\)</span>, we obtain a contradiction. Thus <span class="math inline">\(t \in \mathcal{I}\)</span> and (<a href="#eq-density-proof" class="quarto-xref"><span>4.29</span></a>) is our thesis.<p></p>
 </div></details>
 </div>
 </section>
@@ -974,34 +984,34 @@ L_{n_0} &lt; \alpha = \sup A \,,
 <p>We have proven that the sets or rational numbers <span class="math inline">\(\mathbb{Q}\)</span> and irrational numbers <span class="math inline">\(\mathcal{I}\)</span> are both dense in <span class="math inline">\(\mathbb{R}\)</span>, with <span class="math display">\[
 \mathbb{R}= \mathbb{Q}\cup \mathcal{I} \,.
 \]</span> From this result we might think that <span class="math inline">\(\mathbb{R}\)</span> is obtained by mixing <span class="math inline">\(\mathbb{Q}\)</span> and <span class="math inline">\(\mathcal{I}\)</span> in equal proportions. This is however false. We will see that <span class="math inline">\(\mathbb{R}\)</span> has much more elements than <span class="math inline">\(\mathbb{Q}\)</span>. Therefore also the set of irrational numbers <span class="math inline">\(\mathcal{I}\)</span> is much larger than <span class="math inline">\(\mathbb{Q}\)</span>.</p>
-<p>To make the above discussion precise, we need to define what we mean by size of a set. For this, we need the concept of bijective function.</p>
+<p>To make the above discussion precise, we need to introduce the <em>size</em> of a set. For this, we need the concept of bijective function.</p>
 <div id="bijective-function" class="Definition" title="Bijective function">
 <details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 21: </strong>Bijective function</summary><div>
 <p>Let <span class="math inline">\(X,Y\)</span> be sets and <span class="math inline">\(f \colon X \to Y\)</span> be a function. We say that:</p>
-<ul>
-<li><span class="math inline">\(f\)</span> is <strong>injective</strong> if it holds: <span class="math display">\[
+<ol type="1">
+<li><p><span class="math inline">\(f\)</span> is <strong>injective</strong> if it holds: <span class="math display">\[
 f(x)=f(y) \quad \implies \quad x = y \,.
-\]</span></li>
-<li><span class="math inline">\(f\)</span> is <strong>surjective</strong> if it holds: <span class="math display">\[
-\forall y \in Y \,, \,\, \exists \, x \in X \, \text{ s.t. } \, f(x) = y \,.
-\]</span></li>
-<li><span class="math inline">\(f\)</span> is <strong>bijective</strong> if it is both <strong>injective</strong> and <strong>surjective</strong>.</li>
-</ul>
+\]</span></p></li>
+<li><p><span class="math inline">\(f\)</span> is <strong>surjective</strong> if it holds: <span class="math display">\[
+\forall \, y \in Y \,, \,\, \exists \, x \in X \, \text{ s.t. } \, f(x) = y \,.
+\]</span></p></li>
+<li><p><span class="math inline">\(f\)</span> is <strong>bijective</strong> if it is both <strong>injective</strong> and <strong>surjective</strong>.</p></li>
+</ol>
 </div></details>
 </div>
-<p>In other words: A function <span class="math inline">\(f \colon X \to Y\)</span> is</p>
-<ul>
-<li>injective if any two different elements in <span class="math inline">\(X\)</span> are mapped into two different elements in <span class="math inline">\(Y\)</span>.</li>
-<li>surjective if every element in <span class="math inline">\(Y\)</span> has at least one element in <span class="math inline">\(X\)</span> associated via <span class="math inline">\(f\)</span>.</li>
-<li>bijective if to each element in <span class="math inline">\(X\)</span> we associate one and only one element in <span class="math inline">\(Y\)</span> via <span class="math inline">\(f\)</span>.</li>
-</ul>
+<p>In other words: A function <span class="math inline">\(f \colon X \to Y\)</span> is:</p>
+<ol type="1">
+<li>Injective if any two different elements in <span class="math inline">\(X\)</span> are mapped into two different elements in <span class="math inline">\(Y\)</span>.</li>
+<li>Surjective if every element in <span class="math inline">\(Y\)</span> has at least one element in <span class="math inline">\(X\)</span> associated via <span class="math inline">\(f\)</span>.</li>
+<li>Bijective if to each element in <span class="math inline">\(X\)</span> we associate one and only one element in <span class="math inline">\(Y\)</span> via <span class="math inline">\(f\)</span>.</li>
+</ol>
 <div id="injectivity" class="Example" title="Injectivity">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 22: </strong>Injectivity</summary><div>
 <p>Consider the sets <span class="math display">\[
 X = \{ 1, 2, 3 \} \,, \quad  
 Y = \{ a,b,c,d,e\} \,.
 \]</span></p>
-<ul>
+<ol type="1">
 <li><p>The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
 f(1)=c \,, \quad f(2) = a \,, \quad f(3) = e \,,
 \]</span> is injective.</p></li>
@@ -1020,7 +1030,7 @@ l(x) = 2x
 \]</span> is injective, since <span class="math display">\[
 l(x) = l(y) \quad \implies \quad 2x = 2y \quad \implies \quad x = y \,.
 \]</span></p></li>
-</ul>
+</ol>
 </div></details>
 </div>
 <div id="surjectivity" class="Example" title="Surjectivity">
@@ -1029,7 +1039,7 @@ l(x) = l(y) \quad \implies \quad 2x = 2y \quad \implies \quad x = y \,.
 X = \{ 1, 2, 3 ,4\} \,, \quad  
 Y = \{ a,b,c\} \,.
 \]</span></p>
-<ul>
+<ol type="1">
 <li><p>The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
 f(1)=c \,, \quad f(2) = a \,, \quad f(3) = a \,, \quad f(4) = b \,,
 \]</span> is surjective.</p></li>
@@ -1047,13 +1057,13 @@ h(x) =  x^2 = -1  \,.
 l(x) = x^2
 \]</span> is surjective, since for every <span class="math inline">\(y \geq 0\)</span> there exists <span class="math inline">\(x \in \mathbb{R}\)</span> such that <span class="math display">\[
 l(x)= x^2 = y\,.
-\]</span> This is true by Theorem <a href="chap_4.html#theorem_existence_root">19</a>.</p></li>
-</ul>
+\]</span> This is true by Theorem <a href="chap_4.html#theorem_existence_root">13</a>.</p></li>
+</ol>
 </div></details>
 </div>
 <div id="bijectivity" class="Example" title="Bijectivity">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 24: </strong>Bijectivity</summary><div>
-<ul>
+<ol type="1">
 <li><p>Let <span class="math inline">\(X = \{ 1, 2, 3 \}, Y = \{ a,b,c\}\)</span>. The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
 f(1)=c \,, \quad f(2) = a \,, \quad f(3) = b \,,
 \]</span> is bijective, since it is both injective and surjective.</p></li>
@@ -1070,16 +1080,16 @@ h(x) =  b  \,.
 <li><p>Let <span class="math inline">\(X = \{ 1, 2 , 3\}, Y = \{ a,b,c\}\)</span>. The function <span class="math inline">\(l \colon \mathbb{R}\to [0 , \infty)\)</span> defined by <span class="math display">\[
 l(1) = a \,, \quad l(2) = a \,, \quad l(3) = b \,,
 \]</span> is not bijective, as it is neither injective nor surjective.</p></li>
-</ul>
+</ol>
 </div></details>
 </div>
-<p>We are ready to define the size of a set.</p>
-<div id="cardinality-finite-countable-uncountable" class="Definition" title="Cardinality, finite, countable, uncountable">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 25: </strong>Cardinality, finite, countable, uncountable</summary><div>
+<p>We are ready to define the <em>size</em> of a set.</p>
+<div id="cardinality-finite-countable-uncountable" class="Definition" title="Cardinality, Finite, Countable, Uncountable">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 25: </strong>Cardinality, Finite, Countable, Uncountable</summary><div>
 <p>Let <span class="math inline">\(X\)</span> be a set. The <strong>cardinality</strong> of <span class="math inline">\(X\)</span> is the number of elements in <span class="math inline">\(X\)</span>. We denote the cardinality of <span class="math inline">\(X\)</span> by <span class="math display">\[
 |X| := \# \, \mbox{ of elements in } \, X \,.
 \]</span> Further, we say that:</p>
-<ul>
+<ol type="1">
 <li><p><span class="math inline">\(X\)</span> is <strong>finite</strong> if there exists a natural number <span class="math inline">\(n \in \mathbb{N}\)</span> and a bijection <span class="math display">\[
 f \colon X \to \{1,2,\ldots, n \} \,.
 \]</span> In particular <span class="math display">\[
@@ -1091,19 +1101,19 @@ f \colon X \to \mathbb{N}\,.
 |X| = |\mathbb{N}| \,.
 \]</span></p></li>
 <li><p><span class="math inline">\(X\)</span> is <strong>uncountable</strong> if <span class="math inline">\(X\)</span> is neither finite, nor countable.</p></li>
-</ul>
+</ol>
 </div></details>
 </div>
-<p>In other words: A set <span class="math inline">\(X\)</span> is</p>
-<ul>
-<li><p>finite, if <span class="math inline">\(X\)</span> can be listed as <span class="math display">\[
+<p>In other words, A set <span class="math inline">\(X\)</span> is:</p>
+<ol type="1">
+<li><p>Finite, if <span class="math inline">\(X\)</span> can be listed as <span class="math display">\[
 X = \{ x_1 , \ldots, x_n \}
 \]</span> for some <span class="math inline">\(n \in \mathbb{N}\)</span>.</p></li>
-<li><p>countable, if <span class="math inline">\(X\)</span> can be listed as <span class="math display">\[
+<li><p>Countable, if <span class="math inline">\(X\)</span> can be listed as <span class="math display">\[
 X = \{ x_n \, \colon \,n \in \mathbb{N}\} \,.
 \]</span></p></li>
-<li><p>uncountable, if <span class="math inline">\(X\)</span> cannot be listed.</p></li>
-</ul>
+<li><p>Uncountable, if <span class="math inline">\(X\)</span> cannot be listed.</p></li>
+</ol>
 <div id="Question-26" class="Question">
 <p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 26</strong></summary><div>Is there an intermediate cardinality between finite and countable?<p></p>
 </div></details>
@@ -1114,7 +1124,7 @@ X = \{ x_n \, \colon \,n \in \mathbb{N}\} \,.
 </div></details>
 </div>
 <div id="Proof*-12" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>If <span class="math inline">\(A\)</span> is finite we are done. Therefore suppose <span class="math inline">\(A\)</span> is not finite. Since <span class="math inline">\(X\)</span> is countable there exists a bijection <span class="math inline">\(f \colon \mathbb{N}\to X\)</span>. Let <span class="math inline">\(n_1 \in \mathbb{N}\)</span> be such that <span class="math display">\[
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>If <span class="math inline">\(A\)</span> is finite, there is nothing to prove. Therefore suppose <span class="math inline">\(A\)</span> is not finite. Since <span class="math inline">\(X\)</span> is countable there exists a bijection <span class="math inline">\(f \colon \mathbb{N}\to X\)</span>. Let <span class="math inline">\(n_1 \in \mathbb{N}\)</span> be such that <span class="math display">\[
 n_1 = \min \{ n \in \mathbb{N}\, \text{ s.t. } \, f(n) \in A \} \,.
 \]</span> Note that <span class="math inline">\(n_1\)</span> exists since <span class="math inline">\(f\)</span> is surjective. Define <span class="math display">\[
 g(1) := f(n_1) \,.
@@ -1194,7 +1204,7 @@ A = \bigcup_{n \in \mathbb{N}} \, A_n \, .
 <div id="Proof*-13" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Since each <span class="math inline">\(A_i\)</span> is countable, we can list their elements as <span class="math display">\[
 A_i = \{ a_k^i \, \colon \,k \in \mathbb{N}\} = \{   a_1^i , \, a_2^i , \, a_3^i , \, a_4^i , \, \ldots \} \,.
-\]</span> The proof that <span class="math inline">\(A\)</span> is countable is based on a diagonal argument by Georg Cantor, see <a href="https://en.wikipedia.org/wiki/Cantor's_diagonal_argument0">Wikipedia page</a>. The idea of th is that we can list the elements of the sets <span class="math inline">\(A_i\)</span> in an infinite square: In the first row we put the elements of <span class="math inline">\(A_1\)</span>, in the second row the elements of <span class="math inline">\(A_2\)</span>, and so on. Therefore the <span class="math inline">\(i\)</span>-th row contains the elements of <span class="math inline">\(A_i\)</span>. This procedure is illustrated in <a href="#fig-diagonal-argument" class="quarto-xref">Figure&nbsp;<span>4.7</span></a>. Therefore this infinite square contains all the elements of <span class="math inline">\(A\)</span>. We then list all the elements of the square by looking at the diagonals, as shown in <a href="#fig-diagonal-argument" class="quarto-xref">Figure&nbsp;<span>4.7</span></a>. This procedure defines a function <span class="math inline">\(f \colon \mathbb{N}\to A\)</span>. For example the first few terms of <span class="math inline">\(f\)</span> are <span class="math display">\[
+\]</span> The proof that <span class="math inline">\(A\)</span> is countable is based on a diagonal argument by Georg Cantor, see <a href="https://en.wikipedia.org/wiki/Cantor's_diagonal_argument0">Wikipedia page</a>. The idea is that we can list the elements of the sets <span class="math inline">\(A_i\)</span> in an infinite square: In the first row we put the elements of <span class="math inline">\(A_1\)</span>, in the second row the elements of <span class="math inline">\(A_2\)</span>, and so on. Therefore the <span class="math inline">\(i\)</span>-th row contains the elements of <span class="math inline">\(A_i\)</span>. This procedure is illustrated in <a href="#fig-diagonal-argument" class="quarto-xref">Figure&nbsp;<span>4.7</span></a>. Therefore this infinite square contains all the elements of <span class="math inline">\(A\)</span>. We then list all the elements of the square by looking at the diagonals, as shown in <a href="#fig-diagonal-argument" class="quarto-xref">Figure&nbsp;<span>4.7</span></a>. This procedure defines a function <span class="math inline">\(f \colon \mathbb{N}\to A\)</span>. For example the first few terms of <span class="math inline">\(f\)</span> are <span class="math display">\[
 f(1) = a_1^1 \,, \quad f(2) = a_2^1 \,, \quad f(3) = a_1^2 \,, \quad
 f(4) = a_1^3 \,.
 \]</span> Since <span class="math inline">\(f\)</span> is injective and surjective, we have that <span class="math inline">\(A\)</span> is countable.<p></p>
