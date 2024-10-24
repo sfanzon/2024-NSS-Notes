@@ -175,7 +175,7 @@ $$
 ::: Proof
 
 
-Suppose by contradiction that there does not exist some $n \in \N$ such that 
+Suppose by contradiction there is no natural $n \in \N$ such that 
 $$
 nx > y \,.
 $$
@@ -539,20 +539,29 @@ Suppose by contradiction that (@eq-interval-inf-sup-proof) does not hold, namely
 $$
 a < L \,.
 $$
-Since $a<b$ we have
-$$
-a = \frac{2a}{2} < \frac{a+b}{2} < \frac{2b}{b} = b \,,
-$$
-showing that the midpoint between $a$ and $b$ satisfies
+We want to prove that $L < b$. To conclude this, first observe that the midpoint between $a$ and $b$ belongs to $A$:
 $$
 \frac{a+b}{2} \in A \,.
 $$
-Since $L$ is a lower bound for $A$, we have
+
+> Indeed, using that $a<b$, we have
 $$
-L \leq \frac{a+b}{2} < b \,.
+\frac{a+b}{2} >  \frac{2a}{2} = a \,,
+$$
+and
+$$
+\frac{a+b}{2} < \frac{2b}{b} = b \,,
+$$
+showing that the midpoint between $a$ and $b$ belongs to $A$.
+
+Since $L$ is a lower bound for $A$, and $\frac{a+b}{2} \in A$, we have
+$$
+L \leq \frac{a+b}{2} < b \,,
 $${#eq-interval-inf-sup-proof-2}
-In particular we have proven that $a < L <b$, which means that $L \in A$.
-Consider now the midpoint between $a$ and $L$, that is, 
+where in the second inequality we used that $a<b$. 
+In particular, we have proven that $a < L <b$, which means that $L \in A$. 
+
+We now want to find an element of $A$ which is less than $L$. A good candidate is the midpoint between $a$ and $L$, that is, 
 $$
 M := \frac{a + L}{2} \,. 
 $$
@@ -730,7 +739,7 @@ $$
 $$
 which means that $\alpha$ is the square root of $2$. 
 
-More in general, let $x \in \R$ with $x \geq 0$ and $k \in \N$. Define the set
+More in general, we can prove existence of $k$-th roots: Let $x \in \R$ with $x \geq 0$ and $k \in \N$. Define the set
 $$
 A := \{ t \in \R \divider t^k < x \} 
 $$
@@ -1063,32 +1072,44 @@ x < \frac{m}{n} < y \,.
 $${#eq-proof-density-2}
 The idea is to proceed as in @fig-density-proof: We take $n$ such that $1/n$ is small enough,
 so that we can make $m$ *jumps* of size $1/n$ and end up between $x$ and $y$.  
-To this end, note that $y - x >0$ by assumption. By the Archimedean Property in Theorem \ref{theorem-archimedean} Point 2, there exists $n \in \N$ be such that
+To this end, note that $y - x >0$ by assumption. By the Archimedean Property in Theorem \ref{theorem-archimedean} Point 2, there exists $n \in \N$ such that
 $$
 \frac{1}{n} < y - x \,.
 $${#eq-proof-density-3}
-Take $m \in \Z$ such that
+Now, we would like to find $m \in \Z$ such that
 $$
-m-1 \leq nx < m \,.
+x < \frac{m}{n} \,.
+$$
+However $m$ cannot be too large, because we also want to have
+$$
+\frac{m}{n} <  y \,.
+$$
+The right thing to do, is to take $m \in \Z$ such that
+$$
+\frac{m-1}{n} \leq x < \frac{m}{n} \,.
 $${#eq-proof-density-4}
 
-> Why does such $m$ exist? As $nx>0$, by Archimedean Property in Theorem \ref{theorem-archimedean} Point 1, there exists $m' \in \Z$ such that 
+> Why does such $m$ exist? The inequality in (@eq-proof-density-4) is equivalent to
 $$
-nx < m'
+m-1 \leq nx < m \,.
+$$
+As $nx>0$, by Archimedean Property in Theorem \ref{theorem-archimedean} Point 1, there exists $m \in \Z$ such that 
+$$
+nx < m
 $$ 
-We can then choose $m$ to be the smallest element in $\Z$ such that 
+We can then choose $m'$ to be the smallest element in $\Z$ such that 
 $$
-nx < m \,.
+nx < m' \,.
 $${#eq-proof-density-4-bis}
-It then follows that
+For such $m'$, we have that
 $$
-m-1 < nx < m \,.
+m'-1 \leq nx < m' \,.
 $$
 Indeed, if by contradiction 
 $$
-m - 1 \geq nx \,,
+m' - 1 > nx \,,
 $$
-then $m-1$ would be another integer such that (@eq-proof-density-4-bis) holds. Since $m-1<m$, this contradicts minimality of $m$.
+then $m'-1$ would be another integer such that (@eq-proof-density-4-bis) holds. Since $m'-1<m'$, this contradicts the minimality of $m'$.
 
 The second inequality in (@eq-proof-density-4) implies 
 $$
@@ -1218,6 +1239,8 @@ In other words: A function $f \colon X \to Y$ is:
 1. Injective if any two different elements in $X$ are mapped into two different elements in $Y$.
 2. Surjective if every element in $Y$ has at least one element in $X$ associated via $f$.
 3. Bijective if to each element in $X$ we associate one and only one element in $Y$ via $f$.
+
+:::
 
 
 
@@ -1353,11 +1376,71 @@ is not bijective, as it is neither injective nor surjective.
 
 
 
+::: Definition
+### Composition of functions
+
+
+Let $X, Y, Z$ be sets and $f \colon X \to Y$, $g \colon Y \to Z$ functions. The composition of $f$ with $g$ is the function
+$$
+g \circ f \colon X \to Z \,, \quad 
+(g \circ f)(x):=g(f(x)) \,.
+$$
+
+:::
+
+
+
+::: Definition 
+### Identity map
+
+The identity map on a set $X$ is the function
+$$
+\id_X \colon X \to X \,, \quad \id_X(x) = x \,.
+$$
+
+:::
+
+
+
+::: Definition 
+### Invertibility
+
+Let $X,Y$ be sets and $f \colon X \to Y$. We say that:
+
+1. A function $g \colon Y \to X$ is the **inverse** of $f$ if
+$$
+g \circ f = \id_X \,, \quad f \circ g = \id_Y \,.
+$$
+
+2. $f$ is **invertible** if it admits an inverse $g$.
+
+
+:::
+
+
+
+::: Proposition
+
+Let $X,Y$ be sets and $f \colon X \to Y$. 
+
+1. If $f$ is invertible, the inverse is unique. We denote it by
+$$
+g:=f^{-1} \,.
+$$
+
+2. They are equivalent:
+    - $f$ is invertible.
+    - $f$ is bijective.
+
+:::
+
+
+
 We are ready to define the *size* of a set.
 
 
 ::: Definition
-### Cardinality, Finite, Countable, Uncountable
+### Cardinality, Finite, Countable, Uncountable {#definition-cardinality}
 
 Let $X$ be a set. The **cardinality** of $X$ is the number of elements in $X$. We denote
 the cardinality of $X$ by
@@ -1368,7 +1451,7 @@ Further, we say that:
 
 1. $X$ is **finite** if there exists a natural number $n \in \N$ and a bijection
 $$
-f \colon X \to \{1,2,\ldots, n \} \,.
+f \colon \{1,2,\ldots, n \} \to X \,.
 $$
 In particular 
 $$
@@ -1377,7 +1460,7 @@ $$
 
 2. $X$ is **countable** if there exists a bijection
 $$
-f \colon X \to \N \,.
+f \colon \N \to X  \,.
 $$
 In this case we denote the cardinality of $X$ by
 $$
@@ -1389,22 +1472,31 @@ $$
 :::
 
 
-In other words, A set $X$ is:
+In other words: 
 
-1. Finite, if $X$ can be listed as
+1. $X$ is finite if it can be listed as
 $$
-X = \{ x_1 , \ldots, x_n \}
+X = \{ x_1 , \ldots, x_n \} \,, \quad x_i := f(i)
 $$
 for some $n \in \N$.
 
-2. Countable, if $X$ can be listed as
+2. $X$ is countable if it can be listed as
 $$
-X = \{ x_n \divider n \in \N  \} \,.
+X = \{ x_n \divider n \in \N  \} \,, \quad x_n := f(n)
 $$
 
-3. Uncountable, if $X$ cannot be listed.
+3. $X$ is uncountable if it $X$ cannot be listed.
 
 
+::: Remark 
+
+The functions in Definition \ref{definition-cardinality} are bijections. Therefore they are invertible, and points 1 and 2 are equivalent to requesting there exist bijections
+$$
+f \colon X \to \{1,2,\ldots, n \}  \,, \qquad f \colon X \to \N \,,
+$$
+respectively.
+
+:::
 
 
 ::: Question
@@ -1425,41 +1517,76 @@ Let $X$ be a countable set and $A \subseteq X$. Then either $A$ is finite or cou
 ::: Proof
 
 If $A$ is finite, there is nothing to prove. Therefore suppose $A$ is not finite.
-Since $X$ is countable there exists a bijection $f \colon \N \to X$.
-Let $n_1 \in \N$ be such that
+Since $X$ is countable there exists a bijection 
 $$
-n_1 = \min \{ n \in \N \st f(n) \in A \} \,.
+f \colon \N \to X \,.
 $$
-Note that $n_1$ exists since $f$ is surjective.
-Define 
+This means $X$ can be listed as 
 $$
-g(1) := f(n_1) \,.
+X = \{ x_n \, \colon \, n \in \N \} \,, \quad  x_n := f(n) \,.
 $$
-Now let 
+Our goal is to list the elements of $A$. Therefore, we consider the set of indices of elements in A:
 $$
-n_2 = \min \{ n  \in \N \st n > n_1 \,, \,\, f(n) \in A \} \,.
+I_1 := \{ n \in \N \st f(n) \in A \} = \{ n \in \N  \, \colon \, x_n \in A \} \,.
 $$
-Notice that $n_2$ exists, since $f$ is surjective and $A$ is not finite. Set
+Clearly, $I_1 \neq \emptyset$, since $f$ is bijective and $A$ is a non-empty subset of $X$. Since $I_1$ is discrete and bounded below, there exists $n_1 \in \N$ such that
+$$
+n_1 = \min I_1 \,.
+$$
+This way, $x_{n_1}$ is the first element of $A$ that we encounter in the list of elements of $X$:
+$$
+X = \{ x_1, x_2, x_3, x_4 ,x_5 ,\ldots \} \,.
+$$
+
+We define 
+$$
+g(1) := f(n_1) = x_{n_1} \,.
+$$
+Now, we want to find the second element of $A$ in the list of elements of $X$. We need to make sure that we do not pick $x_{n_1}$ again. Therefore, we define the set of indices of elemets in $A$ wich are not $x_{n_1}$:
+\begin{align*}
+I_2 & := \{ n \in \N \, \colon \, n > n_1 \,, f(n) \in A \} \\
+    & = \{ n \in \N  \, \colon \,n > n_1 \,, x_n \in A \} \,.
+\end{align*}
+This way $I_2$ does not contain $n_1$, but only successive indices. Note that $I_2$ is non-empty, since $f$ is surjective and $A$ is an infinite subset of $X$. Therefore it is well defined
+$$
+n_2 := \min I_2 \,.
+$$
+Notice that by construction 
+$$
+n_1 < n_2 \,, \quad x_{n_2} \in A \,.
+$$
+Set
 $$
 g(2):=f(n_2) \,.
 $$
-Iterating, we define
+Iterating this procedure, we define
+\begin{align*}
+I_k & := \{ n \in \N \, \colon \, n > n_{k-1} \,, f(n) \in A \} \\
+    & = \{ n \in \N  \, \colon \,n > n_{k-1} \,, x_n \in A \} \,.
+\end{align*}
+and set
 $$
-n_k = \min \{ n \in \N \st n>n_{k-1} \,, \,\, f(n) \in A \}
+n_k = \min I_k \,, \quad g(k) := f(n_k) \,.
 $$
-and 
+Note that, by construction, we have
 $$
-g(k) := f(n_k) \,.
+n_k > n_{k-1} \,, \quad x_{n_k} \in A \,, \quad \forall \, k \in \N \,.
 $$
-In this way we have defined a function $g \colon \N \to A$. We have:
+In this way we have defined a function 
+$$
+g \colon \N \to A \,.
+$$
 
-- $g$ is injective: This is because $g$ was defined thourgh $f$, and $f$ is injective.
+We have:
+
+- $g$ is injective: Suppose $g(k) = g(s)$. Then $f(n_k) = f(n_s)$. From injectivity of $f$ we infer $n_k = n_s$. Since $n_{k}> n_{k-1}$ for all $k$, from the condition $n_k = n_s$ we conclude that $k = s$. This shows $g$ is injective.
+
 - $g$ is surjective: If $x \in A$, by surjectivity of $f$ there exists $\widetilde{n} \in \N$ such 
 that $f(\widetilde{n})=x$. Therefore
 $$
-\widetilde{n} \in  \{ n \in \N \st f(n) \in A \} \,,
+\widetilde{n} \in  \{ n \in \N \st f(n) \in A \}  = I_1 \,.
 $$
-so that $n_k= \widetilde{n}$, for some $k \geq \widetilde{n}-1$.
+Hence, by construction, there is an index $k \in \N$ such that $n_k= \widetilde{n}$. Thus $g(k) = f(n_k) = x$, showing that $g$ is surjective.
 
 
 Hence $g$ is bijective, showing that $A$ is countable.
@@ -1488,14 +1615,14 @@ is bijective. Therefore $X = \N$ is countable.
 $$
 X = \{ 2n \divider n \in \N \} \,.
 $$
-Define the map $f \colon X \to \N$ by
+Define the map $f \colon \N \to X$ by
 $$
-f(m):= \frac{m}{2} \,.
+f(n):= 2n \,.
 $$
 We have that:
 
-    - $f$ is injective: $f(m)=f(k)$ implies that $m/2=k/2$ which implies $m=k$.
-    - $f$ is surjective: If $n \in \N$, then $f(2n)=n$.
+    - $f$ is injective: $f(m)=f(k)$ implies that $2m=2k$, which implies $m=k$.
+    - $f$ is surjective: This is trivially true by definition of $X$.
     
     Therefore $f$ is bijective, showing that $X$ is countable and $|X|=|\N|$.
 

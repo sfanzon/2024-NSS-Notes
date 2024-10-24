@@ -72,61 +72,13 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
 .Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Theorem {
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
 }
 .Definition {
   --color1: #c6e6ed;
@@ -136,7 +88,55 @@ ul.task-list li input[type="checkbox"] {
   --color1: #cce7b1;
   --color2: #86b754;
 }
-.Important {
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -422,7 +422,7 @@ nx &gt; y \,.
 </div></details>
 </div>
 <div id="Proof*-2" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose by contradiction that there does not exist some <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose by contradiction there is no natural <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
 nx &gt; y \,.
 \]</span> This means that <span id="eq-archimedean-proof-4"><span class="math display">\[
 nx \leq y \,, \quad \forall \, n \in \mathbb{N}\,.
@@ -636,13 +636,20 @@ L \leq x \,, \quad \forall \, x \in A \,.
 L \leq a \,.
 \tag{4.11}\]</span></span> Suppose by contradiction that (<a href="#eq-interval-inf-sup-proof" class="quarto-xref"><span>4.11</span></a>) does not hold, namely that <span class="math display">\[
 a &lt; L \,.
-\]</span> Since <span class="math inline">\(a&lt;b\)</span> we have <span class="math display">\[
-a = \frac{2a}{2} &lt; \frac{a+b}{2} &lt; \frac{2b}{b} = b \,,
-\]</span> showing that the midpoint between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> satisfies <span class="math display">\[
+\]</span> We want to prove that <span class="math inline">\(L &lt; b\)</span>. To conclude this, first observe that the midpoint between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> belongs to <span class="math inline">\(A\)</span>: <span class="math display">\[
 \frac{a+b}{2} \in A \,.
-\]</span> Since <span class="math inline">\(L\)</span> is a lower bound for <span class="math inline">\(A\)</span>, we have <span id="eq-interval-inf-sup-proof-2"><span class="math display">\[
-L \leq \frac{a+b}{2} &lt; b \,.
-\tag{4.12}\]</span></span> In particular we have proven that <span class="math inline">\(a &lt; L &lt;b\)</span>, which means that <span class="math inline">\(L \in A\)</span>. Consider now the midpoint between <span class="math inline">\(a\)</span> and <span class="math inline">\(L\)</span>, that is, <span class="math display">\[
+\]</span></p>
+<blockquote class="blockquote">
+<p>Indeed, using that <span class="math inline">\(a&lt;b\)</span>, we have <span class="math display">\[
+\frac{a+b}{2} &gt;  \frac{2a}{2} = a \,,
+\]</span> and <span class="math display">\[
+\frac{a+b}{2} &lt; \frac{2b}{b} = b \,,
+\]</span> showing that the midpoint between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> belongs to <span class="math inline">\(A\)</span>.</p>
+</blockquote>
+<p>Since <span class="math inline">\(L\)</span> is a lower bound for <span class="math inline">\(A\)</span>, and <span class="math inline">\(\frac{a+b}{2} \in A\)</span>, we have <span id="eq-interval-inf-sup-proof-2"><span class="math display">\[
+L \leq \frac{a+b}{2} &lt; b \,,
+\tag{4.12}\]</span></span> where in the second inequality we used that <span class="math inline">\(a&lt;b\)</span>. In particular, we have proven that <span class="math inline">\(a &lt; L &lt;b\)</span>, which means that <span class="math inline">\(L \in A\)</span>.</p>
+<p>We now want to find an element of <span class="math inline">\(A\)</span> which is less than <span class="math inline">\(L\)</span>. A good candidate is the midpoint between <span class="math inline">\(a\)</span> and <span class="math inline">\(L\)</span>, that is, <span class="math display">\[
 M := \frac{a + L}{2} \,.
 \]</span> Since <span class="math inline">\(a &lt; L &lt;b\)</span>, we have that <span class="math display">\[
 M \in A \,.
@@ -740,7 +747,7 @@ A := \{ q \in \mathbb{Q}\, \colon \,q^2 &lt; 2 \}
 \]</span> We are going to prove that <span class="math display">\[
 \alpha^2 = 2 \,,
 \]</span> which means that <span class="math inline">\(\alpha\)</span> is the square root of <span class="math inline">\(2\)</span>.</p>
-<p>More in general, let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>. Define the set <span class="math display">\[
+<p>More in general, we can prove existence of <span class="math inline">\(k\)</span>-th roots: Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>. Define the set <span class="math display">\[
 A := \{ t \in \mathbb{R}\, \colon \,t^k &lt; x \}
 \]</span> We will see that <span class="math inline">\(A\)</span> is non-empty and bounded above. By the axiom of completeness there exists <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
 \alpha = \sup A
@@ -917,21 +924,27 @@ x &lt; q &lt; y \,.
 \tag{4.24}\]</span></span> By definition of <span class="math inline">\(\mathbb{Q}\)</span>, we have that <span class="math inline">\(q\)</span> has to be of the form <span class="math inline">\(q=m/n\)</span> for <span class="math inline">\(m \in \mathbb{Z}\)</span> and <span class="math inline">\(n \in \mathbb{N}\)</span>. Therefore (<a href="#eq-proof-density-1" class="quarto-xref"><span>4.24</span></a>) is equivalent to finding <span class="math inline">\(m \in \mathbb{Z}\)</span> and <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span id="eq-proof-density-2"><span class="math display">\[
 x &lt; \frac{m}{n} &lt; y \,.
 \tag{4.25}\]</span></span> The idea is to proceed as in <a href="#fig-density-proof" class="quarto-xref">Figure&nbsp;<span>4.6</span></a>: We take <span class="math inline">\(n\)</span> such that <span class="math inline">\(1/n\)</span> is small enough, so that we can make <span class="math inline">\(m\)</span> <em>jumps</em> of size <span class="math inline">\(1/n\)</span> and end up between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.<br>
-To this end, note that <span class="math inline">\(y - x &gt;0\)</span> by assumption. By the Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 2, there exists <span class="math inline">\(n \in \mathbb{N}\)</span> be such that <span id="eq-proof-density-3"><span class="math display">\[
+To this end, note that <span class="math inline">\(y - x &gt;0\)</span> by assumption. By the Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 2, there exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span id="eq-proof-density-3"><span class="math display">\[
 \frac{1}{n} &lt; y - x \,.
-\tag{4.26}\]</span></span> Take <span class="math inline">\(m \in \mathbb{Z}\)</span> such that <span id="eq-proof-density-4"><span class="math display">\[
-m-1 \leq nx &lt; m \,.
+\tag{4.26}\]</span></span> Now, we would like to find <span class="math inline">\(m \in \mathbb{Z}\)</span> such that <span class="math display">\[
+x &lt; \frac{m}{n} \,.
+\]</span> However <span class="math inline">\(m\)</span> cannot be too large, because we also want to have <span class="math display">\[
+\frac{m}{n} &lt;  y \,.
+\]</span> The right thing to do, is to take <span class="math inline">\(m \in \mathbb{Z}\)</span> such that <span id="eq-proof-density-4"><span class="math display">\[
+\frac{m-1}{n} \leq x &lt; \frac{m}{n} \,.
 \tag{4.27}\]</span></span><p></p>
 <blockquote class="blockquote">
-<p>Why does such <span class="math inline">\(m\)</span> exist? As <span class="math inline">\(nx&gt;0\)</span>, by Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(m' \in \mathbb{Z}\)</span> such that <span class="math display">\[
-nx &lt; m'
-\]</span> We can then choose <span class="math inline">\(m\)</span> to be the smallest element in <span class="math inline">\(\mathbb{Z}\)</span> such that <span id="eq-proof-density-4-bis"><span class="math display">\[
-nx &lt; m \,.
-\tag{4.28}\]</span></span> It then follows that <span class="math display">\[
-m-1 &lt; nx &lt; m \,.
+<p>Why does such <span class="math inline">\(m\)</span> exist? The inequality in (<a href="#eq-proof-density-4" class="quarto-xref"><span>4.27</span></a>) is equivalent to <span class="math display">\[
+m-1 \leq nx &lt; m \,.
+\]</span> As <span class="math inline">\(nx&gt;0\)</span>, by Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(m \in \mathbb{Z}\)</span> such that <span class="math display">\[
+nx &lt; m
+\]</span> We can then choose <span class="math inline">\(m'\)</span> to be the smallest element in <span class="math inline">\(\mathbb{Z}\)</span> such that <span id="eq-proof-density-4-bis"><span class="math display">\[
+nx &lt; m' \,.
+\tag{4.28}\]</span></span> For such <span class="math inline">\(m'\)</span>, we have that <span class="math display">\[
+m'-1 \leq nx &lt; m' \,.
 \]</span> Indeed, if by contradiction <span class="math display">\[
-m - 1 \geq nx \,,
-\]</span> then <span class="math inline">\(m-1\)</span> would be another integer such that (<a href="#eq-proof-density-4-bis" class="quarto-xref"><span>4.28</span></a>) holds. Since <span class="math inline">\(m-1&lt;m\)</span>, this contradicts minimality of <span class="math inline">\(m\)</span>.</p>
+m' - 1 &gt; nx \,,
+\]</span> then <span class="math inline">\(m'-1\)</span> would be another integer such that (<a href="#eq-proof-density-4-bis" class="quarto-xref"><span>4.28</span></a>) holds. Since <span class="math inline">\(m'-1&lt;m'\)</span>, this contradicts the minimality of <span class="math inline">\(m'\)</span>.</p>
 </blockquote>
 <p>The second inequality in (<a href="#eq-proof-density-4" class="quarto-xref"><span>4.27</span></a>) implies <span class="math display">\[
 x &lt; \frac{m}{n} \,,
@@ -1005,6 +1018,7 @@ f(x)=f(y) \quad \implies \quad x = y \,.
 <li>Surjective if every element in <span class="math inline">\(Y\)</span> has at least one element in <span class="math inline">\(X\)</span> associated via <span class="math inline">\(f\)</span>.</li>
 <li>Bijective if to each element in <span class="math inline">\(X\)</span> we associate one and only one element in <span class="math inline">\(Y\)</span> via <span class="math inline">\(f\)</span>.</li>
 </ol>
+<p>:::</p>
 <div id="injectivity" class="Example" title="Injectivity">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 22: </strong>Injectivity</summary><div>
 <p>Consider the sets <span class="math display">\[
@@ -1083,20 +1097,59 @@ l(1) = a \,, \quad l(2) = a \,, \quad l(3) = b \,,
 </ol>
 </div></details>
 </div>
+<div id="composition-of-functions" class="Definition" title="Composition of functions">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 25: </strong>Composition of functions</summary><div>Let <span class="math inline">\(X, Y, Z\)</span> be sets and <span class="math inline">\(f \colon X \to Y\)</span>, <span class="math inline">\(g \colon Y \to Z\)</span> functions. The composition of <span class="math inline">\(f\)</span> with <span class="math inline">\(g\)</span> is the function <span class="math display">\[
+g \circ f \colon X \to Z \,, \quad
+(g \circ f)(x):=g(f(x)) \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="identity-map" class="Definition" title="Identity map">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 26: </strong>Identity map</summary><div>The identity map on a set <span class="math inline">\(X\)</span> is the function <span class="math display">\[
+\operatorname{id}_X \colon X \to X \,, \quad \operatorname{id}_X(x) = x \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="invertibility" class="Definition" title="Invertibility">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 27: </strong>Invertibility</summary><div>
+<p>Let <span class="math inline">\(X,Y\)</span> be sets and <span class="math inline">\(f \colon X \to Y\)</span>. We say that:</p>
+<ol type="1">
+<li><p>A function <span class="math inline">\(g \colon Y \to X\)</span> is the <strong>inverse</strong> of <span class="math inline">\(f\)</span> if <span class="math display">\[
+g \circ f = \operatorname{id}_X \,, \quad f \circ g = \operatorname{id}_Y \,.
+\]</span></p></li>
+<li><p><span class="math inline">\(f\)</span> is <strong>invertible</strong> if it admits an inverse <span class="math inline">\(g\)</span>.</p></li>
+</ol>
+</div></details>
+</div>
+<div id="Proposition-28" class="Proposition">
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 28</strong></summary><div>
+<p>Let <span class="math inline">\(X,Y\)</span> be sets and <span class="math inline">\(f \colon X \to Y\)</span>.</p>
+<ol type="1">
+<li><p>If <span class="math inline">\(f\)</span> is invertible, the inverse is unique. We denote it by <span class="math display">\[
+g:=f^{-1} \,.
+\]</span></p></li>
+<li><p>They are equivalent:</p>
+<ul>
+<li><span class="math inline">\(f\)</span> is invertible.</li>
+<li><span class="math inline">\(f\)</span> is bijective.</li>
+</ul></li>
+</ol>
+</div></details>
+</div>
 <p>We are ready to define the <em>size</em> of a set.</p>
-<div id="cardinality-finite-countable-uncountable" class="Definition" title="Cardinality, Finite, Countable, Uncountable">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 25: </strong>Cardinality, Finite, Countable, Uncountable</summary><div>
+<div id="definition-cardinality" class="Definition" title="Cardinality, Finite, Countable, Uncountable">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 29: </strong>Cardinality, Finite, Countable, Uncountable</summary><div>
 <p>Let <span class="math inline">\(X\)</span> be a set. The <strong>cardinality</strong> of <span class="math inline">\(X\)</span> is the number of elements in <span class="math inline">\(X\)</span>. We denote the cardinality of <span class="math inline">\(X\)</span> by <span class="math display">\[
 |X| := \# \, \mbox{ of elements in } \, X \,.
 \]</span> Further, we say that:</p>
 <ol type="1">
 <li><p><span class="math inline">\(X\)</span> is <strong>finite</strong> if there exists a natural number <span class="math inline">\(n \in \mathbb{N}\)</span> and a bijection <span class="math display">\[
-f \colon X \to \{1,2,\ldots, n \} \,.
+f \colon \{1,2,\ldots, n \} \to X \,.
 \]</span> In particular <span class="math display">\[
 |X| = n \,.
 \]</span></p></li>
 <li><p><span class="math inline">\(X\)</span> is <strong>countable</strong> if there exists a bijection <span class="math display">\[
-f \colon X \to \mathbb{N}\,.
+f \colon \mathbb{N}\to X  \,.
 \]</span> In this case we denote the cardinality of <span class="math inline">\(X\)</span> by <span class="math display">\[
 |X| = |\mathbb{N}| \,.
 \]</span></p></li>
@@ -1104,50 +1157,76 @@ f \colon X \to \mathbb{N}\,.
 </ol>
 </div></details>
 </div>
-<p>In other words, A set <span class="math inline">\(X\)</span> is:</p>
+<p>In other words:</p>
 <ol type="1">
-<li><p>Finite, if <span class="math inline">\(X\)</span> can be listed as <span class="math display">\[
-X = \{ x_1 , \ldots, x_n \}
+<li><p><span class="math inline">\(X\)</span> is finite if it can be listed as <span class="math display">\[
+X = \{ x_1 , \ldots, x_n \} \,, \quad x_i := f(i)
 \]</span> for some <span class="math inline">\(n \in \mathbb{N}\)</span>.</p></li>
-<li><p>Countable, if <span class="math inline">\(X\)</span> can be listed as <span class="math display">\[
-X = \{ x_n \, \colon \,n \in \mathbb{N}\} \,.
+<li><p><span class="math inline">\(X\)</span> is countable if it can be listed as <span class="math display">\[
+X = \{ x_n \, \colon \,n \in \mathbb{N}\} \,, \quad x_n := f(n)
 \]</span></p></li>
-<li><p>Uncountable, if <span class="math inline">\(X\)</span> cannot be listed.</p></li>
+<li><p><span class="math inline">\(X\)</span> is uncountable if it <span class="math inline">\(X\)</span> cannot be listed.</p></li>
 </ol>
-<div id="Question-26" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 26</strong></summary><div>Is there an intermediate cardinality between finite and countable?<p></p>
+<div id="Remark-30" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 30</strong></summary><div>The functions in Definition <a href="chap_4.html#definition-cardinality">29</a> are bijections. Therefore they are invertible, and points 1 and 2 are equivalent to requesting there exist bijections <span class="math display">\[
+f \colon X \to \{1,2,\ldots, n \}  \,, \qquad f \colon X \to \mathbb{N}\,,
+\]</span> respectively.<p></p>
+</div></details>
+</div>
+<div id="Question-31" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 31</strong></summary><div>Is there an intermediate cardinality between finite and countable?<p></p>
 </div></details>
 </div>
 <p>The answer is no, as shown in the next proposition.</p>
 <div id="proposition-countable-subset" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 27</strong></summary><div>Let <span class="math inline">\(X\)</span> be a countable set and <span class="math inline">\(A \subseteq X\)</span>. Then either <span class="math inline">\(A\)</span> is finite or countable.<p></p>
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 32</strong></summary><div>Let <span class="math inline">\(X\)</span> be a countable set and <span class="math inline">\(A \subseteq X\)</span>. Then either <span class="math inline">\(A\)</span> is finite or countable.<p></p>
 </div></details>
 </div>
 <div id="Proof*-12" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>If <span class="math inline">\(A\)</span> is finite, there is nothing to prove. Therefore suppose <span class="math inline">\(A\)</span> is not finite. Since <span class="math inline">\(X\)</span> is countable there exists a bijection <span class="math inline">\(f \colon \mathbb{N}\to X\)</span>. Let <span class="math inline">\(n_1 \in \mathbb{N}\)</span> be such that <span class="math display">\[
-n_1 = \min \{ n \in \mathbb{N}\, \text{ s.t. } \, f(n) \in A \} \,.
-\]</span> Note that <span class="math inline">\(n_1\)</span> exists since <span class="math inline">\(f\)</span> is surjective. Define <span class="math display">\[
-g(1) := f(n_1) \,.
-\]</span> Now let <span class="math display">\[
-n_2 = \min \{ n  \in \mathbb{N}\, \text{ s.t. } \, n &gt; n_1 \,, \,\, f(n) \in A \} \,.
-\]</span> Notice that <span class="math inline">\(n_2\)</span> exists, since <span class="math inline">\(f\)</span> is surjective and <span class="math inline">\(A\)</span> is not finite. Set <span class="math display">\[
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>If <span class="math inline">\(A\)</span> is finite, there is nothing to prove. Therefore suppose <span class="math inline">\(A\)</span> is not finite. Since <span class="math inline">\(X\)</span> is countable there exists a bijection <span class="math display">\[
+f \colon \mathbb{N}\to X \,.
+\]</span> This means <span class="math inline">\(X\)</span> can be listed as <span class="math display">\[
+X = \{ x_n \, \colon \, n \in \mathbb{N}\} \,, \quad  x_n := f(n) \,.
+\]</span> Our goal is to list the elements of <span class="math inline">\(A\)</span>. Therefore, we consider the set of indices of elements in A: <span class="math display">\[
+I_1 := \{ n \in \mathbb{N}\, \text{ s.t. } \, f(n) \in A \} = \{ n \in \mathbb{N}\, \colon \, x_n \in A \} \,.
+\]</span> Clearly, <span class="math inline">\(I_1 \neq \emptyset\)</span>, since <span class="math inline">\(f\)</span> is bijective and <span class="math inline">\(A\)</span> is a non-empty subset of <span class="math inline">\(X\)</span>. Since <span class="math inline">\(I_1\)</span> is discrete and bounded below, there exists <span class="math inline">\(n_1 \in \mathbb{N}\)</span> such that <span class="math display">\[
+n_1 = \min I_1 \,.
+\]</span> This way, <span class="math inline">\(x_{n_1}\)</span> is the first element of <span class="math inline">\(A\)</span> that we encounter in the list of elements of <span class="math inline">\(X\)</span>: <span class="math display">\[
+X = \{ x_1, x_2, x_3, x_4 ,x_5 ,\ldots \} \,.
+\]</span><p></p>
+<p>We define <span class="math display">\[
+g(1) := f(n_1) = x_{n_1} \,.
+\]</span> Now, we want to find the second element of <span class="math inline">\(A\)</span> in the list of elements of <span class="math inline">\(X\)</span>. We need to make sure that we do not pick <span class="math inline">\(x_{n_1}\)</span> again. Therefore, we define the set of indices of elemets in <span class="math inline">\(A\)</span> wich are not <span class="math inline">\(x_{n_1}\)</span>: <span class="math display">\[\begin{align*}
+I_2 &amp; := \{ n \in \mathbb{N}\, \colon \, n &gt; n_1 \,, f(n) \in A \} \\
+    &amp; = \{ n \in \mathbb{N}\, \colon \,n &gt; n_1 \,, x_n \in A \} \,.
+\end{align*}\]</span> This way <span class="math inline">\(I_2\)</span> does not contain <span class="math inline">\(n_1\)</span>, but only successive indices. Note that <span class="math inline">\(I_2\)</span> is non-empty, since <span class="math inline">\(f\)</span> is surjective and <span class="math inline">\(A\)</span> is an infinite subset of <span class="math inline">\(X\)</span>. Therefore it is well defined <span class="math display">\[
+n_2 := \min I_2 \,.
+\]</span> Notice that by construction <span class="math display">\[
+n_1 &lt; n_2 \,, \quad x_{n_2} \in A \,.
+\]</span> Set <span class="math display">\[
 g(2):=f(n_2) \,.
-\]</span> Iterating, we define <span class="math display">\[
-n_k = \min \{ n \in \mathbb{N}\, \text{ s.t. } \, n&gt;n_{k-1} \,, \,\, f(n) \in A \}
-\]</span> and <span class="math display">\[
-g(k) := f(n_k) \,.
-\]</span> In this way we have defined a function <span class="math inline">\(g \colon \mathbb{N}\to A\)</span>. We have:<p></p>
+\]</span> Iterating this procedure, we define <span class="math display">\[\begin{align*}
+I_k &amp; := \{ n \in \mathbb{N}\, \colon \, n &gt; n_{k-1} \,, f(n) \in A \} \\
+    &amp; = \{ n \in \mathbb{N}\, \colon \,n &gt; n_{k-1} \,, x_n \in A \} \,.
+\end{align*}\]</span> and set <span class="math display">\[
+n_k = \min I_k \,, \quad g(k) := f(n_k) \,.
+\]</span> Note that, by construction, we have <span class="math display">\[
+n_k &gt; n_{k-1} \,, \quad x_{n_k} \in A \,, \quad \forall \, k \in \mathbb{N}\,.
+\]</span> In this way we have defined a function <span class="math display">\[
+g \colon \mathbb{N}\to A \,.
+\]</span></p>
+<p>We have:</p>
 <ul>
-<li><span class="math inline">\(g\)</span> is injective: This is because <span class="math inline">\(g\)</span> was defined thourgh <span class="math inline">\(f\)</span>, and <span class="math inline">\(f\)</span> is injective.</li>
-<li><span class="math inline">\(g\)</span> is surjective: If <span class="math inline">\(x \in A\)</span>, by surjectivity of <span class="math inline">\(f\)</span> there exists <span class="math inline">\(\widetilde{n} \in \mathbb{N}\)</span> such that <span class="math inline">\(f(\widetilde{n})=x\)</span>. Therefore <span class="math display">\[
-\widetilde{n} \in  \{ n \in \mathbb{N}\, \text{ s.t. } \, f(n) \in A \} \,,
-\]</span> so that <span class="math inline">\(n_k= \widetilde{n}\)</span>, for some <span class="math inline">\(k \geq \widetilde{n}-1\)</span>.</li>
+<li><p><span class="math inline">\(g\)</span> is injective: Suppose <span class="math inline">\(g(k) = g(s)\)</span>. Then <span class="math inline">\(f(n_k) = f(n_s)\)</span>. From injectivity of <span class="math inline">\(f\)</span> we infer <span class="math inline">\(n_k = n_s\)</span>. Since <span class="math inline">\(n_{k}&gt; n_{k-1}\)</span> for all <span class="math inline">\(k\)</span>, from the condition <span class="math inline">\(n_k = n_s\)</span> we conclude that <span class="math inline">\(k = s\)</span>. This shows <span class="math inline">\(g\)</span> is injective.</p></li>
+<li><p><span class="math inline">\(g\)</span> is surjective: If <span class="math inline">\(x \in A\)</span>, by surjectivity of <span class="math inline">\(f\)</span> there exists <span class="math inline">\(\widetilde{n} \in \mathbb{N}\)</span> such that <span class="math inline">\(f(\widetilde{n})=x\)</span>. Therefore <span class="math display">\[
+\widetilde{n} \in  \{ n \in \mathbb{N}\, \text{ s.t. } \, f(n) \in A \}  = I_1 \,.
+\]</span> Hence, by construction, there is an index <span class="math inline">\(k \in \mathbb{N}\)</span> such that <span class="math inline">\(n_k= \widetilde{n}\)</span>. Thus <span class="math inline">\(g(k) = f(n_k) = x\)</span>, showing that <span class="math inline">\(g\)</span> is surjective.</p></li>
 </ul>
 <p>Hence <span class="math inline">\(g\)</span> is bijective, showing that <span class="math inline">\(A\)</span> is countable.</p>
 </div></details>
 </div>
-<div id="Example-28" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 28</strong></summary><div>
+<div id="Example-33" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 33</strong></summary><div>
 <ol type="1">
 <li><p>Let <span class="math inline">\(X = \{a,b,c\}\)</span> and <span class="math inline">\(Y=\{ 1,2,3\}\)</span>. The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
 f(1)=a \,, \quad f(2) = b \,, \quad f(3) = c \,,
@@ -1157,12 +1236,12 @@ f(n):=n \,,
 \]</span> is bijective. Therefore <span class="math inline">\(X = \mathbb{N}\)</span> is countable.</p></li>
 <li><p>Let <span class="math inline">\(X\)</span> be the set of even numbers <span class="math display">\[
 X = \{ 2n \, \colon \,n \in \mathbb{N}\} \,.
-\]</span> Define the map <span class="math inline">\(f \colon X \to \mathbb{N}\)</span> by <span class="math display">\[
-f(m):= \frac{m}{2} \,.
+\]</span> Define the map <span class="math inline">\(f \colon \mathbb{N}\to X\)</span> by <span class="math display">\[
+f(n):= 2n \,.
 \]</span> We have that:</p>
 <ul>
-<li><span class="math inline">\(f\)</span> is injective: <span class="math inline">\(f(m)=f(k)\)</span> implies that <span class="math inline">\(m/2=k/2\)</span> which implies <span class="math inline">\(m=k\)</span>.</li>
-<li><span class="math inline">\(f\)</span> is surjective: If <span class="math inline">\(n \in \mathbb{N}\)</span>, then <span class="math inline">\(f(2n)=n\)</span>.</li>
+<li><span class="math inline">\(f\)</span> is injective: <span class="math inline">\(f(m)=f(k)\)</span> implies that <span class="math inline">\(2m=2k\)</span>, which implies <span class="math inline">\(m=k\)</span>.</li>
+<li><span class="math inline">\(f\)</span> is surjective: This is trivially true by definition of <span class="math inline">\(X\)</span>.</li>
 </ul>
 <p>Therefore <span class="math inline">\(f\)</span> is bijective, showing that <span class="math inline">\(X\)</span> is countable and <span class="math inline">\(|X|=|\mathbb{N}|\)</span>.</p></li>
 <li><p>Let <span class="math inline">\(X = \mathbb{Z}\)</span> the set of integers. Define <span class="math inline">\(f \colon \mathbb{N}\to \mathbb{Z}\)</span> by <span class="math display">\[
@@ -1196,7 +1275,7 @@ f(m) = f(-2z-1) = z \,.
 </div>
 <p>We have seen that the sets <span class="math inline">\(\mathbb{N}\)</span> and <span class="math inline">\(\mathbb{Z}\)</span> are countable. What about <span class="math inline">\(\mathbb{Q}\)</span>? To study this case, we need the following result.</p>
 <div id="proposition-countable-union" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 29</strong></summary><div>Let the set <span class="math inline">\(A_n\)</span> be countable for all <span class="math inline">\(n \in \mathbb{N}\)</span>. Define <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 34</strong></summary><div>Let the set <span class="math inline">\(A_n\)</span> be countable for all <span class="math inline">\(n \in \mathbb{N}\)</span>. Define <span class="math display">\[
 A = \bigcup_{n \in \mathbb{N}} \, A_n \, .
 \]</span> Then <span class="math inline">\(A\)</span> is countable.<p></p>
 </div></details>
@@ -1221,7 +1300,7 @@ Figure&nbsp;4.7: The i-th row contains all the elements <span class="math inline
 </figure>
 </div>
 <div id="theorem-Q-countable" class="Theorem" title="\mathbb{Q} is countable">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 30: </strong><span class="math inline">\(\mathbb{Q}\)</span> is countable</summary><div>The set of rational numbers <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 35: </strong><span class="math inline">\(\mathbb{Q}\)</span> is countable</summary><div>The set of rational numbers <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
 </div></details>
 </div>
 <div id="Proof*-14" class="Proof">
@@ -1231,16 +1310,16 @@ L_i := \left\{ \frac{m}{i}  \, \colon \,m \in \mathbb{Z}\right\} \,.
 f \left(\frac{m}{i}\right) := m
 \]</span> is a bijection. As <span class="math inline">\(\mathbb{Z}\)</span> is countable, we deduce that <span class="math inline">\(L_i\)</span> is countable. Therefore the set <span class="math inline">\(L\)</span> defined by <span class="math display">\[
 L:= \bigcup_{i \in \mathbb{N}} \, L_i
-\]</span> is countable by Proposition <a href="chap_4.html#proposition-countable-union">29</a>. Clearly we have <span class="math display">\[
+\]</span> is countable by Proposition <a href="chap_4.html#proposition-countable-union">34</a>. Clearly we have <span class="math display">\[
 \mathbb{Q}\subseteq L \,.
-\]</span> Since <span class="math inline">\(\mathbb{Q}\)</span> is not finite, by Proposition <a href="chap_4.html#proposition-countable-subset">27</a> we conclude that <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
+\]</span> Since <span class="math inline">\(\mathbb{Q}\)</span> is not finite, by Proposition <a href="chap_4.html#proposition-countable-subset">32</a> we conclude that <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
 </div></details>
 </div>
 <p>We have proven that the sets <span class="math display">\[
 \mathbb{N}\,, \quad \mathbb{Z}\,, \quad \mathbb{Q}\,,
 \]</span> are all countable. What about <span class="math inline">\(\mathbb{R}\)</span>?</p>
 <div id="theorem-R-uncountable" class="Theorem" title="\mathbb{R} is uncountable">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 31: </strong><span class="math inline">\(\mathbb{R}\)</span> is uncountable</summary><div>The set of Real Numbers <span class="math inline">\(\mathbb{R}\)</span> is <strong>uncountable</strong>.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 36: </strong><span class="math inline">\(\mathbb{R}\)</span> is uncountable</summary><div>The set of Real Numbers <span class="math inline">\(\mathbb{R}\)</span> is <strong>uncountable</strong>.<p></p>
 </div></details>
 </div>
 <div id="Proof*-15" class="Proof">
@@ -1272,16 +1351,16 @@ Figure&nbsp;4.8: The intervals <span class="math inline">\(I_n\)</span> are nest
 </figure>
 </div>
 <p>As a corollary we obtain that also the irrational numbers are uncountable.</p>
-<div id="Theorem-32" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 32</strong></summary><div>The set of irrational numbers <span class="math display">\[
+<div id="Theorem-37" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 37</strong></summary><div>The set of irrational numbers <span class="math display">\[
 \mathcal{I}:=\mathbb{R}\smallsetminus \mathbb{Q}
 \]</span> is uncountable.<p></p>
 </div></details>
 </div>
 <div id="Proof*-16" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>In Theorems <a href="chap_4.html#theorem-Q-countable">30</a>, <a href="chap_4.html#theorem-R-uncountable">31</a> we have shown that <span class="math inline">\(\mathbb{R}\)</span> in uncountable and <span class="math inline">\(\mathbb{Q}\)</span> is countable. Suppose by contradiction that <span class="math inline">\(\mathcal{I}\)</span> is countable. Then <span class="math display">\[
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>In Theorems <a href="chap_4.html#theorem-Q-countable">35</a>, <a href="chap_4.html#theorem-R-uncountable">36</a> we have shown that <span class="math inline">\(\mathbb{R}\)</span> in uncountable and <span class="math inline">\(\mathbb{Q}\)</span> is countable. Suppose by contradiction that <span class="math inline">\(\mathcal{I}\)</span> is countable. Then <span class="math display">\[
 \mathbb{Q}\cup \mathcal{I}
-\]</span> is countable by Proposition <a href="chap_4.html#proposition-countable-union">29</a>, being union of countable sets. Since by definition <span class="math display">\[
+\]</span> is countable by Proposition <a href="chap_4.html#proposition-countable-union">34</a>, being union of countable sets. Since by definition <span class="math display">\[
 \mathbb{R}= \mathbb{Q}\cup \mathcal{I} \,,
 \]</span> we conclude that <span class="math inline">\(\mathbb{R}\)</span> is countable. Contradiction.<p></p>
 </div></details>

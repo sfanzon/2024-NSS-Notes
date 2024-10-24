@@ -387,29 +387,39 @@
 
  [**Example 4.24**](#bijectivity): Bijectivity\Pageref{bijectivity}
 
- [**Definition 4.25**](#cardinality-finite-countable-uncountable): Cardinality, Finite, Countable, Uncountable\Pageref{cardinality-finite-countable-uncountable}
+ [**Definition 4.25**](#composition-of-functions): Composition of functions\Pageref{composition-of-functions}
 
- [**Question 4.26**](#Question-4.26)\Pageref{Question-4.26}
+ [**Definition 4.26**](#identity-map): Identity map\Pageref{identity-map}
 
- [**Proposition 4.27**](#proposition-countable-subset)\Pageref{proposition-countable-subset}
+ [**Definition 4.27**](#invertibility): Invertibility\Pageref{invertibility}
+
+ [**Proposition 4.28**](#Proposition-4.28)\Pageref{Proposition-4.28}
+
+ [**Definition 4.29**](#definition-cardinality): Cardinality, Finite, Countable, Uncountable\Pageref{definition-cardinality}
+
+ [**Remark 4.30**](#Remark-4.30)\Pageref{Remark-4.30}
+
+ [**Question 4.31**](#Question-4.31)\Pageref{Question-4.31}
+
+ [**Proposition 4.32**](#proposition-countable-subset)\Pageref{proposition-countable-subset}
 
  [**Proof**](#Proof*-4.12)\Pageref{Proof*-4.12}
 
- [**Example 4.28**](#Example-4.28)\Pageref{Example-4.28}
+ [**Example 4.33**](#Example-4.33)\Pageref{Example-4.33}
 
- [**Proposition 4.29**](#proposition-countable-union)\Pageref{proposition-countable-union}
+ [**Proposition 4.34**](#proposition-countable-union)\Pageref{proposition-countable-union}
 
  [**Proof**](#Proof*-4.13)\Pageref{Proof*-4.13}
 
- [**Theorem 4.30**](#theorem-Q-countable): $\mathbb{Q}$ is countable\Pageref{theorem-Q-countable}
+ [**Theorem 4.35**](#theorem-Q-countable): $\mathbb{Q}$ is countable\Pageref{theorem-Q-countable}
 
  [**Proof**](#Proof*-4.14)\Pageref{Proof*-4.14}
 
- [**Theorem 4.31**](#theorem-R-uncountable): $\mathbb{R}$ is uncountable\Pageref{theorem-R-uncountable}
+ [**Theorem 4.36**](#theorem-R-uncountable): $\mathbb{R}$ is uncountable\Pageref{theorem-R-uncountable}
 
  [**Proof**](#Proof*-4.15)\Pageref{Proof*-4.15}
 
- [**Theorem 4.32**](#Theorem-4.32)\Pageref{Theorem-4.32}
+ [**Theorem 4.37**](#Theorem-4.37)\Pageref{Theorem-4.37}
 
  [**Proof**](#Proof*-4.16)\Pageref{Proof*-4.16}
 
