@@ -10,10 +10,9 @@ $
 
 # Complex Numbers
 
-
-We have seen that $\sqrt{x}$ exists in $\R$ for all for $x \geq 0$. The number $\sqrt{x}$ was defined as
+In @sec-existence-roots, we have proven the existence of $\sqrt{x}$ for all for $x \geq 0$. The number $\sqrt{x}$ was defined as
 $$
-\sqrt{x}:= \alpha \,, \quad \alpha := \sup \{ t \in \R \divider t^2 < x  \}\,
+\sqrt{x}:= \alpha \,, \quad \alpha := \sup \{ t \in \R \divider t^2 < x  \}\,.
 $$
 We then proved that
 $$
@@ -48,7 +47,6 @@ Note that $\sqrt{-x}$ is properly defined in $\mathbb{R}$, because $-x$ is posit
 
 
 ## The field $\C$
-
 
 We would like to be able to do calculations with the newly introduced complex numbers, and investigate their properties. We can introduce them
 rigorously as a field, as we did for $\mathbb{R}$. 
@@ -181,11 +179,12 @@ Let $z_1,z_2 \in \C$, so that
 $$
 z_1 = x_1 \oplus i y_1 \,\,, \quad z_2 = x_2 \oplus i  y_2 \,\, ,
 $$
-for some $x_1,x_2,y_1,y_2 \in \R$. We define the multiplication of 
+for some $x_1,x_2,y_1,y_2 \in \R$. Define the multiplication of 
 $z_1$ and $z_2$ as 
-$$
-z_1 \cdot z_2 = \left(x_{1}+i y_{1} \right) \cdot\left(x_{2}+ i y_{2} \right) := \left(x_{1} \cdot x_{2} - y_{1} \cdot y_{2}\right) + i \left(x_{1} \cdot y_{2} + x_{2} \cdot y_{1} \right) \,,
-$$
+\begin{align*}
+z_1 \cdot z_2 & = \left(x_{1}+i y_{1} \right) \cdot\left(x_{2}+ i y_{2} \right) \\
+              & := \left(x_{1} \cdot x_{2} - y_{1} \cdot y_{2}\right) + i \left(x_{1} \cdot y_{2} + x_{2} \cdot y_{1} \right) \,,
+\end{align*}
 where the operations $+$ and $\cdot$ on the right hand side are the operations in $\R$.
 
 :::
@@ -508,11 +507,10 @@ Hence, it is not possible to compare two complex numbers.
 
 ### Completeness of $\C$
 
-One might also wonder whether $\C$ is complete. Our definition of completeness uses the notion of supremum, which only makes sense if the field is ordered. This is not the case for $\C$ as we have seen in Theorem \ref{theorem-C-order}.
+One might also wonder whether $\C$ is complete. Our definition of completeness uses the notions of supremum and infimum, which require an order relation. However, $\C$ is not ordered, as seen in Theorem \ref{theorem-C-order}. Therefore we cannot define infimum and supremum of subsets of $\C$, and we have to find an alternative way to discuss completeness.
 
-Still, it is possible to give a different definition of completeness using the notion of Cauchy sequence. In ordered fields, this new definition of completeness is equivalent to the definition which uses the supremum. 
+The right way to introduce completeness in $\C$ is by using the notion of **Cauchy sequence**. In ordered fields, this new definition of completeness is equivalent to the definition which uses the supremum. 
 
-The new definition of completeness with Cauchy sequences also makes sense in non-ordered fields. We will see that $\C$ is a complete field, according to this new definition.
 
 
 

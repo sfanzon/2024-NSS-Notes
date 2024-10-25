@@ -717,7 +717,7 @@ As $\inf A = 0$ by Part 2, we conclude $\min A = 0$. As $\min A \in A$, we obtai
 
 
 
-## Existence of $k$-th Roots
+## Existence of $k$-th Roots {#sec-existence-roots}
 
 We have started our discussion in @sec-chap-1 by proving that
 $$
@@ -1745,12 +1745,12 @@ countable. Therefore the set $L$ defined by
 $$
 L:= \bigcup_{i \in \N} \, L_i
 $$
-is countable by Proposition \ref{proposition-countable-union}. Clearly
+is countable by Proposition \ref{proposition-countable-union}. Clearly,
 we have
 $$
 \Q \subseteq L \,.
 $$
-Since $\Q$ is not finite, by Proposition \ref{proposition-countable-subset} we conclude that $\Q$ is countable.
+Since $L$ is countable, and $\Q$ is not finite, by Proposition \ref{proposition-countable-subset} we conclude that $\Q$ is countable.
 
 :::
 
@@ -1779,20 +1779,27 @@ The set of Real Numbers $\R$ is **uncountable**.
 
 Suppose by contradiction $\R$ is countable. Then there exists a bijection $f \colon \N \to \R$, meaning that we can list the elements of $\R$ as
 $$
-\R = \{ x_1 , x_2 , x_3 , x_4 , x_5 , \ldots \} \,.
+\R = \{ x_1 , x_2 , x_3 , x_4 , x_5 , \ldots \} \,, \quad x_i := f(i) \,. 
 $$
 Let $I_1$ be a closed interval such that
 $$
 x_1 \notin I_1 \,.
 $$
-Let $I_2$ be another closed interval, contained in $I_1$, and such 
-that $x_2 \notin I_2$. Such interval exists, because $I_1$ contains
-two disjoint closed intervals: hence $x_2$ can be at most in one of these
-two intervals. To summarize, we have
+Now, we have two possibilities:
+
+
+1. If $x_2 \in I_1$, then we can find a closed interval $I_2$ such that
+$$
+x_2 \notin I_2 \,, \quad I_2 \subseteq I_1
+$${#eq-R-uncountable}
+
+2. If $x_2 \notin I_1$, we define the closed interval $I_2 := I_1$. By construction, (@eq-R-uncountable) is satisfied.
+
+To summarize, we have found closed intervals $I_1$ and $I_2$ such that
 $$
 x_1 \notin I_1 \,, \quad x_2 \notin I_2 \,, \quad I_2 \subseteq I_1 \,.
 $$
-We can iterate this procedure, and construct a sequence of nested
+We can iterate this procedure, and construct a sequence of closed nested
 intervals $I_n$ such that
 $$
 I_{n+1} \subseteq I_n \,, \quad  x_n \notin I_n \,,
@@ -1806,7 +1813,7 @@ As the points $x_k$ are all the elements of $\R$, we conclude that
 $$
 \bigcap_{n =1}^\infty \, I_n = \emptyset \,.
 $$
-However the Nested Interval Property of Theorem \ref{theorem-nested} implies that 
+However, since each $I_n$ is closed, the Nested Interval Property of Theorem \ref{theorem-nested} implies that 
 $$
 \bigcap_{n =1}^\infty \, I_n \neq \emptyset \,,
 $$

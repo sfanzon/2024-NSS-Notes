@@ -76,31 +76,11 @@ ul.task-list li input[type="checkbox"] {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
-.Definition {
+.Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
 .Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -108,13 +88,13 @@ ul.task-list li input[type="checkbox"] {
   --color1: #cce7b1;
   --color2: #86b754;
 }
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 .Example {
   --color1: #bce5de;
@@ -124,19 +104,39 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
 .Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -328,8 +328,8 @@ window.Quarto = {
 </header>
 
 
-<p>We have seen that <span class="math inline">\(\sqrt{x}\)</span> exists in <span class="math inline">\(\mathbb{R}\)</span> for all for <span class="math inline">\(x \geq 0\)</span>. The number <span class="math inline">\(\sqrt{x}\)</span> was defined as <span class="math display">\[
-\sqrt{x}:= \alpha \,, \quad \alpha := \sup \{ t \in \mathbb{R}\, \colon \,t^2 &lt; x  \}\,
+<p>In <a href="chap_4.html#sec-existence-roots" class="quarto-xref"><span>Section 4.4</span></a>, we have proven the existence of <span class="math inline">\(\sqrt{x}\)</span> for all for <span class="math inline">\(x \geq 0\)</span>. The number <span class="math inline">\(\sqrt{x}\)</span> was defined as <span class="math display">\[
+\sqrt{x}:= \alpha \,, \quad \alpha := \sup \{ t \in \mathbb{R}\, \colon \,t^2 &lt; x  \}\,.
 \]</span> We then proved that <span class="math display">\[
 \alpha^2 = x \,.
 \]</span> This procedure is possible for any <span class="math inline">\(x \geq 0\)</span>.</p>
@@ -422,9 +422,10 @@ z_1 \cdot z_2 &amp; = \left(x_{1}+i y_{1}  \right) \cdot \left(x_{2}+ i y_{2} \r
 <div id="definition-multiplication-C" class="Definition" title="Multiplication in \mathbb{C}">
 <p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 7: </strong>Multiplication in <span class="math inline">\(\mathbb{C}\)</span></summary><div>Let <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span>, so that <span class="math display">\[
 z_1 = x_1 \oplus i y_1 \,\,, \quad z_2 = x_2 \oplus i  y_2 \,\, ,
-\]</span> for some <span class="math inline">\(x_1,x_2,y_1,y_2 \in \mathbb{R}\)</span>. We define the multiplication of <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span> as <span class="math display">\[
-z_1 \cdot z_2 = \left(x_{1}+i y_{1} \right) \cdot\left(x_{2}+ i y_{2} \right) := \left(x_{1} \cdot x_{2} - y_{1} \cdot y_{2}\right) + i \left(x_{1} \cdot y_{2} + x_{2} \cdot y_{1} \right) \,,
-\]</span> where the operations <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> on the right hand side are the operations in <span class="math inline">\(\mathbb{R}\)</span>.<p></p>
+\]</span> for some <span class="math inline">\(x_1,x_2,y_1,y_2 \in \mathbb{R}\)</span>. Define the multiplication of <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span> as <span class="math display">\[\begin{align*}
+z_1 \cdot z_2 &amp; = \left(x_{1}+i y_{1} \right) \cdot\left(x_{2}+ i y_{2} \right) \\
+              &amp; := \left(x_{1} \cdot x_{2} - y_{1} \cdot y_{2}\right) + i \left(x_{1} \cdot y_{2} + x_{2} \cdot y_{1} \right) \,,
+\end{align*}\]</span> where the operations <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> on the right hand side are the operations in <span class="math inline">\(\mathbb{R}\)</span>.<p></p>
 </div></details>
 </div>
 <p>Clearly, <span class="math inline">\(z_1 \cdot z_2\)</span> as defined above is an element of <span class="math inline">\(\mathbb{C}\)</span>. Therefore <span class="math inline">\(\cdot\)</span> defines a binary operation over <span class="math inline">\(\mathbb{C}\)</span>.</p>
@@ -609,9 +610,8 @@ z^{-1} &amp; = \frac{x}{x^{2}+y^{2}} + i \, \frac{-y}{x^{2}+y^{2}} \\
 </section>
 <section id="completeness-of-mathbbc" class="level3" data-number="5.1.3">
 <h3 data-number="5.1.3" class="anchored" data-anchor-id="completeness-of-mathbbc"><span class="header-section-number">5.1.3</span> Completeness of <span class="math inline">\(\mathbb{C}\)</span></h3>
-<p>One might also wonder whether <span class="math inline">\(\mathbb{C}\)</span> is complete. Our definition of completeness uses the notion of supremum, which only makes sense if the field is ordered. This is not the case for <span class="math inline">\(\mathbb{C}\)</span> as we have seen in Theorem <a href="chap_5.html#theorem-C-order">16</a>.</p>
-<p>Still, it is possible to give a different definition of completeness using the notion of Cauchy sequence. In ordered fields, this new definition of completeness is equivalent to the definition which uses the supremum.</p>
-<p>The new definition of completeness with Cauchy sequences also makes sense in non-ordered fields. We will see that <span class="math inline">\(\mathbb{C}\)</span> is a complete field, according to this new definition.</p>
+<p>One might also wonder whether <span class="math inline">\(\mathbb{C}\)</span> is complete. Our definition of completeness uses the notions of supremum and infimum, which require an order relation. However, <span class="math inline">\(\mathbb{C}\)</span> is not ordered, as seen in Theorem <a href="chap_5.html#theorem-C-order">16</a>. Therefore we cannot define infimum and supremum of subsets of <span class="math inline">\(\mathbb{C}\)</span>, and we have to find an alternative way to discuss completeness.</p>
+<p>The right way to introduce completeness in <span class="math inline">\(\mathbb{C}\)</span> is by using the notion of <strong>Cauchy sequence</strong>. In ordered fields, this new definition of completeness is equivalent to the definition which uses the supremum.</p>
 </section>
 </section>
 <section id="complex-conjugates" class="level2" data-number="5.2">

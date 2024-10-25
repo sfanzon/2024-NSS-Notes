@@ -72,43 +72,27 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
 .Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
 .Example {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -116,27 +100,43 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Conjecture {
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
 .Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -288,7 +288,7 @@ window.Quarto = {
   <li><a href="#archimedean-property" id="toc-archimedean-property" class="nav-link active" data-scroll-target="#archimedean-property"><span class="header-section-number">4.1</span> Archimedean Property</a></li>
   <li><a href="#nested-interval-property" id="toc-nested-interval-property" class="nav-link" data-scroll-target="#nested-interval-property"><span class="header-section-number">4.2</span> Nested Interval Property</a></li>
   <li><a href="#revisiting-sup-and-inf" id="toc-revisiting-sup-and-inf" class="nav-link" data-scroll-target="#revisiting-sup-and-inf"><span class="header-section-number">4.3</span> Revisiting Sup and inf</a></li>
-  <li><a href="#existence-of-k-th-roots" id="toc-existence-of-k-th-roots" class="nav-link" data-scroll-target="#existence-of-k-th-roots"><span class="header-section-number">4.4</span> Existence of <span class="math inline">\(k\)</span>-th Roots</a></li>
+  <li><a href="#sec-existence-roots" id="toc-sec-existence-roots" class="nav-link" data-scroll-target="#sec-existence-roots"><span class="header-section-number">4.4</span> Existence of <span class="math inline">\(k\)</span>-th Roots</a></li>
   <li><a href="#density-of-mathbbq-in-mathbbr" id="toc-density-of-mathbbq-in-mathbbr" class="nav-link" data-scroll-target="#density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.5</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></a></li>
   <li><a href="#cardinality" id="toc-cardinality" class="nav-link" data-scroll-target="#cardinality"><span class="header-section-number">4.6</span> Cardinality</a></li>
   </ul>
@@ -736,8 +736,8 @@ A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
 </div></details>
 </div>
 </section>
-<section id="existence-of-k-th-roots" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="existence-of-k-th-roots"><span class="header-section-number">4.4</span> Existence of <span class="math inline">\(k\)</span>-th Roots</h2>
+<section id="sec-existence-roots" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-existence-roots"><span class="header-section-number">4.4</span> Existence of <span class="math inline">\(k\)</span>-th Roots</h2>
 <p>We have started our discussion in <a href="chap_1.html" class="quarto-xref"><span>Chapter 1</span></a> by proving that <span id="eq-sqrt2-existence"><span class="math display">\[
 \sqrt{2} \notin \mathbb{Q}\,.
 \tag{4.14}\]</span></span> We have shown that (<a href="#eq-sqrt2-existence" class="quarto-xref"><span>4.14</span></a>) implies that the set <span class="math display">\[
@@ -1310,9 +1310,9 @@ L_i := \left\{ \frac{m}{i}  \, \colon \,m \in \mathbb{Z}\right\} \,.
 f \left(\frac{m}{i}\right) := m
 \]</span> is a bijection. As <span class="math inline">\(\mathbb{Z}\)</span> is countable, we deduce that <span class="math inline">\(L_i\)</span> is countable. Therefore the set <span class="math inline">\(L\)</span> defined by <span class="math display">\[
 L:= \bigcup_{i \in \mathbb{N}} \, L_i
-\]</span> is countable by Proposition <a href="chap_4.html#proposition-countable-union">34</a>. Clearly we have <span class="math display">\[
+\]</span> is countable by Proposition <a href="chap_4.html#proposition-countable-union">34</a>. Clearly, we have <span class="math display">\[
 \mathbb{Q}\subseteq L \,.
-\]</span> Since <span class="math inline">\(\mathbb{Q}\)</span> is not finite, by Proposition <a href="chap_4.html#proposition-countable-subset">32</a> we conclude that <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
+\]</span> Since <span class="math inline">\(L\)</span> is countable, and <span class="math inline">\(\mathbb{Q}\)</span> is not finite, by Proposition <a href="chap_4.html#proposition-countable-subset">32</a> we conclude that <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
 </div></details>
 </div>
 <p>We have proven that the sets <span class="math display">\[
@@ -1324,20 +1324,27 @@ L:= \bigcup_{i \in \mathbb{N}} \, L_i
 </div>
 <div id="Proof*-15" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose by contradiction <span class="math inline">\(\mathbb{R}\)</span> is countable. Then there exists a bijection <span class="math inline">\(f \colon \mathbb{N}\to \mathbb{R}\)</span>, meaning that we can list the elements of <span class="math inline">\(\mathbb{R}\)</span> as <span class="math display">\[
-\mathbb{R}= \{ x_1 , x_2 , x_3 , x_4 , x_5 , \ldots \} \,.
+\mathbb{R}= \{ x_1 , x_2 , x_3 , x_4 , x_5 , \ldots \} \,, \quad x_i := f(i) \,.
 \]</span> Let <span class="math inline">\(I_1\)</span> be a closed interval such that <span class="math display">\[
 x_1 \notin I_1 \,.
-\]</span> Let <span class="math inline">\(I_2\)</span> be another closed interval, contained in <span class="math inline">\(I_1\)</span>, and such that <span class="math inline">\(x_2 \notin I_2\)</span>. Such interval exists, because <span class="math inline">\(I_1\)</span> contains two disjoint closed intervals: hence <span class="math inline">\(x_2\)</span> can be at most in one of these two intervals. To summarize, we have <span class="math display">\[
+\]</span> Now, we have two possibilities:<p></p>
+<ol type="1">
+<li><p>If <span class="math inline">\(x_2 \in I_1\)</span>, then we can find a closed interval <span class="math inline">\(I_2\)</span> such that <span id="eq-R-uncountable"><span class="math display">\[
+x_2 \notin I_2 \,, \quad I_2 \subseteq I_1
+\tag{4.30}\]</span></span></p></li>
+<li><p>If <span class="math inline">\(x_2 \notin I_1\)</span>, we define the closed interval <span class="math inline">\(I_2 := I_1\)</span>. By construction, (<a href="#eq-R-uncountable" class="quarto-xref"><span>4.30</span></a>) is satisfied.</p></li>
+</ol>
+<p>To summarize, we have found closed intervals <span class="math inline">\(I_1\)</span> and <span class="math inline">\(I_2\)</span> such that <span class="math display">\[
 x_1 \notin I_1 \,, \quad x_2 \notin I_2 \,, \quad I_2 \subseteq I_1 \,.
-\]</span> We can iterate this procedure, and construct a sequence of nested intervals <span class="math inline">\(I_n\)</span> such that <span class="math display">\[
+\]</span> We can iterate this procedure, and construct a sequence of closed nested intervals <span class="math inline">\(I_n\)</span> such that <span class="math display">\[
 I_{n+1} \subseteq I_n \,, \quad  x_n \notin I_n \,,
 \]</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>, see <a href="#fig-R-uncountable" class="quarto-xref">Figure&nbsp;<span>4.8</span></a>. Since <span class="math inline">\(x_k \notin I_k\)</span>, we conclude that <span class="math display">\[
 x_k \notin \bigcap_{n =1}^\infty \, I_n \,, \quad \forall \, k \in \mathbb{N}\,.
 \]</span> As the points <span class="math inline">\(x_k\)</span> are all the elements of <span class="math inline">\(\mathbb{R}\)</span>, we conclude that <span class="math display">\[
 \bigcap_{n =1}^\infty \, I_n = \emptyset \,.
-\]</span> However the Nested Interval Property of Theorem <a href="chap_4.html#theorem-nested">5</a> implies that <span class="math display">\[
+\]</span> However, since each <span class="math inline">\(I_n\)</span> is closed, the Nested Interval Property of Theorem <a href="chap_4.html#theorem-nested">5</a> implies that <span class="math display">\[
 \bigcap_{n =1}^\infty \, I_n \neq \emptyset \,,
-\]</span> yielding a contradiction. Therefore <span class="math inline">\(\mathbb{R}\)</span> is uncountable.<p></p>
+\]</span> yielding a contradiction. Therefore <span class="math inline">\(\mathbb{R}\)</span> is uncountable.</p>
 </div></details>
 </div>
 <div id="fig-R-uncountable" class="quarto-float quarto-figure quarto-figure-center anchored">
