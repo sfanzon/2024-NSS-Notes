@@ -645,17 +645,17 @@ On the other hand:
 
 ## The complex plane
 
-We can depict a real number $x$ as a point on the one-dimensional real line $\R$. The distance between two real numbers $x, y \in \R$ on the real line is given by $|x-y|$, see @fig-real-line. 
+We can represent a real number $x$ as a point on the one-dimensional real line $\R$. The distance between two real numbers $x, y \in \R$ on the real line is given by $|x-y|$, see @fig-real-line. 
 
 ![Two points $x$ and $y$ on the real line $\R$. Their distance is $|x-y|$.](/images/real_line.png){#fig-real-line width=70%}
 
 
 
-We would like to do something similar for the complex numbers, but the point
+We would like to do something similar for the complex numbers, i.e. points
 $$
 z = x + iy \,, \quad x , \, y \in \R\,.
 $$
-We therefore depict $z= z + i y$ in the two-dimensional plane at the point with (Cartesian) coordinates $(x, y)$. This two-dimensional plane in which we can depict all complex numbers is called the **complex plane**. The 
+We represent $z= x + i y$ in the two-dimensional plane at the point with (Cartesian) coordinates $(x, y)$. This two-dimensional plane in which we can represent all complex numbers is called the **complex plane**. The 
 origin of such plane, with coordinates $(0,0)$, corresponds to the  complex number 
 $$
 0+0 i = 0 \,,
@@ -934,7 +934,7 @@ We always use angles in radians, not degrees. Make sure your calculator is set t
 ::: Remark
 ### Principal Value
 
-The argument of a complex number is not uniquely defined. We can always add an integer number of times $2 \pi$ to the argument to specify the same point. We usually use the convention to choose the argument in the interval $(-\pi, \pi]$. This is called the **principal value** of the argument function. Therefore the complex numbers in the upper half plane have a positive argument, and in the lower half plane have a negative argument.
+The argument of a complex number is not uniquely defined. We can always add an integer number of times $2 \pi$ to the argument to specify the same point. We usually use the convention to choose the argument in the interval $(-\pi, \pi]$. This is called the **principal value** of the argument function. Therefore the complex numbers in the upper half plane have a positive argument, and the ones in the lower half plane have a negative argument.
 
 :::
 
@@ -952,7 +952,7 @@ We have the following arguments:
 
 
 
-We can represent non-zero complex numbers in polar coordinates.
+We can represent any non-zero complex number in polar coordinates.
 
 
 ::: Theorem  
@@ -964,8 +964,8 @@ x = \rho \cos(\theta) \,, \quad y = \rho \sin(\theta) \,,
 $$
 where 
 $$
-\rho = \sqrt{x^2 + y^2} \,, \quad 
-\theta = \arg(z) \,.
+\rho := |z| = \sqrt{x^2 + y^2} \,, \quad 
+\theta := \arg(z) \,.
 $$
 
 
@@ -986,29 +986,28 @@ where $\theta = \arg(z)$.
 
 
 
-Let us make an example.
 
 
 ::: {.Example   #example-trigonometric-form} 
 
-Suppose that we have polar coordinates
+Suppose that $z \in \C$ has polar coordinates
 $$
-\rho = \sqrt{8}\,, \quad   \theta = \frac{3}{4} \pi 
+\rho = \sqrt{8}\,, \quad   \theta = \frac{3}{4} \pi \,.
 $$ 
-We compute 
-\begin{gather*}
-x = \rho \cos (\theta) = \sqrt{8} \cos \left( \frac{3}{4} \pi \right) = - \frac{\sqrt{8}\sqrt{2}}{2} = -2 \\
-y = \rho \sin (\theta) = \sqrt{8} \sin \left( \frac{3}{4} \pi \right) =  \frac{\sqrt{8}\sqrt{2}}{2} = 2 \,.
-\end{gather*}
-The complex number $z$ corresponding to the polar coordinates
-$(\rho,\theta)$ is 
-$$
-z = x + i y = - 2 + 2 i \,.
-$$
-The trigonometric form of $z$ is
+Therefore, the trigonometric form of $z$ is
 $$
 z = \sqrt{8}  \left[ \cos \left( \frac{3}{4} \pi \right) + i \sin \left( \frac{3}{4} \pi \right)   \right] \,.
 $$
+We compute $z$ in cartesian form:
+\begin{gather*}
+x = \rho \cos (\theta) = \sqrt{8} \cos \left( \frac{3}{4} \pi \right) = - \sqrt{8} \cdot \frac{\sqrt{2}}{2} = -2 \\
+y = \rho \sin (\theta) = \sqrt{8} \sin \left( \frac{3}{4} \pi \right) = \sqrt{8} \cdot  \frac{\sqrt{2}}{2} = 2 \,.
+\end{gather*}
+Therefore, the cartesian form of $z$ is
+$$
+z = x + i y = - 2 + 2 i \,.
+$$
+
 :::
 
 
@@ -1050,7 +1049,7 @@ The thesis can be obtained by carefully inverting the tangent.
 
 We want to compute the arguments of the complex numbers 
 $$
-3+4 i\,, \quad 3-4 i \,, \quad  -3+4 i \,, \quad -3-4 i \,.
+z = 3+4 i\,, \quad \bar{z} = 3-4 i \,, \quad  - \bar{z} = -3+4 i \,, \quad - z= -3-4 i \,.
 $$ 
 Using the formula for $\arg$ in Corollary \ref{corollary-arg} we have
 \begin{align*}
@@ -1089,21 +1088,19 @@ $$
 
 
 ::: Proof 
-The proof of this theorem uses Taylor power series. Note that we have not introduced what series are, yet, so we just assume that everything below makes sense and actually exists. We have the following Taylor series at $x_{0}=0$ that you might know from calculus:
+The proof of this theorem uses complex power series. We have not yet introduced series. However, we carry out the proof formally, assuming that all the quantities below converge. We have the following Taylor series at $x_{0}=0$ (you might know them from calculus):
 \begin{align*}
 e^{x} & =1+x+\frac{x^{2}}{2 !}+\frac{x^{3}}{3 !}+\frac{x^{4}}{4 !}+\frac{x^{5}}{5 !}+\frac{x^{6}}{6 !}+\frac{x^{7}}{7 !}+\ldots \\
 \sin (x) & =\frac{x}{1 !}-\frac{x^{3}}{3 !}+\frac{x^{5}}{5 !}-\frac{x^{7}}{7 !}+\ldots \\
 \cos (x) & =1-\frac{x^{2}}{2 !}+\frac{x^{4}}{4 !}-\frac{x^{6}}{6 !}+\ldots
 \end{align*}
-
-The above identities also holds for $x \in \C$. Hence we can substitute $x=i \theta$ in the series for $e^{x}$ to obtain
+The above identities also hold for $x \in \C$. Hence we can substitute $x=i \theta$ in the series for $e^{x}$ to obtain
 \begin{align*}
 e^{i \theta} & =1+i \theta+\frac{(i \theta)^{2}}{2 !}+\frac{(i \theta)^{3}}{3 !}+\frac{(i \theta)^{4}}{4 !}+\frac{(i \theta)^{5}}{5 !}+\frac{(i \theta)^{6}}{6 !}+\frac{(i \theta)^{7}}{7 !} \ldots \\
 & =1+i \theta-\frac{\theta^{2}}{2 !}-i \frac{\theta^{3}}{3 !}+\frac{\theta^{4}}{4 !}+i \frac{\theta^{5}}{5 !}-\frac{\theta^{6}}{6 !}-i \frac{\theta^{7}}{7 !}+\ldots \\
 & =\cos (\theta)+i \sin (\theta),
 \end{align*}
-
-where we used that $i^{2}=-1$ in the second equality, and the third equality follows by observing that all terms with an even power of $\theta$ are exactly the terms in the expansion of $\cos (\theta)$ and all terms with an odd power of $\theta$ are exactly the terms in the expansion of $\sin (\theta)$ multiplied by $i$.
+where in the second equality we used that $i^{2}=-1$, and where the third equality follows by observing that all terms with an even power of $\theta$ are exactly the terms in the expansion of $\cos (\theta)$, and all terms with an odd power of $\theta$ are exactly the terms in the expansion of $\sin (\theta)$ multiplied by $i$.
 
 :::
 
@@ -1137,8 +1134,8 @@ z = \rho e^{i\theta}\,,
 $$
 where 
 $$
-\rho = \sqrt{x^2 + y^2} = |z| \,, \quad 
-\theta = \arg(z) \,.
+\rho := |z| =  \sqrt{x^2 + y^2} \,, \qquad 
+\theta := \arg(z) \,.
 $$
 
 :::
@@ -1164,7 +1161,7 @@ where in the last line we used Euler's identity in Theorem \ref{theorem-euler-id
 ::: Definition 
 ### Exponential form
 
-A complex number $z \in \C$ is in **exponential form** if 
+The **exponential form** of a complex number $z \in \C$ is 
 $$
 z= \rho e^{i\theta} = |z| \, e^{i \arg(z)}  \,.
 $$
@@ -1195,11 +1192,9 @@ $$
 
 For all $k \in \Z$ we have
 $$
-e^{i \theta}=e^{i(\theta+2 \pi k)} \,.
+e^{i \theta}=e^{i(\theta+2 \pi k)} \,,
 $${#eq-exponential-periodic}
-As we did for the principal value of the argument, also for the exponential form we select $\theta \in(-\pi, \pi]$. In particular equation
-(@eq-exponential-periodic) is saying that the complex exponential is
-$2\pi$-periodic.
+meaning that the complex exponential is $2\pi$-periodic. As we did for the principal value of the argument, we select $\theta$ in (@eq-exponential-periodic) so that $\theta \in(-\pi, \pi]$. 
 
 > Equation (@eq-exponential-periodic) follows immediately by Euler's identity and periodicity of $\cos$ and $\sin$, since 
 \begin{align*}
@@ -1210,7 +1205,7 @@ e^{i(\theta+2 \pi k)} & = \cos(\theta+2 \pi k) + i \sin (\theta+2 \pi k)  \\
 :::
 
 
-The exponential for is very useful for computing products and powers of 
+The exponential form is very useful for computing products and powers of 
 complex numbers.
 
 
@@ -1244,7 +1239,8 @@ Suppose we want to compute $(-2+2 i)^{4}$. We could do this by means of the bino
 \end{array}\right)(-2)^{3} \cdot 2 i+\left(\begin{array}{l}
 4 \\
 2
-\end{array}\right)(-2)^{2} \cdot(2 i)^{2}+\left(\begin{array}{l}
+\end{array}\right)(-2)^{2} \cdot(2 i)^{2} \\
+& \quad +\left(\begin{array}{l}
 4 \\
 3
 \end{array}\right)(-2) \cdot(2 i)^{3}+(2 i)^{4} \\
@@ -1265,7 +1261,7 @@ where we used that
 $$
 e^{i 3 \pi} = e^{i \pi} = \cos(\pi) + i \sin(\pi) = - 1
 $$
-by $2\pi$ periodicity of $e^z$ and Euler's identity. 
+by $2\pi$ periodicity of $e^{i\theta}$ and Euler's identity. 
 :::
 
 
@@ -1308,8 +1304,7 @@ The answer is no. For this reason we introduced the complex number $i$, which sa
 $$
 i^{2}=-1 \,.
 $$
-Therefore (@eq-introduction-complex) has solution in $\C$, with $x = i$.
-We also have that 
+Therefore (@eq-introduction-complex) has solution in $\C$, with $x = i$. Moreover, note that
 $$
 (-i)^{2}=(-1)^{2} i^{2}=-1 \,.
 $$
@@ -1318,29 +1313,36 @@ $$
 x_1 = i \,, \quad x_2 = - i \,.
 $$
 
-It turns out that the set $\C$ is so large that we are not only able to solve (@eq-introduction-complex), but in fact any polynomial equation.
+It turns out that the set $\C$ is so large, that not only we are able to solve (@eq-introduction-complex), but in fact any polynomial equation.
 
 
 ::: Theorem 
 ### Fundamental theorem of algebra   {#theorem-fta}
 
-Let $p_{n}(x)$ be a polynomial of degree $n$ with complex coefficients, i.e.,
+Let $p_{n}(z)$ be a polynomial of degree $n$ with complex coefficients, i.e.,
 $$
-p_{n}(x)=a_{n} x^{n}+a_{n-1} x^{n-1}+\ldots+a_{1} x+a_{0},
+p_{n}(z)=a_{n} z^{n}+a_{n-1} z^{n-1}+\ldots+a_{1} z+a_{0},
 $$
-for some coefficients $a_{n}, \ldots, a_{0} \in \C$ with $a_{n} \neq 0$. Then there exist $z_{1}, \ldots, z_{n} \in \C$ such that
+for some coefficients $a_{n}, \ldots, a_{0} \in \C$ with $a_{n} \neq 0$. There exist 
 $$
-p_{n}(x)=a_{n}\left(x-z_{1}\right)\left(x-z_{2}\right) \cdots\left(x-z_{n}\right) \,.
-$${#eq-fta-0}
-Hence, the polynomial equation
+z_{1}, \ldots, z_{n} \in \C
+$$ 
+solutions to the polynomial equation
 $$
-a_{n} x^{n}+a_{n-1} x^{n-1}+\ldots+a_{1} x+a_{0}=0
+p_n(z) = a_{n} z^{n}+a_{n-1} z^{n-1}+\ldots+a_{1} z+a_{0}=0 \,.
 $${#eq-fta}
-has solutions $z_{1}, \ldots, z_{n}$.
+In particular, $p_n$ factorizes as
+$$
+p_{n}(z)=a_{n}\left(z-z_{1}\right)\left(z-z_{2}\right) \cdots\left(z-z_{n}\right) \,.
+$${#eq-fta-0}
+
 
 :::
 
- Theorem \ref{theorem-fta} says that every polynomial of degree $n$ has $n$ zeros, sometimes also called roots, i.e., $n$ solutions to (@eq-fta). We call the expression (@eq-fta-0) a factorization of the 
+Theorem \ref{theorem-fta} says that equation (@eq-fta) admits $n$ complex solutions:
+
+- We call these solutions *zeros*, or also *roots*.
+- We call the expression (@eq-fta-0) a *factorization* of the 
  polynomial $p_n$.
  
 
@@ -1355,15 +1357,15 @@ but they all use mathematical tools which are out of reach for now. Therefore we
 ::: Example 
 The equation 
 $$
-x^{2}=-1
+z^{2}=-1
 $${#eq-fta-example-1}
 is equivalent to 
 $$
-p(x) = 0 \,, \quad p(x):=x^{2}+1  \,.
+p(z) = 0 \,, \quad p(z):=z^{2}+1  \,.
 $$
-Since $p$ has degree $n=2$, the Fundamental Theorem of Algebra tells us that there are two solutions to (@eq-fta-example-1). We have already seen that these two solutions are $x=i$ and $x=-i$. Then
+Since $p$ has degree $n=2$, the Fundamental Theorem of Algebra tells us that there are two solutions to (@eq-fta-example-1). We have already seen that these two solutions are $z=i$ and $z=-i$. Then $p$ factorizes as
 $$
-p(x) = x^{2} + 1 = (x-i)(x+i) \,.
+p(z) = z^{2} + 1 = (z-i)(z+i) \,.
 $$
 :::
 
@@ -1372,33 +1374,37 @@ $$
 
 Suppose we want to solve 
 $$
-x^{4}-1=0 \,.
+z^{4}-1=0 \,.
 $${#eq-fta-example-2}
 The associated polynomial equation is 
 $$
-p(x) = 0 \,, \quad p(x) := x^4 - 1 \,. 
+p(z) = 0 \,, \quad p(z) := z^4 - 1 \,. 
 $$
 Since $p$ has degree $n=4$, the Fundamental Theorem of Algebra tells us that there are $4$ solutions to (@eq-fta-example-2).
 
-Let us find such solutions. We use the well known formula
+Let us find such solutions. We use the well known identity
 $$
 a^2-b^2 = (a+b)(a-b) \,, \quad \forall \, a,b \in \R \,,
 $$
 to factorize $p$. We get:
 $$
-p(x) = (x^4-1) = (x^2+1)(x^2-1) \,.
+p(z) = (z^4-1) = (z^2+1)(z^2-1) \,.
 $$
 We know that 
 $$
-x^2 + 1 = 0 
+z^2 + 1 = 0 
 $$
-has solutions $x = \pm i$. Instead  
+has solutions $z = \pm i$. Instead  
 $$
-x^2 - 1 = 0 
+z^2 - 1 = 0 
 $$
-has solutions $x = \pm 1$. Hence, the four solutions of (@eq-fta-example-2) are given by $x=1,-1, i,-i$ and 
+has solutions $x = \pm 1$. Hence, the four solutions of (@eq-fta-example-2) are given by 
 $$
-p(x) = x^4 - 1 = (x-1)(x+1)(x-i)(x+i) \,.
+z=1,-1, i,-i \,,
+$$
+and $p$ factorizes as
+$$
+p(z) = z^4 - 1 = (z-1)(z+1)(z-i)(z+i) \,.
 $$
 
 :::
@@ -1408,15 +1414,15 @@ $$
 
 Suppose that the polynomial $p_n$ factorizes as 
 $$
-p_n(x) = a_n (x-z_1)^{k_1} (x-z_2)^{k_2} \cdots (x-z_m)^{k_m} 
+p_n(z) = a_n (z-z_1)^{k_1} (z-z_2)^{k_2} \cdots (z-z_m)^{k_m} 
 $$
 with $a_n \neq 0$, $z_1,\ldots, z_m \in \C$ and $k_1, \ldots , k_m \in \N$, $k_i \geq 1$. In this case $p_n$ has degree
 $$
 n = k_1 + \ldots + k_m = \sum_{i=1}^m k_i \,.
 $$
-We have that $z_i$ is solves the equation
+Note that $z_i$ is solves the equation
 $$
-p_n(x) = 0
+p_n(z) = 0
 $$
 exactly $k_i$ times. We call $k_i$ the **multiplicity** of the solution $z_i$.
 :::
@@ -1425,13 +1431,13 @@ exactly $k_i$ times. We call $k_i$ the **multiplicity** of the solution $z_i$.
 
 The equation
 $$
-(x-1)(x-2)^{2}(x+i)^{3}=0
+(z-1)(z-2)^{2}(z+i)^{3}=0
 $$
 has 6 solutions: 
 
-- $x=1$ with multiplicity $1$
-- $x=2$ with multiplicity $2$ 
-- $x=-i$ with multiplicity $3$
+- $z=1$ with multiplicity $1$
+- $z=2$ with multiplicity $2$ 
+- $z=-i$ with multiplicity $3$
 
 :::
 
@@ -1442,12 +1448,12 @@ has 6 solutions:
 
 The non-factorized version of the polynomial
 $$
-p(x) = (x-1)(x-2)^{2}(x+i)^{3}
+p(z) = (z-1)(z-2)^{2}(z+i)^{3}
 $$
 from Example \ref{example-multiplicity} is 
 \begin{align*}
-p(x) = & x^{6}-(5-3 i) x^{5}+(5-15 i) x^{4} \\ 
-& + (11+23 i) x^{3}-(24+7 i) x^{2}+(12-8 i) x+4 i
+p(z) = & z^{6}-(5-3 i) z^{5}+(5-15 i) z^{4} \\ 
+& + (11+23 i) z^{3}-(24+7 i) z^{2}+(12-8 i) z+4 i
 \end{align*}
 We therefore have the following natural question.
 
@@ -1456,9 +1462,9 @@ We therefore have the following natural question.
 
 The Fundamental Theorem of Algebra states that 
 $$
-p_n(x) = 0
+p_n(z) = 0
 $${#eq-abel-ruffini}
-has $n$ complex solutions. How do we find such solutions?
+has $n$ complex solutions. How do we find such solutions in practice?
 
 :::
 
@@ -1471,15 +1477,14 @@ when $n \geq 5$. This is the content of the Abel-Ruffini Theorem.
 
 There is no elementary solution formula to the polynomial equation
 $$
-p_n(x) = 0 
+p_n(z) = 0 
 $$
 with $p_n$ polynomial of degree $n$, with $n \geq 5$.
 
 :::
 
 Similarly to the Fundamental Theorem of Algebra, the proof of the
-Abel-Ruffini Theorem is out of reach for our current mathematical
-knowledge. A proof can be carried out, for example, using Galois Theory.
+Abel-Ruffini Theorem is out of reach for now. A proof can be carried out, for example, using Galois Theory.
 
 
 There are however explicit formulas for solving (@eq-abel-ruffini)
