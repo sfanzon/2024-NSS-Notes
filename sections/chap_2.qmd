@@ -157,6 +157,7 @@ $$
 
 ### Union and intersection
 
+::: Definition
 For two sets $A$ and $B$ we define their **union** as the set
 $$
 A \cup B := \{ x\, \colon \, x \in A  \, \text{ or } \, x \in B \} \,.
@@ -169,6 +170,7 @@ We denote the **empty set** by the symbol $\emptyset$. Two sets are **disjoint**
 $$
 A \cap B = \emptyset \,.
 $$
+:::
 
 ::: Example
 
@@ -307,7 +309,8 @@ $$
 
 ::: Example 
 
-Let the ambient set be $\Omega:=\N$ and define the family $A_n$ by
+**Question.**
+Define $\Omega:=\N$ and a family $A_n$ by
 \begin{align}
 A_1 & := \{ 1, 2, 3 , 4 , \ldots \} \\
 A_2 & := \{ 2, 3 , 4 , 5, \ldots \} \\
@@ -315,11 +318,21 @@ A_3 & := \{ 3 , 4 , 5, 6, \ldots \} \\
 & \ldots \ldots  \\
 A_n & := \{ n, n+1, n+2, n+3,  \ldots \} \,,
 \end{align}
-for arbitrary $n \in \N$. Then
+for arbitrary $n \in \N$. 
+
+1. Prove that
 $$
 \bigcup_{n \in \N} A_n = \N \,.
 $$ {#eq-infinite-union}
-The above equality can be easily proven using Proposition \ref{Proposition-Equality-Sets}. Indeed, assume that $m \in \cup_n A_n$. Then $m \in A_n$ for at least one $n \in \N$. Since $A_n \subseteq \N$, we conclude that $m \in \N$. This shows 
+
+2. Prove that 
+$$
+\bigcap_{n \in \N} A_n = \emptyset \,.
+$$ {#eq-infinite-intersection}
+
+**Solution.**
+
+1. Equation (@eq-infinite-union) is proven using Proposition \ref{Proposition-Equality-Sets}. To this end, assume that $m \in \cup_n A_n$. Then $m \in A_n$ for at least one $n \in \N$. Since $A_n \subseteq \N$, we conclude that $m \in \N$. This shows 
 $$
 \bigcup_{n \in \N} A_n \subseteq \N \,.
 $$
@@ -327,12 +340,9 @@ Conversely, suppose that $m \in \N$. By definition $m \in A_m$. Hence there exis
 $$
 \N \subseteq \bigcup_{n \in \N} A_n \,.
 $$
-Hence we conclude (@eq-infinite-union) by Proposition \ref{Proposition-Equality-Sets}.  
-We also have that
-$$
-\bigcap_{n \in \N} A_n = \emptyset \,.
-$$ {#eq-infinite-intersection}
-We prove the above by **contradiction**. Indeed, suppose that (@eq-infinite-intersection) is false, i.e., 
+Hence we conclude (@eq-infinite-union) by Proposition \ref{Proposition-Equality-Sets}. 
+
+2. We prove (@eq-infinite-intersection) by **contradiction**. Indeed, suppose that (@eq-infinite-intersection) is false, i.e., 
 $$
 \bigcap_{n \in \N} A_n \neq \emptyset \,.
 $$
@@ -344,7 +354,8 @@ This means there exists some $m \in \N$ such that $m \in \cap_{n \in \N} A_n$. H
 
 ### Complement
 
-Suppose that $A$ and $B$ are subsets of a larger set $\Omega$. The **complement** of $A$ with respect to $B$ is the set of elements of $B$ which do not belong to $A$, that is
+::: Definition
+Let $A,B \subseteq \Omega$. The **complement** of $A$ with respect to $B$ is the set of elements of $B$ which do not belong to $A$, that is
 $$
 B \smallsetminus A := \{ x \in \Omega \, \colon \, x \in B \, \text{ and } \, x \notin A \} \,.
 $$
@@ -352,7 +363,7 @@ In particular, the complement of $A$ with respect to $\Omega$ is denoted by
 $$
 A^c := \Omega \smallsetminus A := \{ x \in \Omega \, \colon \, x \notin A \} \,.
 $$
-
+:::
 
 ::: Remark
 
@@ -365,12 +376,12 @@ $$
 
 ::: Example
 
-Suppose $A, B \subseteq \Omega$. Then
+**Question.** Suppose $A, B \subseteq \Omega$. Prove that
 $$
 A \subseteq B  \iff B^c \subseteq A^c \,.
 $$
 
-Let us prove the above claim:
+**Solution.** Let us prove the above claim:
 
 - First implication $\implies$:  
 Suppose that $A \subseteq B$. We need to show that $B^c \subseteq A^c$. Hence, assume $x \in B^c$. By definition this means that $x \notin B$. Now notice that we cannot have that $x \in A$. Indeed, assume $x \in A$.  By assumption we have $A \subseteq B$, hence $x \in B$. But we had assumed $x \in B$, contradiction. Therefore it must be that $x \notin A$. Thus $B^c \subseteq A^c$.
@@ -386,10 +397,7 @@ We conclude by stating the De Morgan's Laws. The proof will be left as an exerci
 
 Suppose $A,B \subseteq \Omega$. Then
 $$
-(A \cap B)^c = A^c \cup B^c 
-$$
-and
-$$
+(A \cap B)^c = A^c \cup B^c  \,, \qquad 
 (A \cup B)^c = A^c \cap B^c  \,.
 $$ 
 
@@ -400,12 +408,15 @@ $$
 
 ### Power set
 
-Let $\Omega$ be an arbitray set. We define the **power set** of $\Omega$ as 
+::: Definition
+Let $\Omega$ be a set. The **power set** of $\Omega$ is
 $$
-\mathcal{P}(\Omega) := \{ A \divider A \subseteq \Omega \}\,,
+\mathcal{P}(\Omega) := \{ A \divider A \subseteq \Omega \}\,.
 $$
-that is, the power set of $\Omega$ is the set of all subsets of $\Omega$. 
+:::
 
+
+Hence, the power set of $\Omega$ is the set of all subsets of $\Omega$. 
 
 ::: Remark
 It holds that:
@@ -435,11 +446,13 @@ for some $m \in \N$. Then $\mathcal{P}(\Omega)$ contains $2^m$ elements.
 
 
 ::: Example
-Define the set
+
+**Question.** Compute the power set of
 $$
 \Omega = \{ x, y, z \}\,.
 $$
-Then $\mathcal{P}(\Omega)$ has $2^3 = 8$ elements. These are
+
+**Solution.** $\mathcal{P}(\Omega)$ has $2^3 = 8$ elements. These are
 
 - $\emptyset$
 - $\{x\}$
@@ -460,11 +473,16 @@ We therefore write
 
 ### Product of sets
 
-Suppose $A$ and $B$ are two sets. The **product** of $A$ and $B$ is the set of pairs
+::: Definition
+
+Let $A,B$ be sets. The **product** of $A$ and $B$ is the set of pairs
 $$
 A \times B := \{ (a,b) \, \colon \, a \in A, \, b \in B \} \,.
 $$
-By definition two elements in $A \times B$ are the same, in symbols
+
+:::
+
+By definition, two elements in $A \times B$ are the same, in symbols
 $$
 (a, b) = (\tilde{a}, \tilde{b})
 $$
@@ -478,11 +496,14 @@ $$
 
 ## Equivalence relation
 
+::: Definition
 
 Suppose $A$ is a set. A **binary relation** $R$ on $A$ is a subset 
 $$
 R \subseteq A \times A \,.
 $$
+
+:::
 
 ::: Definition
 ### Equivalence relation
@@ -509,11 +530,6 @@ $$
 $$
 
     > If $x$ is related to $y$, and $y$ is related to $z$, then $x$ must be related to $z$
-
-:::
-
-
-::: Notation
 
 If $(x,y) \in R$ we write
 $$
@@ -656,19 +672,27 @@ over $\Q$.
 ::: Example
 ### Equality is an equivalence relation
 
-Consider the set of rational numbers $\Q$. The equality defines a **binary relation** on $\Q \times \Q$, via
+**Question.** The equality defines a **binary relation** on $\Q \times \Q$, via
 $$
 R:=\{ (x,y) \in \Q \times \Q \, \colon \, x=y  \} \,.
 $$
-Let us check that $R$ is an **equivalence relation**:
 
-1. Reflexive: It holds, since $x=x$ for all $x \in \Q$,
+1. Prove that $R$ is an **equivalence relation**.
+2. Prove that $[x] = \{x\}$ and compute $\Q / R$.
 
-2. Symmetric: Again $x = y$ if and only if $y = x$,
+**Solution.** 
 
-3. Transitive: If $x = y$ and $y = z$ then $x = z$.
+1. We need to check that $R$ satisfies the 3 properties of an equivalence relation:
 
-The class of equivalence of $x \in \Q$ is given by
+    - Reflexive: It holds, since $x=x$ for all $x \in \Q$,
+
+    - Symmetric: Again $x = y$ if and only if $y = x$,
+
+    - Transitive: If $x = y$ and $y = z$ then $x = z$.
+
+    Therefore, $R$ is an equivalence relation.
+
+2. The class of equivalence of $x \in \Q$ is given by
 $$
 [x] = \{ x \}\,,
 $$
@@ -684,39 +708,42 @@ We now give an example of a non-trivial equivalence relation over $\Q$.
 
 
 ::: Example
-Suppose that $R$ is a binary relation on the set $\Q$ of rational numbers defined by
+
+**Question.** Let $R$ be the binary relation on the set $\Q$ of rational numbers defined by
 $$
 x \sim y  \iff x-y \in \Z \,.
 $$
-In other words, we have that 
-$$
-x \sim y  \iff y = n + x \, \text{ for some } \, n \in \Z \,,
-$$
-which means that $x$ and $y$ are equivalent iff $y$ is a translation of $x$ by some integer $n$.
 
-We claim that $R$ is an equivalence relation on $\Q$. Indeed:
+1. Prove that $R$ is an equivalence relation on $\Q$.
+2. Compute $[x]$ for each $x \in \Q$.
+3. Compute $\Q/R$.
 
-1. Reflexive: Let $x \in \Q$. Then $x-x = 0$ and $0 \in \Z$. Thus $x \sim x$.
-2. Symmetric: If $x \sim y$ then $x-y \in \Z$. But then also  
-$$
--(x-y) = y - x \in \Z
-$$
-and so $y \sim x$.
-3. Transitive: Suppose $x \sim y$ and $y \sim z$. Then 
-$$
-x - y \in \Z \,  \text{ and } \, y - z \in \Z \,.
-$$
-Thus we have
-$$
-x-z = (x-y) + (y-z) \in \Z
-$$
-showing that $x \sim z$. 
 
-We have shown that $R$ is an equivalence relation on $\Q$.
+**Solution.**
 
-*Question:* Can we characterize the equivalence class $[x]$?
+1. We have:
 
-Yes. Note that
+    - Reflexive: Let $x \in \Q$. Then $x-x = 0$ and $0 \in \Z$. Thus $x \sim x$.
+
+    - Symmetric: If $x \sim y$ then $x-y \in \Z$. But then also  
+    $$
+    -(x-y) = y - x \in \Z
+    $$
+    and so $y \sim x$.
+
+    - Transitive: Suppose $x \sim y$ and $y \sim z$. Then 
+    $$
+    x - y \in \Z \,  \text{ and } \, y - z \in \Z \,.
+    $$
+    Thus, we have
+    $$
+    x-z = (x-y) + (y-z) \in \Z
+    $$
+    showing that $x \sim z$. 
+
+    Thus, we have shown that $R$ is an equivalence relation on $\Q$.
+
+2. Note that
 $$
 y -x \in \Z 
 $$
@@ -750,7 +777,8 @@ proving (@eq-equivalence-rel). In particular (@eq-equivalence-rel) implies that 
 $$
 [x] = [q] \,.
 $$
-This allows to conclude that
+
+3. From Point 2 we conclude that
 $$
 \Q / R = \{ [x] \divider x \in \Q \} = \{ q \in \Q \divider 0 \leq q <1  \} \,.
 $$

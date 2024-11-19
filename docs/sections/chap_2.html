@@ -72,51 +72,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -124,21 +80,65 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
 .Proof {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Example {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -275,6 +275,23 @@ window.Quarto = {
  <span class="menu-text">References</span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/revision.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Revision Guide</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -433,15 +450,18 @@ x^2 \geq 0 \,\, \text{ for all } \,\, x \in \mathbb{R}\,.
 <h2 data-number="2.3" class="anchored" data-anchor-id="operations-on-sets"><span class="header-section-number">2.3</span> Operations on sets</h2>
 <section id="union-and-intersection" class="level3" data-number="2.3.1">
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="union-and-intersection"><span class="header-section-number">2.3.1</span> Union and intersection</h3>
-<p>For two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> we define their <strong>union</strong> as the set <span class="math display">\[
+<div id="Definition-4" class="Definition">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 4</strong></summary><div>For two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> we define their <strong>union</strong> as the set <span class="math display">\[
 A \cup B := \{ x\, \colon \, x \in A  \, \text{ or } \, x \in B \} \,.
 \]</span> The <strong>intersection</strong> of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is defined by <span class="math display">\[
 A \cap B := \{ x\, \colon \, x \in A  \, \text{ and } \, x \in B \} \,.
 \]</span> We denote the <strong>empty set</strong> by the symbol <span class="math inline">\(\emptyset\)</span>. Two sets are <strong>disjoint</strong> if <span class="math display">\[
 A \cap B = \emptyset \,.
-\]</span></p>
-<div id="Example-4" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 4</strong></summary><div>Define the subset of rational numbers <span class="math display">\[
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Example-5" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 5</strong></summary><div>Define the subset of rational numbers <span class="math display">\[
 S:= \left\{ x \in \mathbb{Q}\, \colon \, 0 &lt; x &lt; \frac52 \right\} \,.
 \]</span> Then we have <span class="math display">\[
 \mathbb{N}\cap S = \{1, 2 \} \,.
@@ -470,8 +490,8 @@ A \subseteq B \,.
 <p>The inclusion <span class="math inline">\(A \subseteq B\)</span> is equivalent to the implication: <span class="math display">\[
 x \in A \,\, \implies \,\, x \in B
 \]</span> for all <span class="math inline">\(x \in A\)</span>. The symbol <span class="math inline">\(\implies\)</span> reads <strong>implies</strong>, and denotes the fact that the first condition implies the second.</p>
-<div id="Example-5" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 5</strong></summary><div>Given two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> we always have <span class="math display">\[\begin{gather}
+<div id="Example-6" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 6</strong></summary><div>Given two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> we always have <span class="math display">\[\begin{gather}
 (A \cap B) \subseteq A \,, \,\, (A \cap B) \subseteq B \,,\\
 A \subseteq (A \cup B) \,, \,\, B \subseteq (A \cup B) \,.
 \end{gather}\]</span><p></p>
@@ -482,8 +502,8 @@ A=B \,.
 \]</span> If <span class="math inline">\(A \subseteq B\)</span> and <span class="math inline">\(A \neq B\)</span>, we write <span class="math display">\[
 A \subset B \quad \mbox{ or } \quad A \subsetneq B \,.
 \]</span></p>
-<div id="Example-6" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 6</strong></summary><div>
+<div id="Example-7" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 7</strong></summary><div>
 <ol type="1">
 <li><p>The sets <span class="math display">\[
 A =\{ 1,2,3 \} \,, \quad B= \{ 3 ,1,2\}
@@ -495,7 +515,7 @@ A =\{ 1,2 \} \,, \quad B = \{ 1, 2 ,5 \} \,.
 </div></details>
 </div>
 <div id="Proposition-Equality-Sets" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 7</strong></summary><div>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be sets. Then <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 8</strong></summary><div>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be sets. Then <span class="math display">\[
 A=B
 \]</span> <strong>if and only if</strong> <span class="math display">\[
 A \subseteq B \,\, \text{ and } \,\, B \subseteq A \,.
@@ -524,47 +544,59 @@ Suppose that <span class="math inline">\(A \subseteq B\)</span> and <span class=
 \]</span> The <strong>infinte intersection</strong> is defined as <span class="math display">\[
 \bigcap_{n \in \mathbb{N}} A_n := \{ x \in \Omega \, \colon \, x \in A_n \,\, \text{ for all } \,\, n \in \mathbb{N}\} \,.
 \]</span></p>
-<div id="Example-8" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 8</strong></summary><div>Let the ambient set be <span class="math inline">\(\Omega:=\mathbb{N}\)</span> and define the family <span class="math inline">\(A_n\)</span> by <span class="math display">\[\begin{align}
+<div id="Example-9" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 9</strong></summary><div>
+<p><strong>Question.</strong> Define <span class="math inline">\(\Omega:=\mathbb{N}\)</span> and a family <span class="math inline">\(A_n\)</span> by <span class="math display">\[\begin{align}
 A_1 &amp; := \{ 1, 2, 3 , 4 , \ldots \} \\
 A_2 &amp; := \{ 2, 3 , 4 , 5, \ldots \} \\
 A_3 &amp; := \{ 3 , 4 , 5, 6, \ldots \} \\
 &amp; \ldots \ldots  \\
 A_n &amp; := \{ n, n+1, n+2, n+3,  \ldots \} \,,
-\end{align}\]</span> for arbitrary <span class="math inline">\(n \in \mathbb{N}\)</span>. Then <span id="eq-infinite-union"><span class="math display">\[
+\end{align}\]</span> for arbitrary <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+<ol type="1">
+<li><p>Prove that <span id="eq-infinite-union"><span class="math display">\[
 \bigcup_{n \in \mathbb{N}} A_n = \mathbb{N}\,.
-\tag{2.2}\]</span></span> The above equality can be easily proven using Proposition <a href="chap_2.html#Proposition-Equality-Sets">7</a>. Indeed, assume that <span class="math inline">\(m \in \cup_n A_n\)</span>. Then <span class="math inline">\(m \in A_n\)</span> for at least one <span class="math inline">\(n \in \mathbb{N}\)</span>. Since <span class="math inline">\(A_n \subseteq \mathbb{N}\)</span>, we conclude that <span class="math inline">\(m \in \mathbb{N}\)</span>. This shows <span class="math display">\[
+\tag{2.2}\]</span></span></p></li>
+<li><p>Prove that <span id="eq-infinite-intersection"><span class="math display">\[
+\bigcap_{n \in \mathbb{N}} A_n = \emptyset \,.
+\tag{2.3}\]</span></span></p></li>
+</ol>
+<p><strong>Solution.</strong></p>
+<ol type="1">
+<li><p>Equation (<a href="#eq-infinite-union" class="quarto-xref"><span>2.2</span></a>) is proven using Proposition <a href="chap_2.html#Proposition-Equality-Sets">8</a>. To this end, assume that <span class="math inline">\(m \in \cup_n A_n\)</span>. Then <span class="math inline">\(m \in A_n\)</span> for at least one <span class="math inline">\(n \in \mathbb{N}\)</span>. Since <span class="math inline">\(A_n \subseteq \mathbb{N}\)</span>, we conclude that <span class="math inline">\(m \in \mathbb{N}\)</span>. This shows <span class="math display">\[
 \bigcup_{n \in \mathbb{N}} A_n \subseteq \mathbb{N}\,.
 \]</span> Conversely, suppose that <span class="math inline">\(m \in \mathbb{N}\)</span>. By definition <span class="math inline">\(m \in A_m\)</span>. Hence there exists at least one index <span class="math inline">\(n\)</span>, <span class="math inline">\(n=m\)</span> in this case, such that <span class="math inline">\(m \in A_n\)</span>. Then by definition <span class="math inline">\(m \in \cup_{n \in \mathbb{N}} A_n\)</span>, showing that <span class="math display">\[
 \mathbb{N}\subseteq \bigcup_{n \in \mathbb{N}} A_n \,.
-\]</span> Hence we conclude (<a href="#eq-infinite-union" class="quarto-xref"><span>2.2</span></a>) by Proposition <a href="chap_2.html#Proposition-Equality-Sets">7</a>.<br>
-We also have that <span id="eq-infinite-intersection"><span class="math display">\[
-\bigcap_{n \in \mathbb{N}} A_n = \emptyset \,.
-\tag{2.3}\]</span></span> We prove the above by <strong>contradiction</strong>. Indeed, suppose that (<a href="#eq-infinite-intersection" class="quarto-xref"><span>2.3</span></a>) is false, i.e., <span class="math display">\[
+\]</span> Hence we conclude (<a href="#eq-infinite-union" class="quarto-xref"><span>2.2</span></a>) by Proposition <a href="chap_2.html#Proposition-Equality-Sets">8</a>.</p></li>
+<li><p>We prove (<a href="#eq-infinite-intersection" class="quarto-xref"><span>2.3</span></a>) by <strong>contradiction</strong>. Indeed, suppose that (<a href="#eq-infinite-intersection" class="quarto-xref"><span>2.3</span></a>) is false, i.e., <span class="math display">\[
 \bigcap_{n \in \mathbb{N}} A_n \neq \emptyset \,.
-\]</span> This means there exists some <span class="math inline">\(m \in \mathbb{N}\)</span> such that <span class="math inline">\(m \in \cap_{n \in \mathbb{N}} A_n\)</span>. Hence, by definition, <span class="math inline">\(m \in A_n\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. However <span class="math inline">\(m \notin A_{m+1}\)</span>, yielding a contradiction. Thus (<a href="#eq-infinite-intersection" class="quarto-xref"><span>2.3</span></a>) holds.<p></p>
+\]</span> This means there exists some <span class="math inline">\(m \in \mathbb{N}\)</span> such that <span class="math inline">\(m \in \cap_{n \in \mathbb{N}} A_n\)</span>. Hence, by definition, <span class="math inline">\(m \in A_n\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. However <span class="math inline">\(m \notin A_{m+1}\)</span>, yielding a contradiction. Thus (<a href="#eq-infinite-intersection" class="quarto-xref"><span>2.3</span></a>) holds.</p></li>
+</ol>
 </div></details>
 </div>
 </section>
 <section id="complement" class="level3" data-number="2.3.4">
 <h3 data-number="2.3.4" class="anchored" data-anchor-id="complement"><span class="header-section-number">2.3.4</span> Complement</h3>
-<p>Suppose that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are subsets of a larger set <span class="math inline">\(\Omega\)</span>. The <strong>complement</strong> of <span class="math inline">\(A\)</span> with respect to <span class="math inline">\(B\)</span> is the set of elements of <span class="math inline">\(B\)</span> which do not belong to <span class="math inline">\(A\)</span>, that is <span class="math display">\[
+<div id="Definition-10" class="Definition">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 10</strong></summary><div>Let <span class="math inline">\(A,B \subseteq \Omega\)</span>. The <strong>complement</strong> of <span class="math inline">\(A\)</span> with respect to <span class="math inline">\(B\)</span> is the set of elements of <span class="math inline">\(B\)</span> which do not belong to <span class="math inline">\(A\)</span>, that is <span class="math display">\[
 B \smallsetminus A := \{ x \in \Omega \, \colon \, x \in B \, \text{ and } \, x \notin A \} \,.
 \]</span> In particular, the complement of <span class="math inline">\(A\)</span> with respect to <span class="math inline">\(\Omega\)</span> is denoted by <span class="math display">\[
 A^c := \Omega \smallsetminus A := \{ x \in \Omega \, \colon \, x \notin A \} \,.
-\]</span></p>
-<div id="Remark-9" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 9</strong></summary><div>Suppose that <span class="math inline">\(A \subseteq \Omega\)</span>. Then <span class="math inline">\(A\)</span> and <span class="math inline">\(A^c\)</span> form a <strong>partition</strong> of <span class="math inline">\(\Omega\)</span>, in the sense that <span class="math display">\[
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Remark-11" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 11</strong></summary><div>Suppose that <span class="math inline">\(A \subseteq \Omega\)</span>. Then <span class="math inline">\(A\)</span> and <span class="math inline">\(A^c\)</span> form a <strong>partition</strong> of <span class="math inline">\(\Omega\)</span>, in the sense that <span class="math display">\[
 A \cup A^c = \Omega  \,\, \text{ and } \,\,  A \cap A^c = \emptyset \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Example-10" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 10</strong></summary><div>
-<p>Suppose <span class="math inline">\(A, B \subseteq \Omega\)</span>. Then <span class="math display">\[
+<div id="Example-12" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 12</strong></summary><div>
+<p><strong>Question.</strong> Suppose <span class="math inline">\(A, B \subseteq \Omega\)</span>. Prove that <span class="math display">\[
 A \subseteq B  \iff B^c \subseteq A^c \,.
 \]</span></p>
-<p>Let us prove the above claim:</p>
+<p><strong>Solution.</strong> Let us prove the above claim:</p>
 <ul>
 <li><p>First implication <span class="math inline">\(\implies\)</span>:<br>
 Suppose that <span class="math inline">\(A \subseteq B\)</span>. We need to show that <span class="math inline">\(B^c \subseteq A^c\)</span>. Hence, assume <span class="math inline">\(x \in B^c\)</span>. By definition this means that <span class="math inline">\(x \notin B\)</span>. Now notice that we cannot have that <span class="math inline">\(x \in A\)</span>. Indeed, assume <span class="math inline">\(x \in A\)</span>. By assumption we have <span class="math inline">\(A \subseteq B\)</span>, hence <span class="math inline">\(x \in B\)</span>. But we had assumed <span class="math inline">\(x \in B\)</span>, contradiction. Therefore it must be that <span class="math inline">\(x \notin A\)</span>. Thus <span class="math inline">\(B^c \subseteq A^c\)</span>.</p></li>
@@ -576,9 +608,8 @@ Essentially the same proof, hence we omit it.<br>
 </div>
 <p>We conclude by stating the De Morgan’s Laws. The proof will be left as an exercise.</p>
 <div id="de-morgans-laws" class="Proposition" title="De Morgan’s Laws">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 11: </strong>De Morgan’s Laws</summary><div>Suppose <span class="math inline">\(A,B \subseteq \Omega\)</span>. Then <span class="math display">\[
-(A \cap B)^c = A^c \cup B^c
-\]</span> and <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 13: </strong>De Morgan’s Laws</summary><div>Suppose <span class="math inline">\(A,B \subseteq \Omega\)</span>. Then <span class="math display">\[
+(A \cap B)^c = A^c \cup B^c  \,, \qquad
 (A \cup B)^c = A^c \cap B^c  \,.
 \]</span><p></p>
 </div></details>
@@ -586,11 +617,15 @@ Essentially the same proof, hence we omit it.<br>
 </section>
 <section id="power-set" class="level3" data-number="2.3.5">
 <h3 data-number="2.3.5" class="anchored" data-anchor-id="power-set"><span class="header-section-number">2.3.5</span> Power set</h3>
-<p>Let <span class="math inline">\(\Omega\)</span> be an arbitray set. We define the <strong>power set</strong> of <span class="math inline">\(\Omega\)</span> as <span class="math display">\[
-\mathcal{P}(\Omega) := \{ A \, \colon \,A \subseteq \Omega \}\,,
-\]</span> that is, the power set of <span class="math inline">\(\Omega\)</span> is the set of all subsets of <span class="math inline">\(\Omega\)</span>.</p>
-<div id="Remark-12" class="Remark">
-<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 12</strong></summary><div>
+<div id="Definition-14" class="Definition">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 14</strong></summary><div>Let <span class="math inline">\(\Omega\)</span> be a set. The <strong>power set</strong> of <span class="math inline">\(\Omega\)</span> is <span class="math display">\[
+\mathcal{P}(\Omega) := \{ A \, \colon \,A \subseteq \Omega \}\,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>Hence, the power set of <span class="math inline">\(\Omega\)</span> is the set of all subsets of <span class="math inline">\(\Omega\)</span>.</p>
+<div id="Remark-15" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 15</strong></summary><div>
 <p>It holds that:</p>
 <ol type="1">
 <li><p><span class="math inline">\(\mathcal{P}(\Omega)\)</span> is always non-empty, since we have that <span class="math display">\[
@@ -610,10 +645,11 @@ A \cup B, \quad  A \cap B ,\quad A^c , \quad B \smallsetminus A
 </ol>
 </div></details>
 </div>
-<div id="Example-13" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 13</strong></summary><div>Define the set <span class="math display">\[
+<div id="Example-16" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 16</strong></summary><div><strong>Question.</strong> Compute the power set of <span class="math display">\[
 \Omega = \{ x, y, z \}\,.
-\]</span> Then <span class="math inline">\(\mathcal{P}(\Omega)\)</span> has <span class="math inline">\(2^3 = 8\)</span> elements. These are<p></p>
+\]</span><p></p>
+<p><strong>Solution.</strong> <span class="math inline">\(\mathcal{P}(\Omega)\)</span> has <span class="math inline">\(2^3 = 8\)</span> elements. These are</p>
 <ul>
 <li><span class="math inline">\(\emptyset\)</span></li>
 <li><span class="math inline">\(\{x\}\)</span></li>
@@ -633,9 +669,13 @@ A \cup B, \quad  A \cap B ,\quad A^c , \quad B \smallsetminus A
 </section>
 <section id="product-of-sets" class="level3" data-number="2.3.6">
 <h3 data-number="2.3.6" class="anchored" data-anchor-id="product-of-sets"><span class="header-section-number">2.3.6</span> Product of sets</h3>
-<p>Suppose <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are two sets. The <strong>product</strong> of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is the set of pairs <span class="math display">\[
+<div id="Definition-17" class="Definition">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 17</strong></summary><div>Let <span class="math inline">\(A,B\)</span> be sets. The <strong>product</strong> of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is the set of pairs <span class="math display">\[
 A \times B := \{ (a,b) \, \colon \, a \in A, \, b \in B \} \,.
-\]</span> By definition two elements in <span class="math inline">\(A \times B\)</span> are the same, in symbols <span class="math display">\[
+\]</span><p></p>
+</div></details>
+</div>
+<p>By definition, two elements in <span class="math inline">\(A \times B\)</span> are the same, in symbols <span class="math display">\[
 (a, b) = (\tilde{a}, \tilde{b})
 \]</span> if and only if they are equal component-by-componenent, that is <span class="math display">\[
 a=\tilde{a}\,, \qquad b = \tilde{b} \,.
@@ -644,12 +684,14 @@ a=\tilde{a}\,, \qquad b = \tilde{b} \,.
 </section>
 <section id="equivalence-relation" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="equivalence-relation"><span class="header-section-number">2.4</span> Equivalence relation</h2>
-<p>Suppose <span class="math inline">\(A\)</span> is a set. A <strong>binary relation</strong> <span class="math inline">\(R\)</span> on <span class="math inline">\(A\)</span> is a subset <span class="math display">\[
+<div id="Definition-18" class="Definition">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 18</strong></summary><div>Suppose <span class="math inline">\(A\)</span> is a set. A <strong>binary relation</strong> <span class="math inline">\(R\)</span> on <span class="math inline">\(A\)</span> is a subset <span class="math display">\[
 R \subseteq A \times A \,.
-\]</span></p>
+\]</span><p></p>
+</div></details>
+</div>
 <div id="equivalence-relation-1" class="Definition" title="Equivalence relation">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 14: </strong>Equivalence relation</summary><div>
-<p>A binary relation <span class="math inline">\(R\)</span> is called an <strong>equivalence relation</strong> if it satisfies the following properties:</p>
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 19: </strong>Equivalence relation</summary><div>A binary relation <span class="math inline">\(R\)</span> is called an <strong>equivalence relation</strong> if it satisfies the following properties:<p></p>
 <ol type="1">
 <li><p><strong>Reflexive</strong>: For each <span class="math inline">\(x \in A\)</span> one has <span class="math display">\[
 (x,x) \in R \,,
@@ -670,16 +712,13 @@ R \subseteq A \times A \,.
 <p>If <span class="math inline">\(x\)</span> is related to <span class="math inline">\(y\)</span>, and <span class="math inline">\(y\)</span> is related to <span class="math inline">\(z\)</span>, then <span class="math inline">\(x\)</span> must be related to <span class="math inline">\(z\)</span></p>
 </blockquote></li>
 </ol>
-</div></details>
-</div>
-<div id="Notation-15" class="Notation">
-<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 15</strong></summary><div>If <span class="math inline">\((x,y) \in R\)</span> we write <span class="math display">\[
+<p>If <span class="math inline">\((x,y) \in R\)</span> we write <span class="math display">\[
 x \sim y
-\]</span> and we say that <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are <strong>equivalent</strong>.<p></p>
+\]</span> and we say that <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are <strong>equivalent</strong>.</p>
 </div></details>
 </div>
 <div id="equivalence-classes" class="Definition" title="Equivalence classes">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 16: </strong>Equivalence classes</summary><div>Suppose <span class="math inline">\(R\)</span> is an <strong>equivalence relation</strong> on <span class="math inline">\(A\)</span>. The <strong>equivalence class</strong> of an element <span class="math inline">\(x \in A\)</span> is the set <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 20: </strong>Equivalence classes</summary><div>Suppose <span class="math inline">\(R\)</span> is an <strong>equivalence relation</strong> on <span class="math inline">\(A\)</span>. The <strong>equivalence class</strong> of an element <span class="math inline">\(x \in A\)</span> is the set <span class="math display">\[
 [x]:=\{ y \in A \, \colon \, y \sim x \} \,.
 \]</span> The set of equivalence classes of elements of <span class="math inline">\(A\)</span> with respect to the equivalence relation <span class="math inline">\(R\)</span> is denoted by <span class="math display">\[
 A / R \, := A / \!\sim \, :=  \,\{ [x] \, \colon \, x \in A \} \,.
@@ -694,8 +733,8 @@ x \sim y \quad \iff \quad  [x] = [y]
 \]</span></li>
 </ol>
 <p>This is shown in the following proposition.</p>
-<div id="Proposition-17" class="Proposition">
-<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 17</strong></summary><div>
+<div id="Proposition-21" class="Proposition">
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 21</strong></summary><div>
 <p>Let <span class="math inline">\(\sim\)</span> be an equivalence relation on <span class="math inline">\(A\)</span>. Then</p>
 <ol type="1">
 <li><p>For each <span class="math inline">\(x \in A\)</span> we have <span class="math display">\[
@@ -760,44 +799,59 @@ x \sim y \iff [x] = [y] \,.
 </div>
 <p>The prototypical (and trivial) example of equivalence relation is the <strong>equality</strong> over <span class="math inline">\(\mathbb{Q}\)</span>.</p>
 <div id="equality-is-an-equivalence-relation" class="Example" title="Equality is an equivalence relation">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 18: </strong>Equality is an equivalence relation</summary><div>Consider the set of rational numbers <span class="math inline">\(\mathbb{Q}\)</span>. The equality defines a <strong>binary relation</strong> on <span class="math inline">\(\mathbb{Q}\times \mathbb{Q}\)</span>, via <span class="math display">\[
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 22: </strong>Equality is an equivalence relation</summary><div>
+<p><strong>Question.</strong> The equality defines a <strong>binary relation</strong> on <span class="math inline">\(\mathbb{Q}\times \mathbb{Q}\)</span>, via <span class="math display">\[
 R:=\{ (x,y) \in \mathbb{Q}\times \mathbb{Q}\, \colon \, x=y  \} \,.
-\]</span> Let us check that <span class="math inline">\(R\)</span> is an <strong>equivalence relation</strong>:<p></p>
+\]</span></p>
 <ol type="1">
+<li>Prove that <span class="math inline">\(R\)</span> is an <strong>equivalence relation</strong>.</li>
+<li>Prove that <span class="math inline">\([x] = \{x\}\)</span> and compute <span class="math inline">\(\mathbb{Q}/ R\)</span>.</li>
+</ol>
+<p><strong>Solution.</strong></p>
+<ol type="1">
+<li><p>We need to check that <span class="math inline">\(R\)</span> satisfies the 3 properties of an equivalence relation:</p>
+<ul>
 <li><p>Reflexive: It holds, since <span class="math inline">\(x=x\)</span> for all <span class="math inline">\(x \in \mathbb{Q}\)</span>,</p></li>
 <li><p>Symmetric: Again <span class="math inline">\(x = y\)</span> if and only if <span class="math inline">\(y = x\)</span>,</p></li>
 <li><p>Transitive: If <span class="math inline">\(x = y\)</span> and <span class="math inline">\(y = z\)</span> then <span class="math inline">\(x = z\)</span>.</p></li>
-</ol>
-<p>The class of equivalence of <span class="math inline">\(x \in \mathbb{Q}\)</span> is given by <span class="math display">\[
+</ul>
+<p>Therefore, <span class="math inline">\(R\)</span> is an equivalence relation.</p></li>
+<li><p>The class of equivalence of <span class="math inline">\(x \in \mathbb{Q}\)</span> is given by <span class="math display">\[
 [x] = \{ x \}\,,
 \]</span> that is, this relation is quite trivial, given that each element of <span class="math inline">\(\mathbb{Q}\)</span> can only be related to itself. The quotient space is then <span class="math display">\[
 \mathbb{Q}/ R = \{ [x] \, \colon \,x \in \mathbb{Q}\} = \{  \{ x\} \, \colon \,x \in \mathbb{Q}\}  \,.
-\]</span></p>
+\]</span></p></li>
+</ol>
 </div></details>
 </div>
 <p>We now give an example of a non-trivial equivalence relation over <span class="math inline">\(\mathbb{Q}\)</span>.</p>
-<div id="Example-19" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 19</strong></summary><div>Suppose that <span class="math inline">\(R\)</span> is a binary relation on the set <span class="math inline">\(\mathbb{Q}\)</span> of rational numbers defined by <span class="math display">\[
+<div id="Example-23" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 23</strong></summary><div>
+<p><strong>Question.</strong> Let <span class="math inline">\(R\)</span> be the binary relation on the set <span class="math inline">\(\mathbb{Q}\)</span> of rational numbers defined by <span class="math display">\[
 x \sim y  \iff x-y \in \mathbb{Z}\,.
-\]</span> In other words, we have that <span class="math display">\[
-x \sim y  \iff y = n + x \, \text{ for some } \, n \in \mathbb{Z}\,,
-\]</span> which means that <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are equivalent iff <span class="math inline">\(y\)</span> is a translation of <span class="math inline">\(x\)</span> by some integer <span class="math inline">\(n\)</span>.<p></p>
-<p>We claim that <span class="math inline">\(R\)</span> is an equivalence relation on <span class="math inline">\(\mathbb{Q}\)</span>. Indeed:</p>
+\]</span></p>
 <ol type="1">
-<li>Reflexive: Let <span class="math inline">\(x \in \mathbb{Q}\)</span>. Then <span class="math inline">\(x-x = 0\)</span> and <span class="math inline">\(0 \in \mathbb{Z}\)</span>. Thus <span class="math inline">\(x \sim x\)</span>.</li>
-<li>Symmetric: If <span class="math inline">\(x \sim y\)</span> then <span class="math inline">\(x-y \in \mathbb{Z}\)</span>. But then also<br>
+<li>Prove that <span class="math inline">\(R\)</span> is an equivalence relation on <span class="math inline">\(\mathbb{Q}\)</span>.</li>
+<li>Compute <span class="math inline">\([x]\)</span> for each <span class="math inline">\(x \in \mathbb{Q}\)</span>.</li>
+<li>Compute <span class="math inline">\(\mathbb{Q}/R\)</span>.</li>
+</ol>
+<p><strong>Solution.</strong></p>
+<ol type="1">
+<li><p>We have:</p>
+<ul>
+<li><p>Reflexive: Let <span class="math inline">\(x \in \mathbb{Q}\)</span>. Then <span class="math inline">\(x-x = 0\)</span> and <span class="math inline">\(0 \in \mathbb{Z}\)</span>. Thus <span class="math inline">\(x \sim x\)</span>.</p></li>
+<li><p>Symmetric: If <span class="math inline">\(x \sim y\)</span> then <span class="math inline">\(x-y \in \mathbb{Z}\)</span>. But then also<br>
 <span class="math display">\[
 -(x-y) = y - x \in \mathbb{Z}
-\]</span> and so <span class="math inline">\(y \sim x\)</span>.</li>
-<li>Transitive: Suppose <span class="math inline">\(x \sim y\)</span> and <span class="math inline">\(y \sim z\)</span>. Then <span class="math display">\[
+\]</span> and so <span class="math inline">\(y \sim x\)</span>.</p></li>
+<li><p>Transitive: Suppose <span class="math inline">\(x \sim y\)</span> and <span class="math inline">\(y \sim z\)</span>. Then <span class="math display">\[
 x - y \in \mathbb{Z}\,  \text{ and } \, y - z \in \mathbb{Z}\,.
-\]</span> Thus we have <span class="math display">\[
+\]</span> Thus, we have <span class="math display">\[
 x-z = (x-y) + (y-z) \in \mathbb{Z}
-\]</span> showing that <span class="math inline">\(x \sim z\)</span>.</li>
-</ol>
-<p>We have shown that <span class="math inline">\(R\)</span> is an equivalence relation on <span class="math inline">\(\mathbb{Q}\)</span>.</p>
-<p><em>Question:</em> Can we characterize the equivalence class <span class="math inline">\([x]\)</span>?</p>
-<p>Yes. Note that <span class="math display">\[
+\]</span> showing that <span class="math inline">\(x \sim z\)</span>.</p></li>
+</ul>
+<p>Thus, we have shown that <span class="math inline">\(R\)</span> is an equivalence relation on <span class="math inline">\(\mathbb{Q}\)</span>.</p></li>
+<li><p>Note that <span class="math display">\[
 y -x \in \mathbb{Z}
 \]</span> is equivalent to <span class="math display">\[
 \exists \, n \in \mathbb{Z}\, \text{ s.t. } \, y - x = n
@@ -813,9 +867,11 @@ x \sim y \quad \iff \quad \exists \, n \in \mathbb{Z}\, \text{ s.t. } \, y = x +
 x = q + n \,, \qquad q \in [0,1) \,,
 \]</span> proving (<a href="#eq-equivalence-rel" class="quarto-xref"><span>2.4</span></a>). In particular (<a href="#eq-equivalence-rel" class="quarto-xref"><span>2.4</span></a>) implies that for each <span class="math inline">\(x \in \mathbb{Q}\)</span> there exists <span class="math inline">\(q \in [0,1) \cap \mathbb{Q}\)</span> such that <span class="math display">\[
 [x] = [q] \,.
-\]</span> This allows to conclude that <span class="math display">\[
+\]</span></p></li>
+<li><p>From Point 2 we conclude that <span class="math display">\[
 \mathbb{Q}/ R = \{ [x] \, \colon \,x \in \mathbb{Q}\} = \{ q \in \mathbb{Q}\, \colon \,0 \leq q &lt;1  \} \,.
-\]</span></p>
+\]</span></p></li>
+</ol>
 </div></details>
 </div>
 <div id="fig-equivalence-class" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -833,7 +889,7 @@ Figure&nbsp;2.1: For each <span class="math inline">\(x \in \mathbb{Q}\)</span> 
 <h2 data-number="2.5" class="anchored" data-anchor-id="order-relation"><span class="header-section-number">2.5</span> Order relation</h2>
 <p><strong>Order relations</strong> are defined similarly to <strong>equivalence relations</strong>. However notice that <em>symmetry</em> is replaced by <em>antisymmetry</em>.</p>
 <div id="partial-order" class="Definition" title="Partial order">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 20: </strong>Partial order</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 24: </strong>Partial order</summary><div>
 <p>A binary relation <span class="math inline">\(R\)</span> on <span class="math inline">\(A\)</span> is called a <strong>partial order</strong> if it satisfies the following properties:</p>
 <ol type="1">
 <li><p><strong>Reflexive</strong>: For each <span class="math inline">\(x \in A\)</span> one has <span class="math display">\[
@@ -852,7 +908,7 @@ Figure&nbsp;2.1: For each <span class="math inline">\(x \in \mathbb{Q}\)</span> 
 </div></details>
 </div>
 <div id="total-order" class="Definition" title="Total order">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 21: </strong>Total order</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 25: </strong>Total order</summary><div>
 <p>A binary relation <span class="math inline">\(R\)</span> on <span class="math inline">\(A\)</span> is called a <strong>total order relation</strong> if it satisfies the following properties:</p>
 <ol type="1">
 <li><p><strong>Partial order</strong>: <span class="math inline">\(R\)</span> is a partial order on <span class="math inline">\(A\)</span>.</p></li>
@@ -867,7 +923,7 @@ Figure&nbsp;2.1: For each <span class="math inline">\(x \in \mathbb{Q}\)</span> 
 </div>
 <p>The operation of <strong>set inclusion</strong> is a partial order on <span class="math inline">\(P(\Omega)\)</span> but <strong>not</strong> a total order.</p>
 <div id="set-inclusion-is-a-partial-order-but-not-total-order" class="Example" title="Set inclusion is a partial order but not total order">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 22: </strong>Set inclusion is a partial order but not total order</summary><div>Consider an arbitrary non-empty set <span class="math inline">\(\Omega\)</span> and its <strong>power set</strong> <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 26: </strong>Set inclusion is a partial order but not total order</summary><div>Consider an arbitrary non-empty set <span class="math inline">\(\Omega\)</span> and its <strong>power set</strong> <span class="math display">\[
 \mathcal{P}(\Omega) = \{ A \, \colon \,A \subseteq \Omega  \}\,.
 \]</span> The inclusion defines <strong>binary relation</strong> on <span class="math inline">\(\mathcal{P}(\Omega) \times \mathcal{P}(\Omega)\)</span>, via <span class="math display">\[
 R:=\{ (A,B) \in \mathcal{P}(\Omega) \times \mathcal{P}(\Omega) \, \colon \, A \subseteq B  \} \,.
@@ -875,7 +931,7 @@ R:=\{ (A,B) \in \mathcal{P}(\Omega) \times \mathcal{P}(\Omega) \, \colon \, A \s
 <ol type="1">
 <li><p>Reflexive: It holds, since <span class="math inline">\(A \subseteq A\)</span> for all <span class="math inline">\(A \in \mathcal{P}(\Omega)\)</span>,</p></li>
 <li><p>Transitive: If <span class="math inline">\(A \subseteq B\)</span> and <span class="math inline">\(B \subseteq C\)</span>, then by definition of inclusion <span class="math inline">\(A \subseteq C\)</span>.</p></li>
-<li><p>Antisymmetric: If <span class="math inline">\(A \subseteq B\)</span> and <span class="math inline">\(B \subseteq A\)</span>, then <span class="math inline">\(A=B\)</span> by Proposition <a href="chap_2.html#Proposition-Equality-Sets">7</a>.</p></li>
+<li><p>Antisymmetric: If <span class="math inline">\(A \subseteq B\)</span> and <span class="math inline">\(B \subseteq A\)</span>, then <span class="math inline">\(A=B\)</span> by Proposition <a href="chap_2.html#Proposition-Equality-Sets">8</a>.</p></li>
 </ol>
 <p>Therefore <span class="math inline">\(R\)</span> is a <strong>partial order</strong> on <span class="math inline">\(\mathcal{P}(\Omega)\)</span>.</p>
 <p>In general <span class="math inline">\(R\)</span> is <strong>not</strong> a total order. For example if we consider <span class="math display">\[
@@ -889,7 +945,7 @@ A \not\subseteq B \,, \quad  B \not\subseteq A \,,
 </div>
 <p>The <strong>inequality</strong> on <span class="math inline">\(\mathbb{Q}\)</span> is an example of total order.</p>
 <div id="inequality-is-a-total-order" class="Example" title="Inequality is a total order">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 23: </strong>Inequality is a total order</summary><div>Consider the set of rationals <span class="math inline">\(\mathbb{Q}\)</span>. The usual inequality defines a <strong>binary relation</strong> on <span class="math inline">\(\mathbb{Q}\times \mathbb{Q}\)</span>, via <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 27: </strong>Inequality is a total order</summary><div>Consider the set of rationals <span class="math inline">\(\mathbb{Q}\)</span>. The usual inequality defines a <strong>binary relation</strong> on <span class="math inline">\(\mathbb{Q}\times \mathbb{Q}\)</span>, via <span class="math display">\[
 R:=\{ (x,y) \in \mathbb{Q}\times \mathbb{Q}\, \colon \, x \leq y  \} \,.
 \]</span> Let us check that <span class="math inline">\(R\)</span> is an <strong>order relation</strong>:<p></p>
 <ol type="1">
@@ -902,8 +958,8 @@ x \leq y \,\, \text{ or } \,\, y \leq x \,.
 \]</span></p>
 </div></details>
 </div>
-<div id="Notation-24" class="Notation">
-<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 24</strong></summary><div>If <span class="math inline">\(A\)</span> is a set and <span class="math inline">\(R\)</span> is a total order on <span class="math inline">\(A\)</span>, we write <span class="math display">\[
+<div id="Notation-28" class="Notation">
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 28</strong></summary><div>If <span class="math inline">\(A\)</span> is a set and <span class="math inline">\(R\)</span> is a total order on <span class="math inline">\(A\)</span>, we write <span class="math display">\[
 (x,y) \in R  \, \iff \, x \leq y \,.
 \]</span> Therefore the symbol <span class="math inline">\(\leq\)</span> will always denote a total order relation.<p></p>
 </div></details>
@@ -912,8 +968,8 @@ x \leq y \,\, \text{ or } \,\, y \leq x \,.
 <section id="intervals" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="intervals"><span class="header-section-number">2.6</span> Intervals</h2>
 <p>In this section we assume to have available the set <span class="math inline">\(\mathbb{R}\)</span> of <strong>real numbers</strong>, which we recall is an extension of <span class="math inline">\(\mathbb{Q}\)</span>. We now introduce the concept of <strong>interval</strong>.</p>
-<div id="Definition-25" class="Definition">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 25</strong></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. We define the <strong>open interval</strong> <span class="math inline">\((a,b)\)</span> as the set <span class="math display">\[
+<div id="Definition-29" class="Definition">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 29</strong></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. We define the <strong>open interval</strong> <span class="math inline">\((a,b)\)</span> as the set <span class="math display">\[
 (a,b) := \{ x \in \mathbb{R}\, \colon \, a &lt; x &lt; b \}\,.
 \]</span> We define the <strong>close interval</strong> <span class="math inline">\([a,b]\)</span> as the set <span class="math display">\[
 [a,b] := \{ x \in \mathbb{R}\, \colon \, a \leq x \leq b \}\,.
@@ -973,7 +1029,7 @@ Figure&nbsp;2.5: Interval <span class="math inline">\((-\infty,b]\)</span>
 <section id="functions" class="level2" data-number="2.7">
 <h2 data-number="2.7" class="anchored" data-anchor-id="functions"><span class="header-section-number">2.7</span> Functions</h2>
 <div id="definition-function" class="Definition" title="Functions">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 26: </strong>Functions</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 30: </strong>Functions</summary><div>
 <p>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be sets. A <strong>function</strong> from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> is a rule which associates <strong>at each</strong> element <span class="math inline">\(x \in A\)</span> a <strong>single</strong> element <span class="math inline">\(y \in B\)</span>. Notations:</p>
 <ul>
 <li>We write <span class="math display">\[
@@ -997,15 +1053,15 @@ f(A) := \{ y \in B \, \colon \,y = f(x) \, \mbox{ for some }\, x \in A \} \subse
 </div>
 <div id="Warning*-3" class="Warning">
 <details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>
-<p>We want to stress the importance of the first two sentences in Definition <a href="chap_2.html#definition-function">26</a>. Assume that <span class="math inline">\(f \colon A \to B\)</span> is a function. Then:</p>
+<p>We want to stress the importance of the first two sentences in Definition <a href="chap_2.html#definition-function">30</a>. Assume that <span class="math inline">\(f \colon A \to B\)</span> is a function. Then:</p>
 <ul>
 <li>To each element <span class="math inline">\(x \in A\)</span> we can <strong>only</strong> associate <strong>one</strong> element <span class="math inline">\(f(x) \in B\)</span>,</li>
 <li>Every element <span class="math inline">\(x \in A\)</span> has to be associated to an element <span class="math inline">\(f(x) \in B\)</span>.</li>
 </ul>
 </div></details>
 </div>
-<div id="Example-27" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 27</strong></summary><div>
+<div id="Example-31" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 31</strong></summary><div>
 <p>Assume given the two sets <span class="math display">\[
 A = \{ a_1,a_2 \} \,, \quad B=\{b_1,b_2,b_3\} \,.
 \]</span> Let us see a few examples:</p>
@@ -1042,8 +1098,8 @@ h(a_1) = b_1 \,.
 <figcaption>Schematic picture of the function <span class="math inline">\(h\)</span></figcaption>
 </figure>
 </div>
-<div id="Example-28" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 28</strong></summary><div>
+<div id="Example-32" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 32</strong></summary><div>
 <p>Let us make two examples of functions on <span class="math inline">\(\mathbb{R}\)</span>:</p>
 <ol type="1">
 <li><p>Define <span class="math inline">\(f \ \colon \mathbb{R}\to \mathbb{R}\)</span> by <span class="math display">\[
@@ -1074,7 +1130,7 @@ g(x) = \log (x) \,.
 <h2 data-number="2.8" class="anchored" data-anchor-id="absolute-value-or-modulus"><span class="header-section-number">2.8</span> Absolute value or Modulus</h2>
 <p>In this section we assume to have available the set <span class="math inline">\(\mathbb{R}\)</span> of <strong>real numbers</strong>, which we recall is an extension of <span class="math inline">\(\mathbb{Q}\)</span>.</p>
 <div id="absolute-value" class="Definition" title="Absolute value">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 29: </strong>Absolute value</summary><div>For <span class="math inline">\(x \in \mathbb{R}\)</span> we define its <strong>absolute value</strong> as the quantity <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 33: </strong>Absolute value</summary><div>For <span class="math inline">\(x \in \mathbb{R}\)</span> we define its <strong>absolute value</strong> as the quantity <span class="math display">\[
 |x| =
 \begin{cases}
 x  &amp; \text{ if } \, x \geq 0 \\
@@ -1083,8 +1139,8 @@ x  &amp; \text{ if } \, x \geq 0 \\
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Example-30" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 30</strong></summary><div>By definition one has <span class="math inline">\(|x|=x\)</span> if <span class="math inline">\(x \geq 0\)</span>. For example <span class="math display">\[
+<div id="Example-34" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 34</strong></summary><div>By definition one has <span class="math inline">\(|x|=x\)</span> if <span class="math inline">\(x \geq 0\)</span>. For example <span class="math display">\[
 |\pi| = \pi \,, \,\, \left|\sqrt{2}\right| = \sqrt{2} \,, \,\, |0|=0 \,.
 \]</span> Instead <span class="math inline">\(|x|= -x\)</span> if <span class="math inline">\(x &lt; 0\)</span>. For example <span class="math display">\[
 |-\pi| = \pi \,, \,\, \left|-\sqrt{2}\right| = \sqrt{2} \,, \,\, |-10|=10 \,.
@@ -1092,8 +1148,8 @@ x  &amp; \text{ if } \, x \geq 0 \\
 </div></details>
 </div>
 <p>Let us also make the following basic Remark. The proof will be left as an exercise.</p>
-<div id="Remark-31" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 31</strong></summary><div>For all <span class="math inline">\(x \in \mathbb{R}\)</span> <span class="math display">\[
+<div id="Remark-35" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 35</strong></summary><div>For all <span class="math inline">\(x \in \mathbb{R}\)</span> <span class="math display">\[
 |x| \geq 0 \,.
 \]</span> Moreover <span class="math display">\[
 |x| = 0 \iff x = 0 \,.
@@ -1102,7 +1158,7 @@ x  &amp; \text{ if } \, x \geq 0 \\
 </div>
 <p>Another basic remark (proof by exercise).</p>
 <div id="rmk-absolute-value-sym" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 32</strong></summary><div>For all <span class="math inline">\(x \in \mathbb{R}\)</span> one has <span class="math display">\[
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 36</strong></summary><div>For all <span class="math inline">\(x \in \mathbb{R}\)</span> one has <span class="math display">\[
 |x| = |-x| \,.
 \]</span><p></p>
 </div></details>
@@ -1118,7 +1174,7 @@ f \ \colon \mathbb{R}\to \mathbb{R}\,, \quad f(x):=|x| \,.
 </div>
 <p>It is also useful to understand the absolute value in a geometric way.</p>
 <div id="geometric-interpretation-of-x" class="Remark" title="Geometric interpretation of |x|">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 33: </strong>Geometric interpretation of <span class="math inline">\(|x|\)</span></summary><div>A number <span class="math inline">\(x \in \mathbb{R}\)</span> can be represented with a point on the real line <span class="math inline">\(\mathbb{R}\)</span>.The non-negative number <span class="math inline">\(|x|\)</span> represents the <strong>distance</strong> of <span class="math inline">\(x\)</span> from the origin <span class="math inline">\(0\)</span>. Notice that this works for both positive and negative numbers <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> respectively, as shown in <a href="#fig-absolute-value-1" class="quarto-xref">Figure&nbsp;<span>2.6</span></a> below.<p></p>
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 37: </strong>Geometric interpretation of <span class="math inline">\(|x|\)</span></summary><div>A number <span class="math inline">\(x \in \mathbb{R}\)</span> can be represented with a point on the real line <span class="math inline">\(\mathbb{R}\)</span>.The non-negative number <span class="math inline">\(|x|\)</span> represents the <strong>distance</strong> of <span class="math inline">\(x\)</span> from the origin <span class="math inline">\(0\)</span>. Notice that this works for both positive and negative numbers <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> respectively, as shown in <a href="#fig-absolute-value-1" class="quarto-xref">Figure&nbsp;<span>2.6</span></a> below.<p></p>
 </div></details>
 </div>
 <div id="fig-absolute-value-1" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1132,7 +1188,7 @@ Figure&nbsp;2.6: Geometric interpretation of <span class="math inline">\(|x|\)</
 </figure>
 </div>
 <div id="geometric-interpretation-of-x-y" class="Remark" title="Geometric interpretation of |x-y|">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 34: </strong>Geometric interpretation of <span class="math inline">\(|x-y|\)</span></summary><div>If <span class="math inline">\(x,y \in \mathbb{R}\)</span> then the number <span class="math inline">\(|x-y|\)</span> represents the distance between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> on the real line, as shown in <a href="#fig-absolute-value-2" class="quarto-xref">Figure&nbsp;<span>2.7</span></a> below. Note that by Remark <a href="chap_2.html#rmk-absolute-value-sym">32</a> we have <span class="math display">\[
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 38: </strong>Geometric interpretation of <span class="math inline">\(|x-y|\)</span></summary><div>If <span class="math inline">\(x,y \in \mathbb{R}\)</span> then the number <span class="math inline">\(|x-y|\)</span> represents the distance between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> on the real line, as shown in <a href="#fig-absolute-value-2" class="quarto-xref">Figure&nbsp;<span>2.7</span></a> below. Note that by Remark <a href="chap_2.html#rmk-absolute-value-sym">36</a> we have <span class="math display">\[
 |x-y| = |y-x| \,.
 \]</span><p></p>
 </div></details>
@@ -1149,7 +1205,7 @@ Figure&nbsp;2.7: Geometric interpretation of <span class="math inline">\(|x-y|\)
 </div>
 <p>In the next Lemma we show a fundamental equivalence regarding the absolute value.</p>
 <div id="lemma-absolute-value" class="Lemma">
-<p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 35</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>. Then <span class="math display">\[
+<p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 39</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>. Then <span class="math display">\[
 |x| \leq y  \iff -y \leq x \leq y \,.
 \]</span><p></p>
 </div></details>
@@ -1165,12 +1221,12 @@ Figure&nbsp;2.7: Geometric interpretation of <span class="math inline">\(|x-y|\)
 <img src="../images/absolute_value_3.png" class="img-fluid figure-img" style="width:70.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-absolute-value-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2.8: Geometric meaning of Lemma <a href="chap_2.html#lemma-absolute-value">35</a>
+Figure&nbsp;2.8: Geometric meaning of Lemma <a href="chap_2.html#lemma-absolute-value">39</a>
 </figcaption>
 </figure>
 </div>
-<div id="proof-of-lemma" class="Proof" title="Proof of Lemma 35">
-<details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Lemma 35</summary><div>
+<div id="proof-of-lemma" class="Proof" title="Proof of Lemma 39">
+<details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Lemma 39</summary><div>
 <p><em>Step 1: First implication.</em><br>
 Suppose first that <span id="eq-lemma-absolute-value-1"><span class="math display">\[
 |x| \leq y \,.
@@ -1211,8 +1267,8 @@ Suppose now that<br>
 </div></details>
 </div>
 <p>With the same arguments, just replacing <span class="math inline">\(\leq\)</span> with <span class="math inline">\(&lt;\)</span>, one can also show the following.</p>
-<div id="Corollary-36" class="Corollary">
-<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 36</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>. Then <span class="math display">\[
+<div id="Corollary-40" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 40</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>. Then <span class="math display">\[
 |x| &lt; y  \iff -y &lt; x &lt; y \,.
 \]</span><p></p>
 </div></details>
@@ -1222,14 +1278,14 @@ Suppose now that<br>
 <h2 data-number="2.9" class="anchored" data-anchor-id="triangle-inequality"><span class="header-section-number">2.9</span> Triangle inequality</h2>
 <p>The triangle inequality relates the absolute value to the sum operation. It is a very important inequality, which we will use a lot in the future.</p>
 <div id="theorem-triangle-inequality" class="Theorem" title="Triangle inequality">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 37: </strong>Triangle inequality</summary><div>For every <span class="math inline">\(x, y \in \mathbb{R}\)</span> we have <span id="eq-triangle-inequality"><span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 41: </strong>Triangle inequality</summary><div>For every <span class="math inline">\(x, y \in \mathbb{R}\)</span> we have <span id="eq-triangle-inequality"><span class="math display">\[
 | |x| - |y| | \leq |x+y| \leq |x| + |y| \,.
 \tag{2.8}\]</span></span><p></p>
 </div></details>
 </div>
 <p>Before proceeding with the proof, let us discuss the geometric meaning of the triangle inequality.</p>
 <div id="geometric-meaning-of-triangle-inequality" class="Remark" title="Geometric meaning of triangle inequality">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 38: </strong>Geometric meaning of triangle inequality</summary><div>The notion of absolute value can be extended also to vectors in the plane. Suppose that <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are two vectors in the plane, as in <a href="#fig-triangle-ineq-1" class="quarto-xref">Figure&nbsp;<span>2.9</span></a> below. Then <span class="math inline">\(|x|\)</span> and <span class="math inline">\(|y|\)</span> can be interpreted as the <strong>lengths</strong> of these vectors.<br>
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 42: </strong>Geometric meaning of triangle inequality</summary><div>The notion of absolute value can be extended also to vectors in the plane. Suppose that <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are two vectors in the plane, as in <a href="#fig-triangle-ineq-1" class="quarto-xref">Figure&nbsp;<span>2.9</span></a> below. Then <span class="math inline">\(|x|\)</span> and <span class="math inline">\(|y|\)</span> can be interpreted as the <strong>lengths</strong> of these vectors.<br>
 Using the rule of sum of vectors, we can draw <span class="math inline">\(x+y\)</span>, as shown in <a href="#fig-triangle-ineq-2" class="quarto-xref">Figure&nbsp;<span>2.10</span></a> below. From the picture it is evident that <span id="eq-triangle-inequality-1"><span class="math display">\[
 |x+y| \leq |x| + |y|\,,
 \tag{2.9}\]</span></span> that is, <em>the length of each side of a triangle does not exceed the sum of the lengths of the two remaining sides</em>. Note that (<a href="#eq-triangle-inequality-1" class="quarto-xref"><span>2.9</span></a>) is exactly the second inequality in (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>). This is why (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>) is called triangle inequality.<p></p>
@@ -1255,18 +1311,18 @@ Figure&nbsp;2.10: Summing the vectors <span class="math inline">\(x\)</span> and
 </figcaption>
 </figure>
 </div>
-<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 37">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 37</summary><div>Assume that <span class="math inline">\(x,y \in \mathbb{R}\)</span>. We prove the two inequalities in (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>) individually.<p></p>
+<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 41">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 41</summary><div>Assume that <span class="math inline">\(x,y \in \mathbb{R}\)</span>. We prove the two inequalities in (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>) individually.<p></p>
 <p><em>Step 1. Proof of the second inequality in (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>).</em><br>
 Trivially we have <span class="math display">\[
 |x| \leq |x| \,.
-\]</span> Therefore we can apply Lemma <a href="chap_2.html#lemma-absolute-value">35</a> and infer <span id="eq-triangle-inequality-3"><span class="math display">\[
+\]</span> Therefore we can apply Lemma <a href="chap_2.html#lemma-absolute-value">39</a> and infer <span id="eq-triangle-inequality-3"><span class="math display">\[
 -|x| \leq x \leq |x| \,.
-\tag{2.10}\]</span></span> Similarly we have that <span class="math inline">\(|y| \leq |y|\)</span>, and so Lemma <a href="chap_2.html#lemma-absolute-value">35</a> implies <span id="eq-triangle-inequality-4"><span class="math display">\[
+\tag{2.10}\]</span></span> Similarly we have that <span class="math inline">\(|y| \leq |y|\)</span>, and so Lemma <a href="chap_2.html#lemma-absolute-value">39</a> implies <span id="eq-triangle-inequality-4"><span class="math display">\[
 -|y| \leq y \leq |y| \,.
 \tag{2.11}\]</span></span> Summing (<a href="#eq-triangle-inequality-3" class="quarto-xref"><span>2.10</span></a>) and (<a href="#eq-triangle-inequality-4" class="quarto-xref"><span>2.11</span></a>) we get <span class="math display">\[
 -(|x| + |y|) \leq x + y \leq |x| + |y| \,.
-\]</span> We can now again apply Lemma <a href="chap_2.html#lemma-absolute-value">35</a> to get <span id="eq-triangle-inequality-5"><span class="math display">\[
+\]</span> We can now again apply Lemma <a href="chap_2.html#lemma-absolute-value">39</a> to get <span id="eq-triangle-inequality-5"><span class="math display">\[
 |x + y| \leq |x| + |y| \,,
 \tag{2.12}\]</span></span> which is the second inequality in (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>).</p>
 <p><em>Step 2. Proof of the first inequality in (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>).</em><br>
@@ -1289,14 +1345,14 @@ x = x+y - y
 -|x+y| \leq |x| - |y|  \,.
 \tag{2.14}\]</span></span> Putting together (<a href="#eq-triangle-inequality-6" class="quarto-xref"><span>2.13</span></a>) and (<a href="#eq-triangle-inequality-7" class="quarto-xref"><span>2.14</span></a>) yields <span class="math display">\[
 -|x+y| \leq |x| - |y| \leq |x+y| \,.  
-\]</span> By Lemma <a href="chap_2.html#lemma-absolute-value">35</a> the above is equivalent to <span class="math display">\[
+\]</span> By Lemma <a href="chap_2.html#lemma-absolute-value">39</a> the above is equivalent to <span class="math display">\[
 ||x| - |y|| \leq |x+y| \,,
 \]</span> which is the first inequality in (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>).</p>
 </div></details>
 </div>
 <p>An immediate consequence of the triangle inequality are the following inequalities, which are left as an exercise.</p>
-<div id="Remark-39" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 39</strong></summary><div>For any <span class="math inline">\(x,y \in \mathbb{R}\)</span> it holds <span id="eq-triangle-inequality-bis"><span class="math display">\[
+<div id="Remark-43" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 43</strong></summary><div>For any <span class="math inline">\(x,y \in \mathbb{R}\)</span> it holds <span id="eq-triangle-inequality-bis"><span class="math display">\[
 ||x|-|y|| \leq |x-y| \leq |x|+|y|\,.
 \tag{2.15}\]</span></span> Moreover for any <span class="math inline">\(x,y,z \in \mathbb{R}\)</span> it holds <span class="math display">\[
 |x-y| \leq |x-z| + |z-y| \,.
@@ -1337,7 +1393,7 @@ x = x+y - y
 </ol>
 <p>Let us make an example.</p>
 <div id="proposition-easy" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 40</strong></summary><div>Two real numbers <span class="math inline">\(a,b\)</span> are equal if and only if for every real number <span class="math inline">\(\varepsilon&gt;0\)</span> it follows that <span class="math inline">\(|a-b|&lt;\varepsilon\)</span>.<p></p>
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 44</strong></summary><div>Two real numbers <span class="math inline">\(a,b\)</span> are equal if and only if for every real number <span class="math inline">\(\varepsilon&gt;0\)</span> it follows that <span class="math inline">\(|a-b|&lt;\varepsilon\)</span>.<p></p>
 </div></details>
 </div>
 <p>Before proceeding with the proof, note that the above stetement is just saying that:</p>
@@ -1345,8 +1401,8 @@ x = x+y - y
 <p>Two numbers are equal if and only if they are <strong>arbitrarily</strong> close</p>
 </blockquote>
 <p>By <em>arbitrarily close</em> we mean that they are <em>as close as you want the to be</em>.</p>
-<div id="of-proposition" class="Proof" title="of Proposition 40">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>of Proposition 40</summary><div>Let us first rephrase the statement using mathematical symbols:<p></p>
+<div id="of-proposition" class="Proof" title="of Proposition 44">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>of Proposition 44</summary><div>Let us first rephrase the statement using mathematical symbols:<p></p>
 <blockquote class="blockquote">
 <p>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span>. Then it holds: <span class="math display">\[
 a=b \, \iff \, |a-b| &lt; \varepsilon\,, \,\, \forall \, \varepsilon&gt;0 \,.
@@ -1387,7 +1443,7 @@ a \neq b \,.
 <h2 data-number="2.11" class="anchored" data-anchor-id="induction"><span class="header-section-number">2.11</span> Induction</h2>
 <p>Another technique for carrying out proofs is <strong>induction</strong>, which we take as an axiom.</p>
 <div id="principle-of-induction" class="Axiom" title="Principle of Induction">
-<p></p><details class="Axiom fbx-simplebox fbx-default" open=""><summary><strong>Axiom 41: </strong>Principle of Induction</summary><div>Let <span class="math inline">\(S \subseteq  \mathbb{N}\)</span>. Suppose that<p></p>
+<p></p><details class="Axiom fbx-simplebox fbx-default" open=""><summary><strong>Axiom 45: </strong>Principle of Induction</summary><div>Let <span class="math inline">\(S \subseteq  \mathbb{N}\)</span>. Suppose that<p></p>
 <ol type="1">
 <li>We have <span class="math inline">\(1 \in S\)</span>, and</li>
 <li>Whenever <span class="math inline">\(n \in S\)</span>, then <span class="math inline">\((n+1) \in S\)</span>.</li>
@@ -1401,8 +1457,8 @@ S=\mathbb{N}\,.
 <p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>The above is an <strong>axiom</strong>, meaning that we do not prove it, but rather we just <strong>assume it holds</strong>.<p></p>
 </div></details>
 </div>
-<div id="Remark-42" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 42</strong></summary><div>It would be possible to prove the Principle of Induction starting from elementary axioms for <span class="math inline">\(\mathbb{N}\)</span>, called the <strong>Peano Axioms</strong>, see the <a href="https://en.wikipedia.org/wiki/Peano_axioms#Peano_arithmetic_as_first-order_theory">Wikipedia page</a>.<br>
+<div id="Remark-46" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 46</strong></summary><div>It would be possible to prove the Principle of Induction starting from elementary axioms for <span class="math inline">\(\mathbb{N}\)</span>, called the <strong>Peano Axioms</strong>, see the <a href="https://en.wikipedia.org/wiki/Peano_axioms#Peano_arithmetic_as_first-order_theory">Wikipedia page</a>.<br>
 However, in justifying basic principles of mathematics, one at some point needs to draw a line. This means that something which looks elementary needs to be assumed to hold, in order to have a starting point for proving deeper statements.<br>
 In the case of the Principle of Induction, the intuition is clear:<p></p>
 <blockquote class="blockquote">
@@ -1413,7 +1469,7 @@ In the case of the Principle of Induction, the intuition is clear:<p></p>
 </div>
 <p>The Principle of Induction can be used to prove statements which depend on some index <span class="math inline">\(n \in \mathbb{N}\)</span>. Precisely, the following statement holds.</p>
 <div id="principle-of-inducion---alternative-formulation" class="Corollary" title="Principle of Inducion - Alternative formulation">
-<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 43: </strong>Principle of Inducion - Alternative formulation</summary><div>Let <span class="math inline">\(\alpha(n)\)</span> be a statement which depends on <span class="math inline">\(n \in \mathbb{N}\)</span>. Suppose that<p></p>
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 47: </strong>Principle of Inducion - Alternative formulation</summary><div>Let <span class="math inline">\(\alpha(n)\)</span> be a statement which depends on <span class="math inline">\(n \in \mathbb{N}\)</span>. Suppose that<p></p>
 <ol type="1">
 <li><span class="math inline">\(\alpha(1)\)</span> is true, and</li>
 <li>Whenever <span class="math inline">\(\alpha(n)\)</span> is true, then <span class="math inline">\(\alpha(n+1)\)</span> is true.</li>
@@ -1435,7 +1491,7 @@ S=\mathbb{N}\,.
 </div></details>
 </div>
 <div id="formula-for-summing-first-n-natural-numbers" class="Example" title="Formula for summing first n natural numbers">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 44: </strong>Formula for summing first <span class="math inline">\(n\)</span> natural numbers</summary><div>Using the Principle of Induction we can prove that <span id="eq-formula-sum-naturals"><span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 48: </strong>Formula for summing first <span class="math inline">\(n\)</span> natural numbers</summary><div>Using the Principle of Induction we can prove that <span id="eq-formula-sum-naturals"><span class="math display">\[
 1 + 2 + 3 + \ldots + (n-1) + n = \frac{n(n+1)}{2}
 \tag{2.18}\]</span></span> holds for all <span class="math inline">\(n \in \mathbb{N}\)</span>.<p></p>
 <p><em>Proof</em>. To be really precise, consider the statement <span class="math display">\[
@@ -1460,7 +1516,7 @@ S=\mathbb{N}\,.
 </div></details>
 </div>
 <div id="statements-about-sequences-of-numbers" class="Example" title="Statements about sequences of numbers">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 45: </strong>Statements about sequences of numbers</summary><div>Suppose you are given a collection of numbers <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 49: </strong>Statements about sequences of numbers</summary><div>Suppose you are given a collection of numbers <span class="math display">\[
 \{ x_n \, \text{ s.t. } \, n \in \mathbb{N}\} \,.
 \]</span> Such collection of numbers is called <strong>sequence</strong>. Assume that <span class="math display">\[\begin{align}
 &amp; x_1  := 1 \\

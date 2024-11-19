@@ -52,6 +52,8 @@ book:
     - sections/chap_8.qmd
     - sections/license.qmd
     - sections/references.qmd
+  appendices:
+    - sections/revision.qmd
 
 
 
