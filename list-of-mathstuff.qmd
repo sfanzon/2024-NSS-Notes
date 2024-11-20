@@ -39,101 +39,103 @@
 
  [**Proof**](#Proof*-2.1)\Pageref{Proof*-2.1}
 
- [**Example 2.9**](#Example-2.9)\Pageref{Example-2.9}
+ [**Definition 2.9**](#Definition-2.9)\Pageref{Definition-2.9}
 
- [**Definition 2.10**](#Definition-2.10)\Pageref{Definition-2.10}
+ [**Example 2.10**](#Example-2.10)\Pageref{Example-2.10}
 
- [**Remark 2.11**](#Remark-2.11)\Pageref{Remark-2.11}
+ [**Definition 2.11**](#Definition-2.11)\Pageref{Definition-2.11}
 
- [**Example 2.12**](#Example-2.12)\Pageref{Example-2.12}
+ [**Remark 2.12**](#Remark-2.12)\Pageref{Remark-2.12}
 
- [**Proposition 2.13**](#de-morgans-laws): De Morgan’s Laws\Pageref{de-morgans-laws}
+ [**Example 2.13**](#Example-2.13)\Pageref{Example-2.13}
 
- [**Definition 2.14**](#Definition-2.14)\Pageref{Definition-2.14}
+ [**Proposition 2.14**](#de-morgans-laws): De Morgan’s Laws\Pageref{de-morgans-laws}
 
- [**Remark 2.15**](#Remark-2.15)\Pageref{Remark-2.15}
+ [**Definition 2.15**](#Definition-2.15)\Pageref{Definition-2.15}
 
- [**Example 2.16**](#Example-2.16)\Pageref{Example-2.16}
+ [**Remark 2.16**](#Remark-2.16)\Pageref{Remark-2.16}
 
- [**Definition 2.17**](#Definition-2.17)\Pageref{Definition-2.17}
+ [**Example 2.17**](#Example-2.17)\Pageref{Example-2.17}
 
  [**Definition 2.18**](#Definition-2.18)\Pageref{Definition-2.18}
 
- [**Definition 2.19**](#equivalence-relation-1): Equivalence relation\Pageref{equivalence-relation-1}
+ [**Definition 2.19**](#Definition-2.19)\Pageref{Definition-2.19}
 
- [**Definition 2.20**](#equivalence-classes): Equivalence classes\Pageref{equivalence-classes}
+ [**Definition 2.20**](#equivalence-relation-1): Equivalence relation\Pageref{equivalence-relation-1}
 
- [**Proposition 2.21**](#Proposition-2.21)\Pageref{Proposition-2.21}
+ [**Definition 2.21**](#equivalence-classes): Equivalence classes\Pageref{equivalence-classes}
+
+ [**Proposition 2.22**](#Proposition-2.22)\Pageref{Proposition-2.22}
 
  [**Proof**](#Proof*-2.2)\Pageref{Proof*-2.2}
 
- [**Example 2.22**](#equality-is-an-equivalence-relation): Equality is an equivalence relation\Pageref{equality-is-an-equivalence-relation}
+ [**Example 2.23**](#equality-is-an-equivalence-relation): Equality is an equivalence relation\Pageref{equality-is-an-equivalence-relation}
 
- [**Example 2.23**](#Example-2.23)\Pageref{Example-2.23}
+ [**Example 2.24**](#Example-2.24)\Pageref{Example-2.24}
 
- [**Definition 2.24**](#partial-order): Partial order\Pageref{partial-order}
+ [**Definition 2.25**](#partial-order): Partial order\Pageref{partial-order}
 
- [**Definition 2.25**](#total-order): Total order\Pageref{total-order}
+ [**Definition 2.26**](#total-order): Total order\Pageref{total-order}
 
- [**Example 2.26**](#set-inclusion-is-a-partial-order-but-not-total-order): Set inclusion is a partial order but not total order\Pageref{set-inclusion-is-a-partial-order-but-not-total-order}
+ [**Example 2.27**](#set-inclusion-is-a-partial-order-but-not-total-order): Set inclusion is a partial order but not total order\Pageref{set-inclusion-is-a-partial-order-but-not-total-order}
 
- [**Example 2.27**](#inequality-is-a-total-order): Inequality is a total order\Pageref{inequality-is-a-total-order}
+ [**Example 2.28**](#inequality-is-a-total-order): Inequality is a total order\Pageref{inequality-is-a-total-order}
 
- [**Notation 2.28**](#Notation-2.28)\Pageref{Notation-2.28}
+ [**Notation 2.29**](#Notation-2.29)\Pageref{Notation-2.29}
 
- [**Definition 2.29**](#Definition-2.29)\Pageref{Definition-2.29}
+ [**Definition 2.30**](#Definition-2.30)\Pageref{Definition-2.30}
 
- [**Definition 2.30**](#definition-function): Functions\Pageref{definition-function}
+ [**Definition 2.31**](#definition-function): Functions\Pageref{definition-function}
 
  [**Warning**](#Warning*-2.3)\Pageref{Warning*-2.3}
 
- [**Example 2.31**](#Example-2.31)\Pageref{Example-2.31}
-
  [**Example 2.32**](#Example-2.32)\Pageref{Example-2.32}
 
- [**Definition 2.33**](#absolute-value): Absolute value\Pageref{absolute-value}
+ [**Example 2.33**](#Example-2.33)\Pageref{Example-2.33}
 
- [**Example 2.34**](#Example-2.34)\Pageref{Example-2.34}
+ [**Definition 2.34**](#absolute-value): Absolute value\Pageref{absolute-value}
 
- [**Remark 2.35**](#Remark-2.35)\Pageref{Remark-2.35}
+ [**Example 2.35**](#Example-2.35)\Pageref{Example-2.35}
 
- [**Remark 2.36**](#rmk-absolute-value-sym)\Pageref{rmk-absolute-value-sym}
+ [**Remark 2.36**](#Remark-2.36)\Pageref{Remark-2.36}
 
- [**Remark 2.37**](#geometric-interpretation-of-x): Geometric interpretation of $|x|$\Pageref{geometric-interpretation-of-x}
+ [**Remark 2.37**](#rmk-absolute-value-sym)\Pageref{rmk-absolute-value-sym}
 
- [**Remark 2.38**](#geometric-interpretation-of-x-y): Geometric interpretation of $|x-y|$\Pageref{geometric-interpretation-of-x-y}
+ [**Remark 2.38**](#geometric-interpretation-of-x): Geometric interpretation of $|x|$\Pageref{geometric-interpretation-of-x}
 
- [**Lemma 2.39**](#lemma-absolute-value)\Pageref{lemma-absolute-value}
+ [**Remark 2.39**](#geometric-interpretation-of-x-y): Geometric interpretation of $|x-y|$\Pageref{geometric-interpretation-of-x-y}
 
- [**Proof**](#proof-of-lemma): Proof of Lemma 2.39\Pageref{proof-of-lemma}
+ [**Lemma 2.40**](#lemma-absolute-value)\Pageref{lemma-absolute-value}
 
- [**Corollary 2.40**](#Corollary-2.40)\Pageref{Corollary-2.40}
+ [**Proof**](#proof-of-lemma): Proof of Lemma 9.24\Pageref{proof-of-lemma}
 
- [**Theorem 2.41**](#theorem-triangle-inequality): Triangle inequality\Pageref{theorem-triangle-inequality}
+ [**Corollary 2.41**](#Corollary-2.41)\Pageref{Corollary-2.41}
 
- [**Remark 2.42**](#geometric-meaning-of-triangle-inequality): Geometric meaning of triangle inequality\Pageref{geometric-meaning-of-triangle-inequality}
+ [**Theorem 2.42**](#theorem-triangle-inequality): Triangle inequality\Pageref{theorem-triangle-inequality}
 
- [**Proof**](#proof-of-theorem-1): Proof of Theorem 2.41\Pageref{proof-of-theorem-1}
+ [**Remark 2.43**](#geometric-meaning-of-triangle-inequality): Geometric meaning of triangle inequality\Pageref{geometric-meaning-of-triangle-inequality}
 
- [**Remark 2.43**](#Remark-2.43)\Pageref{Remark-2.43}
+ [**Proof**](#proof-of-theorem-1): Proof of Theorem 2.42\Pageref{proof-of-theorem-1}
 
- [**Proposition 2.44**](#proposition-easy)\Pageref{proposition-easy}
+ [**Remark 2.44**](#Remark-2.44)\Pageref{Remark-2.44}
 
- [**Proof**](#of-proposition): of Proposition 2.44\Pageref{of-proposition}
+ [**Proposition 2.45**](#proposition-easy)\Pageref{proposition-easy}
 
- [**Axiom 2.45**](#principle-of-induction): Principle of Induction\Pageref{principle-of-induction}
+ [**Proof**](#of-proposition): of Proposition 2.45\Pageref{of-proposition}
+
+ [**Axiom 2.46**](#principle-of-induction): Principle of Induction\Pageref{principle-of-induction}
 
  [**Important**](#Important*-2.7)\Pageref{Important*-2.7}
 
- [**Remark 2.46**](#Remark-2.46)\Pageref{Remark-2.46}
+ [**Remark 2.47**](#Remark-2.47)\Pageref{Remark-2.47}
 
- [**Corollary 2.47**](#principle-of-inducion---alternative-formulation): Principle of Inducion - Alternative formulation\Pageref{principle-of-inducion---alternative-formulation}
+ [**Corollary 2.48**](#principle-of-inducion---alternative-formulation): Principle of Inducion - Alternative formulation\Pageref{principle-of-inducion---alternative-formulation}
 
  [**Proof**](#Proof*-2.8)\Pageref{Proof*-2.8}
 
- [**Example 2.48**](#formula-for-summing-first-n-natural-numbers): Formula for summing first $n$ natural numbers\Pageref{formula-for-summing-first-n-natural-numbers}
+ [**Example 2.49**](#formula-for-summing-first-n-natural-numbers): Formula for summing first $n$ natural numbers\Pageref{formula-for-summing-first-n-natural-numbers}
 
- [**Example 2.49**](#statements-about-sequences-of-numbers): Statements about sequences of numbers\Pageref{statements-about-sequences-of-numbers}
+ [**Example 2.50**](#statements-about-sequences-of-numbers): Statements about sequences of numbers\Pageref{statements-about-sequences-of-numbers}
 
  [**Definition 3.1**](#binary-operation): Binary operation\Pageref{binary-operation}
 
@@ -347,7 +349,7 @@
 
  [**Proposition 4.7**](#proposition-supremum-characterization): Characterization of Supremum\Pageref{proposition-supremum-characterization}
 
- [**Proof**](#proof-of-proposition): Proof of Proposition 4.7\Pageref{proof-of-proposition}
+ [**Proof**](#proof-of-proposition): Proof of Proposition 9.61\Pageref{proof-of-proposition}
 
  [**Proposition 4.8**](#prop-supremum-infimum): Characterization of Infimum\Pageref{prop-supremum-infimum}
 
@@ -415,19 +417,25 @@
 
  [**Example 4.33**](#Example-4.33)\Pageref{Example-4.33}
 
- [**Proposition 4.34**](#proposition-countable-union)\Pageref{proposition-countable-union}
+ [**Example 4.34**](#Example-4.34)\Pageref{Example-4.34}
+
+ [**Example 4.35**](#Example-4.35)\Pageref{Example-4.35}
+
+ [**Example 4.36**](#Example-4.36)\Pageref{Example-4.36}
+
+ [**Proposition 4.37**](#proposition-countable-union)\Pageref{proposition-countable-union}
 
  [**Proof**](#Proof*-4.13)\Pageref{Proof*-4.13}
 
- [**Theorem 4.35**](#theorem-Q-countable): $\mathbb{Q}$ is countable\Pageref{theorem-Q-countable}
+ [**Theorem 4.38**](#theorem-Q-countable): $\mathbb{Q}$ is countable\Pageref{theorem-Q-countable}
 
  [**Proof**](#Proof*-4.14)\Pageref{Proof*-4.14}
 
- [**Theorem 4.36**](#theorem-R-uncountable): $\mathbb{R}$ is uncountable\Pageref{theorem-R-uncountable}
+ [**Theorem 4.39**](#theorem-R-uncountable): $\mathbb{R}$ is uncountable\Pageref{theorem-R-uncountable}
 
  [**Proof**](#Proof*-4.15)\Pageref{Proof*-4.15}
 
- [**Theorem 4.37**](#Theorem-4.37)\Pageref{Theorem-4.37}
+ [**Theorem 4.40**](#Theorem-4.40)\Pageref{Theorem-4.40}
 
  [**Proof**](#Proof*-4.16)\Pageref{Proof*-4.16}
 
@@ -657,9 +665,11 @@
 
  [**Proof**](#Proof*-6.6)\Pageref{Proof*-6.6}
 
+ [**Proof**](#alternative-proof-to-theorem): Alternative proof to Theorem 9.133\Pageref{alternative-proof-to-theorem}
+
  [**Theorem 6.16**](#theorem-uniqueness-limit): Uniqueness of limit\Pageref{theorem-uniqueness-limit}
 
- [**Proof**](#Proof*-6.7)\Pageref{Proof*-6.7}
+ [**Proof**](#Proof*-6.8)\Pageref{Proof*-6.8}
 
  [**Example 6.17**](#Example-6.17)\Pageref{Example-6.17}
 
@@ -667,11 +677,11 @@
 
  [**Theorem 6.19**](#theorem-convergent-bounded)\Pageref{theorem-convergent-bounded}
 
- [**Proof**](#Proof*-6.8)\Pageref{Proof*-6.8}
+ [**Proof**](#Proof*-6.9)\Pageref{Proof*-6.9}
 
  [**Example 6.20**](#Example-6.20)\Pageref{Example-6.20}
 
- [**Warning**](#Warning*-6.9)\Pageref{Warning*-6.9}
+ [**Warning**](#Warning*-6.10)\Pageref{Warning*-6.10}
 
  [**Example 6.21**](#Example-6.21)\Pageref{Example-6.21}
 
@@ -681,25 +691,25 @@
 
  [**Theorem 6.24**](#Theorem-6.24)\Pageref{Theorem-6.24}
 
- [**Proof**](#Proof*-6.10)\Pageref{Proof*-6.10}
+ [**Proof**](#Proof*-6.11)\Pageref{Proof*-6.11}
 
  [**Theorem 6.25**](#Theorem-6.25)\Pageref{Theorem-6.25}
 
- [**Proof**](#Proof*-6.11)\Pageref{Proof*-6.11}
+ [**Proof**](#Proof*-6.12)\Pageref{Proof*-6.12}
 
  [**Theorem 6.26**](#theorem-algebra-limits): Algebra of limits\Pageref{theorem-algebra-limits}
 
- [**Proof**](#Proof*-6.12)\Pageref{Proof*-6.12}
+ [**Proof**](#Proof*-6.13)\Pageref{Proof*-6.13}
 
  [**Example 6.27**](#example-limit-ploynomial)\Pageref{example-limit-ploynomial}
 
- [**Important**](#Important*-6.13)\Pageref{Important*-6.13}
+ [**Important**](#Important*-6.14)\Pageref{Important*-6.14}
 
  [**Example 6.28**](#example-algebra-of-limits-2)\Pageref{example-algebra-of-limits-2}
 
  [**Example 6.29**](#Example-6.29)\Pageref{Example-6.29}
 
- [**Warning**](#Warning*-6.14)\Pageref{Warning*-6.14}
+ [**Warning**](#Warning*-6.15)\Pageref{Warning*-6.15}
 
  [**Example 6.30**](#Example-6.30)\Pageref{Example-6.30}
 
@@ -707,7 +717,7 @@
 
  [**Theorem 6.32**](#theorem-square-root-limit)\Pageref{theorem-square-root-limit}
 
- [**Proof**](#Proof*-6.15)\Pageref{Proof*-6.15}
+ [**Proof**](#Proof*-6.16)\Pageref{Proof*-6.16}
 
  [**Example 6.33**](#Example-6.33)\Pageref{Example-6.33}
 
@@ -715,13 +725,13 @@
 
  [**Theorem 6.35**](#theorem-squeeze): Squeeze theorem\Pageref{theorem-squeeze}
 
- [**Proof**](#Proof*-6.16)\Pageref{Proof*-6.16}
+ [**Proof**](#Proof*-6.17)\Pageref{Proof*-6.17}
 
  [**Example 6.36**](#Example-6.36)\Pageref{Example-6.36}
 
  [**Example 6.37**](#example-squeeze)\Pageref{example-squeeze}
 
- [**Warning**](#Warning*-6.17)\Pageref{Warning*-6.17}
+ [**Warning**](#Warning*-6.18)\Pageref{Warning*-6.18}
 
  [**Example 6.38**](#Example-6.38)\Pageref{Example-6.38}
 
@@ -729,19 +739,19 @@
 
  [**Theorem 6.40**](#theorem-geometric-sequence): Geometric Sequence Test\Pageref{theorem-geometric-sequence}
 
- [**Warning**](#Warning*-6.18)\Pageref{Warning*-6.18}
+ [**Warning**](#Warning*-6.19)\Pageref{Warning*-6.19}
 
  [**Lemma 6.41**](#lemma-bernoulli): Bernoulli’s inequality\Pageref{lemma-bernoulli}
 
- [**Proof**](#Proof*-6.19)\Pageref{Proof*-6.19}
+ [**Proof**](#Proof*-6.20)\Pageref{Proof*-6.20}
 
- [**Proof**](#proof-of-theorem-5): Proof of Theorem 6.40\Pageref{proof-of-theorem-5}
+ [**Proof**](#proof-of-theorem-5): Proof of Theorem 9.156\Pageref{proof-of-theorem-5}
 
  [**Example 6.42**](#Example-6.42)\Pageref{Example-6.42}
 
  [**Theorem 6.43**](#theorem-ratio-test): Ratio Test\Pageref{theorem-ratio-test}
 
- [**Proof**](#Proof*-6.21)\Pageref{Proof*-6.21}
+ [**Proof**](#Proof*-6.22)\Pageref{Proof*-6.22}
 
  [**Example 6.44**](#Example-6.44)\Pageref{Example-6.44}
 
@@ -749,7 +759,7 @@
 
  [**Example 6.46**](#Example-6.46)\Pageref{Example-6.46}
 
- [**Warning**](#Warning*-6.22)\Pageref{Warning*-6.22}
+ [**Warning**](#Warning*-6.23)\Pageref{Warning*-6.23}
 
  [**Remark 6.47**](#Remark-6.47)\Pageref{Remark-6.47}
 
@@ -757,35 +767,45 @@
 
  [**Example 6.49**](#Example-6.49)\Pageref{Example-6.49}
 
- [**Theorem 6.50**](#theorem-monotone-convergence): Monotone Convergence Theorem\Pageref{theorem-monotone-convergence}
+ [**Example 6.50**](#Example-6.50)\Pageref{Example-6.50}
 
- [**Proof**](#Proof*-6.23)\Pageref{Proof*-6.23}
-
- [**Theorem 6.51**](#theorem-euler-number)\Pageref{theorem-euler-number}
+ [**Theorem 6.51**](#theorem-monotone-convergence): Monotone Convergence Theorem\Pageref{theorem-monotone-convergence}
 
  [**Proof**](#Proof*-6.24)\Pageref{Proof*-6.24}
 
- [**Definition 6.52**](#eulers-number): Euler’s Number\Pageref{eulers-number}
-
- [**Theorem 6.53**](#Theorem-6.53)\Pageref{Theorem-6.53}
+ [**Theorem 6.52**](#theorem-euler-number)\Pageref{theorem-euler-number}
 
  [**Proof**](#Proof*-6.25)\Pageref{Proof*-6.25}
 
- [**Theorem 6.54**](#theorem-important-limit-1)\Pageref{theorem-important-limit-1}
+ [**Definition 6.53**](#eulers-number): Euler’s Number\Pageref{eulers-number}
+
+ [**Theorem 6.54**](#Theorem-6.54)\Pageref{Theorem-6.54}
 
  [**Proof**](#Proof*-6.26)\Pageref{Proof*-6.26}
 
- [**Theorem 6.55**](#theorem-important-limit-2)\Pageref{theorem-important-limit-2}
+ [**Theorem 6.55**](#theorem-important-limit-1)\Pageref{theorem-important-limit-1}
 
  [**Proof**](#Proof*-6.27)\Pageref{Proof*-6.27}
 
- [**Warning**](#Warning*-6.28)\Pageref{Warning*-6.28}
+ [**Theorem 6.56**](#theorem-important-limit-2)\Pageref{theorem-important-limit-2}
 
- [**Theorem 6.56**](#theorem-important-limit-3)\Pageref{theorem-important-limit-3}
+ [**Proof**](#Proof*-6.28)\Pageref{Proof*-6.28}
 
- [**Proof**](#Proof*-6.29)\Pageref{Proof*-6.29}
+ [**Warning**](#Warning*-6.29)\Pageref{Warning*-6.29}
 
- [**Example 6.57**](#Example-6.57)\Pageref{Example-6.57}
+ [**Theorem 6.57**](#theorem-important-limit-3)\Pageref{theorem-important-limit-3}
+
+ [**Proof**](#Proof*-6.30)\Pageref{Proof*-6.30}
+
+ [**Example 6.58**](#Example-6.58)\Pageref{Example-6.58}
+
+ [**Example 6.59**](#Example-6.59)\Pageref{Example-6.59}
+
+ [**Example 6.60**](#Example-6.60)\Pageref{Example-6.60}
+
+ [**Example 6.61**](#Example-6.61)\Pageref{Example-6.61}
+
+ [**Example 6.62**](#Example-6.62)\Pageref{Example-6.62}
 
  [**Definition 7.1**](#sequence-of-complex-numbers): Sequence of Complex numbers\Pageref{sequence-of-complex-numbers}
 
@@ -997,112 +1017,396 @@
 
  [**Proof**](#Proof*-9.1)\Pageref{Proof*-9.1}
 
- [**Definition 9.2**](#complex-numbers-3): Complex Numbers\Pageref{complex-numbers-3}
+ [**Definition 9.2**](#Definition-9.2)\Pageref{Definition-9.2}
 
- [**Definition 9.3**](#definition-addition-C): Addition and multiplication in $\mathbb{C}$\Pageref{definition-addition-C}
+ [**Proposition 9.3**](#Proposition-9.3)\Pageref{Proposition-9.3}
 
- [**Example 9.4**](#Example-9.4)\Pageref{Example-9.4}
+ [**Definition 9.4**](#Definition-9.4)\Pageref{Definition-9.4}
 
- [**Proposition 9.5**](#proposition-C-additive-inverse): Additive inverse in $\mathbb{C}$\Pageref{proposition-C-additive-inverse}
+ [**Example 9.5**](#Example-9.5)\Pageref{Example-9.5}
 
- [**Proposition 9.6**](#proposition-C-multiplicative-inverse-bis): Multiplicative inverse in $\mathbb{C}$\Pageref{proposition-C-multiplicative-inverse-bis}
-
- [**Proof**](#Proof*-9.2)\Pageref{Proof*-9.2}
+ [**Definition 9.6**](#Definition-9.6)\Pageref{Definition-9.6}
 
  [**Example 9.7**](#Example-9.7)\Pageref{Example-9.7}
 
- [**Theorem 9.8**](#Theorem-9.8)\Pageref{Theorem-9.8}
+ [**Proposition 9.8**](#de-morgans-laws-1): De Morgan’s Laws\Pageref{de-morgans-laws-1}
 
- [**Example 9.9**](#Example-9.9)\Pageref{Example-9.9}
+ [**Definition 9.9**](#Definition-9.9)\Pageref{Definition-9.9}
 
- [**Definition 9.10**](#complex-conjugate-1): Complex conjugate\Pageref{complex-conjugate-1}
+ [**Example 9.10**](#Example-9.10)\Pageref{Example-9.10}
 
- [**Theorem 9.11**](#Theorem-9.11)\Pageref{Theorem-9.11}
+ [**Definition 9.11**](#Definition-9.11)\Pageref{Definition-9.11}
 
- [**Definition 9.12**](#modulus-1): Modulus\Pageref{modulus-1}
+ [**Definition 9.12**](#Definition-9.12)\Pageref{Definition-9.12}
 
- [**Definition 9.13**](#distance-in-mathbbc-1): Distance in $\mathbb{C}$\Pageref{distance-in-mathbbc-1}
+ [**Definition 9.13**](#equivalence-relation-2): Equivalence relation\Pageref{equivalence-relation-2}
 
- [**Theorem 9.14**](#Theorem-9.14)\Pageref{Theorem-9.14}
+ [**Definition 9.14**](#equivalence-classes-1): Equivalence classes\Pageref{equivalence-classes-1}
 
- [**Example 9.15**](#Example-9.15)\Pageref{Example-9.15}
+ [**Proposition 9.15**](#Proposition-9.15)\Pageref{Proposition-9.15}
 
- [**Theorem 9.16**](#Theorem-9.16)\Pageref{Theorem-9.16}
+ [**Example 9.16**](#equality-is-an-equivalence-relation-1): Equality is an equivalence relation\Pageref{equality-is-an-equivalence-relation-1}
 
- [**Theorem 9.17**](#triangle-inequality-in-mathbbc-1): Triangle inequality in $\mathbb{C}$\Pageref{triangle-inequality-in-mathbbc-1}
+ [**Example 9.17**](#Example-9.17)\Pageref{Example-9.17}
 
- [**Definition 9.18**](#argument-1): Argument\Pageref{argument-1}
+ [**Definition 9.18**](#partial-order-1): Partial order\Pageref{partial-order-1}
 
- [**Example 9.19**](#Example-9.19)\Pageref{Example-9.19}
+ [**Definition 9.19**](#total-order-1): Total order\Pageref{total-order-1}
 
- [**Theorem 9.20**](#theorem-polar-coordinates): Polar coordinates\Pageref{theorem-polar-coordinates}
+ [**Example 9.20**](#set-inclusion-is-a-partial-order-but-not-total-order-1): Set inclusion is a partial order but not total order\Pageref{set-inclusion-is-a-partial-order-but-not-total-order-1}
 
- [**Definition 9.21**](#trigonometric-form-1): Trigonometric form\Pageref{trigonometric-form-1}
+ [**Example 9.21**](#inequality-is-a-total-order-1): Inequality is a total order\Pageref{inequality-is-a-total-order-1}
 
- [**Example 9.22**](#example-trigonometric-form)\Pageref{example-trigonometric-form}
+ [**Definition 9.22**](#absolute-value-2): Absolute value\Pageref{absolute-value-2}
 
- [**Corollary 9.23**](#corollary-arg): Computing $\arg(z)$\Pageref{corollary-arg}
+ [**Proposition 9.23**](#Proposition-9.23)\Pageref{Proposition-9.23}
 
- [**Example 9.24**](#Example-9.24)\Pageref{Example-9.24}
+ [**Lemma 9.24**](#lemma-absolute-value)\Pageref{lemma-absolute-value}
 
- [**Theorem 9.25**](#theorem-euler-identity): Euler’s identity\Pageref{theorem-euler-identity}
+ [**Corollary 9.25**](#Corollary-9.25)\Pageref{Corollary-9.25}
 
- [**Theorem 9.26**](#Theorem-9.26)\Pageref{Theorem-9.26}
+ [**Theorem 9.26**](#theorem-triangle-inequality): Triangle inequality\Pageref{theorem-triangle-inequality}
 
- [**Theorem 9.27**](#Theorem-9.27)\Pageref{Theorem-9.27}
+ [**Proposition 9.27**](#Proposition-9.27)\Pageref{Proposition-9.27}
 
- [**Definition 9.28**](#exponential-form-3): Exponential form\Pageref{exponential-form-3}
+ [**Definition 9.28**](#principle-of-inducion): Principle of Inducion\Pageref{principle-of-inducion}
 
- [**Example 9.29**](#example-exponential-form)\Pageref{example-exponential-form}
+ [**Example 9.29**](#formula-for-summing-first-n-natural-numbers-1): Formula for summing first $n$ natural numbers\Pageref{formula-for-summing-first-n-natural-numbers-1}
 
- [**Remark 9.30**](#periodicity-of-exponential-1): Periodicity of exponential\Pageref{periodicity-of-exponential-1}
+ [**Example 9.30**](#bernoullis-inequality): Bernoulli’s inequality\Pageref{bernoullis-inequality}
 
- [**Proposition 9.31**](#proposition-complex-exponential)\Pageref{proposition-complex-exponential}
+ [**Definition 9.31**](#binary-operation-1): Binary operation\Pageref{binary-operation-1}
 
- [**Example 9.32**](#Example-9.32)\Pageref{Example-9.32}
+ [**Definition 9.32**](#Definition-9.32)\Pageref{Definition-9.32}
 
- [**Definition 9.33**](#complex-exponential-1): Complex exponential\Pageref{complex-exponential-1}
+ [**Example 9.33**](#Example-9.33)\Pageref{Example-9.33}
 
- [**Theorem 9.34**](#Theorem-9.34)\Pageref{Theorem-9.34}
+ [**Definition 9.34**](#field-1): Field\Pageref{field-1}
 
- [**Example 9.35**](#Example-9.35)\Pageref{Example-9.35}
+ [**Theorem 9.35**](#Theorem-9.35)\Pageref{Theorem-9.35}
 
- [**Theorem 9.36**](#theorem-fta): Fundamental theorem of algebra\Pageref{theorem-fta}
+ [**Theorem 9.36**](#Theorem-9.36)\Pageref{Theorem-9.36}
 
- [**Example 9.37**](#Example-9.37)\Pageref{Example-9.37}
+ [**Proposition 9.37**](#uniqueness-of-neutral-elements-and-inverses-1): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses-1}
 
- [**Example 9.38**](#example-degree-4)\Pageref{example-degree-4}
+ [**Proof**](#Proof*-9.2)\Pageref{Proof*-9.2}
 
- [**Definition 9.39**](#Definition-9.39)\Pageref{Definition-9.39}
+ [**Definition 9.38**](#Definition-9.38)\Pageref{Definition-9.38}
 
- [**Example 9.40**](#example-multiplicity)\Pageref{example-multiplicity}
+ [**Theorem 9.39**](#Theorem-9.39)\Pageref{Theorem-9.39}
 
- [**Proposition 9.41**](#proposition-quadratic-formula): Quadratic formula\Pageref{proposition-quadratic-formula}
+ [**Definition 9.40**](#upper-bound-bounded-above-supremum-maximum): Upper bound, bounded above, supremum, maximum\Pageref{upper-bound-bounded-above-supremum-maximum}
 
- [**Example 9.42**](#Example-9.42)\Pageref{Example-9.42}
+ [**Remark 9.41**](#Remark-9.41)\Pageref{Remark-9.41}
 
- [**Proposition 9.43**](#proposition-quadratic-formula-C): Quadratic formula with complex coefficients\Pageref{proposition-quadratic-formula-C}
+ [**Proposition 9.42**](#proposition-max-sup): Relationship between Max and Sup\Pageref{proposition-max-sup}
 
- [**Example 9.44**](#Example-9.44)\Pageref{Example-9.44}
+ [**Definition 9.43**](#upper-bound-bounded-below-infimum-minimum-1): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum-1}
 
- [**Example 9.45**](#Example-9.45)\Pageref{Example-9.45}
+ [**Proposition 9.44**](#Proposition-9.44)\Pageref{Proposition-9.44}
 
- [**Example 9.46**](#Example-9.46)\Pageref{Example-9.46}
+ [**Proposition 9.45**](#Proposition-9.45)\Pageref{Proposition-9.45}
 
- [**Example 9.47**](#Example-9.47)\Pageref{Example-9.47}
+ [**Proposition 9.46**](#proposition-inf-sup): Relationship between sup and inf\Pageref{proposition-inf-sup}
 
- [**Example 9.48**](#Example-9.48)\Pageref{Example-9.48}
+ [**Definition 9.47**](#completeness-2): Completeness\Pageref{completeness-2}
 
- [**Theorem 9.49**](#Theorem-9.49)\Pageref{Theorem-9.49}
+ [**Theorem 9.48**](#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
 
- [**Definition 9.50**](#Definition-9.50)\Pageref{Definition-9.50}
+ [**Proposition 9.49**](#Proposition-9.49)\Pageref{Proposition-9.49}
 
- [**Example 9.51**](#Example-9.51)\Pageref{Example-9.51}
+ [**Definition 9.50**](#definition-R): System of Real Numbers $\mathbb{R}$\Pageref{definition-R}
+
+ [**Definition 9.51**](#inductive-set-1): Inductive set\Pageref{inductive-set-1}
 
  [**Example 9.52**](#Example-9.52)\Pageref{Example-9.52}
 
- [**Theorem 9.53**](#Theorem-9.53)\Pageref{Theorem-9.53}
+ [**Proposition 9.53**](#Proposition-9.53)\Pageref{Proposition-9.53}
 
- [**Example 9.54**](#Example-9.54)\Pageref{Example-9.54}
+ [**Definition 9.54**](#definition-natural-numbers): Set of Natural Numbers\Pageref{definition-natural-numbers}
 
- [**Example 9.55**](#Example-9.55)\Pageref{Example-9.55}
+ [**Proposition 9.55**](#proposition-smallest-inductive): ${\mathbb{N}}_{\mathbb{R}}$ is the smallest inductive subset of $\mathbb{R}$\Pageref{proposition-smallest-inductive}
+
+ [**Theorem 9.56**](#theorem-n-1)\Pageref{theorem-n-1}
+
+ [**Theorem 9.57**](#theorem-archimedean): Archimedean Property\Pageref{theorem-archimedean}
+
+ [**Theorem 9.58**](#theorem-archimedean-alternative): Archimedean Property (Alternative formulation)\Pageref{theorem-archimedean-alternative}
+
+ [**Theorem 9.59**](#theorem-nested): Nested Interval Property\Pageref{theorem-nested}
+
+ [**Example 9.60**](#example-nested-open)\Pageref{example-nested-open}
+
+ [**Proposition 9.61**](#proposition-supremum-characterization): Characterization of Supremum\Pageref{proposition-supremum-characterization}
+
+ [**Proposition 9.62**](#prop-supremum-infimum): Characterization of Infimum\Pageref{prop-supremum-infimum}
+
+ [**Proposition 9.63**](#proposition-interval-inf-sup)\Pageref{proposition-interval-inf-sup}
+
+ [**Corollary 9.64**](#Corollary-9.64)\Pageref{Corollary-9.64}
+
+ [**Corollary 9.65**](#Corollary-9.65)\Pageref{Corollary-9.65}
+
+ [**Proposition 9.66**](#Proposition-9.66)\Pageref{Proposition-9.66}
+
+ [**Proof**](#Proof*-9.3)\Pageref{Proof*-9.3}
+
+ [**Definition 9.67**](#definition-cardinality): Cardinality, Finite, Countable, Uncountable\Pageref{definition-cardinality}
+
+ [**Proposition 9.68**](#proposition-countable-subset)\Pageref{proposition-countable-subset}
+
+ [**Example 9.69**](#Example-9.69)\Pageref{Example-9.69}
+
+ [**Example 9.70**](#Example-9.70)\Pageref{Example-9.70}
+
+ [**Example 9.71**](#Example-9.71)\Pageref{Example-9.71}
+
+ [**Example 9.72**](#Example-9.72)\Pageref{Example-9.72}
+
+ [**Proposition 9.73**](#proposition-countable-union)\Pageref{proposition-countable-union}
+
+ [**Theorem 9.74**](#theorem-Q-countable): $\mathbb{Q}$ is countable\Pageref{theorem-Q-countable}
+
+ [**Theorem 9.75**](#theorem-R-uncountable): $\mathbb{R}$ is uncountable\Pageref{theorem-R-uncountable}
+
+ [**Theorem 9.76**](#Theorem-9.76)\Pageref{Theorem-9.76}
+
+ [**Proof**](#Proof*-9.4)\Pageref{Proof*-9.4}
+
+ [**Definition 9.77**](#complex-numbers-3): Complex Numbers\Pageref{complex-numbers-3}
+
+ [**Definition 9.78**](#definition-addition-C): Addition and multiplication in $\mathbb{C}$\Pageref{definition-addition-C}
+
+ [**Example 9.79**](#Example-9.79)\Pageref{Example-9.79}
+
+ [**Proposition 9.80**](#proposition-C-additive-inverse): Additive inverse in $\mathbb{C}$\Pageref{proposition-C-additive-inverse}
+
+ [**Proposition 9.81**](#proposition-C-multiplicative-inverse-bis): Multiplicative inverse in $\mathbb{C}$\Pageref{proposition-C-multiplicative-inverse-bis}
+
+ [**Proof**](#Proof*-9.5)\Pageref{Proof*-9.5}
+
+ [**Example 9.82**](#Example-9.82)\Pageref{Example-9.82}
+
+ [**Theorem 9.83**](#Theorem-9.83)\Pageref{Theorem-9.83}
+
+ [**Example 9.84**](#Example-9.84)\Pageref{Example-9.84}
+
+ [**Definition 9.85**](#complex-conjugate-1): Complex conjugate\Pageref{complex-conjugate-1}
+
+ [**Theorem 9.86**](#Theorem-9.86)\Pageref{Theorem-9.86}
+
+ [**Definition 9.87**](#modulus-1): Modulus\Pageref{modulus-1}
+
+ [**Definition 9.88**](#distance-in-mathbbc-1): Distance in $\mathbb{C}$\Pageref{distance-in-mathbbc-1}
+
+ [**Theorem 9.89**](#Theorem-9.89)\Pageref{Theorem-9.89}
+
+ [**Example 9.90**](#Example-9.90)\Pageref{Example-9.90}
+
+ [**Theorem 9.91**](#Theorem-9.91)\Pageref{Theorem-9.91}
+
+ [**Theorem 9.92**](#triangle-inequality-in-mathbbc-1): Triangle inequality in $\mathbb{C}$\Pageref{triangle-inequality-in-mathbbc-1}
+
+ [**Definition 9.93**](#argument-1): Argument\Pageref{argument-1}
+
+ [**Example 9.94**](#Example-9.94)\Pageref{Example-9.94}
+
+ [**Theorem 9.95**](#theorem-polar-coordinates): Polar coordinates\Pageref{theorem-polar-coordinates}
+
+ [**Definition 9.96**](#trigonometric-form-1): Trigonometric form\Pageref{trigonometric-form-1}
+
+ [**Example 9.97**](#example-trigonometric-form)\Pageref{example-trigonometric-form}
+
+ [**Corollary 9.98**](#corollary-arg): Computing $\arg(z)$\Pageref{corollary-arg}
+
+ [**Example 9.99**](#Example-9.99)\Pageref{Example-9.99}
+
+ [**Theorem 9.100**](#theorem-euler-identity): Euler’s identity\Pageref{theorem-euler-identity}
+
+ [**Theorem 9.101**](#Theorem-9.101)\Pageref{Theorem-9.101}
+
+ [**Theorem 9.102**](#Theorem-9.102)\Pageref{Theorem-9.102}
+
+ [**Definition 9.103**](#exponential-form-3): Exponential form\Pageref{exponential-form-3}
+
+ [**Example 9.104**](#example-exponential-form)\Pageref{example-exponential-form}
+
+ [**Remark 9.105**](#periodicity-of-exponential-1): Periodicity of exponential\Pageref{periodicity-of-exponential-1}
+
+ [**Proposition 9.106**](#proposition-complex-exponential)\Pageref{proposition-complex-exponential}
+
+ [**Example 9.107**](#Example-9.107)\Pageref{Example-9.107}
+
+ [**Definition 9.108**](#complex-exponential-1): Complex exponential\Pageref{complex-exponential-1}
+
+ [**Theorem 9.109**](#Theorem-9.109)\Pageref{Theorem-9.109}
+
+ [**Example 9.110**](#Example-9.110)\Pageref{Example-9.110}
+
+ [**Theorem 9.111**](#theorem-fta): Fundamental theorem of algebra\Pageref{theorem-fta}
+
+ [**Example 9.112**](#Example-9.112)\Pageref{Example-9.112}
+
+ [**Example 9.113**](#example-degree-4)\Pageref{example-degree-4}
+
+ [**Definition 9.114**](#Definition-9.114)\Pageref{Definition-9.114}
+
+ [**Example 9.115**](#example-multiplicity)\Pageref{example-multiplicity}
+
+ [**Proposition 9.116**](#proposition-quadratic-formula): Quadratic formula\Pageref{proposition-quadratic-formula}
+
+ [**Example 9.117**](#Example-9.117)\Pageref{Example-9.117}
+
+ [**Proposition 9.118**](#proposition-quadratic-formula-C): Quadratic formula with complex coefficients\Pageref{proposition-quadratic-formula-C}
+
+ [**Example 9.119**](#Example-9.119)\Pageref{Example-9.119}
+
+ [**Example 9.120**](#Example-9.120)\Pageref{Example-9.120}
+
+ [**Example 9.121**](#Example-9.121)\Pageref{Example-9.121}
+
+ [**Theorem 9.122**](#Theorem-9.122)\Pageref{Theorem-9.122}
+
+ [**Definition 9.123**](#Definition-9.123)\Pageref{Definition-9.123}
+
+ [**Example 9.124**](#Example-9.124)\Pageref{Example-9.124}
+
+ [**Example 9.125**](#Example-9.125)\Pageref{Example-9.125}
+
+ [**Theorem 9.126**](#Theorem-9.126)\Pageref{Theorem-9.126}
+
+ [**Example 9.127**](#Example-9.127)\Pageref{Example-9.127}
+
+ [**Example 9.128**](#Example-9.128)\Pageref{Example-9.128}
+
+ [**Definition 9.129**](#definition-convergent-sequence): Convergent sequence\Pageref{definition-convergent-sequence}
+
+ [**Theorem 9.130**](#theorem-one-over-np)\Pageref{theorem-one-over-np}
+
+ [**Proof**](#Proof*-9.6)\Pageref{Proof*-9.6}
+
+ [**Example 9.131**](#Example-9.131)\Pageref{Example-9.131}
+
+ [**Definition 9.132**](#divergent-sequence-1): Divergent sequence\Pageref{divergent-sequence-1}
+
+ [**Theorem 9.133**](#theorem-1-minus-n)\Pageref{theorem-1-minus-n}
+
+ [**Proof**](#Proof*-9.7)\Pageref{Proof*-9.7}
+
+ [**Theorem 9.134**](#theorem-uniqueness-limit): Uniqueness of limit\Pageref{theorem-uniqueness-limit}
+
+ [**Definition 9.135**](#definition-bounded-sequence): Bounded sequence\Pageref{definition-bounded-sequence}
+
+ [**Theorem 9.136**](#theorem-convergent-bounded)\Pageref{theorem-convergent-bounded}
+
+ [**Example 9.137**](#Example-9.137)\Pageref{Example-9.137}
+
+ [**Corollary 9.138**](#corollary-convergent-bounded)\Pageref{corollary-convergent-bounded}
+
+ [**Remark 9.139**](#Remark-9.139)\Pageref{Remark-9.139}
+
+ [**Theorem 9.140**](#Theorem-9.140)\Pageref{Theorem-9.140}
+
+ [**Theorem 9.141**](#Theorem-9.141)\Pageref{Theorem-9.141}
+
+ [**Theorem 9.142**](#theorem-algebra-limits): Algebra of limits\Pageref{theorem-algebra-limits}
+
+ [**Example 9.143**](#example-limit-ploynomial)\Pageref{example-limit-ploynomial}
+
+ [**Example 9.144**](#example-algebra-of-limits-2)\Pageref{example-algebra-of-limits-2}
+
+ [**Example 9.145**](#Example-9.145)\Pageref{Example-9.145}
+
+ [**Example 9.146**](#Example-9.146)\Pageref{Example-9.146}
+
+ [**Example 9.147**](#Example-9.147)\Pageref{Example-9.147}
+
+ [**Theorem 9.148**](#theorem-square-root-limit)\Pageref{theorem-square-root-limit}
+
+ [**Example 9.149**](#Example-9.149)\Pageref{Example-9.149}
+
+ [**Example 9.150**](#Example-9.150)\Pageref{Example-9.150}
+
+ [**Theorem 9.151**](#theorem-squeeze): Squeeze theorem\Pageref{theorem-squeeze}
+
+ [**Proof**](#Proof*-9.8)\Pageref{Proof*-9.8}
+
+ [**Example 9.152**](#Example-9.152)\Pageref{Example-9.152}
+
+ [**Example 9.153**](#example-squeeze)\Pageref{example-squeeze}
+
+ [**Warning**](#Warning*-9.9)\Pageref{Warning*-9.9}
+
+ [**Example 9.154**](#Example-9.154)\Pageref{Example-9.154}
+
+ [**Definition 9.155**](#Definition-9.155)\Pageref{Definition-9.155}
+
+ [**Theorem 9.156**](#theorem-geometric-sequence): Geometric Sequence Test\Pageref{theorem-geometric-sequence}
+
+ [**Warning**](#Warning*-9.10)\Pageref{Warning*-9.10}
+
+ [**Lemma 9.157**](#lemma-bernoulli): Bernoulli’s inequality\Pageref{lemma-bernoulli}
+
+ [**Proof**](#Proof*-9.11)\Pageref{Proof*-9.11}
+
+ [**Proof**](#proof-of-theorem-7): Proof of Theorem 9.156\Pageref{proof-of-theorem-7}
+
+ [**Example 9.158**](#Example-9.158)\Pageref{Example-9.158}
+
+ [**Theorem 9.159**](#theorem-ratio-test): Ratio Test\Pageref{theorem-ratio-test}
+
+ [**Proof**](#Proof*-9.13)\Pageref{Proof*-9.13}
+
+ [**Example 9.160**](#Example-9.160)\Pageref{Example-9.160}
+
+ [**Example 9.161**](#Example-9.161)\Pageref{Example-9.161}
+
+ [**Example 9.162**](#Example-9.162)\Pageref{Example-9.162}
+
+ [**Warning**](#Warning*-9.14)\Pageref{Warning*-9.14}
+
+ [**Remark 9.163**](#Remark-9.163)\Pageref{Remark-9.163}
+
+ [**Definition 9.164**](#monotone-sequence-1): Monotone sequence\Pageref{monotone-sequence-1}
+
+ [**Example 9.165**](#Example-9.165)\Pageref{Example-9.165}
+
+ [**Example 9.166**](#Example-9.166)\Pageref{Example-9.166}
+
+ [**Theorem 9.167**](#theorem-monotone-convergence): Monotone Convergence Theorem\Pageref{theorem-monotone-convergence}
+
+ [**Proof**](#Proof*-9.15)\Pageref{Proof*-9.15}
+
+ [**Theorem 9.168**](#theorem-euler-number)\Pageref{theorem-euler-number}
+
+ [**Proof**](#Proof*-9.16)\Pageref{Proof*-9.16}
+
+ [**Definition 9.169**](#eulers-number-1): Euler’s Number\Pageref{eulers-number-1}
+
+ [**Theorem 9.170**](#Theorem-9.170)\Pageref{Theorem-9.170}
+
+ [**Proof**](#Proof*-9.17)\Pageref{Proof*-9.17}
+
+ [**Theorem 9.171**](#theorem-important-limit-1)\Pageref{theorem-important-limit-1}
+
+ [**Proof**](#Proof*-9.18)\Pageref{Proof*-9.18}
+
+ [**Theorem 9.172**](#theorem-important-limit-2)\Pageref{theorem-important-limit-2}
+
+ [**Proof**](#Proof*-9.19)\Pageref{Proof*-9.19}
+
+ [**Warning**](#Warning*-9.20)\Pageref{Warning*-9.20}
+
+ [**Theorem 9.173**](#theorem-important-limit-3)\Pageref{theorem-important-limit-3}
+
+ [**Proof**](#Proof*-9.21)\Pageref{Proof*-9.21}
+
+ [**Example 9.174**](#Example-9.174)\Pageref{Example-9.174}
+
+ [**Example 9.175**](#Example-9.175)\Pageref{Example-9.175}
+
+ [**Example 9.176**](#Example-9.176)\Pageref{Example-9.176}
+
+ [**Example 9.177**](#Example-9.177)\Pageref{Example-9.177}
+
+ [**Example 9.178**](#Example-9.178)\Pageref{Example-9.178}

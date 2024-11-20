@@ -230,9 +230,9 @@ $$
 $$
 :::
 
-
 ::: Example
-Let $K=\{0,1\}$ be a set with binary relation $\circ$ defined by the table
+
+**Question.** Let $K=\{0,1\}$ be a set with binary operation $\circ$ defined by the table
 $$
 \begin{array}{c|cc}
  \circ & 0 & 1 \\ \hline
@@ -240,7 +240,14 @@ $$
  1     & 0 & 0 \\
 \end{array}	
 $$
-In this case $\circ$ is not commutative since 
+
+1. Is $\circ$ commutative? Justify your answer.
+
+2. Is $\circ$ associative? Justify your answer.
+
+**Solution.**
+
+1. We have
 $$
 0 \circ 1 = 1 \, , \quad 1 \circ 0 = 0
 $$
@@ -248,7 +255,9 @@ and therefore
 $$
 0 \circ 1 \neq 1 \circ 0 \,.
 $$
-Moreover $\circ$ is not associative, since 
+showing that $\circ$ is not commutative.
+
+2. We have
 $$
 (0 \circ 1) \circ 1 = 1 \circ 1 = 0 \,,
 $$
@@ -260,6 +269,7 @@ so that
 $$
 (0 \circ 1) \circ 1  \neq 0 \circ (1 \circ 1)\,.
 $$
+Thus, $\circ$ is not associative.
 
 :::
 
@@ -353,7 +363,24 @@ It might be tempting to dismiss the definition of field, and to think that all f
 
 
 ::: Example
-Let $K$ with $+$ and $\cdot$ be as in Example \ref{example-binary-operation}. We can show that $(K,+,\cdot)$ is a field. Indeed we have already shown in Example \ref{example-binary-operation-2} that: 
+
+**Question.** Let $K$ with $+$ and $\cdot$ be as in Example \ref{example-binary-operation}, that is, $K=\{0,1\}$ with operations defined by
+$$
+\begin{array}{c|cc}
+ + & 0 & 1 \\ \hline
+ 0 & 0 & 1 \\
+ 1 & 1 & 0 \\
+\end{array}	
+\qquad \qquad
+\begin{array}{c|cc}
+\cdot & 0 & 1 \\ \hline
+    0 & 0 & 0 \\
+    1 & 0 & 1 \\
+\end{array}
+$$
+Prove that $(K,+,\cdot)$ is a field. 
+
+**Solution.** We have already shown in Example \ref{example-binary-operation-2} that: 
 
 - (A1) and (M1) hold, 
 - (A2) holds with neutral element $0$,
@@ -386,12 +413,13 @@ Thus (AM) holds.
 ### Subtraction and division
 Let $(K,+,\cdot)$ be a field. We define:
 
-- **Subtraction** as the operation $-$ defined by 
+1. **Subtraction** as the operation $-$ defined by 
 $$
 x - y := x + (-y) \,, \quad \forall \, x , y \in K \,,
 $$
 where $-y$ is the additive inverse of $y$.
-- **Division** as the operation $/$ defined by
+
+2. **Division** as the operation $/$ defined by
 $$
 x/y := x \cdot y^{-1}\,, \quad \forall \, x , y \in K \,, \,\, y \neq 0 \,,
 $$
@@ -1287,7 +1315,7 @@ Let $A \subseteq K$. Define
 $$
 - A := \{ - a \divider a \in A \} \,.
 $$
-They holds
+They hold:
 
 1. If $\sup A$ exists, then $\inf A$ exists and
 $$
@@ -2003,14 +2031,18 @@ Note that in the above definition we just used:
 
 ::: Example
 
+**Question.** Prove the following:
 
 1. $\R$ is an inductive set.  
-    
-    > Indeed, we have $1 \in \R$ by axiom (M2). Moreover $(x + 1) \in \R$ for every $x \in \R$, by definition of sum $+$.
 
 2. The set $A=\{0,1\}$ is not an inductive set.  
-    
-    > This is because $1 \in A$, but $(1 + 1) \notin A$, since $1 + 1 \neq 0$.
+
+**Solution.**
+
+1. We have that $1 \in \R$ by axiom (M2). Moreover $(x + 1) \in \R$ for every $x \in \R$, by definition of sum $+$.
+
+2. We have $1 \in A$, but $(1 + 1) \notin A$, since $1 + 1 \neq 0$.
+
 :::
 
 
@@ -2128,7 +2160,7 @@ showing that $x \geq 1$ for all $x \in {\N}_{\R}$.
 
 ::: Notation
 
-We have just shown that all the numebers $x \in {\N}_{\R}$ satisfy
+We have just shown that all the numbers $x \in {\N}_{\R}$ satisfy
 $$
 x \geq 1 \,.
 $$

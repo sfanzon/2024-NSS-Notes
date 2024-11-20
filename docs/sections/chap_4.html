@@ -72,61 +72,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 .Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
 .Proof {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
 }
 .Example {
   --color1: #bce5de;
@@ -136,7 +92,51 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -510,7 +510,7 @@ I_n \supset I_{n+1}\,, \quad \forall \, n \in \mathbb{N}\,.
 <div id="Proof*-3" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>By definition we have <span class="math display">\[
 \bigcap_{n=1}^\infty I_n := \{  x \in \mathbb{R}\, \colon \,x \in I_n \,, \forall \, n \in \mathbb{N}\}  \,.
-\]</span> We want to prove (<a href="#eq-theorem-nested-proof-0" class="quarto-xref"><span>4.5</span></a>). This means we need to find a real number <span class="math inline">\(x\)</span> such that <span id="eq-theorem-nested-proof-1"><span class="math display">\[
+\]</span> We want to prove (<a href="revision.html#eq-theorem-nested-proof-0" class="quarto-xref"><span>A.14</span></a>). This means we need to find a real number <span class="math inline">\(x\)</span> such that <span id="eq-theorem-nested-proof-1"><span class="math display">\[
 x \in I_n \,, \quad  \forall \, n \in \mathbb{N}\,.
 \tag{4.6}\]</span></span><p></p>
 <blockquote class="blockquote">
@@ -532,27 +532,28 @@ x \leq b_n \,.
 x \leq b_n \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> In total we have <span class="math display">\[
 a_n \leq x \leq b_n \,, \quad \forall \, n \in \mathbb{N}\,,
-\]</span> showing that <span class="math inline">\(x\)</span> satisfies (<a href="#eq-theorem-nested-proof-1" class="quarto-xref"><span>4.6</span></a>). Therefore (<a href="#eq-theorem-nested-proof-0" class="quarto-xref"><span>4.5</span></a>) holds and the proof is concluded.</p>
+\]</span> showing that <span class="math inline">\(x\)</span> satisfies (<a href="#eq-theorem-nested-proof-1" class="quarto-xref"><span>4.6</span></a>). Therefore (<a href="revision.html#eq-theorem-nested-proof-0" class="quarto-xref"><span>A.14</span></a>) holds and the proof is concluded.</p>
 </div></details>
 </div>
 <div id="Important*-4" class="Important">
-<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>The assumption that <span class="math inline">\(I_n\)</span> is <strong>closed</strong> is crucial in Theorem <a href="chap_4.html#theorem-nested">5</a>. Without such assumption the thesis of Theorem <a href="chap_4.html#theorem-nested">5</a> does not hold in general, as seen in Example <a href="chap_4.html#example-nested-open">6</a> below.<p></p>
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>The assumption that <span class="math inline">\(I_n\)</span> is <strong>closed</strong> is crucial in Theorem <a href="revision.html#theorem-nested">59</a>. Without such assumption the thesis of Theorem <a href="revision.html#theorem-nested">59</a> does not hold in general, as seen in Example <a href="revision.html#example-nested-open">60</a> below.<p></p>
 </div></details>
 </div>
 <div id="example-nested-open" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 6</strong></summary><div>Consider the <strong>open</strong> intervals <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 6</strong></summary><div><strong>Question.</strong> Consider the <strong>open</strong> intervals <span class="math display">\[
 I_n := \left( 0, \frac1n \right) \,.
 \]</span> These are clearly nested <span class="math display">\[
 I_n \supset I_{n+1}\,, \quad \forall \, n \in \mathbb{N}\,.
-\]</span> For this choice of <span class="math inline">\(I_n\)</span> we have <span id="eq-example-nested-2"><span class="math display">\[
+\]</span> Prove that <span id="eq-example-nested-2"><span class="math display">\[
 \bigcap_{n=1}^\infty I_n = \emptyset \,.
-\tag{4.7}\]</span></span> Indeed, suppose by contradiction that the intersection is non-empty. Then there exists <span class="math inline">\(x \in \mathbb{N}\)</span> such that <span class="math display">\[
+\tag{4.7}\]</span></span><p></p>
+<p><strong>Solution.</strong> Suppose by contradiction that the intersection is non-empty. Then there exists <span class="math inline">\(x \in \mathbb{N}\)</span> such that <span class="math display">\[
 x \in I_n \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> By definition of <span class="math inline">\(I_n\)</span> the above reads <span id="eq-example-nested"><span class="math display">\[
 0 &lt; x &lt; \frac1n  \,, \quad \forall \, n \in \mathbb{N}\,.
-\tag{4.8}\]</span></span> Since <span class="math inline">\(x&gt;0\)</span>, by the Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 2, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+\tag{4.8}\]</span></span> Since <span class="math inline">\(x&gt;0\)</span>, by the Archimedean Property in Theorem <a href="revision.html#theorem-archimedean">57</a> Point 2, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
 0 &lt; \frac{1}{n_0} &lt; x \,.
-\]</span> The above contradicts (<a href="#eq-example-nested" class="quarto-xref"><span>4.8</span></a>). Therefore (<a href="#eq-example-nested-2" class="quarto-xref"><span>4.7</span></a>) holds.<p></p>
+\]</span> The above contradicts (<a href="revision.html#eq-example-nested" class="quarto-xref"><span>A.16</span></a>). Therefore (<a href="revision.html#eq-example-nested-2" class="quarto-xref"><span>A.15</span></a>) holds.</p>
 </div></details>
 </div>
 </section>
@@ -580,8 +581,8 @@ Figure&nbsp;4.4: Let <span class="math inline">\(s = \sup A\)</span>. Then for e
 </figcaption>
 </figure>
 </div>
-<div id="proof-of-proposition" class="Proof" title="Proof of Proposition 7">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Proposition 7</summary><div><em>Step 1</em>. Assume that <span class="math display">\[
+<div id="proof-of-proposition" class="Proof" title="Proof of Proposition 61">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Proposition 61</summary><div><em>Step 1</em>. Assume that <span class="math display">\[
 s = \sup A \,.
 \]</span> Let <span class="math inline">\(\varepsilon&gt;0\)</span> be arbitrary. We clearly have that <span id="eq-proof-sup-alt-1"><span class="math display">\[
 s - \varepsilon&lt; s \,.
@@ -590,7 +591,7 @@ s \leq (s - \varepsilon)\,,
 \]</span> since <span class="math inline">\(s\)</span> is the smallest upper bound. The above contradicts (<a href="#eq-proof-sup-alt-1" class="quarto-xref"><span>4.9</span></a>), and therefore <span class="math inline">\((s-\varepsilon)\)</span> is not an upper bound for <span class="math inline">\(A\)</span>. Hence there exists some <span class="math inline">\(x \in A\)</span> such that <span class="math display">\[
 s - \varepsilon&lt; x  \, ,
 \]</span> concluding.<p></p>
-<p><em>Step 2</em>. Assume that Point 2 in the statement of Proposition <a href="chap_4.html#proposition-supremum-characterization">7</a> holds. By assumption we have that <span class="math inline">\(s\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Suppose by contradiction that <span class="math display">\[
+<p><em>Step 2</em>. Assume that Point 2 in the statement of Proposition <a href="revision.html#proposition-supremum-characterization">61</a> holds. By assumption we have that <span class="math inline">\(s\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Suppose by contradiction that <span class="math display">\[
 s \neq \sup A \,.
 \]</span> This is equivalent to the statement <span id="eq-proof-sup-alt-2"><span class="math display">\[
 s \, \mbox{ is not the smallest upper bound of } \, A.
@@ -605,7 +606,7 @@ s - s + b &lt; x \quad \implies \quad b &lt; x \,.
 \]</span> Since <span class="math inline">\(b\)</span> is an upper bound for <span class="math inline">\(A\)</span> and <span class="math inline">\(x \in A\)</span>, the above is a contradiction. Therefore (<a href="#eq-proof-sup-alt-2" class="quarto-xref"><span>4.10</span></a>) is false, and <span class="math inline">\(s\)</span> is the smallest upper bound of <span class="math inline">\(A\)</span>. Thus <span class="math inline">\(s = \sup A\)</span>.</p>
 </div></details>
 </div>
-<p>The analogue of Proposition <a href="chap_4.html#proposition-supremum-characterization">7</a> is as follows. The proof is left as an exercise.</p>
+<p>The analogue of Proposition <a href="revision.html#proposition-supremum-characterization">61</a> is as follows. The proof is left as an exercise.</p>
 <div id="prop-supremum-infimum" class="Proposition" title="Characterization of Infimum">
 <details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 8: </strong>Characterization of Infimum</summary><div>
 <p>Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span> be a non-empty set. Suppose that <span class="math inline">\(i \in \mathbb{R}\)</span> is a lower bound for <span class="math inline">\(A\)</span>. They are equivalent:</p>
@@ -617,7 +618,7 @@ x &lt; i + \varepsilon\,.
 </ol>
 </div></details>
 </div>
-<p>A sketch of the characterization in Proposition <a href="chap_4.html#prop-supremum-infimum">8</a> can be found in <a href="#fig-alternative-inf" class="quarto-xref">Figure&nbsp;<span>4.5</span></a> below.</p>
+<p>A sketch of the characterization in Proposition <a href="revision.html#prop-supremum-infimum">62</a> can be found in <a href="#fig-alternative-inf" class="quarto-xref">Figure&nbsp;<span>4.5</span></a> below.</p>
 <div id="fig-alternative-inf" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-alternative-inf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -701,7 +702,7 @@ A:= (a,b) = \{ x \in \mathbb{R}\, \colon \,a &lt; x &lt; b \}\,.
 \min A = \inf A \,.
 \]</span> Since <span class="math display">\[
 \inf A = a\,,
-\]</span> by Proposition <a href="chap_4.html#proposition-interval-inf-sup">9</a>, we would obtain that <span class="math display">\[
+\]</span> by Proposition <a href="revision.html#proposition-interval-inf-sup">63</a>, we would obtain that <span class="math display">\[
 \min A = a \,.
 \]</span> As <span class="math inline">\(\min A \in A\)</span> by definition, we infer <span class="math inline">\(a \in A\)</span>. This is contradiction. Then <span class="math inline">\(\min A\)</span> does not exist.<p></p>
 <p>The proof that <span class="math inline">\(\max A\)</span> does not exist is similar, and is left as an exercise.</p>
@@ -746,7 +747,7 @@ A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
 </ul>
 <p>As <span class="math inline">\(\varepsilon&gt;0\)</span>, by the Archimedean Property there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
 0 &lt; \frac{1}{n_0} &lt; \varepsilon\,.
-\]</span> This contradicts (<a href="#eq-lower-bound-1-n" class="quarto-xref"><span>4.13</span></a>). Thus <span class="math inline">\(0\)</span> is the largest lower bound of <span class="math inline">\(A\)</span>, that is, <span class="math inline">\(0 = \inf A\)</span>.</p>
+\]</span> This contradicts (<a href="revision.html#eq-lower-bound-1-n" class="quarto-xref"><span>A.17</span></a>). Thus <span class="math inline">\(0\)</span> is the largest lower bound of <span class="math inline">\(A\)</span>, that is, <span class="math inline">\(0 = \inf A\)</span>.</p>
 <p><em>Part 3.</em> We have that <span class="math inline">\(\min A\)</span> does not exist. Indeed suppose by contradiction that <span class="math inline">\(\min A\)</span> exists. Then <span class="math display">\[
 \min A = \inf A \,.
 \]</span> As <span class="math inline">\(\inf A = 0\)</span> by Part 2, we conclude <span class="math inline">\(\min A = 0\)</span>. As <span class="math inline">\(\min A \in A\)</span>, we obtain <span class="math inline">\(0 \in A\)</span>, which is a contradiction.</p>
@@ -841,7 +842,7 @@ L_{n_0}^k &lt; \frac{k}{n_0} \, (\alpha + 1)^{k-1} + \alpha^k \,.
 \frac{k}{n_0} \, (\alpha + 1)^{k-1} + \alpha^k  &lt; x \,,
 \]</span> and find that the above is satisfied for <span id="eq-existence-root-proof-6"><span class="math display">\[
 n_0 &gt; \frac{ k (\alpha + 1)^{k-1} }{ x - \alpha^k } \,.
-\tag{4.20}\]</span></span> Notice that the RHS in (<a href="#eq-existence-root-proof-6" class="quarto-xref"><span>4.20</span></a>) is a positive real number, since <span class="math inline">\(\alpha^k &lt; x\)</span> by assumption. Therefore, by the Archimedean Property of Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> satisfying (<a href="#eq-existence-root-proof-6" class="quarto-xref"><span>4.20</span></a>).<br>
+\tag{4.20}\]</span></span> Notice that the RHS in (<a href="#eq-existence-root-proof-6" class="quarto-xref"><span>4.20</span></a>) is a positive real number, since <span class="math inline">\(\alpha^k &lt; x\)</span> by assumption. Therefore, by the Archimedean Property of Theorem <a href="revision.html#theorem-archimedean">57</a> Point 1, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> satisfying (<a href="#eq-existence-root-proof-6" class="quarto-xref"><span>4.20</span></a>).<br>
 We have therefore shown the existence of <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
 \alpha &lt; L_{n_0}  \,, \quad  L_{n_0}^k &lt; x \,.
 \]</span> The above says that <span class="math inline">\(L_{n_0} \in A\)</span> and that <span class="math display">\[
@@ -878,7 +879,7 @@ L_{n_0}^k &gt; \alpha^k - \frac{k}{n_0} \, \alpha^{k-1}  \,.
 \alpha^k - \frac{k}{n_0} \, \alpha^{k-1} &gt; x \,,
 \]</span> and find that the above is satisfied for <span id="eq-existence-root-proof-6bis"><span class="math display">\[
 n_0 &gt; \frac{ k \alpha^{k-1} }{ \alpha^k - x} \,.
-\tag{4.23}\]</span></span> Notice that the RHS in (<a href="#eq-existence-root-proof-6bis" class="quarto-xref"><span>4.23</span></a>) is a positive real number, since <span class="math inline">\(\alpha^k &gt; x\)</span> by assumption. Therefore, by the Archimedean Property of Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> satisfying (<a href="#eq-existence-root-proof-6bis" class="quarto-xref"><span>4.23</span></a>).<br>
+\tag{4.23}\]</span></span> Notice that the RHS in (<a href="#eq-existence-root-proof-6bis" class="quarto-xref"><span>4.23</span></a>) is a positive real number, since <span class="math inline">\(\alpha^k &gt; x\)</span> by assumption. Therefore, by the Archimedean Property of Theorem <a href="revision.html#theorem-archimedean">57</a> Point 1, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> satisfying (<a href="#eq-existence-root-proof-6bis" class="quarto-xref"><span>4.23</span></a>).<br>
 We have therefore shown the existence of <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
 L_{n_0} &lt; \alpha \,, \quad  L_{n_0}^k &gt; x \,.
 \]</span> Condition <span class="math inline">\(L_{n_0}^k &gt; x\)</span> says that <span class="math inline">\(L_{n_0}\)</span> is an upper bound for <span class="math inline">\(A\)</span>. At the same time it holds <span class="math display">\[
@@ -941,7 +942,7 @@ x &lt; q &lt; y \,.
 \tag{4.24}\]</span></span> By definition of <span class="math inline">\(\mathbb{Q}\)</span>, we have that <span class="math inline">\(q\)</span> has to be of the form <span class="math inline">\(q=m/n\)</span> for <span class="math inline">\(m \in \mathbb{Z}\)</span> and <span class="math inline">\(n \in \mathbb{N}\)</span>. Therefore (<a href="#eq-proof-density-1" class="quarto-xref"><span>4.24</span></a>) is equivalent to finding <span class="math inline">\(m \in \mathbb{Z}\)</span> and <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span id="eq-proof-density-2"><span class="math display">\[
 x &lt; \frac{m}{n} &lt; y \,.
 \tag{4.25}\]</span></span> The idea is to proceed as in <a href="#fig-density-proof" class="quarto-xref">Figure&nbsp;<span>4.6</span></a>: We take <span class="math inline">\(n\)</span> such that <span class="math inline">\(1/n\)</span> is small enough, so that we can make <span class="math inline">\(m\)</span> <em>jumps</em> of size <span class="math inline">\(1/n\)</span> and end up between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.<br>
-To this end, note that <span class="math inline">\(y - x &gt;0\)</span> by assumption. By the Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 2, there exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span id="eq-proof-density-3"><span class="math display">\[
+To this end, note that <span class="math inline">\(y - x &gt;0\)</span> by assumption. By the Archimedean Property in Theorem <a href="revision.html#theorem-archimedean">57</a> Point 2, there exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span id="eq-proof-density-3"><span class="math display">\[
 \frac{1}{n} &lt; y - x \,.
 \tag{4.26}\]</span></span> Now, we would like to find <span class="math inline">\(m \in \mathbb{Z}\)</span> such that <span class="math display">\[
 x &lt; \frac{m}{n} \,.
@@ -953,7 +954,7 @@ x &lt; \frac{m}{n} \,.
 <blockquote class="blockquote">
 <p>Why does such <span class="math inline">\(m\)</span> exist? The inequality in (<a href="#eq-proof-density-4" class="quarto-xref"><span>4.27</span></a>) is equivalent to <span class="math display">\[
 m-1 \leq nx &lt; m \,.
-\]</span> As <span class="math inline">\(nx&gt;0\)</span>, by Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(m \in \mathbb{Z}\)</span> such that <span class="math display">\[
+\]</span> As <span class="math inline">\(nx&gt;0\)</span>, by Archimedean Property in Theorem <a href="revision.html#theorem-archimedean">57</a> Point 1, there exists <span class="math inline">\(m \in \mathbb{Z}\)</span> such that <span class="math display">\[
 nx &lt; m
 \]</span> We can then choose <span class="math inline">\(m'\)</span> to be the smallest element in <span class="math inline">\(\mathbb{Z}\)</span> such that <span id="eq-proof-density-4-bis"><span class="math display">\[
 nx &lt; m' \,.
@@ -1035,7 +1036,6 @@ f(x)=f(y) \quad \implies \quad x = y \,.
 <li>Surjective if every element in <span class="math inline">\(Y\)</span> has at least one element in <span class="math inline">\(X\)</span> associated via <span class="math inline">\(f\)</span>.</li>
 <li>Bijective if to each element in <span class="math inline">\(X\)</span> we associate one and only one element in <span class="math inline">\(Y\)</span> via <span class="math inline">\(f\)</span>.</li>
 </ol>
-<p>:::</p>
 <div id="injectivity" class="Example" title="Injectivity">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 22: </strong>Injectivity</summary><div>
 <p>Consider the sets <span class="math display">\[
@@ -1185,7 +1185,7 @@ X = \{ x_n \, \colon \,n \in \mathbb{N}\} \,, \quad x_n := f(n)
 <li><p><span class="math inline">\(X\)</span> is uncountable if it <span class="math inline">\(X\)</span> cannot be listed.</p></li>
 </ol>
 <div id="Remark-30" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 30</strong></summary><div>The functions in Definition <a href="chap_4.html#definition-cardinality">29</a> are bijections. Therefore they are invertible, and points 1 and 2 are equivalent to requesting there exist bijections <span class="math display">\[
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 30</strong></summary><div>The functions in Definition <a href="revision.html#definition-cardinality">67</a> are bijections. Therefore they are invertible, and points 1 and 2 are equivalent to requesting there exist bijections <span class="math display">\[
 f \colon X \to \{1,2,\ldots, n \}  \,, \qquad f \colon X \to \mathbb{N}\,,
 \]</span> respectively.<p></p>
 </div></details>
@@ -1243,25 +1243,39 @@ g \colon \mathbb{N}\to A \,.
 </div></details>
 </div>
 <div id="Example-33" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 33</strong></summary><div>
-<ol type="1">
-<li><p>Let <span class="math inline">\(X = \{a,b,c\}\)</span> and <span class="math inline">\(Y=\{ 1,2,3\}\)</span>. The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 33</strong></summary><div><strong>Question.</strong> Prove that <span class="math inline">\(X = \{a,b,c\}\)</span> is finite.<p></p>
+<p><strong>Solution.</strong> Set <span class="math inline">\(Y=\{ 1,2,3\}\)</span>. The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
 f(1)=a \,, \quad f(2) = b \,, \quad f(3) = c \,,
-\]</span> is bijective. Therefore <span class="math inline">\(X\)</span> is finite, with <span class="math inline">\(|X| = 3\)</span>.</p></li>
-<li><p>Let <span class="math inline">\(X = \mathbb{N}\)</span>. The function <span class="math inline">\(f \colon X \to \mathbb{N}\)</span> defined by <span class="math display">\[
+\]</span> is bijective. Therefore <span class="math inline">\(X\)</span> is finite, with <span class="math inline">\(|X| = 3\)</span>.</p>
+</div></details>
+</div>
+<div id="Example-34" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 34</strong></summary><div><strong>Question.</strong> Prove that the set of natural numbers <span class="math inline">\(\mathbb{N}\)</span> is countable.<p></p>
+<p><strong>Solution.</strong> The function <span class="math inline">\(f \colon X \to \mathbb{N}\)</span> defined by <span class="math display">\[
 f(n):=n \,,
-\]</span> is bijective. Therefore <span class="math inline">\(X = \mathbb{N}\)</span> is countable.</p></li>
-<li><p>Let <span class="math inline">\(X\)</span> be the set of even numbers <span class="math display">\[
+\]</span> is bijective. Therefore <span class="math inline">\(X = \mathbb{N}\)</span> is countable.</p>
+</div></details>
+</div>
+<div id="Example-35" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 35</strong></summary><div><strong>Question.</strong> Let <span class="math inline">\(X\)</span> be the set of even numbers <span class="math display">\[
 X = \{ 2n \, \colon \,n \in \mathbb{N}\} \,.
-\]</span> Define the map <span class="math inline">\(f \colon \mathbb{N}\to X\)</span> by <span class="math display">\[
+\]</span> Prove that <span class="math inline">\(X\)</span> is countable.<p></p>
+<p><strong>Solution.</strong> Define the map <span class="math inline">\(f \colon \mathbb{N}\to X\)</span> by <span class="math display">\[
 f(n):= 2n \,.
 \]</span> We have that:</p>
-<ul>
-<li><span class="math inline">\(f\)</span> is injective: <span class="math inline">\(f(m)=f(k)\)</span> implies that <span class="math inline">\(2m=2k\)</span>, which implies <span class="math inline">\(m=k\)</span>.</li>
-<li><span class="math inline">\(f\)</span> is surjective: This is trivially true by definition of <span class="math inline">\(X\)</span>.</li>
-</ul>
-<p>Therefore <span class="math inline">\(f\)</span> is bijective, showing that <span class="math inline">\(X\)</span> is countable and <span class="math inline">\(|X|=|\mathbb{N}|\)</span>.</p></li>
-<li><p>Let <span class="math inline">\(X = \mathbb{Z}\)</span> the set of integers. Define <span class="math inline">\(f \colon \mathbb{N}\to \mathbb{Z}\)</span> by <span class="math display">\[
+<ol type="1">
+<li><p><span class="math inline">\(f\)</span> is injective, because <span class="math display">\[
+f(m)=f(k) \, \implies \, 2m=2k \,
+\quad \, m=k \,.
+\]</span></p></li>
+<li><p><span class="math inline">\(f\)</span> is surjective: Suppose that <span class="math inline">\(m \in X\)</span>. By definition of <span class="math inline">\(X\)</span>, there exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math inline">\(m = 2n\)</span>. Therefore, <span class="math inline">\(f(n) = m\)</span>.</p></li>
+</ol>
+<p>We have shown that <span class="math inline">\(f\)</span> is bijective. Thus, <span class="math inline">\(X\)</span> is countable.</p>
+</div></details>
+</div>
+<div id="Example-36" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 36</strong></summary><div><strong>Question.</strong> Prove that the set of integers <span class="math inline">\(\mathbb{Z}\)</span> is countable.<p></p>
+<p><strong>Solution.</strong> Define <span class="math inline">\(f \colon \mathbb{N}\to \mathbb{Z}\)</span> by <span class="math display">\[
 f(n):=
 \begin{cases}
 \dfrac{n}{2}  &amp; \,\, \mbox{ if } \, n \, \mbox{ even }  \\
@@ -1271,7 +1285,7 @@ f(n):=
 f(0) &amp; = 0 \,, \quad f(1) = -1 \,, \quad f(2) = 1 \,, \quad f(3) = -2 \,, \\
 f(4) &amp; = 2 \,, \quad f(5) = -3 \,, \quad f(6) = 3 \,, \quad f(7) = -4 \,.
 \end{align*}\]</span> We have:</p>
-<ul>
+<ol type="1">
 <li><p><span class="math inline">\(f\)</span> is injective: Indeed, suppose that <span class="math inline">\(m \neq n\)</span>. If <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> are both even or both odd we have, respectively <span class="math display">\[\begin{align*}
 f(m) = \frac{m}{2} &amp; \neq \frac{n}{2} = f(n)  \\
 f(m) =  -\frac{m+1}{2} &amp; \neq  - \frac{n+1}{2} = f(n) \,.
@@ -1283,16 +1297,13 @@ f(m) = f(2z) = z \,.
 \]</span> If instead <span class="math inline">\(z &lt; 0\)</span>, then <span class="math inline">\(m := -2z -1\)</span> belongs to <span class="math inline">\(\mathbb{N}\)</span>, is odd, and <span class="math display">\[
 f(m) = f(-2z-1) = z \,.
 \]</span></p></li>
-</ul>
-<p>Therefore <span class="math inline">\(f\)</span> is bijective, showing that <span class="math inline">\(\mathbb{Z}\)</span> is countable and <span class="math display">\[
-|\mathbb{Z}| =| \mathbb{N}| \,.
-\]</span></p></li>
 </ol>
+<p>Therefore <span class="math inline">\(f\)</span> is bijective, showing that <span class="math inline">\(\mathbb{Z}\)</span> is countable.</p>
 </div></details>
 </div>
 <p>We have seen that the sets <span class="math inline">\(\mathbb{N}\)</span> and <span class="math inline">\(\mathbb{Z}\)</span> are countable. What about <span class="math inline">\(\mathbb{Q}\)</span>? To study this case, we need the following result.</p>
 <div id="proposition-countable-union" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 34</strong></summary><div>Let the set <span class="math inline">\(A_n\)</span> be countable for all <span class="math inline">\(n \in \mathbb{N}\)</span>. Define <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 37</strong></summary><div>Let the set <span class="math inline">\(A_n\)</span> be countable for all <span class="math inline">\(n \in \mathbb{N}\)</span>. Define <span class="math display">\[
 A = \bigcup_{n \in \mathbb{N}} \, A_n \, .
 \]</span> Then <span class="math inline">\(A\)</span> is countable.<p></p>
 </div></details>
@@ -1317,7 +1328,7 @@ Figure&nbsp;4.7: The i-th row contains all the elements <span class="math inline
 </figure>
 </div>
 <div id="theorem-Q-countable" class="Theorem" title="\mathbb{Q} is countable">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 35: </strong><span class="math inline">\(\mathbb{Q}\)</span> is countable</summary><div>The set of rational numbers <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 38: </strong><span class="math inline">\(\mathbb{Q}\)</span> is countable</summary><div>The set of rational numbers <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
 </div></details>
 </div>
 <div id="Proof*-14" class="Proof">
@@ -1327,16 +1338,16 @@ L_i := \left\{ \frac{m}{i}  \, \colon \,m \in \mathbb{Z}\right\} \,.
 f \left(\frac{m}{i}\right) := m
 \]</span> is a bijection. As <span class="math inline">\(\mathbb{Z}\)</span> is countable, we deduce that <span class="math inline">\(L_i\)</span> is countable. Therefore the set <span class="math inline">\(L\)</span> defined by <span class="math display">\[
 L:= \bigcup_{i \in \mathbb{N}} \, L_i
-\]</span> is countable by Proposition <a href="chap_4.html#proposition-countable-union">34</a>. Clearly, we have <span class="math display">\[
+\]</span> is countable by Proposition <a href="revision.html#proposition-countable-union">73</a>. Clearly, we have <span class="math display">\[
 \mathbb{Q}\subseteq L \,.
-\]</span> Since <span class="math inline">\(L\)</span> is countable, and <span class="math inline">\(\mathbb{Q}\)</span> is not finite, by Proposition <a href="chap_4.html#proposition-countable-subset">32</a> we conclude that <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
+\]</span> Since <span class="math inline">\(L\)</span> is countable, and <span class="math inline">\(\mathbb{Q}\)</span> is not finite, by Proposition <a href="revision.html#proposition-countable-subset">68</a> we conclude that <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
 </div></details>
 </div>
 <p>We have proven that the sets <span class="math display">\[
 \mathbb{N}\,, \quad \mathbb{Z}\,, \quad \mathbb{Q}\,,
 \]</span> are all countable. What about <span class="math inline">\(\mathbb{R}\)</span>?</p>
 <div id="theorem-R-uncountable" class="Theorem" title="\mathbb{R} is uncountable">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 36: </strong><span class="math inline">\(\mathbb{R}\)</span> is uncountable</summary><div>The set of Real Numbers <span class="math inline">\(\mathbb{R}\)</span> is <strong>uncountable</strong>.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 39: </strong><span class="math inline">\(\mathbb{R}\)</span> is uncountable</summary><div>The set of Real Numbers <span class="math inline">\(\mathbb{R}\)</span> is <strong>uncountable</strong>.<p></p>
 </div></details>
 </div>
 <div id="Proof*-15" class="Proof">
@@ -1359,7 +1370,7 @@ I_{n+1} \subseteq I_n \,, \quad  x_n \notin I_n \,,
 x_k \notin \bigcap_{n =1}^\infty \, I_n \,, \quad \forall \, k \in \mathbb{N}\,.
 \]</span> As the points <span class="math inline">\(x_k\)</span> are all the elements of <span class="math inline">\(\mathbb{R}\)</span>, we conclude that <span class="math display">\[
 \bigcap_{n =1}^\infty \, I_n = \emptyset \,.
-\]</span> However, since each <span class="math inline">\(I_n\)</span> is closed, the Nested Interval Property of Theorem <a href="chap_4.html#theorem-nested">5</a> implies that <span class="math display">\[
+\]</span> However, since each <span class="math inline">\(I_n\)</span> is closed, the Nested Interval Property of Theorem <a href="revision.html#theorem-nested">59</a> implies that <span class="math display">\[
 \bigcap_{n =1}^\infty \, I_n \neq \emptyset \,,
 \]</span> yielding a contradiction. Therefore <span class="math inline">\(\mathbb{R}\)</span> is uncountable.</p>
 </div></details>
@@ -1375,16 +1386,16 @@ Figure&nbsp;4.8: The intervals <span class="math inline">\(I_n\)</span> are nest
 </figure>
 </div>
 <p>As a corollary we obtain that also the irrational numbers are uncountable.</p>
-<div id="Theorem-37" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 37</strong></summary><div>The set of irrational numbers <span class="math display">\[
+<div id="Theorem-40" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 40</strong></summary><div>The set of irrational numbers <span class="math display">\[
 \mathcal{I}:=\mathbb{R}\smallsetminus \mathbb{Q}
 \]</span> is uncountable.<p></p>
 </div></details>
 </div>
 <div id="Proof*-16" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>In Theorems <a href="chap_4.html#theorem-Q-countable">35</a>, <a href="chap_4.html#theorem-R-uncountable">36</a> we have shown that <span class="math inline">\(\mathbb{R}\)</span> in uncountable and <span class="math inline">\(\mathbb{Q}\)</span> is countable. Suppose by contradiction that <span class="math inline">\(\mathcal{I}\)</span> is countable. Then <span class="math display">\[
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>In Theorems <a href="chap_4.html#theorem-Q-countable">38</a>, <a href="chap_4.html#theorem-R-uncountable">39</a> we have shown that <span class="math inline">\(\mathbb{R}\)</span> in uncountable and <span class="math inline">\(\mathbb{Q}\)</span> is countable. Suppose by contradiction that <span class="math inline">\(\mathcal{I}\)</span> is countable. Then <span class="math display">\[
 \mathbb{Q}\cup \mathcal{I}
-\]</span> is countable by Proposition <a href="chap_4.html#proposition-countable-union">34</a>, being union of countable sets. Since by definition <span class="math display">\[
+\]</span> is countable by Proposition <a href="revision.html#proposition-countable-union">73</a>, being union of countable sets. Since by definition <span class="math display">\[
 \mathbb{R}= \mathbb{Q}\cup \mathcal{I} \,,
 \]</span> we conclude that <span class="math inline">\(\mathbb{R}\)</span> is countable. Contradiction.<p></p>
 </div></details>

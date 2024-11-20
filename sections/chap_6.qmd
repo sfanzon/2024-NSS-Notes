@@ -163,9 +163,9 @@ Saying that $|x|$ is *small* is not very precise. Let us now give the formal def
 ::: Definition 
 ### Convergent sequence  {#definition-convergent-sequence}
 
-We say that a sequence $\left(a_{n}\right)_{n \in \N}$ in $\mathbb{R}$ **converges** to $a \in \mathbb{R}$, or equivalently has limit $a$, denoted by
+The real sequence $(a_n)$ **converges** to $a$, or equivalently has limit $a$, denoted by
 $$
-\lim_{n \rightarrow \infty} a_{n}=a 
+\lim_{n \rightarrow \infty} a_{n}=a \,,
 $$
 if for all $\e \in \mathbb{R}, \e>0$, there exists $N \in \N$ such that for all $n \in \N, n \geq N$ it holds that 
 $$
@@ -175,8 +175,7 @@ Using quantifiers, we can write this as
 $$
 \forall \, \e>0 , \, \exists \, N \in \N \st \forall \, n \geq N \,, \,\left|a_{n}-a\right| < \e \,.
 $$
-
-If there exists $a \in \R$ such that $\lim_{n \rightarrow \infty} a_{n}=a$, then we say that the sequence $\left(a_{n}\right)_{n \in \N}$ is **convergent**.
+The sequence $\left(a_{n}\right)_{n \in \N}$ is **convergent** if it admits limit.
 
 :::
 
@@ -369,15 +368,14 @@ Any *rough work* required to prove convergence must be shown before the formal p
 
 ::: Example 
 
-Prove that, as $n \rightarrow \infty$,
-
+**Question.** Using the definition of convergence, prove that
 $$
-\frac{n}{2n+3} \to \frac{1}{2} \,.
+\lim_{n \to \infty} \frac{n}{2n+3} = \frac{1}{2} \,.
 $$
 
-*Part 1. Rough Work.*
+**Solution.**
 
-Let $\e>0$. We want to find $N \in \N$ such that
+1. *Rough Work:* Let $\e>0$. We want to find $N \in \N$ such that
 $$
 \left|\frac{n}{2n+3}-\frac{1}{2}\right| < \e \,, \quad \forall \, n \geq N \,.
 $$
@@ -408,7 +406,7 @@ N  > \frac{3}{4\e} - \frac{6}{4} \,.
 $$
 
 
-*Part 2. Formal Proof.* We have to show that
+2. *Formal Proof:* We have to show that
 $$
 \forall \e>0 \,, \, \exists \, N \in \N \st  \forall \, n \geq N \,, \, \left|\frac{n}{2n+3}-\frac{1}{2}\right| < \e  \,.
 $$
@@ -423,7 +421,6 @@ $$
 Let $n \geq N$. Then
 \begin{align*}
 \left|\frac{n}{2n+3}-\frac{1}{2}\right| 
-& = \left|\frac{- 3 }{2(2 n+3)}\right| \\
 & = \frac{3}{4 n+ 6 } \\
 & \leq \frac{3}{4 N+ 6 } \\
 & < \e \,,
@@ -555,6 +552,38 @@ $$
 :::
 
 
+We propose an alternative proof by contradiction.
+
+
+::: Proof
+### Alternative proof to Theorem \ref{theorem-1-minus-n}
+
+Suppose by contradiction that $a_n \to a$ for some $a \in \R$. Let
+$$
+\e :=\frac12 \,.
+$$
+Since $a_n \to a$, there exists $N \in \N$ such that 
+$$
+|a_n - a| < \e = \frac13  \, \quad \forall \, n \geq N \,.
+$$
+If we take $n = 2N$, then $n \geq N$ and
+$$
+|a_{2N} - a| = | 1 - a | < \frac12 \,. 
+$$
+If we take $n = 2N + 1$, then $n \geq N$ and
+$$
+|a_{2N+1} - a| = | -1 - a | < \frac12 \,. 
+$$
+Therefore 
+\begin{align*}
+2 & = |  (1 - a) - (-1 - a) | \\
+  & \leq |1 - a| + |-1 - a| \\
+  & < \frac12 + \frac12 = 1 \,,
+\end{align*}
+which is a contradiction. Hence $(a_n)$ is divergent.
+
+:::
+
 
 ## Uniqueness of limit
 
@@ -634,22 +663,19 @@ Hence $2 \e < 2 \e$, which gives a contradiction.
 
 ::: Example 
 
-Prove that
-
+**Question.** Prove that
 $$
 \lim _{n \rightarrow \infty} \frac{n^{2}-1}{2 n^{2}-3}=\frac{1}{2}
 $$
 
-According to Theorem \ref{theorem-uniqueness-limit}, it suffices to show that the sequence 
+**Solution.** According to Theorem \ref{theorem-uniqueness-limit}, it suffices to show that the sequence 
 $$
 \left(\frac{n^{2}-1}{2 n^{2}-3}\right)_{n \in \N}
 $$ 
 converges to $\frac{1}{2}$, since then $\frac{1}{2}$ can be the only limit.
 
 
-*Part 1. Rough Work.*
-
-Let $\e>0$. We want to find $N \in \N$ such that
+1. *Rough Work:* Let $\e>0$. We want to find $N \in \N$ such that
 $$
 \left|\frac{n^{2}-1}{2 n^{2}-3} - \frac{1}{2}\right| < \e \,, \quad \forall \, n \geq N \,.
 $$
@@ -686,7 +712,7 @@ $$
 for the estimates to hold.
 
 
-*Part 2. Formal Proof.* We have to show that
+2. *Formal Proof:* We have to show that
 $$
 \forall \e>0 \,, \, \exists \, N \in \N \st  \forall \, n \geq N \,, \, \left|\frac{n^{2}-1}{2 n^{2}-3}-\frac{1}{2}\right| < \e  \,.
 $$
@@ -752,7 +778,7 @@ We now show that any sequence that converges is also bounded
 
 ::: {.Theorem  #theorem-convergent-bounded}
 
-If a sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ converges, then the sequence is bounded.
+Every convergent sequence is bounded.
 
 :::
 
@@ -1093,13 +1119,14 @@ In the future we will refer to Theorem \ref{theorem-algebra-limits} as the *Alge
 
 
 ::: {.Example  #example-limit-ploynomial}
-Prove that 
+
+**Question.** Prove that 
 $$
 \lim_{n \to \infty} \, \frac{3 n}{7 n+4} = \frac{3}{7} \,.
 $$
 
 
-> *Proof*. We can rewrite
+**Solution.** We can rewrite
 $$
 \frac{3 n}{7 n+4}=\frac{3}{7+\dfrac{4}{n}}
 $$
@@ -1136,12 +1163,13 @@ The technique shown in Example \ref{example-limit-ploynomial} is useful to compu
 
 
 ::: {.Example #example-algebra-of-limits-2}
-Prove that
+
+**Question.** Prove that
 $$
 \lim_{n \rightarrow \infty} \frac{n^{2}-1}{2 n^{2}-3} = \frac{1}{2} \,.
 $$
 
-> *Proof*. Factor $n^2$ to obtain
+**Solution.** Factor $n^2$ to obtain
 $$
 \frac{n^{2}-1}{2 n^{2}-3} = \frac{1-\dfrac{1}{n^{2}}}{2-\dfrac{3}{n^{2}}} \,.
 $$
@@ -1177,13 +1205,13 @@ We can also use the Algebra of Limits to prove that certain limits do not exist.
 
 ::: Example 
 
-Prove that the sequence
+**Question.** Prove that the sequence
 $$
 a_n = \frac{4 n^{3}+8 n+1}{7 n^{2}+2 n+1}
 $$
 does not converge.
 
-> *Proof*. To show that the sequence $\left(a_n\right)$ does not converge, we divide by the largest power in the denominator, which in this case is $n^2$
+**Solution.** To show that the sequence $\left(a_n\right)$ does not converge, we divide by the largest power in the denominator, which in this case is $n^2$
 \begin{align*}
 a_n & = \frac{4 n^{3}+8 n+1}{7 n^{2}+2 n+1} \\
     & =\frac{4 n+ \dfrac{8}{n}  +  \dfrac{1}{n^{2}} }{7+  \dfrac{2}{n}  +  \dfrac{1}{n^{2}} } \\
@@ -1263,7 +1291,7 @@ Sometimes it is useful to rearrange the terms of a sequence, before applying the
 
 ::: Example 
 
-Define 
+**Question.** Define the sequence
 $$
  a_n := \frac{2 n^{3}+7 n+1}{5 n+9} \cdot \frac{8 n+9}{6 n^{3}+8 n^{2}+3} \,.
 $$
@@ -1273,8 +1301,7 @@ $$
 $$
 
 
-> *Proof.* 
-The first fraction in $(a_n)$ does not converge, as it is unbounded. Therefore we cannot use Point 2 in Theorem \ref{theorem-algebra-limits} directly. However, we note that
+**Solution.** The first fraction in $(a_n)$ does not converge, as it is unbounded. Therefore we cannot use Point 2 in Theorem \ref{theorem-algebra-limits} directly. However, we note that
 \begin{align*}
 a_{n} & =\frac{2 n^{3}+7 n+1}{5 n+9} \cdot \frac{8 n+9}{6 n^{3}+8 n^{2}+3} \\
 & = \frac{8 n+9}{5 n+9} \cdot \frac{2 n^{3}+7 n+1}{6 n^{3}+8 n^{2}+3} \,.
@@ -1305,13 +1332,13 @@ The Algebra of Limits Theorem \ref{theorem-algebra-limits} can also be used when
 
 ::: Example
 
-Prove that 
+**Question.** Prove that 
 $$
 a_n = \frac{n^{7 / 3}+2 \sqrt{n}+7}{4 n^{3 / 2}+5 n}
 $$
 does not converge.
 
-> *Proof*. The largest power of $n$ in the denominator is $n^{3/2}$. Hence we factor out $n^{3/2}$
+**Solution.** The largest power of $n$ in the denominator is $n^{3/2}$. Hence we factor out $n^{3/2}$
 \begin{align*}
 a_n & = \frac{n^{7 / 3}+2 \sqrt{n}+7}{4 n^{3 / 2}+5 n} \\
     & = \frac{n^{7 / 3-3 / 2}+2 n^{1/2 - 3/2} + 7  n^{-3 / 2}}{4 + 5 n^{-3/2} } \\
@@ -1409,7 +1436,7 @@ Let us show an application of Theorem \ref{theorem-square-root-limit}.
 
 ::: Example 
 
-Define the sequence
+**Question.** Define the sequence
 $$
 a_n  = \sqrt{9 n^{2}+3 n+1}-3 n \,.
 $$
@@ -1419,7 +1446,7 @@ $$
 $$
 
 
-> *Proof*. We first rewrite
+**Solution.** We first rewrite
 \begin{align*}
 a_n & = \sqrt{9 n^{2}+3 n+1}-3 n \\
 & = \frac{\left(\sqrt{9 n^{2}+3 n+1}-3 n\right)\left(\sqrt{9 n^{2}+3 n+1}+3 n\right)}{\sqrt{9 n^{2}+3 n+1}+3 n} \\
@@ -1451,13 +1478,13 @@ $$
 
 ::: Example 
 
-Prove that the sequence
+**Question.** Prove that the sequence
 $$
 a_n = \sqrt{9 n^{2}+3 n+1}-2 n
 $$
 does not converge.
 
-> *Proof.* We rewrite $a_n$ as
+**Solution.** We rewrite $a_n$ as
 \begin{align*}
 a_n & = \sqrt{9 n^{2}+3 n+1}-2 n  \\
 & =\frac{  (\sqrt{9 n^{2}+3 n+1} - 2 n)  (\sqrt{9 n^{2}+3 n+1}+2 n) }{\sqrt{9 n^{2}+3 n+1}+2 n} \\
@@ -1562,13 +1589,12 @@ $$
 
 ::: Example 
 
-Prove that
+**Question.** Prove that
 $$
 \lim_{n \to \infty} \, \frac{(-1)^{n}}{n} = 0 \,.
 $$
 
-> *Proof.*
-For all $n \in \N$ we can estimate
+**Solution.** For all $n \in \N$ we can estimate
 $$
 -1 \leq(-1)^{n} \leq 1 \,.
 $$
@@ -1592,14 +1618,13 @@ $$
 
 ::: {.Example #example-squeeze}
 
-Prove that 
+**Question.** Prove that 
 $$
 \lim_{n \to \infty} \frac{\cos (3 n) + 9 n^{2}}{11 n^{2}+15 \sin (17 n)} = \frac{9}{11} \,.
 $$
 
 
-> *Proof.* 
-We know that 
+**Solution.** We know that 
 $$
 -1 \leq \cos(x) \leq 1 \,, \quad - 1 \leq \sin(x) \leq 1 \,, \quad \forall \, x \in \R \,.
 $$
@@ -1677,7 +1702,7 @@ $$
 $$
 we cannot apply the Squeeze Theorem \ref{theorem-squeeze} to conclude convergence of $(a_n)$. Indeed, $(a_n)$ is a divergent sequence.
 
-> *Proof.* Suppose by contradiction that $a_n \to a$. We have
+*Proof.* Suppose by contradiction that $a_n \to a$. We have
 $$
 a_n = (-1)^n + \frac{(-1)^n}{n} = b_n + c_n
 $$
@@ -2125,8 +2150,7 @@ Let us apply the Ratio Test to some concrete examples.
 
 ::: Example
 
-
-Let 
+**Question.** Let 
 $$
 a_{n}=\frac{3^{n}}{n !} \,,
 $$
@@ -2139,7 +2163,7 @@ $$
 \lim_{n \to \infty} a_n  = 0 \,.
 $$
 
-> *Proof*. We have
+**Solution.** We have
 \begin{align*}
 \left|\frac{a_{n+1}}{a_{n}}\right| & = \dfrac{\left( \dfrac{3^{n+1}}{(n+1) !} \right) }{  \left( \dfrac{3^{n}}{n !} \right) } \\
 & = \frac{3^{n+1}}{3^{n}} \, \frac{n !}{(n+1) !} \\
@@ -2153,13 +2177,13 @@ Hence, $L=0<1$ so $a_{n} \to 0$ by the Ratio Test in Theorem \ref{theorem-ratio-
 
 ::: Example
 
-Consider the sequence
+**Question.** Consider the sequence
 $$
 a_{n}=\frac{n ! \cdot 3^{n}}{\sqrt{(2 n) !}} \,.
 $$
 Prove that $(a_n)$ is divergent.
 
-> *Proof.* We have
+**Solution.** We have
 \begin{align*}
 \left|\frac{a_{n+1}}{a_{n}}\right| & =\frac{(n+1) ! \cdot 3^{n+1}}{\sqrt{(2(n+1)) !}}  \frac{\sqrt{(2 n) !}}{n ! \cdot 3^{n}} \\
 & =\frac{(n+1) !}{n !} \cdot \frac{3^{n+1}}{3^{n}} \cdot \frac{\sqrt{(2 n) !}}{\sqrt{(2(n+1)) !}}
@@ -2188,22 +2212,25 @@ By the Ratio Test we conclude that $(a_n)$ is divergent.
 
 ::: Example 
 
-Let 
+**Question.** Prove that the following sequence is divergent
 $$
 a_{n}=\frac{n !}{100^{n}} \,.
 $$
-Prove that $(a_n)$ is divergent.
 
-> *Proof.*
+
+**Solution.** We have
 $$
 \left|\frac{a_{n+1}}{a_{n}}\right| 
 = \frac{100^{n}}{100^{n+1}} \frac{(n+1) !}{n !}
 =\frac{n+1}{100} \,.
 $$
 Choose $N=101$. Then for all $n \geq N$,
-$$
-\left|\frac{a_{n+1}}{a_{n}}\right| \geq \frac{101}{100}>1 \,.
-$$
+\begin{align*}
+\left|\frac{a_{n+1}}{a_{n}}\right| 
+& = \frac{n+1}{100} \\
+& \geq \frac{N+1}{100} \\
+& = \frac{101}{100} > 1 \,.
+\end{align*}
 Hence $a_{n}$ is divergent by the Ratio Test.
 
 :::
@@ -2316,39 +2343,40 @@ $$
 
 ::: Example
 
-
-- The sequence below is increasing
+**Question.** Prove that the following sequence is increasing
 $$
-b_n = \frac{n-1}{n} \,.
+a_n = \frac{n-1}{n} \,.
 $$
 
-  > We have
-  $$
-  b_{n+1} = \frac{n}{n+1} > \frac{n-1}{n} = b_n \,,
-  $$
-  where the inequality holds because
-  \begin{align*}
-  \frac{n}{n+1} > \frac{n-1}{n} \quad & \iff \quad 
-  n^2 > (n-1)(n+1) \quad  \\
-  & \iff \quad n^2 > n^2 - 1 \\
-  & \iff \quad 0 >  - 1
-  \end{align*}
+**Solution.** We have
+$$
+a_{n+1} = \frac{n}{n+1} > \frac{n-1}{n} = a_n \,,
+$$
+where the inequality holds because
+\begin{align*}
+\frac{n}{n+1} > \frac{n-1}{n} \quad & \iff \quad 
+n^2 > (n-1)(n+1) \quad  \\
+& \iff \quad n^2 > n^2 - 1 \\
+& \iff \quad 0 >  - 1
+\end{align*}
+:::
 
 
-
-- The sequence below is decreasing
+::: Example
+ 
+**Question.** Prove that the following sequence is decreasing
 $$
 a_n = \frac1n \,.
 $$
 
-
-  > We have
-  $$
-  a_n = \frac1n > \frac{1}{n+1} = a_{n+1} \,.
-  $$
-
+**Solution.** We have
+$$
+a_n = \frac1n > \frac{1}{n+1} = a_{n+1} \,,
+$$
+concluding.
 
 :::
+
 
 
 The main result about monotone sequences is the Monotone Convergence
@@ -2618,7 +2646,7 @@ $$
 
 
 
-## Some important limits
+## Special limits
 
 
 
@@ -2893,46 +2921,63 @@ using Step 1 and the Algebra of Limits.
 
 ::: Example
 
-
-
-- We have
+**Question.** Prove that
 $$
 \lim_{n \to \infty} \, n  \sin \left(  \frac{1}{n} \right)  = 1 \,.
 $${#eq-notable-limits-2}
-This is because
+
+**Solution.** This is because
 $$
 n  \sin \left(  \frac{1}{n} \right) = \frac{ \sin \left(  \dfrac{1}{n} \right) }{ \dfrac{1}{n} } \longrightarrow 1 \,,
 $$
 by Theorem \ref{theorem-important-limit-2} with $a_n = 1/n$.
 
+:::
 
-- We have
+
+::: Example
+
+**Question.** Prove that
 $$
 \lim_{n \to \infty} \, n^2 \left(  1 - \cos \left(  \dfrac{1}{n} \right)  \right) = \frac12 \,.
 $${#eq-notable-limits-1}
-Indeed, 
+
+
+**Solution.** Indeed, 
 $$
 n^2 \left(  1 - \cos \left(  \frac{1}{n} \right)\right) = \dfrac{1 - \cos \left(  \dfrac{1}{n} \right)}{\dfrac{1}{n^2}} \longrightarrow \frac12 \,,
 $$
 by applying Theorem \ref{theorem-important-limit-3} with $a_n = 1/n$.
 
+:::
 
-- We have
+
+::: Example
+
+**Question.** Prove that
 $$
 \lim_{n \to \infty} \, \frac{n  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ \sin \left( \dfrac{1}{n} \right) } = \frac12 \,.
 $$
-Indeed, using (@eq-notable-limits-1)-(@eq-notable-limits-2) and the Algebra of Limits
-$$
- \frac{n  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ \sin \left( \dfrac{1}{n} \right) } =
-  \frac{n^2  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ n \sin \left( \dfrac{1}{n} \right) } \longrightarrow \frac{1/2}{1} = \frac12 \,.
-$$
+
+**Solution.** Using (@eq-notable-limits-1)-(@eq-notable-limits-2) and the Algebra of Limits
+\begin{align*}
+ \frac{n  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ \sin \left( \dfrac{1}{n} \right) } & =
+  \frac{n^2  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ n \sin \left( \dfrac{1}{n} \right) } \\
+  & \longrightarrow \frac{1/2}{1} = \frac12 \,.
+\end{align*}
+
+:::
 
 
-- We have
+
+::: Example
+
+**Question.** Prove that
 $$
 \lim_{n \to \infty} \, n \cos \left( \frac{2}{n}  \right) \sin \left( \frac{2}{n}  \right) = 2 \,.
 $$
-This is because 
+
+**Solution.** We have
 $$
 \cos \left( \frac{2}{n}  \right) \longrightarrow 1 \,,
 $$
@@ -2941,23 +2986,28 @@ $$
 \frac{\sin \left( \dfrac{2}{n}  \right)}{\dfrac{2}{n}} \longrightarrow 1 \,,
 $$
 by Theorem \ref{theorem-important-limit-2} applied with $a_n = 2/n$. Therefore
-$$
-n \cos \left( \frac{2}{n}  \right) \sin \left( \frac{2}{n}  \right) = 
-2 \cdot \cos \left( \frac{2}{n}  \right) \cdot \frac{\sin \left( \dfrac{2}{n}  \right)}{\dfrac{2}{n}} 
-\longrightarrow 2 \cdot 1 \cdot 1 = 2 
-$$
+\begin{align*}
+n \cos \left( \frac{2}{n}  \right) \sin \left( \frac{2}{n}  \right) & = 
+2 \cdot \cos \left( \frac{2}{n}  \right) \cdot \frac{\sin \left( \dfrac{2}{n}  \right)}{\dfrac{2}{n}} \\
+& \longrightarrow 2 \cdot 1 \cdot 1 = 2 \,,
+\end{align*}
 where we used the Algebra of Limits.
 
+:::
 
 
--  We have
+::: Example
+
+**Question.** Prove that
 $$
 \lim_{n \to \infty} \, \frac{n^2+1}{n+1} \sin \left(  \dfrac{1}{n} \right)  = 1 \,.
 $$
-To prove it, note that
-$$
-\frac{n^2+1}{n+1} \sin \left(  \dfrac{1}{n} \right) = \left( \frac{1+\dfrac{1}{n^2}}{1+ \dfrac{1}{n}} \right) \cdot \left( n \sin \left(  \dfrac{1}{n} \right) \right) \longrightarrow \frac{1 + 0}{1 + 0} \cdot 1 = 1\,,
-$$
+
+**Solution.** Note that
+\begin{align*}
+\frac{n^2+1}{n+1} \sin \left(  \dfrac{1}{n} \right) & = \left( \frac{1+\dfrac{1}{n^2}}{1+ \dfrac{1}{n}} \right) \cdot \left( n \sin \left(  \dfrac{1}{n} \right) \right) \\
+& \longrightarrow \frac{1 + 0}{1 + 0} \cdot 1 = 1\,,
+\end{align*}
 where we used (@eq-notable-limits-2) and the Algebra of Limits.
 
 
@@ -2966,11 +3016,12 @@ where we used (@eq-notable-limits-2) and the Algebra of Limits.
 
 
 
+
 ::: {.content-hidden}
 
 
 
-Use abbot, marcellini, and analisi sapienza note. For next year remove integral test and add cauchy condensation test.
+Use Abbot, Marcellini, and analisi sapienza note.
 
 
 ## Divergence to infinity

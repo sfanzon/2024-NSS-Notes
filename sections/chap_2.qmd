@@ -298,14 +298,21 @@ The above proposition is very useful when we need to **prove** that two sets are
 
 ### Infinite unions and intersections
 
-Suppose given a set $\Omega$, and a family of sets $A_n \subseteq \Omega$, where $n \in \N$. Then we can define the **infinte union**
+::: Definition
+
+Let $\Omega$ be a set, and $A_n \subseteq \Omega$ a family of subsets, where $n \in \N$. 
+
+1. The **infinte union** of the $A_n$ is the set
 $$
 \bigcup_{n \in \N} A_n := \{ x \in \Omega \, \colon \, x \in A_n \,\, \text{ for at least one } \,\, n \in \N \} \,.
 $$
-The **infinte intersection** is defined as
+
+2. The **infinte intersection** of the $A_n$ is the set 
 $$
 \bigcap_{n \in \N} A_n := \{ x \in \Omega \, \colon \, x \in A_n \,\, \text{ for all } \,\, n \in \N \} \,.
 $$
+
+:::
 
 ::: Example 
 
@@ -386,8 +393,15 @@ $$
 - First implication $\implies$:  
 Suppose that $A \subseteq B$. We need to show that $B^c \subseteq A^c$. Hence, assume $x \in B^c$. By definition this means that $x \notin B$. Now notice that we cannot have that $x \in A$. Indeed, assume $x \in A$.  By assumption we have $A \subseteq B$, hence $x \in B$. But we had assumed $x \in B$, contradiction. Therefore it must be that $x \notin A$. Thus $B^c \subseteq A^c$.
 
-- Second implication $\impliedby$:  
-Essentially the same proof, hence we omit it.  
+- Second implication $\impliedby$:  Note that, for any set, 
+$$
+(A^c)^c = A \,.
+$$
+Hence, by the first implication,
+$$
+B^c \subseteq A^c \, \implies \, (A^c)^c \subseteq (B^c)^c \, \implies \, A \subseteq B \,.
+$$
+ 
 :::
 
 We conclude by stating the De Morgan's Laws. The proof will be left as an exercise.
@@ -846,7 +860,7 @@ on $P(\Omega)$ but **not** a total order.
 ::: Example
 ### Set inclusion is a partial order but not total order
 
-Consider an arbitrary non-empty set $\Omega$ and its **power set**
+**Question.** Let $\Omega$ be a non-empty set and consider its **power set**
 $$
 \mathcal{P}(\Omega) = \{ A \divider A \subseteq \Omega  \}\,.
 $$
@@ -854,17 +868,18 @@ The inclusion defines **binary relation** on $\mathcal{P}(\Omega) \times \mathca
 $$
 R:=\{ (A,B) \in \mathcal{P}(\Omega) \times \mathcal{P}(\Omega) \, \colon \, A \subseteq B  \} \,.
 $$
-Let us check that $R$ is an **order relation**:
 
-1. Reflexive: It holds, since $A \subseteq A$ for all $A \in \mathcal{P}(\Omega)$,
+1. Prove that $R$ is an **order relation**.
+2. Prove that $R$ is **not a total order**.
 
-2. Transitive: If $A \subseteq B$ and $B \subseteq C$, then by definition of inclusion $A \subseteq C$.
+**Solution.**
 
-3. Antisymmetric: If $A \subseteq B$ and $B \subseteq A$, then $A=B$ by Proposition \ref{Proposition-Equality-Sets}.
+1. Check that $R$ is a partial order relation on $\mathcal{P}(\Omega)$:
+    - Reflexive: It holds, since $A \subseteq A$ for all $A \in \mathcal{P}(\Omega)$.
+    - Antisymmetric: If $A \subseteq B$ and $B \subseteq A$, then $A=B$.
+    - Transitive: If $A \subseteq B$ and $B \subseteq C$, then, by definition of inclusion, $A \subseteq C$.
 
-Therefore $R$ is a **partial order** on $\mathcal{P}(\Omega)$. 
-
-In general $R$ is **not** a total order. For example if we consider
+2. In general, $R$ is **not** a total order. For example consider
 $$
 \Omega = \{x, y\}\,.
 $$
@@ -874,9 +889,9 @@ $$
 $$
 If we pick $A=\{x\}$ and $B=\{y\}$ then $A \cap B = \emptyset$, meaning that 
 $$
-A \not\subseteq B \,, \quad  B \not\subseteq A \,,
+A \not\subseteq B \,, \quad  B \not\subseteq A \,.
 $$
-showing that $R$ is not a total order.
+This shows $R$ is not a total order.
 :::
 
 
@@ -886,17 +901,19 @@ The **inequality** on $\Q$ is an example of total order.
 ::: Example
 ### Inequality is a total order
 
-Consider the set of rationals $\Q$. The usual inequality defines a **binary relation** on $\Q \times \Q$, via
+**Question.** Consider the binary relation induced by the inequality on $\Q \times \Q$:
 $$
 R:=\{ (x,y) \in \Q \times \Q \, \colon \, x \leq y  \} \,.
 $$
-Let us check that $R$ is an **order relation**:
+Prove that $R$ is a **total order relation**.
+
+**Solution.** We need to check that:
 
 1. Reflexive: It holds, since $x \leq x$ for all $x \in \Q$,
 
-2. Transitive: If $x \leq y$ and $y \leq z$ then $x \leq z$.
+2. Antisymmetric: If $x \leq y$ and $y \leq x$  then $x = y$.
 
-3. Antisymmetric: If $x \leq y$ and $y \leq x$  then $x = y$.
+3. Transitive: If $x \leq y$ and $y \leq z$ then $x \leq z$.
 
 Finally, we halso have that $R$ is a **total order** on $\Q$, since for all $x,y \in \Q$ we have
 $$
@@ -1572,13 +1589,14 @@ By definition this means that $\alpha(n)$ is true for all $n \in \N$.
 
 ::: Example 
 ### Formula for summing first $n$ natural numbers
-Using the Principle of Induction we can prove that
-$$
-1 + 2 + 3 + \ldots + (n-1) + n = \frac{n(n+1)}{2} 
-$$ {#eq-formula-sum-naturals}
-holds for all $n \in \N$.  
 
-*Proof*. To be really precise, consider the statement
+**Question.** Prove by induction that the following formula holds for all $n \in \N$:
+$$
+1 + 2 + 3 + \ldots + (n-1) + n = \frac{n(n+1)}{2} \,.
+$$ {#eq-formula-sum-naturals}
+
+
+**Solution**. To be really precise, consider the statement
 $$
 \alpha(n) :=  \, \mbox{the above formula is true for } \, n \,. 
 $$
@@ -1587,22 +1605,32 @@ In order to apply induction, we need to show that
 1. $\alpha(1)$ is true,
 2. If $\alpha(n)$ is true then $\alpha(n+1)$ is true.
 
-Let us proceed:
+Let us proceed: Define
+$$
+S(n) = 1 + 2 + \ldots + n \,.
+$$
+This way the formula at (@eq-formula-sum-naturals) is equivalent to
+$$
+S(n) = \frac{n(n+1)}{2} \,, \quad \forall \, n \in \N \,.
+$$
 
 1. It is immediate to check that (@eq-formula-sum-naturals) holds for $n=1$.
 2. Suppose (@eq-formula-sum-naturals) holds for $n = k$. Then
 \begin{align}
-1 + \ldots +  k + (k+1) & =   \frac{k(k+1)}{2}  + (k+1) \\
+S(k+1) & = 1 + \ldots +  k + (k+1) \\
+       & = S(k) + (k+1) \\
+       & = \frac{k(k+1)}{2}  + (k+1) \\
 & = \frac{ k(k+1) + 2(k+1) }{2} \\
-& = \frac{(k+1)(k+2)}{k}
+& = \frac{(k+1)(k+2)}{2}
 \end{align}
-where in the first equality we used that (@eq-formula-sum-naturals) holds for $n=k$. We then have
+where in the first equality we used that (@eq-formula-sum-naturals) holds for $n=k$. We have proven that
 $$
-1 +   \ldots + k + (k+1) = \frac{(k+1)(k+2)}{k}\,,
+S(k+1) = \frac{(k+1)(k+2)}{2}\,.
 $$
-which shows that (@eq-formula-sum-naturals) holds for $n = k+1$.
+The RHS in the above expression is exactly the RHS of  (@eq-formula-sum-naturals) computed at $n = k+1$. Therefore, we have shown that formula (@eq-formula-sum-naturals) holds for $n = k+1$.
 
-By the Principle of Induction we then conclude that $\alpha(n)$ is true for all $n \in \N$, which means that (@eq-formula-sum-naturals) holds for all $n \in \N$.
+By the Principle of Induction, we then conclude that $\alpha(n)$ is true for all $n \in \N$, which means that (@eq-formula-sum-naturals) holds for all $n \in \N$.
+
 :::
 
 
@@ -1634,9 +1662,9 @@ $${#eq-induction-increasing}
 
 We want to prove our conjecture rigorously, i.e. using induction.
 
-*Claim. (@eq-induction-increasing) holds for all $n \in \N$*.
+**Claim**. (@eq-induction-increasing) holds for all $n \in \N$.
 
-*Proof of Claim.*  We argue by induction:
+**Proof of Claim.**  We argue by induction:
 
 1. We see that
 $$

@@ -92,6 +92,42 @@ div.csl-indent {
   }
 }</script>
 <style>
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .TODO {
   --color1: #e7b1b4;
   --color2: #8c3236;
@@ -100,43 +136,7 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Warning {
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -144,19 +144,19 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proposition {
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 .Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Important {
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -359,7 +359,7 @@ n+x = m \,?
 <p><span class="math display">\[
 x = m - n \,.
 \]</span></p>
-<p>But there is a catch. In general <span class="math inline">\(x\)</span> does not need to be in <span class="math inline">\(\mathbb{N}\)</span>. For example, take <span class="math inline">\(n=10\)</span> and <span class="math inline">\(m=1\)</span>. Then <span class="math inline">\(x = -9\)</span>, which does not belong to <span class="math inline">\(\mathbb{N}\)</span>. Therefore the answer to Question <a href="chap_1.html#Question-1">1</a> is <strong>NO</strong>.</p>
+<p>But there is a catch. In general <span class="math inline">\(x\)</span> does not need to be in <span class="math inline">\(\mathbb{N}\)</span>. For example, take <span class="math inline">\(n=10\)</span> and <span class="math inline">\(m=1\)</span>. Then <span class="math inline">\(x = -9\)</span>, which does not belong to <span class="math inline">\(\mathbb{N}\)</span>. Therefore the answer to Question <a href="chap_5.html#Question-1">1</a> is <strong>NO</strong>.</p>
 <p>To make sure that we can always invert the sum, we need to <strong>extend</strong> the set <span class="math inline">\(\mathbb{N}\)</span>. This is done simply by introducing the set of <strong>integers</strong> <span class="math display">\[
 \mathbb{Z}:= \{ -n,n \, \colon \, n \in \mathbb{N}\} \,,
 \]</span></p>

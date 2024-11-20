@@ -354,7 +354,8 @@ Without such assumption the thesis of Theorem \ref{theorem-nested} does not hold
 
 ::: {.Example #example-nested-open}
 
-Consider the **open** intervals 
+
+**Question.** Consider the **open** intervals 
 $$
 I_n := \left( 0, \frac1n \right) \,.
 $$
@@ -362,11 +363,12 @@ These are clearly nested
 $$
 I_n \supset I_{n+1}\,, \quad \forall \, n \in \N \,.
 $$
-For this choice of $I_n$ we have
+Prove that
 $$
 \bigcap_{n=1}^\infty I_n = \emptyset \,.
 $${#eq-example-nested-2}
-Indeed, suppose by contradiction that the intersection is non-empty. Then there exists $x \in \N$
+
+**Solution.** Suppose by contradiction that the intersection is non-empty. Then there exists $x \in \N$
 such that 
 $$
 x \in I_n \,, \quad \forall \, n \in \N \,.
@@ -1240,7 +1242,7 @@ In other words: A function $f \colon X \to Y$ is:
 2. Surjective if every element in $Y$ has at least one element in $X$ associated via $f$.
 3. Bijective if to each element in $X$ we associate one and only one element in $Y$ via $f$.
 
-:::
+
 
 
 
@@ -1598,35 +1600,67 @@ Hence $g$ is bijective, showing that $A$ is countable.
 
 ::: Example
 
+**Question.** Prove that $X = \{a,b,c\}$ is finite. 
 
-1. Let $X = \{a,b,c\}$ and $Y=\{ 1,2,3\}$. The function $f \colon X \to Y$ defined by
+**Solution.** Set $Y=\{ 1,2,3\}$. The function $f \colon X \to Y$ defined by
 $$
 f(1)=a \,, \quad f(2) = b \,, \quad f(3) = c \,,
 $$
 is bijective. Therefore $X$ is finite, with $|X| = 3$.
 
-2. Let $X = \N$. The function $f \colon X \to \N$ defined by
+:::
+
+
+
+
+::: Example
+
+**Question.** Prove that the set of natural numbers $\N$ is countable. 
+
+**Solution.** The function $f \colon X \to \N$ defined by
 $$
 f(n):=n \,,
 $$
 is bijective. Therefore $X = \N$ is countable.
 
-3. Let $X$ be the set of even numbers
+:::
+
+
+
+::: Example
+
+**Question.** Let $X$ be the set of even numbers
 $$
 X = \{ 2n \divider n \in \N \} \,.
 $$
-Define the map $f \colon \N \to X$ by
+Prove that $X$ is countable.
+
+**Solution.** Define the map $f \colon \N \to X$ by
 $$
 f(n):= 2n \,.
 $$
 We have that:
 
-    - $f$ is injective: $f(m)=f(k)$ implies that $2m=2k$, which implies $m=k$.
-    - $f$ is surjective: This is trivially true by definition of $X$.
-    
-    Therefore $f$ is bijective, showing that $X$ is countable and $|X|=|\N|$.
+1. $f$ is injective, because 
+$$
+f(m)=f(k) \, \implies \, 2m=2k \, 
+\quad \, m=k \,.
+$$
 
-4. Let $X = \Z$ the set of integers. Define $f \colon \N \to \Z$ by 
+2. $f$ is surjective: Suppose that $m \in X$. By definition of $X$, there exists $n \in \N$ such that $m = 2n$. Therefore, $f(n) = m$.
+
+    
+We have shown that $f$ is bijective. Thus, $X$ is countable.
+
+:::
+
+
+
+::: Example
+
+**Question.** Prove that the set of integers $\Z$ is countable. 
+
+**Solution.** Define $f \colon \N \to \Z$ by 
 $$
 f(n):= 
 \begin{cases}
@@ -1641,31 +1675,28 @@ f(4) & = 2 \,, \quad f(5) = -3 \,, \quad f(6) = 3 \,, \quad f(7) = -4 \,.
 \end{align*}
 We have:
 
-    - $f$ is injective: Indeed, suppose that $m \neq n$. If $n$ and $m$ are both even or both odd we have, respectively
-    \begin{align*}
-    f(m) = \frac{m}{2} & \neq \frac{n}{2} = f(n)  \\
-    f(m) =  -\frac{m+1}{2} & \neq  - \frac{n+1}{2} = f(n) \,.
-    \end{align*}
-    If instead $m$ is even and $n$ is odd, we get
-    $$
-    f(m) = \frac{m}{2} \neq  - \frac{n+1}{2} = f(n)  \,,
-    $$
-    since the LHS is positive and the RHS is negative. The case when $m$ is odd and $n$ even is 
-    similar.  
+1. $f$ is injective: Indeed, suppose that $m \neq n$. If $n$ and $m$ are both even or both odd we have, respectively
+\begin{align*}
+f(m) = \frac{m}{2} & \neq \frac{n}{2} = f(n)  \\
+f(m) =  -\frac{m+1}{2} & \neq  - \frac{n+1}{2} = f(n) \,.
+\end{align*}
+If instead $m$ is even and $n$ is odd, we get
+$$
+f(m) = \frac{m}{2} \neq  - \frac{n+1}{2} = f(n)  \,,
+$$
+since the LHS is positive and the RHS is negative. The case when $m$ is odd and $n$ even is 
+similar.  
 
-    - $f$ is surjective: Let $z \in \Z$. If $z \geq 0$, then $m:=2z$ belongs to $\N$, is even, and
-    $$
-    f(m) = f(2z) = z \,.
-    $$
-    If instead $z < 0$, then $m := -2z -1$ belongs to $\N$, is odd, and
-    $$
-    f(m) = f(-2z-1) = z \,.
-    $$
+2. $f$ is surjective: Let $z \in \Z$. If $z \geq 0$, then $m:=2z$ belongs to $\N$, is even, and
+$$
+f(m) = f(2z) = z \,.
+$$
+If instead $z < 0$, then $m := -2z -1$ belongs to $\N$, is odd, and
+$$
+f(m) = f(-2z-1) = z \,.
+$$
     
-   Therefore $f$ is bijective, showing that $\Z$ is countable and
-   $$
-   |\Z| =| \N| \,. 
-   $$
+Therefore $f$ is bijective, showing that $\Z$ is countable.
 
 :::
 
