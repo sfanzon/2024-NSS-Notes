@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Preliminaries – Numbers, Sequences and Series</title>
+<title>2&nbsp; Preliminaries – Numbers Sequences and Series</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,11 +72,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -84,19 +80,23 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
 .Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Problem {
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -108,7 +108,11 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Important {
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -116,27 +120,23 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
 .Proof {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 .Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Question {
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -182,11 +182,11 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Numbers, Sequences and Series</span>
+    <span class="navbar-title">Numbers Sequences and Series</span>
     </a>
   </div>
         <div class="quarto-navbar-tools tools-end">
-    <a href="../Numbers,-Sequences-and-Series.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <a href="../Numbers-Sequences-and-Series.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           <div id="quarto-search" class="" title="Search"></div>
@@ -275,23 +275,6 @@ window.Quarto = {
  <span class="menu-text">References</span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../sections/revision.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Revision Guide</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -571,14 +554,14 @@ A_n &amp; := \{ n, n+1, n+2, n+3,  \ldots \} \,,
 </ol>
 <p><strong>Solution.</strong></p>
 <ol type="1">
-<li><p>Equation (<a href="revision.html#eq-infinite-union" class="quarto-xref"><span>A.7</span></a>) is proven using Proposition <a href="revision.html#Proposition-Equality-Sets">5</a>. To this end, assume that <span class="math inline">\(m \in \cup_n A_n\)</span>. Then <span class="math inline">\(m \in A_n\)</span> for at least one <span class="math inline">\(n \in \mathbb{N}\)</span>. Since <span class="math inline">\(A_n \subseteq \mathbb{N}\)</span>, we conclude that <span class="math inline">\(m \in \mathbb{N}\)</span>. This shows <span class="math display">\[
+<li><p>Equation (<a href="#eq-infinite-union" class="quarto-xref"><span>2.2</span></a>) is proven using Proposition <a href="revision.html#Proposition-Equality-Sets">5</a>. To this end, assume that <span class="math inline">\(m \in \cup_n A_n\)</span>. Then <span class="math inline">\(m \in A_n\)</span> for at least one <span class="math inline">\(n \in \mathbb{N}\)</span>. Since <span class="math inline">\(A_n \subseteq \mathbb{N}\)</span>, we conclude that <span class="math inline">\(m \in \mathbb{N}\)</span>. This shows <span class="math display">\[
 \bigcup_{n \in \mathbb{N}} A_n \subseteq \mathbb{N}\,.
 \]</span> Conversely, suppose that <span class="math inline">\(m \in \mathbb{N}\)</span>. By definition <span class="math inline">\(m \in A_m\)</span>. Hence there exists at least one index <span class="math inline">\(n\)</span>, <span class="math inline">\(n=m\)</span> in this case, such that <span class="math inline">\(m \in A_n\)</span>. Then by definition <span class="math inline">\(m \in \cup_{n \in \mathbb{N}} A_n\)</span>, showing that <span class="math display">\[
 \mathbb{N}\subseteq \bigcup_{n \in \mathbb{N}} A_n \,.
-\]</span> Hence we conclude (<a href="revision.html#eq-infinite-union" class="quarto-xref"><span>A.7</span></a>) by Proposition <a href="revision.html#Proposition-Equality-Sets">5</a>.</p></li>
-<li><p>We prove (<a href="revision.html#eq-infinite-intersection" class="quarto-xref"><span>A.8</span></a>) by <strong>contradiction</strong>. Indeed, suppose that (<a href="revision.html#eq-infinite-intersection" class="quarto-xref"><span>A.8</span></a>) is false, i.e., <span class="math display">\[
+\]</span> Hence we conclude (<a href="#eq-infinite-union" class="quarto-xref"><span>2.2</span></a>) by Proposition <a href="revision.html#Proposition-Equality-Sets">5</a>.</p></li>
+<li><p>We prove (<a href="#eq-infinite-intersection" class="quarto-xref"><span>2.3</span></a>) by <strong>contradiction</strong>. Indeed, suppose that (<a href="#eq-infinite-intersection" class="quarto-xref"><span>2.3</span></a>) is false, i.e., <span class="math display">\[
 \bigcap_{n \in \mathbb{N}} A_n \neq \emptyset \,.
-\]</span> This means there exists some <span class="math inline">\(m \in \mathbb{N}\)</span> such that <span class="math inline">\(m \in \cap_{n \in \mathbb{N}} A_n\)</span>. Hence, by definition, <span class="math inline">\(m \in A_n\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. However <span class="math inline">\(m \notin A_{m+1}\)</span>, yielding a contradiction. Thus (<a href="revision.html#eq-infinite-intersection" class="quarto-xref"><span>A.8</span></a>) holds.</p></li>
+\]</span> This means there exists some <span class="math inline">\(m \in \mathbb{N}\)</span> such that <span class="math inline">\(m \in \cap_{n \in \mathbb{N}} A_n\)</span>. Hence, by definition, <span class="math inline">\(m \in A_n\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. However <span class="math inline">\(m \notin A_{m+1}\)</span>, yielding a contradiction. Thus (<a href="#eq-infinite-intersection" class="quarto-xref"><span>2.3</span></a>) holds.</p></li>
 </ol>
 </div></details>
 </div>
@@ -873,9 +856,9 @@ x \sim y \quad \iff \quad \exists \, n \in \mathbb{Z}\, \text{ s.t. } \, y = x +
 [x] = \{  x + n \ \colon \ n \in \mathbb{Z}\}  \,.
 \]</span> Each equivalence class has exactly one element in <span class="math inline">\([0,1) \cap \mathbb{Q}\)</span>, meaning that: <span id="eq-equivalence-rel"><span class="math display">\[
 \forall x \in \mathbb{Q}\,, \,\, \exists! \, q \in \mathbb{Q}\, \text{ s.t. } \, 0 \leq q &lt; 1 \, \text{ and } \, q \in [x]\,.
-\tag{2.4}\]</span></span> Condition (<a href="revision.html#eq-equivalence-rel" class="quarto-xref"><span>A.9</span></a>) is illustrated in <a href="#fig-equivalence-class" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>. Indeed: take <span class="math inline">\(x \in \mathbb{Q}\)</span> arbitrary. Then <span class="math inline">\(x \in [n,n+1)\)</span> for some <span class="math inline">\(n \in \mathbb{Z}\)</span>. Setting <span class="math inline">\(q:=x-n\)</span> we obtain that <span class="math display">\[
+\tag{2.4}\]</span></span> Condition (<a href="#eq-equivalence-rel" class="quarto-xref"><span>2.4</span></a>) is illustrated in <a href="#fig-equivalence-class" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>. Indeed: take <span class="math inline">\(x \in \mathbb{Q}\)</span> arbitrary. Then <span class="math inline">\(x \in [n,n+1)\)</span> for some <span class="math inline">\(n \in \mathbb{Z}\)</span>. Setting <span class="math inline">\(q:=x-n\)</span> we obtain that <span class="math display">\[
 x = q + n \,, \qquad q \in [0,1) \,,
-\]</span> proving (<a href="revision.html#eq-equivalence-rel" class="quarto-xref"><span>A.9</span></a>). In particular (<a href="revision.html#eq-equivalence-rel" class="quarto-xref"><span>A.9</span></a>) implies that for each <span class="math inline">\(x \in \mathbb{Q}\)</span> there exists <span class="math inline">\(q \in [0,1) \cap \mathbb{Q}\)</span> such that <span class="math display">\[
+\]</span> proving (<a href="#eq-equivalence-rel" class="quarto-xref"><span>2.4</span></a>). In particular (<a href="#eq-equivalence-rel" class="quarto-xref"><span>2.4</span></a>) implies that for each <span class="math inline">\(x \in \mathbb{Q}\)</span> there exists <span class="math inline">\(q \in [0,1) \cap \mathbb{Q}\)</span> such that <span class="math display">\[
 [x] = [q] \,.
 \]</span></p></li>
 <li><p>From Point 2 we conclude that <span class="math display">\[
@@ -1307,7 +1290,7 @@ Suppose now that<br>
 <p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 43: </strong>Geometric meaning of triangle inequality</summary><div>The notion of absolute value can be extended also to vectors in the plane. Suppose that <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are two vectors in the plane, as in <a href="#fig-triangle-ineq-1" class="quarto-xref">Figure&nbsp;<span>2.9</span></a> below. Then <span class="math inline">\(|x|\)</span> and <span class="math inline">\(|y|\)</span> can be interpreted as the <strong>lengths</strong> of these vectors.<br>
 Using the rule of sum of vectors, we can draw <span class="math inline">\(x+y\)</span>, as shown in <a href="#fig-triangle-ineq-2" class="quarto-xref">Figure&nbsp;<span>2.10</span></a> below. From the picture it is evident that <span id="eq-triangle-inequality-1"><span class="math display">\[
 |x+y| \leq |x| + |y|\,,
-\tag{2.9}\]</span></span> that is, <em>the length of each side of a triangle does not exceed the sum of the lengths of the two remaining sides</em>. Note that (<a href="#eq-triangle-inequality-1" class="quarto-xref"><span>2.9</span></a>) is exactly the second inequality in (<a href="revision.html#eq-triangle-inequality" class="quarto-xref"><span>A.10</span></a>). This is why (<a href="revision.html#eq-triangle-inequality" class="quarto-xref"><span>A.10</span></a>) is called triangle inequality.<p></p>
+\tag{2.9}\]</span></span> that is, <em>the length of each side of a triangle does not exceed the sum of the lengths of the two remaining sides</em>. Note that (<a href="#eq-triangle-inequality-1" class="quarto-xref"><span>2.9</span></a>) is exactly the second inequality in (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>). This is why (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>) is called triangle inequality.<p></p>
 </div></details>
 </div>
 <div id="fig-triangle-ineq-1" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1331,8 +1314,8 @@ Figure&nbsp;2.10: Summing the vectors <span class="math inline">\(x\)</span> and
 </figure>
 </div>
 <div id="proof-of-theorem" class="Proof" title="Proof of Theorem 37">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 37</summary><div>Assume that <span class="math inline">\(x,y \in \mathbb{R}\)</span>. We prove the two inequalities in (<a href="revision.html#eq-triangle-inequality" class="quarto-xref"><span>A.10</span></a>) individually.<p></p>
-<p><em>Step 1. Proof of the second inequality in (<a href="revision.html#eq-triangle-inequality" class="quarto-xref"><span>A.10</span></a>).</em><br>
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 37</summary><div>Assume that <span class="math inline">\(x,y \in \mathbb{R}\)</span>. We prove the two inequalities in (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>) individually.<p></p>
+<p><em>Step 1. Proof of the second inequality in (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>).</em><br>
 Trivially we have <span class="math display">\[
 |x| \leq |x| \,.
 \]</span> Therefore we can apply Lemma <a href="revision.html#lemma-absolute-value">24</a> and infer <span id="eq-triangle-inequality-3"><span class="math display">\[
@@ -1343,8 +1326,8 @@ Trivially we have <span class="math display">\[
 -(|x| + |y|) \leq x + y \leq |x| + |y| \,.
 \]</span> We can now again apply Lemma <a href="revision.html#lemma-absolute-value">24</a> to get <span id="eq-triangle-inequality-5"><span class="math display">\[
 |x + y| \leq |x| + |y| \,,
-\tag{2.12}\]</span></span> which is the second inequality in (<a href="revision.html#eq-triangle-inequality" class="quarto-xref"><span>A.10</span></a>).</p>
-<p><em>Step 2. Proof of the first inequality in (<a href="revision.html#eq-triangle-inequality" class="quarto-xref"><span>A.10</span></a>).</em><br>
+\tag{2.12}\]</span></span> which is the second inequality in (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>).</p>
+<p><em>Step 2. Proof of the first inequality in (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>).</em><br>
 Note that the trivial identity <span class="math display">\[
 x = x+y - y
 \]</span> always holds. We then have <span class="math display">\[\begin{align}
@@ -1366,7 +1349,7 @@ x = x+y - y
 -|x+y| \leq |x| - |y| \leq |x+y| \,.  
 \]</span> By Lemma <a href="revision.html#lemma-absolute-value">24</a> the above is equivalent to <span class="math display">\[
 ||x| - |y|| \leq |x+y| \,,
-\]</span> which is the first inequality in (<a href="revision.html#eq-triangle-inequality" class="quarto-xref"><span>A.10</span></a>).</p>
+\]</span> which is the first inequality in (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>).</p>
 </div></details>
 </div>
 <p>An immediate consequence of the triangle inequality are the following inequalities, which are left as an exercise.</p>
@@ -1378,7 +1361,7 @@ x = x+y - y
 \]</span><p></p>
 </div></details>
 </div>
-<p>Notice that the inequality in (<a href="revision.html#eq-triangle-inequality-bis" class="quarto-xref"><span>A.11</span></a>) differs from the triangle inequality (<a href="revision.html#eq-triangle-inequality" class="quarto-xref"><span>A.10</span></a>) by a sign. Indeed it can be shown tha (<a href="revision.html#eq-triangle-inequality" class="quarto-xref"><span>A.10</span></a>) and (<a href="revision.html#eq-triangle-inequality-bis" class="quarto-xref"><span>A.11</span></a>) are equivalent.</p>
+<p>Notice that the inequality in (<a href="#eq-triangle-inequality-bis" class="quarto-xref"><span>2.15</span></a>) differs from the triangle inequality (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>) by a sign. Indeed it can be shown tha (<a href="#eq-triangle-inequality" class="quarto-xref"><span>2.8</span></a>) and (<a href="#eq-triangle-inequality-bis" class="quarto-xref"><span>2.15</span></a>) are equivalent.</p>
 </section>
 <section id="proofs-in-mathematics" class="level2" data-number="2.10">
 <h2 data-number="2.10" class="anchored" data-anchor-id="proofs-in-mathematics"><span class="header-section-number">2.10</span> Proofs in Mathematics</h2>
@@ -1522,22 +1505,22 @@ S=\mathbb{N}\,.
 </ol>
 <p>Let us proceed: Define <span class="math display">\[
 S(n) = 1 + 2 + \ldots + n \,.
-\]</span> This way the formula at (<a href="revision.html#eq-formula-sum-naturals" class="quarto-xref"><span>A.12</span></a>) is equivalent to <span class="math display">\[
+\]</span> This way the formula at (<a href="#eq-formula-sum-naturals" class="quarto-xref"><span>2.18</span></a>) is equivalent to <span class="math display">\[
 S(n) = \frac{n(n+1)}{2} \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span></p>
 <ol type="1">
-<li>It is immediate to check that (<a href="revision.html#eq-formula-sum-naturals" class="quarto-xref"><span>A.12</span></a>) holds for <span class="math inline">\(n=1\)</span>.</li>
-<li>Suppose (<a href="revision.html#eq-formula-sum-naturals" class="quarto-xref"><span>A.12</span></a>) holds for <span class="math inline">\(n = k\)</span>. Then <span class="math display">\[\begin{align}
+<li>It is immediate to check that (<a href="#eq-formula-sum-naturals" class="quarto-xref"><span>2.18</span></a>) holds for <span class="math inline">\(n=1\)</span>.</li>
+<li>Suppose (<a href="#eq-formula-sum-naturals" class="quarto-xref"><span>2.18</span></a>) holds for <span class="math inline">\(n = k\)</span>. Then <span class="math display">\[\begin{align}
 S(k+1) &amp; = 1 + \ldots +  k + (k+1) \\
     &amp; = S(k) + (k+1) \\
     &amp; = \frac{k(k+1)}{2}  + (k+1) \\
 &amp; = \frac{ k(k+1) + 2(k+1) }{2} \\
 &amp; = \frac{(k+1)(k+2)}{2}
-\end{align}\]</span> where in the first equality we used that (<a href="revision.html#eq-formula-sum-naturals" class="quarto-xref"><span>A.12</span></a>) holds for <span class="math inline">\(n=k\)</span>. We have proven that <span class="math display">\[
+\end{align}\]</span> where in the first equality we used that (<a href="#eq-formula-sum-naturals" class="quarto-xref"><span>2.18</span></a>) holds for <span class="math inline">\(n=k\)</span>. We have proven that <span class="math display">\[
 S(k+1) = \frac{(k+1)(k+2)}{2}\,.
-\]</span> The RHS in the above expression is exactly the RHS of (<a href="revision.html#eq-formula-sum-naturals" class="quarto-xref"><span>A.12</span></a>) computed at <span class="math inline">\(n = k+1\)</span>. Therefore, we have shown that formula (<a href="revision.html#eq-formula-sum-naturals" class="quarto-xref"><span>A.12</span></a>) holds for <span class="math inline">\(n = k+1\)</span>.</li>
+\]</span> The RHS in the above expression is exactly the RHS of (<a href="#eq-formula-sum-naturals" class="quarto-xref"><span>2.18</span></a>) computed at <span class="math inline">\(n = k+1\)</span>. Therefore, we have shown that formula (<a href="#eq-formula-sum-naturals" class="quarto-xref"><span>2.18</span></a>) holds for <span class="math inline">\(n = k+1\)</span>.</li>
 </ol>
-<p>By the Principle of Induction, we then conclude that <span class="math inline">\(\alpha(n)\)</span> is true for all <span class="math inline">\(n \in \mathbb{N}\)</span>, which means that (<a href="revision.html#eq-formula-sum-naturals" class="quarto-xref"><span>A.12</span></a>) holds for all <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+<p>By the Principle of Induction, we then conclude that <span class="math inline">\(\alpha(n)\)</span> is true for all <span class="math inline">\(n \in \mathbb{N}\)</span>, which means that (<a href="#eq-formula-sum-naturals" class="quarto-xref"><span>2.18</span></a>) holds for all <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
 </div></details>
 </div>
 <div id="statements-about-sequences-of-numbers" class="Example" title="Statements about sequences of numbers">

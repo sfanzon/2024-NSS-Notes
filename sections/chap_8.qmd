@@ -12,11 +12,11 @@ $
 
 
 
-A series is the sum of all terms in a sequence:
+A series is the sum of all terms in a sequence $(a_n)$:
 $$
 a_1 + a_2 + a_3 + \ldots + a_n + \ldots 
 $$
-Since we are dealing with an infinite amount of terms, we need to be careful.
+Since we are dealing with infinitely many terms, we need to be careful.
 For example, consider the series
 $$
 \sum_{n=1}^\infty (-1)^n = -1 + 1 - 1 + 1 - 1 + 1 - \ldots 
@@ -27,12 +27,30 @@ $$
 $$
 If we reorder the terms, we obtain a different result
 \begin{align*}
-\sum_{k=1}^\infty (-1)^n & = (1 + 1) - 1 + (1 + 1) - 1 + \ldots  \\
+\sum_{n=1}^\infty (-1)^n & = (1 + 1) - 1 + (1 + 1) - 1 + \ldots  \\
                          & = (2 - 1) + (2 - 1) + \ldots \\
                          & = 1 + 1 + \ldots \\
                          & = \infty \,. 
 \end{align*}
-Therefore commutativity of the sum does not hold when summing infinitely many terms. We need a good definition of convergence.
+We can also swap terms pairwise, and then sum each pair, starting from the second term. This way we obtain
+\begin{align*}
+\sum_{k=1}^\infty (-1)^n & = (-1 + 1) + (-1 + 1) + (-1 + 1) + \ldots  \\
+                         & = (1 - 1) + (1 - 1) + (1 - 1) + \ldots  \\
+                         & = 1 + (-1+ 1) + (-1 + 1) + (-1 + 1) + \ldots  \\
+                         & = 1  \,.
+\end{align*}
+If we do one more swap, and start summing each pair starting from the third term, we get 
+\begin{align*}
+\sum_{k=1}^\infty (-1)^n & = 1 + (-1+ 1) + (-1 + 1) + (-1 + 1) + \ldots  \\
+                         & = 1 + (1 -1) + (1 - 1) + (1 - 1) + \ldots  \\
+                         & = 1 + 1 + (-1 + 1) + (-1+ 1) + \ldots  \\
+                         & = 2 \,.
+\end{align*}
+With similar arguments, we see that we can rearrange terms so that
+$$
+\sum_{n=1}^\infty (-1)^n  = m \,,
+$$
+for each $m \in \Z$. This example shows that commutativity of the sum does not hold when summing infinitely many terms: The result of the sum depends on the order in which we sum. This means we need a good definition of convergence for series.
 
 
 ## Convergent series
@@ -90,55 +108,73 @@ is **divergent** if the sequence of partial sums $(s_k)$ is divergent.
 :::
 
 
-::: Example 
-Consider the series
+::: Example
+
+**Question.** Prove that 
 $$
-\sum_{n=1}^{\infty} \frac{1}{n(n+1)} \,.
+\sum_{n=1}^{\infty} \frac{1}{n(n+1)} = 1  \,.
 $$
-Note that
+
+**Solution.** The idea to prove convergence is to split the general term into the sum of two fraction:
+\begin{align*}
+\frac{1}{n(n+1)} & = \frac{A}{n} + \frac{B}{n(n+1)} \\
+                 & = \frac{A(n+1) + Bn}{n(n+1)} \\
+                 & = \frac{(A+B)n+A}{n(n+1)} \,.
+\end{align*}
+In order for the LHS and RHS to be the same, we need to impose
+$$
+(A+B)n+A = 1 \,,
+$$
+which holds if and only if 
+$$
+A+ B = 1 , \,\, A = 1 \quad \implies \quad A =1 ,\,\, B = - 1\,.
+$$
+Therefore, we conclude that
 $$
 \frac{1}{n(n+1)}=\frac{1}{n}-\frac{1}{n+1} \,.
 $$
-Hence, we can compute the partial sums $s_{n}$ as follows:
+We can now compute the partial sums $s_{k}$ as follows:
 \begin{align*}
 s_{k} & =\sum_{n=1}^{k} \frac{1}{n(n+1)} \\
 & =\sum_{n=1}^{k}\left(\frac{1}{n}-\frac{1}{n+1}\right) \\
 & =\frac{1}{1}-\frac{1}{2}+\frac{1}{2}-\frac{1}{3}+\frac{1}{3}-\frac{1}{4}+\ldots+\frac{1}{k}-\frac{1}{k+1} \\
 & =1-\frac{1}{k+1} .
 \end{align*}
-Since,
+Therefore,
 $$
 \lim_{k \rightarrow \infty} s_{k}=\lim _{k \rightarrow \infty}\left(1-\frac{1}{k+1}\right)=1 \,,
 $$
-the series converges to $1$, that is,
+which means that the series converges to $1$, that is,
 $$
 \sum_{n=1}^{\infty} \frac{1}{n(n+1)}=1 \,.
 $$
-A series of this kind is called a **telescopic sum**, since we can *fold* the entire partial sum together, in such a way that only two terms remain.
+A series of this kind is called a **telescopic series**, since we can *fold* the entire partial sum together, in such a way that only two terms remain.
+
 :::
 
 Let us go back to the series considered in (@eq-series-introduction).
 
 ::: Example 
 
-Consider the series
+**Question.** Prove that the following series diverges
 $$
 \sum_{n=1}^{\infty}(-1)^{n} \,.
 $$
-The partial sums $s_{k}$ are given by
+
+**Solution.** The partial sums $s_{k}$ are given by
 $$
 s_{k}=\sum_{n=1}^{k}(-1)^{n}= 
 \begin{cases}-1 & \text { if } \, n \, \text { is odd }  \, \\ 
 0 & \text { if } \, n  \, \text { is even. }\end{cases}
 $$
-Therefore $s_{k}$ diverges, so also the series diverges.
+Therefore $s_{k}$ diverges, so also the series $\sum (-1)^{n}$ diverges.
 
 :::
 
 
-In general, it is a difficult taks to compute the exact value of a series. Therefore, we will mainly focus our effort on determining whether a series converges or not. 
+In general, it is a difficult taks to compute the exact sum of a series. Therefore, we will mainly focus our effort on determining whether a series converges or not. 
 
-The following theorem shows that if the terms in the sequence do not converge to $0$, then the series cannot converge.
+The following Theorem shows that if the terms in the sequence do not converge to $0$, then the series cannot converge.
 
 ::: Theorem 
 ### Necessary Condition for Convergence {#theorem-series-necessary}
@@ -221,15 +257,17 @@ by Theorem \ref{theorem-series-necessary}.
 
 ::: Example 
 
-Consider the series
+**Question.** Discuss converge/divergence for the following series
 $$
 \sum_{n=1}^{\infty} \frac{n}{5 n+11} \,.
 $$
-Then
+
+**Solution.**
+We have
 $$
 a_{n}:=\frac{n}{5 n+11}=\frac{1}{5 + \dfrac{11}{n} } \longrightarrow \frac{1}{5} \neq 0 \,.
 $$
-Hence, the series does not converge.
+Hence, the series $\sum a_n$ diverges.
 
 :::
  
@@ -249,24 +287,29 @@ associated series, as shown in the example below.
 
 ::: Example
 
-Consider the series
+**Question.** Discuss convergence/divergence for the following series
 $$
 \sum_{n=1}^\infty a_n \,, \quad a_n := \frac{1}{ \sqrt{n+1} + \sqrt{n} } \,.
 $$
-By the Algebra of Limits we have
+
+**Solution.** By the Algebra of Limits we have
 $$
 \lim_{n \to \infty} a_n = 0 \,.
 $$
-However the partial sums are given by
+Therefore, we cannot conclude anything yet: The series might converge or diverge. Let us compute the partial sums:
+\begin{align*}
+s_k & = \sum_{n=1}^k \frac{1}{ \sqrt{k+1} + \sqrt{k} } \\
+    & = \sum_{n=1}^k \frac{1}{ \sqrt{k+1} + \sqrt{k} } \, \cdot \, \frac{\sqrt{k+1} - \sqrt{k}}{ \sqrt{k+1} - \sqrt{k} } \\
+    & = \sum_{n=1}^k \sqrt{k+1} - \sqrt{k} \\
+    & = \sqrt{2} - \sqrt{1} + \sqrt{3} - \sqrt{2} + \ldots + \sqrt{k+1} - \sqrt{k} \\
+    & = \sqrt{k+1} - 1 \,.
+\end{align*}
+We have shown that the partial sums are
 $$
 s_k = \sum_{n=1}^k a_n = \sqrt{k+1} - 1 \,.
 $$
-Therefore $(s_k)$ is divergent and so the series is divergent.
+Therefore $(s_k)$ is divergent, and so the series $\sum a_n$ is divergent.
 
-> Exercise: Prove by induction that 
-$$
-\sum_{n=1}^k a_n = \sqrt{k+1} - 1 \,.
-$$
 
 :::
 
@@ -291,7 +334,12 @@ $$
 
 ::: Example 
 
-We have seen that 
+**Question.** Prove that 
+$$
+\sum_{n=7}^{\infty} \frac{1}{n(n+1)} = \frac17 \,.
+$$
+
+**Solution.** We have seen that 
 $$
 \sum_{n=1}^{\infty} \frac{1}{n(n+1)} = 1 \,.
 $$
@@ -299,7 +347,7 @@ Hence also the series
 $$
 \sum_{n=7}^{\infty} \frac{1}{n(n+1)}
 $$
-converges. However, in this case, the partial sums are given by
+converges. In this case, the partial sums are given by
 \begin{align*}
 s_{k} & =\sum_{n=7}^{k} \frac{1}{n(n+1)} \\
       & =\sum_{n=7}^{k}\left(\frac{1}{n}-\frac{1}{n+1}\right) \\
@@ -315,8 +363,9 @@ $$
 
 
 
-## Geometric series
 
+
+## Geometric series
 
 ::: Definition
 ### Geometric Series in $\C$
@@ -355,8 +404,8 @@ Recall that the Geometric Sequence Test does not cover the case $|x|=1$, since i
 $$
 a_n = x^n
 $$
-could be convergent or divergent. However the Geometric Series
-Test covers the case $|x|=1$, in which case
+could be convergent or divergent. However, the Geometric Series
+Test does cover the case $|x|=1$, in which case
 $$
 \sum_{n=0}^{\infty} x^{n}
 $$
@@ -367,17 +416,27 @@ diverges.
 
 ::: Proof
 
-*Part 1*. Suppose that $|x|<1$. By using induction we prove that
+*Part 1*. Suppose that $|x|<1$. Let us compute the partial sums:
+\begin{align*}
+s_k & = \sum_{n=0}^k x^n \\
+    & = \sum_{n=0}^k x^n \cdot \frac{1-x}{1-x} \\
+    & = \sum_{n=0}^k \frac{x^n - x^{n+1}}{1-x} \\
+    & = \frac{1 - x}{1-x} + \frac{x - x^2}{1-x} + \ldots +  \frac{x^n - x^{n+1}}{1-x}  \\
+    & = \frac{1 - x^{k+1}}{1-x} \,.
+\end{align*}
+We have therefore shown that
 $$
-s_{k} := \sum_{n=0}^{k} x^{n}=\frac{1-x^{k+1}}{1-x} \,, \quad \forall \, k \in \N \,.
+s_{k} = \sum_{n=0}^{k} x^{n}=\frac{1-x^{k+1}}{1-x} \,, \quad \forall \, k \in \N \,.
 $${#eq-proof-geometric-series}
+Notice that (@eq-proof-geometric-series) could have also been proven by induction:
 
-- Base case: For $k=0$, we get that
+1. Base case: For $k=0$, we get that
 $$
-s_{0} = x^{0} = 1 = \frac{1-x^{1}}{1-x} \,.
+s_{0} = x^{0} = 1 = \frac{1-x^{1}}{1-x} \,,
 $$
+showing that (@eq-proof-geometric-series) holds.
 
-- Induction step: Let $k \in \N \cup \{0\}$ and suppose that 
+2. Induction step: Let $k \in \N \cup \{0\}$ and suppose that 
 $$
 s_{k}=\frac{1-x^{k+1}}{1-x} \,.
 $$
@@ -391,8 +450,7 @@ s_{k+1} & = s_{k}+x^{k+1} \\
 \end{align*}
 concluding the proof of the inductive step.
 
-
-By the Principle of Induction formula (@eq-proof-geometric-series) holds for all $k \in \N$.
+By the Principle of Induction, formula (@eq-proof-geometric-series) holds for all $k \in \N$.
 Since $|x|<1$, by the Geometric Sequence Test we infer 
 $$
 \lim_{k \to \infty} \, x^{k} = 0 \,.
@@ -434,33 +492,44 @@ diverges by the Necessary Condition in Theorem \ref{theorem-series-necessary}.
 
 
 
-Let us show some applications of the Geometric Series Test of Theorem \ref{theorem-geometric-series-test}.
+Let us apply the Geometric Series Test of Theorem \ref{theorem-geometric-series-test} to some examples.
 
 
 ::: Example 
 
-- Since $\left|\frac{1}{2}\right|<1$ we have
+**Question.** Discuss convergence/divergence of the following series. If the series converges, compute the limit.
+\begin{align*}
+& \sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}\,, & \quad 
+\sum_{n=0}^{\infty}\left(-\frac{3}{2}\right)^{n} \,, \\
+& \sum_{n=0}^{\infty}\left(\frac{-3}{4}\right)^{n}\,, & \quad
+\sum_{n=0}^{\infty}(-1)^{n} \,.
+\end{align*}
+
+
+**Solution.**
+
+1. Since $\left|\frac{1}{2}\right|<1$, by the GST we have
 $$
 \sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}=\frac{1}{1-\dfrac{1}{2}}=2
 $$
 
-- Since $\left|\frac{-3}{2}\right|=\frac{3}{2}>1$
+2. Since $\left|\frac{-3}{2}\right|=\frac{3}{2}>1$, by the GST
 the series 
 $$
-\sum_{n=0}^{\infty}\left(\frac{-3}{2}\right)^{n}
+\sum_{n=0}^{\infty}\left(-\frac{3}{2}\right)^{n}
 $$ 
-does not converge.
+diverges.
 
-- Since $\left|\frac{-3}{4}\right|=\frac{3}{4}<1$, we have
+3. Since $\left|\frac{-3}{4}\right|=\frac{3}{4}<1$, we have
 $$
 \sum_{n=0}^{\infty}\left(\frac{-3}{4}\right)^{n}=\frac{1}{1-\dfrac{-3}{4}}=\frac{1}{\dfrac{7}{4}}=\frac{4}{7}
 $$
 
--  Since $|-1|=1$, the series 
+4. Since $|-1|=1$, the series 
 $$
 \sum_{n=0}^{\infty}(-1)^{n}
 $$ 
-does not converge.
+diverges.
 
 
 :::
@@ -479,11 +548,17 @@ $$
 
 ::: Example 
 
-We have that
-
-$$\sum_{n=1}^{\infty}\left(\frac{1}{2}\right)^{n}=   
-\frac{ \dfrac{1}{2}}{1- \dfrac{1}{2}} = 1 \,.
+**Question.** Prove that 
 $$
+\sum_{n=1}^{\infty}\left(\frac{1}{2}\right)^{n} = 1 \,.
+$$
+
+**Solution.** We have that
+\begin{align*}
+\sum_{n=1}^{\infty}\left(\frac{1}{2}\right)^{n} & =    
+\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} - 1 \\
+& = \frac{1}{1- \dfrac{1}{2}} - 1 = 1\,.
+\end{align*}
 
 :::
 
@@ -493,48 +568,41 @@ The Geometric Series Test of Theorem \ref{theorem-geometric-series-test} can be 
 
 ::: Example 
 
-- Consider the series 
+**Question.** Discuss convergence/divergence of the following series. If the series converges, compute the limit.
 $$
-\sum_{n=0}^{\infty} \frac{1}{(1+i)^{n}} \,.
+\sum_{n=0}^{\infty} \frac{1}{(1+i)^{n}} \,, \quad 
+\sum_{n=0}^{\infty}\left(\frac{1-5 i}{3+3 i}\right)^{n} \,, \quad 
+\sum_{n=0}^{\infty}\left(\frac{2+i}{3-2 i}\right)^{n} \,.
 $$
-Since 
+
+
+**Solution.**
+
+1. We have
 $$
 \frac{1}{(1+i)^{n}}=\left(\frac{1}{1+i}\right)^{n}
 $$
 and 
 $$
-\left|\frac{1}{1+i}\right| = \frac{1}{\sqrt{1^{2}+1^{2}}} = \frac{1}{\sqrt{2}} < 1\,,
+\left|\frac{1}{1+i}\right| = \frac{1}{\sqrt{1^{2}+1^{2}}} = \frac{1}{\sqrt{2}} < 1\,.
 $$
-Therefore the series converges by the Geometric Series Test, and
+Therefore, the series converges by the Geometric Series Test, and
+$$
+\sum_{n=0}^{\infty} \frac{1}{(1+i)^{n}} = \frac{1}{1-\dfrac{1}{1+i}} = 1-i \,.
+$$
+
+
+
+2. Since
 \begin{align*}
-\sum_{n=0}^{\infty} \frac{1}{(1+i)^{n}} & = \frac{1}{1-\dfrac{1}{1+i}} \\
-                                        & = \frac{1}{\dfrac{1+i-1}{1+i}} \\
-                                        & = \frac{1+i}{i} \\
-                                        & = \frac{(1+i) i}{i^{2}} \\
-                                        & = \frac{i-1}{-1} \\
-                                        & = 1-i \,.
+\left|\frac{1-5 i}{3+3 i}\right| & = \frac{|1-5 i|}{|3+3 i|}  \\
+                                  & =\frac{\sqrt{(1)^{2}+(-5)^{2}}}{3\sqrt{1^{2}+1^{2}}} \\
+                                  & = \frac{\sqrt{26}}{3\sqrt{2}}  \\
+                                  & =\frac{\sqrt{13}}{3} > 1 \,,
 \end{align*}
+the series diverges by the Geometric Series Test.
 
-
-
-- Consider the series 
-$$
-\sum_{n=0}^{\infty}\left(\frac{-5-5 i}{3+3 i}\right)^{n} \,.
-$$
-Since
-\begin{align*}
-\left|\frac{-5-5 i}{3+3 i}\right| & = \frac{|-5-5 i|}{|3+3 i|}  \\
-                                  & =\frac{\sqrt{(-5)^{2}+(-5)^{2}}}{\sqrt{3^{2}+3^{2}}} \\
-                                  & = \sqrt{\frac{50}{18}} \\
-                                  & =\frac{5}{3} > 1 \,,
-\end{align*}
-the above series does not converge.
-
-- Consider the series 
-$$
-\sum_{n=0}^{\infty}\left(\frac{2+i}{3-2 i}\right)^{n} \,.
-$$
-We have
+3. We have
 \begin{align*}
 \left|\frac{2+i}{3-2 i}\right| & = \frac{|2+i|}{|3-2 i|} \\
                                & = \frac{\sqrt{2^{2}+1^{2}}}{\sqrt{3^{2}+(-2)^{2}}} \\
@@ -547,7 +615,6 @@ Therefore the series converges by the Geometric Series Test, and
 & = \frac{3-2 i}{1-3 i} \\
 & = \frac{3-2 i}{1-3 i} \, \frac{1+3 i}{1+3 i} \\
 & = \frac{3-2 i+9 i-6 i^{2}}{1-9 i^{2}} \\
-& = \frac{9+7 i}{10} \\
 & = \frac{9}{10} + \frac{7}{10} i
 \end{align*}
 
@@ -635,23 +702,22 @@ Let us apply the Algebra of Limits for Series to a concrete example.
 
 ::: Example 
 
-Consider the following series
+**Question.** Prove that
+$$
+\sum_{n=0}^{\infty}\left(2\left(\frac{1}{3}\right)^{n}+\left(\frac{2}{3}\right)^{n}\right) = 6 \,.
+$$
 
-$$
-\sum_{n=0}^{\infty}\left(2\left(\frac{1}{3}\right)^{n}+\left(\frac{2}{3}\right)^{n}\right) \,.
-$$
-Note that
-$$
-\sum_{n=0}^{\infty}\left(\frac{1}{3}\right)^{n}=\frac{1}{1-\dfrac{1}{3}}=\frac{3}{2} \,, \quad 
-\sum_{n=0}^{\infty}\left(\frac{2}{3}\right)^{n}=\frac{1}{1-\dfrac{2}{3}}=3 \,,
-$$
-by the Geometric Series Test of Theorem \ref{theorem-geometric-series-test}.
-Therefore we can apply the Algebra of Limit for Series to conclude
+**Solution.** Note that
+\begin{align*}
+\sum_{n=0}^{\infty}\left(\frac{1}{3}\right)^{n} & =\frac{1}{1-\dfrac{1}{3}}=\frac{3}{2} \,, \\
+\sum_{n=0}^{\infty}\left(\frac{2}{3}\right)^{n} & =\frac{1}{1-\dfrac{2}{3}}=3 \,,
+\end{align*}
+by the Geometric Series Test. Therefore, we can apply the Algebra of Limit for Series to conclude that
 \begin{align*}
 \sum_{n=0}^{\infty}\left(2\left(\frac{1}{3}\right)^{n}+\left(\frac{2}{3}\right)^{n}\right) & 
 =
-2 \cdot \sum_{n=0}^{\infty} \left(\frac{1}{3}\right)^{k} 
-+ \sum_{n=0}^{\infty} \left(\frac{2}{3}\right)^{k} \\ 
+2 \cdot \sum_{n=0}^{\infty} \left(\frac{1}{3}\right)^{n} 
++ \sum_{n=0}^{\infty} \left(\frac{2}{3}\right)^{n} \\ 
 & = 2 \cdot \frac{3}{2} + 3 = 6
 \end{align*}
 
@@ -690,7 +756,7 @@ Let us give two examples to show that formulas (@eq-product-series) and (@eq-quo
 
 ::: Example 
 
-- We know that
+1. We know that
 $$
 \sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}=\frac{1}{1-\dfrac{1}{2}}=2 \,.
 $${#eq-product-series-2}
@@ -710,10 +776,10 @@ $$
 Hence 
 $$
 \left(\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \right) \cdot 
-\left(\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \right)  = 4 \neq \frac{4}{3} = \sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \cdot\left(\frac{1}{2}\right)^{n} \,.
+\left(\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \right)   \neq \sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \cdot\left(\frac{1}{2}\right)^{n} \,.
 $$
 
-- Using (@eq-product-series-2) we have
+2. Using (@eq-product-series-2) we have
 $$
 \frac{\displaystyle\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}}{\displaystyle\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}} = \frac{2}{2} = 1 \,.
 $$
@@ -794,20 +860,25 @@ $$
 $$
 there are only $2$ options:
 
-- $\sum_{n=1}^\infty a_n$ converges,
-- $\sum_{n=1}^\infty a_n$ diverges to $+\infty$.
+1. $\sum_{n=1}^\infty a_n$ converges,
+2. $\sum_{n=1}^\infty a_n$ diverges to $+\infty$.
 
 This is because the partial sums $(s_k)$ are increasing. Therefore we have either:
 
-- $(s_k)$ is bounded above: Then $s_k$ converges by the Monotone Convergence Theorem
-- $(s_k)$ is not bounded above: Therefore $s_k$ diverges to $+\infty$.
+1. $(s_k)$ is bounded above: Then $s_k$ converges by the Monotone Convergence Theorem
+2. $(s_k)$ is not bounded above: Therefore $s_k$ diverges to $+\infty$.
 
 
-We present several tests for the convergence of non-negative series. 
+We present 4 test for the convergence of non-negative series:
+
+1. Cauchy Condensation Test 
+2. Comparison Test
+3. Limit Comparison Test
+4. Ratio Test (positive series only)
+
 
 
 ### Cauchy Condensation Test
-
 
 Let us start with the study of the two non-negative series:
 $$
@@ -822,7 +893,7 @@ Do the above series converge or diverge?
 :::
 
 
-The answer is that the first series converges, while the second diverges.
+Answer: the first series converges, while the second diverges.
 We prove it in the next two theorems.
 
 
@@ -925,7 +996,7 @@ Hence
 $$
 s_{2^k} > 1 + k \left( \frac{1}{2} \right) \,, \quad \forall \, k \in \N \,,
 $$
-showing that $s_{2^k}$ is unbounded. Therefore $s_k$ is unbounded, and $s_k$ does not converge. Therefore the series
+showing that $s_{2^k}$ is unbounded. Therefore $s_k$ is unbounded, and $s_k$ does not converge. We conclude that the series
 $$
 \sum_{n=1}^\infty \frac1n
 $$
@@ -948,17 +1019,15 @@ a_{n} \geq a_{n+1} \,, \quad \forall \, n \in \N \,.
 $$
 They are equivalent:
 
-1. The series 
+1. The following series converges
 $$
-\sum_{n=1}^\infty a_n
+\sum_{n=1}^\infty a_n \,.
 $$ 
-converges.
 
-2. The series
+2. The following series converges
 $$
 \sum_{n=0}^\infty 2^n a_{2^n} = a_1 + 2a_2 + 8a_8 + 16 a_{16} + \ldots 
 $$
-converges. 
 
 :::
 
@@ -1117,19 +1186,16 @@ and the latter is a Geometric Series of ratio
 $$
 x := 2^{1-p} \,.
 $$
-By the Geometric Series Test, we have convergence of 
+By the Geometric Series Test, we have convergence if and only if 
 $$
-\sum_{n=0}^\infty (2^{1-p})^{n} 
+|x| < 1 \,,
 $$
-if and only if 
-$$
-|x| < 1 \,.
-$$
-The above is equivalent to
-$$
-2^{1-p} < 1 = 2^0 \quad \iff \quad
-1 - p < 0 \quad \iff \quad p > 1 \,.
-$$
+which is equivalent to
+\begin{align*}
+2^{1-p} < 1 = 2^0  \quad &  \iff \quad
+1 - p < 0 \\
+&  \iff \quad p > 1 \,.
+\end{align*}
 Therefore 
 $$
 \sum_{n=1}^\infty \frac{1}{n^p}
@@ -1205,11 +1271,10 @@ $$
 a_{n} \leq b_{n} \,, \quad \, \forall \, n \geq N \,.
 $$
 They hold:
-
-1. If $\sum_{n=1}^{\infty} b_{n}$ converges, then also $\sum_{n=1}^{\infty} a_{n}$ converges.
-
-2. If $\sum_{n=1}^{\infty} a_{n}$ diverges, then also $\sum_{n=1}^{\infty} b_{n}$ diverges.
-
+\begin{align*}
+\sum_{n=1}^{\infty} b_{n} & \,\, \text { converges } \Longrightarrow \quad \sum_{n=1}^{\infty} a_{n} \,\, \text { converges, } \\
+\sum_{n=1}^{\infty} a_{n} & \,\, \text { diverges } \Longrightarrow \quad \sum_{n=1}^{\infty} b_{n} \,\, \text { diverges. }
+\end{align*}
 
 :::
 
@@ -1229,7 +1294,7 @@ converges. Hence also the series
 $$
 \sum_{n=N}^{\infty} b_{n}
 $$
-converges. Then $(t_k)$ is a convergent sequence, which implies that $(t_k)$ is bounded, and hence bounded above. We have that $s_k$ is bounded above: Indeed, using the assumption, we have
+converges. Then $(t_k)$ is a convergent sequence, which implies that $(t_k)$ is bounded, and hence bounded above. Moreover, by assumption
 \begin{align*}
 s_k & = a_N + a_{N+1} + \ldots + a_k \\
     & \leq b_N + b_{N+1} + \ldots + b_k \\
@@ -1262,11 +1327,18 @@ Let us give two applications of the Comparison Test.
 
 ::: Example 
 
-- Consider the series
+**Question.** Discuss convergence/divergence of the following series:
 $$
-\sum_{n=1}^{\infty} \frac{1}{n^{2}+3 n-1} \,.
+\sum_{n=1}^{\infty}  \frac{1}{n^{2}+3 n-1} \,,
 $${#eq-comparison-example-1}
-Since $3 n-1 \geq 0$ for all $n \in \N$, we get
+$$
+\sum_{n=0}^{\infty} \frac{3^{n}+6 n+\dfrac{1}{n+1}}{2^{n}} \,.
+$${#eq-comparison-example-2}
+
+
+**Solution.**
+
+1. Since $3 n-1 \geq 0$ for all $n \in \N$, we get
 $$
 \frac{1}{n^{2}+3 n-1} \leq \frac{1}{n^{2}} \,, \quad \forall \, n \in \N \,.
 $$
@@ -1277,11 +1349,7 @@ $$
 converges. Therefore also the series at (@eq-comparison-example-1) converges by the Comparison Test in Theorem \ref{theorem-comparison-test}.
 
 
-- Consider the series
-$$
-\sum_{n=0}^{\infty} \frac{3^{n}+6 n+\dfrac{1}{n+1}}{2^{n}} \,.
-$${#eq-comparison-example-2}
-Note that
+2. Note that
 $$
 \frac{3^{n}+6 n+\dfrac{1}{n+1}}{2^{n}} \geq \frac{3^{n}}{2^{n}}=\left(\frac{3}{2}\right)^{n} \,, \quad \forall \, n \in \N \,.
 $$
@@ -1315,10 +1383,10 @@ b_n \leq a_n \,, \quad \forall \, n \geq N \,.
 $$
 This is not always possible. However, one might be able to show that 
 $$
-L = \lim_{n\to \infty} \frac{a_n}{b_n}
+\lim_{n\to \infty} \frac{a_n}{b_n} = L
 $$
 for some $L \in \R$. In this case, the series of $(a_n)$ and $(b_n)$ can still be compared, 
-in the sense specified in the below theorem.
+in the sense specified in the Theorem below.
 
 
 
@@ -1341,10 +1409,10 @@ $$
 $$
 
 2. If $L=0$, then
-
-      - If $\sum_{n=1}^{\infty} b_{n}$ converges also $\sum_{n=1}^{\infty} a_{n}$ converges,
-
-      - If $\sum_{n=1}^{\infty} a_{n}$ diverges also $\sum_{n=1}^{\infty} b_{n}$ diverges.
+\begin{align*}
+\sum_{n=1}^{\infty} b_{n} & \,\, \text { converges } \Longrightarrow \quad \sum_{n=1}^{\infty} a_{n} \,\, \text { converges, } \\
+\sum_{n=1}^{\infty} a_{n} & \,\, \text { diverges } \Longrightarrow \quad \sum_{n=1}^{\infty} b_{n} \,\, \text { diverges. }
+\end{align*}
 
 ::: 
 
@@ -1374,15 +1442,15 @@ $$
 $$
 We are now ready to prove the main claim:
 
-- Suppose that
+1. Suppose that
 $$
 \sum_{n=1}^{\infty} a_{n}
 $$ 
 converges. Then also 
 $$
-\sum_{n=N}^{\infty} a_{n} \,,
+\sum_{n=N}^{\infty} a_{n} 
 $$ 
-since we are only discarding a finite number of terms. As 
+converges, since we are only discarding a finite number of terms. As 
 $$
 \frac{L}{2} b_{n} \leq a_{n} \,, \quad \forall \, n \geq N \,,
 $$ 
@@ -1396,7 +1464,7 @@ $$
 $$
 converges.
 
-- Suppose that 
+2. Suppose that 
 $$
 \sum_{n=1}^{\infty} b_{n}
 $$ 
@@ -1418,8 +1486,13 @@ $$
 $$ 
 converges.
 
-*Part 2.* Suppose that $L = 0$. Note that the second bullet point is the contrapositive of the first. Hence we only need to show the first bullet point. Let $\e = 1$. Since $a_n / b_n \to 0$, 
-there exists $N \in \N$ such that 
+
+
+*Part 2.* Suppose that $L = 0$. Note that the second condition is the contrapositive of the first. Hence we only need to show that
+$$
+\sum_{n=1}^{\infty} b_{n}  \,\, \text { converges } \Longrightarrow \quad \sum_{n=1}^{\infty} a_{n} \,\, \text { converges. }
+$$
+Let $\e = 1$. Since $a_n / b_n \to 0$, there exists $N \in \N$ such that 
 $$
 \left|\frac{a_{n}}{b_{n}}-0\right| < \e = 1 \,, \quad \forall \, n \geq N \,. 
 $$ 
@@ -1438,7 +1511,11 @@ It might happen that
 $$
 \lim_{n \to \infty } \, \frac{a_{n}}{b_{n}} = \infty \,.
 $$
-In this case it can be helpful to interchange the roles of $a_{n}$ and $b_{n}$, since then 
+In this case, we can still apply the Limit Comparison Test to the series
+$$
+\sum_{n=1}^\infty \frac{1}{b_n /a_n} \,,
+$$
+since in this case
 $$
 \lim_{n \to \infty } \, \frac{b_{n}}{a_{n}} = 0 \,.
 $$
@@ -1451,12 +1528,12 @@ Let us give a few applications of the Limit Comparison Tets.
 
 ::: Example 
 
-The following series converges
+**Question.** Prove that the following series converges
 $$
 \sum_{n=1}^{\infty} \frac{2 n^{3}+5 n+1}{7 n^{6}+2 n+5} \,.
 $$
 
-> *Proof*. Set
+**Solution.** Set
 $$
 a_n :=  \frac{2 n^{3}+5 n+1}{7 n^{6}+2 n+5}\,, \quad 
 b_n := \frac{1}{n^3} \,.
@@ -1473,7 +1550,11 @@ The series
 $$
 \sum_{n=1}^{\infty} \frac{1}{n^{3}}
 $$ 
-converges, being a $p$-series with $p =3 > 1$. Since $L = \frac{2}{7}>0$, also the series of interest converges, by the Limit Comparison Test.
+converges, being a $p$-series with $p =3 > 1$. Since $L = \frac{2}{7}>0$, also the series
+$$
+\sum_{n=1}^{\infty} \frac{2 n^{3}+5 n+1}{7 n^{6}+2 n+5} 
+$$
+converges, by the Limit Comparison Test.
 
 :::
 
@@ -1481,12 +1562,12 @@ converges, being a $p$-series with $p =3 > 1$. Since $L = \frac{2}{7}>0$, also t
 
 ::: Example 
 
-Prove that the following series diverges 
+**Question.** Prove that the following series diverges 
 $$
 \sum_{n=1}^{\infty} \frac{n+\cos (n)}{n^{2}} \,.
 $$
 
-> *Proof.* We expect the terms in the series to behave like $1/n$ for large $n$. Hence we set
+**Solution.** Since $\sin(n)$ is bounded, we expect the terms in the series to behave like $1/n$ for large $n$. Hence we set
 $$
 a_n := \frac{n+\cos (n)}{n^{2}} \,, \quad b_n = \frac{1}{n} \,.
 $$
@@ -1517,7 +1598,11 @@ The harmonic series
 $$
 \sum_{n=1}^{\infty} \frac{1}{n}
 $$ 
-does not converge. Since $L = 1 > 0$, the series of interest diverges by the Limit Comparison Test.
+diverges. Since $L = 1 > 0$, the series
+$$
+\sum_{n=1}^{\infty} \frac{n+\cos (n)}{n^{2}} \,.
+$$
+diverges by the Limit Comparison Test.
 
 :::
 
@@ -1525,13 +1610,13 @@ does not converge. Since $L = 1 > 0$, the series of interest diverges by the Lim
 
 ::: Example
 
-Prove that the series 
+**Question.** Prove that the following series converges
 $$
-\sum_{n=1}^\infty \left( 1 - \cos\left( \frac{1}{n} \right) \right)
+\sum_{n=1}^\infty \left( 1 - \cos\left( \frac{1}{n} \right) \right) \,.
 $$
-converges.
 
->*Solution.* Since 
+
+**Solution.** Since 
 $$
 \cos \left( \frac{1}{n} \right) \leq 1 \,,
 $$
@@ -1577,15 +1662,16 @@ Sometimes the Limit Comparison Test fails, but the Comparison Test works.
 
 ::: Example 
 
-Consider the series
+**Question.** Prove that the following series converges
 $$
 \sum_{n=1}^{\infty} \frac{1+\sin (n)}{n^{2}} \,.
 $$
-Since 
+
+**Solution.** Since 
 $$
 \sin (n) \geq-1 \,,
 $$
-the above is a non-negative series. We expect this series to behave similar to 
+the above is a non-negative series. As $\sin(n)$ is bounded, we the series to behave similar to 
 $$
 \sum_{n=1}^{\infty} \frac{1}{n^{2}} \,.
 $$ 

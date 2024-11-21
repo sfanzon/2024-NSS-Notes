@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Introduction – Numbers, Sequences and Series</title>
+<title>1&nbsp; Introduction – Numbers Sequences and Series</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -96,7 +96,47 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
 .Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -108,55 +148,15 @@ div.csl-indent {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
 }
 .Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Warning {
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -202,11 +202,11 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Numbers, Sequences and Series</span>
+    <span class="navbar-title">Numbers Sequences and Series</span>
     </a>
   </div>
         <div class="quarto-navbar-tools tools-end">
-    <a href="../Numbers,-Sequences-and-Series.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <a href="../Numbers-Sequences-and-Series.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           <div id="quarto-search" class="" title="Search"></div>
@@ -295,23 +295,6 @@ window.Quarto = {
  <span class="menu-text">References</span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../sections/revision.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Revision Guide</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -456,18 +439,18 @@ Figure&nbsp;1.1: Representation of integers <span class="math inline">\(\mathbb{
 \]</span> by <strong>contradiction</strong>.</p>
 <p>Wait, what does this mean? Proving the claim by contradiction means assuming that the claim is <strong>false</strong>. This means we <strong>assume</strong> that <span id="eq-contradiction-root-2-false"><span class="math display">\[
 \sqrt{2} \in \mathbb{Q}\,.
-\tag{1.4}\]</span></span> From this assumption we then start deducing other statements, hoping to encounter a statement which is <strong><code>FALSE</code></strong>. But if (<a href="revision.html#eq-contradiction-root-2-false" class="quarto-xref"><span>A.1</span></a>) leads to a false statement, then it must be that (<a href="revision.html#eq-contradiction-root-2-false" class="quarto-xref"><span>A.1</span></a>) was <strong><code>FALSE</code></strong> to begin with. Thus the contrary of (<a href="revision.html#eq-contradiction-root-2-false" class="quarto-xref"><span>A.1</span></a>) must hold, meaning that <span class="math display">\[
+\tag{1.4}\]</span></span> From this assumption we then start deducing other statements, hoping to encounter a statement which is <strong><code>FALSE</code></strong>. But if (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>) leads to a false statement, then it must be that (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>) was <strong><code>FALSE</code></strong> to begin with. Thus the contrary of (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>) must hold, meaning that <span class="math display">\[
 \sqrt{2} \notin \mathbb{Q}
 \]</span> as we wanted to show. This would conclude the proof.</p>
-<p>Now we need to actually show that assuming (<a href="revision.html#eq-contradiction-root-2-false" class="quarto-xref"><span>A.1</span></a>) will lead to a contradiction. Since this is our first proof, let us take it slowly, step-by-step.</p>
+<p>Now we need to actually show that assuming (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>) will lead to a contradiction. Since this is our first proof, let us take it slowly, step-by-step.</p>
 <ol type="1">
-<li><p>Assuming (<a href="revision.html#eq-contradiction-root-2-false" class="quarto-xref"><span>A.1</span></a>) just means that there exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span id="eq-contradiction-root-2"><span class="math display">\[
+<li><p>Assuming (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>) just means that there exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span id="eq-contradiction-root-2"><span class="math display">\[
 q = \sqrt{2} \, .
 \tag{1.5}\]</span></span></p></li>
 <li><p>Since <span class="math inline">\(q \in \mathbb{Q}\)</span>, by definition we have <span class="math display">\[
 q = \frac{m}{n}
 \]</span> for some <span class="math inline">\(m,n \in \mathbb{N}\)</span> with <span class="math inline">\(n \neq 0\)</span>.</p></li>
-<li><p>Recalling (<a href="revision.html#eq-contradiction-root-2" class="quarto-xref"><span>A.2</span></a>), we then have <span class="math display">\[
+<li><p>Recalling (<a href="#eq-contradiction-root-2" class="quarto-xref"><span>1.5</span></a>), we then have <span class="math display">\[
 \frac{m}{n} = \sqrt{2} \,.
 \]</span></p></li>
 <li><p>We can square the above equation to get <span id="eq-contradiction-root-2-2"><span class="math display">\[
@@ -481,11 +464,11 @@ m = a \tilde{m} \,, \quad n = a \tilde{n}
 \]</span> for some factor <span class="math inline">\(a \in \mathbb{N}\)</span> with <span class="math inline">\(a \neq 0\)</span>. Then <span class="math display">\[
 \frac{m}{n} = \frac{ a \tilde{m} }{ a \tilde{n} } =
 \frac{ \tilde{m} }{ \tilde{n} } \,.
-\]</span> Therefore by (<a href="revision.html#eq-contradiction-root-2-2" class="quarto-xref"><span>A.3</span></a>) <span class="math display">\[
+\]</span> Therefore by (<a href="#eq-contradiction-root-2-2" class="quarto-xref"><span>1.6</span></a>) <span class="math display">\[
 \frac{ \tilde{m}^2 }{ \tilde{n}^2 } = 2 \,.
 \]</span> and this time <span class="math inline">\(\tilde{m}\)</span> and <span class="math inline">\(\tilde{n}\)</span> have no common factors by construction. The proof can now proceed in the same way it would have proceeded from Step 4, but in addition we have the hypothesis that <span class="math inline">\(\tilde{m}\)</span> and <span class="math inline">\(\tilde{n}\)</span> have no common factors.</p>
 </blockquote></li>
-<li><p>Equation (<a href="revision.html#eq-contradiction-root-2-2" class="quarto-xref"><span>A.3</span></a>) implies <span id="eq-contradiction-root-2-3"><span class="math display">\[
+<li><p>Equation (<a href="#eq-contradiction-root-2-2" class="quarto-xref"><span>1.6</span></a>) implies <span id="eq-contradiction-root-2-3"><span class="math display">\[
 m^2 = 2 n^2 \,.
 \tag{1.7}\]</span></span> Therefore the integer <span class="math inline">\(m^2\)</span> is an even number.</p>
 <blockquote class="blockquote">
@@ -514,14 +497,14 @@ m^2 = (2p + 1 )^2 = 4p^2 + 4p + 1 = 2(2 p^2 + 2p) + 1
 \]</span> showing that also <span class="math inline">\(m^2\)</span> is odd.<br>
 This proves Step 7: Indeed we know that <span class="math inline">\(m^2\)</span> is an even number from Step 6. If <span class="math inline">\(m\)</span> was odd, then <span class="math inline">\(m^2\)</span> would be odd. Hence <span class="math inline">\(m\)</span> must be even as well.</p>
 </blockquote></li>
-<li><p>If we substitute (<a href="revision.html#eq-contradiction-root-2-4" class="quarto-xref"><span>A.5</span></a>) in (<a href="revision.html#eq-contradiction-root-2-3" class="quarto-xref"><span>A.4</span></a>) we get <span class="math display">\[
+<li><p>If we substitute (<a href="#eq-contradiction-root-2-4" class="quarto-xref"><span>1.8</span></a>) in (<a href="#eq-contradiction-root-2-3" class="quarto-xref"><span>1.7</span></a>) we get <span class="math display">\[
 m^2 = 2n^2 \, \implies \,  (2p)^2 = 2n^2 \, \implies \,  4 p^2 = 2 n^2
 \]</span> Dividing both terms by <span class="math inline">\(2\)</span>, we obtain <span id="eq-contradiction-root-2-5"><span class="math display">\[
 n^2 = 2p^2\,.
 \tag{1.9}\]</span></span></p></li>
 <li><p>We now make a series of observations:</p>
 <ul>
-<li>Equation (<a href="revision.html#eq-contradiction-root-2-5" class="quarto-xref"><span>A.6</span></a>) says that <span class="math inline">\(n^2\)</span> is even.</li>
+<li>Equation (<a href="#eq-contradiction-root-2-5" class="quarto-xref"><span>1.9</span></a>) says that <span class="math inline">\(n^2\)</span> is even.</li>
 <li>The same argument in Step 7 guarantees that also <span class="math inline">\(n\)</span> is even.</li>
 <li>We have already seen that <span class="math inline">\(m\)</span> is even.</li>
 <li>Therefore <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> are both even.<br>
@@ -530,7 +513,7 @@ n^2 = 2p^2\,.
 <li>But Step 5 says that <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> have no common factors.</li>
 <li><strong><code>CONTRADICTION</code></strong></li>
 </ul></li>
-<li><p>Our reasoning has run into a <strong>contradiction</strong>, stemming from assumption (<a href="revision.html#eq-contradiction-root-2-false" class="quarto-xref"><span>A.1</span></a>). Therefore (<a href="revision.html#eq-contradiction-root-2-false" class="quarto-xref"><span>A.1</span></a>) is <strong>FALSE</strong>, and so <span class="math display">\[
+<li><p>Our reasoning has run into a <strong>contradiction</strong>, stemming from assumption (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>). Therefore (<a href="#eq-contradiction-root-2-false" class="quarto-xref"><span>1.4</span></a>) is <strong>FALSE</strong>, and so <span class="math display">\[
 \sqrt{2} \notin \mathbb{Q}\,
 \]</span> ending the proof.</p></li>
 </ol>

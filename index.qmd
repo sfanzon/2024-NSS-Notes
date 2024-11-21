@@ -87,3 +87,24 @@ We will study the set of real numbers $\R$, and then sequences and series in $\R
 ::: {.callout-important}
 You are not expected to purchase any of the above books. These lecture notes will cover 100% of the topics you are expected to known in order to excel in the Homework and Final Exam.
 :::
+
+
+
+## Revision Guide {.unnumbered}
+
+A Revision Guide to prepare for the Exam is available at
+
+::: {.content-visible when-format="html"}
+<div style="text-align: center;">
+**[silviofanzon.com/2024-NSS-Revision](https://www.silviofanzon.com/2024-NSS-Revision)**
+</div>
+:::
+
+
+::: {.content-visible when-format="pdf"}
+\begin{center}
+\textbf{
+\href{https://www.silviofanzon.com/2024-NSS-Revision}{silviofanzon.com/2024-NSS-Revision}
+}
+\end{center}
+:::

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; Sequences in \mathbb{R} – Numbers, Sequences and Series</title>
+<title>6&nbsp; Sequences in \mathbb{R} – Numbers Sequences and Series</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,11 +72,43 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Remark {
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Example {
   --color1: #bce5de;
   --color2: #21aa93;
 }
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -84,9 +116,9 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
 .Proposition {
   --color1: #f4cce0;
@@ -96,47 +128,15 @@ ul.task-list li input[type="checkbox"] {
   --color1: #cce7b1;
   --color2: #86b754;
 }
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
 .Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Lemma {
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -182,11 +182,11 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Numbers, Sequences and Series</span>
+    <span class="navbar-title">Numbers Sequences and Series</span>
     </a>
   </div>
         <div class="quarto-navbar-tools tools-end">
-    <a href="../Numbers,-Sequences-and-Series.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <a href="../Numbers-Sequences-and-Series.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           <div id="quarto-search" class="" title="Search"></div>
@@ -275,23 +275,6 @@ window.Quarto = {
  <span class="menu-text">References</span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../sections/revision.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Revision Guide</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -549,7 +532,7 @@ N &gt; \frac{1}{\varepsilon}\,.
 N &gt; \frac{1}{\varepsilon^{1 / p}} \,.
 \tag{6.4}\]</span></span> Let <span class="math inline">\(n \geq N\)</span>. Since <span class="math inline">\(p&gt;0\)</span>, we have <span class="math inline">\(n^{p} \geq N^{p}\)</span>, which implies <span class="math display">\[
 \frac{1}{n^p} \leq \frac{1}{N^p} \,.
-\]</span> By (<a href="revision.html#eq-theorem-one-over-np-1" class="quarto-xref"><span>A.29</span></a>) we deduce <span class="math display">\[
+\]</span> By (<a href="#eq-theorem-one-over-np-1" class="quarto-xref"><span>6.4</span></a>) we deduce <span class="math display">\[
 \frac{1}{N^p} &lt; \varepsilon\,.
 \]</span> Then <span class="math display">\[
 \left|\frac{1}{n^{p}}-0\right|=\frac{1}{n^{p}} \leq \frac{1}{N^{p}} &lt; \varepsilon\,.
@@ -602,7 +585,7 @@ N  &gt; \frac{3}{4\varepsilon} - \frac{6}{4} \,.
 \forall \varepsilon&gt;0 \,, \, \exists \, N \in \mathbb{N}\, \text{ s.t. } \, \forall \, n \geq N \,, \, \left|\frac{n}{2n+3}-\frac{1}{2}\right| &lt; \varepsilon\,.
 \]</span> Let <span class="math inline">\(\varepsilon&gt;0\)</span>. Choose <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span id="eq-example-limit-1"><span class="math display">\[
 N &gt; \frac{3}{4\varepsilon} - \frac{6}{4}   \,.
-\tag{6.5}\]</span></span> By the rough work shown above, inequality (<a href="revision.html#eq-example-limit-1" class="quarto-xref"><span>A.30</span></a>) is equivalent to <span class="math display">\[
+\tag{6.5}\]</span></span> By the rough work shown above, inequality (<a href="#eq-example-limit-1" class="quarto-xref"><span>6.5</span></a>) is equivalent to <span class="math display">\[
 \frac{3}{4N + 6} &lt; \varepsilon\,.
 \]</span> Let <span class="math inline">\(n \geq N\)</span>. Then <span class="math display">\[\begin{align*}
 \left|\frac{n}{2n+3}-\frac{1}{2}\right|
@@ -1292,7 +1275,7 @@ b_n - L  \leq a_{n} - L \leq c_{n} - L \,.
 11 n^{2}-15 \leq 11 n^{2}+15 \sin (17 n) \leq  11 n^{2} + 15
 \]</span> and therefore <span id="eq-squeeze-example-2"><span class="math display">\[
 \frac{1}{11 n^{2} + 15} \leq \frac{1}{11 n^{2}+15 \sin (17 n)} \leq \frac{1}{11 n^{2}-15} \,.
-\tag{6.8}\]</span></span> Putting together (<a href="revision.html#eq-squeeze-example-1" class="quarto-xref"><span>A.31</span></a>)-(<a href="revision.html#eq-squeeze-example-2" class="quarto-xref"><span>A.32</span></a>) we obtain <span class="math display">\[
+\tag{6.8}\]</span></span> Putting together (<a href="#eq-squeeze-example-1" class="quarto-xref"><span>6.7</span></a>)-(<a href="#eq-squeeze-example-2" class="quarto-xref"><span>6.8</span></a>) we obtain <span class="math display">\[
 \frac{-1 + 9 n^{2}}{11 n^{2} + 15} \leq \frac{\cos (3 n)+9 n^{2}}{11 n^{2}+15 \sin (17 n)} \leq \frac{1+ 9 n^{2}}{11 n^{2}-15} \,.
 \]</span> By the Algebra of Limits we infer <span class="math display">\[
 \frac{-1+9 n^{2}}{11 n^{2}+15}=\frac{-\dfrac{1}{n^{2}} + 9}{11 + \dfrac{15}{n^{2}}} \to \frac{0+9}{11+0}=\frac{9}{11}
@@ -1357,7 +1340,7 @@ a_{n}:=x^{n} \,.
 </div>
 <div id="Warning*-19" class="Warning">
 <details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>
-<p>The Geometric Sequence Test in Theorem <a href="revision.html#theorem-geometric-sequence">156</a> does not address the case <span class="math display">\[
+<p>The Geometric Sequence Test in Theorem <a href="revision.html#theorem-geometric-sequence">154</a> does not address the case <span class="math display">\[
 |x|=1 \,.
 \]</span> This is because, in this case, the sequence <span class="math display">\[
 a_n = x^n
@@ -1374,7 +1357,7 @@ a_n = x^n = (-1)^n
 </ul>
 </div></details>
 </div>
-<p>To prove Theorem <a href="revision.html#theorem-geometric-sequence">156</a> we need the following inequality, known as Bernoulli’s inequality.</p>
+<p>To prove Theorem <a href="revision.html#theorem-geometric-sequence">154</a> we need the following inequality, known as Bernoulli’s inequality.</p>
 <div id="lemma-bernoulli" class="Lemma" title="Bernoulli’s inequality">
 <p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 41: </strong>Bernoulli’s inequality</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x&gt;-1\)</span>. Then <span id="eq-bernoulli-inequality"><span class="math display">\[
 (1+x)^{n} \geq 1+n x \,, \quad \forall \, n \in \mathbb{N}\,.
@@ -1384,22 +1367,22 @@ a_n = x^n = (-1)^n
 <div id="Proof*-20" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Let <span class="math inline">\(x \in \mathbb{R}, x&gt;-1\)</span>. We prove the statement by induction:<p></p>
 <ul>
-<li><p>Base case: (<a href="revision.html#eq-bernoulli-inequality" class="quarto-xref"><span>A.33</span></a>) holds with equality when <span class="math inline">\(n=1\)</span>.</p></li>
-<li><p>Induction hypothesis: Let <span class="math inline">\(k \in \mathbb{N}\)</span> and suppose that (<a href="revision.html#eq-bernoulli-inequality" class="quarto-xref"><span>A.33</span></a>) holds for <span class="math inline">\(n=k\)</span>, i.e., <span class="math display">\[
+<li><p>Base case: (<a href="#eq-bernoulli-inequality" class="quarto-xref"><span>6.9</span></a>) holds with equality when <span class="math inline">\(n=1\)</span>.</p></li>
+<li><p>Induction hypothesis: Let <span class="math inline">\(k \in \mathbb{N}\)</span> and suppose that (<a href="#eq-bernoulli-inequality" class="quarto-xref"><span>6.9</span></a>) holds for <span class="math inline">\(n=k\)</span>, i.e., <span class="math display">\[
 (1+x)^{k} \geq 1+k x \,.
 \]</span> Then <span class="math display">\[\begin{align*}
 (1+x)^{k+1} &amp; = (1+x)^{k}(1+x) \\
           &amp; \geq(1+k x)(1+x) \\
           &amp; =1+k x+x+k x^{2} \\
           &amp; \geq 1+(k+1) x \,,
-\end{align*}\]</span> where we used that <span class="math inline">\(kx^2 \geq 0\)</span>. Then (<a href="revision.html#eq-bernoulli-inequality" class="quarto-xref"><span>A.33</span></a>) holds for <span class="math inline">\(n=k+1\)</span>.</p></li>
+\end{align*}\]</span> where we used that <span class="math inline">\(kx^2 \geq 0\)</span>. Then (<a href="#eq-bernoulli-inequality" class="quarto-xref"><span>6.9</span></a>) holds for <span class="math inline">\(n=k+1\)</span>.</p></li>
 </ul>
-<p>By induction we conclude (<a href="revision.html#eq-bernoulli-inequality" class="quarto-xref"><span>A.33</span></a>).</p>
+<p>By induction we conclude (<a href="#eq-bernoulli-inequality" class="quarto-xref"><span>6.9</span></a>).</p>
 </div></details>
 </div>
-<p>We are ready to prove Theorem <a href="revision.html#theorem-geometric-sequence">156</a>.</p>
-<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 156">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 156</summary><div><em>Part 1. The case <span class="math inline">\(|x|&lt;1\)</span></em>.<p></p>
+<p>We are ready to prove Theorem <a href="revision.html#theorem-geometric-sequence">154</a>.</p>
+<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 154">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 154</summary><div><em>Part 1. The case <span class="math inline">\(|x|&lt;1\)</span></em>.<p></p>
 <p>If <span class="math inline">\(x=0\)</span>, then <span class="math display">\[
 a_n = x^n = 0
 \]</span> so that <span class="math inline">\(a_n \to 0\)</span>. Hence assume <span class="math inline">\(x \neq 0\)</span>. We need to prove that <span class="math display">\[
@@ -1421,7 +1404,7 @@ N &gt; \frac{1}{\varepsilon u} \,,
                      &amp; \leq \frac{1}{n u} \\
                      &amp; \leq \frac{1}{N u} \\
                      &amp; &lt; \varepsilon\,,
-\end{align*}\]</span> where we used Bernoulli’s inequality (<a href="revision.html#eq-bernoulli-inequality" class="quarto-xref"><span>A.33</span></a>) in the first inequality.</p>
+\end{align*}\]</span> where we used Bernoulli’s inequality (<a href="#eq-bernoulli-inequality" class="quarto-xref"><span>6.9</span></a>) in the first inequality.</p>
 <p><em>Part 2. The case <span class="math inline">\(|x|&gt;1\)</span></em>.</p>
 <p>To prove that <span class="math inline">\((a_n)\)</span> does not converge, we prove that it is unbounded. This means showing that <span class="math display">\[
 \forall \, M &gt; 0 \,, \, \exists n \in \mathbb{N}\, \text{ s.t. } \, \left| a_{n}\right| &gt;M \,.
@@ -1445,7 +1428,7 @@ n&gt;\frac{\log M}{\log |x|} &amp; \iff n \log |x|&gt;\log M \\
 </div>
 <div id="Example-42" class="Example">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 42</strong></summary><div>
-<p>We can apply Theorem <a href="revision.html#theorem-geometric-sequence">156</a> to prove convergence or divergence for the following sequences.</p>
+<p>We can apply Theorem <a href="revision.html#theorem-geometric-sequence">154</a> to prove convergence or divergence for the following sequences.</p>
 <ol type="1">
 <li><p>We have <span class="math display">\[
 \left(\frac{1}{2}\right)^{n} \longrightarrow 0
@@ -1516,21 +1499,21 @@ L:=\lim_{n \to \infty}\left|\frac{a_{n+1}}{a_{n}}\right| \,.
 L&lt;r&lt;1 \,.
 \]</span> Set <span class="math display">\[
 \varepsilon:= r-L
-\]</span> By the convergence at (<a href="revision.html#eq-ratio-test-proof" class="quarto-xref"><span>A.34</span></a>) there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+\]</span> By the convergence at (<a href="#eq-ratio-test-proof" class="quarto-xref"><span>6.10</span></a>) there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
 \left|\frac{b_{n+1}}{b_{n}}-L\right| &lt; \varepsilon= r - L \,, \quad \forall \, n \geq N \,.
 \]</span> In particular <span class="math display">\[
 \frac{b_{n+1}}{b_{n}}-L &lt; r-L \,, \quad \forall \, n \geq N \,,
 \]</span> which implies <span id="eq-ratio-test-proof-1"><span class="math display">\[
 b_{n+1} &lt;  r \,{b_{n}} \,, \quad \forall \, n \geq N \,.
-\tag{6.11}\]</span></span> Let <span class="math inline">\(n \geq N\)</span>, we can use (<a href="revision.html#eq-ratio-test-proof-1" class="quarto-xref"><span>A.35</span></a>) recursively and obtain <span class="math display">\[
+\tag{6.11}\]</span></span> Let <span class="math inline">\(n \geq N\)</span>, we can use (<a href="#eq-ratio-test-proof-1" class="quarto-xref"><span>6.11</span></a>) recursively and obtain <span class="math display">\[
 0 \leq b_{n} &lt; \, r b_{n-1} &lt; \ldots &lt; r^{n-N} \, b_{N} = r^{n} \, \frac{b_{N}}{r^{N}} \,.
 \]</span> In particular, we have proven that <span id="eq-ratio-test-proof-2"><span class="math display">\[
 0 \leq b_{n} &lt; r^{n} \, \frac{b_{N}}{r^{N}} \,, \quad \forall \, n \in \mathbb{N}\,.
-\tag{6.12}\]</span></span> Since <span class="math inline">\(|r|&lt;1\)</span>, by the Geometric Sequence Test Theorem <a href="revision.html#theorem-geometric-sequence">156</a> we infer <span class="math display">\[
+\tag{6.12}\]</span></span> Since <span class="math inline">\(|r|&lt;1\)</span>, by the Geometric Sequence Test Theorem <a href="revision.html#theorem-geometric-sequence">154</a> we infer <span class="math display">\[
 r^{n} \rightarrow 0 \,.
 \]</span> The Algebra of Limits the yields <span class="math display">\[
 r^{n} \, \frac{b_{N}}{r^{N}} \rightarrow 0 \,.
-\]</span> By the Squeeze Theorem <a href="revision.html#theorem-squeeze">151</a> applied to (<a href="revision.html#eq-ratio-test-proof-2" class="quarto-xref"><span>A.36</span></a>), it follows that <span class="math display">\[   
+\]</span> By the Squeeze Theorem <a href="revision.html#theorem-squeeze">151</a> applied to (<a href="#eq-ratio-test-proof-2" class="quarto-xref"><span>6.12</span></a>), it follows that <span class="math display">\[   
 b_{n} = |a_n| \to 0 \,.
 \]</span> Since <span class="math display">\[
 -\left|a_{n}\right| \leq a_{n} \leq\left|a_{n}\right| \,,
@@ -1543,17 +1526,17 @@ a_{n} \rightarrow 0 \,.
 1&lt;r&lt;L  \,.
 \]</span> Define <span class="math display">\[
 \varepsilon:= L - r &gt; 0 \,.
-\]</span> By the convergence (<a href="revision.html#eq-ratio-test-proof" class="quarto-xref"><span>A.34</span></a>), there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+\]</span> By the convergence (<a href="#eq-ratio-test-proof" class="quarto-xref"><span>6.10</span></a>), there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
 \left|\frac{b_{n+1}}{b_{n}}-L\right| &lt; \varepsilon= L - r \,, \quad \forall \, n \geq N \,.
 \]</span> In particular, <span class="math display">\[
 -(L-r) &lt; \frac{b_{n+1}}{b_{n}}-L \,, \quad \forall \, n \geq N \,,
 \]</span> which implies <span id="eq-ratio-test-proof-4"><span class="math display">\[
 b_{n+1} &gt; r \, b_{n} \,, \quad  \forall \, n \geq N \,.
-\tag{6.13}\]</span></span> Let <span class="math inline">\(n \geq N\)</span>. Applying (<a href="revision.html#eq-ratio-test-proof-4" class="quarto-xref"><span>A.37</span></a>) recursively we get <span id="eq-ratio-test-proof-5"><span class="math display">\[
+\tag{6.13}\]</span></span> Let <span class="math inline">\(n \geq N\)</span>. Applying (<a href="#eq-ratio-test-proof-4" class="quarto-xref"><span>6.13</span></a>) recursively we get <span id="eq-ratio-test-proof-5"><span class="math display">\[
 b_{n} &gt; r^{n-N} \, b_{N} = r^{n} \, \frac{b_{N}}{r^{N}} \,, \quad \forall \, n \geq N \,.
 \tag{6.14}\]</span></span> Since <span class="math inline">\(|r|&gt;1\)</span>, by the Geometric Sequence Test we have that the sequence <span class="math display">\[
 (r^n)
-\]</span> is unbounded. Therefore also the right hand side of (<a href="revision.html#eq-ratio-test-proof-5" class="quarto-xref"><span>A.38</span></a>) is unbounded, proving that <span class="math inline">\((b_n)\)</span> is unbounded. Since <span class="math display">\[
+\]</span> is unbounded. Therefore also the right hand side of (<a href="#eq-ratio-test-proof-5" class="quarto-xref"><span>6.14</span></a>) is unbounded, proving that <span class="math inline">\((b_n)\)</span> is unbounded. Since <span class="math display">\[
 b_n = |a_n|\,,
 \]</span> we conclude that <span class="math inline">\((a_n)\)</span> is unbounded. By Corollary <a href="revision.html#corollary-convergent-bounded">138</a> we conclude that <span class="math inline">\((a_n)\)</span> does not converge.</p></li>
 </ul>
@@ -1643,7 +1626,7 @@ a_n = n \,.
 </ul>
 </div></details>
 </div>
-<p>If the sequence <span class="math inline">\((a_n)\)</span> is geometric, the Ratio Test of Theorem <a href="revision.html#theorem-ratio-test">159</a> will give the same answer as the Geometric Sequence Test of Theorem <a href="revision.html#theorem-geometric-sequence">156</a>. This is the content of the following remark.</p>
+<p>If the sequence <span class="math inline">\((a_n)\)</span> is geometric, the Ratio Test of Theorem <a href="revision.html#theorem-ratio-test">159</a> will give the same answer as the Geometric Sequence Test of Theorem <a href="revision.html#theorem-geometric-sequence">154</a>. This is the content of the following remark.</p>
 <div id="Remark-47" class="Remark">
 <p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 47</strong></summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> and define the geometric sequence <span class="math display">\[
 a_{n}=x^{n} \,.
@@ -1731,11 +1714,11 @@ s - \varepsilon&lt; a_N \,.
 a_N \leq a_n \,, \quad \forall \, n \geq N \,.
 \tag{6.17}\]</span></span> Moreover <span class="math inline">\(s\)</span> is the supremum of <span class="math inline">\(A\)</span>, so that <span id="eq-monotone-convergence-proof-3"><span class="math display">\[
 a_n \leq s &lt; s + \varepsilon\,, \quad \forall \, n \in \mathbb{N}\,.
-\tag{6.18}\]</span></span> Putting together estimates (<a href="revision.html#eq-monotone-convergence-proof-1" class="quarto-xref"><span>A.40</span></a>)-(<a href="revision.html#eq-monotone-convergence-proof-2" class="quarto-xref"><span>A.41</span></a>)-(<a href="revision.html#eq-monotone-convergence-proof-3" class="quarto-xref"><span>A.42</span></a>) we get <span class="math display">\[
+\tag{6.18}\]</span></span> Putting together estimates (<a href="#eq-monotone-convergence-proof-1" class="quarto-xref"><span>6.16</span></a>)-(<a href="#eq-monotone-convergence-proof-2" class="quarto-xref"><span>6.17</span></a>)-(<a href="#eq-monotone-convergence-proof-3" class="quarto-xref"><span>6.18</span></a>) we get <span class="math display">\[
 s - \varepsilon&lt; a_N \leq a_n \leq s &lt; s + \varepsilon\,, \quad \forall \, n \geq N \,.
 \]</span> The above implies <span class="math display">\[
 s - \varepsilon&lt; a_n &lt; s + \varepsilon\,, \quad \forall \, n \geq N \,,
-\]</span> which is equivalent to (<a href="revision.html#eq-monotone-conv-proof" class="quarto-xref"><span>A.39</span></a>).</p></li>
+\]</span> which is equivalent to (<a href="#eq-monotone-conv-proof" class="quarto-xref"><span>6.15</span></a>).</p></li>
 <li><p><span class="math inline">\((a_n)\)</span> is decreasing: With a similar proof, one can show that <span class="math display">\[
 \lim_{n \to \infty} a_n = i \,.
 \]</span> This is left as an exercise.</p></li>
@@ -1773,13 +1756,13 @@ a_{n} \geq a_{n-1} \,, \quad \forall \, n \in \mathbb{N}\,,
 \frac{n-1}{n}  \,,
 \]</span> which simplifies to <span id="eq-proof-euler-1"><span class="math display">\[
 \left(  1 - \frac{1}{n^2}  \right)^n \geq 1 - \frac1n \,, \quad  \forall \, n \in \mathbb{N}\,.
-\tag{6.19}\]</span></span> Therefore <span class="math inline">\((a_n)\)</span> is increasing if and only if (<a href="revision.html#eq-proof-euler-1" class="quarto-xref"><span>A.43</span></a>) holds. Recall Bernoulli’s inequality from Lemma <a href="revision.html#lemma-bernoulli">157</a>: For <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x&gt;-1\)</span>, it holds <span class="math display">\[
+\tag{6.19}\]</span></span> Therefore <span class="math inline">\((a_n)\)</span> is increasing if and only if (<a href="#eq-proof-euler-1" class="quarto-xref"><span>6.19</span></a>) holds. Recall Bernoulli’s inequality from Lemma <a href="revision.html#lemma-bernoulli">157</a>: For <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x&gt;-1\)</span>, it holds <span class="math display">\[
 (1 + x )^n  \geq 1 + nx  \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> Appliying Bernoulli’s inequality with <span class="math display">\[
 x = -\frac{1}{n^2}
 \]</span> yields <span class="math display">\[
 \left(  1 - \frac{1}{n^2}  \right)^n  \geq 1 + n \left( -\frac{1}{n^2} \right) = 1 - \frac{1}{n} \,,
-\]</span> which is exactly (<a href="revision.html#eq-proof-euler-1" class="quarto-xref"><span>A.43</span></a>). Then <span class="math inline">\((a_n)\)</span> is increasing.<p></p>
+\]</span> which is exactly (<a href="#eq-proof-euler-1" class="quarto-xref"><span>6.19</span></a>). Then <span class="math inline">\((a_n)\)</span> is increasing.<p></p>
 <p><em>Part 2</em>. We have to prove that <span class="math inline">\((a_n)\)</span> is bounded, that is, that there exists <span class="math inline">\(M &gt; 0\)</span> such that <span class="math display">\[
 |a_n| \leq M \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> To this end, introduce the sequence <span class="math inline">\((b_n)\)</span> by setting <span class="math display">\[
@@ -1798,7 +1781,7 @@ b_{n-1} \geq b_n \,, \quad \forall \, n \in \mathbb{N}\,.
 \left(  \frac{n^2}{n^2 - 1} \right)^{n} \geq  \left(   \frac{n+1}{n} \right) \,.
 \]</span> The above is equivalent to <span id="eq-proof-euler-3"><span class="math display">\[
 \left( 1 +  \frac{1}{n^2 - 1} \right)^{n} \geq  \left(  1 + \frac{1}{n} \right) \,.
-\tag{6.20}\]</span></span> Therefore <span class="math inline">\((b_n)\)</span> is decreasing if and only if (<a href="revision.html#eq-proof-euler-3" class="quarto-xref"><span>A.44</span></a>) holds for all <span class="math inline">\(n \in \mathbb{N}\)</span>. By choosing <span class="math display">\[
+\tag{6.20}\]</span></span> Therefore <span class="math inline">\((b_n)\)</span> is decreasing if and only if (<a href="#eq-proof-euler-3" class="quarto-xref"><span>6.20</span></a>) holds for all <span class="math inline">\(n \in \mathbb{N}\)</span>. By choosing <span class="math display">\[
 x = \frac{1}{n^2 - 1}
 \]</span> in Bernoulli’s inequality, we obtain <span class="math display">\[\begin{align*}
 \left( 1 +  \frac{1}{n^2 - 1} \right)^{n} &amp; \geq 1 + n \left(  \frac{1}{n^2 - 1}   \right) \\
@@ -1806,7 +1789,7 @@ x = \frac{1}{n^2 - 1}
 &amp; \geq 1 + \frac1n \,,
 \end{align*}\]</span> where in the last inequality we used that <span class="math display">\[
 \frac{n}{n^2 - 1} &gt; \frac1n \,,
-\]</span> which holds, being equivalent to <span class="math inline">\(n^2 &gt; n^2 - 1\)</span>. We have therefore proven (<a href="revision.html#eq-proof-euler-3" class="quarto-xref"><span>A.44</span></a>), and hence <span class="math inline">\((b_n)\)</span> is decreasing.</p>
+\]</span> which holds, being equivalent to <span class="math inline">\(n^2 &gt; n^2 - 1\)</span>. We have therefore proven (<a href="#eq-proof-euler-3" class="quarto-xref"><span>6.20</span></a>), and hence <span class="math inline">\((b_n)\)</span> is decreasing.</p>
 </blockquote>
 <p>We now observe that For all <span class="math inline">\(n \in \mathbb{N}\)</span> <span class="math display">\[\begin{align*}
 b_n &amp; = \left(   1  + \frac1n \right)^{n+1} \\
@@ -1824,10 +1807,10 @@ a_1 = 2 \,, \quad b_1 = 4 \,,
 \]</span> Therefore <span class="math display">\[
 |a_n| \leq 4 \,, \quad \forall \, n \in \mathbb{N}\,,
 \]</span> showing that <span class="math inline">\((a_n)\)</span> is bounded.</p>
-<p><em>Part 3.</em> The sequence <span class="math inline">\((a_n)\)</span> is increasing and bounded above. Therefore <span class="math inline">\((a_n)\)</span> is convergent by the Monotone Convergence Theorem <a href="revision.html#theorem-monotone-convergence">167</a>.</p>
+<p><em>Part 3.</em> The sequence <span class="math inline">\((a_n)\)</span> is increasing and bounded above. Therefore <span class="math inline">\((a_n)\)</span> is convergent by the Monotone Convergence Theorem <a href="revision.html#theorem-monotone-convergence">164</a>.</p>
 </div></details>
 </div>
-<p>Thanks to Theorem <a href="revision.html#theorem-euler-number">168</a> we can define the Euler’s Number <span class="math inline">\(e\)</span>.</p>
+<p>Thanks to Theorem <a href="revision.html#theorem-euler-number">164</a> we can define the Euler’s Number <span class="math inline">\(e\)</span>.</p>
 <div id="eulers-number" class="Definition" title="Euler’s Number">
 <p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 53: </strong>Euler’s Number</summary><div>The Euler’s number is defined as <span class="math display">\[
 e := \lim_{n \to \infty } \, \left(  1 + \frac{1}{n}  \right)^n \,.
@@ -1889,7 +1872,7 @@ x = (1 + b_n)^n \geq 1 + n b_n \,.
 \]</span> By elementary trigonometry we have <span class="math display">\[
 0 \leq |\sin (x)| = \sin |x| \leq |x| \,, \quad \forall  \, x \in \left[
 -\frac{\pi}{2}, \frac{\pi}{2} \right] \,.
-\]</span> Therefore, since (<a href="revision.html#eq-limiti-notevoli-1" class="quarto-xref"><span>A.45</span></a>) holds, we can substitute <span class="math inline">\(x=a_n\)</span> in the above inequality to get <span class="math display">\[
+\]</span> Therefore, since (<a href="#eq-limiti-notevoli-1" class="quarto-xref"><span>6.21</span></a>) holds, we can substitute <span class="math inline">\(x=a_n\)</span> in the above inequality to get <span class="math display">\[
 0 \leq |\sin (a_n)|  \leq |a_n| \,, \quad \forall \, n \geq \mathbb{N}\,.
 \]</span> Since <span class="math inline">\(a_n \to 0\)</span>, we also have <span class="math inline">\(|a_n|\to 0\)</span>. Therefore <span class="math inline">\(|\sin (a_n)| \to 0\)</span> by the Squeeze Theorem. This immediately implies <span class="math inline">\(\sin(a_n) \to 0\)</span>.</p>
 <p><em>Step 2</em>. We prove that <span class="math display">\[
@@ -1901,7 +1884,7 @@ x = (1 + b_n)^n \geq 1 + n b_n \,.
 \]</span> We have that <span class="math inline">\(\cos(x) \geq 0\)</span> for <span class="math inline">\(-\pi/2 \leq x \leq \pi/2\)</span>. Thus <span class="math display">\[
 \cos(x) = \sqrt{ 1 - \sin^2 (x) } \,, \quad \forall \, x \in
 \left[ -\frac{\pi}{2}, \frac{\pi}{2} \right] \,.
-\]</span> Since (<a href="revision.html#eq-limiti-notevoli-1" class="quarto-xref"><span>A.45</span></a>) holds, we can set <span class="math inline">\(x=a_n\)</span> in the above inequality and obtain <span class="math display">\[
+\]</span> Since (<a href="#eq-limiti-notevoli-1" class="quarto-xref"><span>6.21</span></a>) holds, we can set <span class="math inline">\(x=a_n\)</span> in the above inequality and obtain <span class="math display">\[
 \cos(a_n) = \sqrt{ 1 - \sin^2 (a_n) } \,, \quad \forall \, n \geq N \,.
 \]</span> By Step 1 we know that <span class="math inline">\(\sin(a_n) \to 0\)</span>. Therefore, by the Algebra of Limits, <span class="math display">\[
 1 - \sin^2 (a_n) \longrightarrow 1 - 0 \cdot 0 = 1 \,.
@@ -1936,11 +1919,11 @@ a_n \neq 0 \,, \quad \forall \, n \in \mathbb{N}\, .
 \]</span> Since <span class="math inline">\(a_n \neq 0\)</span> by assumption, the above shows that <span class="math display">\[
 a_n \in \Big[ -\frac{\pi}{2}, \frac{\pi}{2}  \Big] \smallsetminus \{0\} \,,
 \quad \forall \, n \geq \mathbb{N}\,.
-\]</span> Therefore we can substitute <span class="math inline">\(x=a_n\)</span> into (<a href="revision.html#eq-limiti-notevoli-3" class="quarto-xref"><span>A.46</span></a>) to get <span class="math display">\[
+\]</span> Therefore we can substitute <span class="math inline">\(x=a_n\)</span> into (<a href="#eq-limiti-notevoli-3" class="quarto-xref"><span>6.22</span></a>) to get <span class="math display">\[
 \cos(a_n) &lt; \frac{\sin(a_n)}{a_n} &lt; 1  \,, \quad \forall  \, n \geq N \,.
 \]</span> We have <span class="math display">\[
 \cos(a_n) \to 1
-\]</span> by Theorem <a href="revision.html#theorem-important-limit-1">171</a>. By the Squeeze Theorem we conclude that <span class="math display">\[
+\]</span> by Theorem <a href="revision.html#theorem-important-limit-1">167</a>. By the Squeeze Theorem we conclude that <span class="math display">\[
 \lim_{n \to \infty} \frac{\sin(a_n)}{a_n} = 1 \,.
 \]</span><p></p>
 </div></details>
@@ -1967,7 +1950,7 @@ a_n \neq 0 \,, \quad \forall \, n \in \mathbb{N}\, .
 </div></details>
 </div>
 <div id="Proof*-30" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Step 1.</em> By Theorem <a href="revision.html#theorem-important-limit-1">171</a> and Theorem <a href="revision.html#theorem-important-limit-2">172</a>, we have <span class="math display">\[
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Step 1.</em> By Theorem <a href="revision.html#theorem-important-limit-1">167</a> and Theorem <a href="revision.html#theorem-important-limit-2">168</a>, we have <span class="math display">\[
 \cos(a_n) \to 1 \,, \quad \frac{\sin(a_n)}{a_n} \to 1 \,.
 \]</span> Therefore <span class="math display">\[\begin{align*}
 \frac{1 - \cos(a_n)}{(a_n)^2} &amp; =
@@ -1986,7 +1969,7 @@ a_n \neq 0 \,, \quad \forall \, n \in \mathbb{N}\, .
 \tag{6.23}\]</span></span><p></p>
 <p><strong>Solution.</strong> This is because <span class="math display">\[
 n  \sin \left(  \frac{1}{n} \right) = \frac{ \sin \left(  \dfrac{1}{n} \right) }{ \dfrac{1}{n} } \longrightarrow 1 \,,
-\]</span> by Theorem <a href="revision.html#theorem-important-limit-2">172</a> with <span class="math inline">\(a_n = 1/n\)</span>.</p>
+\]</span> by Theorem <a href="revision.html#theorem-important-limit-2">168</a> with <span class="math inline">\(a_n = 1/n\)</span>.</p>
 </div></details>
 </div>
 <div id="Example-59" class="Example">
@@ -1995,14 +1978,14 @@ n  \sin \left(  \frac{1}{n} \right) = \frac{ \sin \left(  \dfrac{1}{n} \right) }
 \tag{6.24}\]</span></span><p></p>
 <p><strong>Solution.</strong> Indeed, <span class="math display">\[
 n^2 \left(  1 - \cos \left(  \frac{1}{n} \right)\right) = \dfrac{1 - \cos \left(  \dfrac{1}{n} \right)}{\dfrac{1}{n^2}} \longrightarrow \frac12 \,,
-\]</span> by applying Theorem <a href="revision.html#theorem-important-limit-3">173</a> with <span class="math inline">\(a_n = 1/n\)</span>.</p>
+\]</span> by applying Theorem <a href="revision.html#theorem-important-limit-3">169</a> with <span class="math inline">\(a_n = 1/n\)</span>.</p>
 </div></details>
 </div>
 <div id="Example-60" class="Example">
 <p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 60</strong></summary><div><strong>Question.</strong> Prove that <span class="math display">\[
 \lim_{n \to \infty} \, \frac{n  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ \sin \left( \dfrac{1}{n} \right) } = \frac12 \,.
 \]</span><p></p>
-<p><strong>Solution.</strong> Using (<a href="revision.html#eq-notable-limits-1" class="quarto-xref"><span>A.48</span></a>)-(<a href="revision.html#eq-notable-limits-2" class="quarto-xref"><span>A.47</span></a>) and the Algebra of Limits <span class="math display">\[\begin{align*}
+<p><strong>Solution.</strong> Using (<a href="#eq-notable-limits-1" class="quarto-xref"><span>6.24</span></a>)-(<a href="#eq-notable-limits-2" class="quarto-xref"><span>6.23</span></a>) and the Algebra of Limits <span class="math display">\[\begin{align*}
 \frac{n  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ \sin \left( \dfrac{1}{n} \right) } &amp; =
   \frac{n^2  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ n \sin \left( \dfrac{1}{n} \right) } \\
   &amp; \longrightarrow \frac{1/2}{1} = \frac12 \,.
@@ -2015,9 +1998,9 @@ n^2 \left(  1 - \cos \left(  \frac{1}{n} \right)\right) = \dfrac{1 - \cos \left(
 \]</span><p></p>
 <p><strong>Solution.</strong> We have <span class="math display">\[
 \cos \left( \frac{2}{n}  \right) \longrightarrow 1 \,,
-\]</span> by Theorem <a href="revision.html#theorem-important-limit-1">171</a> applied with <span class="math inline">\(a_n = 2/n\)</span>. Moreover <span class="math display">\[
+\]</span> by Theorem <a href="revision.html#theorem-important-limit-1">167</a> applied with <span class="math inline">\(a_n = 2/n\)</span>. Moreover <span class="math display">\[
 \frac{\sin \left( \dfrac{2}{n}  \right)}{\dfrac{2}{n}} \longrightarrow 1 \,,
-\]</span> by Theorem <a href="revision.html#theorem-important-limit-2">172</a> applied with <span class="math inline">\(a_n = 2/n\)</span>. Therefore <span class="math display">\[\begin{align*}
+\]</span> by Theorem <a href="revision.html#theorem-important-limit-2">168</a> applied with <span class="math inline">\(a_n = 2/n\)</span>. Therefore <span class="math display">\[\begin{align*}
 n \cos \left( \frac{2}{n}  \right) \sin \left( \frac{2}{n}  \right) &amp; =
 2 \cdot \cos \left( \frac{2}{n}  \right) \cdot \frac{\sin \left( \dfrac{2}{n}  \right)}{\dfrac{2}{n}} \\
 &amp; \longrightarrow 2 \cdot 1 \cdot 1 = 2 \,,
@@ -2031,7 +2014,7 @@ n \cos \left( \frac{2}{n}  \right) \sin \left( \frac{2}{n}  \right) &amp; =
 <p><strong>Solution.</strong> Note that <span class="math display">\[\begin{align*}
 \frac{n^2+1}{n+1} \sin \left(  \dfrac{1}{n} \right) &amp; = \left( \frac{1+\dfrac{1}{n^2}}{1+ \dfrac{1}{n}} \right) \cdot \left( n \sin \left(  \dfrac{1}{n} \right) \right) \\
 &amp; \longrightarrow \frac{1 + 0}{1 + 0} \cdot 1 = 1\,,
-\end{align*}\]</span> where we used (<a href="revision.html#eq-notable-limits-2" class="quarto-xref"><span>A.47</span></a>) and the Algebra of Limits.</p>
+\end{align*}\]</span> where we used (<a href="#eq-notable-limits-2" class="quarto-xref"><span>6.23</span></a>) and the Algebra of Limits.</p>
 </div></details>
 </div>
 

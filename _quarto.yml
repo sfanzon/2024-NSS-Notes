@@ -5,7 +5,7 @@ project:
 
 
 book:
-  title: "Numbers, Sequences and Series"
+  title: "Numbers Sequences and Series"
   subtitle: "Lecture Notes"
   author: 
     - name: "Dr. Silvio Fanzon"
@@ -52,10 +52,7 @@ book:
     - sections/chap_8.qmd
     - sections/license.qmd
     - sections/references.qmd
-  appendices:
-    - sections/revision.qmd
-
-
+  
 
 
 bibliography: teaching.bib
@@ -83,19 +80,21 @@ format:
   
   pdf:
     documentclass: scrreprt
+    classoption: [twocolumn]
     fontfamily: libertinus
     fontfamilyoptions:
       - osf
       - p
-    fontsize: 12pt
+    fontsize: 11pt
     template-partials:
       - before-body.tex
     geometry:
-      - top=25mm
-      - left=15mm
-      - right=15mm
-      - bottom=25mm
-      - heightrounded
+      - top=20mm
+      - left=10mm
+      - right=10mm
+      - bottom=12mm
+      - headheight=14pt
+      - footskip=20pt
     link-citations: true
     link-external-icon: true
     linkcolor: magenta
@@ -108,12 +107,18 @@ format:
     include-in-header:
       - text: |
           \usepackage{scrlayer-scrpage}
-          \lohead{Numbers, Sequences and Series}
+          \lohead{Numbers Sequences and Series}
           \cohead{}
-          \rohead{Page \pagemark}
-          \lofoot{Dr. Silvio Fanzon}
+          \rohead{Dr. Silvio Fanzon -- S.Fanzon@hull.ac.uk}
+          \lehead{}
+          \cehead{}
+          \rehead{}
+          \lofoot{}
           \cofoot{}
-          \rofoot{S.Fanzon@hull.ac.uk}
+          \rofoot{Page \thepage}
+          \lefoot{}
+          \cefoot{}
+          \refoot{}          
           \setheadsepline{0.5pt}
           \setfootsepline{0.8pt}
           \addtokomafont{pageheadfoot}{\color{gray}\textnormal}

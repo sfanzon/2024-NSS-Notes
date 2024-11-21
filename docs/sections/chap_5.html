@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Complex Numbers – Numbers, Sequences and Series</title>
+<title>5&nbsp; Complex Numbers – Numbers Sequences and Series</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,57 +72,25 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .DONE {
   --color1: #cce7b1;
   --color2: #86b754;
 }
-.Question {
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
 .Important {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
 }
 .Remark {
   --color1: #bce5de;
@@ -135,6 +103,38 @@ ul.task-list li input[type="checkbox"] {
 .Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
 .Proof {
   --color1: #f1f1f2;
@@ -182,11 +182,11 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Numbers, Sequences and Series</span>
+    <span class="navbar-title">Numbers Sequences and Series</span>
     </a>
   </div>
         <div class="quarto-navbar-tools tools-end">
-    <a href="../Numbers,-Sequences-and-Series.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <a href="../Numbers-Sequences-and-Series.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           <div id="quarto-search" class="" title="Search"></div>
@@ -275,23 +275,6 @@ window.Quarto = {
  <span class="menu-text">References</span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../sections/revision.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Revision Guide</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -1123,9 +1106,9 @@ z=\sqrt{8} e^{i \frac{3}{4} \pi} \,.
 <details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 42: </strong>Periodicity of exponential</summary><div>
 <p>For all <span class="math inline">\(k \in \mathbb{Z}\)</span> we have <span id="eq-exponential-periodic"><span class="math display">\[
 e^{i \theta}=e^{i(\theta+2 \pi k)} \,,
-\tag{5.5}\]</span></span> meaning that the complex exponential is <span class="math inline">\(2\pi\)</span>-periodic. As we did for the principal value of the argument, we select <span class="math inline">\(\theta\)</span> in (<a href="revision.html#eq-exponential-periodic" class="quarto-xref"><span>A.18</span></a>) so that <span class="math inline">\(\theta \in(-\pi, \pi]\)</span>.</p>
+\tag{5.5}\]</span></span> meaning that the complex exponential is <span class="math inline">\(2\pi\)</span>-periodic. As we did for the principal value of the argument, we select <span class="math inline">\(\theta\)</span> in (<a href="#eq-exponential-periodic" class="quarto-xref"><span>5.5</span></a>) so that <span class="math inline">\(\theta \in(-\pi, \pi]\)</span>.</p>
 <blockquote class="blockquote">
-<p>Equation (<a href="revision.html#eq-exponential-periodic" class="quarto-xref"><span>A.18</span></a>) follows immediately by Euler’s identity and periodicity of <span class="math inline">\(\cos\)</span> and <span class="math inline">\(\sin\)</span>, since <span class="math display">\[\begin{align*}
+<p>Equation (<a href="#eq-exponential-periodic" class="quarto-xref"><span>5.5</span></a>) follows immediately by Euler’s identity and periodicity of <span class="math inline">\(\cos\)</span> and <span class="math inline">\(\sin\)</span>, since <span class="math display">\[\begin{align*}
 e^{i(\theta+2 \pi k)} &amp; = \cos(\theta+2 \pi k) + i \sin (\theta+2 \pi k)  \\
 &amp; = \cos(\theta) + i \sin (\theta) = e^{i \theta} \,.
 \end{align*}\]</span></p>
@@ -1190,7 +1173,7 @@ e^{z+w} = e^z e^w \,, \quad (e^z)^{w} = e^{zw} \,.
 </div>
 <p>We still do not have the technical means to prove this Theorem. The idea is to express <span class="math inline">\(e^z\)</span> as <span id="eq-complex-exponential-1"><span class="math display">\[
 e^z = \sum_{k=0}^\infty \frac{z^n}{n!} \,,
-\tag{5.7}\]</span></span> where the convergence is intendend in the sense of complex series. The properties at (<a href="revision.html#eq-complex-exponential" class="quarto-xref"><span>A.19</span></a>) then follow from manipulating the series on the RHS of (<a href="#eq-complex-exponential-1" class="quarto-xref"><span>5.7</span></a>).</p>
+\tag{5.7}\]</span></span> where the convergence is intendend in the sense of complex series. The properties at (<a href="#eq-complex-exponential" class="quarto-xref"><span>5.6</span></a>) then follow from manipulating the series on the RHS of (<a href="#eq-complex-exponential-1" class="quarto-xref"><span>5.7</span></a>).</p>
 <div id="Example-47" class="Example">
 <p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 47</strong></summary><div><strong>Question.</strong> Compute <span class="math inline">\(i^{i}\)</span>.<p></p>
 <p><strong>Solution.</strong> We know that <span class="math display">\[
@@ -1232,10 +1215,10 @@ p_{n}(z)=a_{n}\left(z-z_{1}\right)\left(z-z_{2}\right) \cdots\left(z-z_{n}\right
 \tag{5.10}\]</span></span><p></p>
 </div></details>
 </div>
-<p>Theorem <a href="revision.html#theorem-fta">111</a> says that equation (<a href="revision.html#eq-fta" class="quarto-xref"><span>A.20</span></a>) admits <span class="math inline">\(n\)</span> complex solutions:</p>
+<p>Theorem <a href="revision.html#theorem-fta">111</a> says that equation (<a href="#eq-fta" class="quarto-xref"><span>5.9</span></a>) admits <span class="math inline">\(n\)</span> complex solutions:</p>
 <ul>
 <li>We call these solutions <em>zeros</em>, or also <em>roots</em>.</li>
-<li>We call the expression (<a href="revision.html#eq-fta-0" class="quarto-xref"><span>A.21</span></a>) a <em>factorization</em> of the polynomial <span class="math inline">\(p_n\)</span>.</li>
+<li>We call the expression (<a href="#eq-fta-0" class="quarto-xref"><span>5.10</span></a>) a <em>factorization</em> of the polynomial <span class="math inline">\(p_n\)</span>.</li>
 </ul>
 <p>Several proofs of Theorem <a href="revision.html#theorem-fta">111</a> exist in the literature, but they all use mathematical tools which are out of reach for now. Therefore we will not show a proof. For example one can prove Theorem <a href="revision.html#theorem-fta">111</a> by</p>
 <ul>
@@ -1249,7 +1232,7 @@ z^{2}=-1
 \tag{5.11}\]</span></span><p></p>
 <p><strong>Solution.</strong> The equation <span class="math inline">\(z^2 = -1\)</span> is equivalent to <span class="math display">\[
 p(z) = 0 \,, \quad p(z):=z^{2}+1  \,.
-\]</span> Since <span class="math inline">\(p\)</span> has degree <span class="math inline">\(n=2\)</span>, the Fundamental Theorem of Algebra tells us that there are two solutions to (<a href="revision.html#eq-fta-example-1" class="quarto-xref"><span>A.22</span></a>). We have already seen that these two solutions are <span class="math inline">\(z=i\)</span> and <span class="math inline">\(z=-i\)</span>. Then <span class="math inline">\(p\)</span> factorizes as <span class="math display">\[
+\]</span> Since <span class="math inline">\(p\)</span> has degree <span class="math inline">\(n=2\)</span>, the Fundamental Theorem of Algebra tells us that there are two solutions to (<a href="#eq-fta-example-1" class="quarto-xref"><span>5.11</span></a>). We have already seen that these two solutions are <span class="math inline">\(z=i\)</span> and <span class="math inline">\(z=-i\)</span>. Then <span class="math inline">\(p\)</span> factorizes as <span class="math display">\[
 p(z) = z^{2} + 1 = (z-i)(z+i) \,.
 \]</span></p>
 </div></details>
@@ -1260,7 +1243,7 @@ z^{4}-1=0 \,.
 \tag{5.12}\]</span></span><p></p>
 <p><strong>Solution</strong> The associated polynomial equation is <span class="math display">\[
 p(z) = 0 \,, \quad p(z) := z^4 - 1 \,.
-\]</span> Since <span class="math inline">\(p\)</span> has degree <span class="math inline">\(n=4\)</span>, the Fundamental Theorem of Algebra tells us that there are <span class="math inline">\(4\)</span> solutions to (<a href="revision.html#eq-fta-example-2" class="quarto-xref"><span>A.23</span></a>). Let us find such solutions. We use the well known identity <span class="math display">\[
+\]</span> Since <span class="math inline">\(p\)</span> has degree <span class="math inline">\(n=4\)</span>, the Fundamental Theorem of Algebra tells us that there are <span class="math inline">\(4\)</span> solutions to (<a href="#eq-fta-example-2" class="quarto-xref"><span>5.12</span></a>). Let us find such solutions. We use the well known identity <span class="math display">\[
 a^2-b^2 = (a+b)(a-b) \,, \quad \forall \, a,b \in \mathbb{R}\,,
 \]</span> to factorize <span class="math inline">\(p\)</span>. We get: <span class="math display">\[
 p(z) = (z^4-1) = (z^2+1)(z^2-1) \,.
@@ -1269,7 +1252,7 @@ z^2 + 1 = 0
 \]</span> has solutions <span class="math inline">\(z = \pm i\)</span>. Instead<br>
 <span class="math display">\[
 z^2 - 1 = 0
-\]</span> has solutions <span class="math inline">\(x = \pm 1\)</span>. Hence, the four solutions of (<a href="revision.html#eq-fta-example-2" class="quarto-xref"><span>A.23</span></a>) are given by <span class="math display">\[
+\]</span> has solutions <span class="math inline">\(x = \pm 1\)</span>. Hence, the four solutions of (<a href="#eq-fta-example-2" class="quarto-xref"><span>5.12</span></a>) are given by <span class="math display">\[
 z=1,-1, i,-i \,,
 \]</span> and <span class="math inline">\(p\)</span> factorizes as <span class="math display">\[
 p(z) = z^4 - 1 = (z-1)(z+1)(z-i)(z+i) \,.
@@ -1330,25 +1313,25 @@ p_n(z) = 0 \,,
 a z^{2}+b z+c=0 \,.
 \tag{5.16}\]</span></span> When the coefficients <span class="math inline">\(a,b,c\)</span> are real, the solutions are given by the well-known quadratic formula.</p>
 <div id="proposition-quadratic-formula" class="Proposition" title="Quadratic formula">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 56: </strong>Quadratic formula</summary><div>Let <span class="math inline">\(a, b, c \in \mathbb{R}, a \neq 0\)</span> and consider the equation at (<a href="revision.html#eq-quadratic-formula" class="quarto-xref"><span>A.24</span></a>). Define <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 56: </strong>Quadratic formula</summary><div>Let <span class="math inline">\(a, b, c \in \mathbb{R}, a \neq 0\)</span> and consider the equation at (<a href="#eq-quadratic-formula" class="quarto-xref"><span>5.16</span></a>). Define <span class="math display">\[
 \Delta := b^2 - 4 ac \in \mathbb{R}\,.
 \]</span> The following hold:<p></p>
 <ol type="1">
-<li>If <span class="math inline">\(\Delta &gt; 0\)</span> then (<a href="revision.html#eq-quadratic-formula" class="quarto-xref"><span>A.24</span></a>) has two distinct real solutions <span class="math inline">\(z_1,z_2 \in \mathbb{R}\)</span> given by <span class="math display">\[
+<li>If <span class="math inline">\(\Delta &gt; 0\)</span> then (<a href="#eq-quadratic-formula" class="quarto-xref"><span>5.16</span></a>) has two distinct real solutions <span class="math inline">\(z_1,z_2 \in \mathbb{R}\)</span> given by <span class="math display">\[
 z_1 = \frac{-b - \sqrt{\Delta}}{2 a} \,,
 \quad
 z_2 = \frac{-b + \sqrt{\Delta}}{2 a} \,.
 \]</span></li>
-<li>If <span class="math inline">\(\Delta = 0\)</span> then (<a href="revision.html#eq-quadratic-formula" class="quarto-xref"><span>A.24</span></a>) has one real solution <span class="math inline">\(z \in \mathbb{R}\)</span> with multiplicity <span class="math inline">\(2\)</span>. Such solution is given by <span class="math display">\[
+<li>If <span class="math inline">\(\Delta = 0\)</span> then (<a href="#eq-quadratic-formula" class="quarto-xref"><span>5.16</span></a>) has one real solution <span class="math inline">\(z \in \mathbb{R}\)</span> with multiplicity <span class="math inline">\(2\)</span>. Such solution is given by <span class="math display">\[
 z = z_1 = z_2 = \frac{-b}{2 a} \,.
 \]</span></li>
-<li>If <span class="math inline">\(\Delta &lt; 0\)</span> then (<a href="revision.html#eq-quadratic-formula" class="quarto-xref"><span>A.24</span></a>) has two distinct complex solutions <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span> given by <span class="math display">\[
+<li>If <span class="math inline">\(\Delta &lt; 0\)</span> then (<a href="#eq-quadratic-formula" class="quarto-xref"><span>5.16</span></a>) has two distinct complex solutions <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span> given by <span class="math display">\[
 z_1 = \frac{-b - i\sqrt{-\Delta}}{2 a} \,,
 \quad
 z_2 = \frac{-b + i\sqrt{-\Delta}}{2 a} \,,
 \]</span> where <span class="math inline">\(\sqrt{-\Delta} \in \mathbb{R}\)</span>, since <span class="math inline">\(-\Delta&gt;0\)</span>.</li>
 </ol>
-<p>In all cases, the polynomial at (<a href="revision.html#eq-quadratic-formula" class="quarto-xref"><span>A.24</span></a>) factorizes as <span class="math display">\[
+<p>In all cases, the polynomial at (<a href="#eq-quadratic-formula" class="quarto-xref"><span>5.16</span></a>) factorizes as <span class="math display">\[
 a z^{2}+b z+c = a (z-z_1)(z-z_2) \,.
 \]</span></p>
 </div></details>
@@ -1457,9 +1440,9 @@ z^{2}=(a+ ib)^{2}=a^{2}-b^{2}+2 a b i = 8 i \,.
 a^{2}-b^{2}=0 \,, \quad 2 a b = 8  \,.
 \]</span> From the first equation we conclude that <span class="math inline">\(|a|=|b|\)</span>. From the second equation we have that <span class="math inline">\(ab=4\)</span>, and therefore <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> must have the same sign. Hence <span class="math inline">\(a=b\)</span>, and <span class="math display">\[
 2 a b = 8 \quad \implies \quad a = b = \pm 2 \,.
-\]</span> From this we conclude that the solutions to (<a href="revision.html#eq-example-complex-delta-2" class="quarto-xref"><span>A.26</span></a>) are <span class="math display">\[
+\]</span> From this we conclude that the solutions to (<a href="#eq-example-complex-delta-2" class="quarto-xref"><span>5.19</span></a>) are <span class="math display">\[
 S_{1} = 2+2 i \,, \quad  S_{2}=-2-2 i \,.
-\]</span> Hence the solutions to (<a href="revision.html#eq-example-complex-delta" class="quarto-xref"><span>A.25</span></a>) are <span class="math display">\[\begin{align*}
+\]</span> Hence the solutions to (<a href="#eq-example-complex-delta" class="quarto-xref"><span>5.18</span></a>) are <span class="math display">\[\begin{align*}
 z_1 &amp; = \frac{3+i+S_{1}}{2 \cdot \frac{1}{2}}  = 3 + i + S_{1} \\
     &amp; = 3 + i + 2 + 2i = 5 + 3i \,,
 \end{align*}\]</span> and <span class="math display">\[\begin{align*}
@@ -1471,7 +1454,7 @@ z_2 &amp; = \frac{3+i+S_{2}}{2 \cdot \frac{1}{2}}  = 3+i+S_{2} \\
 \end{align*}\]</span></p>
 </div></details>
 </div>
-<p>In the above example it was a bit laborious to compute <span class="math inline">\(S_{1}\)</span> and <span class="math inline">\(S_{2}\)</span>. In <a href="#sec-roots-1" class="quarto-xref"><span>Section 5.8</span></a> and <a href="revision.html#sec-roots-2" class="quarto-xref"><span>Section A.6.7</span></a>, we will explore a more general method to solve problems of the form <span class="math display">\[
+<p>In the above example it was a bit laborious to compute <span class="math inline">\(S_{1}\)</span> and <span class="math inline">\(S_{2}\)</span>. In <a href="#sec-roots-1" class="quarto-xref"><span>Section 5.8</span></a> and <a href="#sec-roots-2" class="quarto-xref"><span>Section 5.9</span></a>, we will explore a more general method to solve problems of the form <span class="math display">\[
 z^n = \Delta \,.
 \]</span></p>
 </section>
@@ -1592,9 +1575,9 @@ z^{2}=(a+ ib)^{2}=a^{2}-b^{2}+2 a b i = 8 i \,.
 a^{2}-b^{2}=0 \,, \quad 2 a b = 8  \,.
 \]</span> From the first equation we conclude that <span class="math inline">\(|a|=|b|\)</span>. From the second equation we have that <span class="math inline">\(ab=4\)</span>, and therefore <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> must have the same sign. Hence <span class="math inline">\(a=b\)</span>, and <span class="math display">\[
 2 a b = 8 \quad \implies \quad a = b = \pm 2 \,.
-\]</span> From this we conclude that the solutions to (<a href="revision.html#eq-example-complex-delta-2" class="quarto-xref"><span>A.26</span></a>) are <span class="math display">\[
+\]</span> From this we conclude that the solutions to (<a href="#eq-example-complex-delta-2" class="quarto-xref"><span>5.19</span></a>) are <span class="math display">\[
 S_{1} = 2+2 i \,, \quad  S_{2}=-2-2 i \,.
-\]</span> Hence the solutions to (<a href="revision.html#eq-example-complex-delta" class="quarto-xref"><span>A.25</span></a>) are <span class="math display">\[\begin{align*}
+\]</span> Hence the solutions to (<a href="#eq-example-complex-delta" class="quarto-xref"><span>5.18</span></a>) are <span class="math display">\[\begin{align*}
 z_1 &amp; = \frac{3+i+S_{1}}{2 \cdot \frac{1}{2}}  = 3 + i + S_{1} \\
 &amp; = 3 + i + 2 + 2i = 5 + 3i \,,
 \end{align*}\]</span> and <span class="math display">\[\begin{align*}
@@ -1649,7 +1632,7 @@ z^n = 1
 <div id="Theorem-68" class="Theorem">
 <p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 68</strong></summary><div>Let <span class="math inline">\(n \in \mathbb{N}\)</span> and consider the equation <span id="eq-root-unity-1"><span class="math display">\[
 z^{n}=1 \,.
-\tag{5.21}\]</span></span> All the <span class="math inline">\(n\)</span> solutions to (<a href="revision.html#eq-root-unity-1" class="quarto-xref"><span>A.27</span></a>) are given by <span class="math display">\[
+\tag{5.21}\]</span></span> All the <span class="math inline">\(n\)</span> solutions to (<a href="#eq-root-unity-1" class="quarto-xref"><span>5.21</span></a>) are given by <span class="math display">\[
 z_k = \exp \left(i \frac{2 \pi k}{n}\right) \,, \quad k = 0, \ldots, n-1 \,,
 \]</span> where <span class="math inline">\(\exp(x)\)</span> denotes <span class="math inline">\(e^x\)</span>.<p></p>
 </div></details>
@@ -1657,7 +1640,7 @@ z_k = \exp \left(i \frac{2 \pi k}{n}\right) \,, \quad k = 0, \ldots, n-1 \,,
 <div id="Proof*-16" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Rewrite <span class="math inline">\(1\)</span> in exponential form: <span class="math display">\[
 1=|1|e^{i \arg(1)} =e^{i 2 \pi k} \, , \quad k \in \mathbb{Z}\,.
-\]</span> Therefore (<a href="revision.html#eq-root-unity-1" class="quarto-xref"><span>A.27</span></a>) is equivalent to <span class="math display">\[
+\]</span> Therefore (<a href="#eq-root-unity-1" class="quarto-xref"><span>5.21</span></a>) is equivalent to <span class="math display">\[
 z^n = e^{i 2 \pi k} \,.
 \]</span> By the properties of the exponential, we see that the above is solved by <span class="math display">\[
 z_k = \exp \left(i \frac{2 \pi k}{n}\right), \quad k \in \mathbb{Z}\,.
@@ -1708,7 +1691,7 @@ z^{n}=c \,.
 <div id="Theorem-72" class="Theorem">
 <p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 72</strong></summary><div>Let <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(c \in \mathbb{C}\)</span> and consider the equation <span id="eq-root-C"><span class="math display">\[
 z^{n}=c \,.
-\tag{5.22}\]</span></span> All the <span class="math inline">\(n\)</span> solutions to (<a href="revision.html#eq-root-C" class="quarto-xref"><span>A.28</span></a>) are given by <span class="math display">\[
+\tag{5.22}\]</span></span> All the <span class="math inline">\(n\)</span> solutions to (<a href="#eq-root-C" class="quarto-xref"><span>5.22</span></a>) are given by <span class="math display">\[
 z_k = \sqrt[n]{|c|} \, \exp \left(i \, \frac{\theta + 2 \pi k}{n}\right) \,, \quad k = 0, \ldots, n-1 \,,
 \]</span> where <span class="math inline">\(\sqrt[n]{|c|}\)</span> is the <span class="math inline">\(n\)</span>-th root of the real number <span class="math inline">\(|c|\)</span>, and <span class="math inline">\(\theta = \arg(c)\)</span>.<p></p>
 </div></details>
@@ -1716,7 +1699,7 @@ z_k = \sqrt[n]{|c|} \, \exp \left(i \, \frac{\theta + 2 \pi k}{n}\right) \,, \qu
 <div id="Proof*-17" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Write <span class="math inline">\(c\)</span> in exponential form: <span class="math display">\[
 c=|c|e^{i \theta} =|c| e^{i(\theta + 2 \pi k)} \, , \quad k \in \mathbb{Z}\,,
-\]</span> where <span class="math inline">\(\theta = \arg(c)\)</span>. Therefore (<a href="revision.html#eq-root-C" class="quarto-xref"><span>A.28</span></a>) is equivalent to <span class="math display">\[
+\]</span> where <span class="math inline">\(\theta = \arg(c)\)</span>. Therefore (<a href="#eq-root-C" class="quarto-xref"><span>5.22</span></a>) is equivalent to <span class="math display">\[
 z^n = |c| e^{i(\theta + 2 \pi k)} \,.
 \]</span> By the properties of the exponential, we see that the above is solved by <span class="math display">\[
 z_k= \sqrt[n]{|c|} \exp \left(i \, \frac{\theta + 2 \pi k}{n}\right), \quad k \in \mathbb{Z}\,.
