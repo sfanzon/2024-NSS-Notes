@@ -92,39 +92,19 @@ div.csl-indent {
   }
 }</script>
 <style>
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Conjecture {
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -132,9 +112,29 @@ div.csl-indent {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Remark {
   --color1: #bce5de;
@@ -144,21 +144,21 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
 .Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Proposition {
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
 }
 </style>
 
@@ -1372,15 +1372,11 @@ a_{n+1} &lt;  r \, a_n  \,, \quad \forall \, n \geq N \,.
 \sum_{n=1}^{\infty} a_n \,, \quad a_n = \frac{(n !)^{2}}{(2 n) !} \,.
 \]</span><p></p>
 <p><strong>Solution.</strong> We compute <span class="math display">\[\begin{align*}
-\frac{a_{n+1}}{a_{n}} &amp; =\frac{((n+1) !)^{2}}{(2(n+1)) !} \bigg/ \frac{(n !)^{2}}{(2 n) !} \\
-&amp; = \frac{((n+1) !)^{2}}{(n !)^{2}} \frac{(2 n) !}{(2(n+1)) !} \\
-&amp; = \left(\frac{(n+1) !}{n !}\right)^{2} \frac{(2 n) !}{(2 n+2) !} \\
-&amp; = \frac{(n+1)^{2}}{(2 n+2)(2 n+1)} \\
-&amp; = \frac{\left(1+\dfrac{1}{n}\right)^{2}}{\left(2+\dfrac{2}{n}\right)\left(2+\dfrac{1}{n}\right)}
-\end{align*}\]</span> Therefore <span class="math display">\[
-L = \lim_{n \to \infty} \frac{a_{n+1}}{a_n} =
-\lim_{n \to \infty} \frac{\left(1+\dfrac{1}{n}\right)^{2}}{\left(2+\dfrac{2}{n}\right)\left(2+\dfrac{1}{n}\right)}  = \frac{1}{4} \,.
-\]</span> Since <span class="math inline">\(L = 1/4 &lt;1\)</span>, be the Ratio Test for Series we conclude that the series of interest converges.</p>
+\lim_{n \to \infty} \frac{a_{n+1}}{a_{n}} &amp; =
+\lim_{n \to \infty} \frac{((n+1) !)^{2}}{(2(n+1)) !} \bigg/ \frac{(n !)^{2}}{(2 n) !} \\
+&amp; = \lim_{n \to \infty} \frac{(n+1)^{2}}{(2 n+2)(2 n+1)} \\
+&amp; = \lim_{n \to \infty} \frac{\left(1+\dfrac{1}{n}\right)^{2}}{\left(2+\dfrac{2}{n}\right)\left(2+\dfrac{1}{n}\right)} = \frac14 \,.
+\end{align*}\]</span> Since <span class="math inline">\(L = 1/4 &lt;1\)</span>, by the Ratio Test we conclude that <span class="math inline">\(\sum a_n\)</span> converges.</p>
 </div></details>
 </div>
 <div id="Important*-18" class="Important">
@@ -1414,13 +1410,14 @@ L &amp; = \lim_{n\to \infty} \frac{a_{n+1}}{a_n} \\
 <p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 39</strong></summary><div><strong>Question.</strong> Using the Cauchy Condensation Test and the Ratio Test, prove that the following series converges <span class="math display">\[
 \sum_{n=1}^\infty \frac{\log (n)}{ n^{2} } \,.
 \]</span><p></p>
-<p><strong>Solution.</strong> With <span class="math inline">\(a_{n}=\log n / n^{2}\)</span>, we have <span class="math display">\[
+<p><strong>Solution.</strong> Set <span class="math inline">\(a_{n}=\log n / n^{2}\)</span>. By the Cauchy Condensation Test, we know that <span class="math inline">\(\sum a_n\)</span> converges if and only if <span class="math inline">\(\sum 2^{n} a_{2^{n}}\)</span> converges. We have: <span class="math display">\[\begin{align*}
 \sum_{n=0}^{\infty} 2^{n} a_{2^{n}}
-=\sum_{n=2}^{\infty} 2^{n} \frac{\log (2^{n})}{\left(2^{n}\right)^{2}}
-=\log (2) \, \sum_{n=2}^{\infty} \frac{n }{2^{n}}
-\]</span> The series in the RHS converges by the Ratio Test: With <span class="math inline">\(b_{n}=n / 2^{n}\)</span>, we have <span class="math display">\[
+&amp; =\sum_{n=0}^{\infty} 2^{n} \frac{\log (2^{n})}{\left(2^{n}\right)^{2}} \\
+&amp; = \log (2) \, \sum_{n=0}^{\infty} \frac{n }{2^{n}} \\
+&amp; = \log (2) \, \sum_{n=0}^{\infty} b_n \,, \qquad b_n := \frac{n }{2^{n}} \,.
+\end{align*}\]</span> Apply the Ratio Test to the series <span class="math inline">\(\sum b_n\)</span> <span class="math display">\[
 \frac{b_{n+1}}{b_n} = \frac{n+1}{2^{n+1}} \bigg/ \frac{n}{2^n} = \frac{n+1}{2n} \longrightarrow \frac12 &lt; 1 \,.
-\]</span> Hence <span class="math inline">\(\sum_{n=1}^{\infty} \log n / n^{2}\)</span> converges by the Cauchy Condensation Test.</p>
+\]</span> Therefore, <span class="math inline">\(\sum b_n\)</span> converges by the Ratio Test, so that also <span class="math inline">\(\sum 2^n a_{2^n}\)</span> converges. We conclude that <span class="math inline">\(\sum a_n\)</span> converges by the Cauchy Condensation Test.</p>
 </div></details>
 </div>
 </section>
@@ -1507,27 +1504,16 @@ a_n = a_n^+ - a_n^- \,, \quad \forall \, n \in \mathbb{N}\,,
 </div>
 <div id="Example-44" class="Example">
 <p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 44</strong></summary><div><strong>Question.</strong> Prove that the following series converges <span class="math display">\[
-\sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}} \,.
+\sum_{n=1}^{\infty} a_n \,, \qquad a_n = (-1)^{n} \frac{n^{2}-5 n+2}{n^{4}} \,.
 \]</span><p></p>
-<p><strong>Solution.</strong> We have <span class="math display">\[\begin{align*}
-\left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|
-&amp; =\frac{\left|n^{2}-5 n+2\right|}{n^{4}} \\
-&amp; \leq \frac{n^{2}+5 n+2}{n^{4}} \,,
-\end{align*}\]</span> where we used the triangle inequality. Note that <span class="math display">\[\begin{align*}
+<p><strong>Solution.</strong> We have <span class="math display">\[
+|a_n| = \frac{\left|n^{2}-5 n+2\right|}{n^{4}} = \frac{n^{2}+5 n+2}{n^{4}} \,,
+\]</span> for <span class="math inline">\(n\)</span> sufficiently large (e.g.&nbsp;<span class="math inline">\(n \geq 10\)</span>). Note that <span class="math display">\[\begin{align*}
 \frac{n^{2}+5 n+2}{n^{4}} \bigg/ \frac{1}{n^{2}} &amp; =\frac{n^{4}+5 n^{3}+2 n^{2}}{n^{4}} \\
                                             &amp; = 1+ \frac{5}{n} + \frac{2}{n^{2}} \longrightarrow 1
-\end{align*}\]</span> The series <span class="math display">\[
-\sum_{n=1}^{\infty} \frac{1}{n^{2}}
-\]</span> converges, being a <span class="math inline">\(p\)</span>-series with <span class="math inline">\(p=2\)</span>. Hence, also <span class="math display">\[
+\end{align*}\]</span> The series <span class="math inline">\(\sum 1/n^2\)</span> converges, being a <span class="math inline">\(p\)</span>-series with <span class="math inline">\(p=2\)</span>. Hence, also <span class="math display">\[
 \sum_{n=1}^{\infty} \frac{n^{2}+5 n+2}{n^{4}}
-\]</span> converges by the Limit Comparison Test for non-negative series (Theorem <a href="chap_8.html#theorem-limit-comparison-test">31</a>). Since <span class="math display">\[\begin{align*}
-0 \leq \left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|  &amp; = \frac{\left|n^{2}-5 n+2\right|}{n^{4}}  \\
-  &amp; \leq \frac{n^{2}+5 n+2}{n^{4}} \,,
-\end{align*}\]</span> the series <span class="math display">\[
-\sum_{n=1}^{\infty}\left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|
-\]</span> converges by the Comparison Test for non-negative series (Theorem <a href="chap_8.html#theorem-comparison-test">29</a>). This shows the series <span class="math display">\[
-\sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}
-\]</span> converges by the Absolute Convergence Test.</p>
+\]</span> converges, by the Limit Comparison Test for non-negative series (Theorem <a href="chap_8.html#theorem-limit-comparison-test">31</a>). This shows <span class="math inline">\(\sum |a_n|\)</span> converges, which means that <span class="math inline">\(\sum a_n\)</span> converges absolutely. In particular, <span class="math inline">\(\sum a_n\)</span> converges by the Absolute Convergence Test.</p>
 </div></details>
 </div>
 </section>
@@ -1582,9 +1568,8 @@ L:= \lim_{n \to \infty} \left|\frac{a_{n+1}}{a_{n}}\right|
 <p><strong>Solution.</strong> We have <span class="math display">\[\begin{align*}
 L &amp; := \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| \\
 &amp; =\lim_{n \to \infty} \left|\frac{(4-3 i)^{n+1}}{((n+1)+1) !} \bigg/ \frac{(4-3 i)^{n}}{(n+1) !}\right| \\
-&amp; = \lim_{n \to \infty} \frac{|4-3 i|^{n+1}}{|4-3 i|^{n}} \frac{(n+1) !}{(n+2) !} \\
-&amp; = \lim_{n \to \infty} \frac{5}{n+2}  = 0\\
-\end{align*}\]</span> As <span class="math inline">\(L=0&lt;1\)</span>, by the Ratio Test, we conclude that the series <span class="math inline">\(\sum_{n=1}^\infty a_n\)</span> converges absolutely, and hence converges.</p>
+&amp; = \lim_{n \to \infty} \frac{5}{n+2}  = 0 \,.\\
+\end{align*}\]</span> As <span class="math inline">\(L=0&lt;1\)</span>, we conclude that <span class="math inline">\(\sum a_n\)</span> converges absolutely, by the Ratio Test. Hence, <span class="math inline">\(\sum a_n\)</span> converges by the Absolute Convergence Test.</p>
 </div></details>
 </div>
 </section>
@@ -1607,7 +1592,6 @@ e^{z} = \sum_{n=0}^{\infty} \frac{z^{n}}{n !} \,.
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Set <span class="math inline">\(a_{n}=z^n / n!\)</span>. Then <span class="math display">\[\begin{align*}
 L &amp; = \lim_{n \to \infty} \left|\frac{a_{n+1}}{a_{n}}\right| \\
   &amp; =  \lim_{n \to \infty} \left|\frac{z^{n+1}}{(n+1) !} \bigg/ \frac{z^{n}}{n !}\right| \\
-  &amp; =  \lim_{n \to \infty} \frac{|z|^{n+1}}{|z|^{n}} \frac{n !}{(n+1) !} \\
   &amp; =  \lim_{n \to \infty} \frac{|z|}{n+1} = 0 \,.\\
 \end{align*}\]</span> Therefore the series converges absolutely by the Ratio Test in Theorem <a href="chap_8.html#theorem-ratio-test-general">45</a>.<p></p>
 </div></details>
@@ -1682,6 +1666,17 @@ L \in \mathbb{R}\,\, \mbox{ or } \,\, L = \pm \infty  \,.
 </div></details>
 </div>
 <p>For a proof, we refer the reader to Theorem 3.54 in <span class="citation" data-cites="rudin_introduction">(<a href="references.html#ref-rudin_introduction" role="doc-biblioref">Rudin 1976</a>)</span>.</p>
+<p>In simpler terms, the last two Theorems are saying that:</p>
+<ul>
+<li>If a series converges absolutely, then all the rearrangements converge to the same number:
+<ul>
+<li>Absolute convergence <span class="math inline">\(\implies\)</span> Commutativity holds for infinite sums</li>
+</ul></li>
+<li>If a series converges conditionally, then we can rearrange the terms to converge to any real number, or even diverge:
+<ul>
+<li>Conditional convergence <span class="math inline">\(\implies\)</span> Commutativity does not hold for infinite sums</li>
+</ul></li>
+</ul>
 </section>
 <section id="dirichlet-and-alternating-series-tests" class="level3" data-number="8.5.5">
 <h3 data-number="8.5.5" class="anchored" data-anchor-id="dirichlet-and-alternating-series-tests"><span class="header-section-number">8.5.5</span> Dirichlet and Alternating Series Tests</h3>
@@ -1733,55 +1728,46 @@ q_n - q_{n+1} \geq 0 \,,
 \]</span> In particular the series <span class="math display">\[
 \sum_{n=1}^\infty  s_n (q_n -  q_{n+1})
 \]</span> converges by the Absolute Convergence Test. Since we have shown <span class="math display">\[
-\sum_{n=1}^k c_k q_k = \left( \sum_{n=1}^{k-1} s_n (q_n - q_{n+1}) \right) + s_k q_k
-\]</span> and <span class="math inline">\(s_k q_k \to 0\)</span>, we conclude that <span class="math display">\[
-\sum_{n=1}^\infty c_k q_k  
-\]</span> converges.<p></p>
+\sum_{n=1}^k c_n q_n = \left( \sum_{n=1}^{k-1} s_n (q_n - q_{n+1}) \right) + s_k q_k
+\]</span> and <span class="math inline">\(s_k q_k \to 0\)</span>, we conclude that <span class="math inline">\(\sum_{n=1}^\infty c_n q_n\)</span> converges.<p></p>
 </div></details>
 </div>
 <div id="Example-55" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 55</strong></summary><div>
-<p>Let <span class="math inline">\(\theta \in \mathbb{R}\)</span>, with <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 55</strong></summary><div><strong>Question.</strong> Let <span class="math inline">\(\theta \in \mathbb{R}\)</span>, with <span class="math display">\[
 \theta \neq 2 k \pi \,, \quad \forall \, k \in \mathbb{Z}\,.
 \]</span> Prove that the below series are conditionally convergent <span class="math display">\[
 \sum_{n=1}^\infty \frac{e^{i \theta n}}{n} \,, \quad \sum_{n=1}^{\infty} \frac{\cos(\theta n)}{n} \,, \quad \sum_{n=1}^{\infty} \frac{\sin(\theta n)}{n} \,.
-\]</span></p>
-<blockquote class="blockquote">
-<p><em>Solution.</em> Clearly the series <span class="math display">\[
-\sum_{n=1}^\infty \frac{e^{i \theta n}}{n}
-\]</span> does not converge absolutely, since <span class="math display">\[
+\]</span><p></p>
+<p><strong>Solution.</strong> The series <span class="math inline">\(\sum e^{i \theta n} /n\)</span> does not converge absolutely, since <span class="math display">\[
 \sum_{n=1}^\infty \left| \frac{e^{i \theta n}}{n} \right|
 = \sum_{n=1}^\infty \frac{1}{n}
-\]</span> diverges, being the Harmonic Series. Let us prove convergence of <span class="math inline">\(\sum_{n=1}^\infty \frac{e^{i \theta n}}{n}\)</span>. Define the sequences <span class="math display">\[
-c_n := e^{i\theta n} \,, \quad q_n := \frac{1}{n} \,.
+\]</span> diverges, being the Harmonic Series. Set <span class="math inline">\(c_n = e^{i\theta n}\)</span>, <span class="math inline">\(q_n = 1/n\)</span>, so that <span class="math display">\[
+\sum_{n=1}^\infty \frac{e^{i \theta n}}{n} =
+\sum_{n=1}^\infty c_nq_n \,.
 \]</span> We have that <span class="math inline">\(q_n\)</span> is decreasing, <span class="math inline">\(q_n \to 0\)</span> and <span class="math inline">\(q_n \geq 0\)</span>. Let us prove that there exists <span class="math inline">\(M&gt;0\)</span> such that <span id="eq-dirichlet-example"><span class="math display">\[
 \left| \sum_{n=1}^k  e^{i\theta n} \right| \leq M \,,\quad \forall \, k \in \mathbb{N}\,.
 \tag{8.13}\]</span></span> Note that <span class="math display">\[
 1 - e^{i\theta} \neq 0 \,,
 \]</span> since <span class="math inline">\(\theta \neq 2k\pi\)</span> for all <span class="math inline">\(k \in \mathbb{Z}\)</span>. Therefore we can use the Geometric Series (truncated) summation formula to get <span class="math display">\[\begin{align*}
-\sum_{n=1}^k  e^{i\theta n} &amp; = \sum_{n=1}^k  e^{i\theta n} \\
-&amp; = \frac{1- e^{i(k+1)\theta}}{1 - e^{i\theta}} - 1 \\
-&amp; = e^{i\theta} \,
-\frac{1- e^{ik\theta}}{1 - e^{i\theta}}
-\end{align*}\]</span> Thus <span class="math display">\[\begin{align*}
-\left| \sum_{n=1}^k  e^{i\theta n} \right| &amp; = \left| e^{i\theta} \,
-\frac{1- e^{ik\theta}}{1 - e^{i\theta}} \right| \\
-&amp; = \left| e^{i \theta} \right|
-\left|\frac{1- e^{ik\theta}}{1 - e^{i\theta}} \right| \\
-&amp; = \frac{ |1- e^{ik\theta}|}{|1 - e^{i\theta} |} \\
-&amp; \leq \frac{ |1| + |e^{ik\theta}|}{|1 - e^{i\theta} |} \\
-&amp; =  \frac{ |1| }{|1 - e^{i\theta} |}
-\end{align*}\]</span> where we used the triangle inequality. Since the right hand side does not depend on <span class="math inline">\(k\)</span>, we can set <span class="math display">\[
-M := \frac{ |1| }{|1 - e^{i\theta} |} \,,
-\]</span> so that (<a href="#eq-dirichlet-example" class="quarto-xref"><span>8.13</span></a>) holds. Therefore <span class="math display">\[
-\sum_{n=1}^\infty \frac{e^{i \theta n}}{n}
-\]</span> converges by the Dirichlet Test. Recalling the Euler’s Identity <span class="math display">\[
+\sum_{n=1}^k  e^{i\theta n} &amp; = \sum_{n=1}^k  (e^{i\theta})^n \\
+                            &amp; = \frac{1- e^{i(k+1)\theta}}{1 - e^{i\theta}} - 1 \\
+                            &amp; = e^{i\theta} \,
+                            \frac{1- e^{ik\theta}}{1 - e^{i\theta}}
+\end{align*}\]</span> Taking the modulus <span class="math display">\[\begin{align*}
+\left| \sum_{n=1}^k  e^{i\theta n} \right|
+&amp; = \left| e^{i\theta} \, \frac{1- e^{ik\theta}}{1 - e^{i\theta}} \right|
+= \left| e^{i \theta} \right| \left|\frac{1- e^{ik\theta}}{1 - e^{i\theta}} \right| \\
+&amp; = \frac{ |1- e^{ik\theta}|}{|1 - e^{i\theta} |}
+\leq \frac{ |1| + |e^{ik\theta}|}{|1 - e^{i\theta} |}
+=  \frac{ 1 }{|1 - e^{i\theta} |} \,,
+\end{align*}\]</span> where we used the triangle inequality. Since the RHS does not depend on <span class="math inline">\(k\)</span>, we can set <span class="math display">\[
+M = \frac{ 1 }{|1 - e^{i\theta} |} \,,
+\]</span> so that (<a href="#eq-dirichlet-example" class="quarto-xref"><span>8.13</span></a>) holds. Therefore, <span class="math inline">\(\sum e^{i \theta n}/n\)</span> converges by the Dirichlet Test. This shows <span class="math inline">\(\sum e^{i \theta n}/n\)</span> converges conditionally. Recalling the Euler’s Identity <span class="math display">\[
 e^{i\theta} = \cos(\theta) + i \sin(\theta) \,,
 \]</span> we obtain that also the series <span class="math display">\[
 \sum_{n=1}^\infty \frac{\cos(n \theta)}{n} \,, \quad
 \sum_{n=1}^\infty \frac{\sin(n \theta)}{n}
-\]</span> converge.</p>
-</blockquote>
+\]</span> converge conditionally.</p>
 </div></details>
 </div>
 <p>As a corollary of the Dirichlet Test we obtain the Alternate Convergence Test.</p>
@@ -1815,34 +1801,26 @@ c_n := (-1)^n \,.
 </div></details>
 </div>
 <div id="example-alternating-series-test" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 57</strong></summary><div>
-<p>Prove that the below series converges conditionally <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 57</strong></summary><div><strong>Question.</strong> Prove that the series converges conditionally <span class="math display">\[
 \sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n} \,.
-\]</span></p>
-<blockquote class="blockquote">
-<p><em>Solution.</em> The series does not converge absolutely, since <span class="math display">\[
+\]</span><p></p>
+<p><strong>Solution.</strong> The series does not converge absolutely, since <span class="math display">\[
 \sum_{n=1}^{\infty} \left| (-1)^{n} \frac{1}{n} \right| =
 \sum_{n=1}^\infty \frac1n
-\]</span> diverges, being the Harmonic Series. We need to show convergence of <span class="math display">\[
-\sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n} \,.
-\]</span> To this end, set <span class="math display">\[
-q_n := \frac1n \,.
-\]</span> Clearly <span class="math inline">\(q_n \geq 0\)</span>, <span class="math inline">\(q_n \to 0\)</span> and <span class="math inline">\(q_n\)</span> is decreasing. Hence the series converges by the Alternating Series Test.</p>
-</blockquote>
+\]</span> diverges, being the Harmonic Series. Set <span class="math inline">\(q_n = 1/n\)</span>, so that <span class="math display">\[
+\sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n} = \sum_{n=1}^\infty (-1)^n q_n \,.
+\]</span> Clearly, <span class="math inline">\(q_n \geq 0\)</span>, <span class="math inline">\(q_n \to 0\)</span> and <span class="math inline">\(q_n\)</span> is decreasing. Hence, the series converges by the Alternating Series Test.</p>
 </div></details>
 </div>
 </section>
 <section id="abels-test" class="level3" data-number="8.5.6">
 <h3 data-number="8.5.6" class="anchored" data-anchor-id="abels-test"><span class="header-section-number">8.5.6</span> Abel’s Test</h3>
-<p>Another conditional convergence test is the Abel Test. This looks similar to the Dirichlet Test, however notice that the Abel Test only deals with real sequences.</p>
+<p>The Abel Test is another test for conditional convergence. It looks similar to the Dirichlet Test, however notice that the Abel Test only deals with real sequences.</p>
 <div id="abels-test-1" class="Theorem" title="Abel’s Test">
 <p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 58: </strong>Abel’s Test</summary><div>Let <span class="math inline">\((a_n)\)</span> and <span class="math inline">\((q_n)\)</span> be sequences in <span class="math inline">\(\mathbb{R}\)</span>. Suppose that<p></p>
 <ul>
-<li><span class="math inline">\(q_n\)</span> is monotone,</li>
-<li><span class="math inline">\(q_n\)</span> is bounded,</li>
-<li>The series below converges <span class="math display">\[
-\sum_{n=1}^\infty a_n \,.
-\]</span></li>
+<li><span class="math inline">\(q_n\)</span> is monotone and bounded,</li>
+<li>The series <span class="math inline">\(\sum a_n\)</span> converges.</li>
 </ul>
 <p>Then the following series converges <span class="math display">\[
 \sum_{n=1}^\infty a_n q_n
