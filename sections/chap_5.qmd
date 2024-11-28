@@ -1315,9 +1315,9 @@ by $2\pi$ periodicity of $e^{i\theta}$ and Euler's identity.
 ::: Definition
 ### Complex exponential
 
-The complex exponential of $z \in \C$ is defined as
+The complex exponential of $z = a + i b \in \C$ is defined as
 $$
-e^z = |z| e^{i\theta} \,, \quad \theta = \arg(z) \,.
+e^z = e^a e^{ib} \,. 
 $$
 
 :::

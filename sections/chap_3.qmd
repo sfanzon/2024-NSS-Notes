@@ -247,17 +247,12 @@ $$
 
 **Solution.**
 
-1. We have
+1. The operation $\circ$ is not commutative, since
 $$
-0 \circ 1 = 1 \, , \quad 1 \circ 0 = 0
+0 \circ 1 = 1 \neq 0 = 1 \circ 0 \,.
 $$
-and therefore
-$$
-0 \circ 1 \neq 1 \circ 0 \,.
-$$
-showing that $\circ$ is not commutative.
 
-2. We have
+2. The operation $\circ$ is not associative, since
 $$
 (0 \circ 1) \circ 1 = 1 \circ 1 = 0 \,,
 $$
@@ -269,7 +264,6 @@ so that
 $$
 (0 \circ 1) \circ 1  \neq 0 \circ (1 \circ 1)\,.
 $$
-Thus, $\circ$ is not associative.
 
 :::
 

@@ -15,7 +15,7 @@ This work is licensed under
 
 For attribution, please cite this work as:
 
-> Fanzon, Silvio. (2024). *Lecture Notes on Numbers, Sequences and Series*.  
+> Fanzon, Silvio. (2024). *Lecture Notes of Numbers Sequences and Series*.  
 [https://www.silviofanzon.com/2024-NSS-Notes/](https://www.silviofanzon.com/2024-NSS-Notes/)
 
 
@@ -25,7 +25,7 @@ BibTex citation:
 ```bibtex
 @electronic{Fanzon-NSS-2024,
 	author = {Fanzon, Silvio},
-	title = {Lecture Notes on Numbers, Sequences and Series},
+	title = {Lecture Notes of Numbers Sequences and Series},
 	url = {https://www.silviofanzon.com/2024-NSS-Notes/},
 	year = {2024}}
 ```

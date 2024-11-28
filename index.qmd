@@ -7,7 +7,7 @@ $$
 
 # Welcome {.unnumbered}
 
-These are the Lecture Notes of **Numbers, Sequences and Series 400297** for 2024/25 at the University of Hull. 
+These are the Lecture Notes of **Numbers Sequences and Series 400297** for 2024/25 at the University of Hull. 
 I will use this material during lectures. If you have any question or find any typo, please email me at
 
 
@@ -47,6 +47,26 @@ Up to date information about the course, Tutorials and Homework will be publishe
 
 
 
+
+
+## Revision Guide {.unnumbered}
+
+A Revision Guide to prepare for the Exam is available at
+
+::: {.content-visible when-format="html"}
+<div style="text-align: center;">
+**[silviofanzon.com/2024-NSS-Revision](https://www.silviofanzon.com/2024-NSS-Revision)**
+</div>
+:::
+
+
+::: {.content-visible when-format="pdf"}
+\begin{center}
+\textbf{
+\href{https://www.silviofanzon.com/2024-NSS-Revision}{silviofanzon.com/2024-NSS-Revision}
+}
+\end{center}
+:::
 
 
 
@@ -89,22 +109,3 @@ You are not expected to purchase any of the above books. These lecture notes wil
 :::
 
 
-
-## Revision Guide {.unnumbered}
-
-A Revision Guide to prepare for the Exam is available at
-
-::: {.content-visible when-format="html"}
-<div style="text-align: center;">
-**[silviofanzon.com/2024-NSS-Revision](https://www.silviofanzon.com/2024-NSS-Revision)**
-</div>
-:::
-
-
-::: {.content-visible when-format="pdf"}
-\begin{center}
-\textbf{
-\href{https://www.silviofanzon.com/2024-NSS-Revision}{silviofanzon.com/2024-NSS-Revision}
-}
-\end{center}
-:::
