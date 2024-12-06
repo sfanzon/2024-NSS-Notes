@@ -72,35 +72,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Problem {
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -108,21 +80,41 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
-.Corollary {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
 .Definition {
   --color1: #c6e6ed;
   --color2: #1995ad;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Conjecture {
   --color1: #f4cce0;
@@ -132,11 +124,19 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Important {
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Example {
+.Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
@@ -561,38 +561,29 @@ N &gt; \frac{1}{\varepsilon^p}
 <ol type="1">
 <li><p><em>Rough Work:</em> Let <span class="math inline">\(\varepsilon&gt;0\)</span>. We want to find <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
 \left|\frac{n}{2n+3}-\frac{1}{2}\right| &lt; \varepsilon\,, \quad \forall \, n \geq N \,.
-\]</span> To this end, we compute: <span class="math display">\[\begin{align*}
-\left|\frac{n}{2 n+3}-\frac{1}{2}\right| &amp;
-=\left|\frac{2n -(2n + 3)}{2(2n +3)}\right| \\
-&amp; =\left|\frac{- 3}{4n + 6}\right| \\
-&amp; = \frac{3}{4n + 6} \,.
-\end{align*}\]</span> Therefore <span class="math display">\[\begin{align*}
+\]</span> To this end, we compute: <span class="math display">\[
+\left|\frac{n}{2 n+3}-\frac{1}{2}\right|
+=\left|\frac{- 3}{4n + 6}\right| \\
+= \frac{3}{4n + 6} \,.
+\]</span> Therefore <span class="math display">\[\begin{align*}
 \left|\frac{n}{2n+3}-\frac{1}{2}\right| &lt; \varepsilon
 \quad \iff &amp;  \quad
 \frac{3}{4n + 6} &lt; \varepsilon\\
 \quad \iff &amp;  \quad
-\frac{4n + 6}{3} &gt; \frac{1}{\varepsilon} \\
-\quad \iff &amp;  \quad
-4n + 6 &gt; \frac{3}{\varepsilon} \\
-\quad \iff &amp;  \quad
-4n  &gt; \frac{3}{\varepsilon} - 6 \\
-\quad \iff &amp;  \quad
 n  &gt; \frac{3}{4\varepsilon} - \frac{6}{4} \,.
-\end{align*}\]</span> Looking at the above equivalences, it is clear that <span class="math inline">\(N \in \mathbb{N}\)</span> has to be chosen so that <span class="math display">\[
+\end{align*}\]</span> Looking at the above equivalences, it is clear that <span class="math inline">\(N \in \mathbb{N}\)</span> has to be chosen so that <span id="eq-example-limit-1"><span class="math display">\[
 N  &gt; \frac{3}{4\varepsilon} - \frac{6}{4} \,.
-\]</span></p></li>
+\tag{6.5}\]</span></span></p></li>
 <li><p><em>Formal Proof:</em> We have to show that <span class="math display">\[
 \forall \varepsilon&gt;0 \,, \, \exists \, N \in \mathbb{N}\, \text{ s.t. } \, \forall \, n \geq N \,, \, \left|\frac{n}{2n+3}-\frac{1}{2}\right| &lt; \varepsilon\,.
-\]</span> Let <span class="math inline">\(\varepsilon&gt;0\)</span>. Choose <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span id="eq-example-limit-1"><span class="math display">\[
-N &gt; \frac{3}{4\varepsilon} - \frac{6}{4}   \,.
-\tag{6.5}\]</span></span> By the rough work shown above, inequality (<a href="#eq-example-limit-1" class="quarto-xref"><span>6.5</span></a>) is equivalent to <span class="math display">\[
+\]</span> Let <span class="math inline">\(\varepsilon&gt;0\)</span>. Choose <span class="math inline">\(N \in \mathbb{N}\)</span> such that (<a href="#eq-example-limit-1" class="quarto-xref"><span>6.5</span></a>) holds. By the rough work shown above, inequality (<a href="#eq-example-limit-1" class="quarto-xref"><span>6.5</span></a>) is equivalent to <span class="math display">\[
 \frac{3}{4N + 6} &lt; \varepsilon\,.
-\]</span> Let <span class="math inline">\(n \geq N\)</span>. Then <span class="math display">\[\begin{align*}
+\]</span> Let <span class="math inline">\(n \geq N\)</span>. Then <span class="math display">\[
 \left|\frac{n}{2n+3}-\frac{1}{2}\right|
-&amp; = \frac{3}{4 n+ 6 } \\
-&amp; \leq \frac{3}{4 N+ 6 } \\
-&amp; &lt; \varepsilon\,,
-\end{align*}\]</span> where in the third line we used that <span class="math inline">\(n \geq N\)</span>.</p></li>
+= \frac{3}{4 n+ 6 }
+\leq \frac{3}{4 N+ 6 }
+&lt; \varepsilon\,,
+\]</span> where in the third line we used that <span class="math inline">\(n \geq N\)</span>.</p></li>
 </ol>
 </div></details>
 </div>
@@ -829,12 +820,15 @@ M:=\max \left\{\left|a_{1}\right|,\left|a_{2}\right|, \ldots,\left|a_{N-1}\right
 </div>
 <p>The choice of <span class="math inline">\(M\)</span> in the above proof says that the sequence can behave wildly for a finite number of terms. After that, it will stay close to the value of the limit, if the latter exists.</p>
 <div id="Example-20" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 20</strong></summary><div>In Theorem <a href="chap_6.html#theorem-one-over-n">8</a> we have shown that <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 20</strong></summary><div><strong>Question.</strong> Prove that the following sequence is bounded, and find <span class="math inline">\(M\)</span>: <span class="math display">\[
+a_n = \frac1n \,.
+\]</span><p></p>
+<p><strong>Solution.</strong> In Theorem <a href="chap_6.html#theorem-one-over-n">8</a> we have shown that <span class="math display">\[
 \lim_{n \to \infty} \,  \frac{1}{n} = 0
-\]</span> Hence, it follows from Theorem <a href="revision.html#theorem-convergent-bounded">136</a> that the sequence <span class="math inline">\((1/n)\)</span> is bounded.<p></p>
-<p>Indeed, we have that <span class="math display">\[
+\]</span> Hence, it follows from Theorem <a href="revision.html#theorem-convergent-bounded">136</a> that the sequence <span class="math inline">\((1/n)\)</span> is bounded.</p>
+<p>An explicit constant <span class="math inline">\(M\)</span> is found as follows: <span class="math display">\[
 \left|\frac{1}{n}\right|=\frac{1}{n} \leq 1 \,, \quad \forall \, n \in \mathbb{N}\,,
-\]</span> since <span class="math inline">\(n \geq 1\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+\]</span> since <span class="math inline">\(n \geq 1\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. Therefore <span class="math inline">\(M=1\)</span>.</p>
 </div></details>
 </div>
 <div id="Warning*-10" class="Warning">
@@ -842,29 +836,31 @@ M:=\max \left\{\left|a_{1}\right|,\left|a_{2}\right|, \ldots,\left|a_{N-1}\right
 </div></details>
 </div>
 <div id="Example-21" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 21</strong></summary><div>Define the sequence <span class="math display">\[
-a_n = (-1)^n \,.
-\]</span> We have proven in Theorem <a href="revision.html#theorem-1-minus-n">133</a> that <span class="math inline">\((a_n)\)</span> is not convergent. However <span class="math inline">\((a_n)\)</span> is bounded, with <span class="math inline">\(M=1\)</span>, since <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 21</strong></summary><div>The sequence <span class="math display">\[
+a_n = (-1)^n
+\]</span> is bounded (<span class="math inline">\(M=1\)</span>) but not convergent.<p></p>
+<p><strong>Proof.</strong> We have proven in Theorem <a href="revision.html#theorem-1-minus-n">133</a> that <span class="math inline">\((a_n)\)</span> is not convergent. However <span class="math inline">\((a_n)\)</span> is bounded, with <span class="math inline">\(M=1\)</span>, since <span class="math display">\[
 |a_n| = |(-1)^n| = 1 = M  \,, \quad \forall \, n \in \mathbb{N}\,.
-\]</span><p></p>
+\]</span></p>
 </div></details>
 </div>
 <p>Taking the contrapositive of the statement in Theorem <a href="revision.html#theorem-convergent-bounded">136</a> we get the following corollary:</p>
 <div id="corollary-convergent-bounded" class="Corollary">
-<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 22</strong></summary><div>If a sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> is not bounded, then the sequence does not converge.<p></p>
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 22</strong></summary><div>If a sequence is not bounded, then the sequence does not converge.<p></p>
 </div></details>
 </div>
 <div id="Remark-23" class="Remark">
 <p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 23</strong></summary><div>For a sequence <span class="math inline">\((a_n)\)</span> to be unbounded, it means that <span class="math display">\[
 \forall \, M &gt; 0 \,, \,\,  \exists \, n \in \mathbb{N}\, \text{ s.t. } \, \left|a_{n}\right| &gt; M \,.
-\]</span> The above is saying that no real number <span class="math inline">\(M&gt;0\)</span> can be a bound for <span class="math inline">\(|a_n|\)</span>, since there is always an index <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
-|a_n| &gt; M \,.
 \]</span><p></p>
+<p><em>Comment.</em> The above is saying that no real number <span class="math inline">\(M&gt;0\)</span> can be a bound for <span class="math inline">\(|a_n|\)</span>, since there is always an index <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+|a_n| &gt; M \,.
+\]</span></p>
 </div></details>
 </div>
 <p>We can use Corollary <a href="revision.html#corollary-convergent-bounded">138</a> to show that certain sequences do not converge.</p>
 <div id="Theorem-24" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 24</strong></summary><div>For all <span class="math inline">\(p&gt;0\)</span>, the sequence <span class="math inline">\(\left(n^{p}\right)_{n \in \mathbb{N}}\)</span> does not converge.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 24</strong></summary><div>Let <span class="math inline">\(p&gt;0\)</span>. The sequence <span class="math inline">\(a_n = n^p\)</span> is unbounded, and hence divergent.<p></p>
 </div></details>
 </div>
 <div id="Proof*-11" class="Proof">
@@ -878,7 +874,7 @@ a_n = n^{p}&gt;\left(M^{1/p}\right)^{p}=M \,.
 </div></details>
 </div>
 <div id="Theorem-25" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 25</strong></summary><div>The sequence <span class="math inline">\((\log n)_{n \in \mathbb{N}}\)</span> does not converge.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 25</strong></summary><div>The sequence <span class="math inline">\(a_n  = \log n\)</span> is unbounded, and hence divergent.<p></p>
 </div></details>
 </div>
 <div id="Proof*-12" class="Proof">
@@ -1318,8 +1314,8 @@ b_n = a_n - c_n \longrightarrow a - 0 = a \,.
 </section>
 <section id="geometric-sequences" class="level3" data-number="6.8.2">
 <h3 data-number="6.8.2" class="anchored" data-anchor-id="geometric-sequences"><span class="header-section-number">6.8.2</span> Geometric sequences</h3>
-<div id="Definition-39" class="Definition">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 39</strong></summary><div>A sequence <span class="math inline">\(\left(a_{n}\right)\)</span> is called a <strong>geometric sequence</strong> if <span class="math display">\[
+<div id="geometric-sequence" class="Definition" title="Geometric sequence">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 39: </strong>Geometric sequence</summary><div>A sequence <span class="math inline">\(\left(a_{n}\right)\)</span> is called a <strong>geometric sequence</strong> if <span class="math display">\[
 a_{n}=x^{n} \,,
 \]</span> for some <span class="math inline">\(x \in \mathbb{R}\)</span>.<p></p>
 </div></details>
@@ -1327,9 +1323,7 @@ a_{n}=x^{n} \,,
 <p>The value of <span class="math inline">\(|x|\)</span> determines whether or not a geometric sequence converges, as shown in the following theorem.</p>
 <div id="theorem-geometric-sequence" class="Theorem" title="Geometric Sequence Test">
 <details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 40: </strong>Geometric Sequence Test</summary><div>
-<p>Let <span class="math inline">\(x \in \mathbb{R}\)</span> and let <span class="math inline">\(\left(a_{n}\right)\)</span> be the sequence defined by <span class="math display">\[
-a_{n}:=x^{n} \,.
-\]</span> We have:</p>
+<p>Let <span class="math inline">\(x \in \mathbb{R}\)</span> and let <span class="math inline">\(\left(a_{n}\right)\)</span> be the sequence defined by <span class="math inline">\(a_{n}:=x^{n}\)</span>. We have:</p>
 <ol type="1">
 <li><p>If <span class="math inline">\(|x|&lt;1\)</span>, then <span class="math display">\[
 \lim_{n \to \infty} a_{n} = 0 \,.
@@ -1553,25 +1547,22 @@ L^n \, \frac{b_N}{L^N}
 </div>
 <p>Let us apply the Ratio Test to some concrete examples.</p>
 <div id="Example-44" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 44</strong></summary><div><strong>Question.</strong> Let <span class="math display">\[
-a_{n}=\frac{3^{n}}{n !} \,,
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 44</strong></summary><div><strong>Question.</strong> Prove that <span class="math display">\[
+a_{n}=\frac{3^{n}}{n !} \to 0 \,,
 \]</span> where we recall that <span class="math inline">\(n!\)</span> (pronounced <span class="math inline">\(n\)</span> factorial) is defined by <span class="math display">\[
 n! := n \cdot (n-1) \cdot (n-2) \cdot  \ldots \cdot  3 \cdot 2 \cdot 1 \,.
-\]</span> Prove that <span class="math display">\[
-\lim_{n \to \infty} a_n  = 0 \,.
 \]</span><p></p>
-<p><strong>Solution.</strong> We have <span class="math display">\[\begin{align*}
-\left|\frac{a_{n+1}}{a_{n}}\right| &amp; = \dfrac{\left( \dfrac{3^{n+1}}{(n+1) !} \right) }{  \left( \dfrac{3^{n}}{n !} \right) } \\
-&amp; = \frac{3^{n+1}}{3^{n}} \, \frac{n !}{(n+1) !} \\
-&amp; = \frac{3 \cdot 3^n}{3^n} \, \frac{n!}{(n+1) n!} \\
-&amp; =\frac{3}{n+1} \longrightarrow L = 0 \,.
-\end{align*}\]</span> Hence, <span class="math inline">\(L=0&lt;1\)</span> so <span class="math inline">\(a_{n} \to 0\)</span> by the Ratio Test in Theorem <a href="revision.html#theorem-ratio-test">159</a>.</p>
+<p><strong>Solution.</strong> We have <span class="math display">\[
+\left|\frac{a_{n+1}}{a_{n}}\right|
+= \dfrac{\left( \dfrac{3^{n+1}}{(n+1) !} \right) }{  \left( \dfrac{3^{n}}{n !} \right) }
+=\frac{3}{n+1} \longrightarrow L = 0 \,.
+\]</span> Hence, <span class="math inline">\(L=0&lt;1\)</span> so <span class="math inline">\(a_{n} \to 0\)</span> by the Ratio Test in Theorem <a href="revision.html#theorem-ratio-test">159</a>.</p>
 </div></details>
 </div>
 <div id="Example-45" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 45</strong></summary><div><strong>Question.</strong> Consider the sequence <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 45</strong></summary><div><strong>Question.</strong> Prove that the sequence is divergent <span class="math display">\[
 a_{n}=\frac{n ! \cdot 3^{n}}{\sqrt{(2 n) !}} \,.
-\]</span> Prove that <span class="math inline">\((a_n)\)</span> is divergent.<p></p>
+\]</span><p></p>
 <p><strong>Solution.</strong> We have <span class="math display">\[\begin{align*}
 \left|\frac{a_{n+1}}{a_{n}}\right| &amp; =\frac{(n+1) ! \cdot 3^{n+1}}{\sqrt{(2(n+1)) !}}  \frac{\sqrt{(2 n) !}}{n ! \cdot 3^{n}} \\
 &amp; =\frac{(n+1) !}{n !} \cdot \frac{3^{n+1}}{3^{n}} \cdot \frac{\sqrt{(2 n) !}}{\sqrt{(2(n+1)) !}}
@@ -1596,12 +1587,12 @@ a_{n}=\frac{n !}{100^{n}} \,.
 \left|\frac{a_{n+1}}{a_{n}}\right|
 = \frac{100^{n}}{100^{n+1}} \frac{(n+1) !}{n !}
 =\frac{n+1}{100} \,.
-\]</span> Choose <span class="math inline">\(N=101\)</span>. Then for all <span class="math inline">\(n \geq N\)</span>, <span class="math display">\[\begin{align*}
+\]</span> Choose <span class="math inline">\(N=101\)</span>. Then for all <span class="math inline">\(n \geq N\)</span>, <span class="math display">\[
 \left|\frac{a_{n+1}}{a_{n}}\right|
-&amp; = \frac{n+1}{100} \\
-&amp; \geq \frac{N+1}{100} \\
-&amp; = \frac{101}{100} &gt; 1 \,.
-\end{align*}\]</span> Hence <span class="math inline">\(a_{n}\)</span> is divergent by the Ratio Test.</p>
+= \frac{n+1}{100}
+\geq \frac{N+1}{100}
+= \frac{101}{100} &gt; 1 \,.
+\]</span> Hence <span class="math inline">\(a_{n}\)</span> is divergent by the Ratio Test.</p>
 </div></details>
 </div>
 <div id="Warning*-23" class="Warning">
@@ -1682,14 +1673,23 @@ n^2 &gt; (n-1)(n+1) \quad  \\
 <p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 50</strong></summary><div><strong>Question.</strong> Prove that the following sequence is decreasing <span class="math display">\[
 a_n = \frac1n \,.
 \]</span><p></p>
-<p><strong>Solution.</strong> We have <span class="math display">\[
-a_n = \frac1n &gt; \frac{1}{n+1} = a_{n+1} \,,
-\]</span> concluding.</p>
+<p><strong>Solution.</strong> We immediately see that <span class="math display">\[
+a_n = \frac1n &gt; \frac{1}{n+1} = a_{n+1} \,.
+\]</span></p>
 </div></details>
 </div>
 <p>The main result about monotone sequences is the Monotone Convergence Theorem.</p>
 <div id="theorem-monotone-convergence" class="Theorem" title="Monotone Convergence Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 51: </strong>Monotone Convergence Theorem</summary><div>Let <span class="math inline">\((a_n)\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span>. Suppose that <span class="math inline">\((a_n)\)</span> is bounded and monotone. Then <span class="math inline">\((a_n)\)</span> converges.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 51: </strong>Monotone Convergence Theorem</summary><div>Let <span class="math inline">\((a_n)\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span>. Suppose that <span class="math inline">\((a_n)\)</span> is bounded and monotone. Then <span class="math inline">\((a_n)\)</span> converges. In particular,<p></p>
+<ol type="1">
+<li><p>If <span class="math inline">\(a_n\)</span> is increasing, then <span class="math display">\[
+\lim_{n \to \infty} a_n = \sup A \,,
+\]</span></p></li>
+<li><p>If <span class="math inline">\(a_n\)</span> is decreasing, then <span class="math display">\[
+\lim_{n \to \infty} a_n = \inf A \,,
+\]</span></p></li>
+</ol>
+<p>where we define <span class="math inline">\(A = \{ a_n \, \colon \, n \in \mathbb{N}\}\)</span>.</p>
 </div></details>
 </div>
 <div id="Proof*-24" class="Proof">
@@ -1894,9 +1894,7 @@ x = (1 + b_n)^n \geq 1 + n b_n \,.
 </div></details>
 </div>
 <div id="theorem-important-limit-2" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 56</strong></summary><div>Suppose <span class="math inline">\((a_n)\)</span> is such that <span class="math inline">\(a_n \to 0\)</span> and <span class="math display">\[
-a_n \neq 0 \,, \quad \forall \, n \in \mathbb{N}\, .
-\]</span> Then <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 56</strong></summary><div>Suppose <span class="math inline">\((a_n)\)</span> is such that <span class="math inline">\(a_n \to 0\)</span> and <span class="math inline">\(a_n \neq 0\)</span>. Then, <span class="math display">\[
 \lim_{n \to \infty} \frac{\sin(a_n)}{a_n} = 1 \,.
 \]</span><p></p>
 </div></details>
@@ -1941,9 +1939,7 @@ a_n \in \Big[ -\frac{\pi}{2}, \frac{\pi}{2}  \Big] \smallsetminus \{0\} \,,
 </div></details>
 </div>
 <div id="theorem-important-limit-3" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 57</strong></summary><div>Suppose <span class="math inline">\((a_n)\)</span> is such that <span class="math inline">\(a_n \to 0\)</span> and <span class="math display">\[
-a_n \neq 0 \,, \quad \forall \, n \in \mathbb{N}\, .
-\]</span> Then <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 57</strong></summary><div>Suppose <span class="math inline">\((a_n)\)</span> is such that <span class="math inline">\(a_n \to 0\)</span> and <span class="math inline">\(a_n \neq 0\)</span>. Then, <span class="math display">\[
 \lim_{n \to \infty} \frac{1 - \cos(a_n)}{(a_n)^2} = \frac{1}{2} \,, \quad
 \lim_{n \to \infty} \frac{1 - \cos(a_n)}{a_n} = 0  \, .
 \]</span><p></p>
@@ -1967,18 +1963,18 @@ a_n \neq 0 \,, \quad \forall \, n \in \mathbb{N}\, .
 <p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 58</strong></summary><div><strong>Question.</strong> Prove that <span id="eq-notable-limits-2"><span class="math display">\[
 \lim_{n \to \infty} \, n  \sin \left(  \frac{1}{n} \right)  = 1 \,.
 \tag{6.23}\]</span></span><p></p>
-<p><strong>Solution.</strong> This is because <span class="math display">\[
-n  \sin \left(  \frac{1}{n} \right) = \frac{ \sin \left(  \dfrac{1}{n} \right) }{ \dfrac{1}{n} } \longrightarrow 1 \,,
-\]</span> by Theorem <a href="revision.html#theorem-important-limit-2">168</a> with <span class="math inline">\(a_n = 1/n\)</span>.</p>
+<p><strong>Solution.</strong> By Theorem <a href="revision.html#theorem-important-limit-2">168</a> with <span class="math inline">\(a_n = 1/n\)</span>, we get <span class="math display">\[
+n  \sin \left(  \frac{1}{n} \right) = \frac{ \sin \left(  \dfrac{1}{n} \right) }{ \dfrac{1}{n} } \longrightarrow 1 \,.
+\]</span></p>
 </div></details>
 </div>
 <div id="Example-59" class="Example">
 <p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 59</strong></summary><div><strong>Question.</strong> Prove that <span id="eq-notable-limits-1"><span class="math display">\[
 \lim_{n \to \infty} \, n^2 \left(  1 - \cos \left(  \dfrac{1}{n} \right)  \right) = \frac12 \,.
 \tag{6.24}\]</span></span><p></p>
-<p><strong>Solution.</strong> Indeed, <span class="math display">\[
-n^2 \left(  1 - \cos \left(  \frac{1}{n} \right)\right) = \dfrac{1 - \cos \left(  \dfrac{1}{n} \right)}{\dfrac{1}{n^2}} \longrightarrow \frac12 \,,
-\]</span> by applying Theorem <a href="revision.html#theorem-important-limit-3">169</a> with <span class="math inline">\(a_n = 1/n\)</span>.</p>
+<p><strong>Solution.</strong> By Theorem <a href="revision.html#theorem-important-limit-3">169</a> with <span class="math inline">\(a_n = 1/n\)</span>, we have <span class="math display">\[
+n^2 \left(  1 - \cos \left(  \frac{1}{n} \right)\right) = \dfrac{1 - \cos \left(  \dfrac{1}{n} \right)}{\dfrac{1}{n^2}} \longrightarrow \frac12 \,.
+\]</span></p>
 </div></details>
 </div>
 <div id="Example-60" class="Example">
@@ -2011,10 +2007,10 @@ n \cos \left( \frac{2}{n}  \right) \sin \left( \frac{2}{n}  \right) &amp; =
 <p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 62</strong></summary><div><strong>Question.</strong> Prove that <span class="math display">\[
 \lim_{n \to \infty} \, \frac{n^2+1}{n+1} \sin \left(  \dfrac{1}{n} \right)  = 1 \,.
 \]</span><p></p>
-<p><strong>Solution.</strong> Note that <span class="math display">\[\begin{align*}
+<p><strong>Solution.</strong> Using (<a href="#eq-notable-limits-2" class="quarto-xref"><span>6.23</span></a>) and the Algebra of Limits, <span class="math display">\[\begin{align*}
 \frac{n^2+1}{n+1} \sin \left(  \dfrac{1}{n} \right) &amp; = \left( \frac{1+\dfrac{1}{n^2}}{1+ \dfrac{1}{n}} \right) \cdot \left( n \sin \left(  \dfrac{1}{n} \right) \right) \\
-&amp; \longrightarrow \frac{1 + 0}{1 + 0} \cdot 1 = 1\,,
-\end{align*}\]</span> where we used (<a href="#eq-notable-limits-2" class="quarto-xref"><span>6.23</span></a>) and the Algebra of Limits.</p>
+&amp; \longrightarrow \frac{1 + 0}{1 + 0} \cdot 1 = 1\,.
+\end{align*}\]</span></p>
 </div></details>
 </div>
 

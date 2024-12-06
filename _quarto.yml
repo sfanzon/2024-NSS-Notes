@@ -80,21 +80,21 @@ format:
   
   pdf:
     documentclass: scrreprt
-    classoption: [twocolumn]
     fontfamily: libertinus
     fontfamilyoptions:
       - osf
       - p
-    fontsize: 11pt
+    fontsize: 10pt
     template-partials:
       - before-body.tex
     geometry:
-      - top=20mm
-      - left=10mm
-      - right=10mm
-      - bottom=12mm
+      - a5paper
+      - top=12mm
+      - left=3mm
+      - right=3mm
+      - bottom=6mm
       - headheight=14pt
-      - footskip=20pt
+      - footskip=13pt
     link-citations: true
     link-external-icon: true
     linkcolor: magenta
@@ -110,22 +110,17 @@ format:
           \lohead{Numbers Sequences and Series}
           \cohead{}
           \rohead{Dr. Silvio Fanzon -- S.Fanzon@hull.ac.uk}
-          \lehead{}
-          \cehead{}
-          \rehead{}
           \lofoot{}
-          \cofoot{}
-          \rofoot{Page \thepage}
-          \lefoot{}
-          \cefoot{}
-          \refoot{}          
+          \cofoot{\pagemark}
+          \rofoot{}
           \setheadsepline{0.5pt}
-          \setfootsepline{0.8pt}
+          \setfootsepline{0.0pt}
           \addtokomafont{pageheadfoot}{\color{gray}\textnormal}
           \setkomafont{pagenumber}{}
           \ModifyLayer[addvoffset=-.6ex]{scrheadings.foot.above.line}
           \ModifyLayer[addvoffset=-.6ex]{plain.scrheadings.foot.above.line}
           \usepackage{fvextra}
+          \usepackage{centernot}
           \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
           \setlength{\parindent}{0pt}
 

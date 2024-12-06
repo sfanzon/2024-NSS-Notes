@@ -23,16 +23,17 @@ A set is a **collection** of objects. These objects are called **elements** of t
 - $\Q$ the set of rational numbers
 - $\R$ the set of real numbers
 
-Given an arbitrary set $A$, we write 
-$$
-x \in A
-$$ 
 
-if the element $x$ belongs to the set $A$. If an element $x$ is not contained in $A$, we say that 
+::: Definition 
 
-$$
-x \notin A \,.
-$$
+Let $A$ be a set. 
+
+1. We write $x \in A$ if the element $x$ belongs to the set $A$. 
+2. We write $x \notin A$ if the element $x$ does not belong to the set $A$. 
+
+:::
+
+
 
 ::: Remark
 
@@ -60,6 +61,7 @@ $$
 
 
 
+
 ## Logic
 
 In this section we introduce some basic logic symbols. Suppose that you are given two statements, say $\alpha$ and $\beta$. The formula
@@ -76,12 +78,12 @@ When we write
 $$
 \alpha \iff \beta
 $$ {#eq-iff}
-we mean that $\alpha$ and $\beta$ are **equivalent**. Note that (@eq-iff) is equivalent to 
+we mean that $\alpha$ and $\beta$ are **equivalent**. We also say that $\alpha$ is true **if and only if** $\beta$ is true. Note that (@eq-iff) is equivalent to 
 $$
 \alpha \implies \beta  \,\, \text{ and } \,\,
 \beta \implies \alpha \,.
 $$
-Such equivalence is very useful in proofs.
+
 
 ::: Example
 We have that 
@@ -155,9 +157,38 @@ $$
 
 ## Operations on sets
 
-### Union and intersection
+
+
+
 
 ::: Definition
+### Inclusion and equality
+Given two sets $A$ and $B$, we say that $A$ is **contained** in $B$, in symbols
+$$
+A \subseteq B  \,,
+$$
+if all the elements of $A$ are also contained in $B$. Two sets $A$ and $B$ are **equal**, in symbols
+$$
+A=B \,,
+$$
+if they contain the same elements. 
+:::
+
+
+::: Remark 
+
+The inclusion $A \subseteq B$ is equivalent to the implication:
+$$
+x \in A \,\, \implies \,\, x \in B 
+$$
+for all $x \in A$. The symbol $\implies$ reads **implies**, and denotes the fact that the first condition implies the second.
+
+:::
+
+
+::: Definition
+### Union and Intersection
+
 For two sets $A$ and $B$ we define their **union** as the set
 $$
 A \cup B := \{ x\, \colon \, x \in A  \, \text{ or } \, x \in B \} \,.
@@ -171,6 +202,17 @@ $$
 A \cap B = \emptyset \,.
 $$
 :::
+
+::: Example
+
+Given two sets $A$ and $B$ we always have
+\begin{gather}
+(A \cap B) \subseteq A \,, \,\, (A \cap B) \subseteq B \,,\\
+A \subseteq (A \cup B) \,, \,\, B \subseteq (A \cup B) \,.
+\end{gather}
+
+:::
+
 
 ::: Example
 
@@ -199,49 +241,6 @@ O \cup E & = \N \,, \,\, O \cap D = \emptyset \,.
 :::
 
 
-
-
-### Inclusion and equality
-
-
-Given two sets $A$ and $B$, we say that $A$ is **contained** in $B$ if all the elements of $A$ are also contained in $B$. This will be denoted with the **inclusion** symbol $\subseteq$, that is,
-$$
-A \subseteq B \,.
-$$
-In this case we say that 
-
-- $A$ is a **subset** of $B$, 
-- $B$ is a **superset** of $A$.
-
-The inclusion $A \subseteq B$ is equivalent to the implication:
-$$
-x \in A \,\, \implies \,\, x \in B 
-$$
-for all $x \in A$. The symbol $\implies$ reads **implies**, and denotes the fact that the first condition implies the second.
-
-
-::: Example
-
-Given two sets $A$ and $B$ we always have
-\begin{gather}
-(A \cap B) \subseteq A \,, \,\, (A \cap B) \subseteq B \,,\\
-A \subseteq (A \cup B) \,, \,\, B \subseteq (A \cup B) \,.
-\end{gather}
-
-:::
-
-
-We say that two sets $A$ and $B$ are equal if they contain the **same** elements. We denote equality by the symbol
-$$
-A=B \,.
-$$
-If $A \subseteq B$ and $A \neq B$, we write
-$$
-A \subset B \quad \mbox{ or } \quad A \subsetneq B \,.
-$$
-
-
-
 ::: Example
 
 1. The sets 
@@ -255,19 +254,18 @@ $$
 A =\{ 1,2 \} \,, \quad B = \{ 1, 2 ,5 \} \,.
 $$
 Then $A$ is contained in $B$, but $A$ is not equal to $B$. Therefore
-we write $A \subset B$ or $A \subsetneq B$.
+we write $A \subseteq B$ or $A \neq B$.
 
 :::
+
+
+The next proposition is very useful when we need to **prove** that two sets are equal: rather than showing directly that $A = B$, we can prove that $A \subseteq B$ and $B \subseteq A$. 
 
 ::: {.Proposition #Proposition-Equality-Sets}
 
 Let $A$ and $B$ be sets. Then 
 $$
-A=B
-$$
-**if and only if**
-$$
-A \subseteq B \,\, \text{ and } \,\, B \subseteq A \,.
+A=B \quad \iff \quad A \subseteq B \,\, \text{ and } \,\, B \subseteq A \,.
 $$
 
 :::
@@ -291,14 +289,15 @@ Suppose that $A \subseteq B$ and $B \subseteq A$. We need to show $A=B$, that is
 :::
 
 
-The above proposition is very useful when we need to **prove** that two sets are equal: rather than showing directly that $A = B$, we can prove that $A \subseteq B$ and $B \subseteq A$. 
 
 
 
 
-### Infinite unions and intersections
+
+### Infinite union and intersection
 
 ::: Definition
+## Infinite union and intersection
 
 Let $\Omega$ be a set, and $A_n \subseteq \Omega$ a family of subsets, where $n \in \N$. 
 
@@ -314,18 +313,14 @@ $$
 
 :::
 
+
 ::: Example 
 
 **Question.**
 Define $\Omega:=\N$ and a family $A_n$ by
-\begin{align}
-A_1 & := \{ 1, 2, 3 , 4 , \ldots \} \\
-A_2 & := \{ 2, 3 , 4 , 5, \ldots \} \\
-A_3 & := \{ 3 , 4 , 5, 6, \ldots \} \\
-& \ldots \ldots  \\
-A_n & := \{ n, n+1, n+2, n+3,  \ldots \} \,,
-\end{align}
-for arbitrary $n \in \N$. 
+$$
+A_n = \{ n, n+1, n+2, n+3,  \ldots \} \,, \quad n \in \N \,.
+$$
 
 1. Prove that
 $$
@@ -339,7 +334,7 @@ $$ {#eq-infinite-intersection}
 
 **Solution.**
 
-1. Equation (@eq-infinite-union) is proven using Proposition \ref{Proposition-Equality-Sets}. To this end, assume that $m \in \cup_n A_n$. Then $m \in A_n$ for at least one $n \in \N$. Since $A_n \subseteq \N$, we conclude that $m \in \N$. This shows 
+1. Assume that $m \in \cup_n A_n$. Then $m \in A_n$ for at least one $n \in \N$. Since $A_n \subseteq \N$, we conclude that $m \in \N$. This shows 
 $$
 \bigcup_{n \in \N} A_n \subseteq \N \,.
 $$
@@ -347,9 +342,9 @@ Conversely, suppose that $m \in \N$. By definition $m \in A_m$. Hence there exis
 $$
 \N \subseteq \bigcup_{n \in \N} A_n \,.
 $$
-Hence we conclude (@eq-infinite-union) by Proposition \ref{Proposition-Equality-Sets}. 
+This proves (@eq-infinite-union).
 
-2. We prove (@eq-infinite-intersection) by **contradiction**. Indeed, suppose that (@eq-infinite-intersection) is false, i.e., 
+2. Suppose that (@eq-infinite-intersection) is false, i.e., 
 $$
 \bigcap_{n \in \N} A_n \neq \emptyset \,.
 $$
@@ -362,6 +357,8 @@ This means there exists some $m \in \N$ such that $m \in \cap_{n \in \N} A_n$. H
 ### Complement
 
 ::: Definition
+### Complement
+
 Let $A,B \subseteq \Omega$. The **complement** of $A$ with respect to $B$ is the set of elements of $B$ which do not belong to $A$, that is
 $$
 B \smallsetminus A := \{ x \in \Omega \, \colon \, x \in B \, \text{ and } \, x \notin A \} \,.
@@ -423,6 +420,7 @@ $$
 ### Power set
 
 ::: Definition
+### Power set
 Let $\Omega$ be a set. The **power set** of $\Omega$ is
 $$
 \mathcal{P}(\Omega) := \{ A \divider A \subseteq \Omega \}\,.
@@ -466,28 +464,18 @@ $$
 \Omega = \{ x, y, z \}\,.
 $$
 
-**Solution.** $\mathcal{P}(\Omega)$ has $2^3 = 8$ elements. These are
-
-- $\emptyset$
-- $\{x\}$
-- $\{y\}$
-- $\{z\}$
-- $\{x,y\}$
-- $\{x,z\}$
-- $\{y,z\}$
-- $\{x,y,z\}$
-
-We therefore write 
-\begin{align}
+**Solution.** $\mathcal{P}(\Omega)$ has $2^3 = 8$, and
+\begin{align*}
 \mathcal{P}(\Omega) = \{ \emptyset, & \, \{x\} , \,  \{y\} , \, \{z\} , \{x,y\} \\
 &  \{x,z\}, \, \{y,z\} , \, \{x,y,z\} \} \,. 
-\end{align}
+\end{align*}
 :::
 
 
 ### Product of sets
 
 ::: Definition
+### Product of sets
 
 Let $A,B$ be sets. The **product** of $A$ and $B$ is the set of pairs
 $$
@@ -495,6 +483,7 @@ A \times B := \{ (a,b) \, \colon \, a \in A, \, b \in B \} \,.
 $$
 
 :::
+
 
 By definition, two elements in $A \times B$ are the same, in symbols
 $$
@@ -511,6 +500,7 @@ $$
 ## Equivalence relation
 
 ::: Definition
+### Binary relation
 
 Suppose $A$ is a set. A **binary relation** $R$ on $A$ is a subset 
 $$
@@ -558,7 +548,7 @@ and we say that $x$ and $y$ are **equivalent**.
 
 
 ::: Definition
-### Equivalence classes
+### Equivalence classes {#definition-equivalence-class}
 
 Suppose $R$ is an **equivalence relation** on $A$. The **equivalence class** of an element $x \in A$ is the set
 $$
@@ -586,13 +576,11 @@ This is shown in the following proposition.
 
 
 ::: Proposition
+### Well-posedness of Definition \ref{definition-equivalence-class}
 
 Let $\sim$ be an equivalence relation on $A$. Then
 
-1. For each $x \in A$ we have
-$$
-[x] \neq \emptyset
-$$
+1. For each $x \in A$ we have $[x] \neq \emptyset$.
 
 2. For all $x,y \in A$ it holds
 $$
@@ -759,18 +747,6 @@ $$
 
 2. Note that
 $$
-y -x \in \Z 
-$$
-is equivalent to
-$$
-\exists \, n \in \Z \, \text{ s.t. } \, y - x = n
-$$
-which again is equivalent to 
-$$
-\exists \, n \in \Z \, \text{ s.t. } \, y = x + n \,.
-$$
-In summary we have
-$$
 x \sim y \quad \iff \quad \exists \, n \in \Z \, \text{ s.t. } \, y = x + n \,.
 $$
 Therefore the equivalence classes with respect to $\sim$ are
@@ -781,8 +757,8 @@ Each equivalence class has exactly one element in $[0,1) \cap \Q$, meaning that:
 $$
 \forall x \in \Q \,, \,\, \exists! \, q \in \Q \st  0 \leq q < 1 \, \text{ and } \, q \in [x]\,.
 $${#eq-equivalence-rel}
-Condition (@eq-equivalence-rel) is illustrated in @fig-equivalence-class. Indeed: 
-take $x \in \Q$ arbitrary. Then $x \in [n,n+1)$ for some 
+Condition (@eq-equivalence-rel) is illustrated in @fig-equivalence-class. 
+Indeed: take $x \in \Q$ arbitrary. Then $x \in [n,n+1)$ for some 
 $n \in \Z$. Setting $q:=x-n$ we obtain that
 $$
 x = q + n \,, \qquad q \in [0,1) \,,
@@ -800,7 +776,7 @@ $$
 
 
 
-![For each $x \in \Q$ there exist unique $q \in [0,1) \cap \Q$ such that $x = q + n$. In particular $[x] = [q]$.](/images/equivalence_class.png){#fig-equivalence-class width=70%}
+![For each $x \in \Q$ there exist unique $q \in [0,1) \cap \Q$ such that $x = q + n$. In particular $[x] = [q]$.](/images/equivalence_class.png){#fig-equivalence-class width=40%}
 
 
 
@@ -826,7 +802,6 @@ $$
 (x,y) \in R \,  \text{ and } \, (y,x) \in R \implies x = y 
 $$
 
-    > This is the only new condition with respect to the definition of equivalence relation, and it replaces symmetry.
 
 3. **Transitive**: We have
 $$
@@ -835,6 +810,16 @@ $$
 :::
 
 
+
+
+::: Remark
+
+Notice that conditions 1 and 3 are the same for equivalence and order relations. Instead condition 2 changes: it is symmetry for equivalence relation, and antisymmetry for order relations.
+
+:::
+
+
+We say that a partial order is total if all the elements in the set are related.
 
 
 :::  Definition
@@ -848,7 +833,6 @@ $$
 (x, y) \in R \,\, \mbox{ or } \,\, (y,x) \in R \,.
 $$
 
-    > This is saying that all elements in $A$ are related.
 :::
 
 
@@ -964,13 +948,13 @@ In general we also define the intervals
 
 Some of the above intervals are depicted in @fig-interval-1, @fig-interval-2, @fig-interval-3, @fig-interval-4 below. 
 
-![Interval $(a,b)$](/images/interval_1.png){#fig-interval-1 width=60%}
+![Interval $(a,b)$](/images/interval_1.png){#fig-interval-1 width=30%}
 
-![Interval $[a,b]$](/images/interval_2.png){#fig-interval-2 width=60%}
+![Interval $[a,b]$](/images/interval_2.png){#fig-interval-2 width=30%}
 
-![Interval $(a,\infty)$](/images/interval_3.png){#fig-interval-3 width=60%}
+![Interval $(a,\infty)$](/images/interval_3.png){#fig-interval-3 width=30%}
 
-![Interval $(-\infty,b]$](/images/interval_4.png){#fig-interval-4 width=60%}
+![Interval $(-\infty,b]$](/images/interval_4.png){#fig-interval-4 width=30%}
 
 
 
@@ -1044,11 +1028,11 @@ $$
 Then $g$ is **NOT** a function, since the element $a_2$ has no element associated. 
 :::
 
-![Schematic picture of the function $f$](/images/example_function_f.png){width=60%}
+![Schematic picture of the function $f$](/images/example_function_f.png){width=40%}
 
-![Schematic picture of the function $g$](/images/example_function_g.png){width=60%}
+![Schematic picture of the function $g$](/images/example_function_g.png){width=40%}
 
-![Schematic picture of the function $h$](/images/example_function_h.png){width=60%}
+![Schematic picture of the function $h$](/images/example_function_h.png){width=40%}
 
 
 ::: Example
@@ -1084,7 +1068,7 @@ In this section we assume to have available the set $\R$ of **real numbers**, wh
 
 ::: Definition
 ### Absolute value 
-For $x \in \R$ we define its **absolute value** as the quantity
+Let $x \in \R$. The **absolute value** of $x$ is
 $$
 |x| = 
 \begin{cases}
@@ -1107,29 +1091,21 @@ $$
 :::
 
 
-Let us also make the following basic Remark. The proof will be left as an exercise.
+Let us highlight some basic properties of the absolute value.
 
-::: Remark
-For all $x \in \R$
-$$
-|x| \geq 0 \,.
-$$
-Moreover 
-$$
-|x| = 0 \iff x = 0 \,.
-$$
-:::
 
-Another basic remark (proof by exercise).
 
-::: {.Remark #rmk-absolute-value-sym}
+::: Proposition
+### Properties of absolute value {#proposition-absolute-value-sym}
 
-For all $x \in \R$ one has
-$$
-|x| = |-x| \,.
-$$
+For all $x \in \R$ they hold:
+
+1. $|x| \geq 0$.
+2. $|x| = 0$ if and only if $x = 0$.
+3. $|x| = |-x|$.
 
 :::
+
 
 We can use the definition of absolute value to define the **absolute value function**. This is the function
 $$
@@ -1149,7 +1125,7 @@ A number $x \in \R$ can be represented with a point on the real line $\R$.The no
 :::
 
 
-![Geometric interpretation of $|x|$](/images/absolute_value_1.png){#fig-absolute-value-1 width=70%}
+![Geometric interpretation of $|x|$](/images/absolute_value_1.png){#fig-absolute-value-1 width=40%}
 
 
 
@@ -1157,13 +1133,13 @@ A number $x \in \R$ can be represented with a point on the real line $\R$.The no
 ### Geometric interpretation of $|x-y|$
 
 If $x,y \in \R$ then the number $|x-y|$ represents the distance between $x$ and $y$ on the real line, as shown in @fig-absolute-value-2 below.
-Note that by Remark \ref{rmk-absolute-value-sym} we have
+Note that by Point 3 in Proposition \ref{proposition-absolute-value-sym} we have
 $$
 |x-y| = |y-x| \,.
 $$
 :::
 
-![Geometric interpretation of $|x-y|$](/images/absolute_value_2.png){#fig-absolute-value-2 width=70%}
+![Geometric interpretation of $|x-y|$](/images/absolute_value_2.png){#fig-absolute-value-2 width=40%}
 
 
 In the next Lemma we show a fundamental equivalence regarding the absolute value.
@@ -1185,7 +1161,7 @@ $$
 $$ 
 A sketch of this explanation is seen in @fig-absolute-value-3 below.
 
-![Geometric meaning of Lemma \ref{lemma-absolute-value}](/images/absolute_value_3.png){#fig-absolute-value-3 width=70%}
+![Geometric meaning of Lemma \ref{lemma-absolute-value}](/images/absolute_value_3.png){#fig-absolute-value-3 width=40%}
 
 
 ::: Proof
@@ -1377,7 +1353,8 @@ An immediate consequence of the triangle inequality are the following inequaliti
 
 
 
-::: Remark
+::: Proposition
+
 For any $x,y \in \R$ it holds
 $$
 ||x|-|y|| \leq |x-y| \leq |x|+|y|\,.
@@ -1687,4 +1664,38 @@ x_{k+2} & = \frac{x_{k+1}}{2} + 1  & (\text{definition of } x_{k+2} )  \\
 which proves (@eq-induction-increasing-2).
 
 Therefore the assumptions of the Induction Principle are satisfied, and (@eq-induction-increasing) follows.
+:::
+
+
+
+
+::: Example
+### Bernoulli's inequality
+
+**Question.** Let $x \in \R$ with $x>-1$. Bernoulli's inequality states that
+$$
+(1+x)^{n} \geq 1+n x \,, \quad \forall \, n \in \N \,.
+$${#eq-bernoulli-inequality}
+Prove Bernoulli's inequality by induction.
+
+
+**Solution.** Let $x \in \mathbb{R}, x>-1$. We prove the statement by induction:
+
+- Base case: (@eq-bernoulli-inequality) holds with equality when $n=1$.
+
+- Induction hypothesis: Let $k \in \N$ and suppose that (@eq-bernoulli-inequality) holds for $n=k$, i.e.,
+$$
+(1+x)^{k} \geq 1+k x \,.
+$$
+Then
+\begin{align*}
+(1+x)^{k+1} & = (1+x)^{k}(1+x) \\
+            & \geq(1+k x)(1+x) \\
+            & =1+k x+x+k x^{2} \\
+            & \geq 1+(k+1) x \,,
+\end{align*}
+where we used that $kx^2 \geq 0$. Then (@eq-bernoulli-inequality) holds for $n=k+1$.
+
+By induction we conclude (@eq-bernoulli-inequality).
+
 :::

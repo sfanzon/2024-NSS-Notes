@@ -119,7 +119,7 @@ Can we represent the set $\Q$ with a drawing?
 
 It is clear how to draw $\Z$, as seen below. 
 
-![Representation of integers $\Z$](/images/integers.png){#fig-integers width=80%}
+![Representation of integers $\Z$](/images/integers.png){#fig-integers width=40%}
 
 
 However $\Q$ is much **larger** than the set $\Z$ represented by the ticks in @fig-integers. What do we mean by **larger**? For example, consider $0 \in \Q$. 
@@ -139,7 +139,7 @@ $$
 $$
 Such numbers get arbitrarily close to $0$, as depicted below.
 
-![Fractions $\frac{1}{n}$ can get arbitrarily close to $0$](/images/integers_ratio.png){width=70%}
+![Fractions $\frac{1}{n}$ can get arbitrarily close to $0$](/images/integers_ratio.png){width=40%}
 
 Maybe if we do the same reasoning with other progressively smaller rational numbers, we manage to fill up the interval $[0,1]$. In other words, we might conjecture the following. 
 
@@ -159,7 +159,7 @@ $$
 $$
 and the situation is as in the picture below.
 
-![Representing $\sqrt{2}$ on the numbers line.](/images/integers_root_2.png){width=70%}
+![Representing $\sqrt{2}$ on the numbers line.](/images/integers_root_2.png){width=40%}
 
 We can therefore see that Conjecture \ref{conj-line} is **false**, and $\Q$ is not a line: indeed $\Q$ has a **gap** at $\sqrt{2}$. Let us see why 
 Theorem \ref{theorem-root-2} is true.

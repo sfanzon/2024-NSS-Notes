@@ -1573,17 +1573,13 @@ a_n := \frac{n+\cos (n)}{n^{2}} \,, \quad b_n = \frac{1}{n} \,.
 $$
 We compute
 \begin{align*}
-L & := \frac{a_n}{b_n} \\ 
-  & = \lim_{n \rightarrow \infty} \frac{n+\cos (n)}{n^{2}} \bigg/ \frac{1}{n} \\
+L & := \frac{a_n}{b_n}  = \lim_{n \rightarrow \infty} \frac{n+\cos (n)}{n^{2}} \bigg/ \frac{1}{n} \\
   &  = \lim_{n \rightarrow \infty} \frac{n^{2}+n \cos (n)}{n^{2}} \\
   & = \lim_{n \rightarrow \infty} \left(1+\frac{\cos (n)}{n}\right)
 \end{align*}
-Since
+Note that
 $$
--1 \leq \cos (n) \leq 1 \,,
-$$
-we obtain
-$$
+-1 \leq \cos (n) \leq 1  \quad \implies \quad 
 -\frac{1}{n} \leq \frac{\cos (n)}{n} \leq \frac{1}{n} \,.
 $$
 As both $-\frac{1}{n} \rightarrow 0$ and $\frac{1}{n} \rightarrow 0$, by the Squeeze Theorem 
@@ -1594,10 +1590,7 @@ Hence
 $$
 L = \lim_{n \rightarrow \infty} \left(1+\frac{\cos (n)}{n}\right) = 1 \,.
 $$
-The harmonic series
-$$
-\sum_{n=1}^{\infty} \frac{1}{n}
-$$ 
+The harmonic series $\sum_{n=1}^{\infty} \frac{1}{n}$ 
 diverges. Since $L = 1 > 0$, the series
 $$
 \sum_{n=1}^{\infty} \frac{n+\cos (n)}{n^{2}} \,.
@@ -1638,15 +1631,12 @@ b_n : =  1 - \cos\left( \frac{1}{n} \right)  \,, \quad
 c_n := \frac{1}{n^2} \,.
 $$
 We have
-\begin{align*}
-L & := \lim_{n \to \infty} \frac{b_n}{c_n} \\
-  & = \lim_{n \to \infty} n^2 \, \left(1 - \cos \left( \frac{1}{n} \right) \right) \\
-  & =  \frac{1}{2} \,.
-\end{align*}
-Note that the series
 $$
-\sum_{n=1}^\infty \frac{1}{n^2} 
+L := \lim_{n \to \infty} \frac{b_n}{c_n} 
+ = \lim_{n \to \infty} n^2 \, \left(1 - \cos \left( \frac{1}{n} \right) \right) 
+   =  \frac{1}{2} \,.
 $$
+Note that the series $\sum_{n=1}^\infty \frac{1}{n^2}$
 converges, being a $p$-series with $p>2$. Therefore, since $L = 1/2 >0$, also the series
 $$
 \sum_{n=1}^\infty \left( 1 - \cos\left( \frac{1}{n} \right) \right)
@@ -1671,7 +1661,7 @@ $$
 $$
 \sin (n) \geq-1 \,,
 $$
-the above is a non-negative series. As $\sin(n)$ is bounded, we the series to behave similar to 
+the above is a non-negative series. As $\sin(n)$ is bounded, the series behaves similarly to 
 $$
 \sum_{n=1}^{\infty} \frac{1}{n^{2}} \,.
 $$ 
@@ -2352,9 +2342,9 @@ For a proof, we refer the reader to Theorem 3.54 in [@rudin_introduction].
 
 In simpler terms, the last two Theorems are saying that:
 
-- If a series converges absolutely, then all the rearrangements converge to the same number: 
+1. If a series converges absolutely, then all the rearrangements converge to the same number: 
     * Absolute convergence $\implies$ Commutativity holds for infinite sums
-- If a series converges conditionally, then we can rearrange the terms to converge to any real number, or even diverge:
+2. If a series converges conditionally, then we can rearrange the terms to converge to any real number, or even diverge:
     * Conditional convergence $\implies$ Commutativity does not hold for infinite sums
 
 
@@ -2383,7 +2373,7 @@ $$
 
 Then the following series converges
 $$
-\sum_{n=1}^\infty c_n q_n
+\sum_{n=1}^\infty c_n q_n \,.
 $$
 
 :::
@@ -2465,12 +2455,29 @@ $$
 \sum_{n=1}^\infty \frac{e^{i \theta n}}{n} \,, \quad \sum_{n=1}^{\infty} \frac{\cos(\theta n)}{n} \,, \quad \sum_{n=1}^{\infty} \frac{\sin(\theta n)}{n} \,.
 $$
 
-**Solution.** The series $\sum e^{i \theta n} /n$ does not converge absolutely, since 
+**Solution.** 
+
+1. Recalling the Euler's Identity
+$$
+e^{i\theta} = \cos(\theta) + i \sin(\theta) \,,
+$$
+we obtain that
+$$
+\sum_{n=1}^\infty \frac{e^{i \theta n}}{n} = 
+\sum_{n=1}^\infty \frac{\cos(n \theta)}{n} + i
+\sum_{n=1}^\infty \frac{\sin(n \theta)}{n} \,.
+$$
+Therefore, the series $\sum e^{i \theta n}/n$ converge conditionally if and only if $\sum \cos( \theta n)/n$ and 
+$\sum \sin( \theta n)/n$ converge conditionally. It is then sufficient to study $\sum e^{i \theta n}/n$.
+
+2. The series $\sum e^{i \theta n} /n$ does not converge absolutely, since 
 $$
 \sum_{n=1}^\infty \left| \frac{e^{i \theta n}}{n} \right| 
 = \sum_{n=1}^\infty \frac{1}{n}
 $$
-diverges, being the Harmonic Series. Set $c_n = e^{i\theta n}$, $q_n = 1/n$, so that
+diverges, being the Harmonic Series. 
+
+3. Set $c_n = e^{i\theta n}$, $q_n = 1/n$, so that
 $$
 \sum_{n=1}^\infty \frac{e^{i \theta n}}{n} = 
 \sum_{n=1}^\infty c_nq_n \,.
@@ -2499,23 +2506,16 @@ Taking the modulus
 = \left| e^{i \theta} \right| \left|\frac{1- e^{ik\theta}}{1 - e^{i\theta}} \right| \\
 & = \frac{ |1- e^{ik\theta}|}{|1 - e^{i\theta} |} 
 \leq \frac{ |1| + |e^{ik\theta}|}{|1 - e^{i\theta} |} 
-=  \frac{ 1 }{|1 - e^{i\theta} |} \,,
+=  \frac{ 2 }{|1 - e^{i\theta} |} \,,
 \end{align*}
 where we used the triangle inequality. Since the RHS does not
 depend on $k$, we can set
 $$
-M = \frac{ 1 }{|1 - e^{i\theta} |} \,,
+M = \frac{ 2 }{|1 - e^{i\theta} |} \,,
 $$
-so that (@eq-dirichlet-example) holds. Therefore, $\sum e^{i \theta n}/n$ converges by the Dirichlet Test. This shows $\sum e^{i \theta n}/n$ converges conditionally. Recalling the Euler's Identity
-$$
-e^{i\theta} = \cos(\theta) + i \sin(\theta) \,,
-$$
-we obtain that also the series 
-$$
-\sum_{n=1}^\infty \frac{\cos(n \theta)}{n} \,, \quad 
-\sum_{n=1}^\infty \frac{\sin(n \theta)}{n}
-$$
-converge conditionally. 
+so that (@eq-dirichlet-example) holds. Therefore, $\sum e^{i \theta n}/n$ converges by the Dirichlet Test. 
+
+4. We have shown that $\sum e^{i \theta n}/n$ converges, but not absolutely. Hence, it converges conditionally.
 
 :::
 
@@ -2545,11 +2545,7 @@ $$
 
 ::: Proof
 
-Define the sequence
-$$
-c_n := (-1)^n \,.
-$$
-Then 
+Define the sequence $c_n := (-1)^n$. Then, 
 $$
 \sum_{n=1}^k c_n = 
 \begin{cases}
@@ -2587,7 +2583,7 @@ diverges, being the Harmonic Series. Set $q_n = 1/n$, so that
 $$
 \sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n} = \sum_{n=1}^\infty (-1)^n q_n \,.
 $$
-Clearly, $q_n \geq 0$, $q_n \to 0$ and $q_n$ is decreasing. Hence, the series converges by the Alternating Series Test.
+Clearly, $q_n \geq 0$, $q_n \to 0$ and $q_n$ is decreasing. Hence, the series converges by the Alternating Series Test. Thus, the series converges conditionally.
 
 :::
 
@@ -2613,7 +2609,7 @@ Suppose that
 
 Then the following series converges
 $$
-\sum_{n=1}^\infty a_n q_n
+\sum_{n=1}^\infty a_n q_n \,.
 $$
 
 
@@ -2625,33 +2621,29 @@ The proof is similar to the one of the Dirichlet Test. We decided to omit it.
 
 ::: Example
 
-Prove that the series below converges conditionally
+**Question.** Prove that the series converges conditionally
 $$
 \sum_{n=1}^\infty \ \frac{(-1)^n}{n} \left( 1 + \frac{1}{n} \right)^n \,.
 $$
 
-> *Solution.* Set 
+**Solution.** Set 
 $$
 a_n:= \frac{(-1)^n}{n}\,, \quad q_n := \left( 1 + \frac{1}{n} \right)^n \,.
 $$
-We have seen that $q_n$ is monotone increasing and bounded. Moreover the
+We have seen that $q_n$ is monotone increasing and bounded (recall that $q_n \to \e$). Moreover, the
 series $\sum_{n=1}^\infty a_n$ converges by the Alternating Series Test, 
 as seen in Example \ref{example-alternating-series-test}. Hence the series $\sum_{n=1}^\infty a_n q_n$ converges by the Abel Test.
->
->However the series in question does not converge absolutely. Indeed, 
+
+However, the series in question does not converge absolutely. Indeed, 
 $$
 \left|\frac{(-1)^n}{n} \left( 1 + \frac{1}{n} \right)^n \right| = 
-\frac{1}{n} q_n \geq  \frac{1}{n} q_1 \,,
+\frac{1}{n} q_n \geq  \frac{1}{n} q_1 = \frac{2}{n}\,,
 $$
-since $(q_n)$ is increasing. As the series 
-$$
-\sum_{n=1}^\infty \frac{1}{n} q_1
-$$
-diverges, by the Comparison Test we conclude that also 
+since $(q_n)$ is increasing. As the series $\sum 2/n$ diverges, by the Comparison Test we conclude that also 
 $$
 \sum_{n=1}^\infty \left|\frac{(-1)^n}{n} \left( 1 + \frac{1}{n} \right)^n \right|
 $$
-diverges, proving that the series in the example converges conditionally.
+diverges. Therefore, the series in the example converges conditionally.
 
 
 :::

@@ -72,6 +72,26 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
@@ -80,7 +100,15 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.Important {
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -88,55 +116,27 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .TODO {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 .Definition {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Conjecture {
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proposition {
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -710,7 +710,7 @@ z_{1} \cdot z_{2} &amp; = (3+4i) \cdot (-2 + 5i) \\
 <div id="fig-real-line" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-real-line-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/real_line.png" class="img-fluid figure-img" style="width:70.0%">
+<img src="../images/real_line.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-real-line-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5.1: Two points <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> on the real line <span class="math inline">\(\mathbb{R}\)</span>. Their distance is <span class="math inline">\(|x-y|\)</span>.
@@ -725,7 +725,7 @@ z = x + iy \,, \quad x , \, y \in \mathbb{R}\,.
 <div id="fig-complex-plane" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-complex-plane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/complex_plane.png" class="img-fluid figure-img" style="width:60.0%">
+<img src="../images/complex_plane.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex-plane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5.2: A point <span class="math inline">\(z = x + iy \in \mathbb{C}\)</span> can be represented on the complex plane by the point of coordinates <span class="math inline">\((x,y)\)</span>. The distance between <span class="math inline">\(z\)</span> and <span class="math inline">\(0\)</span> is given by <span class="math inline">\(|z| = \sqrt{z^2 + y^2}\)</span>.
@@ -763,7 +763,7 @@ x = x+ 0 i \in \mathbb{C}\,.
 <div id="fig-complex-plane-distance" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-complex-plane-distance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/complex_plane_distance.png" class="img-fluid figure-img" style="width:60.0%">
+<img src="../images/complex_plane_distance.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex-plane-distance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5.3: The difference <span class="math inline">\(z_1 - z_2\)</span> of the two points <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span> is given by the magenta vector. We define <span class="math inline">\(|z_1-z_2|\)</span> as the distance between <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span>.
@@ -879,7 +879,7 @@ A^2 \leq B^2 \quad \implies \quad  |A| \leq |B| \,.
 <div id="fig-triangle-inequality-C" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-triangle-inequality-C-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/complex_plane_triangle.png" class="img-fluid figure-img" style="width:60.0%">
+<img src="../images/complex_plane_triangle.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-triangle-inequality-C-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5.4: Let <span class="math inline">\(x,y,z \in \mathbb{C}\)</span>. The distance between <span class="math inline">\(x\)</span> and <span class="math inline">\(z\)</span> is shorter than the distance to go from <span class="math inline">\(x\)</span> to <span class="math inline">\(z\)</span> via the point <span class="math inline">\(y\)</span>.
@@ -900,7 +900,7 @@ Figure&nbsp;5.4: Let <span class="math inline">\(x,y,z \in \mathbb{C}\)</span>. 
 <div id="fig-polar-coordinates" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-polar-coordinates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/polar_coordinates.png" class="img-fluid figure-img" style="width:60.0%">
+<img src="../images/polar_coordinates.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-polar-coordinates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5.5: Polar coordinates <span class="math inline">\((\rho,\theta)\)</span> for the complex number <span class="math inline">\(z \in \mathbb{C}\)</span>.
@@ -998,7 +998,7 @@ z = x + i y = - 2 + 2 i \,.
 <div id="fig-argument-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-argument-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/argument_1.png" class="img-fluid figure-img" style="width:75.0%">
+<img src="../images/argument_1.png" class="img-fluid figure-img" style="width:45.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-argument-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5.6: The definition of <span class="math inline">\(\arg(z)\)</span> depends on the position of <span class="math inline">\(z\)</span> in the complex plane.
@@ -1008,7 +1008,7 @@ Figure&nbsp;5.6: The definition of <span class="math inline">\(\arg(z)\)</span> 
 <div id="fig-argument" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-argument-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/argument.png" class="img-fluid figure-img" style="width:70.0%">
+<img src="../images/argument.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-argument-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5.7: Plot of the tangent function for <span class="math inline">\(\theta\)</span> between <span class="math inline">\(-\frac{3\pi}{2}\)</span> and <span class="math inline">\(\frac{3\pi}{2}\)</span>.
@@ -1103,16 +1103,16 @@ z=\sqrt{8} e^{i \frac{3}{4} \pi} \,.
 </div></details>
 </div>
 <div id="periodicity-of-exponential" class="Remark" title="Periodicity of exponential">
-<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 42: </strong>Periodicity of exponential</summary><div>
-<p>For all <span class="math inline">\(k \in \mathbb{Z}\)</span> we have <span id="eq-exponential-periodic"><span class="math display">\[
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 42: </strong>Periodicity of exponential</summary><div>For all <span class="math inline">\(k \in \mathbb{Z}\)</span> we have <span id="eq-exponential-periodic"><span class="math display">\[
 e^{i \theta}=e^{i(\theta+2 \pi k)} \,,
-\tag{5.5}\]</span></span> meaning that the complex exponential is <span class="math inline">\(2\pi\)</span>-periodic. As we did for the principal value of the argument, we select <span class="math inline">\(\theta\)</span> in (<a href="#eq-exponential-periodic" class="quarto-xref"><span>5.5</span></a>) so that <span class="math inline">\(\theta \in(-\pi, \pi]\)</span>.</p>
-<blockquote class="blockquote">
-<p>Equation (<a href="#eq-exponential-periodic" class="quarto-xref"><span>5.5</span></a>) follows immediately by Euler’s identity and periodicity of <span class="math inline">\(\cos\)</span> and <span class="math inline">\(\sin\)</span>, since <span class="math display">\[\begin{align*}
+\tag{5.5}\]</span></span> meaning that the complex exponential is <span class="math inline">\(2\pi\)</span>-periodic. As we did for the principal value of the argument, we select <span class="math inline">\(\theta\)</span> in (<a href="#eq-exponential-periodic" class="quarto-xref"><span>5.5</span></a>) so that <span class="math inline">\(\theta \in(-\pi, \pi]\)</span>.<p></p>
+</div></details>
+</div>
+<div id="Proof*-15" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Equation (<a href="#eq-exponential-periodic" class="quarto-xref"><span>5.5</span></a>) follows immediately by Euler’s identity and periodicity of <span class="math inline">\(\cos\)</span> and <span class="math inline">\(\sin\)</span>, since <span class="math display">\[\begin{align*}
 e^{i(\theta+2 \pi k)} &amp; = \cos(\theta+2 \pi k) + i \sin (\theta+2 \pi k)  \\
 &amp; = \cos(\theta) + i \sin (\theta) = e^{i \theta} \,.
-\end{align*}\]</span></p>
-</blockquote>
+\end{align*}\]</span><p></p>
 </div></details>
 </div>
 <p>The exponential form is very useful for computing products and powers of complex numbers.</p>
@@ -1259,8 +1259,8 @@ p(z) = z^4 - 1 = (z-1)(z+1)(z-i)(z+i) \,.
 \]</span></p>
 </div></details>
 </div>
-<div id="Definition-52" class="Definition">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 52</strong></summary><div>Suppose that the polynomial <span class="math inline">\(p_n\)</span> factorizes as <span class="math display">\[
+<div id="multiplicity" class="Definition" title="Multiplicity">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 52: </strong>Multiplicity</summary><div>Suppose that the polynomial <span class="math inline">\(p_n\)</span> factorizes as <span class="math display">\[
 p_n(z) = a_n (z-z_1)^{k_1} (z-z_2)^{k_2} \cdots (z-z_m)^{k_m}
 \]</span> with <span class="math inline">\(a_n \neq 0\)</span>, <span class="math inline">\(z_1,\ldots, z_m \in \mathbb{C}\)</span> and <span class="math inline">\(k_1, \ldots , k_m \in \mathbb{N}\)</span>, <span class="math inline">\(k_i \geq 1\)</span>. In this case <span class="math inline">\(p_n\)</span> has degree <span class="math display">\[
 n = k_1 + \ldots + k_m = \sum_{i=1}^m k_i \,.
@@ -1468,7 +1468,7 @@ z^4 + az^3 + bz^2 + cz + d = 0  \,,
 <div id="fig-quartic" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-quartic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/quartic.png" class="img-fluid figure-img" style="width:90.0%">
+<img src="../images/quartic.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quartic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5.8: Quartic formula to solve <span class="math inline">\(z^4 + az^3 + bz^2 + cz + d = 0\)</span>. Image from <a href="https://en.wikipedia.org/wiki/Quartic_equation">Wikipedia</a>.
@@ -1486,7 +1486,7 @@ Figure&nbsp;5.8: Quartic formula to solve <span class="math inline">\(z^4 + az^3
 <div id="fig-polynomial-10" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-polynomial-10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/polynomial.png" class="img-fluid figure-img" style="width:70.0%">
+<img src="../images/polynomial.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-polynomial-10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5.9: Example of polynomial long division between <span class="math inline">\(6z^3+5z^2-7\)</span> and <span class="math inline">\(3z^2-2z-1\)</span>.
@@ -1519,7 +1519,7 @@ z^{3}-7 z^{2}+6 z=z(z-1)(z-6) \,.
 <div id="fig-polynomial" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-polynomial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/polynomial_1.png" class="img-fluid figure-img" style="width:50.0%">
+<img src="../images/polynomial_1.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-polynomial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5.10: Polynomial long division between <span class="math inline">\(z^{2}-7 z+6\)</span> and <span class="math inline">\(z-1\)</span>.
@@ -1542,7 +1542,7 @@ z^{3}-7 z+6 = (z-1)(z-2)(z+3) \,.
 <div id="fig-polynomial-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-polynomial-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/polynomial_2.png" class="img-fluid figure-img" style="width:70.0%">
+<img src="../images/polynomial_2.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-polynomial-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5.11: Polynomial long division between <span class="math inline">\(z^{3}-7 z+6\)</span> and <span class="math inline">\(z-1\)</span>.
@@ -1593,7 +1593,7 @@ z_2 &amp; = \frac{3+i+S_{2}}{2 \cdot \frac{1}{2}}  = 3+i+S_{2} \\
 <div id="fig-polynomial-5" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-polynomial-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/polynomial_3.png" class="img-fluid figure-img" style="width:70.0%">
+<img src="../images/polynomial_3.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-polynomial-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5.12: Polynomial long division between <span class="math inline">\(z^3 + 5 z^2 + (5 - i) z + (4 - 4 i)\)</span> and <span class="math inline">\(z-i\)</span>.
@@ -1604,7 +1604,7 @@ Figure&nbsp;5.12: Polynomial long division between <span class="math inline">\(z
 </section>
 <section id="sec-roots-1" class="level2" data-number="5.8">
 <h2 data-number="5.8" class="anchored" data-anchor-id="sec-roots-1"><span class="header-section-number">5.8</span> Roots of unity</h2>
-<div id="Problem*-15" class="Problem">
+<div id="Problem*-16" class="Problem">
 <p></p><details class="Problem fbx-simplebox fbx-default" open=""><summary><strong>Problem</strong></summary><div>Let <span class="math inline">\(n \in \mathbb{N}\)</span>. We want to find all complex solutions to <span id="eq-root-unity"><span class="math display">\[
 z^{n}=1 \,.
 \tag{5.20}\]</span></span><p></p>
@@ -1637,7 +1637,7 @@ z_k = \exp \left(i \frac{2 \pi k}{n}\right) \,, \quad k = 0, \ldots, n-1 \,,
 \]</span> where <span class="math inline">\(\exp(x)\)</span> denotes <span class="math inline">\(e^x\)</span>.<p></p>
 </div></details>
 </div>
-<div id="Proof*-16" class="Proof">
+<div id="Proof*-17" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Rewrite <span class="math inline">\(1\)</span> in exponential form: <span class="math display">\[
 1=|1|e^{i \arg(1)} =e^{i 2 \pi k} \, , \quad k \in \mathbb{Z}\,.
 \]</span> Therefore (<a href="#eq-root-unity-1" class="quarto-xref"><span>5.21</span></a>) is equivalent to <span class="math display">\[
@@ -1696,7 +1696,7 @@ z_k = \sqrt[n]{|c|} \, \exp \left(i \, \frac{\theta + 2 \pi k}{n}\right) \,, \qu
 \]</span> where <span class="math inline">\(\sqrt[n]{|c|}\)</span> is the <span class="math inline">\(n\)</span>-th root of the real number <span class="math inline">\(|c|\)</span>, and <span class="math inline">\(\theta = \arg(c)\)</span>.<p></p>
 </div></details>
 </div>
-<div id="Proof*-17" class="Proof">
+<div id="Proof*-18" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Write <span class="math inline">\(c\)</span> in exponential form: <span class="math display">\[
 c=|c|e^{i \theta} =|c| e^{i(\theta + 2 \pi k)} \, , \quad k \in \mathbb{Z}\,,
 \]</span> where <span class="math inline">\(\theta = \arg(c)\)</span>. Therefore (<a href="#eq-root-C" class="quarto-xref"><span>5.22</span></a>) is equivalent to <span class="math display">\[

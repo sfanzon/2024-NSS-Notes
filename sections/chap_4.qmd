@@ -36,7 +36,7 @@ $$
 The situation is depicted in @fig-archimedean.
 
 
-![For any $x>0$ we can find $n,m \in \N$ such that $1/m<x<n$.](/images/archimedean_original.png){#fig-archimedean width=80%}
+![For any $x>0$ we can find $n,m \in \N$ such that $1/m<x<n$.](/images/archimedean_original.png){#fig-archimedean width=40%}
 
 
 ::: Remark
@@ -157,7 +157,7 @@ the resulting number $nx$ will be larger than $y$. The situation is depicted in 
 
 
 
-![For $0<x<y$ there exists $n \in \N$ such that that $nx>y$. In the picture $n=3$.](/images/archimedean.png){#fig-archimedean width=80%}
+![For $0<x<y$ there exists $n \in \N$ such that that $nx>y$. In the picture $n=3$.](/images/archimedean.png){#fig-archimedean width=40%}
 
 
 
@@ -246,7 +246,7 @@ a_1 \leq a_2 \leq \ldots \leq a_n \leq \dots \leq b_n  \leq \ldots b_n \leq b_1 
 $$
 as shown in @fig-nested. 
 
-![Nested intervals $I_n = [a_n,b_n]$.](/images/nested_interval_property.png){#fig-nested width=80%}
+![Nested intervals $I_n = [a_n,b_n]$.](/images/nested_interval_property.png){#fig-nested width=40%}
 
 
 The intervals $I_n$ are **nested**, meaning that 
@@ -409,7 +409,7 @@ $$
 :::
 
 
-![Let $s = \sup A$. Then for every $\e>0$ there exist $x \in A$ such that $s-\e<x$.](/images/alternative_supremum.png){#fig-alternative-sup width=80%}
+![Let $s = \sup A$. Then for every $\e>0$ there exist $x \in A$ such that $s-\e<x$.](/images/alternative_supremum.png){#fig-alternative-sup width=40%}
 
 
 ::: Proof
@@ -487,7 +487,7 @@ $$
 
 A sketch of the characterization in Proposition \ref{prop-supremum-infimum} can be found in @fig-alternative-inf below.
 
-![Let $i = \inf A$. Then for every $\e>0$ there exist $x \in A$ such that $x<i+\e$.](/images/alternative_infimum.png){#fig-alternative-inf width=80%}
+![Let $i = \inf A$. Then for every $\e>0$ there exist $x \in A$ such that $x<i+\e$.](/images/alternative_infimum.png){#fig-alternative-inf width=40%}
 
 
 
@@ -501,17 +501,20 @@ Let $a, b \in \R$ with $a<b$. Let
 $$
 A:= (a,b) = \{ x \in \R \divider a < x < b \}\,.
 $$
-Then
+
+1. We have that
 $$
 \inf A = a \,, \quad \sup A = b \,.
 $$
+
+2. $\min A$ and $\max A$ do not exist.
 
 :::
 
 
 ::: Proof
 
-We will only prove that 
+*Part 1.* We will only prove that 
 $$
 \inf A = a \,,
 $$
@@ -597,25 +600,8 @@ $$
 This is a contradiction, since $L$ is a lower bound for $A$ and $M \in A$. 
 Therefore (@eq-interval-inf-sup-proof) holds, showing that $a$ is the largest lower bound of $A$. 
 We conclude that $a = \inf A$.
-:::
 
-
-As a corollary of the above we have that the maximum and minimum of an open interval do not exist.
-
-
-
-::: Corollary
-
-Let $a, b \in \R$ with $a<b$. Let
-$$
-A:= (a,b) = \{ x \in \R \divider a < x < b \}\,.
-$$
-Then $\min A$ and $\max A$ do not exist.
-:::
-
-::: Proof
-
-Suppose by contradiction that $\min A$ exists. We have shown that if the minimum of a set exists, then it must be
+*Part 2.* Suppose by contradiction that $\min A$ exists. We have shown that if the minimum of a set exists, then it must be
 $$
 \min A = \inf A \,.
 $$
@@ -630,7 +616,9 @@ $$
 As $\min A \in A$ by definition, we infer $a \in A$. This is contradiction. Then $\min A$ does not exist. 
 
 The proof that $\max A$ does not exist is similar, and is left as an exercise.
+
 :::
+
 
 
 We can also consider intervals for which one or both of the sides are closed.
@@ -1056,7 +1044,7 @@ $$
 
 
 
-![Let $n \in \N$ be such that $1/n< y-x$. Then take $m$ so that $m/n \in (x,y)$.](/images/density_proof.png){#fig-density-proof width=80%}
+![Let $n \in \N$ be such that $1/n< y-x$. Then take $m$ so that $m/n \in (x,y)$.](/images/density_proof.png){#fig-density-proof width=40%}
 
 
 
@@ -1747,7 +1735,7 @@ Since $f$ is injective and surjective, we have that $A$ is countable.
 
 
 
-![The i-th row contains all the elements $a_1^i,a_2^i,a_3^i, \ldots$ of the countable set $A_i$. We define the function $f \colon \N \to A$ by going throgh the square diagonally.](/images/diagonal_argument.png){#fig-diagonal-argument width=70%}
+![The i-th row contains all the elements $a_1^i,a_2^i,a_3^i, \ldots$ of the countable set $A_i$. We define the function $f \colon \N \to A$ by going throgh the square diagonally.](/images/diagonal_argument.png){#fig-diagonal-argument width=40%}
 
 
 
@@ -1855,7 +1843,7 @@ yielding a contradiction. Therefore $\R$ is uncountable.
 
 
 
-![The intervals $I_n$ are nested, and can be chosen so that $x_n \notin I_n$.](/images/R_uncountable.png){#fig-R-uncountable width=80%}
+![The intervals $I_n$ are nested, and can be chosen so that $x_n \notin I_n$.](/images/R_uncountable.png){#fig-R-uncountable width=40%}
 
 
 

@@ -11,12 +11,6 @@ for all $n$ suffieciently large. The definition of convergence in $\mathbb{C}$ i
 
 
 
-## Definition and convergence
-
-
-First of all, let us give the formal definition of sequence in $\mathbb{C}$.
-
-
 ::: Definition 
 ### Sequence of Complex numbers
 
@@ -42,20 +36,16 @@ In the following we define convergent sequences in $\mathbb{C}$.
 ::: Definition 
 ### Convergent sequence in $\mathbb{C}$ {#definition-convergent-sequence-C}
 
-We say that a sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ in $\mathbb{C}$ **converges** to $a \in \mathbb{C}$, or equivalently has limit $a$, denoted by
+We say that a sequence $\left(a_{n}\right)$ in $\mathbb{C}$ **converges** to $a \in \mathbb{C}$, or equivalently has limit $a$, denoted by
 $$
 \lim_{n \rightarrow \infty} a_{n}=a  \quad \mbox{ or } \quad a_n \to a \,,
 $$
-if for all $\varepsilon \in \mathbb{R}$ with $\varepsilon>0$, there exists $N \in \mathbb{N}$ such that for all $n \in \mathbb{N}, n \geq N$ it holds that 
-$$
-\left|a_{n}-a\right| < \varepsilon \,.
-$$
-Using quantifiers, we can write this as
+if it holds:
 $$
 \forall \, \varepsilon>0 , \, \exists \, N \in \mathbb{N} \, \mbox{ s.t. } \, \forall \, n \geq N \,, \,\left|a_{n}-a\right| < \varepsilon \,.
 $$
 
-If there exists $a \in \mathbb{C}$ such that $\lim _{n \rightarrow \infty} a_{n}=a$, then we say that the sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ is **convergent**.
+If there exists $a \in \mathbb{C}$ such that $\lim _{n \rightarrow \infty} a_{n}=a$, we say that the sequence $\left(a_{n}\right)$ is **convergent**.
 
 :::
 
@@ -73,31 +63,32 @@ for all $z = x + i y \in \mathbb{C}$.
 
 ::: Example 
 
-Using Definition \ref{definition-convergent-sequence-C}, prove that
+**Question.** Using Definition \ref{definition-convergent-sequence-C}, prove that
 $$
 \lim_{n \rightarrow \infty} \frac{(3+i) n-7 i}{n}=3+i \,.
 $$
 
+**Solution.**
 
-*Part 1. Rough Work.* Let $\varepsilon >0$. We would like to understand for which values of $n$ the following holds: 
+*Part 1. Rough Work.* Let $\varepsilon >0$. We need to clarify for which values of $n$ the following holds: 
 $$
 \left|\frac{(3+i) n-7 i}{n}-(3+i)\right| < \varepsilon \,.
 $$
 We have
-\begin{align*}
-\left|\frac{(3+i) n-7 i}{n}-(3+i)\right| & = \left|\frac{(3+i) n-7 i-(3+i) n}{n}\right| \\
-& = \frac{|-7 i|}{n} \\
-& = \frac{7}{n} \,.\\
-\end{align*}
+$$
+\left|\frac{(3+i) n-7 i}{n}-(3+i)\right| 
+ = \frac{|-7 i|}{n} 
+ = \frac{7}{n} \,.\\
+$$
 Therefore 
 $$
  \frac{7}{n} < \varepsilon \quad \iff \quad n > \frac{7}{\varepsilon} \,.
 $$
 
 *Part 2. Formal Proof.*
-We want to prove that
+We want to prove that for all $\varepsilon>0$ there exists $N \in \mathbb{N}$ such that
 $$
-\forall \, \varepsilon>0 \,, \, \exists \, N \in \mathbb{N} \, \mbox{ s.t. } \, \forall \, n \geq N \,, \,\, \left|\frac{(3+i) n-7 i}{n}-(3+i)\right| < \varepsilon \,.
+\left|\frac{(3+i) n-7 i}{n}-(3+i)\right| < \varepsilon \,, \qquad \forall \, n \geq N \,.
 $$
 Let $\varepsilon>0$. Choose $N \in \mathbb{N}$ such that
 $$
@@ -114,9 +105,6 @@ $$
 
 :::
 
-
-
-## Boundedness
 
 
 Boundedness plays an important role for complex sequences.
@@ -206,28 +194,23 @@ We can use the Algebra of Limits to compute limits of complex sequences.
 
 
 ::: Example 
-Let $\left(a_{n}\right)$ be the sequence defined by
+
+**Question.** Compute the limit of
 $$
-a_{n}:=\frac{(2-i) n^{2}+6 i n-5-3 i}{(6+3 i) n^{2}+11 i} \,.
+a_{n} = \frac{(2-i) n^{2}+6 i n-5-3 i}{(6+3 i) n^{2}+11 i} \,.
 $$
-The largest power of $n$ in the denominator is $n^{2}$. We hence divide by $n^{2}$ to obtain
+
+**Solution.** Factor $n^2$, the largest power of $n$ in the denominator,
 $$
-a_{n}=\frac{(2-i) n^{2}+6 i n-5-3 i}{(6+3 i) n^{2}+11 i}=
-\frac{(2-i)+\dfrac{6 i}{n}- \dfrac{5}{n^2}- \dfrac{3 i}{ n^{2}} }{(6+3 i)+\dfrac{11 i}{n^{2}}}
+a_{n}= 
+\frac{(2-i)+\dfrac{6 i}{n}- \dfrac{5}{n^2}- \dfrac{3 i}{ n^{2}} }{(6+3 i)+\dfrac{11 i}{n^{2}}} \longrightarrow \frac{2-i}{6+3 i} \,,
 $$
-By the Algebra of Limits the right hand side converges to
+where we used the Algebra of Limits. Finally,
 $$
-\frac{(2-i)+0-0-0}{(6+3 i)+0}=\frac{2-i}{6+3 i}
+\frac{2-i}{6+3 i} 
+ =\frac{(2-i)(6-3 i)}{(6+3 i)(6-3 i)}
+ =\frac{1}{5}-\frac{4}{15} i \,.
 $$
-By performing the complex division, we can write the limit in the form
-$x + i y$:
-\begin{align*}
-\lim_{n \rightarrow \infty} a_{n} & =\frac{2-i}{6+3 i} \\
-& =\frac{(2-i)(6-3 i)}{(6+3 i)(6-3 i)} \\
-& =\frac{12-6 i-6 i+3 i^{2}}{36-9 i^{2}} \\
-& =\frac{9-12 i}{45} \\
-& =\frac{1}{5}-\frac{4}{15} i
-\end{align*}
 
 :::
 
@@ -288,13 +271,12 @@ $|a_n|$ can be studied using convergence results in $\mathbb{R}$.
 
 ::: Example 
 
-Consider the complex sequence 
+**Question.** Prove that $a_n \to 0$, where
 $$
 a_{n}=\left(\frac{1}{2}+\frac{1}{3} i\right)^{n} \,.
 $$
-Prove that $a_n \to 0$.
 
-> *Proof.* We have
+**Solution.** We have
 \begin{align*}
 \left|a_{n}\right| & = \left|\left(\frac{1}{2}+\frac{1}{3} i\right)^{n}\right| \\
 & = \left|\frac{1}{2}+\frac{1}{3} i\right|^{n} \\
@@ -319,7 +301,7 @@ Although the Squeeze Theorem cannot be used for complex sequences, sometimes it 
 
 ::: Example
 
-Consider the sequence
+**Question.** Consider the sequence
 $$
 a_{n}:=\frac{2 i \cos (3 n) n+(7-i) n^{2}}{3 n^{2}+2 i n+\sin (2 n)} \,.
 $$
@@ -328,7 +310,7 @@ $$
 \lim_{n \to \infty} a_n  = \frac{7}{3}-\frac{1}{3} i \,.
 $$
 
-> *Proof.* We divide by the largest power in the denominator, to get
+**Solution.** We divide by the largest power in the denominator, to get
 $$
 a_{n} = \frac{\dfrac{2 i \cos (3 n)}{ n} + (7-i) }{3+ \dfrac{2 i}{n} + \dfrac{\sin (2 n)}{n^{2}}} \,.
 $$
@@ -420,12 +402,12 @@ The proof can be obtained as in the real case, replacing the absolute value by t
 
 ::: Example 
 
-
-- Let 
+**Question.** Prove that $a_n \to 0$, where
 $$
 a_{n}=\frac{(-1+4 i)^{n}}{(7+3 i)^{n}} \,.
 $$
-We first rewrite
+
+**Solution.** We first rewrite
 $$
 a_{n}=\frac{(-1+4 i)^{n}}{(7+3 i)^{n}}=\left(\frac{-1+4 i}{7+3 i}\right)^{n}
 $$
@@ -439,13 +421,19 @@ Then, we compute
 \end{align*}
 By the Geometric Sequence Test $a_{n} \rightarrow 0$.
 
-- Let 
+:::
+
+::: Example
+
+**Question.** Prove that $a_n$ diverges, where
 $$
-b_{n}=\frac{(-5+12 i)^{n}}{(3-4 i)^{n}} \,.
+a_{n}=\frac{(-5+12 i)^{n}}{(3-4 i)^{n}} \,.
 $$
-We first rewrite
+
+
+**Solution.** We first rewrite
 $$
-b_{n}=\frac{(-5+12 i)^{n}}{(3-4 i)^{n}}=\left(\frac{-5+12 i}{3-4 i}\right)^{n} \,.
+a_{n}=\frac{(-5+12 i)^{n}}{(3-4 i)^{n}}=\left(\frac{-5+12 i}{3-4 i}\right)^{n} \,.
 $$
 We compute
 \begin{align*}
@@ -454,23 +442,27 @@ We compute
 & = \frac{13}{5} \\
 & > 1 \,.
 \end{align*}
-By the Geometric Sequence Test, the sequence $(b_{n})$ does not converge.
+By the Geometric Sequence Test, the sequence $a_n$ diverges.
 
-- Let 
+:::
+
+::: Example
+
+**Question.** Prove that $a_n$ diverges, where
 $$
-c_{n}=e^{\frac{i \pi}{2} n} \,.
+a_{n}= \exp \left( \frac{i \pi}{2} n \right)\,.
 $$
-We have
+
+**Solution.** We have
 $$
-\left|c_{n}\right|=\left|e^{\frac{i \pi}{2} n}\right|=1 \,,
+\left|a_{n}\right|=\left|e^{\frac{i \pi}{2} n}\right|=1 \,,
 $$
 and hence the Geometric Sequence Test cannot be applied. However, we can see that 
 $$
-c_n = (i,-1,-i, 1, i,-1,-i, 1, \ldots ) \,,
+a_n = (i,-1,-i, 1, i,-1,-i, 1, \ldots ) \,,
 $$
-that is, $c_n$ assumes only the values $\{i,-1,-i,1\}$, and each of them
-is assumed infinitely many times. Thus $c_n$ is oscillating and it is 
-divergent.
+that is, $a_n$ assumes only the values $\{i,-1,-i,1\}$, and each of them
+is assumed infinitely many times. Therefore $a_n$ is oscillating, and thus divergent.
 
 
 :::
@@ -552,7 +544,7 @@ Then,
 $$
 \left|\frac{a_{n+1}}{a_{n}}\right| \geq L \,, \quad \forall \, n \geq N \,. 
 $$
-Then the sequence $\left(a_{n}\right)$ is unbounded, and hence does not converge.
+Then the sequence $a_n$ is unbounded, and hence does not converge.
 
 :::
 
@@ -569,13 +561,12 @@ modifications are needed:
 
 ::: Example 
 
-Let 
+**Question.** Study the convergence / divergence of the sequence
 $$
 a_{n}=\frac{(4-3 i)^{n}}{(2 n) !} \,.
 $$
-Prove that $a_n \to 0$.
 
-> *Proof.* We compute
+**Solution.** We compute
 \begin{align*}
 \left|\frac{a_{n+1}}{a_{n}}\right| & =\left|\frac{(4-3 i)^{n+1}}{(2(n+1)) !}  \frac{(2 n) !}{(4-3 i)^{n}}\right| \\
 & = \frac{|4-3 i|^{n+1}}{|4-3 i|^{n}} \cdot \frac{(2 n) !}{(2 n+2) !} \\
@@ -611,10 +602,7 @@ Let $\left(z_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{C}$. For $
 $$
 z_{n}=a_{n}+b_{n} i \,.
 $$
-Let 
-$$
-z=a+b i
-$$ 
+Let $z=a+b i$, 
 with $a, b \in \mathbb{R}$. Then
 $$
 \lim_{n \rightarrow \infty} z_{n}=z \quad \iff \quad \lim_{n \rightarrow \infty} a_{n}=a \,, \quad \lim_{n \rightarrow \infty} b_{n}=b \text {. }
@@ -686,16 +674,16 @@ Let $n \geq N$. By the triangle inequality,
 
 ::: Example 
 
-Consider the complex sequence
+**Question.** Consider the complex sequence
 $$
-z_{n}:=\frac{\left(4 n+3 n^{2} i\right)\left(2 n^{2}+i\right)}{5 n^{4}}
+z_{n}:=\frac{\left(4 n+3 n^{2} i\right)\left(2 n^{2}+i\right)}{5 n^{4}} \,.
 $$
 Show that
 $$
 \lim_{n \to \infty} z_n = \frac65 i \,.
 $$
 
-> *Proof.* Let us find the real and imaginary parts of $z_n$
+**Solution.** We find the real and imaginary parts of $z_n$
 \begin{align*}
 z_n & = \frac{\left(4 n+3 n^{2} i\right)\left(2 n^{2}+i\right)}{5 n^{4}} \\
 & = \frac{8 n^{3}+4 n i + 6 n^{4} i + 3 n^{2}i^2}{5 n^{4}} \\
@@ -703,13 +691,10 @@ z_n & = \frac{\left(4 n+3 n^{2} i\right)\left(2 n^{2}+i\right)}{5 n^{4}} \\
 & = a_n + b_n i \,.
 \end{align*}
 Using the Algebra of Limits for real sequences we have that
-$$
-a_n = \frac{8 n^{3}-3 n^{2}}{5 n^{4}}=\frac{ \dfrac{8}{n} - \dfrac{3}{n^2}  }{5} \longrightarrow \frac{0-0}{5}=0 \,,
-$$
-and
-$$
-b_n = \frac{6 n^{4}+4 n}{5 n^{4}}=\frac{6+ \dfrac{4}{n^3} }{5} \longrightarrow \frac{6+0}{5}=\frac{6}{5} \,.
-$$
+\begin{align*}
+& a_n = \frac{8 n^{3}-3 n^{2}}{5 n^{4}}=\frac{ \dfrac{8}{n} - \dfrac{3}{n^2}  }{5} \longrightarrow \frac{0-0}{5}=0 \,, \\
+& b_n = \frac{6 n^{4}+4 n}{5 n^{4}}=\frac{6+ \dfrac{4}{n^3} }{5} \longrightarrow \frac{6+0}{5}=\frac{6}{5} \,.
+\end{align*}
 By Theorem \ref{theorem-convergence-real-imaginary} we conclude
 $$
 \lim _{n \rightarrow \infty} z_{n} = \lim_{n \to \infty} a_n  +  i \, \lim_{n \to \infty} b_n = 0+\frac{6}{5} i=\frac{6}{5} i \,.

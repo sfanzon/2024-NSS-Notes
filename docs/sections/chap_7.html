@@ -72,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Important {
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -80,43 +80,15 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
 .Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -124,11 +96,27 @@ ul.task-list li input[type="checkbox"] {
   --color1: #bce5de;
   --color2: #21aa93;
 }
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
 .Definition {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Proposition {
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -136,9 +124,21 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -285,12 +285,10 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#definition-and-convergence" id="toc-definition-and-convergence" class="nav-link active" data-scroll-target="#definition-and-convergence"><span class="header-section-number">7.1</span> Definition and convergence</a></li>
-  <li><a href="#boundedness" id="toc-boundedness" class="nav-link" data-scroll-target="#boundedness"><span class="header-section-number">7.2</span> Boundedness</a></li>
-  <li><a href="#algebra-of-limits-in-mathbbc" id="toc-algebra-of-limits-in-mathbbc" class="nav-link" data-scroll-target="#algebra-of-limits-in-mathbbc"><span class="header-section-number">7.3</span> Algebra of limits in <span class="math inline">\(\mathbb{C}\)</span></a></li>
-  <li><a href="#convergence-to-zero" id="toc-convergence-to-zero" class="nav-link" data-scroll-target="#convergence-to-zero"><span class="header-section-number">7.4</span> Convergence to zero</a></li>
-  <li><a href="#geometric-sequence-test-and-ratio-test-in-mathbbc" id="toc-geometric-sequence-test-and-ratio-test-in-mathbbc" class="nav-link" data-scroll-target="#geometric-sequence-test-and-ratio-test-in-mathbbc"><span class="header-section-number">7.5</span> Geometric sequence Test and Ratio Test in <span class="math inline">\(\mathbb{C}\)</span></a></li>
-  <li><a href="#convergence-of-real-and-imaginary-part" id="toc-convergence-of-real-and-imaginary-part" class="nav-link" data-scroll-target="#convergence-of-real-and-imaginary-part"><span class="header-section-number">7.6</span> Convergence of real and imaginary part</a></li>
+  <li><a href="#algebra-of-limits-in-mathbbc" id="toc-algebra-of-limits-in-mathbbc" class="nav-link active" data-scroll-target="#algebra-of-limits-in-mathbbc"><span class="header-section-number">7.1</span> Algebra of limits in <span class="math inline">\(\mathbb{C}\)</span></a></li>
+  <li><a href="#convergence-to-zero" id="toc-convergence-to-zero" class="nav-link" data-scroll-target="#convergence-to-zero"><span class="header-section-number">7.2</span> Convergence to zero</a></li>
+  <li><a href="#geometric-sequence-test-and-ratio-test-in-mathbbc" id="toc-geometric-sequence-test-and-ratio-test-in-mathbbc" class="nav-link" data-scroll-target="#geometric-sequence-test-and-ratio-test-in-mathbbc"><span class="header-section-number">7.3</span> Geometric sequence Test and Ratio Test in <span class="math inline">\(\mathbb{C}\)</span></a></li>
+  <li><a href="#convergence-of-real-and-imaginary-part" id="toc-convergence-of-real-and-imaginary-part" class="nav-link" data-scroll-target="#convergence-of-real-and-imaginary-part"><span class="header-section-number">7.4</span> Convergence of real and imaginary part</a></li>
   </ul>
 </nav>
     </div>
@@ -319,9 +317,6 @@ window.Quarto = {
 <p>The theory for sequences in <span class="math inline">\(\mathbb{C}\)</span> is very similar to that of sequences in <span class="math inline">\(\mathbb{R}\)</span>. In <span class="math inline">\(\mathbb{R}\)</span>, we said that a sequence <span class="math inline">\((a_n)\)</span> converges to some number <span class="math inline">\(a \in \mathbb{R}\)</span> if for all <span class="math inline">\(\varepsilon&gt;0\)</span>, it holds <span class="math display">\[
 |a_n - a| &lt; \varepsilon
 \]</span> for all <span class="math inline">\(n\)</span> suffieciently large. The definition of convergence in <span class="math inline">\(\mathbb{C}\)</span> is essentially the same, with the absolute value replaced by the complex modulus.</p>
-<section id="definition-and-convergence" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="definition-and-convergence"><span class="header-section-number">7.1</span> Definition and convergence</h2>
-<p>First of all, let us give the formal definition of sequence in <span class="math inline">\(\mathbb{C}\)</span>.</p>
 <div id="sequence-of-complex-numbers" class="Definition" title="Sequence of Complex numbers">
 <p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 1: </strong>Sequence of Complex numbers</summary><div>A sequence <span class="math inline">\(a\)</span> in <span class="math inline">\(\mathbb{C}\)</span> is a function <span class="math display">\[
 a \colon \mathbb{N} \to \mathbb{C} \,.
@@ -335,14 +330,12 @@ a_{n}=a(n)
 </div>
 <p>In the following we define convergent sequences in <span class="math inline">\(\mathbb{C}\)</span>.</p>
 <div id="definition-convergent-sequence-C" class="Definition" title="Convergent sequence in \mathbb{C}">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 2: </strong>Convergent sequence in <span class="math inline">\(\mathbb{C}\)</span></summary><div>We say that a sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> in <span class="math inline">\(\mathbb{C}\)</span> <strong>converges</strong> to <span class="math inline">\(a \in \mathbb{C}\)</span>, or equivalently has limit <span class="math inline">\(a\)</span>, denoted by <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 2: </strong>Convergent sequence in <span class="math inline">\(\mathbb{C}\)</span></summary><div>We say that a sequence <span class="math inline">\(\left(a_{n}\right)\)</span> in <span class="math inline">\(\mathbb{C}\)</span> <strong>converges</strong> to <span class="math inline">\(a \in \mathbb{C}\)</span>, or equivalently has limit <span class="math inline">\(a\)</span>, denoted by <span class="math display">\[
 \lim_{n \rightarrow \infty} a_{n}=a  \quad \mbox{ or } \quad a_n \to a \,,
-\]</span> if for all <span class="math inline">\(\varepsilon \in \mathbb{R}\)</span> with <span class="math inline">\(\varepsilon&gt;0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that for all <span class="math inline">\(n \in \mathbb{N}, n \geq N\)</span> it holds that <span class="math display">\[
-\left|a_{n}-a\right| &lt; \varepsilon \,.
-\]</span> Using quantifiers, we can write this as <span class="math display">\[
+\]</span> if it holds: <span class="math display">\[
 \forall \, \varepsilon&gt;0 , \, \exists \, N \in \mathbb{N} \, \mbox{ s.t. } \, \forall \, n \geq N \,, \,\left|a_{n}-a\right| &lt; \varepsilon \,.
 \]</span><p></p>
-<p>If there exists <span class="math inline">\(a \in \mathbb{C}\)</span> such that <span class="math inline">\(\lim _{n \rightarrow \infty} a_{n}=a\)</span>, then we say that the sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> is <strong>convergent</strong>.</p>
+<p>If there exists <span class="math inline">\(a \in \mathbb{C}\)</span> such that <span class="math inline">\(\lim _{n \rightarrow \infty} a_{n}=a\)</span>, we say that the sequence <span class="math inline">\(\left(a_{n}\right)\)</span> is <strong>convergent</strong>.</p>
 </div></details>
 </div>
 <div id="Important*-1" class="Important">
@@ -352,20 +345,21 @@ a_{n}=a(n)
 </div></details>
 </div>
 <div id="Example-3" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 3</strong></summary><div>Using Definition <a href="chap_7.html#definition-convergent-sequence-C">2</a>, prove that <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 3</strong></summary><div><strong>Question.</strong> Using Definition <a href="chap_7.html#definition-convergent-sequence-C">2</a>, prove that <span class="math display">\[
 \lim_{n \rightarrow \infty} \frac{(3+i) n-7 i}{n}=3+i \,.
 \]</span><p></p>
-<p><em>Part 1. Rough Work.</em> Let <span class="math inline">\(\varepsilon &gt;0\)</span>. We would like to understand for which values of <span class="math inline">\(n\)</span> the following holds: <span class="math display">\[
+<p><strong>Solution.</strong></p>
+<p><em>Part 1. Rough Work.</em> Let <span class="math inline">\(\varepsilon &gt;0\)</span>. We need to clarify for which values of <span class="math inline">\(n\)</span> the following holds: <span class="math display">\[
 \left|\frac{(3+i) n-7 i}{n}-(3+i)\right| &lt; \varepsilon \,.
-\]</span> We have <span class="math display">\[\begin{align*}
-\left|\frac{(3+i) n-7 i}{n}-(3+i)\right| &amp; = \left|\frac{(3+i) n-7 i-(3+i) n}{n}\right| \\
-&amp; = \frac{|-7 i|}{n} \\
-&amp; = \frac{7}{n} \,.\\
-\end{align*}\]</span> Therefore <span class="math display">\[
+\]</span> We have <span class="math display">\[
+\left|\frac{(3+i) n-7 i}{n}-(3+i)\right|
+= \frac{|-7 i|}{n}
+= \frac{7}{n} \,.\\
+\]</span> Therefore <span class="math display">\[
 \frac{7}{n} &lt; \varepsilon \quad \iff \quad n &gt; \frac{7}{\varepsilon} \,.
 \]</span></p>
-<p><em>Part 2. Formal Proof.</em> We want to prove that <span class="math display">\[
-\forall \, \varepsilon&gt;0 \,, \, \exists \, N \in \mathbb{N} \, \mbox{ s.t. } \, \forall \, n \geq N \,, \,\, \left|\frac{(3+i) n-7 i}{n}-(3+i)\right| &lt; \varepsilon \,.
+<p><em>Part 2. Formal Proof.</em> We want to prove that for all <span class="math inline">\(\varepsilon&gt;0\)</span> there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+\left|\frac{(3+i) n-7 i}{n}-(3+i)\right| &lt; \varepsilon \,, \qquad \forall \, n \geq N \,.
 \]</span> Let <span class="math inline">\(\varepsilon&gt;0\)</span>. Choose <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
 N &gt; \frac{7}{\varepsilon} \,.
 \]</span> The above is equivalent to <span class="math display">\[
@@ -375,9 +369,6 @@ N &gt; \frac{7}{\varepsilon} \,.
 \]</span></p>
 </div></details>
 </div>
-</section>
-<section id="boundedness" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="boundedness"><span class="header-section-number">7.2</span> Boundedness</h2>
 <p>Boundedness plays an important role for complex sequences.</p>
 <div id="bounded-sequence-in-mathbbc" class="Definition" title="Bounded sequence in \mathbb{C}">
 <p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 4: </strong>Bounded sequence in <span class="math inline">\(\mathbb{C}\)</span></summary><div>A sequence <span class="math inline">\(\left(a_{n}\right)\)</span> in <span class="math inline">\(\mathbb{C}\)</span> is called <strong>bounded</strong> if there exists a constant <span class="math inline">\(M \in \mathbb{R}\)</span>, with <span class="math inline">\(M&gt;0\)</span>, such that <span class="math display">\[
@@ -400,9 +391,8 @@ N &gt; \frac{7}{\varepsilon} \,.
 <p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 7</strong></summary><div>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a complex sequence. If <span class="math inline">\(\left(a_{n}\right)\)</span> is not bounded, then it is divergent.<p></p>
 </div></details>
 </div>
-</section>
-<section id="algebra-of-limits-in-mathbbc" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="algebra-of-limits-in-mathbbc"><span class="header-section-number">7.3</span> Algebra of limits in <span class="math inline">\(\mathbb{C}\)</span></h2>
+<section id="algebra-of-limits-in-mathbbc" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="algebra-of-limits-in-mathbbc"><span class="header-section-number">7.1</span> Algebra of limits in <span class="math inline">\(\mathbb{C}\)</span></h2>
 <p>Most of the results about limits that we have shown in <span class="math inline">\(\mathbb{R}\)</span> also hold in <span class="math inline">\(\mathbb{C}\)</span>. The first result is the Algebra of Limits.</p>
 <div id="theorem-algebra-limits-C" class="Theorem" title="Algebra of limits in \mathbb{C}">
 <details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 8: </strong>Algebra of limits in <span class="math inline">\(\mathbb{C}\)</span></summary><div>
@@ -425,25 +415,22 @@ N &gt; \frac{7}{\varepsilon} \,.
 <p>The proof of Theorem <a href="chap_7.html#theorem-algebra-limits-C">8</a> follows word by word the proof of the Algebra of Limits for sequences in <span class="math inline">\(\mathbb{R}\)</span>: one just needs to replace the absolute value by the complex modulus.</p>
 <p>We can use the Algebra of Limits to compute limits of complex sequences.</p>
 <div id="Example-9" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 9</strong></summary><div>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be the sequence defined by <span class="math display">\[
-a_{n}:=\frac{(2-i) n^{2}+6 i n-5-3 i}{(6+3 i) n^{2}+11 i} \,.
-\]</span> The largest power of <span class="math inline">\(n\)</span> in the denominator is <span class="math inline">\(n^{2}\)</span>. We hence divide by <span class="math inline">\(n^{2}\)</span> to obtain <span class="math display">\[
-a_{n}=\frac{(2-i) n^{2}+6 i n-5-3 i}{(6+3 i) n^{2}+11 i}=
-\frac{(2-i)+\dfrac{6 i}{n}- \dfrac{5}{n^2}- \dfrac{3 i}{ n^{2}} }{(6+3 i)+\dfrac{11 i}{n^{2}}}
-\]</span> By the Algebra of Limits the right hand side converges to <span class="math display">\[
-\frac{(2-i)+0-0-0}{(6+3 i)+0}=\frac{2-i}{6+3 i}
-\]</span> By performing the complex division, we can write the limit in the form <span class="math inline">\(x + i y\)</span>: <span class="math display">\[\begin{align*}
-\lim_{n \rightarrow \infty} a_{n} &amp; =\frac{2-i}{6+3 i} \\
-&amp; =\frac{(2-i)(6-3 i)}{(6+3 i)(6-3 i)} \\
-&amp; =\frac{12-6 i-6 i+3 i^{2}}{36-9 i^{2}} \\
-&amp; =\frac{9-12 i}{45} \\
-&amp; =\frac{1}{5}-\frac{4}{15} i
-\end{align*}\]</span><p></p>
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 9</strong></summary><div><strong>Question.</strong> Compute the limit of <span class="math display">\[
+a_{n} = \frac{(2-i) n^{2}+6 i n-5-3 i}{(6+3 i) n^{2}+11 i} \,.
+\]</span><p></p>
+<p><strong>Solution.</strong> Factor <span class="math inline">\(n^2\)</span>, the largest power of <span class="math inline">\(n\)</span> in the denominator, <span class="math display">\[
+a_{n}=
+\frac{(2-i)+\dfrac{6 i}{n}- \dfrac{5}{n^2}- \dfrac{3 i}{ n^{2}} }{(6+3 i)+\dfrac{11 i}{n^{2}}} \longrightarrow \frac{2-i}{6+3 i} \,,
+\]</span> where we used the Algebra of Limits. Finally, <span class="math display">\[
+\frac{2-i}{6+3 i}
+=\frac{(2-i)(6-3 i)}{(6+3 i)(6-3 i)}
+=\frac{1}{5}-\frac{4}{15} i \,.
+\]</span></p>
 </div></details>
 </div>
 </section>
-<section id="convergence-to-zero" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="convergence-to-zero"><span class="header-section-number">7.4</span> Convergence to zero</h2>
+<section id="convergence-to-zero" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="convergence-to-zero"><span class="header-section-number">7.2</span> Convergence to zero</h2>
 <p>One of the results that cannot hold for complex sequences is the Squeeze Theorem. Indeed the chain of inequalities <span class="math display">\[
 b_{n} \leq  a_{n} \leq c_{n}
 \]</span> would not make sense in <span class="math inline">\(\mathbb{C}\)</span>, since there is no order relation.</p>
@@ -472,12 +459,10 @@ b_{n} \leq  a_{n} \leq c_{n}
 </div>
 <p>Note that the sequence <span class="math inline">\(|a_n|\)</span> is real. Therefore the convergence of <span class="math inline">\(|a_n|\)</span> can be studied using convergence results in <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <div id="Example-11" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 11</strong></summary><div>
-<p>Consider the complex sequence <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 11</strong></summary><div><strong>Question.</strong> Prove that <span class="math inline">\(a_n \to 0\)</span>, where <span class="math display">\[
 a_{n}=\left(\frac{1}{2}+\frac{1}{3} i\right)^{n} \,.
-\]</span> Prove that <span class="math inline">\(a_n \to 0\)</span>.</p>
-<blockquote class="blockquote">
-<p><em>Proof.</em> We have <span class="math display">\[\begin{align*}
+\]</span><p></p>
+<p><strong>Solution.</strong> We have <span class="math display">\[\begin{align*}
 \left|a_{n}\right| &amp; = \left|\left(\frac{1}{2}+\frac{1}{3} i\right)^{n}\right| \\
 &amp; = \left|\frac{1}{2}+\frac{1}{3} i\right|^{n} \\
 &amp; = \left(\sqrt{\left(\frac{1}{2}\right)^{2}+\left(\frac{1}{3}\right)^{2}}\right)^{n} \\
@@ -487,19 +472,16 @@ a_{n}=\left(\frac{1}{2}+\frac{1}{3} i\right)^{n} \,.
 \]</span> by the Geometric Sequence Test for real sequences, we conclude that <span class="math display">\[
 \left|a_{n}\right| \rightarrow 0 \,.
 \]</span> Hence <span class="math inline">\(a_n \to 0\)</span> by Theorem <a href="chap_7.html#theorem-convergence-zero-C">10</a>.</p>
-</blockquote>
 </div></details>
 </div>
 <p>Although the Squeeze Theorem cannot be used for complex sequences, sometimes it can be used to deal with real terms in a complex sequence.</p>
 <div id="Example-12" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 12</strong></summary><div>
-<p>Consider the sequence <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 12</strong></summary><div><strong>Question.</strong> Consider the sequence <span class="math display">\[
 a_{n}:=\frac{2 i \cos (3 n) n+(7-i) n^{2}}{3 n^{2}+2 i n+\sin (2 n)} \,.
 \]</span> Prove that <span class="math display">\[
 \lim_{n \to \infty} a_n  = \frac{7}{3}-\frac{1}{3} i \,.
-\]</span></p>
-<blockquote class="blockquote">
-<p><em>Proof.</em> We divide by the largest power in the denominator, to get <span class="math display">\[
+\]</span><p></p>
+<p><strong>Solution.</strong> We divide by the largest power in the denominator, to get <span class="math display">\[
 a_{n} = \frac{\dfrac{2 i \cos (3 n)}{ n} + (7-i) }{3+ \dfrac{2 i}{n} + \dfrac{\sin (2 n)}{n^{2}}} \,.
 \]</span> Notice that <span class="math display">\[
 - 1 \leq \cos (3 n) \leq 1 \,, \quad \forall \, n \in \mathbb{N} \,,
@@ -530,12 +512,11 @@ a_{n} = \frac{\dfrac{2 i \cos (3 n)}{ n} + (7-i) }{3+ \dfrac{2 i}{n} + \dfrac{\s
 a_{n} = \frac{\dfrac{2 i \cos (3 n)}{ n} + (7-i) }{3+ \dfrac{2 i}{n} + \dfrac{\sin (2 n)}{n^{2}}}
 \longrightarrow \frac{ 0+ (7-i) }{3+0+0}=\frac{7}{3}-\frac{1}{3} i \,.
 \]</span></p>
-</blockquote>
 </div></details>
 </div>
 </section>
-<section id="geometric-sequence-test-and-ratio-test-in-mathbbc" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="geometric-sequence-test-and-ratio-test-in-mathbbc"><span class="header-section-number">7.5</span> Geometric sequence Test and Ratio Test in <span class="math inline">\(\mathbb{C}\)</span></h2>
+<section id="geometric-sequence-test-and-ratio-test-in-mathbbc" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="geometric-sequence-test-and-ratio-test-in-mathbbc"><span class="header-section-number">7.3</span> Geometric sequence Test and Ratio Test in <span class="math inline">\(\mathbb{C}\)</span></h2>
 <p>The Geometric Sequence Test and Ratio Test can be generalized to complex sequences.</p>
 <div id="geometric-sequence-test-in-mathbbc" class="Theorem" title="Geometric sequence Test in \mathbb{C}">
 <details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 13: </strong>Geometric sequence Test in <span class="math inline">\(\mathbb{C}\)</span></summary><div>
@@ -552,11 +533,10 @@ a_{n}:=x^{n} \,.
 </div>
 <p>The proof can be obtained as in the real case, replacing the absolute value by the modulus.</p>
 <div id="Example-14" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 14</strong></summary><div>
-<ul>
-<li><p>Let <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 14</strong></summary><div><strong>Question.</strong> Prove that <span class="math inline">\(a_n \to 0\)</span>, where <span class="math display">\[
 a_{n}=\frac{(-1+4 i)^{n}}{(7+3 i)^{n}} \,.
-\]</span> We first rewrite <span class="math display">\[
+\]</span><p></p>
+<p><strong>Solution.</strong> We first rewrite <span class="math display">\[
 a_{n}=\frac{(-1+4 i)^{n}}{(7+3 i)^{n}}=\left(\frac{-1+4 i}{7+3 i}\right)^{n}
 \]</span> Then, we compute <span class="math display">\[\begin{align*}
 \left|\frac{-1+4 i}{7+3 i}\right| &amp; =\frac{|-1+4 i|}{|7+3 i|} \\
@@ -564,30 +544,37 @@ a_{n}=\frac{(-1+4 i)^{n}}{(7+3 i)^{n}}=\left(\frac{-1+4 i}{7+3 i}\right)^{n}
 &amp; = \frac{\sqrt{17}}{\sqrt{58}} \\
 &amp; = \sqrt{\frac{17}{58}} \\
 &amp; &lt; 1 \,
-\end{align*}\]</span> By the Geometric Sequence Test <span class="math inline">\(a_{n} \rightarrow 0\)</span>.</p></li>
-<li><p>Let <span class="math display">\[
-b_{n}=\frac{(-5+12 i)^{n}}{(3-4 i)^{n}} \,.
-\]</span> We first rewrite <span class="math display">\[
-b_{n}=\frac{(-5+12 i)^{n}}{(3-4 i)^{n}}=\left(\frac{-5+12 i}{3-4 i}\right)^{n} \,.
+\end{align*}\]</span> By the Geometric Sequence Test <span class="math inline">\(a_{n} \rightarrow 0\)</span>.</p>
+</div></details>
+</div>
+<div id="Example-15" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 15</strong></summary><div><strong>Question.</strong> Prove that <span class="math inline">\(a_n\)</span> diverges, where <span class="math display">\[
+a_{n}=\frac{(-5+12 i)^{n}}{(3-4 i)^{n}} \,.
+\]</span><p></p>
+<p><strong>Solution.</strong> We first rewrite <span class="math display">\[
+a_{n}=\frac{(-5+12 i)^{n}}{(3-4 i)^{n}}=\left(\frac{-5+12 i}{3-4 i}\right)^{n} \,.
 \]</span> We compute <span class="math display">\[\begin{align*}
 \left|\frac{-5+12 i}{3-4 i}\right| &amp; = \frac{|-5+12 i|}{|3-4 i|} \\
 &amp; = \frac{\sqrt{5^{2}+(-12)^{2}}}{\sqrt{3^{2}+(-4)^{2}}} \\
 &amp; = \frac{13}{5} \\
 &amp; &gt; 1 \,.
-\end{align*}\]</span> By the Geometric Sequence Test, the sequence <span class="math inline">\((b_{n})\)</span> does not converge.</p></li>
-<li><p>Let <span class="math display">\[
-c_{n}=e^{\frac{i \pi}{2} n} \,.
-\]</span> We have <span class="math display">\[
-\left|c_{n}\right|=\left|e^{\frac{i \pi}{2} n}\right|=1 \,,
+\end{align*}\]</span> By the Geometric Sequence Test, the sequence <span class="math inline">\(a_n\)</span> diverges.</p>
+</div></details>
+</div>
+<div id="Example-16" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 16</strong></summary><div><strong>Question.</strong> Prove that <span class="math inline">\(a_n\)</span> diverges, where <span class="math display">\[
+a_{n}= \exp \left( \frac{i \pi}{2} n \right)\,.
+\]</span><p></p>
+<p><strong>Solution.</strong> We have <span class="math display">\[
+\left|a_{n}\right|=\left|e^{\frac{i \pi}{2} n}\right|=1 \,,
 \]</span> and hence the Geometric Sequence Test cannot be applied. However, we can see that <span class="math display">\[
-c_n = (i,-1,-i, 1, i,-1,-i, 1, \ldots ) \,,
-\]</span> that is, <span class="math inline">\(c_n\)</span> assumes only the values <span class="math inline">\(\{i,-1,-i,1\}\)</span>, and each of them is assumed infinitely many times. Thus <span class="math inline">\(c_n\)</span> is oscillating and it is divergent.</p></li>
-</ul>
+a_n = (i,-1,-i, 1, i,-1,-i, 1, \ldots ) \,,
+\]</span> that is, <span class="math inline">\(a_n\)</span> assumes only the values <span class="math inline">\(\{i,-1,-i,1\}\)</span>, and each of them is assumed infinitely many times. Therefore <span class="math inline">\(a_n\)</span> is oscillating, and thus divergent.</p>
 </div></details>
 </div>
 <p>We now provide the statement of the Ratio Test in <span class="math inline">\(\mathbb{C}\)</span>.</p>
 <div id="theorem-ratop-test-C" class="Theorem" title="Ratio Test in \mathbb{C}">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 15: </strong>Ratio Test in <span class="math inline">\(\mathbb{C}\)</span></summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 17: </strong>Ratio Test in <span class="math inline">\(\mathbb{C}\)</span></summary><div>
 <p>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span> such that <span class="math display">\[
 a_{n} \neq 0 \,, \quad \forall \, n \in \mathbb{N} \,.
 \]</span></p>
@@ -603,22 +590,20 @@ L:=\lim_{n \to \infty}\left|\frac{a_{n+1}}{a_{n}}\right| \,.
 </ul></li>
 <li><p>Suppose that there exists <span class="math inline">\(N \in N\)</span> and <span class="math inline">\(L&gt;1\)</span> such that <span class="math display">\[
 \left|\frac{a_{n+1}}{a_{n}}\right| \geq L \,, \quad \forall \, n \geq N \,.
-\]</span> Then the sequence <span class="math inline">\(\left(a_{n}\right)\)</span> is unbounded, and hence does not converge.</p></li>
+\]</span> Then the sequence <span class="math inline">\(a_n\)</span> is unbounded, and hence does not converge.</p></li>
 </ol>
 </div></details>
 </div>
-<p>The proof of Theorem <a href="chap_7.html#theorem-ratop-test-C">15</a> follows word by word the proof of the Ratio Test Theorem in <span class="math inline">\(\mathbb{R}\)</span>, and only two minor modifications are needed:</p>
+<p>The proof of Theorem <a href="chap_7.html#theorem-ratop-test-C">17</a> follows word by word the proof of the Ratio Test Theorem in <span class="math inline">\(\mathbb{R}\)</span>, and only two minor modifications are needed:</p>
 <ul>
 <li>Replace the absolute value with the complex modulus,</li>
 <li>Instead of the Squeeze Theorem, use Theorem <a href="chap_7.html#theorem-convergence-zero-C">10</a>.</li>
 </ul>
-<div id="Example-16" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 16</strong></summary><div>
-<p>Let <span class="math display">\[
+<div id="Example-18" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 18</strong></summary><div><strong>Question.</strong> Study the convergence / divergence of the sequence <span class="math display">\[
 a_{n}=\frac{(4-3 i)^{n}}{(2 n) !} \,.
-\]</span> Prove that <span class="math inline">\(a_n \to 0\)</span>.</p>
-<blockquote class="blockquote">
-<p><em>Proof.</em> We compute <span class="math display">\[\begin{align*}
+\]</span><p></p>
+<p><strong>Solution.</strong> We compute <span class="math display">\[\begin{align*}
 \left|\frac{a_{n+1}}{a_{n}}\right| &amp; =\left|\frac{(4-3 i)^{n+1}}{(2(n+1)) !}  \frac{(2 n) !}{(4-3 i)^{n}}\right| \\
 &amp; = \frac{|4-3 i|^{n+1}}{|4-3 i|^{n}} \cdot \frac{(2 n) !}{(2 n+2) !} \\
 &amp; = \frac{|4 - 3i|}{(2 n+2)(2 n+1)} \\
@@ -626,12 +611,11 @@ a_{n}=\frac{(4-3 i)^{n}}{(2 n) !} \,.
 &amp; = \frac{5}{(2 n+2)(2 n+1)} \\
 &amp; = \frac{ \dfrac{5}{n^{2}}}{ \left(2+ \dfrac{2}{n} \right) \left(2+ \dfrac{1}{n} \right) } \longrightarrow L = 0 \,.
 \end{align*}\]</span> Since <span class="math inline">\(L=0 &lt; 1\)</span>, by the Ratio Test in <span class="math inline">\(\mathbb{C}\)</span> we infer <span class="math inline">\(a_{n} \to 0\)</span>.</p>
-</blockquote>
 </div></details>
 </div>
 </section>
-<section id="convergence-of-real-and-imaginary-part" class="level2" data-number="7.6">
-<h2 data-number="7.6" class="anchored" data-anchor-id="convergence-of-real-and-imaginary-part"><span class="header-section-number">7.6</span> Convergence of real and imaginary part</h2>
+<section id="convergence-of-real-and-imaginary-part" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="convergence-of-real-and-imaginary-part"><span class="header-section-number">7.4</span> Convergence of real and imaginary part</h2>
 <p>A complex number <span class="math inline">\(z \in \mathbb{C}\)</span> can be written as <span class="math display">\[
 z=a+b i
 \]</span> for some <span class="math inline">\(a, b \in \mathbb{R}\)</span>, where</p>
@@ -641,11 +625,9 @@ z=a+b i
 </ul>
 <p>We can prove that a complex sequence converges if and only if both the real parts and the imaginary parts converge.</p>
 <div id="theorem-convergence-real-imaginary" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 17</strong></summary><div>Let <span class="math inline">\(\left(z_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. For <span class="math inline">\(n \in \mathbb{N}\)</span>, let <span class="math inline">\(a_{n}, b_{n} \in \mathbb{R}\)</span> such that <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 19</strong></summary><div>Let <span class="math inline">\(\left(z_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. For <span class="math inline">\(n \in \mathbb{N}\)</span>, let <span class="math inline">\(a_{n}, b_{n} \in \mathbb{R}\)</span> such that <span class="math display">\[
 z_{n}=a_{n}+b_{n} i \,.
-\]</span> Let <span class="math display">\[
-z=a+b i
-\]</span> with <span class="math inline">\(a, b \in \mathbb{R}\)</span>. Then <span class="math display">\[
+\]</span> Let <span class="math inline">\(z=a+b i\)</span>, with <span class="math inline">\(a, b \in \mathbb{R}\)</span>. Then <span class="math display">\[
 \lim_{n \rightarrow \infty} z_{n}=z \quad \iff \quad \lim_{n \rightarrow \infty} a_{n}=a \,, \quad \lim_{n \rightarrow \infty} b_{n}=b \text {. }
 \]</span><p></p>
 </div></details>
@@ -686,27 +668,23 @@ N := \max \left\{ N_1, N_2 \right\} \,.
 \end{align*}\]</span></p>
 </div></details>
 </div>
-<div id="Example-18" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 18</strong></summary><div>
-<p>Consider the complex sequence <span class="math display">\[
-z_{n}:=\frac{\left(4 n+3 n^{2} i\right)\left(2 n^{2}+i\right)}{5 n^{4}}
+<div id="Example-20" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 20</strong></summary><div><strong>Question.</strong> Consider the complex sequence <span class="math display">\[
+z_{n}:=\frac{\left(4 n+3 n^{2} i\right)\left(2 n^{2}+i\right)}{5 n^{4}} \,.
 \]</span> Show that <span class="math display">\[
 \lim_{n \to \infty} z_n = \frac65 i \,.
-\]</span></p>
-<blockquote class="blockquote">
-<p><em>Proof.</em> Let us find the real and imaginary parts of <span class="math inline">\(z_n\)</span> <span class="math display">\[\begin{align*}
+\]</span><p></p>
+<p><strong>Solution.</strong> We find the real and imaginary parts of <span class="math inline">\(z_n\)</span> <span class="math display">\[\begin{align*}
 z_n &amp; = \frac{\left(4 n+3 n^{2} i\right)\left(2 n^{2}+i\right)}{5 n^{4}} \\
 &amp; = \frac{8 n^{3}+4 n i + 6 n^{4} i + 3 n^{2}i^2}{5 n^{4}} \\
 &amp; = \frac{8 n^{3}-3 n^{2}}{5 n^{4}} + \frac{6 n^{4}+4 n}{5 n^{4}} i \\
 &amp; = a_n + b_n i \,.
-\end{align*}\]</span> Using the Algebra of Limits for real sequences we have that <span class="math display">\[
-a_n = \frac{8 n^{3}-3 n^{2}}{5 n^{4}}=\frac{ \dfrac{8}{n} - \dfrac{3}{n^2}  }{5} \longrightarrow \frac{0-0}{5}=0 \,,
-\]</span> and <span class="math display">\[
-b_n = \frac{6 n^{4}+4 n}{5 n^{4}}=\frac{6+ \dfrac{4}{n^3} }{5} \longrightarrow \frac{6+0}{5}=\frac{6}{5} \,.
-\]</span> By Theorem <a href="chap_7.html#theorem-convergence-real-imaginary">17</a> we conclude <span class="math display">\[
+\end{align*}\]</span> Using the Algebra of Limits for real sequences we have that <span class="math display">\[\begin{align*}
+&amp; a_n = \frac{8 n^{3}-3 n^{2}}{5 n^{4}}=\frac{ \dfrac{8}{n} - \dfrac{3}{n^2}  }{5} \longrightarrow \frac{0-0}{5}=0 \,, \\
+&amp; b_n = \frac{6 n^{4}+4 n}{5 n^{4}}=\frac{6+ \dfrac{4}{n^3} }{5} \longrightarrow \frac{6+0}{5}=\frac{6}{5} \,.
+\end{align*}\]</span> By Theorem <a href="chap_7.html#theorem-convergence-real-imaginary">19</a> we conclude <span class="math display">\[
 \lim _{n \rightarrow \infty} z_{n} = \lim_{n \to \infty} a_n  +  i \, \lim_{n \to \infty} b_n = 0+\frac{6}{5} i=\frac{6}{5} i \,.
 \]</span></p>
-</blockquote>
 </div></details>
 </div>
 

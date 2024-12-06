@@ -72,7 +72,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Proposition {
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -80,15 +84,43 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
 .DONE {
   --color1: #cce7b1;
   --color2: #86b754;
 }
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -100,39 +132,7 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Conjecture {
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -333,7 +333,7 @@ n &gt; x \,.
 <div id="fig-archimedean" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-archimedean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/archimedean_original.png" class="img-fluid figure-img" style="width:80.0%">
+<img src="../images/archimedean_original.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-archimedean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.1: For any <span class="math inline">\(x&gt;0\)</span> we can find <span class="math inline">\(n,m \in \mathbb{N}\)</span> such that <span class="math inline">\(1/m&lt;x&lt;n\)</span>.
@@ -408,7 +408,7 @@ nx &gt; y \,.
 <div id="fig-archimedean" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-archimedean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/archimedean.png" class="img-fluid figure-img" style="width:80.0%">
+<img src="../images/archimedean.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-archimedean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.2: For <span class="math inline">\(0&lt;x&lt;y\)</span> there exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that that <span class="math inline">\(nx&gt;y\)</span>. In the picture <span class="math inline">\(n=3\)</span>.
@@ -459,7 +459,7 @@ a_1 \leq a_2 \leq \ldots \leq a_n \leq \dots \leq b_n  \leq \ldots b_n \leq b_1 
 <div id="fig-nested" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-nested-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/nested_interval_property.png" class="img-fluid figure-img" style="width:80.0%">
+<img src="../images/nested_interval_property.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nested-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.3: Nested intervals <span class="math inline">\(I_n = [a_n,b_n]\)</span>.
@@ -557,7 +557,7 @@ s - \varepsilon&lt; x \,.
 <div id="fig-alternative-sup" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-alternative-sup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/alternative_supremum.png" class="img-fluid figure-img" style="width:80.0%">
+<img src="../images/alternative_supremum.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-alternative-sup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.4: Let <span class="math inline">\(s = \sup A\)</span>. Then for every <span class="math inline">\(\varepsilon&gt;0\)</span> there exist <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(s-\varepsilon&lt;x\)</span>.
@@ -605,7 +605,7 @@ x &lt; i + \varepsilon\,.
 <div id="fig-alternative-inf" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-alternative-inf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/alternative_infimum.png" class="img-fluid figure-img" style="width:80.0%">
+<img src="../images/alternative_infimum.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-alternative-inf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.5: Let <span class="math inline">\(i = \inf A\)</span>. Then for every <span class="math inline">\(\varepsilon&gt;0\)</span> there exist <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(x&lt;i+\varepsilon\)</span>.
@@ -614,15 +614,20 @@ Figure&nbsp;4.5: Let <span class="math inline">\(i = \inf A\)</span>. Then for e
 </div>
 <p>With the above characterizations of supremum and infimum, it will be easier, in some cases, to compute infimum and supremum. We now characterize infimum and supremum of an open interval of <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <div id="proposition-interval-inf-sup" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 9</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 9</strong></summary><div>
+<p>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
 A:= (a,b) = \{ x \in \mathbb{R}\, \colon \,a &lt; x &lt; b \}\,.
-\]</span> Then <span class="math display">\[
+\]</span></p>
+<ol type="1">
+<li><p>We have that <span class="math display">\[
 \inf A = a \,, \quad \sup A = b \,.
-\]</span><p></p>
+\]</span></p></li>
+<li><p><span class="math inline">\(\min A\)</span> and <span class="math inline">\(\max A\)</span> do not exist.</p></li>
+</ol>
 </div></details>
 </div>
 <div id="Proof*-6" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We will only prove that <span class="math display">\[
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> We will only prove that <span class="math display">\[
 \inf A = a \,,
 \]</span> since the proof of <span class="math display">\[
 \sup A = b
@@ -671,29 +676,19 @@ M = \frac{a + L}{2} &lt; \frac{2L}{2} = L \,.
 \]</span></p>
 </blockquote>
 <p>This is a contradiction, since <span class="math inline">\(L\)</span> is a lower bound for <span class="math inline">\(A\)</span> and <span class="math inline">\(M \in A\)</span>. Therefore (<a href="#eq-interval-inf-sup-proof" class="quarto-xref"><span>4.11</span></a>) holds, showing that <span class="math inline">\(a\)</span> is the largest lower bound of <span class="math inline">\(A\)</span>. We conclude that <span class="math inline">\(a = \inf A\)</span>.</p>
-</div></details>
-</div>
-<p>As a corollary of the above we have that the maximum and minimum of an open interval do not exist.</p>
-<div id="Corollary-10" class="Corollary">
-<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 10</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
-A:= (a,b) = \{ x \in \mathbb{R}\, \colon \,a &lt; x &lt; b \}\,.
-\]</span> Then <span class="math inline">\(\min A\)</span> and <span class="math inline">\(\max A\)</span> do not exist.<p></p>
-</div></details>
-</div>
-<div id="Proof*-7" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose by contradiction that <span class="math inline">\(\min A\)</span> exists. We have shown that if the minimum of a set exists, then it must be <span class="math display">\[
+<p><em>Part 2.</em> Suppose by contradiction that <span class="math inline">\(\min A\)</span> exists. We have shown that if the minimum of a set exists, then it must be <span class="math display">\[
 \min A = \inf A \,.
 \]</span> Since <span class="math display">\[
 \inf A = a\,,
 \]</span> by Proposition <a href="revision.html#proposition-interval-inf-sup">63</a>, we would obtain that <span class="math display">\[
 \min A = a \,.
-\]</span> As <span class="math inline">\(\min A \in A\)</span> by definition, we infer <span class="math inline">\(a \in A\)</span>. This is contradiction. Then <span class="math inline">\(\min A\)</span> does not exist.<p></p>
+\]</span> As <span class="math inline">\(\min A \in A\)</span> by definition, we infer <span class="math inline">\(a \in A\)</span>. This is contradiction. Then <span class="math inline">\(\min A\)</span> does not exist.</p>
 <p>The proof that <span class="math inline">\(\max A\)</span> does not exist is similar, and is left as an exercise.</p>
 </div></details>
 </div>
 <p>We can also consider intervals for which one or both of the sides are closed.</p>
-<div id="Corollary-11" class="Corollary">
-<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 11</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
+<div id="Corollary-10" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 10</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
 A:= [a,b) = \{ x \in \mathbb{R}\, \colon \,a \leq x &lt; b \}\,.
 \]</span> Then <span class="math display">\[
 \min A = \inf A = a \,, \quad \sup A = b \,,
@@ -701,15 +696,15 @@ A:= [a,b) = \{ x \in \mathbb{R}\, \colon \,a \leq x &lt; b \}\,.
 </div></details>
 </div>
 <p>The proof is very simple, and is left as an exercise. Let us now compute supremum and infimum of a set which is not an interval.</p>
-<div id="Proposition-12" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 12</strong></summary><div>Define the set <span class="math display">\[
+<div id="Proposition-11" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 11</strong></summary><div>Define the set <span class="math display">\[
 A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
 \]</span> Then <span class="math display">\[
 \inf A = 0 \,, \quad \sup A = \max A = 1 \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proof*-8" class="Proof">
+<div id="Proof*-7" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> We have <span class="math display">\[
 \frac1n \leq 1 \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> Therefore <span class="math inline">\(1\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Since <span class="math inline">\(1 \in A\)</span>, by definition of maximum we conclude that <span class="math display">\[
@@ -756,7 +751,7 @@ A := \{ t \in \mathbb{R}\, \colon \,t^k &lt; x \}
 \alpha^k = x \,,
 \]</span> meaning that <span class="math inline">\(\alpha\)</span> is the <span class="math inline">\(k\)</span>-th root of <span class="math inline">\(x\)</span>.</p>
 <div id="theorem_existence_root" class="Theorem" title="Existence of k-th roots">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 13: </strong>Existence of <span class="math inline">\(k\)</span>-th roots</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>. Define the set <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 12: </strong>Existence of <span class="math inline">\(k\)</span>-th roots</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>. Define the set <span class="math display">\[
 A = \{ t \in \mathbb{R}\, \colon \,t^k &lt; x \} \,.
 \]</span> There exists <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
 \alpha = \sup A \,.
@@ -765,9 +760,9 @@ A = \{ t \in \mathbb{R}\, \colon \,t^k &lt; x \} \,.
 \]</span><p></p>
 </div></details>
 </div>
-<p>The proof of Theorem <a href="chap_4.html#theorem_existence_root">13</a> rests on similar ideas to the ones used to prove that <span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property.</p>
-<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 13">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 13</summary><div><em>Part 1: Uniqueness.</em><p></p>
+<p>The proof of Theorem <a href="chap_4.html#theorem_existence_root">12</a> rests on similar ideas to the ones used to prove that <span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property.</p>
+<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 12">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 12</summary><div><em>Part 1: Uniqueness.</em><p></p>
 <p>Suppose <span class="math inline">\(\alpha_1,\alpha_2 \in \mathbb{R}\)</span> are such that <span class="math display">\[
 \alpha_1^k = \alpha_2^k = x \,.
 \]</span> If <span class="math inline">\(\alpha_1 \neq \alpha_2\)</span>, then <span class="math display">\[
@@ -873,7 +868,7 @@ L_{n_0} &lt; \alpha = \sup A \,,
 </div></details>
 </div>
 <div id="k-th-root-of-a-number" class="Definition" title="k-th root of a number">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 14: </strong><span class="math inline">\(k\)</span>-th root of a number</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>. The real number <span class="math inline">\(\alpha\)</span> such that <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 13: </strong><span class="math inline">\(k\)</span>-th root of a number</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>. The real number <span class="math inline">\(\alpha\)</span> such that <span class="math display">\[
 \alpha^k = x
 \]</span> is called the <strong><span class="math inline">\(k\)</span>-th root</strong> of <span class="math inline">\(x\)</span>, and is denoted by <span class="math display">\[
 \sqrt[k]{x} := \alpha  \,.
@@ -885,14 +880,14 @@ L_{n_0} &lt; \alpha = \sup A \,,
 <h2 data-number="4.5" class="anchored" data-anchor-id="density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.5</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></h2>
 <p>A set <span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span> if the elements of <span class="math inline">\(S\)</span> are arbitrarily close to the elements of <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <div id="dense-set" class="Definition" title="Dense set">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 15: </strong>Dense set</summary><div>Let <span class="math inline">\(S \subseteq \mathbb{R}\)</span>. We say that <span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span> if for every <span class="math inline">\(x \in \mathbb{R}\)</span> and <span class="math inline">\(\varepsilon&gt;0\)</span>, there exist <span class="math inline">\(s \in S\)</span> such that <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 14: </strong>Dense set</summary><div>Let <span class="math inline">\(S \subseteq \mathbb{R}\)</span>. We say that <span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span> if for every <span class="math inline">\(x \in \mathbb{R}\)</span> and <span class="math inline">\(\varepsilon&gt;0\)</span>, there exist <span class="math inline">\(s \in S\)</span> such that <span class="math display">\[
 |x - s| &lt; \varepsilon\,.
 \]</span><p></p>
 </div></details>
 </div>
 <p>In other words, the above definition is saying that <span class="math inline">\(S\)</span> and <span class="math inline">\(\mathbb{R}\)</span> are tightly knitted together. An equivalent definition of dense set is given below.</p>
-<div id="Remark-16" class="Remark">
-<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 16</strong></summary><div>
+<div id="Remark-15" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 15</strong></summary><div>
 <p>Let <span class="math inline">\(S \subseteq \mathbb{R}\)</span>. They are equivalent:</p>
 <ul>
 <li><span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>.</li>
@@ -904,7 +899,7 @@ x &lt; s &lt; y \,.
 </div>
 <p>We now prove that <span class="math inline">\(\mathbb{Q}\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <div id="theorem-density" class="Theorem" title="Density of \mathbb{Q} in \mathbb{R}">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 17: </strong>Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(x&lt;y\)</span>. There exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 16: </strong>Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(x&lt;y\)</span>. There exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
 x &lt; q &lt; y \,.
 \]</span><p></p>
 </div></details>
@@ -912,14 +907,14 @@ x &lt; q &lt; y \,.
 <div id="fig-density-proof" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-density-proof-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/density_proof.png" class="img-fluid figure-img" style="width:80.0%">
+<img src="../images/density_proof.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-density-proof-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.6: Let <span class="math inline">\(n \in \mathbb{N}\)</span> be such that <span class="math inline">\(1/n&lt; y-x\)</span>. Then take <span class="math inline">\(m\)</span> so that <span class="math inline">\(m/n \in (x,y)\)</span>.
 </figcaption>
 </figure>
 </div>
-<div id="Proof*-10" class="Proof">
+<div id="Proof*-9" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We need to find <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span id="eq-proof-density-1"><span class="math display">\[
 x &lt; q &lt; y \,.
 \tag{4.24}\]</span></span> By definition of <span class="math inline">\(\mathbb{Q}\)</span>, we have that <span class="math inline">\(q\)</span> has to be of the form <span class="math inline">\(q=m/n\)</span> for <span class="math inline">\(m \in \mathbb{Z}\)</span> and <span class="math inline">\(n \in \mathbb{N}\)</span>. Therefore (<a href="#eq-proof-density-1" class="quarto-xref"><span>4.24</span></a>) is equivalent to finding <span class="math inline">\(m \in \mathbb{Z}\)</span> and <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span id="eq-proof-density-2"><span class="math display">\[
@@ -962,28 +957,28 @@ m &amp; \leq 1 + nx \\
 </div>
 <p>We have constructed the real numbers <span class="math inline">\(\mathbb{R}\)</span> so that they would fill the <strong>gaps</strong> of <span class="math inline">\(\mathbb{Q}\)</span>. Formally, these gaps are the numbers in <span class="math inline">\(\mathbb{R}\smallsetminus \mathbb{Q}\)</span>. Let us give a name to this set.</p>
 <div id="irrational-numbers" class="Definition" title="Irrational numbers">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 18: </strong>Irrational numbers</summary><div>The set of <strong>irrational numbers</strong> in <span class="math inline">\(\mathbb{R}\)</span> is <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 17: </strong>Irrational numbers</summary><div>The set of <strong>irrational numbers</strong> in <span class="math inline">\(\mathbb{R}\)</span> is <span class="math display">\[
 \mathcal{I} := \mathbb{R}\smallsetminus \mathbb{Q}\,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Question-19" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 19</strong></summary><div>How many gaps does <span class="math inline">\(\mathbb{Q}\)</span> have? In other words, how many irrational numbers are out there?<p></p>
+<div id="Question-18" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 18</strong></summary><div>How many gaps does <span class="math inline">\(\mathbb{Q}\)</span> have? In other words, how many irrational numbers are out there?<p></p>
 </div></details>
 </div>
-<p>The answer is quite surprising, and is a corollary of the density result of Theorem <a href="chap_4.html#theorem-density">17</a>: The irrational numbers are dense in <span class="math inline">\(\mathbb{R}\)</span>.</p>
-<div id="Corollary-20" class="Corollary">
-<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 20</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(x&lt;y\)</span>. There exists <span class="math inline">\(t \in \mathcal{I}\)</span> such that <span class="math display">\[
+<p>The answer is quite surprising, and is a corollary of the density result of Theorem <a href="chap_4.html#theorem-density">16</a>: The irrational numbers are dense in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="Corollary-19" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 19</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(x&lt;y\)</span>. There exists <span class="math inline">\(t \in \mathcal{I}\)</span> such that <span class="math display">\[
 x &lt; t &lt; y \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proof*-11" class="Proof">
+<div id="Proof*-10" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Consider <span class="math display">\[
 \widetilde{x}:=x - \sqrt{2}\,, \quad \widetilde{y} :=y - \sqrt{2} \,.
 \]</span> Since <span class="math inline">\(x&lt;y\)</span>, we have <span class="math display">\[
 \widetilde{x} &lt; \widetilde{y} \,.
-\]</span> By Theorem <a href="chap_4.html#theorem-density">17</a> there exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
+\]</span> By Theorem <a href="chap_4.html#theorem-density">16</a> there exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
 \widetilde{x} &lt; q &lt; \widetilde{y} \,.
 \]</span> Adding <span class="math inline">\(\sqrt{2}\)</span> to the above inequalities we get <span id="eq-density-proof"><span class="math display">\[
 x &lt; t &lt; y \,, \quad t := q + \sqrt{2} \,.
@@ -1000,7 +995,7 @@ x &lt; t &lt; y \,, \quad t := q + \sqrt{2} \,.
 \]</span> From this result we might think that <span class="math inline">\(\mathbb{R}\)</span> is obtained by mixing <span class="math inline">\(\mathbb{Q}\)</span> and <span class="math inline">\(\mathcal{I}\)</span> in equal proportions. This is however false. We will see that <span class="math inline">\(\mathbb{R}\)</span> has much more elements than <span class="math inline">\(\mathbb{Q}\)</span>. Therefore also the set of irrational numbers <span class="math inline">\(\mathcal{I}\)</span> is much larger than <span class="math inline">\(\mathbb{Q}\)</span>.</p>
 <p>To make the above discussion precise, we need to introduce the <em>size</em> of a set. For this, we need the concept of bijective function.</p>
 <div id="bijective-function" class="Definition" title="Bijective function">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 21: </strong>Bijective function</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 20: </strong>Bijective function</summary><div>
 <p>Let <span class="math inline">\(X,Y\)</span> be sets and <span class="math inline">\(f \colon X \to Y\)</span> be a function. We say that:</p>
 <ol type="1">
 <li><p><span class="math inline">\(f\)</span> is <strong>injective</strong> if it holds: <span class="math display">\[
@@ -1020,7 +1015,7 @@ f(x)=f(y) \quad \implies \quad x = y \,.
 <li>Bijective if to each element in <span class="math inline">\(X\)</span> we associate one and only one element in <span class="math inline">\(Y\)</span> via <span class="math inline">\(f\)</span>.</li>
 </ol>
 <div id="injectivity" class="Example" title="Injectivity">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 22: </strong>Injectivity</summary><div>
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 21: </strong>Injectivity</summary><div>
 <p>Consider the sets <span class="math display">\[
 X = \{ 1, 2, 3 \} \,, \quad  
 Y = \{ a,b,c,d,e\} \,.
@@ -1048,7 +1043,7 @@ l(x) = l(y) \quad \implies \quad 2x = 2y \quad \implies \quad x = y \,.
 </div></details>
 </div>
 <div id="surjectivity" class="Example" title="Surjectivity">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 23: </strong>Surjectivity</summary><div>
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 22: </strong>Surjectivity</summary><div>
 <p>Consider the sets <span class="math display">\[
 X = \{ 1, 2, 3 ,4\} \,, \quad  
 Y = \{ a,b,c\} \,.
@@ -1071,12 +1066,12 @@ h(x) =  x^2 = -1  \,.
 l(x) = x^2
 \]</span> is surjective, since for every <span class="math inline">\(y \geq 0\)</span> there exists <span class="math inline">\(x \in \mathbb{R}\)</span> such that <span class="math display">\[
 l(x)= x^2 = y\,.
-\]</span> This is true by Theorem <a href="chap_4.html#theorem_existence_root">13</a>.</p></li>
+\]</span> This is true by Theorem <a href="chap_4.html#theorem_existence_root">12</a>.</p></li>
 </ol>
 </div></details>
 </div>
 <div id="bijectivity" class="Example" title="Bijectivity">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 24: </strong>Bijectivity</summary><div>
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 23: </strong>Bijectivity</summary><div>
 <ol type="1">
 <li><p>Let <span class="math inline">\(X = \{ 1, 2, 3 \}, Y = \{ a,b,c\}\)</span>. The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
 f(1)=c \,, \quad f(2) = a \,, \quad f(3) = b \,,
@@ -1098,20 +1093,20 @@ l(1) = a \,, \quad l(2) = a \,, \quad l(3) = b \,,
 </div></details>
 </div>
 <div id="composition-of-functions" class="Definition" title="Composition of functions">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 25: </strong>Composition of functions</summary><div>Let <span class="math inline">\(X, Y, Z\)</span> be sets and <span class="math inline">\(f \colon X \to Y\)</span>, <span class="math inline">\(g \colon Y \to Z\)</span> functions. The composition of <span class="math inline">\(f\)</span> with <span class="math inline">\(g\)</span> is the function <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 24: </strong>Composition of functions</summary><div>Let <span class="math inline">\(X, Y, Z\)</span> be sets and <span class="math inline">\(f \colon X \to Y\)</span>, <span class="math inline">\(g \colon Y \to Z\)</span> functions. The composition of <span class="math inline">\(f\)</span> with <span class="math inline">\(g\)</span> is the function <span class="math display">\[
 g \circ f \colon X \to Z \,, \quad
 (g \circ f)(x):=g(f(x)) \,.
 \]</span><p></p>
 </div></details>
 </div>
 <div id="identity-map" class="Definition" title="Identity map">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 26: </strong>Identity map</summary><div>The identity map on a set <span class="math inline">\(X\)</span> is the function <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 25: </strong>Identity map</summary><div>The identity map on a set <span class="math inline">\(X\)</span> is the function <span class="math display">\[
 \operatorname{id}_X \colon X \to X \,, \quad \operatorname{id}_X(x) = x \,.
 \]</span><p></p>
 </div></details>
 </div>
 <div id="invertibility" class="Definition" title="Invertibility">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 27: </strong>Invertibility</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 26: </strong>Invertibility</summary><div>
 <p>Let <span class="math inline">\(X,Y\)</span> be sets and <span class="math inline">\(f \colon X \to Y\)</span>. We say that:</p>
 <ol type="1">
 <li><p>A function <span class="math inline">\(g \colon Y \to X\)</span> is the <strong>inverse</strong> of <span class="math inline">\(f\)</span> if <span class="math display">\[
@@ -1121,8 +1116,8 @@ g \circ f = \operatorname{id}_X \,, \quad f \circ g = \operatorname{id}_Y \,.
 </ol>
 </div></details>
 </div>
-<div id="Proposition-28" class="Proposition">
-<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 28</strong></summary><div>
+<div id="Proposition-27" class="Proposition">
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 27</strong></summary><div>
 <p>Let <span class="math inline">\(X,Y\)</span> be sets and <span class="math inline">\(f \colon X \to Y\)</span>.</p>
 <ol type="1">
 <li><p>If <span class="math inline">\(f\)</span> is invertible, the inverse is unique. We denote it by <span class="math display">\[
@@ -1138,7 +1133,7 @@ g:=f^{-1} \,.
 </div>
 <p>We are ready to define the <em>size</em> of a set.</p>
 <div id="definition-cardinality" class="Definition" title="Cardinality, Finite, Countable, Uncountable">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 29: </strong>Cardinality, Finite, Countable, Uncountable</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 28: </strong>Cardinality, Finite, Countable, Uncountable</summary><div>
 <p>Let <span class="math inline">\(X\)</span> be a set. The <strong>cardinality</strong> of <span class="math inline">\(X\)</span> is the number of elements in <span class="math inline">\(X\)</span>. We denote the cardinality of <span class="math inline">\(X\)</span> by <span class="math display">\[
 |X| := \# \, \mbox{ of elements in } \, X \,.
 \]</span> Further, we say that:</p>
@@ -1167,22 +1162,22 @@ X = \{ x_n \, \colon \,n \in \mathbb{N}\} \,, \quad x_n := f(n)
 \]</span></p></li>
 <li><p><span class="math inline">\(X\)</span> is uncountable if it <span class="math inline">\(X\)</span> cannot be listed.</p></li>
 </ol>
-<div id="Remark-30" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 30</strong></summary><div>The functions in Definition <a href="revision.html#definition-cardinality">67</a> are bijections. Therefore they are invertible, and points 1 and 2 are equivalent to requesting there exist bijections <span class="math display">\[
+<div id="Remark-29" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 29</strong></summary><div>The functions in Definition <a href="chap_4.html#definition-cardinality">28</a> are bijections. Therefore they are invertible, and points 1 and 2 are equivalent to requesting there exist bijections <span class="math display">\[
 f \colon X \to \{1,2,\ldots, n \}  \,, \qquad f \colon X \to \mathbb{N}\,,
 \]</span> respectively.<p></p>
 </div></details>
 </div>
-<div id="Question-31" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 31</strong></summary><div>Is there an intermediate cardinality between finite and countable?<p></p>
+<div id="Question-30" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 30</strong></summary><div>Is there an intermediate cardinality between finite and countable?<p></p>
 </div></details>
 </div>
 <p>The answer is no, as shown in the next proposition.</p>
 <div id="proposition-countable-subset" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 32</strong></summary><div>Let <span class="math inline">\(X\)</span> be a countable set and <span class="math inline">\(A \subseteq X\)</span>. Then either <span class="math inline">\(A\)</span> is finite or countable.<p></p>
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 31</strong></summary><div>Let <span class="math inline">\(X\)</span> be a countable set and <span class="math inline">\(A \subseteq X\)</span>. Then either <span class="math inline">\(A\)</span> is finite or countable.<p></p>
 </div></details>
 </div>
-<div id="Proof*-12" class="Proof">
+<div id="Proof*-11" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>If <span class="math inline">\(A\)</span> is finite, there is nothing to prove. Therefore suppose <span class="math inline">\(A\)</span> is not finite. Since <span class="math inline">\(X\)</span> is countable there exists a bijection <span class="math display">\[
 f \colon \mathbb{N}\to X \,.
 \]</span> This means <span class="math inline">\(X\)</span> can be listed as <span class="math display">\[
@@ -1225,22 +1220,22 @@ g \colon \mathbb{N}\to A \,.
 <p>Hence <span class="math inline">\(g\)</span> is bijective, showing that <span class="math inline">\(A\)</span> is countable.</p>
 </div></details>
 </div>
-<div id="Example-33" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 33</strong></summary><div><strong>Question.</strong> Prove that <span class="math inline">\(X = \{a,b,c\}\)</span> is finite.<p></p>
+<div id="Example-32" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 32</strong></summary><div><strong>Question.</strong> Prove that <span class="math inline">\(X = \{a,b,c\}\)</span> is finite.<p></p>
 <p><strong>Solution.</strong> Set <span class="math inline">\(Y=\{ 1,2,3\}\)</span>. The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
 f(1)=a \,, \quad f(2) = b \,, \quad f(3) = c \,,
 \]</span> is bijective. Therefore <span class="math inline">\(X\)</span> is finite, with <span class="math inline">\(|X| = 3\)</span>.</p>
 </div></details>
 </div>
-<div id="Example-34" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 34</strong></summary><div><strong>Question.</strong> Prove that the set of natural numbers <span class="math inline">\(\mathbb{N}\)</span> is countable.<p></p>
+<div id="Example-33" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 33</strong></summary><div><strong>Question.</strong> Prove that the set of natural numbers <span class="math inline">\(\mathbb{N}\)</span> is countable.<p></p>
 <p><strong>Solution.</strong> The function <span class="math inline">\(f \colon X \to \mathbb{N}\)</span> defined by <span class="math display">\[
 f(n):=n \,,
 \]</span> is bijective. Therefore <span class="math inline">\(X = \mathbb{N}\)</span> is countable.</p>
 </div></details>
 </div>
-<div id="Example-35" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 35</strong></summary><div><strong>Question.</strong> Let <span class="math inline">\(X\)</span> be the set of even numbers <span class="math display">\[
+<div id="Example-34" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 34</strong></summary><div><strong>Question.</strong> Let <span class="math inline">\(X\)</span> be the set of even numbers <span class="math display">\[
 X = \{ 2n \, \colon \,n \in \mathbb{N}\} \,.
 \]</span> Prove that <span class="math inline">\(X\)</span> is countable.<p></p>
 <p><strong>Solution.</strong> Define the map <span class="math inline">\(f \colon \mathbb{N}\to X\)</span> by <span class="math display">\[
@@ -1256,8 +1251,8 @@ f(m)=f(k) \, \implies \, 2m=2k \,
 <p>We have shown that <span class="math inline">\(f\)</span> is bijective. Thus, <span class="math inline">\(X\)</span> is countable.</p>
 </div></details>
 </div>
-<div id="Example-36" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 36</strong></summary><div><strong>Question.</strong> Prove that the set of integers <span class="math inline">\(\mathbb{Z}\)</span> is countable.<p></p>
+<div id="Example-35" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 35</strong></summary><div><strong>Question.</strong> Prove that the set of integers <span class="math inline">\(\mathbb{Z}\)</span> is countable.<p></p>
 <p><strong>Solution.</strong> Define <span class="math inline">\(f \colon \mathbb{N}\to \mathbb{Z}\)</span> by <span class="math display">\[
 f(n):=
 \begin{cases}
@@ -1286,12 +1281,12 @@ f(m) = f(-2z-1) = z \,.
 </div>
 <p>We have seen that the sets <span class="math inline">\(\mathbb{N}\)</span> and <span class="math inline">\(\mathbb{Z}\)</span> are countable. What about <span class="math inline">\(\mathbb{Q}\)</span>? To study this case, we need the following result.</p>
 <div id="proposition-countable-union" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 37</strong></summary><div>Let the set <span class="math inline">\(A_n\)</span> be countable for all <span class="math inline">\(n \in \mathbb{N}\)</span>. Define <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 36</strong></summary><div>Let the set <span class="math inline">\(A_n\)</span> be countable for all <span class="math inline">\(n \in \mathbb{N}\)</span>. Define <span class="math display">\[
 A = \bigcup_{n \in \mathbb{N}} \, A_n \, .
 \]</span> Then <span class="math inline">\(A\)</span> is countable.<p></p>
 </div></details>
 </div>
-<div id="Proof*-13" class="Proof">
+<div id="Proof*-12" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Since each <span class="math inline">\(A_i\)</span> is countable, we can list their elements as <span class="math display">\[
 A_i = \{ a_k^i \, \colon \,k \in \mathbb{N}\} = \{   a_1^i , \, a_2^i , \, a_3^i , \, a_4^i , \, \ldots \} \,.
 \]</span> The proof that <span class="math inline">\(A\)</span> is countable is based on a diagonal argument by Georg Cantor, see <a href="https://en.wikipedia.org/wiki/Cantor's_diagonal_argument0">Wikipedia page</a>. The idea is that we can list the elements of the sets <span class="math inline">\(A_i\)</span> in an infinite square: In the first row we put the elements of <span class="math inline">\(A_1\)</span>, in the second row the elements of <span class="math inline">\(A_2\)</span>, and so on. Therefore the <span class="math inline">\(i\)</span>-th row contains the elements of <span class="math inline">\(A_i\)</span>. This procedure is illustrated in <a href="#fig-diagonal-argument" class="quarto-xref">Figure&nbsp;<span>4.7</span></a>. Therefore this infinite square contains all the elements of <span class="math inline">\(A\)</span>. We then list all the elements of the square by looking at the diagonals, as shown in <a href="#fig-diagonal-argument" class="quarto-xref">Figure&nbsp;<span>4.7</span></a>. This procedure defines a function <span class="math inline">\(f \colon \mathbb{N}\to A\)</span>. For example the first few terms of <span class="math inline">\(f\)</span> are <span class="math display">\[
@@ -1303,7 +1298,7 @@ f(4) = a_1^3 \,.
 <div id="fig-diagonal-argument" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-diagonal-argument-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/diagonal_argument.png" class="img-fluid figure-img" style="width:70.0%">
+<img src="../images/diagonal_argument.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diagonal-argument-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.7: The i-th row contains all the elements <span class="math inline">\(a_1^i,a_2^i,a_3^i, \ldots\)</span> of the countable set <span class="math inline">\(A_i\)</span>. We define the function <span class="math inline">\(f \colon \mathbb{N}\to A\)</span> by going throgh the square diagonally.
@@ -1311,10 +1306,10 @@ Figure&nbsp;4.7: The i-th row contains all the elements <span class="math inline
 </figure>
 </div>
 <div id="theorem-Q-countable" class="Theorem" title="\mathbb{Q} is countable">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 38: </strong><span class="math inline">\(\mathbb{Q}\)</span> is countable</summary><div>The set of rational numbers <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 37: </strong><span class="math inline">\(\mathbb{Q}\)</span> is countable</summary><div>The set of rational numbers <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
 </div></details>
 </div>
-<div id="Proof*-14" class="Proof">
+<div id="Proof*-13" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>For <span class="math inline">\(i \in \mathbb{N}\)</span> define the sets <span class="math display">\[
 L_i := \left\{ \frac{m}{i}  \, \colon \,m \in \mathbb{Z}\right\} \,.
 \]</span> We have that <span class="math inline">\(f \colon L_i \to \mathbb{Z}\)</span> defined by <span class="math display">\[
@@ -1330,10 +1325,10 @@ L:= \bigcup_{i \in \mathbb{N}} \, L_i
 \mathbb{N}\,, \quad \mathbb{Z}\,, \quad \mathbb{Q}\,,
 \]</span> are all countable. What about <span class="math inline">\(\mathbb{R}\)</span>?</p>
 <div id="theorem-R-uncountable" class="Theorem" title="\mathbb{R} is uncountable">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 39: </strong><span class="math inline">\(\mathbb{R}\)</span> is uncountable</summary><div>The set of Real Numbers <span class="math inline">\(\mathbb{R}\)</span> is <strong>uncountable</strong>.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 38: </strong><span class="math inline">\(\mathbb{R}\)</span> is uncountable</summary><div>The set of Real Numbers <span class="math inline">\(\mathbb{R}\)</span> is <strong>uncountable</strong>.<p></p>
 </div></details>
 </div>
-<div id="Proof*-15" class="Proof">
+<div id="Proof*-14" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose by contradiction <span class="math inline">\(\mathbb{R}\)</span> is countable. Then there exists a bijection <span class="math inline">\(f \colon \mathbb{N}\to \mathbb{R}\)</span>, meaning that we can list the elements of <span class="math inline">\(\mathbb{R}\)</span> as <span class="math display">\[
 \mathbb{R}= \{ x_1 , x_2 , x_3 , x_4 , x_5 , \ldots \} \,, \quad x_i := f(i) \,.
 \]</span> Let <span class="math inline">\(I_1\)</span> be a closed interval such that <span class="math display">\[
@@ -1361,7 +1356,7 @@ x_k \notin \bigcap_{n =1}^\infty \, I_n \,, \quad \forall \, k \in \mathbb{N}\,.
 <div id="fig-R-uncountable" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-R-uncountable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/R_uncountable.png" class="img-fluid figure-img" style="width:80.0%">
+<img src="../images/R_uncountable.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-R-uncountable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.8: The intervals <span class="math inline">\(I_n\)</span> are nested, and can be chosen so that <span class="math inline">\(x_n \notin I_n\)</span>.
@@ -1369,14 +1364,14 @@ Figure&nbsp;4.8: The intervals <span class="math inline">\(I_n\)</span> are nest
 </figure>
 </div>
 <p>As a corollary we obtain that also the irrational numbers are uncountable.</p>
-<div id="Theorem-40" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 40</strong></summary><div>The set of irrational numbers <span class="math display">\[
+<div id="Theorem-39" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 39</strong></summary><div>The set of irrational numbers <span class="math display">\[
 \mathcal{I}:=\mathbb{R}\smallsetminus \mathbb{Q}
 \]</span> is uncountable.<p></p>
 </div></details>
 </div>
-<div id="Proof*-16" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>In Theorems <a href="chap_4.html#theorem-Q-countable">38</a>, <a href="chap_4.html#theorem-R-uncountable">39</a> we have shown that <span class="math inline">\(\mathbb{R}\)</span> in uncountable and <span class="math inline">\(\mathbb{Q}\)</span> is countable. Suppose by contradiction that <span class="math inline">\(\mathcal{I}\)</span> is countable. Then <span class="math display">\[
+<div id="Proof*-15" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>In Theorems <a href="revision.html#theorem-Q-countable">74</a>, <a href="chap_4.html#theorem-R-uncountable">38</a> we have shown that <span class="math inline">\(\mathbb{R}\)</span> in uncountable and <span class="math inline">\(\mathbb{Q}\)</span> is countable. Suppose by contradiction that <span class="math inline">\(\mathcal{I}\)</span> is countable. Then <span class="math display">\[
 \mathbb{Q}\cup \mathcal{I}
 \]</span> is countable by Proposition <a href="revision.html#proposition-countable-union">73</a>, being union of countable sets. Since by definition <span class="math display">\[
 \mathbb{R}= \mathbb{Q}\cup \mathcal{I} \,,

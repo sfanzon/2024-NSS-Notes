@@ -654,7 +654,7 @@ On the other hand:
 
 We can represent a real number $x$ as a point on the one-dimensional real line $\R$. The distance between two real numbers $x, y \in \R$ on the real line is given by $|x-y|$, see @fig-real-line. 
 
-![Two points $x$ and $y$ on the real line $\R$. Their distance is $|x-y|$.](/images/real_line.png){#fig-real-line width=70%}
+![Two points $x$ and $y$ on the real line $\R$. Their distance is $|x-y|$.](/images/real_line.png){#fig-real-line width=40%}
 
 
 
@@ -669,7 +669,7 @@ $$
 $$
 see @fig-complex-plane. 
 
-![A point $z = x + iy \in \C$ can be represented on the complex plane by the point of coordinates $(x,y)$. The distance between $z$ and $0$ is given by $|z| = \sqrt{z^2 + y^2}$. ](/images/complex_plane.png){#fig-complex-plane width=60%}
+![A point $z = x + iy \in \C$ can be represented on the complex plane by the point of coordinates $(x,y)$. The distance between $z$ and $0$ is given by $|z| = \sqrt{z^2 + y^2}$. ](/images/complex_plane.png){#fig-complex-plane width=40%}
 
 
 ### Distance on $\C$
@@ -725,7 +725,7 @@ $$
 
 The geometric intuition of why the quantity $|z_1 - z_2|$ is defined as the distance between $z_1$ and $z_2$ is given in @fig-complex-plane-distance.
 
-![The difference $z_1 - z_2$ of the two points $z_1,z_2 \in \C$ is given by the magenta vector. We define $|z_1-z_2|$ as the distance between $z_1$ and $z_2$. ](/images/complex_plane_distance.png){#fig-complex-plane-distance width=60%}
+![The difference $z_1 - z_2$ of the two points $z_1,z_2 \in \C$ is given by the magenta vector. We define $|z_1-z_2|$ as the distance between $z_1$ and $z_2$. ](/images/complex_plane_distance.png){#fig-complex-plane-distance width=40%}
 
 
 ::: Theorem
@@ -900,7 +900,7 @@ is called **triangle inequality**: By drawing three points $x, y, z \in \C$ in t
 
 :::
 
-![Let $x,y,z \in \C$. The distance between $x$ and $z$ is shorter than the distance to go from $x$ to $z$ via the point $y$. ](/images/complex_plane_triangle.png){#fig-triangle-inequality-C width=60%}
+![Let $x,y,z \in \C$. The distance between $x$ and $z$ is shorter than the distance to go from $x$ to $z$ via the point $y$. ](/images/complex_plane_triangle.png){#fig-triangle-inequality-C width=40%}
 
 
 
@@ -917,7 +917,7 @@ $$
 - $\theta$ is the angle between the line connecting the origin and $z$ and the positive real axis, see @fig-polar-coordinates.
 
 
-![Polar coordinates $(\rho,\theta)$ for the complex number $z \in \C$. ](/images/polar_coordinates.png){#fig-polar-coordinates width=60%}
+![Polar coordinates $(\rho,\theta)$ for the complex number $z \in \C$. ](/images/polar_coordinates.png){#fig-polar-coordinates width=40%}
 
 
 We give such angle a name.
@@ -1078,9 +1078,9 @@ This exhausts all the cases, and the proof is concluded.
 
 
 
-![The definition of $\arg(z)$ depends on the position of $z$ in the complex plane.](/images/argument_1.png){#fig-argument-1 width=75%}
+![The definition of $\arg(z)$ depends on the position of $z$ in the complex plane.](/images/argument_1.png){#fig-argument-1 width=45%}
 
-![Plot of the tangent function for $\theta$ between $-\frac{3\pi}{2}$ and $\frac{3\pi}{2}$.](/images/argument.png){#fig-argument width=70%}
+![Plot of the tangent function for $\theta$ between $-\frac{3\pi}{2}$ and $\frac{3\pi}{2}$.](/images/argument.png){#fig-argument width=40%}
 
 
 
@@ -1239,7 +1239,11 @@ e^{i \theta}=e^{i(\theta+2 \pi k)} \,,
 $${#eq-exponential-periodic}
 meaning that the complex exponential is $2\pi$-periodic. As we did for the principal value of the argument, we select $\theta$ in (@eq-exponential-periodic) so that $\theta \in(-\pi, \pi]$. 
 
-> Equation (@eq-exponential-periodic) follows immediately by Euler's identity and periodicity of $\cos$ and $\sin$, since 
+:::
+
+::: Proof
+
+Equation (@eq-exponential-periodic) follows immediately by Euler's identity and periodicity of $\cos$ and $\sin$, since 
 \begin{align*}
 e^{i(\theta+2 \pi k)} & = \cos(\theta+2 \pi k) + i \sin (\theta+2 \pi k)  \\
 & = \cos(\theta) + i \sin (\theta) = e^{i \theta} \,.
@@ -1486,6 +1490,7 @@ $$
 
 
 ::: Definition
+### Multiplicity
 
 Suppose that the polynomial $p_n$ factorizes as 
 $$
@@ -1840,7 +1845,7 @@ $$
 when $a,b,c,d \in \R$. 
 
 
-![Quartic formula to solve $z^4 + az^3 + bz^2 + cz + d = 0$. Image from [Wikipedia](https://en.wikipedia.org/wiki/Quartic_equation).](/images/quartic.png){#fig-quartic width=90%}
+![Quartic formula to solve $z^4 + az^3 + bz^2 + cz + d = 0$. Image from [Wikipedia](https://en.wikipedia.org/wiki/Quartic_equation).](/images/quartic.png){#fig-quartic width=40%}
 
 A more productive use of time is learning how to perform long polynomial division. A quick tutorial is available here: [Polynomial_division.pdf](downloads/Polynomial_Division.pdf).
 
@@ -1856,7 +1861,7 @@ $$
 
 :::
 
-![Example of polynomial long division between $6z^3+5z^2-7$ and $3z^2-2z-1$.](/images/polynomial.png){#fig-polynomial-10 width=70%}
+![Example of polynomial long division between $6z^3+5z^2-7$ and $3z^2-2z-1$.](/images/polynomial.png){#fig-polynomial-10 width=40%}
 
 
 
@@ -1894,7 +1899,7 @@ $$
 :::
 
 
-![Polynomial long division between $z^{2}-7 z+6$ and $z-1$.](/images/polynomial_1.png){#fig-polynomial width=50%}
+![Polynomial long division between $z^{2}-7 z+6$ and $z-1$.](/images/polynomial_1.png){#fig-polynomial width=40%}
 
 
 
@@ -1923,7 +1928,7 @@ $$
 :::
 
 
-![Polynomial long division between $z^{3}-7 z+6$ and $z-1$.](/images/polynomial_2.png){#fig-polynomial-1 width=70%}
+![Polynomial long division between $z^{3}-7 z+6$ and $z-1$.](/images/polynomial_2.png){#fig-polynomial-1 width=40%}
 
 
 ::: Example
@@ -1992,7 +1997,7 @@ In particular, the given polynomial factorizes as
 
 :::
 
-![Polynomial long division between $z^3 + 5 z^2 + (5 - i) z + (4 - 4 i)$ and $z-i$.](/images/polynomial_3.png){#fig-polynomial-5 width=70%}
+![Polynomial long division between $z^3 + 5 z^2 + (5 - i) z + (4 - 4 i)$ and $z-i$.](/images/polynomial_3.png){#fig-polynomial-5 width=40%}
 
 
 

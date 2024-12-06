@@ -380,51 +380,41 @@ $$
 \left|\frac{n}{2n+3}-\frac{1}{2}\right| < \e \,, \quad \forall \, n \geq N \,.
 $$
 To this end, we compute:
-\begin{align*}
-\left|\frac{n}{2 n+3}-\frac{1}{2}\right| & 
-=\left|\frac{2n -(2n + 3)}{2(2n +3)}\right| \\
-& =\left|\frac{- 3}{4n + 6}\right| \\
-& = \frac{3}{4n + 6} \,.
-\end{align*}
+$$
+\left|\frac{n}{2 n+3}-\frac{1}{2}\right| 
+=\left|\frac{- 3}{4n + 6}\right| \\
+= \frac{3}{4n + 6} \,.
+$$
 Therefore 
 \begin{align*}
 \left|\frac{n}{2n+3}-\frac{1}{2}\right| < \e
 \quad \iff &  \quad
 \frac{3}{4n + 6} < \e \\
 \quad \iff &  \quad
-\frac{4n + 6}{3} > \frac{1}{\e} \\
-\quad \iff &  \quad
-4n + 6 > \frac{3}{\e} \\
-\quad \iff &  \quad
-4n  > \frac{3}{\e} - 6 \\
-\quad \iff &  \quad
 n  > \frac{3}{4\e} - \frac{6}{4} \,.
 \end{align*}
 Looking at the above equivalences, it is clear that $N \in \N$ has to be chosen so that
 $$
 N  > \frac{3}{4\e} - \frac{6}{4} \,.
-$$
+$${#eq-example-limit-1}
 
 
 2. *Formal Proof:* We have to show that
 $$
 \forall \e>0 \,, \, \exists \, N \in \N \st  \forall \, n \geq N \,, \, \left|\frac{n}{2n+3}-\frac{1}{2}\right| < \e  \,.
 $$
-Let $\e>0$. Choose $N \in \N$ such that
-$$
-N > \frac{3}{4\e} - \frac{6}{4}   \,.
-$${#eq-example-limit-1}
+Let $\e>0$. Choose $N \in \N$ such that (@eq-example-limit-1) holds. 
 By the rough work shown above, inequality (@eq-example-limit-1) is equivalent to 
 $$
  \frac{3}{4N + 6} < \e \,.
 $$
 Let $n \geq N$. Then
-\begin{align*}
+$$
 \left|\frac{n}{2n+3}-\frac{1}{2}\right| 
-& = \frac{3}{4 n+ 6 } \\
-& \leq \frac{3}{4 N+ 6 } \\
-& < \e \,,
-\end{align*}
+ = \frac{3}{4 n+ 6 } 
+ \leq \frac{3}{4 N+ 6 } 
+ < \e \,,
+$$
 where in the third line we used that $n \geq N$.
 
 :::
@@ -824,17 +814,22 @@ The choice of $M$ in the above proof says that the sequence can behave wildly fo
 
 ::: Example
 
-In Theorem \ref{theorem-one-over-n} we have shown that 
+**Question.** Prove that the following sequence is bounded, and find $M$:
+$$
+a_n = \frac1n \,.
+$$
+
+**Solution.** In Theorem \ref{theorem-one-over-n} we have shown that 
 $$
 \lim_{n \to \infty} \,  \frac{1}{n} = 0 
 $$
 Hence, it follows from Theorem \ref{theorem-convergent-bounded} that the sequence $(1/n)$ is bounded.
 
-Indeed, we have that
+An explicit constant $M$ is found as follows:
 $$
 \left|\frac{1}{n}\right|=\frac{1}{n} \leq 1 \,, \quad \forall \, n \in \N \,,
 $$
-since $n \geq 1$ for all $n \in \N$.
+since $n \geq 1$ for all $n \in \N$. Therefore $M=1$.
 
 :::
 
@@ -848,11 +843,13 @@ The converse of Theorem \ref{theorem-convergent-bounded} does not hold: There ex
 
 ::: Example
 
-Define the sequence
+The sequence 
 $$
-a_n = (-1)^n \,.
+a_n = (-1)^n
 $$
-We have proven in Theorem \ref{theorem-1-minus-n} that $(a_n)$ is not convergent. However
+is bounded ($M=1$) but not convergent.
+
+**Proof.** We have proven in Theorem \ref{theorem-1-minus-n} that $(a_n)$ is not convergent. However
 $(a_n)$ is bounded, with $M=1$, since
 $$
 |a_n| = |(-1)^n| = 1 = M  \,, \quad \forall \, n \in \N \,.
@@ -867,7 +864,7 @@ Taking the contrapositive of the statement in Theorem \ref{theorem-convergent-bo
 
 ::: {.Corollary   #corollary-convergent-bounded}
 
-If a sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ is not bounded, then the sequence does not converge.
+If a sequence is not bounded, then the sequence does not converge.
 
 :::
 
@@ -878,7 +875,8 @@ For a sequence $(a_n)$ to be unbounded, it means that
 $$
 \forall \, M > 0 \,, \,\,  \exists \, n \in \N \st \left|a_{n}\right| > M \,.
 $$
-The above is saying that no real number $M>0$ can be a bound for $|a_n|$, since there is always an index $n \in \N$ such that 
+
+*Comment.* The above is saying that no real number $M>0$ can be a bound for $|a_n|$, since there is always an index $n \in \N$ such that 
 $$
 |a_n| > M \,.
 $$
@@ -891,7 +889,8 @@ We can use Corollary \ref{corollary-convergent-bounded} to show that certain seq
 
 ::: Theorem 
 
-For all $p>0$, the sequence $\left(n^{p}\right)_{n \in \mathbb{N}}$ does not converge.
+Let $p>0$. The sequence $a_n = n^p$ is unbounded, and hence divergent.
+
 
 :::
 
@@ -917,7 +916,7 @@ This proves that the sequence $(n^p)$ is unbounded. Hence $(n^p)$ cannot converg
 
 ::: Theorem
 
-The sequence $(\log n)_{n \in \mathbb{N}}$ does not converge.
+The sequence $a_n  = \log n$ is unbounded, and hence divergent.
 
 :::
 
@@ -1728,6 +1727,7 @@ $b_n = (-1)^n$ diverges. Contradiction. Hence $(a_n)$ diverges.
 
 
 ::: Definition 
+### Geometric sequence
 
 A sequence $\left(a_{n}\right)$ is called a **geometric sequence** if
 $$
@@ -1744,11 +1744,7 @@ The value of $|x|$ determines whether or not a geometric sequence converges, as 
 ::: Theorem 
 ### Geometric Sequence Test   {#theorem-geometric-sequence}
 
-Let $x \in \R$ and let $\left(a_{n}\right)$ be the sequence defined by
-$$
-a_{n}:=x^{n} \,.
-$$
-We have:
+Let $x \in \R$ and let $\left(a_{n}\right)$ be the sequence defined by $a_{n}:=x^{n}$. We have:
 
 1. If $|x|<1$, then 
 $$
@@ -2150,26 +2146,21 @@ Let us apply the Ratio Test to some concrete examples.
 
 ::: Example
 
-**Question.** Let 
+**Question.** Prove that
 $$
-a_{n}=\frac{3^{n}}{n !} \,,
+a_{n}=\frac{3^{n}}{n !} \to 0 \,,
 $$
 where we recall that $n!$ (pronounced $n$ factorial) is defined by
 $$
 n! := n \cdot (n-1) \cdot (n-2) \cdot  \ldots \cdot  3 \cdot 2 \cdot 1 \,. 
 $$
-Prove that
-$$
-\lim_{n \to \infty} a_n  = 0 \,.
-$$
 
 **Solution.** We have
-\begin{align*}
-\left|\frac{a_{n+1}}{a_{n}}\right| & = \dfrac{\left( \dfrac{3^{n+1}}{(n+1) !} \right) }{  \left( \dfrac{3^{n}}{n !} \right) } \\
-& = \frac{3^{n+1}}{3^{n}} \, \frac{n !}{(n+1) !} \\
-& = \frac{3 \cdot 3^n}{3^n} \, \frac{n!}{(n+1) n!} \\
-& =\frac{3}{n+1} \longrightarrow L = 0 \,.
-\end{align*}
+$$
+\left|\frac{a_{n+1}}{a_{n}}\right| 
+ = \dfrac{\left( \dfrac{3^{n+1}}{(n+1) !} \right) }{  \left( \dfrac{3^{n}}{n !} \right) } 
+ =\frac{3}{n+1} \longrightarrow L = 0 \,.
+$$
 Hence, $L=0<1$ so $a_{n} \to 0$ by the Ratio Test in Theorem \ref{theorem-ratio-test}.
 
 :::
@@ -2177,11 +2168,11 @@ Hence, $L=0<1$ so $a_{n} \to 0$ by the Ratio Test in Theorem \ref{theorem-ratio-
 
 ::: Example
 
-**Question.** Consider the sequence
+**Question.** Prove that the sequence is divergent
 $$
 a_{n}=\frac{n ! \cdot 3^{n}}{\sqrt{(2 n) !}} \,.
 $$
-Prove that $(a_n)$ is divergent.
+
 
 **Solution.** We have
 \begin{align*}
@@ -2225,12 +2216,12 @@ $$
 =\frac{n+1}{100} \,.
 $$
 Choose $N=101$. Then for all $n \geq N$,
-\begin{align*}
+$$
 \left|\frac{a_{n+1}}{a_{n}}\right| 
-& = \frac{n+1}{100} \\
-& \geq \frac{N+1}{100} \\
-& = \frac{101}{100} > 1 \,.
-\end{align*}
+ = \frac{n+1}{100} 
+ \geq \frac{N+1}{100} 
+ = \frac{101}{100} > 1 \,.
+$$
 Hence $a_{n}$ is divergent by the Ratio Test.
 
 :::
@@ -2369,11 +2360,10 @@ $$
 a_n = \frac1n \,.
 $$
 
-**Solution.** We have
+**Solution.** We immediately see that
 $$
-a_n = \frac1n > \frac{1}{n+1} = a_{n+1} \,,
+a_n = \frac1n > \frac{1}{n+1} = a_{n+1} \,.
 $$
-concluding.
 
 :::
 
@@ -2387,7 +2377,19 @@ Theorem.
 ### Monotone Convergence Theorem  {#theorem-monotone-convergence}
 
 Let $(a_n)$ be a sequence in $\R$. Suppose that $(a_n)$ is bounded and
-monotone. Then $(a_n)$ converges.
+monotone. Then $(a_n)$ converges. In particular,
+
+1. If $a_n$ is increasing, then
+$$
+\lim_{n \to \infty} a_n = \sup A \,,
+$$
+
+2. If $a_n$ is decreasing, then
+$$
+\lim_{n \to \infty} a_n = \inf A \,,
+$$
+
+where we define $A = \{ a_n \, \colon \, n \in \N \}$.
 
 :::
 
@@ -2787,11 +2789,7 @@ concluding the proof.
 
 ::: {.Theorem  #theorem-important-limit-2}
 
-Suppose $(a_n)$ is such that $a_n \to 0$ and 
-$$
-a_n \neq 0 \,, \quad \forall \, n \in \N \, .
-$$
-Then
+Suppose $(a_n)$ is such that $a_n \to 0$ and $a_n \neq 0$. Then,
 $$
 \lim_{n \to \infty} \frac{\sin(a_n)}{a_n} = 1 \,.
 $$
@@ -2877,11 +2875,7 @@ $$
 
 ::: {.Theorem  #theorem-important-limit-3}
 
-Suppose $(a_n)$ is such that $a_n \to 0$ and 
-$$
-a_n \neq 0 \,, \quad \forall \, n \in \N \, .
-$$
-Then
+Suppose $(a_n)$ is such that $a_n \to 0$ and $a_n \neq 0$. Then,
 $$
 \lim_{n \to \infty} \frac{1 - \cos(a_n)}{(a_n)^2} = \frac{1}{2} \,, \quad 
 \lim_{n \to \infty} \frac{1 - \cos(a_n)}{a_n} = 0  \, .
@@ -2918,7 +2912,6 @@ using Step 1 and the Algebra of Limits.
 
 
 
-
 ::: Example
 
 **Question.** Prove that
@@ -2926,13 +2919,14 @@ $$
 \lim_{n \to \infty} \, n  \sin \left(  \frac{1}{n} \right)  = 1 \,.
 $${#eq-notable-limits-2}
 
-**Solution.** This is because
+**Solution.** By Theorem \ref{theorem-important-limit-2} with $a_n = 1/n$, we get
 $$
-n  \sin \left(  \frac{1}{n} \right) = \frac{ \sin \left(  \dfrac{1}{n} \right) }{ \dfrac{1}{n} } \longrightarrow 1 \,,
+n  \sin \left(  \frac{1}{n} \right) = \frac{ \sin \left(  \dfrac{1}{n} \right) }{ \dfrac{1}{n} } \longrightarrow 1 \,.
 $$
-by Theorem \ref{theorem-important-limit-2} with $a_n = 1/n$.
 
 :::
+
+
 
 
 ::: Example
@@ -2943,11 +2937,11 @@ $$
 $${#eq-notable-limits-1}
 
 
-**Solution.** Indeed, 
+
+**Solution.** By Theorem \ref{theorem-important-limit-3} with $a_n = 1/n$, we have
 $$
-n^2 \left(  1 - \cos \left(  \frac{1}{n} \right)\right) = \dfrac{1 - \cos \left(  \dfrac{1}{n} \right)}{\dfrac{1}{n^2}} \longrightarrow \frac12 \,,
+n^2 \left(  1 - \cos \left(  \frac{1}{n} \right)\right) = \dfrac{1 - \cos \left(  \dfrac{1}{n} \right)}{\dfrac{1}{n^2}} \longrightarrow \frac12 \,.
 $$
-by applying Theorem \ref{theorem-important-limit-3} with $a_n = 1/n$.
 
 :::
 
@@ -3003,12 +2997,11 @@ $$
 \lim_{n \to \infty} \, \frac{n^2+1}{n+1} \sin \left(  \dfrac{1}{n} \right)  = 1 \,.
 $$
 
-**Solution.** Note that
+**Solution.** Using (@eq-notable-limits-2) and the Algebra of Limits,
 \begin{align*}
 \frac{n^2+1}{n+1} \sin \left(  \dfrac{1}{n} \right) & = \left( \frac{1+\dfrac{1}{n^2}}{1+ \dfrac{1}{n}} \right) \cdot \left( n \sin \left(  \dfrac{1}{n} \right) \right) \\
-& \longrightarrow \frac{1 + 0}{1 + 0} \cdot 1 = 1\,,
+& \longrightarrow \frac{1 + 0}{1 + 0} \cdot 1 = 1\,.
 \end{align*}
-where we used (@eq-notable-limits-2) and the Algebra of Limits.
 
 
 :::

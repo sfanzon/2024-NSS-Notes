@@ -55,7 +55,7 @@ $$
 
 
 ::: Example
-### of binary operation  {#example-binary-operation}
+### An example of binary operation  {#example-binary-operation}
 
 Let $K=\{0,1\}$. We can for example define operations of sum and product on $K$ according to the tables 
 $$
@@ -131,6 +131,8 @@ This motivates the following definition.
 
 
 ::: Definition
+### Properties of binary operations
+
 Let $K$ be a set and $\circ \ \colon K \times K \to K$ be a binary operation on $K$. We say that:
 
 1. $\circ$ is **commutative** if 
@@ -331,11 +333,10 @@ We call the triple $(K, + , \cdot)$ a **field** if:
 
 
 
-::: Example
 
-$(\Q,+,\cdot)$ is a field, where $+$ and $\cdot$ are the usual operations of addition and multiplication. This is trivially true, as the field axioms clearly encode properties that $\Q$ already has.
 
-:::
+
+
 
 ::: Remark 
 
@@ -506,19 +507,30 @@ The above properties can be all proven with elementary use of the field properti
 
 Let us conclude with examining the sets of numbers introduced in @sec-chap-1. 
 
+
 ::: Theorem
 Consider the sets $\N$, $\Z$, $\Q$ with the usual operations $+$ and $\cdot$. We have:
 
-- $(\N, + , \cdot)$ is **not a field**:  
-It satisfies properties (A1), (A2), (M1), (M2), (AM) of fields. It is missing properties (A3) and (M3), the additive and multiplicative inverse properties, respectively.
-- $(\Z, + , \cdot)$ is **not a field**:  
-It satisfies properties (A1), (A2), (A3), (M1), (M2), (AM) of fields. Thus it is only missing (M3), the multiplicative inverse property.
+- $(\N, + , \cdot)$ is **not a field**.
+
+- $(\Z, + , \cdot)$ is **not a field**.
+
 - $(\Q, + , \cdot)$ **is a field**.
 
 
 :::
 
-The proof is omitted. 
+::: Proof
+
+1. $(\N, + , \cdot)$ is **not a field**:  
+It satisfies properties (A1), (A2), (M1), (M2), (AM) of fields. It is missing properties (A3) and (M3), the additive and multiplicative inverse properties, respectively.
+
+- $(\Z, + , \cdot)$ is **not a field**:  
+It satisfies properties (A1), (A2), (A3), (M1), (M2), (AM) of fields. Thus it is only missing (M3), the multiplicative inverse property.
+
+- $(\Q, + , \cdot)$ **is a field**. This is clear: The field axioms are introduced exactly to model $\Q$. Therefore, $\Q$ is trivially a field.
+
+:::
 
 
 
@@ -526,6 +538,8 @@ The proof is omitted.
 ## Ordered fields
 
 ::: Definition
+### Ordered field
+
 Let $K$ be a set with binary operations $+$ and $\cdot$, and with an order relation $\leq$. We call $(K,+,\cdot,\leq)$ an **ordered field** if:
 
 1. $(K,+,\cdot)$ is a field
@@ -564,7 +578,7 @@ Let $K$ be a set with binary operations $+$ and $\cdot$, and with an order relat
 :::
 
 
-::: Example 
+::: Theorem
 $(\Q,+,\cdot,\leq)$ is an **ordered field**.
 :::
 
@@ -602,7 +616,7 @@ $$
 
 
 
-![Schematic picture of a partition $(A,B)$ of the set $K$.](/images/partition.png){width=55%}
+![Schematic picture of a partition $(A,B)$ of the set $K$.](/images/partition.png){width=35%}
 
 
 ::: Definition
@@ -641,7 +655,7 @@ for some $s \in \Q$. Then the pair $(A,B)$ is a cut of $\Q$, and $s$ is the sepa
 :::
 
 
-![$(A,B)$ is a cut of $\Q$ with separator $s$.](/images/cut.png){width=70%}
+![$(A,B)$ is a cut of $\Q$ with separator $s$.](/images/cut.png){width=40%}
 
 
 ::: Question
@@ -661,7 +675,7 @@ However $\sqrt{2} \notin \Q$, so we are **NOT ALLOWED** to take it as separator.
 
 
 
-![$(A,B)$ is a cut of $\Q$ which has no separator](/images/cut_sqrt2.png){width=70%}
+![$(A,B)$ is a cut of $\Q$ which has no separator](/images/cut_sqrt2.png){width=40%}
 
 
 
@@ -1010,19 +1024,19 @@ $$
 
 Let $A \subseteq K$. A number $s \in K$ is called **least upper bound** or **supremum** of $A$ if:
 
-i. $s$ is an upper bound for $A$,
-ii. $s$ is the smallest upper bound of $A$, that is, 
+1. $s$ is an upper bound for $A$,
+2. $s$ is the smallest upper bound of $A$, that is, 
     $$
     \mbox{If } \, b \in K \, \mbox{ is upper bound for } \, A \, \mbox{ then } \, s \leq b \,.  
     $$
-:::
 
-::: Notation
-We will almost always prefer the name supremum to least upper bound. For $A \subseteq K$ the supremum is denoted by
+If it exists, the supremum is denoted by
 $$
 s := \sup \ A \,.
 $$
+
 :::
+
 
 
 ::: Remark
@@ -1031,13 +1045,9 @@ Note that if a set $A \subseteq K$ in **NOT** bounded above, then the supremum d
 
 
 ::: Proposition
-### Uniqueness of sup {#proposition-sup-unique}
+### Uniqueness of the supremum {#proposition-sup-unique}
 
-Let $A \subseteq K$. If 
-$$
-\sup A
-$$
-exists, then it is unique.  
+Let $A \subseteq K$. If $\sup A$ exists, then it is unique.  
 :::
 
 
@@ -1095,7 +1105,7 @@ $$
 :::
 
 
-![Supremum and upper bounds of a set $A$ in the field $K$](/images/definition_supremum.png){width=70%}
+![Supremum and upper bounds of a set $A$ in the field $K$](/images/definition_supremum.png){width=40%}
 
 
 
@@ -1105,7 +1115,7 @@ Let $A \subseteq K$. A number $M \in K$ is called the **maximum** of $A$ if:
 $$
 M \in A   \,\, \mbox{ and } \,\, a \leq M  \,, \, \forall a \in A \,.
 $$
-We denote the maximum by
+If it exists, we denote the maximum by
 $$
 M = \max A \,.
 $$
@@ -1179,7 +1189,7 @@ We now introduce the definitions of lower bound, infimum, minimum. These are the
 
 
 ::: Definition
-### Upper bound, bounded below, infimum, minimum
+### Lower bound, bounded below, infimum, minimum
 
 Let $A \subseteq K$:
 
@@ -1211,7 +1221,7 @@ $$
 
 
 
-![Infimum and lower bounds of a set $A$ in the field $K$](/images/definition_infimum.png){width=70%}
+![Infimum and lower bounds of a set $A$ in the field $K$](/images/definition_infimum.png){width=40%}
 
 
 
@@ -1295,7 +1305,7 @@ The proof is trivial, and is left as an exercise. We now have a complete picture
 
 
 
-![Supremum, upper bounds, infimum and lower bounds of a set $A$ in $K$](/images/definition_sup_inf.png){#fig-inf-sup width=70%}
+![Supremum, upper bounds, infimum and lower bounds of a set $A$ in $K$](/images/definition_sup_inf.png){#fig-inf-sup width=40%}
 
 
 
@@ -1523,15 +1533,33 @@ The proof of this fact is, of course, very similar to the one of Theorem \ref{th
 
 In conclusion, infimum and supremum do not exist in general. The fields for which all bounded sets admit supremum or infimum are called **complete**.
 
-
 ::: Definition
 ### Completeness
 
-Let $(K,+,\cdot,\leq)$ be an ordered field. We say that $K$ is **complete** if it holds the property:
+Let $(K,+,\cdot,\leq)$ be an ordered field. We say that $K$ is **complete** if the following property holds:
 
 - (AC) For every $A \subseteq K$ non-empty and bounded above 
 $$
 \sup A \in K \,.
+$$
+
+:::
+
+In particular, Theorem \ref{theorem-Q-not-complete} can be re-stated as follows.
+
+
+
+::: Theorem
+
+$\Q$ is not complete. In particular, there exists a set $A \subseteq \Q$ such that 
+
+- $A$ is non-empty,
+- $A$ is bounded above,
+- $\sup A$ does not exist in $\Q$. 
+
+One of such sets is, for example,
+$$
+A = \{ q \in \Q  \divider q \geq 0 \,, \,\, q^2 < 2 \} \,.
 $$
 
 :::
@@ -1641,10 +1669,10 @@ We will show that $s$ is a separator for the cut $(A,B)$, and therefore $K$ has 
 :::
 
 
-![Let $s$ be the separator of the cut $(B^c,B)$, with $B$ the set of upper bounds of $A$. Then $s = \sup A$.](/images/construction_cut_1.png){#fig-cut-complete-1 width=80%}
+![Let $s$ be the separator of the cut $(B^c,B)$, with $B$ the set of upper bounds of $A$. Then $s = \sup A$.](/images/construction_cut_1.png){#fig-cut-complete-1 width=40%}
 
 
-![Let $(A,B)$ be a cut of $K$ and let $s = \sup A$. Then $s$ is the separator of the cut $(A,B)$.](/images/construction_cut_2.png){#fig-cut-complete-2 width=80%}
+![Let $(A,B)$ be a cut of $K$ and let $s = \sup A$. Then $s$ is the separator of the cut $(A,B)$.](/images/construction_cut_2.png){#fig-cut-complete-2 width=40%}
 
 
 Keeping the above ideas in mind, let us proceed with the proof.
